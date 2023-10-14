@@ -1,0 +1,21 @@
+{
+    "title": "Téotime Pacreau",
+    "url": "https://www.teotimepacreau.fr/",
+    "language": "fr",
+    "description": "Le flux web de mon blog : management de projet et numérique.",
+    "feed": {
+      "subtitle": "Le flux web de mon blog : management de projet et numérique.",
+      "filename": "feed.xml",
+      "path": "/feed/feed.xml",
+      "id": "https://www.teotimepacreau.fr/"
+    },
+    "jsonfeed": {
+      "path": "/feed/feed.json",
+      "url": "https://www.teotimepacreau.fr/feed/feed.json"
+    },
+    "author": {
+      "name": "Téotime Pacreau",
+      "email": "teotime.pac@outlook.fr",
+      "url": "https://www.teotimepacreau.fr/"
+    }
+  }

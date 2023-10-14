@@ -1,0 +1,38 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_34_529)">
+<rect id="bg" width="48" height="48" rx="24" fill="#C3E2FF"/>
+<ellipse id="accent" rx="5" ry="5.00001" transform="matrix(0.707107 0.707107 0.707107 -0.707107 24.0711 13.0711)" fill="#752A04"/>
+<ellipse id="accent" rx="5" ry="5.00001" transform="matrix(0.707107 0.707107 0.707107 -0.707107 24.0711 35.0711)" fill="#752A04"/>
+<ellipse id="accent" rx="5" ry="5.00001" transform="matrix(0.707107 0.707107 0.707107 -0.707107 6.07109 24.0711)" fill="#752A04"/>
+<ellipse id="accent" rx="5" ry="5.00001" transform="matrix(0.707107 0.707107 0.707107 -0.707107 18.0711 24.0711)" fill="#752A04"/>
+<ellipse id="accent" rx="5" ry="5.00001" transform="matrix(0.707107 0.707107 0.707107 -0.707107 30.0711 24.0711)" fill="#752A04"/>
+<ellipse id="accent" rx="5" ry="5.00001" transform="matrix(0.707107 0.707107 0.707107 -0.707107 42.0711 24)" fill="#752A04"/>
+<line id="accent" x1="24" y1="13" x2="24" y2="4.37114e-08" stroke="#752A04" stroke-width="2"/>
+<path id="accent" d="M24 35V42C24 43.1046 24.8954 44 26 44H48" stroke="#752A04" stroke-width="2" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_34_529">
+<rect width="48" height="48" rx="24" fill="white"/>
+</clipPath>
+</defs>
+<style>
+@media (prefers-color-scheme: light) {
+     #bg {
+        fill: #C3E2FF;
+      }
+      #accent {
+        fill: #752A04;
+        stroke: #752A04;
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+     #bg {
+        fill: hsl(165, 51%, 18%);
+      }
+      #accent {
+        fill: navajowhite;
+        stroke: navajowhite;
+      }
+    }
+  </style>
+</svg>

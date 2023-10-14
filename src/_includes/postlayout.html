@@ -1,0 +1,60 @@
+---
+title: Blog post de Téotime Pacreau
+---
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    {% include "head.html"%}
+  </head>
+  <body>
+    <div class="wrapper-post">
+      {% include "color-picker.html"%}
+    <container class="post-grid">
+    <nav>
+            <ul class="menu">
+                <li><a id='home'href="../../index.html" aria-label="Home page"><i class="ph-bold ph-house-simple"></i></a></li>
+                <li><a href="../../curriculum">01 Curriculum Vitae</a></li>
+                <li><a href="../../blog">02 Blog</a></li>
+                <li><a href="../../colophon">03 Colophon</a></li>
+            </ul>
+          </nav>
+          {{ content | toc | safe }}
+    <main class="post-main">
+        <article>
+        <h1>{{ title }}</h1>
+            <ul class="post-tags">
+                {% for tag in tags %}
+                  <li>
+                    <a class="tags-style" href="/tags/{{ tag | slugify }}">{{tag}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+              <time class="post-date">
+                Publié le : <time datetime="{{ date }}">{{ date | date('dd LLLL yyyy') }}</time>
+              </time>
+                <p>{{ description }}</p>
+        {{ content | safe }}
+    </article>
+    </main>
+    <footer id="footer" role="contentinfo">
+      {% include "footer.html"%}
+    </footer>
+  <!--Script Java pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
+  <script>(function () {
+    const links = document.querySelectorAll("a[href^='https://'], a[href^='http://']")
+    const host = window.location.hostname
+  
+    const isInternalLink = link => new URL(link).hostname === host
+  
+    links.forEach(link => {
+      if (isInternalLink(link)) return
+  
+      link.setAttribute("target", "_blank")
+      link.setAttribute("rel", "noopener")
+    })
+  })()</script>
+    </container>
+</div>
+<script src="../../script.js"></script>
+</body>
+</html>

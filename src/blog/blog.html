@@ -1,0 +1,21 @@
+---
+title: Le blog de Téotime Pacreau
+layout: base.html
+---
+<!DOCTYPE html>
+<ul>
+  {% for post in collections.posts %}
+    <li><tag class="post-tags">
+      {% for tag in post.data.tags | filterTagList %}
+  {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+  <a class="blog-index-tags" rel="tag" href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+{% endfor %}
+</tag>
+<h1 class="blog-index-h1"><a href="{{post.url}}">{{ post.data.title }}</h1></a>
+        <time class="tags-date">
+            <time datetime="{{ post.data.date | date('dd LLLL yyyy') }}">{{ post.data.date | date('dd LLLL yyyy') }}</time>
+          </time>
+          
+    </li>
+  {% endfor %}
+</ul>

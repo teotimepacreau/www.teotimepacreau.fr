@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="always">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Téotime Pacreau">
+    <meta name="description" content="Gérer facilement le rythme vertical grâce à la technique CSS du &quot;hibou lobotomisé&quot;">
+    
+    <!--<meta name="darkreader-lock">-->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Feeds -->
+    <link rel="alternate" href="/feed/feed.xml" title="Flux du blog de Téotime Pacreau" type="application/atom+xml">
+    <!--Favicon-->
+    <link rel="icon" href="../favicon/favicon.svg"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/favicon.svg"/>
+    <link rel="mask-icon" href="../favicon/favicon.svg">
+    <link rel="apple-touch-startup-image" href="../favicon/favicon.svg" media="orientation: portrait">
+    <link rel="apple-touch-startup-image" href="../favicon/favicon.svg" media="orientation: landscape">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon/favicon.svg"/>
+    <!--ICONS-->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!--Theme-->
+    <meta name="theme-color" content="#c3e2ff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#hsl(165, 51%, 18%)" media="(prefers-color-scheme: dark)">
+    <meta name="msapplication-TileColor" content="#c3e2ff" media="(prefers-color-scheme: light)">
+    <meta name="msapplication-TileColor" content="#hsl(165, 51%, 18%)" media="(prefers-color-scheme: dark)">
+    
+    <!--Social-->
+    <link rel="me authn" href="https://twitter.com/teotimepacreau">
+    <link rel="me" href="https://mastodon.design/@teotimepacreau">
+    <meta name="generator" content="Eleventy">
+    
+    <!--Linkedin-->
+    <meta property="og:title" content="Téotime Pacreau"/>
+    <meta property="og:description" content="Gérer facilement le rythme vertical grâce à la technique CSS du &quot;hibou lobotomisé&quot;"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://teotimepacreau.fr/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Téotime Pacreau"/>
+    <link rel="image_src" href="https://www.teotimepacreau.fr/img/teotimepacreau.png">
+    <meta property="og:image" content="https://www.teotimepacreau.fr/img/teotimepacreau.png"/>
+    <meta property="og:image:alt" content="Mon logo : 2 cercles et un truchet"/>
+    <meta property="og:image:width" content="1600"/>
+    <meta property="og:image:height" content="1600"/>
+    <meta property="og:locale" content="fr_FR"/>
+    
+    <!--Twitter-->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Téotime Pacreau"/>
+    <meta name="twitter:description" content="Gérer facilement le rythme vertical grâce à la technique CSS du &quot;hibou lobotomisé&quot;"/>
+    <meta name="twitter:image" content="https://www.teotimepacreau.fr/img/teotimepacreau.png"/>
+    <meta name="twitter:image:alt" content="Mon logo : 2 cercles et un truchet"/>
+    <meta name="twitter:creator" content="@teotimepacreau"/>
+    <meta name="twitter:site" content="@teotimepacreau"/>
+        <title>Gérer facilement le rythme vertical grâce à la technique CSS du &quot;hibou lobotomisé&quot;</title>
+  </head>
+  <body>
+    <div class="wrapper-post">
+      <form class="color-picker" action="">
+    <fieldset>
+      <legend class="visually-hidden">Pick a color scheme</legend>
+      <div id="light-group" class="color-select-group">
+        <label for="light">Light</label>
+        <input type="radio" name="theme" id="light">
+      </div>
+      <div id="dark-group" class="color-select-group">
+        <label for="dark">Dark</label>
+        <input type="radio" id="dark" name="theme">
+      </div>
+      <div id="eco-group" class="color-select-group">
+        <label for="eco">Eco</label>
+        <input type="radio" id="eco" name="theme">
+      </div>
+    </fieldset>
+  </form>
+    <container class="post-grid">
+    <nav>
+            <ul class="menu">
+                <li><a id='home'href="../../index.html" aria-label="Home page"><i class="ph-bold ph-house-simple"></i></a></li>
+                <li><a href="../../curriculum">01 Curriculum Vitae</a></li>
+                <li><a href="../../blog">02 Blog</a></li>
+                <li><a href="../../colophon">03 Colophon</a></li>
+            </ul>
+          </nav>
+          <nav class="table-of-content">
+                <ol>
+                    
+                    <li><a href="#rythme-vertical">Rythme vertical</a>
+            
+                <ol>
+                    
+                    <li><a href="#comment-le-d%C3%A9terminer-%3F">Comment le déterminer ?</a>
+            		</li>
+
+                    <li><a href="#exemple-concret-d'utilisation">Exemple concret d'utilisation</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#le-%22hibou-lobotomis%C3%A9%22-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps">Le "hibou lobotomisé" : le sélecteur CSS qui fait gagner du temps</a>
+            		</li>
+
+                    <li><a href="#...-et-une-touche-de-custom-properties">... et une touche de Custom Properties</a>
+            		</li>
+
+                    <li><a href="#notre-espacement-automatique-pour-l'ensemble-du-site-en-2-lignes-de-code">Notre espacement automatique pour l'ensemble du site en 2 lignes de code</a>
+            		</li>
+                </ol>
+            </nav>
+    <main class="post-main">
+        <article>
+        <h1>Gérer facilement le rythme vertical grâce à la technique CSS du &quot;hibou lobotomisé&quot;</h1>
+            <ul class="post-tags">
+                
+                  <li>
+                    <a class="tags-style" href="/tags/css">CSS</a>
+                  </li>
+                
+                  <li>
+                    <a class="tags-style" href="/tags/rythme-vertical">Rythme vertical</a>
+                  </li>
+                
+                  <li>
+                    <a class="tags-style" href="/tags/web-design">Web design</a>
+                  </li>
+                
+              </ul>
+              <time class="post-date">
+                Publié le : <time datetime="2022-11-26">26 novembre 2022</time>
+              </time>
+                <p>En 2 lignes de code, il est possible de mettre en place un système d&#39;espacement modulable et réutilisable qui s&#39;adapte à toutes les mises en page.</p>
+        <h2 id="rythme-vertical" tabindex="-1">Rythme vertical</h2>
+<p>Adopter un rythme vertical proportionnel et prédictible sur une page web permet de ressentir une <a href="https://24ways.org/2006/compose-to-a-vertical-rhythm/">hiérarchie visuelle qui facilite l'expérience utilisateur</a>.</p>
+<h3 id="comment-le-d%C3%A9terminer-%3F" tabindex="-1">Comment le déterminer ?</h3>
+<p>On établit une <em>unité de mesure commune</em> qui régit tous nos espacements et tailles.
+Pour la déterminer, la règle typographique communément admise est <strong>d'ajouter la hauteur de la ligne à la taille de la police d'écriture utilisée</strong>. Cela crée notre <em>&quot;unité de rythme&quot;</em> que l'on va moduler pour tous nos espacements/tailles.
+Notre base est la <code>line-eight</code> des paragraphes couplée à la <code>font-size</code> :</p>
+<pre><code>p {
+  font-size: 1rem; /* =16px par défaut */
+  line-eight: 1.4;
+}
+_____________
+16*1.4=22.4
+</code></pre>
+<p>Notre <em>&quot;unité de rythme&quot;</em> est 22.4. L'objectif est d'essayer que chaque espacement en soit le multiple.</p>
+<h3 id="exemple-concret-d'utilisation" tabindex="-1">Exemple concret d'utilisation</h3>
+<ul>
+<li>On souhaite un &lt;h1&gt; qui ferait 4 fois la taille de notre &lt;p&gt;.</li>
+<li>On souhaite également adapter la hauteur de ligne pour faciliter la lecture sur le gros-titre : <code>line-eight: 1.1;</code>.</li>
+</ul>
+<p>Un premier réflexe pourrait-être d'utiliser <code>font-size: 4rem;</code>.
+Pourtant on veut que notre &lt;h1&gt; soit 4 fois plus grand que notre <em>&quot;unité de rythme&quot;</em> et non pas de notre taille de police. On module donc la font-size :</p>
+<pre><code>?*1.1=67.2
+&lt;=&gt;61.09*1.1=67.2
+
+On convertit 61.09px en rem : 16/61.09=3.81rem
+</code></pre>
+<h2 id="le-%22hibou-lobotomis%C3%A9%22-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps" tabindex="-1">Le &quot;hibou lobotomisé&quot; : le sélecteur CSS qui fait gagner du temps</h2>
+<p><code>* + *</code>, <a href="https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/">autrement appelé le &quot;hibou lobotomisé&quot;</a> est un formidable moyen de mettre en place une règle CSS anonyme et automatique pour faciliter la mise en page.</p>
+<ul>
+<li>le sélecteur &quot;&gt;&quot; cible tous les éléments enfants de la div parente</li>
+<li>le sélecteur &quot;*&quot; cible tous les éléments</li>
+</ul>
+<p><code>article &gt; * + *</code> nous permet donc de cibler tous les éléments de notre article suivant directement d'autres éléments.</p>
+<h2 id="...-et-une-touche-de-custom-properties" tabindex="-1">... et une touche de Custom Properties</h2>
+<p>Les <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">Custom Properties</a> permettent de déclarer des variables réutilisables. On en profite pour utiliser également la fonction &quot;clamp&quot; qui permet de switcher entre une valeur minimale, une valeur de circonstance et une valeur maximale. Cela permet à notre <em>unité de rythme</em> d'évoluer en accord avec l'espace disponible.</p>
+<pre><code>:root {
+  --baseline : clamp(1.4rem, 1.1200rem + 1.4000vw, 2.8rem);
+}
+</code></pre>
+<h2 id="notre-espacement-automatique-pour-l'ensemble-du-site-en-2-lignes-de-code" tabindex="-1">Notre espacement automatique pour l'ensemble du site en 2 lignes de code</h2>
+<pre><code>body &gt; * + * {
+  margin-top: var(--baseline);
+}
+</code></pre>
+<p>Pourquoi utiliser seulement <code>margin-top</code> ? Les marges peuvent, dans certains cas, entrer en collision et se soustraire. <a href="https://cssfordesigners.com/articles/managing-vertical-margins-in-css">En ne déclarant que <code>margin-top</code> on évite cet inconvénient</a>.</p>
+
+    </article>
+    </main>
+    <footer id="footer" role="contentinfo">
+      <ul>
+    <li><p id="me">Téotime Pacreau</li>
+    <li><a href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site">teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden">spam</span>outlook.fr</span></a></li>
+    <li>
+        <a class="rss" href="/feed/feed.xml">
+            <i class="ph ph-rss"></i>
+            <span>RSS</span>
+        </a>
+    </li>
+</ul>
+<ul id="links">
+    <li>
+        <a class="social-footer" rel="me" href="https://github.com/teotimepacreau" target="_blank">
+            <i class="ph ph-github-logo"></i>
+            <span>Github</span>
+        </a>
+    </li>
+    <li>
+        <a class="social-footer" rel="me" href="https://mastodon.design/@teotimepacreau" target="_blank">
+            <i class="ph ph-dots-nine"></i> 
+            <span>Mastodon</span>
+        </a>  
+    </li>
+    <li>
+        <a class="social-footer" rel="me" href="https://www.linkedin.com/in/teotime-p-a1194b20a/" target="_blank">
+            <i class="ph ph-linkedin-logo"></i> 
+            <span>LinkedIn</span>
+        </a>
+    </li>
+</ul>
+<ul id="stats">
+  <li class="stat"><p class="stat-name">Score EcoIndex :  A</p></li>
+  <li class="stat"><p class="stat-name">Score Lighthouse :  100</p></li>
+  <li class="stat"><p class="stat-name">Conformité : <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>  100%</p></li>
+</ul>
+    </footer>
+  <!--Script Java pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
+  <script>(function () {
+    const links = document.querySelectorAll("a[href^='https://'], a[href^='http://']")
+    const host = window.location.hostname
+  
+    const isInternalLink = link => new URL(link).hostname === host
+  
+    links.forEach(link => {
+      if (isInternalLink(link)) return
+  
+      link.setAttribute("target", "_blank")
+      link.setAttribute("rel", "noopener")
+    })
+  })()</script>
+    </container>
+</div>
+<script src="../../script.js"></script>
+</body>
+</html>

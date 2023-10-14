@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Téotime Pacreau</title>
+	<subtitle>Le flux web de mon blog : management de projet et numérique.</subtitle>
+	
+	<link href="https://www.teotimepacreau.fr/feed/feed.xml" rel="self"/>
+	<link href="https://www.teotimepacreau.fr/"/>
+	<updated>2023-01-13T00:00:00Z</updated>
+	<id>https://www.teotimepacreau.fr/</id>
+	<author>
+		<name>Téotime Pacreau</name>
+		<email>teotime.pac@outlook.fr</email>
+	</author>
+	
+	<entry>
+		<title>Comment réaliser sa mesure dʼimpact gratuitement et pourquoi ?</title>
+		<link href="https://www.teotimepacreau.fr/blog/mesure-d&amp;#39;impact/"/>
+		<updated>2023-01-13T00:00:00Z</updated>
+		<id>https://www.teotimepacreau.fr/blog/mesure-d&amp;#39;impact/</id>
+		<content type="html">&lt;h2 id=&quot;contexte&quot; tabindex=&quot;-1&quot;&gt;Contexte&lt;/h2&gt;
+&lt;p&gt;La &lt;a href=&quot;https://www.consilium.europa.eu/fr/press/press-releases/2022/11/28/council-gives-final-green-light-to-corporate-sustainability-reporting-directive/&quot;&gt;directive européene CSRD (Corporate Sustainability Reporting Directive)&lt;/a&gt; prendra effet le 1er Janvier 2024 et s&#39;imposera d&#39;abord aux structures de plus de 250 salariés puis progressivement à toutes les entreprises, y compris les PME.&lt;/p&gt;
+&lt;p&gt;Le but de cette directive est d&#39;inciter les structures à mesurer, centraliser et publier régulièrement les données de leur impact sociétal et environnemental.&lt;/p&gt;
+&lt;p&gt;Cela modifiera les exigences actuelles en matière de reporting extra-financier issues de la &lt;a href=&quot;https://finance.ec.europa.eu/capital-markets-union-and-financial-markets/company-reporting-and-auditing/company-reporting/corporate-sustainability-reporting_en&quot;&gt;Non-Financial reporting Directive (NFRD)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Les entreprises devront renseigner des indicateurs dans les thématiques E, S, G (Environnementales, Sociales, Gouvernance).&lt;/p&gt;
+&lt;p&gt;Environ &lt;a href=&quot;https://www.europarl.europa.eu/news/fr/press-room/20221107IPR49611/durabilite-le-parlement-adopte-de-nouvelles-regles-pour-les-multinationales&quot;&gt;50 000 entreprises seront concernées par ces nouvelles règles, contre 11 700 actuellement&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;les-outils-gratuits&quot; tabindex=&quot;-1&quot;&gt;Les outils gratuits&lt;/h2&gt;
+&lt;p&gt;Plusieurs plateformes gratuites de qualité existent :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.impact.gouv.fr/&quot;&gt;Impact.gouv.fr&lt;/a&gt; est un service de l&#39;État qui permet aux entreprises de mesurer, collecter et transmettre les données Environnementales, Sociales et de bonne Gouvernance. Un formulaire est à remplir avec les données de l&#39;entreprise, il est possible de publier publiquement celles-ci ou non. L’outil réutilise des informations déjà à la disposition de l’administration, pour réduire au maximum la charge de travail des entreprises.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://impactntechscore.impactscore.fr/&quot;&gt;Impact Score&lt;/a&gt; d&#39;Impact France permet de cartographier l&#39;impact pour toutes les tailles d&#39;entreprises. Le résultat est un score noté sur 100, prenant en compte 20 indicateurs clés. Le score repose sur 5 piliers : la stratégie, les externalités sociales et écologiques, le partage du pouvoir et de la valeur.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://communemesure.fr/&quot;&gt;Commune Mesure&lt;/a&gt; de Plateau Urbain s&#39;adresse uniquement aux tiers lieux et aux lieux hybrides. Au moyen de data-panorama, d&#39;un formulaire et d&#39;une boîte à outils, l&#39;évaluation est guidée et permet de valoriser les impacts&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.valoress-udes.fr/&quot;&gt;Valor&#39;ESS&lt;/a&gt; de l&#39;UDES s&#39;adresse aux structures de l&#39;Economie Sociale et Solidaire et permet de mettre en avant la plus-value sociale, au moyen d&#39;indicateurs adaptés pour les petites organisations.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://kelimpact.grandlyon.com/&quot;&gt;Kel Impact&lt;/a&gt; de la métropole du Grand Lyon permet de  mesurer sa performance, identifier les axes d’amélioration, identifier des solutions concrètes, suivre sa progression dans le temps.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;s&#39;informer-et-s&#39;outiller-sur-les-enjeux-de-rse&quot; tabindex=&quot;-1&quot;&gt;S&#39;informer et s&#39;outiller sur les enjeux de RSE&lt;/h2&gt;
+&lt;p&gt;La &lt;a href=&quot;https://www.strategie.gouv.fr/reseau-france-strategie/plateforme-rse&quot;&gt;Plateforme RSE&lt;/a&gt; est l&#39;espace ressource de l&#39;Etat pour suivre les dernières recommandations sur les questions sociales, environnementales et de gouvernance. Celle-ci permet de tenir à jour ses indicateurs et d&#39;orienter le développement.&lt;/p&gt;
+&lt;h2 id=&quot;les-b%C3%A9n%C3%A9fices-de-la-mesure-d&#39;impact&quot; tabindex=&quot;-1&quot;&gt;Les bénéfices de la mesure d&#39;impact&lt;/h2&gt;
+&lt;p&gt;Les indicateurs d&#39;impact permettent non seulement de se mettre en adéquation avec la législation, mais sont aussi un formidable levier pour véhiculer une image positive de l&#39;entreprise.&lt;/p&gt;
+&lt;p&gt;Mettre en avant les actions concrètes et leurs résultats permet à la structure d&#39;attirer une nouvelle clientèle/de nouveaux usagers.&lt;/p&gt;
+&lt;p&gt;La confiance en interne des collaborateurs et leur adhésion se voit également renforcée car les données sociales et de gouvernance sont lisibles et partagées.&lt;/p&gt;
+&lt;p&gt;Enfin, la mesure d&#39;impact permet de mesurer les progrès en interne et axer la stratégie dans le réel.&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Gérer facilement le rythme vertical grâce à la technique CSS du &quot;hibou lobotomisé&quot;</title>
+		<link href="https://www.teotimepacreau.fr/blog/rythme-vertical-css/"/>
+		<updated>2022-11-26T00:00:00Z</updated>
+		<id>https://www.teotimepacreau.fr/blog/rythme-vertical-css/</id>
+		<content type="html">&lt;h2 id=&quot;rythme-vertical&quot; tabindex=&quot;-1&quot;&gt;Rythme vertical&lt;/h2&gt;
+&lt;p&gt;Adopter un rythme vertical proportionnel et prédictible sur une page web permet de ressentir une &lt;a href=&quot;https://24ways.org/2006/compose-to-a-vertical-rhythm/&quot;&gt;hiérarchie visuelle qui facilite l&#39;expérience utilisateur&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;comment-le-d%C3%A9terminer-%3F&quot; tabindex=&quot;-1&quot;&gt;Comment le déterminer ?&lt;/h3&gt;
+&lt;p&gt;On établit une &lt;em&gt;unité de mesure commune&lt;/em&gt; qui régit tous nos espacements et tailles.
+Pour la déterminer, la règle typographique communément admise est &lt;strong&gt;d&#39;ajouter la hauteur de la ligne à la taille de la police d&#39;écriture utilisée&lt;/strong&gt;. Cela crée notre &lt;em&gt;&amp;quot;unité de rythme&amp;quot;&lt;/em&gt; que l&#39;on va moduler pour tous nos espacements/tailles.
+Notre base est la &lt;code&gt;line-eight&lt;/code&gt; des paragraphes couplée à la &lt;code&gt;font-size&lt;/code&gt; :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;p {
+  font-size: 1rem; /* =16px par défaut */
+  line-eight: 1.4;
+}
+_____________
+16*1.4=22.4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notre &lt;em&gt;&amp;quot;unité de rythme&amp;quot;&lt;/em&gt; est 22.4. L&#39;objectif est d&#39;essayer que chaque espacement en soit le multiple.&lt;/p&gt;
+&lt;h3 id=&quot;exemple-concret-d&#39;utilisation&quot; tabindex=&quot;-1&quot;&gt;Exemple concret d&#39;utilisation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;On souhaite un &amp;lt;h1&amp;gt; qui ferait 4 fois la taille de notre &amp;lt;p&amp;gt;.&lt;/li&gt;
+&lt;li&gt;On souhaite également adapter la hauteur de ligne pour faciliter la lecture sur le gros-titre : &lt;code&gt;line-eight: 1.1;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Un premier réflexe pourrait-être d&#39;utiliser &lt;code&gt;font-size: 4rem;&lt;/code&gt;.
+Pourtant on veut que notre &amp;lt;h1&amp;gt; soit 4 fois plus grand que notre &lt;em&gt;&amp;quot;unité de rythme&amp;quot;&lt;/em&gt; et non pas de notre taille de police. On module donc la font-size :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;?*1.1=67.2
+&amp;lt;=&amp;gt;61.09*1.1=67.2
+
+On convertit 61.09px en rem : 16/61.09=3.81rem
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;le-%22hibou-lobotomis%C3%A9%22-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps&quot; tabindex=&quot;-1&quot;&gt;Le &amp;quot;hibou lobotomisé&amp;quot; : le sélecteur CSS qui fait gagner du temps&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;* + *&lt;/code&gt;, &lt;a href=&quot;https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/&quot;&gt;autrement appelé le &amp;quot;hibou lobotomisé&amp;quot;&lt;/a&gt; est un formidable moyen de mettre en place une règle CSS anonyme et automatique pour faciliter la mise en page.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;le sélecteur &amp;quot;&amp;gt;&amp;quot; cible tous les éléments enfants de la div parente&lt;/li&gt;
+&lt;li&gt;le sélecteur &amp;quot;*&amp;quot; cible tous les éléments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;article &amp;gt; * + *&lt;/code&gt; nous permet donc de cibler tous les éléments de notre article suivant directement d&#39;autres éléments.&lt;/p&gt;
+&lt;h2 id=&quot;...-et-une-touche-de-custom-properties&quot; tabindex=&quot;-1&quot;&gt;... et une touche de Custom Properties&lt;/h2&gt;
+&lt;p&gt;Les &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/--*&quot;&gt;Custom Properties&lt;/a&gt; permettent de déclarer des variables réutilisables. On en profite pour utiliser également la fonction &amp;quot;clamp&amp;quot; qui permet de switcher entre une valeur minimale, une valeur de circonstance et une valeur maximale. Cela permet à notre &lt;em&gt;unité de rythme&lt;/em&gt; d&#39;évoluer en accord avec l&#39;espace disponible.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:root {
+  --baseline : clamp(1.4rem, 1.1200rem + 1.4000vw, 2.8rem);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;notre-espacement-automatique-pour-l&#39;ensemble-du-site-en-2-lignes-de-code&quot; tabindex=&quot;-1&quot;&gt;Notre espacement automatique pour l&#39;ensemble du site en 2 lignes de code&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;body &amp;gt; * + * {
+  margin-top: var(--baseline);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Pourquoi utiliser seulement &lt;code&gt;margin-top&lt;/code&gt; ? Les marges peuvent, dans certains cas, entrer en collision et se soustraire. &lt;a href=&quot;https://cssfordesigners.com/articles/managing-vertical-margins-in-css&quot;&gt;En ne déclarant que &lt;code&gt;margin-top&lt;/code&gt; on évite cet inconvénient&lt;/a&gt;.&lt;/p&gt;
+</content>
+	</entry>
+</feed>

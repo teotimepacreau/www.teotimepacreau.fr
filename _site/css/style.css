@@ -42,6 +42,7 @@ ul > li {
 
 /* Set core body defaults */
 body {
+    position: relative;
   background-color: var(--bg);
   color: var(--txt);
   overflow-x: hidden;
@@ -191,33 +192,56 @@ pre::-webkit-scrollbar-thumb {
 }
 
 /*---GENERAL---*/
+#normal-page-container {
+    padding-inline: var(--baseline);
+}
 
-#navigation-flexer {
+#normal-page-container > :first-child {
+    padding-top: calc(2*var(--baseline));
+}
+
+.navigation-flexer {
     display: flex;
     align-items: center;
     gap: var(--baseline);
+    border: 0.1px ridge var(--txt);
+    border-radius: 1.5rem;
+    line-height: 1rem;
+    overflow: hidden;
 }
 
-#navigation-announcer{
+.navigation-flexer > * {
+    padding-block: 0.3rem;
+}
+
+.navigation-flexer ul {
+    margin: 0; /* Add this rule to reset margin */
+    padding: 0; /* Add this rule to reset padding */
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+
+.navigation-flexer ul li {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+.navigation-announcer{
+    line-height: 1rem;
     letter-spacing: 0.02rem;
-    padding-block: 0.15rem;
-    padding-inline: 1rem;
+    padding-inline: 1.4rem;
     background-color: var(--txt);
     color: var(--bg);
-    border-radius: 0.9rem;
+    border: 4px solid var(--txt);
 }
 
 header {
   font-weight: 700;
 }
 
-header:not(#homepage-menu) {
-  margin-top: var(--baseline);
-}
 
-#page-container {
-  padding: var(--baseline);
-}
 
 .rss {
   text-decoration: none;
@@ -332,6 +356,7 @@ main a::after {
 }
 /*--THEME SWITCH---*/
 .color-picker {
+    top: 0;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -434,11 +459,12 @@ input {
   font-size: var(--baselineh3);
 }
 
-#primary-navigation {
+
+.homepage-nav {
   height: 100%;
 }
 
-#primary-navigation ul {
+.homepage-nav ul {
   height: 100%;
   writing-mode: tb-rl;
   transform: rotate(-180deg);
@@ -447,17 +473,17 @@ input {
   padding-inline-start: 0;
 }
 
-#primary-navigation li {
+.homepage-nav li {
   border-right: 2px solid var(--txt);
   padding: calc(0.25 * var(--baseline));
 }
 
-#primary-navigation a {
+.homepage-nav a {
   color: var(--txt);
   text-decoration: none;
 }
 
-#primary-navigation a:hover {
+.homepage-nav a:hover {
   color: var(--accent);
   transition: color 0.3s ease;
 }
@@ -507,8 +533,21 @@ input {
 /*---MEDIA QUERY HOMEPAGE---*/
 
 @media (width < 1000px) {
-  container > :first-child {
-    margin-top: calc(3 * var(--baseline));
+
+    .navigation-announcer{
+        display: none;
+    }
+    .navigation-flexer{
+        border-radius: unset;
+        display: unset;
+        border: none;
+    }
+  #homepage-container > main {
+    margin-top: calc(4 * var(--baseline));
+  }
+
+  #normal-page-container > main {
+    margin-top: calc(2*var(--baseline));
   }
 
   /* HAMBURGER MENU */
@@ -535,7 +574,7 @@ input {
     position: fixed;
     inset: 0 30% 0 0;
     padding: min(30dvh, 10rem) 2rem;
-    background-color: hsl(0 0% 100% / 0.1);
+    background-color: hsl(0 0% 100% / 0.05);
     backdrop-filter: blur(1rem);
     transform: translateX(-100%);
     transition: transform 0.4s ease-out;
@@ -573,6 +612,7 @@ input {
   #homepage-hero {
     grid-column: 1 / 4;
     grid-row: 2;
+    padding-block: unset;
   }
   #footer {
     grid-row: 3 / 4;
@@ -623,11 +663,12 @@ input {
   line-height: 1;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: var(--baseline);
   justify-content: center;
-  border-bottom: 2px solid var(--txt);
 }
-
+.menu li {
+    line-height: 1rem;
+}
 
 /*--- FIN DU CSS MENU GENERALISTE--*/
 
@@ -1020,15 +1061,11 @@ hr {
     display: block;
     margin-top: 0;
   }
-  .container-cv > *:nth-child(1n) {
-    margin-top: var(--baseline);
-  }
   .container-cv > *:nth-child(2n) {
     margin-top: calc(0.5 * var(--baseline));
   }
   .contenu-pro-titre h1 {
     margin-bottom: var(--baseline);
-    margin-top: var(--baseline);
   }
   .scolaire-titre {
     margin-top: var(--baseline);

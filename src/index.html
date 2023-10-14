@@ -9,7 +9,7 @@ title: Management de projet, conduite du changement et numérique à Nantes
   </head>
   <body>
       {% include "color-picker.html"%}
-      <container id="homepage-container">
+      <div class="container" id="homepage-container">
         <main id="homepage-hero">
           <h1>
             Téotime Pacreau,<br />
@@ -38,9 +38,9 @@ title: Management de projet, conduite du changement et numérique à Nantes
         </main>
         <header id="homepage-menu">
           <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-            <span class="sr-only" >Menu</span>
+            <span class="sr-only">Menu</span>
           </button>
-          <nav id="primary-navigation" data-visible="false">
+          <nav class="homepage-nav" id="primary-navigation" data-visible="false">
             <ul>
               <li><a href="../curriculum">01 Curriculum Vitae</a></li>
               <li><a href="blog">02 Blog</a></li>
@@ -52,7 +52,7 @@ title: Management de projet, conduite du changement et numérique à Nantes
         <footer id="footer" role="contentinfo">
           {% include "footer.html"%}
         </footer>
-      </container>
+      </div>
     <script src="script.js"></script>
     <script src="nav.js"></script>
   </body>

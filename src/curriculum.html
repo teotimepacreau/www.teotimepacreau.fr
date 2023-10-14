@@ -9,7 +9,7 @@ title: Curriculum Vitae of Teotime Pacreau, work experiences, education, certifi
   </head>
   <body>
     {% include "color-picker.html"%}
-    <div id="page-container">
+    <div class="container" id="normal-page-container">
       <header>
         <button
           class="mobile-nav-toggle"
@@ -18,13 +18,14 @@ title: Curriculum Vitae of Teotime Pacreau, work experiences, education, certifi
         >
           <span class="sr-only">Menu</span>
         </button>
-        <nav id="navigation-flexer">
-        <span id="navigation-announcer">NAVIGATION</span>
+        <nav class="navigation-flexer" id="primary-navigation" data-visible="false">
+        <span class="navigation-announcer">NAVIGATION</span>
           <ul class="menu">
             <li>
-              <a id="home" href="../index.html" aria-label="Home page"
+                <a href="../index.html">HOME</a>
+              <!-- <a id="home" href="../index.html" aria-label="Home page"
                 ><i class="ph-bold ph-house-simple"></i
-              ></a>
+              ></a> -->
             </li>
             <li><a href="/curriculum">CV</a></li>
             <li><a href="/blog">BLOG</a></li>
@@ -370,5 +371,6 @@ title: Curriculum Vitae of Teotime Pacreau, work experiences, education, certifi
       <footer id="footer" role="contentinfo">{% include "footer.html"%}</footer>
     </div>
     <script src="../script.js"></script>
+    <script src="../nav.js"></script>
   </body>
 </html>

@@ -1,61 +1,126 @@
-/*---CSS RESET---*/
-
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+   margin: 0; 
+   padding: 0;
 }
 
-/* Remove default list styles */
-nav, ul > li {
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+   scroll-behavior: smooth;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
+
+nav, ul > li {
+    list-style: none;
+  }
 
 /* Set core body defaults */
 body {
     text-rendering: geometricPrecision;
-    font-family: Inter-Regular, Helvetica, sans-serif;
-  }
-  
-  html {min-height:100%;}
-  body {height:100vh;}
-
-/* Set core root defaults */
-html:focus-within {
-scroll-behavior: smooth;
+    font-family: Inter-Variable, Helvetica, system, sans-serif;
 }
-    
-/* More consistent, styleable hr*/
-hr {
-    border-width: 1px 0 0 0;
-    color: inherit;
-    height: 0;
-    overflow: visible;
-   }
-    
-/* Make images easier to work with */
-    img,
-    picture {
-      max-width: 100%;
-      display: block;
-      height: auto;
-    }
-/*
-  Remove built-in form typography styles
-*/
-input, button, textarea, select {
-    font: inherit;
-  }
-/*---FIN CSS RESET---*/
 
+/* Set shorter line heights on headings and text-wrap */
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+
+/* A elements that don't have a class get default styles */
+a {
+  color: currentColor;
+  text-underline-offset: 0.3ex;
+}
+
+button { 
+   cursor: pointer; 
+ }
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10rem;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* More consistent, styleable hr*/ 
+ hr { 
+   border-width: 1px 0 0 0; 
+   color: inherit; 
+   height: 0; 
+   overflow: visible; 
+ }
+
+*:focus-visible{
+  transition: box-shadow 0.3s ease;
+  outline: 3px chartreuse solid;
+  box-shadow: 0 0 7px 0px chartreuse;
+}
+
+/* FOCUS ON LIGHT BACKGROUNDS  */
+/* *:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px hsla(210, 52%, 42%, 1.00), 
+              0 0 0 .6rem hsla(200, 72%, 83%, 0.75);
+} */
+
+button:focus-visible{
+  outline-offset: 0.8ex;
+}
+
+a:focus-visible{
+  outline-offset: 0.8ex;
+  box-shadow: none;
+}
+
+input { 
+    appearance: none; 
+    border: none; 
+    outline: none; 
+    border-bottom: .2rem solid var(--white); 
+    border-radius: .1rem .1rem; 
+    padding: .2rem .6ch;
+ }
+/*---FIN CSS RESET---*/
 
 :root {
     --baseline : clamp(1.75rem, 1.4000rem + 1.7500vw, 3.5rem);
-    --baselineh2 : clamp(1.4rem, 1.1200rem + 1.4000vw, 2.8rem);
-    --baselineh3 : clamp(1.225rem, 0.9800rem + 1.2250vw, 2.45rem);
+    --baselineh2 : clamp(1.4rem, 1rem + 1.3000vw, 2.5rem);
+    --baselineh3 : clamp(1.2rem, 0.9800rem + 1vw, 2rem);
     --bg: hsl(165, 51%, 18%);
     --txt: #dfd6d6;
     --accent: navajowhite;
@@ -97,33 +162,24 @@ body {
     text-decoration: none;
 }
 
-.wrapper {
-    padding-right: var(--baseline);
-    padding-left: var(--baseline);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
 .wrapper-post {
     padding-right: var(--baseline);
     padding-left: var(--baseline);
 }
 
 @font-face {
-    font-family: "Inter-ExtraBold";
-    src: url("../fonts/Inter-ExtraBold.woff2") format("woff2");
+    font-family: 'Inter-Variable';
+    font-weight: 100 900;
     font-display: swap;
+    font-style: oblique 0deg 10deg;
+    src: url("../fonts/Inter.var.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "Inter-Bold";
-    src: url("../fonts/Inter-Bold.woff2") format("woff2");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Inter-Regular";
-    src: url("../fonts/Inter-Regular.woff2") format("woff2");
+    font-family: "BricolageGrotesque";
+    font-weight: 200 800;
+    font-stretch: 75% 100%;
+    src: url("../fonts/BricolageGrotesque.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -134,7 +190,7 @@ body {
 }
 
 /*----COULEURS------*/
-.wrapper, .wrapper-post{
+body{
     background-color: var(--bg);
     color: var(--txt);
     }
@@ -150,6 +206,7 @@ body {
  
 .menu a:hover {
     color: var(--accent);
+    transition: color 0.3s ease;
     }
 
 
@@ -157,9 +214,6 @@ p > a {
     color: var(--txt);
 }
 
-.menu-index a {
-    color: var(--txt);
-}
 
 .colophon-link{
     color: var(--txt);
@@ -170,55 +224,59 @@ a {
 }
 p > a:hover {
     color: var(--accent);
+    transition: color 0.3s ease;
 }
 a:hover {
+    text-underline-offset: 0.3ex;
     text-decoration-thickness: 3px;
     text-decoration-skip-ink: none;
-    transition : all 0.3s ease-out;
+    transition : text-underline-offset 0.3s ease, text-decoration-thickness 0.3s ease;
 }
-.menu-index a:hover {
-    color: var(--accent);
-}
+
 #footer a:hover {
     color: var(--accent);
     text-decoration-color: var(--accent);
     text-decoration-thickness: 3px;
     text-decoration-skip-ink: none;
+    transition: color 0.3s ease;
 }
 /*----TYPO------*/
 h1 {
-    font-family: Inter-ExtraBold, Helvetica, sans-serif;
+    font-family: BricolageGrotesque, system, sans-serif;
+    font-variation-settings: "opsz" 24, "wght" 800, "wdth" 100;
     font-size: var(--baseline);
 }
 h2 {
-    font-family: SpaceMono-Regular, monospace;
+    font-family: BricolageGrotesque, system, sans-serif;
     font-size: var(--baselineh2);
     color: var(--accent);
 }
-h2:hover::after{
+
+h2::after {
     content: ' #';
     font-style: italic;
     transition: all 0.3s ease-out;
+    opacity: 0; /* Start with opacity 0 to hide it */
+}
+
+h2:hover::after {
+    opacity: 1; /* Change opacity to 1 on hover */
 }
 
 h3 {
-    font-family: SpaceMono-Regular, monospace;
+    font-family: BricolageGrotesque, system, sans-serif;
     font-size: var(--baselineh3);
 }
 
-h3:hover::after{
+h3::after {
     content: ' ##';
     font-style: italic;
-    transition: all 0.3 ease-out;
+    transition: all 0.3s ease-out;
+    opacity: 0; /* Start with opacity 0 to hide it */
 }
-h1{
-    line-height: 1.3;
-    text-wrap: balance;
-    letter-spacing: -0.03rem;
-}
-h2,h3{
-    line-height: 1.2;
-    letter-spacing: -0.1rem;
+
+h3:hover::after {
+    opacity: 1; /* Change opacity to 1 on hover */
 }
 
 .blog-index-tags {
@@ -300,60 +358,79 @@ input {
 .color-picker input[type="radio"]#eco {
     --radio-color: var(--bg);
 }
-/*---INDEX---*/
+/*---HOMEPAGE---*/
 
-.container-index {
+#homepage-container {
+    padding-inline: var(--baseline);
     display: grid;
     grid-template-columns: minmax(3rem, 1fr) minmax(3rem, min-content);
+    grid-template-rows: auto auto;
 }
 
-.menu-index {
+#homepage-hero {
+    padding-block: var(--baseline);
+}
+
+#homepage-hero h1 {
+    max-width: 15ch;
+}
+
+#homepage-prose {
+    display: flex;
+    column-gap: calc(2*var(--baseline));
+}
+
+
+
+#homepage-prose p {
+    margin-top: var(--baseline);
+}
+
+#homepage-prose > * {
+    flex-basis: 40rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+#homepage-menu {
+    grid-row: 1 / 3;
+}
+
+#homepage-menu-flexer {
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
     display: flex;
     grid-row: 1 / 3;
     margin-left: var(--baseline);
     height: 100vh;
-    font-family: Inter-ExtraBold, Helvetica, sans-serif;
     font-size: var(--baselineh3);
 }
 
-.menu-index ul {
+#homepage-menu-flexer ul {
     writing-mode: tb-rl;
     transform: rotate(-180deg);
     border-left: 2px solid var(--txt);
 }
 
-.menu-index li {
+#homepage-menu-flexer li {
     border-right: 2px solid var(--txt);
     padding: calc(0.25*var(--baseline));
 }
 
-.menu-index a{
-    text-decoration: none; /* no underline */
+#homepage-menu-flexer a {
+    color: var(--txt);
+    text-decoration: none;
+}
+
+#homepage-menu-flexer a:hover {
+    color: var(--accent);
+    transition: color 0.3s ease;
 }
 
 .ph-house-simple {
     font-size: var(--baselineh3);
 }
 
-.landing-prose {
-    display: flex;
-    column-gap: calc(2*var(--baseline));
-}
-
-.landing-index h1 {
-    max-width: 16ch;
-    margin-top: var(--baseline);
-}
-
-.landing-prose p {
-    margin-top: var(--baseline);
-}
-
-.landing-prose > * {
-    flex-basis: 40rem;
-    flex-grow: 0;
-    flex-shrink: 1;
-}
 
 
 /*---FOOTER INDEX---*/
@@ -390,19 +467,19 @@ input {
 /*---MEDIA QUERY INDEX---*/
 
 @media (max-width: 1000px) {
-    .landing-prose {
+    #homepage-prose {
         flex-wrap: wrap;
     }
-    .landing-prose > * {
+    #homepage-prose > * {
         flex-basis: auto;
     }
 
-    .menu-index ul{
+    #homepage-menu-flexer ul{
         writing-mode: horizontal-tb;
         transform: none;
         border-left: none;
     }
-    .menu-index li{
+    #homepage-menu-flexer li{
         border-right: none;
         border-bottom: 2px solid var(--txt);
         padding: calc(0.25*var(--baseline));
@@ -411,7 +488,7 @@ input {
         padding-left: 0;
     }
 
-    .menu-index {
+    #homepage-menu-flexer {
         flex-direction: column;
         height: min-content;
         gap: var(--baseline);
@@ -422,7 +499,7 @@ input {
         grid-column: 1 / 4;
         margin-left: 0;
     }
-    .landing-index {
+    #homepage-hero{
         grid-column: 1 / 4;
     }
     #footer {
@@ -472,7 +549,6 @@ input {
     justify-content: center;
     column-gap: var(--baseline);
     min-width: 8ch;
-    font-family: Inter-Bold, Helvetica, sans-serif;
 }
 @media (width>1000px){
     .post-grid .menu{
@@ -513,7 +589,7 @@ input {
 }
 /*--- FIN DU CSS MENU GENERALISTE--*/
 
-/*---------------BLOG ET TAGS-------------*/
+/*---------------BLOG ET HASHTAGS-------------*/
 .blog-index-h1 {
     font-size: var(--baselineh3);
 }
@@ -682,9 +758,10 @@ article li::marker {
 }
 
 .tags-style {
-    padding-inline: calc(0.4*var(--baseline));
-    padding-block: calc(0.2*var(--baseline));
-    border-radius: 0.5rem;
+    display:inline-block;
+    padding-inline: calc(0.3*var(--baseline));
+    padding-block: calc(0.1*var(--baseline));
+    border-radius: 0.3rem;
     color: var(--bg);
     background-color: var(--txt);
 }
@@ -692,6 +769,7 @@ article li::marker {
 .tags-style::before {
     content: '# ';
 }
+
 
 article > p > a:hover {
     text-decoration-thickness: 3px;
@@ -704,7 +782,7 @@ pre {
     padding: calc(0.25*var(--baseline));
     background-color: var(--accent);
     color: var(--bg);
-    box-shadow: 0 1px 0 rgb(45 42 80 / 15%), 0 2px 2px 2px rgb(0 0 0 / 10%), 0 2px 2px 2px rgb(0 0 0 / 6%);
+    box-shadow: -1px 1px 5px 0px rgba(66, 65, 65, 0.345) 
 }
 
 code {
@@ -732,6 +810,13 @@ code, pre {
     display: block;
     border-bottom: 2px solid var(--accent);
 }
+
+/* TAG PAGE */
+#tags-page-main {
+    max-width: 60ch;
+}
+
+
 /*---------------MEDIA QUERY POST-------------*/
 @media (max-width: 1200px) {
 .post-grid {
@@ -759,11 +844,8 @@ article h1 {
         padding-bottom: var(--baseline);
     }
 }
-/*---------------TAGS-------------*/
 
-.tags-style {
-    display:inline-block;
-}
+
 /*--COLOPHON---*/
 .colophon {
     margin-top: var(--baseline);

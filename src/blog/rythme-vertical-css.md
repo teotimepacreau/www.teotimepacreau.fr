@@ -1,5 +1,5 @@
 ---
-title: 'Gérer facilement le rythme vertical grâce à la technique CSS du "hibou lobotomisé"'
+title: 'Gérer facilement le rythme vertical de son site'
 date: '2022-11-26'
 description: "En 2 lignes de code, il est possible de mettre en place un système d'espacement modulable et réutilisable qui s'adapte à toutes les mises en page."
 tags: 

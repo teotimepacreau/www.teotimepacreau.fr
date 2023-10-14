@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -11,8 +12,8 @@
     
     <!--<meta name="darkreader-lock">-->
     <link rel="stylesheet" href="/css/style.css">
-    <!-- Feeds -->
-    <link rel="alternate" href="/feed/feed.xml" title="Flux du blog de Téotime Pacreau" type="application/atom+xml">
+    <!-- Auto detection of the RSS feed for RSS readers -->
+    <link rel="alternate" href="/feed/feed.xml" title="Flux RSS du blog de Téotime Pacreau" type="application/atom+xml">
     <!--Favicon-->
     <link rel="icon" href="../favicon/favicon.svg"/>
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/favicon.svg"/>
@@ -58,8 +59,7 @@
     <meta name="twitter:site" content="@teotimepacreau"/>
         <title>Management de projet, conduite du changement et numérique à Nantes</title>
   </head>
-<body>
-    <div class="wrapper">
+  <body>
       <form class="color-picker" action="">
     <fieldset>
       <legend class="visually-hidden">Pick a color scheme</legend>
@@ -77,60 +77,113 @@
       </div>
     </fieldset>
   </form>
-        <container class="container-index">
-            
-        <main class="landing-index"><h1>Téotime Pacreau,</br> Manage<wbr>ment de projet & Numérique</h1>
-            <section class="landing-prose">
-                <p>Je suis apprenti en gestion de projet, transversalité et conduite du changement pour <a href="https://www.prefectures-regions.gouv.fr/pays-de-la-loire/Region-et-institutions/Organisation-administrative-de-la-region/Secretariat-General-pour-les-Affaires-Regionales-SGAR/Etat-LIN-le-Laboratoire-d-Innovation-Publique-de-l-Etat-en-region-Pays-de-la-Loire/Etat-LIN-qu-est-ce-que-c-est"target="_blank" rel="noopener noreferrer">État'LIN, le laboratoire d'innovation publique de l'État en Pays de la Loire</a>. Dans ce cadre j'étudie au sein du Master de Management, Organisation et Conduite du Changement à Nantes.</p>
-                <p>Impliqué professionnellement par les enjeux de transformation des organisations.</br> J'entame également un apprentissage personnel du développement web.</p>
-            </section>
+      <container id="homepage-container">
+        <main id="homepage-hero">
+          <h1>
+            Téotime Pacreau,<br />
+            Manage<wbr />ment de projet & Numérique
+          </h1>
+          <section id="homepage-prose">
+            <p>
+              Je suis apprenti en gestion de projet, transversalité et conduite
+              du changement pour
+              <a
+                href="https://www.prefectures-regions.gouv.fr/pays-de-la-loire/Region-et-institutions/Organisation-administrative-de-la-region/Secretariat-General-pour-les-Affaires-Regionales-SGAR/Etat-LIN-le-Laboratoire-d-Innovation-Publique-de-l-Etat-en-region-Pays-de-la-Loire/Etat-LIN-qu-est-ce-que-c-est"
+                target="_blank"
+                rel="noopener noreferrer"
+                >État'LIN, le laboratoire d'innovation publique de l'État en
+                Pays de la Loire</a
+              >. Dans ce cadre j'étudie au sein du Master de Management,
+              Organisation et Conduite du Changement à Nantes.
+            </p>
+            <p>
+              Impliqué professionnellement par les enjeux de transformation des
+              organisations.<br />
+              J'entame également un apprentissage personnel du développement
+              web.
+            </p>
+          </section>
         </main>
-        <nav class="menu-index">           
+        <header id="homepage-menu">
+          <nav id="homepage-menu-flexer">
             <ul>
-            <li><a href="../curriculum">01 Curriculum Vitae</a></li>
-            <li><a href="blog">02 Blog</a></li>
-            <li><a href="/colophon">03 Colophon</a></li>
+              <li><a href="../curriculum">01 Curriculum Vitae</a></li>
+              <li><a href="blog">02 Blog</a></li>
+              <li><a href="/projets">03 Projets</a></li>
+              <li><a href="/colophon">04 Colophon</a></li>
             </ul>
-        </nav> 
+          </nav>
+        </header>
         <footer id="footer" role="contentinfo">
-          <ul>
-    <li><p id="me">Téotime Pacreau</li>
-    <li><a href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site">teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden">spam</span>outlook.fr</span></a></li>
+          
+  <ul>
+    <li><p id="me">Téotime Pacreau</p></li>
     <li>
-        <a class="rss" href="/feed/feed.xml">
-            <i class="ph ph-rss"></i>
-            <span>RSS</span>
-        </a>
-    </li>
-</ul>
-<ul id="links">
-    <li>
-        <a class="social-footer" rel="me" href="https://github.com/teotimepacreau" target="_blank">
-            <i class="ph ph-github-logo"></i>
-            <span>Github</span>
-        </a>
+      <a
+        href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site"
+        >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
+          >spam</span
+        >outlook.fr</a
+      >
     </li>
     <li>
-        <a class="social-footer" rel="me" href="https://mastodon.design/@teotimepacreau" target="_blank">
-            <i class="ph ph-dots-nine"></i> 
-            <span>Mastodon</span>
-        </a>  
+      <a class="rss" href="/feed/feed.xml">
+        <i class="ph ph-rss"></i>
+        <span>RSS</span>
+      </a>
+    </li>
+  </ul>
+  <ul id="links">
+    <li>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://github.com/teotimepacreau"
+        target="_blank"
+      >
+        <i class="ph ph-github-logo"></i>
+        <span>Github</span>
+      </a>
     </li>
     <li>
-        <a class="social-footer" rel="me" href="https://www.linkedin.com/in/teotime-p-a1194b20a/" target="_blank">
-            <i class="ph ph-linkedin-logo"></i> 
-            <span>LinkedIn</span>
-        </a>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://mastodon.design/@teotimepacreau"
+        target="_blank"
+      >
+        <i class="ph ph-dots-nine"></i>
+        <span>Mastodon</span>
+      </a>
     </li>
-</ul>
-<ul id="stats">
-  <li class="stat"><p class="stat-name">Score EcoIndex :  A</p></li>
-  <li class="stat"><p class="stat-name">Score Lighthouse :  100</p></li>
-  <li class="stat"><p class="stat-name">Conformité : <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>  100%</p></li>
-</ul>
+    <li>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
+        target="_blank"
+      >
+        <i class="ph ph-linkedin-logo"></i>
+        <span>LinkedIn</span>
+      </a>
+    </li>
+  </ul>
+  <ul id="stats">
+    <li class="stat"><p class="stat-name">Score EcoIndex : A</p></li>
+    <li class="stat"><p class="stat-name">Score Lighthouse : 100</p></li>
+    <li class="stat">
+      <p class="stat-name">
+        Conformité :
+        <abbr title="Référentiel général d’amélioration de l’accessibilité"
+          >RGAA</abbr
+        >
+        100%
+      </p>
+    </li>
+  </ul>
+
         </footer>
-        </container>
-    </div>
+      </container>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

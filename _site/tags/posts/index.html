@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -7,12 +8,12 @@
     <meta name="referrer" content="always">
     <meta name="robots" content="index,follow">
     <meta name="author" content="Téotime Pacreau">
-    <meta name="description" content="Posts taggés avec &quot;posts&quot;">
+    <meta name="description" content="">
     
     <!--<meta name="darkreader-lock">-->
     <link rel="stylesheet" href="/css/style.css">
-    <!-- Feeds -->
-    <link rel="alternate" href="/feed/feed.xml" title="Flux du blog de Téotime Pacreau" type="application/atom+xml">
+    <!-- Auto detection of the RSS feed for RSS readers -->
+    <link rel="alternate" href="/feed/feed.xml" title="Flux RSS du blog de Téotime Pacreau" type="application/atom+xml">
     <!--Favicon-->
     <link rel="icon" href="../favicon/favicon.svg"/>
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/favicon.svg"/>
@@ -36,7 +37,7 @@
     
     <!--Linkedin-->
     <meta property="og:title" content="Téotime Pacreau"/>
-    <meta property="og:description" content="Posts taggés avec &quot;posts&quot;"/>
+    <meta property="og:description" content=""/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://teotimepacreau.fr/"/>
     <meta property="og:type" content="website"/>
@@ -51,15 +52,15 @@
     <!--Twitter-->
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="Téotime Pacreau"/>
-    <meta name="twitter:description" content="Posts taggés avec &quot;posts&quot;"/>
+    <meta name="twitter:description" content=""/>
     <meta name="twitter:image" content="https://www.teotimepacreau.fr/img/teotimepacreau.png"/>
     <meta name="twitter:image:alt" content="Mon logo : 2 cercles et un truchet"/>
     <meta name="twitter:creator" content="@teotimepacreau"/>
     <meta name="twitter:site" content="@teotimepacreau"/>
-        <title>Posts taggés avec &quot;posts&quot;</title>
+        <title></title>
   </head>
   <body>
-     <div class="wrapper">
+    <div class="wrapper">
       <form class="color-picker" action="">
     <fieldset>
       <legend class="visually-hidden">Pick a color scheme</legend>
@@ -77,22 +78,27 @@
       </div>
     </fieldset>
   </form>
+      <header>
         <nav>
-            <ul class="menu">
-                <li><a id='home'href="../../index.html" aria-label="Home page"><i class="ph-bold ph-house-simple"></i></a></li>
-                <li><a href="../../curriculum">01 Curriculum Vitae</a></li>
-                <li><a href="../../blog">02 Blog</a></li>
-                <li><a href="../../colophon">03 Colophon</a></li>
-        </ul>
-    </nav>
-        <main class="blog">
-
+          <ul class="menu">
+            <li>
+              <a id="home" href="../../index.html" aria-label="Home page"
+                ><i class="ph-bold ph-house-simple"></i
+              ></a>
+            </li>
+            <li><a href="../../curriculum">01 Curriculum Vitae</a></li>
+            <li><a href="../../blog">02 Blog</a></li>
+            <li><a href="../../colophon">03 Colophon</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="blog" id="tags-page-main">
 <h1>Posts taggés avec <tag class="tags-style">posts</a></h1>
 
 
 <ul>
   <li>
-    <h1 class="blog-index-h1"><a href="/blog/rythme-vertical-css/">Gérer facilement le rythme vertical grâce à la technique CSS du &quot;hibou lobotomisé&quot;</a></h1>
+    <h1 class="blog-index-h1"><a href="/blog/rythme-vertical-css/">Gérer facilement le rythme vertical de son site</a></h1>
     <time class="tags-date" datetime="26 novembre 2022">26 novembre 2022</time>
   </li>
 </ul>
@@ -103,46 +109,75 @@
     <time class="tags-date" datetime="13 janvier 2023">13 janvier 2023</time>
   </li>
 </ul>
-
-        </main>
-        <footer id="footer" role="contentinfo">
-          <ul>
-    <li><p id="me">Téotime Pacreau</li>
-    <li><a href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site">teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden">spam</span>outlook.fr</span></a></li>
+</main>
+      <footer id="footer" role="contentinfo">
+  <ul>
+    <li><p id="me">Téotime Pacreau</p></li>
     <li>
-        <a class="rss" href="/feed/feed.xml">
-            <i class="ph ph-rss"></i>
-            <span>RSS</span>
-        </a>
-    </li>
-</ul>
-<ul id="links">
-    <li>
-        <a class="social-footer" rel="me" href="https://github.com/teotimepacreau" target="_blank">
-            <i class="ph ph-github-logo"></i>
-            <span>Github</span>
-        </a>
+      <a
+        href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site"
+        >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
+          >spam</span
+        >outlook.fr</a
+      >
     </li>
     <li>
-        <a class="social-footer" rel="me" href="https://mastodon.design/@teotimepacreau" target="_blank">
-            <i class="ph ph-dots-nine"></i> 
-            <span>Mastodon</span>
-        </a>  
+      <a class="rss" href="/feed/feed.xml">
+        <i class="ph ph-rss"></i>
+        <span>RSS</span>
+      </a>
+    </li>
+  </ul>
+  <ul id="links">
+    <li>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://github.com/teotimepacreau"
+        target="_blank"
+      >
+        <i class="ph ph-github-logo"></i>
+        <span>Github</span>
+      </a>
     </li>
     <li>
-        <a class="social-footer" rel="me" href="https://www.linkedin.com/in/teotime-p-a1194b20a/" target="_blank">
-            <i class="ph ph-linkedin-logo"></i> 
-            <span>LinkedIn</span>
-        </a>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://mastodon.design/@teotimepacreau"
+        target="_blank"
+      >
+        <i class="ph ph-dots-nine"></i>
+        <span>Mastodon</span>
+      </a>
     </li>
-</ul>
-<ul id="stats">
-  <li class="stat"><p class="stat-name">Score EcoIndex :  A</p></li>
-  <li class="stat"><p class="stat-name">Score Lighthouse :  100</p></li>
-  <li class="stat"><p class="stat-name">Conformité : <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>  100%</p></li>
-</ul>
-        </footer>
+    <li>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
+        target="_blank"
+      >
+        <i class="ph ph-linkedin-logo"></i>
+        <span>LinkedIn</span>
+      </a>
+    </li>
+  </ul>
+  <ul id="stats">
+    <li class="stat"><p class="stat-name">Score EcoIndex : A</p></li>
+    <li class="stat"><p class="stat-name">Score Lighthouse : 100</p></li>
+    <li class="stat">
+      <p class="stat-name">
+        Conformité :
+        <abbr title="Référentiel général d’amélioration de l’accessibilité"
+          >RGAA</abbr
+        >
+        100%
+      </p>
+    </li>
+  </ul>
+</footer>
     </div>
     <script src="../../script.js"></script>
-</body>
+  </body>
 </html>

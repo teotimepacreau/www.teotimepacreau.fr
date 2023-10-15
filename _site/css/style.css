@@ -938,6 +938,9 @@ pre {
   }
 }
 
+main {
+  margin-bottom: var(--baseline);
+}
 
 /*--COLOPHON---*/
 .colophon {

@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-      <meta charset="UTF-8">
+  <head>
+        <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="always">
@@ -59,9 +60,7 @@
         <title>Colophon of Teotime Pacreau website, how it is made with which technologies</title>
   </head>
   <body>
-     <div class="wrapper">
-        <form class="color-picker" action="">
-          <form class="color-picker" action="">
+    <form class="color-picker" action="">
     <fieldset>
       <legend class="visually-hidden">Pick a color scheme</legend>
       <div id="light-group" class="color-select-group">
@@ -78,23 +77,71 @@
       </div>
     </fieldset>
   </form>
-          </form>
-        <nav>
-            <ul class="menu">
-                <li><a id='home'href="../index.html" aria-label="Home page"><i class="ph-bold ph-house-simple"></i></a></li>
-                <li><a href="../curriculum">01 Curriculum Vitae</a></li>
-                <li><a href="/blog/">02 Blog</a></li>
-                <li><a href="/colophon">03 Colophon</a></li>
-        </ul>
-    </nav>
-        <main class="colophon">
-          <p>Ce site léger et sans <a href="https://fr.wikipedia.org/wiki/%C3%89conomie_de_la_surveillance">cookies</a> ne drainera pas votre <a href="https://1mb.club/">batterie</a>.</p>
-          <p>Les 2 polices utilisées sont Inter de <a href="https://rsms.me/inter/">Rasmus Andersson</a> et Space Mono du studio <a href="https://www.colophon-foundry.org/about/">Colophon Foundry</a>.</p>
-          <p>J'ai construit ce site propulsé par <a class="colophon-link" href="11ty.dev">Eleventy</a>, un générateur de site statique qui offre de la souplesse grâce à sa prise en compte du <a class="colophon-link" href="https://www.arthurperret.fr/cours/markdown.html">Markdown</a> et du peu de Javascript requis. Le tout est hébergé sur Netlify.</p>
-          <p>Ce site suit les principes de l'IndieWeb, car j'aime être propriétaire de mon contenu, loin des plateformes sociales vacillantes. Le flux RSS étant, à mon sens, l'approche la plus raisonnée pour suivre du contenu web, voici celui de ce site <a class="rss" href="/feed/feed.xml"><i class="ph ph-rss"></i></a></li></p>
-        </main>
-        <footer id="footer" role="contentinfo">
-          
+    <div class="container" id="normal-page-container">
+      <header>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav
+          class="navigation-flexer"
+          id="primary-navigation"
+          data-visible="false"
+        >
+          <span class="navigation-announcer">NAVIGATION</span>
+          <ul class="menu">
+            <li>
+              <a href="../index.html">HOME</a>
+              <!-- <a id="home" href="../index.html" aria-label="Home page"
+                  ><i class="ph-bold ph-house-simple"></i
+                ></a> -->
+            </li>
+            <li><a href="/curriculum">CV</a></li>
+            <li><a href="/blog">BLOG</a></li>
+            <li><a href="/projets">PROJETS</a></li>
+            <li><a href="../colophon">COLOPHON</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="colophon">
+        <p>
+          Ce site léger et sans
+          <a
+            href="https://fr.wikipedia.org/wiki/%C3%89conomie_de_la_surveillance"
+            >cookies</a
+          >
+          ne drainera pas votre <a href="https://1mb.club/">batterie</a>.
+        </p>
+        <p>
+          Les 2 polices utilisées sont gratuites et open-source : Inter de
+          <a href="https://rsms.me/inter/">Rasmus Andersson</a>, une sans-serif particulièrement lisible, et Bricolage Grotesque de
+          <a href="https://ateliertriay.github.io/bricolage/">Mathieu Triay du studio Atelier Triay</a
+          >, une police Grotesk de caractère qui puise son inspiration dans les couvertures d'anciens magazines.
+        </p>
+        <p>
+          J'ai construit ce site propulsé par
+          <a class="colophon-link" href="11ty.dev">Eleventy</a>, un générateur
+          de site statique qui offre de la souplesse grâce à sa prise en compte
+          du
+          <a
+            class="colophon-link"
+            href="https://www.arthurperret.fr/cours/markdown.html"
+            >Markdown</a
+          >
+          et du peu de Javascript requis. Le tout est hébergé sur Netlify.
+        </p>
+        <p>
+          Ce site suit les principes de l'IndieWeb, car j'aime être propriétaire
+          de mon contenu, loin des plateformes sociales vacillantes. Le flux RSS
+          étant, à mon sens, l'approche la plus raisonnée pour suivre du contenu
+          web, voici celui de ce site
+          <a class="rss" href="/feed/feed.xml"><i class="ph ph-rss"></i></a>
+        </p>
+      </main>
+      <footer id="footer" role="contentinfo">
   <ul>
     <li><p id="me">Téotime Pacreau</p></li>
     <li>
@@ -160,9 +207,8 @@
       </p>
     </li>
   </ul>
-
-        </footer>
+</footer>
     </div>
     <script src="../script.js"></script>
-</body>
+  </body>
 </html>

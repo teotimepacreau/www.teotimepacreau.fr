@@ -141,6 +141,7 @@ input {
   --bg: hsl(165, 51%, 18%);
   --txt: #dfd6d6;
   --accent: navajowhite;
+  --shadow : rgba(66, 65, 65, 0.345);
 }
 
 :root:has(#light:checked) {
@@ -194,6 +195,9 @@ pre::-webkit-scrollbar-thumb {
 /*---GENERAL---*/
 #normal-page-container {
     padding-inline: var(--baseline);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 #normal-page-container > :first-child {
@@ -241,11 +245,6 @@ header {
   font-weight: 700;
 }
 
-
-
-.rss {
-  text-decoration: none;
-}
 
 .wrapper-post {
   padding-right: var(--baseline);
@@ -648,9 +647,9 @@ input {
 }
 
 .rss {
-  display: flex;
+  text-decoration: none;
+  display: inline-flex;
   align-items: center;
-  gap: 1ex;
 }
 
 @media (width>1000px) {
@@ -673,6 +672,10 @@ input {
 /*--- FIN DU CSS MENU GENERALISTE--*/
 
 /*---------------BLOG ET HASHTAGS-------------*/
+.blog {
+  max-width: 80ch;
+}
+
 .blog-index-h1 {
   font-size: var(--baselineh3);
 }
@@ -703,6 +706,7 @@ input {
   column-gap: var(--baseline);
 }
 .blog li {
+  box-shadow: -2px 2px 5px 0px var(--shadow);
   margin-top: var(--baseline);
   display: grid;
   padding: calc(0.5 * var(--baseline));
@@ -731,11 +735,28 @@ article .tags-style:hover {
 }
 
 /*---------------POST-------------*/
+#post-header {
+  margin-bottom: var(--baseline);
+  height: min-content;
+}
+
+.navigation-flexer-post{
+  flex-direction: column;
+  align-items: unset;
+  border-radius: 0.3rem;
+  gap: calc(0.25* var(--baseline));
+}
+
+#post-menu {
+  flex-direction: column;
+  gap: calc(0.25*var(--baseline));
+  padding-inline: 1.4rem;
+  padding-block: calc(0.25*var(--baseline));
+}
 
 .post-grid {
   display: grid;
   grid-template-columns: minmax(0rem, 0.5fr) minmax(auto, 65ch);
-  grid-template-rows: 10rem auto auto auto;
   column-gap: calc(3 * var(--baseline));
   margin: auto;
 }
@@ -758,9 +779,9 @@ article .tags-style:hover {
   grid-row: 1 / 3;
 }
 .table-of-content {
-  margin-top: calc(3 * var(--baseline));
+  grid-row: 1;
+  padding-top: calc(2* var(--baseline));
   list-style-position: inside;
-  grid-row: 2 / 3;
 }
 .table-of-content > ol > li > ol {
   text-indent: 1rem;
@@ -863,7 +884,7 @@ pre {
   padding: calc(0.25 * var(--baseline));
   background-color: var(--accent);
   color: var(--bg);
-  box-shadow: -1px 1px 5px 0px rgba(66, 65, 65, 0.345);
+  box-shadow: -1px 1px 5px 0px var(--shadow);
 }
 
 code {

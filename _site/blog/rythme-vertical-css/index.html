@@ -79,17 +79,31 @@
     </fieldset>
   </form>
       <container class="post-grid">
-        <header>
-          <nav>
-            <ul class="menu">
+        <header id="post-header">
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Menu</span>
+          </button>
+          <nav
+            class="navigation-flexer navigation-flexer-post"
+            id="primary-navigation"
+            data-visible="false"
+          >
+            <span class="navigation-announcer">NAVIGATION</span>
+            <ul class="menu" id="post-menu">
               <li>
-                <a id="home" href="../../index.html" aria-label="Home page"
-                  ><i class="ph-bold ph-house-simple"></i
-                ></a>
+                <a href="../index.html">HOME</a>
+                <!-- <a id="home" href="../index.html" aria-label="Home page"
+                      ><i class="ph-bold ph-house-simple"></i
+                    ></a> -->
               </li>
-              <li><a href="../../curriculum">01 Curriculum Vitae</a></li>
-              <li><a href="../../blog">02 Blog</a></li>
-              <li><a href="../../colophon">03 Colophon</a></li>
+              <li><a href="/curriculum">CV</a></li>
+              <li><a href="/blog">BLOG</a></li>
+              <li><a href="/projets">PROJETS</a></li>
+              <li><a href="../../colophon">COLOPHON</a></li>
             </ul>
           </nav>
         </header>
@@ -287,5 +301,6 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
       </container>
     </div>
     <script src="../../script.js"></script>
+    <script src="../../nav.js"></script>
   </body>
 </html>

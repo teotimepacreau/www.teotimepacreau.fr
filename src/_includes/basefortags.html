@@ -8,19 +8,33 @@ title: Les posts du blog de Téotime Pacreau classés par tag
     {% include "head.html"%}
   </head>
   <body>
-    <div class="wrapper">
-      {% include "color-picker.html"%}
+    {% include "color-picker.html"%}
+    <div class="container" id="normal-page-container">
       <header>
-        <nav>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav
+          class="navigation-flexer"
+          id="primary-navigation"
+          data-visible="false"
+        >
+          <span class="navigation-announcer">NAVIGATION</span>
           <ul class="menu">
             <li>
-              <a id="home" href="../../index.html" aria-label="Home page"
-                ><i class="ph-bold ph-house-simple"></i
-              ></a>
+              <a href="../index.html">HOME</a>
+              <!-- <a id="home" href="../index.html" aria-label="Home page"
+                    ><i class="ph-bold ph-house-simple"></i
+                  ></a> -->
             </li>
-            <li><a href="../../curriculum">01 Curriculum Vitae</a></li>
-            <li><a href="../../blog">02 Blog</a></li>
-            <li><a href="../../colophon">03 Colophon</a></li>
+            <li><a href="/curriculum">CV</a></li>
+            <li><a href="/blog">BLOG</a></li>
+            <li><a href="/projets">PROJETS</a></li>
+            <li><a href="../colophon">COLOPHON</a></li>
           </ul>
         </nav>
       </header>
@@ -28,5 +42,6 @@ title: Les posts du blog de Téotime Pacreau classés par tag
       <footer id="footer" role="contentinfo">{% include "footer.html"%}</footer>
     </div>
     <script src="../../script.js"></script>
+    <script src="../../nav.js"></script>
   </body>
 </html>

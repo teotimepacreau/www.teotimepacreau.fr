@@ -941,7 +941,7 @@ pre {
 
 /*--COLOPHON---*/
 .colophon {
-  margin-top: var(--baseline);
+  margin-block: var(--baseline);
 }
 
 .colophon > p {

@@ -247,8 +247,8 @@ header {
 
 
 .wrapper-post {
-  padding-right: var(--baseline);
-  padding-left: var(--baseline);
+  padding: var(--baseline);
+  padding-block-start: calc(2*var(--baseline));
 }
 
 /*----COULEURS------*/
@@ -573,7 +573,7 @@ input {
     position: fixed;
     inset: 0 30% 0 0;
     padding: min(30dvh, 10rem) 2rem;
-    background-color: hsl(0 0% 100% / 0.05);
+    background-color: hsla(0, 0%, 100%, 0.3);
     backdrop-filter: blur(1rem);
     transform: translateX(-100%);
     transition: transform 0.4s ease-out;
@@ -674,6 +674,7 @@ input {
 /*---------------BLOG ET HASHTAGS-------------*/
 .blog {
   max-width: 80ch;
+  padding-bottom: var(--baseline);
 }
 
 .blog-index-h1 {
@@ -738,6 +739,11 @@ article .tags-style:hover {
 #post-header {
   margin-bottom: var(--baseline);
   height: min-content;
+  grid-row: 1 / 2;
+}
+
+.post-grid aside {
+  grid-row: 2 / 3;
 }
 
 .navigation-flexer-post{
@@ -757,30 +763,22 @@ article .tags-style:hover {
 .post-grid {
   display: grid;
   grid-template-columns: minmax(0rem, 0.5fr) minmax(auto, 65ch);
+  grid-template-rows: min-content min-content auto auto;
   column-gap: calc(3 * var(--baseline));
   margin: auto;
 }
 
-@media (width>1000px) {
-  .post-grid {
-    padding-top: calc(2 * (var(--baseline)));
-  }
-}
 
 .post-grid #footer {
   grid-column: 2 / 3;
-  grid-row: 3 / 4;
+  grid-row: 4 / 5;
 }
-.post-grid #owner {
-  grid-column: 1 / 2;
-}
+
 .post-grid main {
   grid-column: 2 / 3;
-  grid-row: 1 / 3;
+  grid-row: 1 / 4;
 }
 .table-of-content {
-  grid-row: 1;
-  padding-top: calc(2* var(--baseline));
   list-style-position: inside;
 }
 .table-of-content > ol > li > ol {
@@ -920,16 +918,16 @@ pre {
 }
 
 /*---------------MEDIA QUERY POST-------------*/
-@media (max-width: 1200px) {
+@media (width < 1000px) {
+  .post-main {
+    padding-block: var(--baseline);
+  }
   .post-grid {
     display: block;
   }
 
   .post-grid nav {
     margin-right: 0;
-  }
-  article h1 {
-    margin-top: var(--baseline);
   }
 
   .post-grid #owner {
@@ -940,11 +938,6 @@ pre {
   }
 }
 
-@media (width>1000px) {
-  main {
-    padding-bottom: var(--baseline);
-  }
-}
 
 /*--COLOPHON---*/
 .colophon {

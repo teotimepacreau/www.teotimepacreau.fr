@@ -1,0 +1,45 @@
+---
+title: Construction du frontend et du backend d'une newsletter
+layout: projetlayout.html
+---
+<h2>Construction du frontend et du backend d'un site de newsletter</h2>
+<div id="project-img-wrapper">
+    <a href="https://feuillu-newsletter.teotimepacreau.fr/"><img src="../../img/newsletter.png" alt=""></a>
+</div>
+<h3>Stack</h3>
+<ul>
+    <li>SQLite database et SQL queries</li>
+    <li>Express</li>
+    <li>NodeJS</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+</ul>
+<h3>Fonctionnalités</h3>
+<ol id="projet-ol">
+    <li><strong>Logique de souscription :</strong> les utilisateurs s'inscrivent sur la page d'accueil en remplissant le formulaire. lastName, firstName, et email sont ajoutés à la BDD SQL. Une notification visuelle confirme la souscription à l'utilisateur, si l'email est déjà présent dans la BDD une notification visuelle informe de l'erreur. Un email de bienvenue est envoyé au nouvel inscrit.</li>
+    <div id="project-img-wrapper">
+        <video controls muted src="../../img/newsletter-subscribe.mp4"></video>
+    </div>
+    <li><strong>Logique de désinscription :</strong> les utilisateurs peuvent se désinscrire sur la page /unsubscribe. L'utilisateur entre son mail dans le formulaire de désinscription, la BDD se met à jour en conséquence. Une vérification s'opère avec une requête SQL pour vérifier si le mail est dans la BDD, si ce n'est pas le cas une notification visuelle informe l'utilisateur.</li>
+    <div id="project-img-wrapper">
+        <video controls muted src="../../img/newsletter-unsubscribe.mp4"></video>
+    </div>
+    <li><strong>Composition dynamique de la newsletter :</strong> une requête SQL est effectuée dans la BDD pour personnaliser le prénom et le nom du destinataire.</li>
+    <li><strong>Envoi régulier de la newsletter :</strong> un Node Cronjob automatise l'envoi par mail chaque mois.</li>
+    <li><strong>Permettre au client d'afficher la newsletter dans son navigateur :</strong> une route Express prend en paramètre la requête pour savoir quel mail elle doit afficher</li>
+    <li><strong>Déploiement :</strong> afin de déployer la BDD SQLite j'ai choisi <a href="https://fly.io/">fly.io</a>, la BDD locale SQLite est répliquée sur le serveur dans les Volumes.</li>
+</ol>
+<h3>Ce que j'ai appris</h3>
+<ul>
+    <li>comment utiliser NodeJS : asynchrone, gestion des erreurs</li>
+    <li>Express : gestion des requêtes HTTP, concept de routes, controllers, configuration de serveur</li>
+    <li>Requêtes et réponses HTTP, status code</li>
+    <li>HTML emails (les différentes règles de compatibilité CSS des clients mails)</li>
+    <li>FLy.io : comment répliquer une BDD SQLite sur un serveur, déployer un front et un back sur un serveur en ligne</li>
+</ul>
+<h3>Lien du projet et code source</h3>
+<ul>
+    <li><strong>Projet en ligne : </strong><a href="https://feuillu-newsletter.teotimepacreau.fr">Site d'inscription à la newsletter</a></li>
+    <li><strong>Code source du projet : </strong><a href="https://github.com/teotimepacreau/Express-Newsletter">Lien Github</a></li>
+</ul>

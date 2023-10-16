@@ -5,7 +5,7 @@
   </head>
   <body>
     {% include "color-picker.html"%}
-    <div class="container" id="normal-page-container">
+    <div class="container projets-container" id="normal-page-container">
       <header>
         <button
           class="mobile-nav-toggle"
@@ -22,22 +22,22 @@
           <span class="navigation-announcer">NAVIGATION</span>
           <ul class="menu">
             <li>
-              <a href="../index">HOME</a>
+              <a href="../../index">HOME</a>
               <!-- <a id="home" href="../index.html" aria-label="Home page"
-                ><i class="ph-bold ph-house-simple"></i
-              ></a> -->
+                  ><i class="ph-bold ph-house-simple"></i
+                ></a> -->
             </li>
-            <li><a href="/curriculum">CV</a></li>
-            <li><a href="/blog">BLOG</a></li>
-            <li><a href="/projets">PROJETS</a></li>
-            <li><a href="../colophon">COLOPHON</a></li>
+            <li><a href="/../curriculum">CV</a></li>
+            <li><a href="../../blog">BLOG</a></li>
+            <li><a href="../projets">PROJETS</a></li>
+            <li><a href="../../colophon">COLOPHON</a></li>
           </ul>
         </nav>
       </header>
-      <main class="blog">{{ content | safe }}</main>
+      <main class="projet-layout">{{ content | safe }}</main>
       <footer id="footer" role="contentinfo">{% include "footer.html"%}</footer>
     </div>
-    <script src="../script.js"></script>
-    <script src="../nav.js"></script>
+    <script src="../../script.js"></script>
+    <script src="../../nav.js"></script>
   </body>
 </html>

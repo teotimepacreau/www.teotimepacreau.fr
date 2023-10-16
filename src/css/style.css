@@ -355,13 +355,9 @@ main a::after {
 }
 /*--THEME SWITCH---*/
 .color-picker {
-    top: 0;
   position: absolute;
-  margin-left: auto;
-  margin-right: auto;
   left: 0;
   right: 0;
-  text-align: center;
 }
 .visually-hidden {
   clip: rect(0 0 0 0);
@@ -429,12 +425,10 @@ input {
   grid-template-rows: auto min-content;
 }
 
-#homepage-hero {
-  padding-block: var(--baseline);
-}
 
 #homepage-hero h1 {
   max-width: 15ch;
+  margin-top: var(--baseline);
 }
 
 #homepage-prose {
@@ -459,20 +453,15 @@ input {
 }
 
 
-.homepage-nav {
-  height: 100%;
-}
-
 .homepage-nav ul {
   height: 100%;
   writing-mode: tb-rl;
   transform: rotate(-180deg);
   border-left: 2px solid var(--txt);
-  margin-block: 0;
-  padding-inline-start: 0;
 }
 
 .homepage-nav li {
+  height: 100%;
   border-right: 2px solid var(--txt);
   padding: calc(0.25 * var(--baseline));
 }
@@ -804,9 +793,6 @@ h3 {
   margin-top: var(--baseline);
 }
 
-img {
-  margin-bottom: var(--baseline);
-}
 article > p + p {
   margin-top: calc(0.5 * var(--baseline));
 }
@@ -936,10 +922,6 @@ pre {
   .table-of-content {
     display: none;
   }
-}
-
-main {
-  margin-bottom: var(--baseline);
 }
 
 /*--COLOPHON---*/
@@ -1119,6 +1101,73 @@ hr {
   .certifications-titre {
     margin-top: var(--baseline);
   }
+}
+
+
+/* PROJETS-INDEX */
+#projets {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: var(--baseline);
+}
+
+.projets-container #footer {
+  margin-top: var(--baseline);
+}
+#project-card {
+  box-shadow: -2px 2px 5px 0px var(--shadow);
+  margin-top: var(--baseline);
+  padding: calc(0.5 * var(--baseline));
+  border-radius: 1rem;
+  background-color: var(--accent);
+  max-width: 40ch;
+}
+
+#project-img-wrapper {
+  overflow: hidden;
+}
+
+#project-img-wrapper img, #project-img-wrapper video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+#project-card-title{
+  margin-top: calc(0.5*var(--baseline));
+  color: var(--bg);
+}
+
+#project-card-title a {
+  text-decoration: none;
+}
+
+/* PROJET LAYOUT */
+
+.projet-layout {
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+.projet-layout p, #project-img-wrapper,.projet-layout ul,.projet-layout ol {
+  margin-top: calc(0.5*var(--baseline));
+}
+.projet-layout h2,.projet-layout h3 {
+  margin-top: var(--baseline);
+}
+
+.projet-layout li {
+  list-style-position: inside;
+}
+
+.projet-layout > ul > li {
+  list-style-type: disc;
+}
+
+#projet-ol li {
+  margin-top: calc(0.5*var(--baseline));
 }
 
 /*---------------THEME SWITCHER-------------*/

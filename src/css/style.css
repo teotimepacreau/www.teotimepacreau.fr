@@ -336,13 +336,6 @@ h3:hover::after {
   opacity: 1; /* Change opacity to 1 on hover */
 }
 
-.blog-index-tags {
-  text-decoration: none;
-}
-.blog-index-h1 a {
-  text-decoration: none;
-}
-
 p,
 li,
 code,
@@ -660,9 +653,9 @@ input {
 
 /*--- FIN DU CSS MENU GENERALISTE--*/
 
-/*---------------BLOG ET HASHTAGS-------------*/
+/*---------------BLOG INDEX PAGE-------------*/
 #blog {
-  max-width: 70ch;
+  max-width: 90ch;
   padding-bottom: var(--baseline);
   margin-inline: auto;
 }
@@ -673,6 +666,10 @@ input {
 
 #blog-card-title {
   color: var(--bg);
+}
+
+#blog-card-title-link::after {
+  content: none;
 }
 
 #blog-index-tags {
@@ -701,11 +698,12 @@ input {
 #blog li {
   box-shadow: -2px 2px 5px 0px var(--shadow);
   margin-top: var(--baseline);
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: calc(0.5 * var(--baseline));
   border-radius: 1rem;
-  grid-template-rows: min-content min-content min-content;
-  row-gap: calc(0.5 * var(--baseline));
+  gap: calc(0.5 * var(--baseline));
   background-color: var(--accent);
 }
 #blog > h1 {
@@ -716,14 +714,21 @@ input {
   background-color: var(--accent);
   color: var(--bg);
   text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(0.3*var(--baseline));
 }
-#blog-card-tags:hover {
+#blog-card-tags-link{
+  padding-inline: calc(0.2*var(--baseline));
+  padding-block: calc(0.05*var(--baseline));
+  border: 2px solid var(--bg);
+  border-radius: 0.3rem;
+}
+
+#blog-card-tags-link:hover {
   background-color: var(--bg);
   color: var(--accent);
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  text-decoration-thickness: 0.4ex;
-  text-underline-offset: 0.4ex;
+  text-decoration: none;
   transition: background-color 0.6s ease-out;
 }
 
@@ -901,9 +906,37 @@ pre {
   border-bottom: 2px solid var(--accent);
 }
 
-/* TAG PAGE */
-#tags-page-main {
+/*----- TAG PAGE ----- */
+#tags-page {
+  margin-block: var(--baseline);
   max-width: 60ch;
+  margin-inline: auto;
+}
+
+#tags-page-ul {
+  margin-top: var(--baseline);
+  display: flex;
+  flex-direction: column;
+  gap: var(--baseline);
+}
+
+#tags-page-li {
+  padding: var(--baseline);
+  background-color: var(--accent);
+  color: var(--bg);
+  border-radius: 1rem;
+}
+
+#tags-page-li h2 {
+  color: var(--bg);
+}
+
+#tags-page-li a {
+  text-decoration: none;
+}
+
+#tags-page-li time {
+  margin-top: calc(0.5*var(--baseline));
 }
 
 /*---------------MEDIA QUERY POST-------------*/
@@ -1111,9 +1144,13 @@ hr {
 
 
 /* PROJETS-INDEX */
-#projets h1 {
+
+#projets {
+  max-width: 80ch;
+  margin-inline: auto;
   margin-top: var(--baseline);
 }
+
 
 #project-card-container {
   display: grid;

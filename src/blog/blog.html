@@ -2,21 +2,26 @@
 title: Le blog de Téotime Pacreau
 layout: baseforblog.html
 ---
+
 <!DOCTYPE html>
 <h1>Blog</h1>
 <ul>
   {% for post in collections.posts %}
-    <li><tag id="blog-card-tags">
-      {% for tag in post.data.tags | filterTagList %}
-  {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-  <a rel="tag" href="{{ tagUrl | url }}">{{ tag }}</a>
-{% endfor %}
-</tag>
-<a href="{{post.url}}"><h2 id="blog-card-title">{{ post.data.title }}</h2></a>
-        <time class="tags-date">
-            <time datetime="{{ post.data.date | date('dd LLLL yyyy') }}">{{ post.data.date | date('dd LLLL yyyy') }}</time>
-          </time>
-          
-    </li>
+  <li>
+    <tag id="blog-card-tags">
+      {% for tag in post.data.tags | filterTagList %} {% set tagUrl %}/tags/{{
+      tag | slugify }}/{% endset %}
+      <a id="blog-card-tags-link" rel="tag" href="{{ tagUrl | url }}">{{ tag }}</a>
+      {% endfor %}
+    </tag>
+    <a id="blog-card-title-link" href="{{post.url}}"
+      ><h2 id="blog-card-title">{{ post.data.title }}</h2></a
+    >
+    <time class="tags-date">
+      <time datetime="{{ post.data.date | date('dd LLLL yyyy') }}"
+        >{{ post.data.date | date('dd LLLL yyyy') }}</time
+      >
+    </time>
+  </li>
   {% endfor %}
 </ul>

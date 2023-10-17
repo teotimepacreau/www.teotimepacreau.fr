@@ -3,15 +3,16 @@ title: Le blog de Téotime Pacreau
 layout: baseforblog.html
 ---
 <!DOCTYPE html>
+<h1>Blog</h1>
 <ul>
   {% for post in collections.posts %}
-    <li><tag class="post-tags">
+    <li><tag id="blog-card-tags">
       {% for tag in post.data.tags | filterTagList %}
   {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-  <a class="blog-index-tags" rel="tag" href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+  <a rel="tag" href="{{ tagUrl | url }}">{{ tag }}</a>
 {% endfor %}
 </tag>
-<h1 class="blog-index-h1"><a href="{{post.url}}">{{ post.data.title }}</h1></a>
+<a href="{{post.url}}"><h2 id="blog-card-title">{{ post.data.title }}</h2></a>
         <time class="tags-date">
             <time datetime="{{ post.data.date | date('dd LLLL yyyy') }}">{{ post.data.date | date('dd LLLL yyyy') }}</time>
           </time>

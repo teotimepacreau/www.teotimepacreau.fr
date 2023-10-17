@@ -661,19 +661,21 @@ input {
 /*--- FIN DU CSS MENU GENERALISTE--*/
 
 /*---------------BLOG ET HASHTAGS-------------*/
-.blog {
-  max-width: 80ch;
+#blog {
+  max-width: 70ch;
   padding-bottom: var(--baseline);
+  margin-inline: auto;
 }
 
-.blog-index-h1 {
-  font-size: var(--baselineh3);
+#blog a {
+  text-decoration: none;
 }
-.blog-index-h1 a {
+
+#blog-card-title {
   color: var(--bg);
 }
 
-.blog-index-tags {
+#blog-index-tags {
   color: var(--bg);
   padding-block-start: 0.3rem;
   padding-block-end: 0.3rem;
@@ -681,21 +683,22 @@ input {
   border: 2px solid;
   border-radius: 1rem;
 }
-.blog-index-tags:hover {
+#blog-index-tags:hover {
   color: var(--accent);
   background-color: var(--bg);
   transition: all 0.3s ease-out;
 }
-.blog-index-tags::before {
+#blog-index-tags::before {
   content: "# ";
 }
 
-.blog ul {
+#blog ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-inline: auto;
   column-gap: var(--baseline);
 }
-.blog li {
+#blog li {
   box-shadow: -2px 2px 5px 0px var(--shadow);
   margin-top: var(--baseline);
   display: grid;
@@ -705,16 +708,16 @@ input {
   row-gap: calc(0.5 * var(--baseline));
   background-color: var(--accent);
 }
-.blog > h1 {
+#blog > h1 {
   margin-top: var(--baseline);
 }
 
-article .tags-style {
+#blog-card-tags {
   background-color: var(--accent);
   color: var(--bg);
   text-decoration: none;
 }
-article .tags-style:hover {
+#blog-card-tags:hover {
   background-color: var(--bg);
   color: var(--accent);
   text-decoration: underline;
@@ -925,15 +928,18 @@ pre {
 }
 
 /*--COLOPHON---*/
-.colophon {
+#colophon {
   margin-block: var(--baseline);
-}
-
-.colophon > p {
   max-width: 60ch;
+  margin-inline: auto;
 }
 
-.colophon > p + p {
+#colophon> :nth-child(2){
+  margin-top: var(--baseline);
+}
+
+
+#colophon > p + p {
   margin-top: calc(0.5 * var(--baseline));
 }
 
@@ -1105,23 +1111,26 @@ hr {
 
 
 /* PROJETS-INDEX */
-#projets {
+#projets h1 {
+  margin-top: var(--baseline);
+}
+
+#project-card-container {
   display: grid;
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   column-gap: var(--baseline);
 }
-
 .projets-container #footer {
   margin-top: var(--baseline);
 }
 #project-card {
   box-shadow: -2px 2px 5px 0px var(--shadow);
-  margin-top: var(--baseline);
+  margin-top: calc(0.5*var(--baseline));
   padding: calc(0.5 * var(--baseline));
   border-radius: 1rem;
   background-color: var(--accent);
-  max-width: 40ch;
+  max-width: 35ch;
 }
 
 #project-img-wrapper {

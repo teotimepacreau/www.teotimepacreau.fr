@@ -141,7 +141,7 @@ input {
   --bg: hsl(165, 51%, 18%);
   --txt: #dfd6d6;
   --accent: navajowhite;
-  --shadow : rgba(66, 65, 65, 0.345);
+  --shadow : oklch(10% 0 0 / 0.25);
 }
 
 :root:has(#light:checked) {
@@ -340,7 +340,7 @@ p,
 li,
 code,
 pre {
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 main a::after {
@@ -531,7 +531,7 @@ input {
     margin-top: calc(2*var(--baseline));
   }
 
-  /* HAMBURGER MENU */
+  /* HAMBURGER MENU IN THE MEDIA QUERY */
   .mobile-nav-toggle {
     display: block;
     color: inherit;
@@ -555,8 +555,9 @@ input {
     position: fixed;
     inset: 0 30% 0 0;
     padding: min(30dvh, 10rem) 2rem;
-    background-color: hsla(0, 0%, 100%, 0.3);
-    backdrop-filter: blur(1rem);
+    background-color: hsla(0, 0%, 42%, 0.3);
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
     transform: translateX(-100%);
     transition: transform 0.4s ease-out;
   }
@@ -691,12 +692,12 @@ input {
 
 #blog ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
   margin-inline: auto;
   column-gap: var(--baseline);
 }
 #blog li {
-  box-shadow: -2px 2px 5px 0px var(--shadow);
+  box-shadow: -2px 2px 5px 1px var(--shadow);
   margin-top: var(--baseline);
   display: flex;
   flex-direction: column;
@@ -733,6 +734,10 @@ input {
 }
 
 /*---------------POST-------------*/
+.post-main {
+  padding-bottom: var(--baseline);
+}
+
 #post-header {
   margin-bottom: var(--baseline);
   height: min-content;
@@ -871,12 +876,12 @@ article > p > a:hover {
 }
 
 pre {
+  background-color: oklch(100% 0 0 / 0.7);
   margin-block: var(--baseline);
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
   padding: calc(0.25 * var(--baseline));
-  background-color: var(--accent);
   color: var(--bg);
-  box-shadow: -1px 1px 5px 0px var(--shadow);
+  box-shadow: -1px 1px 5px 1px var(--shadow);
 }
 
 code {
@@ -904,6 +909,17 @@ pre {
   padding-bottom: calc(0.5 * var(--baseline));
   display: block;
   border-bottom: 2px solid var(--accent);
+}
+
+#post-tags {
+  text-decoration: none;
+}
+
+#post-tags:hover {
+  color: var(--accent);
+  transition: all 0.3s ease;
+  background-color: var(--bg);
+  outline: 1px ridge var(--accent);
 }
 
 /*----- TAG PAGE ----- */
@@ -1057,7 +1073,7 @@ hr {
 
 .card-texte {
   margin: calc(0.1 * var(--baseline));
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
 }
 .diplome-desc {
   padding-top: calc(0.5 * var(--baseline));
@@ -1155,14 +1171,14 @@ hr {
 #project-card-container {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
   column-gap: var(--baseline);
 }
 .projets-container #footer {
   margin-top: var(--baseline);
 }
 #project-card {
-  box-shadow: -2px 2px 5px 0px var(--shadow);
+  box-shadow: -2px 2px 5px 1px var(--shadow);
   margin-top: calc(0.5*var(--baseline));
   padding: calc(0.5 * var(--baseline));
   border-radius: 1rem;

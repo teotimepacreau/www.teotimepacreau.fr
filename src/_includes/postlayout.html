@@ -46,7 +46,7 @@ title: Blog post de Téotime Pacreau
             <ul class="post-tags">
               {% for tag in tags %}
               <li>
-                <a class="tags-style" href="/tags/{{ tag | slugify }}"
+                <a class="tags-style" id="post-tags" href="/tags/{{ tag | slugify }}"
                   >{{tag}}</a
                 >
               </li>

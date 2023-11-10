@@ -29,16 +29,7 @@ dd {
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
 
-nav,
-ul > li {
-  list-style: none;
-}
 
 /* Set core body defaults */
 body {
@@ -72,8 +63,11 @@ button {
 /* Make images easier to work with */
 img,
 picture {
+  margin-top: calc(0.5*var(--baseline));
   max-width: 100%;
   display: block;
+  border-radius: 0.3rem;
+  height: auto;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -140,14 +134,16 @@ input {
   --baselineh3: clamp(1.2rem, 0.98rem + 1vw, 2rem);
   --bg: hsl(165, 51%, 18%);
   --txt: #dfd6d6;
-  --accent: navajowhite;
+  --accent: oklch(91.64% 0.073 77.44);
   --shadow : oklch(10% 0 0 / 0.25);
+  --code: oklch(97% 0.005 77.44 / 0.9);
 }
 
 :root:has(#light:checked) {
   --bg: #c3e2ff;
   --txt: #1d533e;
   --accent: #752a04;
+  --code: oklch(24% 0.03 42.02 / 0.6);
 }
 :root:has(#eco:checked) {
   mix-blend-mode: luminosity;
@@ -188,7 +184,7 @@ pre::-webkit-scrollbar {
 }
 
 pre::-webkit-scrollbar-thumb {
-  background: var(--txt);
+  background: var(--accent);
   border-radius: 100vw;
 }
 
@@ -256,7 +252,9 @@ header {
 #footer a {
   color: var(--txt);
 }
-
+.menu li, .homepage-nav li {
+  list-style-type: none;
+}
 .menu a {
   color: var(--txt);
   text-decoration: none; /* no underline */
@@ -830,15 +828,6 @@ article li::marker {
   list-style-type: none;
 }
 
-.post-grid img {
-  border-radius: 1rem;
-  grid-column: 2;
-  width: 100%;
-  height: auto;
-  justify-self: center;
-  background-blend-mode: difference;
-  mix-blend-mode: screen;
-}
 .tags-date {
   color: var(--bg);
   display: block;
@@ -876,7 +865,7 @@ article > p > a:hover {
 }
 
 pre {
-  background-color: oklch(100% 0 0 / 0.7);
+  background-color: var(--code);
   margin-block: var(--baseline);
   border-radius: 0.3rem;
   padding: calc(0.25 * var(--baseline));

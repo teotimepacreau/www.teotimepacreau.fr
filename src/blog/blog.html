@@ -6,7 +6,7 @@ layout: baseforblog.html
 <!DOCTYPE html>
 <h1>Blog</h1>
 <ul>
-  {% for post in collections.posts %}
+  {% for post in collections.posts | reverse %}
   <li>
     <tag id="blog-card-tags">
       {% for tag in post.data.tags | filterTagList %} {% set tagUrl %}/tags/{{

@@ -1,20 +1,25 @@
 // plugins
 const markdownIt = require('markdown-it')
-const markdownItAttrs = require('markdown-it-attrs');
 const markdownItAnchor = require('markdown-it-anchor')
 const pluginTOC = require('eleventy-plugin-nesting-toc');
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+let mdfigcaption = require('markdown-it-image-figures');
+let figoptions = {
+    figcaption: true
+};
+
+
 
 module.exports = function(eleventyConfig) {
-
   // RSS
   eleventyConfig.addPlugin(pluginRss);
   // Anchor for markdown titles
   eleventyConfig.setLibrary(
     'md',
-    markdownIt().use(markdownItAnchor)
-  )
+    markdownIt().use(markdownItAnchor),
+    markdownIt().use(mdfigcaption, figoptions)
+  );
   eleventyConfig.setLibrary("md",
   markdownIt({
       html: true,
@@ -22,10 +27,12 @@ module.exports = function(eleventyConfig) {
       typographer: true,
   }).use(markdownItAnchor, {})
 );
+
+
   eleventyConfig.setLibrary('md',markdownIt().use(markdownItAnchor));
   let markdownItAnchorOptions = {
     level: 2 // minimum level header -- anchors will only be applied to h2 level headers and below but not h1
-}
+};
 
   // Table of content (require markdown anchor)
   eleventyConfig.addPlugin(pluginTOC, {
@@ -51,7 +58,7 @@ module.exports = function(eleventyConfig) {
 
     return filterTagList([...tagSet]);
   });
-  // ... Eleventy date en fr
+  // ... Eleventy date en FR
   eleventyConfig.addFilter("date", require("./src/filters/date.js"));
   // ... Img lazy laoding
   eleventyConfig.addPlugin(lazyImagesPlugin);

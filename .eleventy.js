@@ -68,7 +68,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection('posts', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/blog/*.md');
   })
-// ... CSS instant change
+// ... Monitor instant change for CSS
   eleventyConfig.addWatchTarget("src/css/");
 
 return {

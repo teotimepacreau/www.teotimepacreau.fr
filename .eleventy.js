@@ -69,8 +69,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/img/");
   eleventyConfig.addPassthroughCopy("src/favicon/");
   eleventyConfig.addPassthroughCopy("src/filters/");
-  eleventyConfig.addPassthroughCopy("src/script.js");
-  eleventyConfig.addPassthroughCopy("src/nav.js");
+  eleventyConfig.addPassthroughCopy("src/scripts/");
   // ... posts collection
   eleventyConfig.addCollection('posts', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/blog/*.md');

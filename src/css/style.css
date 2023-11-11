@@ -248,6 +248,9 @@ header {
 }
 
 /*----COULEURS------*/
+footer li {
+  list-style-type: none;
+}
 
 #footer a {
   color: var(--txt);
@@ -554,8 +557,8 @@ input {
     inset: 0 30% 0 0;
     padding: min(30dvh, 10rem) 2rem;
     background-color: hsla(0, 0%, 42%, 0.3);
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(1.4rem);
+    -webkit-backdrop-filter: blur(1.4rem);
     transform: translateX(-100%);
     transition: transform 0.4s ease-out;
   }
@@ -1015,10 +1018,32 @@ pre {
   grid-column: 3 / 4;
 }
 
+
 .travail-prose {
   grid-column: 3 / 4;
   display: none;
 }
+
+.visible {
+  display: block;
+  animation: fade-in 0.5s ease-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    transform: translateY(-20px);
+    filter: brightness(2);
+  }
+
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .travail-prose a {
   color: var(--accent);
 }
@@ -1034,9 +1059,6 @@ pre {
   margin-top: calc(0.5 * var(--baseline));
 }
 
-.travail-titre-poste:hover + .travail-prose {
-  display: block;
-}
 
 .hr-parent {
   display: flex;

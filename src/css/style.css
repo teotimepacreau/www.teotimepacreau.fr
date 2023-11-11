@@ -474,6 +474,41 @@ input {
   font-size: var(--baselineh3);
 }
 
+/* HOMEPAGE ANIMATION */
+.intersect-hidden {
+  visibility: hidden;
+  opacity: 0.2;
+  transition: all 0.33s ease-out;
+}
+
+.intersect-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.anim-1 {
+  transition-delay: 75ms;
+  transform: translateY(-100px);
+}
+
+.anim-2 {
+  transition-delay: 300ms;
+  transform: translateY(-30px);
+}
+
+.anim-3{
+  transition-delay: 300ms;
+  transform: translateY(-30px);
+}
+
+.anim-4{
+  transform: translateY(-30px);
+  transition-delay: 700ms;
+}
+
+.anim-5 {
+  transition-delay: 700ms;
+}
 /*---FOOTER INDEX---*/
 
 .hidden {

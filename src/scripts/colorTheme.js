@@ -1,11 +1,9 @@
 // select
 const colorThemes = document.querySelectorAll('[name="theme"]');
-console.log(colorThemes);
 
 // store theme in local storage
 const storeTheme = function (theme) {
   localStorage.setItem("theme", theme);
-  console.log(storeTheme);
 };
 
 //change theme value in local storage on click

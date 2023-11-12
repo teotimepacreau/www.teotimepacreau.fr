@@ -1,13 +1,18 @@
 const elementsToAnimate = document.querySelectorAll('.intersect');
 console.log(elementsToAnimate)
 
-// function hide(){
-//     for(let element of elementsToAnimate) {
-//         element.classList.add('hidden')
-//     }
-// }
+function hide(){
+    for(let element of elementsToAnimate) {
+        element.classList.add('intersect-hidden')
+        if(element.id != "dont-animate"){
+          element.style.transform = "translateY(-80px)"
+        }else{
+          continue
+        }
+    }
+}
 
-// document.onload = hide();
+document.onload = hide();
 
 // INTERSECTION OBSERVER
 const options = {

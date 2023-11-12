@@ -20,9 +20,15 @@ const observer = new IntersectionObserver(function(entries, observer){
     entries.forEach(entry => {
         if(!entry.isIntersecting){
             return;
+          }else{
+            console.log(entry)
+            entry.target.classList.add('intersect-visible');
+            if(entry.target.id === "dont-animate"){
+              return
+            }else{
+            entry.target.style.transform = "translateY(0)"
+            }
           }
-        entry.target.classList.add('intersect-visible');
-        entry.target.style.transform = "translateY(0)"
     });
 },options);
 

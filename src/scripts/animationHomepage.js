@@ -1,18 +1,17 @@
 const elementsToAnimate = document.querySelectorAll('.intersect');
-console.log(elementsToAnimate)
 
 function hide(){
     for(let element of elementsToAnimate) {
         element.classList.add('intersect-hidden')
         if(element.id != "dont-animate"){
-          element.style.transform = "translateY(-80px)"
+          element.classList.add('intersect-anim')
         }else{
           continue
         }
     }
 }
 
-document.onload = hide();
+hide()
 
 // INTERSECTION OBSERVER
 const options = {
@@ -26,7 +25,6 @@ const observer = new IntersectionObserver(function(entries, observer){
         if(!entry.isIntersecting){
             return;
           }else{
-            console.log(entry)
             entry.target.classList.add('intersect-visible');
             if(entry.target.id === "dont-animate"){
               return

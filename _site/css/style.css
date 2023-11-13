@@ -3,8 +3,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+   margin: 0; 
+   padding: 0;
 }
 
 /* Prevent font size inflation */
@@ -12,7 +12,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  scroll-behavior: smooth;
+   scroll-behavior: smooth;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
@@ -33,12 +33,11 @@ dd {
 
 /* Set core body defaults */
 body {
-    position: relative;
   background-color: var(--bg);
   color: var(--txt);
   overflow-x: hidden;
   text-rendering: geometricPrecision;
-  font-family: Inter-Variable, Helvetica, system, sans-serif;
+  font-family: "Inter-Variable", Helvetica, system, sans-serif;
 }
 
 /* Set shorter line heights on headings and text-wrap */
@@ -63,30 +62,12 @@ button {
 /* Make images easier to work with */
 img,
 picture {
-  margin-top: calc(0.5*var(--baseline));
   max-width: 100%;
   display: block;
-  border-radius: 0.3rem;
   height: auto;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
 
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10rem;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
 
 /* More consistent, styleable hr*/
 hr {
@@ -102,12 +83,6 @@ hr {
   box-shadow: 0 0 7px 0px chartreuse;
 }
 
-/* FOCUS ON LIGHT BACKGROUNDS  */
-/* *:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px hsla(210, 52%, 42%, 1.00), 
-              0 0 0 .6rem hsla(200, 72%, 83%, 0.75);
-} */
 
 button:focus-visible {
   outline-offset: 0.8ex;
@@ -479,8 +454,12 @@ input {
 /* HOMEPAGE ANIMATION */
 .intersect-hidden {
   visibility: hidden;
-  opacity: 0.2;
-  transition: all 0.33s ease-out;
+  opacity: 0;
+  transition: transform 0.33s ease-out, opacity 0.33s ease-out;
+}
+
+.intersect-anim {
+  transform: translateY(-100px)
 }
 
 .intersect-visible {

@@ -1,18 +1,16 @@
 ---
-title: 'SQLite, la solution pragmatique en production pour le web'
+title: 'HTML emails modernes : en finir avec les tables'
 date: '2023-11-10'
-description: "Pourquoi SQLite mérite d'être considéré à sa juste valeur pour les projets de développement web."
+description: "Mettre à jour les pratiques de développement d'emails HTML grâce aux nouveautés, un tour d'horizon de l'état des clients mails et choisir des solutions pragmatiques qui conviennent à la grande majorité des lecteurs de mails."
 tags: 
-  - 'SQL'
-  - 'Backend'
-  - 'SQLite'
+  - 'email'
+  - 'HTML'
+  - 'webmail'
 layout: postlayout.html
 ---
 
-# Guide emails HTML modernes : en finir avec les tables
-
 Le monde du développement d'emails est rempli d'inconsistences, de hacks, d'éléments HTML obsolètes, et de règles CSS abandonnées depuis longtemps.
-Les développeurs d'emails se retrouvent ainsi à devoir jongler entre des <tables> layouts, des <tr> et <td> (une façon de structurer le HTML en colonne et lignes comme on le ferait dans un tableau), les inline-styles CSS, ’float’ une propriété CSS qui a perdu de son usage, à juste titre, depuis l'arrivée de ’flexbox’ et ’grid’.
+Les développeurs d'emails se retrouvent ainsi à devoir jongler entre des `<tables>` layouts, des `<tr>` et `<td>` (une façon de structurer le HTML en colonne et lignes comme on le ferait dans un tableau), les inline-styles CSS, `float` une propriété CSS qui a perdu de son usage, à juste titre, depuis l'arrivée de `flexbox` et `grid`.
 
 En théorie, le monde du développement d'emails devrait être simple car les emails ne sont rien de plus que des documents HTML, comme une page web, échangés entre nos clients mails. Cependant l'élément bloquant est bien cette dépendance aux clients mails qui ont tous des manières de différente de transformer le HTML en rendu visuel pour l'utilisateur.
 Le support de chaque client mail des règles CSS et du HTML est différent et a pris énormément de retard par rapport au développement web classique.

@@ -1,7 +1,7 @@
 ---
 title: 'HTML emails modernes : en finir avec les tables'
-date: '2023-11-10'
-description: "Mettre à jour les pratiques de développement d'emails HTML grâce aux nouveautés, un tour d'horizon de l'état des clients mails et choisir des solutions pragmatiques qui conviennent à la grande majorité des lecteurs de mails."
+date: '2023-12-13'
+description: "Mettre à jour les pratiques de développement d'emails HTML grâce aux nouvelles règles supportées, tour d'horizon de l'état des clients mails et choisir des solutions pragmatiques qui conviennent à la grande majorité des lecteurs de mails."
 tags: 
   - 'email'
   - 'HTML'
@@ -15,7 +15,7 @@ Les développeurs d'emails se retrouvent ainsi à devoir jongler entre des `<tab
 En théorie, le monde du développement d'emails devrait être simple car les emails ne sont rien de plus que des documents HTML, comme une page web, échangés entre nos clients mails. Cependant l'élément bloquant est bien cette dépendance aux clients mails qui ont tous des manières de différente de transformer le HTML en rendu visuel pour l'utilisateur.
 Le support de chaque client mail des règles CSS et du HTML est différent et a pris énormément de retard par rapport au développement web classique.
 
-Ainsi, si vous avez l'habitude d'utiliser des méthodes CSS modernes comme  ’dark-mode’, ’grid’, ’@font-face’ celles-ci sont soient :
+Ainsi, si vous avez l'habitude d'utiliser des méthodes CSS modernes comme  `dark-mode`, `grid`, `@font-face` celles-ci sont soient :
 - pas supportés du tout
 - ne fonctionnent pas comme attendu au rendu
 - ne sont pas supportés de la même façon entre les différents clients mails
@@ -67,18 +67,18 @@ Les élements HTML sémantiques ne sont pas supportés :
 
 ### Appliquer du CSS
 
-Il n'est pas possible d'appliquer un style pour un fichier CSS externe via <link rel="stylesheet" src="style.css"> car le client mail ne le lira pas.
+Il n'est pas possible d'appliquer un style pour un fichier CSS externe via `<link rel="stylesheet" src="style.css">` car le client mail ne le lira pas.
 
 Il faut donc se tourner vers deux méthodes CSS "traditionnelles" :
 - les inline styles. Exemple : `<p style="margin-top: 1rem !important; line-height: 1.5 !important;">`
-- <style>
+- `<style>`
 
 Quelques points d'attention sur `<style>` :
-Si vous forwardez l'email, tous les <style> seront supprimés et leur style ne sera pas appliqué. Également les comptes tiers utilisant un client mail autre que celui propriétaire verront leur <style> tag supprimé.
+Si vous forwardez l'email, tous les `<style>` seront supprimés et leur style ne sera pas appliqué. Également les comptes tiers utilisant un client mail autre que celui propriétaire verront leur `<style>` tag supprimé.
 
 Ainsi, le seul style qui ne sera pas suprrimé est le inline style.
 
-Quel est l'intérêt d'utiliser le <style> tag alors ?
+Quel est l'intérêt d'utiliser le `<style>` tag alors ?
 Il permet d'appliquer des éléments généraux à tous le document HTML et évite les répétitions, donc pratique pour déclarer
 **`[:hover](https://css-tricks.com/almanac/selectors/h/hover/)`**, les focus, un background-color sur la page... `!important`** est requis pour passer outre un inline style.
 
@@ -93,7 +93,7 @@ Plutôt que de définir `font-family: "Gill Sans", sans-serif;` à chaque fois q
 De longueur :
 Seuls les `rem` et les `px` sont supportés. On aura tendance à privilégier les `rem` pour leur accessibilité naturelle en cas de zoom.
 De couleur :
-Seuls #fffff et rgb() sont supportés.
+Seuls `#fffff` et `rgb()` sont supportés.
 
 ### Fonts
 `@font-face` n'est pas supporté, impossible donc d'utiliser une font de son choix. Il est impératif de passer par les `system-fonts`, des polices d'écriture incluses nativement dans les OS.
@@ -132,7 +132,7 @@ La flexbox est désormais supportée ! Très pratique pour afficher des images c
 ![Utilisation de flexbox dans un client mail](/img/flexbox-email.mp4 "Vidéo illustration l'illustration de flexbox dans un client mail")
 
 ### Position
-Position: relative et position:absolute ne sont pas supportés du tout
+`position: relative` et `position:absolute` ne sont pas supportés du tout
 
 ### Liens
 Les clients mails scannent les adresses emails et les numéros de téléphone dans le contenu de vos mails et les transforment automatiquement en liens soulignés bleus. Pour contrer ces styles par défaut il faut les wrapper dans des `<a>` et enlever le style par défaut.

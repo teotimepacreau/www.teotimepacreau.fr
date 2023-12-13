@@ -49,10 +49,10 @@
     <meta property="og:locale" content="fr_FR"/>
     
     <!--Twitter-->
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="Téotime Pacreau"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Le blog de Téotime Pacreau"/>
     <meta name="twitter:description" content="Gérer facilement le rythme vertical de son site"/>
-    <meta name="twitter:image" content="https://www.teotimepacreau.fr/img/Favicon_Twitter.png/>
+    <meta name="twitter:image" content="https://www.teotimepacreau.fr/img/FaviconTwitter800x400.png/>
     <meta name="twitter:image:alt" content="Mon logo : 2 cercles et un truchet"/>
     <meta name="twitter:creator" content="@teotimepacreau"/>
     <meta name="twitter:site" content="@teotimepacreau"/>
@@ -116,18 +116,18 @@
                     <li><a href="#comment-le-d%C3%A9terminer-%3F">Comment le déterminer ?</a>
             		</li>
 
-                    <li><a href="#exemple-concret-d'utilisation">Exemple concret d'utilisation</a>
+                    <li><a href="#exemple-concret-d%E2%80%99utilisation">Exemple concret d’utilisation</a>
             		</li>
                 </ol>
             		</li>
 
-                    <li><a href="#le-%22hibou-lobotomis%C3%A9%22-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps">Le "hibou lobotomisé" : le sélecteur CSS qui fait gagner du temps</a>
+                    <li><a href="#le-%E2%80%9Chibou-lobotomis%C3%A9%E2%80%9D-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps">Le “hibou lobotomisé” : le sélecteur CSS qui fait gagner du temps</a>
             		</li>
 
-                    <li><a href="#...-et-une-touche-de-custom-properties">... et une touche de Custom Properties</a>
+                    <li><a href="#%E2%80%A6-et-une-touche-de-custom-properties">… et une touche de Custom Properties</a>
             		</li>
 
-                    <li><a href="#notre-espacement-automatique-pour-l'ensemble-du-site-en-2-lignes-de-code">Notre espacement automatique pour l'ensemble du site en 2 lignes de code</a>
+                    <li><a href="#notre-espacement-automatique-pour-l%E2%80%99ensemble-du-site-en-2-lignes-de-code">Notre espacement automatique pour l’ensemble du site en 2 lignes de code</a>
             		</li>
                 </ol>
             </nav></aside>
@@ -163,10 +163,10 @@
             </time>
             <p>En 2 lignes de code, il est possible de mettre en place un système d&#39;espacement modulable et réutilisable qui s&#39;adapte à toutes les mises en page.</p>
             <h2 id="rythme-vertical" tabindex="-1">Rythme vertical</h2>
-<p>Adopter un rythme vertical proportionnel et prédictible sur une page web permet de ressentir une <a href="https://24ways.org/2006/compose-to-a-vertical-rhythm/">hiérarchie visuelle qui facilite l'expérience utilisateur</a>.</p>
+<p>Adopter un rythme vertical proportionnel et prédictible sur une page web permet de ressentir une <a href="https://24ways.org/2006/compose-to-a-vertical-rhythm/">hiérarchie visuelle qui facilite l’expérience utilisateur</a>.</p>
 <h3 id="comment-le-d%C3%A9terminer-%3F" tabindex="-1">Comment le déterminer ?</h3>
 <p>On établit une <em>unité de mesure commune</em> qui régit tous nos espacements et tailles.
-Pour la déterminer, la règle typographique communément admise est <strong>d'ajouter la hauteur de la ligne à la taille de la police d'écriture utilisée</strong>. Cela crée notre <em>&quot;unité de rythme&quot;</em> que l'on va moduler pour tous nos espacements/tailles.
+Pour la déterminer, la règle typographique communément admise est <strong>d’ajouter la hauteur de la ligne à la taille de la police d’écriture utilisée</strong>. Cela crée notre <em>“unité de rythme”</em> que l’on va moduler pour tous nos espacements/tailles.
 Notre base est la <code>line-eight</code> des paragraphes couplée à la <code>font-size</code> :</p>
 <pre><code>p {
   font-size: 1rem; /* =16px par défaut */
@@ -175,33 +175,33 @@ Notre base est la <code>line-eight</code> des paragraphes couplée à la <code>f
 _____________
 16*1.4=22.4
 </code></pre>
-<p>Notre <em>&quot;unité de rythme&quot;</em> est 22.4. L'objectif est d'essayer que chaque espacement en soit le multiple.</p>
-<h3 id="exemple-concret-d'utilisation" tabindex="-1">Exemple concret d'utilisation</h3>
+<p>Notre <em>“unité de rythme”</em> est 22.4. L’objectif est d’essayer que chaque espacement en soit le multiple.</p>
+<h3 id="exemple-concret-d%E2%80%99utilisation" tabindex="-1">Exemple concret d’utilisation</h3>
 <ul>
-<li>On souhaite un &lt;h1&gt; qui ferait 4 fois la taille de notre &lt;p&gt;.</li>
+<li>On souhaite un <h1> qui ferait 4 fois la taille de notre <p>.</li>
 <li>On souhaite également adapter la hauteur de ligne pour faciliter la lecture sur le gros-titre : <code>line-eight: 1.1;</code>.</li>
 </ul>
-<p>Un premier réflexe pourrait-être d'utiliser <code>font-size: 4rem;</code>.
-Pourtant on veut que notre &lt;h1&gt; soit 4 fois plus grand que notre <em>&quot;unité de rythme&quot;</em> et non pas de notre taille de police. On module donc la font-size :</p>
+<p>Un premier réflexe pourrait-être d’utiliser <code>font-size: 4rem;</code>.
+Pourtant on veut que notre <h1> soit 4 fois plus grand que notre <em>“unité de rythme”</em> et non pas de notre taille de police. On module donc la font-size :</p>
 <pre><code>?*1.1=67.2
 &lt;=&gt;61.09*1.1=67.2
 
 On convertit 61.09px en rem : 16/61.09=3.81rem
 </code></pre>
-<h2 id="le-%22hibou-lobotomis%C3%A9%22-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps" tabindex="-1">Le &quot;hibou lobotomisé&quot; : le sélecteur CSS qui fait gagner du temps</h2>
-<p><code>* + *</code>, <a href="https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/">autrement appelé le &quot;hibou lobotomisé&quot;</a> est un formidable moyen de mettre en place une règle CSS anonyme et automatique pour faciliter la mise en page.</p>
+<h2 id="le-%E2%80%9Chibou-lobotomis%C3%A9%E2%80%9D-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps" tabindex="-1">Le “hibou lobotomisé” : le sélecteur CSS qui fait gagner du temps</h2>
+<p><code>* + *</code>, <a href="https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/">autrement appelé le “hibou lobotomisé”</a> est un formidable moyen de mettre en place une règle CSS anonyme et automatique pour faciliter la mise en page.</p>
 <ul>
-<li>le sélecteur &quot;&gt;&quot; cible tous les éléments enfants de la div parente</li>
-<li>le sélecteur &quot;*&quot; cible tous les éléments</li>
+<li>le sélecteur “&gt;” cible tous les éléments enfants de la div parente</li>
+<li>le sélecteur “*” cible tous les éléments</li>
 </ul>
-<p><code>article &gt; * + *</code> nous permet donc de cibler tous les éléments de notre article suivant directement d'autres éléments.</p>
-<h2 id="...-et-une-touche-de-custom-properties" tabindex="-1">... et une touche de Custom Properties</h2>
-<p>Les <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">Custom Properties</a> permettent de déclarer des variables réutilisables. On en profite pour utiliser également la fonction &quot;clamp&quot; qui permet de switcher entre une valeur minimale, une valeur de circonstance et une valeur maximale. Cela permet à notre <em>unité de rythme</em> d'évoluer en accord avec l'espace disponible.</p>
+<p><code>article &gt; * + *</code> nous permet donc de cibler tous les éléments de notre article suivant directement d’autres éléments.</p>
+<h2 id="%E2%80%A6-et-une-touche-de-custom-properties" tabindex="-1">… et une touche de Custom Properties</h2>
+<p>Les <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">Custom Properties</a> permettent de déclarer des variables réutilisables. On en profite pour utiliser également la fonction “clamp” qui permet de switcher entre une valeur minimale, une valeur de circonstance et une valeur maximale. Cela permet à notre <em>unité de rythme</em> d’évoluer en accord avec l’espace disponible.</p>
 <pre><code>:root {
   --baseline : clamp(1.4rem, 1.1200rem + 1.4000vw, 2.8rem);
 }
 </code></pre>
-<h2 id="notre-espacement-automatique-pour-l'ensemble-du-site-en-2-lignes-de-code" tabindex="-1">Notre espacement automatique pour l'ensemble du site en 2 lignes de code</h2>
+<h2 id="notre-espacement-automatique-pour-l%E2%80%99ensemble-du-site-en-2-lignes-de-code" tabindex="-1">Notre espacement automatique pour l’ensemble du site en 2 lignes de code</h2>
 <pre><code>body &gt; * + * {
   margin-top: var(--baseline);
 }

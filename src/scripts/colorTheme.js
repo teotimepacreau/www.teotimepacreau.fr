@@ -27,6 +27,18 @@ const setTheme = function () {
   document.documentElement.className = activeTheme;
 };
 
+function checkLocalStorage(){
+  const allCodes = document.querySelectorAll('code')
+  const activeTheme = localStorage.getItem("theme");
+  console.log(activeTheme)
+  if(activeTheme === "light"){
+    for(let code of allCodes){
+      code.style.color = "#1d533e"
+    }
+  }
+}
+checkLocalStorage()
+
 
 
 document.onload = setTheme();

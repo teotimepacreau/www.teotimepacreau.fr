@@ -1,7 +1,7 @@
 ---
-title: 'HTML emails modernes : en finir avec les tables'
+title: 'Emails HTML modernes : en finir avec les tables'
 date: '2023-12-13'
-description: "Mettre à jour les pratiques de développement d'emails HTML grâce aux nouvelles règles supportées, tour d'horizon de l'état des clients mails et choisir des solutions pragmatiques qui conviennent à la grande majorité des lecteurs de mails."
+description: "Comment mettre à jour ses pratiques de développement d'emails HTML dans l'environnement complexe et changeant des clients mails ?"
 tags: 
   - 'email'
   - 'HTML'
@@ -22,7 +22,7 @@ Ainsi, si vous avez l'habitude d'utiliser des méthodes CSS modernes comme  `dar
 
 Le développement d'emails est donc devenu un casse tête où le développeur doit sans cesser vérifier si la règle CSS ou l'élément HTML utilisé est supporté grâce à des outils indispensables comme https://www.caniemail.com/. 
 
-Le peu d'effort mis par Google, Apple et Microsoft pour intégrer le support des nouveautés CSS et HTML s'explique par des raisons de [sécurité](https://www.darkreading.com/cyberattacks-data-breaches/attackers-use-unicode-html-to-bypass-email-security-tools), de [guerre commerciale](https://www.linkedin.com/pulse/brief-update-email-client-wars-david-taitelbaum/), et d'impossibilité à se mettre d'accord sur un [*HTML email standard*](https://medium.com/email-design/will-there-ever-be-an-html-email-standard-bf8a2b7f48d8). A titre d'exemple [Outlook utilise encore Word pour rendre les emails sur mobile (?)](https://www.hteumeuleu.com/2020/outlook-rendering-engine/).
+Le peu d'effort mis par Google, Apple et Microsoft pour intégrer le support des nouveautés CSS et HTML s'explique par des raisons de [sécurité](https://www.darkreading.com/cyberattacks-data-breaches/attackers-use-unicode-html-to-bypass-email-security-tools), de [guerre commerciale](https://www.linkedin.com/pulse/brief-update-email-client-wars-david-taitelbaum/), et d'impossibilité à se mettre d'accord sur un [HTML email standard](https://medium.com/email-design/will-there-ever-be-an-html-email-standard-bf8a2b7f48d8). A titre d'exemple [Outlook utilise encore Word pour rendre les emails sur mobile (?)](https://www.hteumeuleu.com/2020/outlook-rendering-engine/).
 
 ## Une révolution en cours dans le monde du développement des emails
 
@@ -33,12 +33,12 @@ Une révolution de la façon de développer des emails est en cours grâce à de
 
 Si l'on développe des emails, c'est avant tout pour qu'ils soient lus, et pour cela il est important d'avoir bien en tête les parts d'usages des différents clients mails car il est IMPOSSIBLE de développer des emails compatibles pour les dizaines de clients mails qui existent (certains clients mails encore actifs comme AOL ont des parts d'utilisation infimes).
 
-## Guide 
-Le guide de développement moderne d'email ci-dessous s'appuie sur deux considérations pragmatiques :
+## Guide de développement moderne d'email
+Les préconisations ci-dessous s'appuient sur deux considérations pragmatiques :
 - nous prenons en compte seulement les clients Apple Mail, Gmail et Outlook qui couvre ainsi 90% des lecteurs de mails dans le monde.
 - nous utiliserons des règles CSS/HTML supportés à minima part 70% de tout les clients mails
 
-Ainsi tous les éléments ci-dessous sont compatibles et supportés pour les 2 conditions précédentes et devraient combler la grande majorité des besoins.
+Ainsi tous les éléments ci-dessous sont compatibles et supportés pour les 2 conditions précédentes et devraient combler la grande majorité des besoins. Il s'agit de recommandations et ne constituent, en aucun cas, un guide exhaustif de la conception d'emails HTML.
 
 ### Stopper les table layouts et float
 Les table layouts dans les emails mènent à de nombreux problème d'accessibilité et de rendering.
@@ -122,17 +122,22 @@ Par défaut les images vont overflow, pour contrer cela :
         />
     </div>
 ```
-![Images responsives dans les clients mails](/img/email-images-responsive.png "Illustration d'utilisation d'images responsives grâce à la technique ci-dessus dans un client mail")
+
+Voici une illustration pratique de ce code : 
+![Images responsives dans les clients mails](/img/email-images-responsives.png "Illustration d'utilisation d'images responsives grâce à la technique ci-dessus dans un client mail")
 
 
 ### Flexbox 
 La flexbox est désormais supportée ! Très pratique pour afficher des images côte à côte ou créer des colonnes.
 `display: flex` et `column-gap` fonctionnent mais `flex-direction:column` et `flex-wrap: wrap` ne sont pas supportés dans GMAIL seulement. Ils fonctionnent dans les 2 autres clients.
 
-![Utilisation de flexbox dans un client mail](/img/flexbox-email.mp4 "Vidéo illustration l'illustration de flexbox dans un client mail")
+<video width="640" height="360" controls>
+  <source src="/img/flexbox-email.mp4" alt="Vidéo illustration l'illustration de flexbox dans un client mail" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Position
-`position: relative` et `position:absolute` ne sont pas supportés du tout
+`position: relative` et `position: absolute` ne sont pas supportés du tout
 
 ### Liens
 Les clients mails scannent les adresses emails et les numéros de téléphone dans le contenu de vos mails et les transforment automatiquement en liens soulignés bleus. Pour contrer ces styles par défaut il faut les wrapper dans des `<a>` et enlever le style par défaut.
@@ -146,6 +151,8 @@ Les clients mails scannent les adresses emails et les numéros de téléphone da
 J'ai construit un site d'inscription et d'envoi de newsletter qui repose entièrement sur ces principes, voici le [lien du projet](https://www.teotimepacreau.fr/projets/projetnewsletter/)
 
 ## Sources 
-https://dodov.dev/blog/why-does-email-development-have-to-suck
-https://www.hteumeuleu.com/blog/
-https://www.caniemail.com/
+<https://dodov.dev/blog/why-does-email-development-have-to-suck/>
+
+<https://www.hteumeuleu.com/blog/>
+
+<https://www.caniemail.com/>

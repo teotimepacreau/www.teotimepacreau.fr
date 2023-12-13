@@ -5,7 +5,7 @@
 	
 	<link href="https://www.teotimepacreau.fr/feed/feed.xml" rel="self"/>
 	<link href="https://www.teotimepacreau.fr/"/>
-	<updated>2023-11-10T00:00:00Z</updated>
+	<updated>2023-12-13T00:00:00Z</updated>
 	<id>https://www.teotimepacreau.fr/</id>
 	<author>
 		<name>Téotime Pacreau</name>
@@ -13,59 +13,182 @@
 	</author>
 	
 	<entry>
+		<title>Emails HTML modernes : en finir avec les tables</title>
+		<link href="https://www.teotimepacreau.fr/blog/emails-html-modernes/"/>
+		<updated>2023-12-13T00:00:00Z</updated>
+		<id>https://www.teotimepacreau.fr/blog/emails-html-modernes/</id>
+		<content type="html">&lt;p&gt;Le monde du développement d’emails est rempli d’inconsistences, de hacks, d’éléments HTML obsolètes, et de règles CSS abandonnées depuis longtemps.
+Les développeurs d’emails se retrouvent ainsi à devoir jongler entre des &lt;code&gt;&amp;lt;tables&amp;gt;&lt;/code&gt; layouts, des &lt;code&gt;&amp;lt;tr&amp;gt;&lt;/code&gt; et &lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt; (une façon de structurer le HTML en colonne et lignes comme on le ferait dans un tableau), les inline-styles CSS, &lt;code&gt;float&lt;/code&gt; une propriété CSS qui a perdu de son usage, à juste titre, depuis l’arrivée de &lt;code&gt;flexbox&lt;/code&gt; et &lt;code&gt;grid&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En théorie, le monde du développement d’emails devrait être simple car les emails ne sont rien de plus que des documents HTML, comme une page web, échangés entre nos clients mails. Cependant l’élément bloquant est bien cette dépendance aux clients mails qui ont tous des manières de différente de transformer le HTML en rendu visuel pour l’utilisateur.
+Le support de chaque client mail des règles CSS et du HTML est différent et a pris énormément de retard par rapport au développement web classique.&lt;/p&gt;
+&lt;p&gt;Ainsi, si vous avez l’habitude d’utiliser des méthodes CSS modernes comme  &lt;code&gt;dark-mode&lt;/code&gt;, &lt;code&gt;grid&lt;/code&gt;, &lt;code&gt;@font-face&lt;/code&gt; celles-ci sont soient :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pas supportés du tout&lt;/li&gt;
+&lt;li&gt;ne fonctionnent pas comme attendu au rendu&lt;/li&gt;
+&lt;li&gt;ne sont pas supportés de la même façon entre les différents clients mails&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Le développement d’emails est donc devenu un casse tête où le développeur doit sans cesser vérifier si la règle CSS ou l’élément HTML utilisé est supporté grâce à des outils indispensables comme &lt;a href=&quot;https://www.caniemail.com/&quot;&gt;https://www.caniemail.com/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Le peu d’effort mis par Google, Apple et Microsoft pour intégrer le support des nouveautés CSS et HTML s’explique par des raisons de &lt;a href=&quot;https://www.darkreading.com/cyberattacks-data-breaches/attackers-use-unicode-html-to-bypass-email-security-tools&quot;&gt;sécurité&lt;/a&gt;, de &lt;a href=&quot;https://www.linkedin.com/pulse/brief-update-email-client-wars-david-taitelbaum/&quot;&gt;guerre commerciale&lt;/a&gt;, et d’impossibilité à se mettre d’accord sur un &lt;a href=&quot;https://medium.com/email-design/will-there-ever-be-an-html-email-standard-bf8a2b7f48d8&quot;&gt;HTML email standard&lt;/a&gt;. A titre d’exemple &lt;a href=&quot;https://www.hteumeuleu.com/2020/outlook-rendering-engine/&quot;&gt;Outlook utilise encore Word pour rendre les emails sur mobile (?)&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;une-r%C3%A9volution-en-cours-dans-le-monde-du-d%C3%A9veloppement-des-emails&quot; tabindex=&quot;-1&quot;&gt;Une révolution en cours dans le monde du développement des emails&lt;/h2&gt;
+&lt;p&gt;Une révolution de la façon de développer des emails est en cours grâce à deux facteurs :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;la part d’utilisation des différents clients mails&lt;/li&gt;
+&lt;li&gt;les récentes changements en terme de support des règles CSS/HTML des 3 principaux clients mails
+&lt;img src=&quot;https://www.teotimepacreau.fr/img/part-de-marche-clients-mails.png&quot; alt=&quot;Part de marché des différents clients mails&quot; title=&quot;Graphique représentant les différentes par de marchés des clients mails&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si l’on développe des emails, c’est avant tout pour qu’ils soient lus, et pour cela il est important d’avoir bien en tête les parts d’usages des différents clients mails car il est IMPOSSIBLE de développer des emails compatibles pour les dizaines de clients mails qui existent (certains clients mails encore actifs comme AOL ont des parts d’utilisation infimes).&lt;/p&gt;
+&lt;h2 id=&quot;guide-de-d%C3%A9veloppement-moderne-d%E2%80%99email&quot; tabindex=&quot;-1&quot;&gt;Guide de développement moderne d’email&lt;/h2&gt;
+&lt;p&gt;Les préconisations ci-dessous s’appuient sur deux considérations pragmatiques :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nous prenons en compte seulement les clients Apple Mail, Gmail et Outlook qui couvre ainsi 90% des lecteurs de mails dans le monde.&lt;/li&gt;
+&lt;li&gt;nous utiliserons des règles CSS/HTML supportés à minima part 70% de tout les clients mails&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ainsi tous les éléments ci-dessous sont compatibles et supportés pour les 2 conditions précédentes et devraient combler la grande majorité des besoins. Il s’agit de recommandations et ne constituent, en aucun cas, un guide exhaustif de la conception d’emails HTML.&lt;/p&gt;
+&lt;h3 id=&quot;stopper-les-table-layouts-et-float&quot; tabindex=&quot;-1&quot;&gt;Stopper les table layouts et float&lt;/h3&gt;
+&lt;p&gt;Les table layouts dans les emails mènent à de nombreux problème d’accessibilité et de rendering.&lt;/p&gt;
+&lt;p&gt;Outlook pour Windows est &lt;a href=&quot;https://blocksedit.com/content-code/dealing-with-outlook/&quot;&gt;la seule raison&lt;/a&gt; pour laquelle on pourrait être tenté de continuer à utiliser les tables, mais il représente désormais moins de 3% de l’usage total des clients mails. Les divs sont désormais totalement supportées et simplifient grandement la structuration des emails.&lt;/p&gt;
+&lt;h3 id=&quot;%C3%A9l%C3%A9ments-html&quot; tabindex=&quot;-1&quot;&gt;Éléments HTML&lt;/h3&gt;
+&lt;p&gt;Les divs, headings (&lt;strong&gt;&lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;&lt;/strong&gt;, etc.), paragraphes (&lt;strong&gt;&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;&lt;/strong&gt;), et les listes (&lt;strong&gt;&lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt;&lt;/strong&gt;) sont supportés partout.&lt;/p&gt;
+&lt;p&gt;Il est donc possible de se passer totalement des &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt; grâce aux divs ! Fini le besoin de structurer en colonnes et en lignes.&lt;/p&gt;
+&lt;p&gt;Les élements HTML sémantiques ne sont pas supportés :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;aside&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;details&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;figcaption&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;figure&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;footer&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;summary&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;time&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;appliquer-du-css&quot; tabindex=&quot;-1&quot;&gt;Appliquer du CSS&lt;/h3&gt;
+&lt;p&gt;Il n’est pas possible d’appliquer un style pour un fichier CSS externe via &lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; src=&amp;quot;style.css&amp;quot;&amp;gt;&lt;/code&gt; car le client mail ne le lira pas.&lt;/p&gt;
+&lt;p&gt;Il faut donc se tourner vers deux méthodes CSS “traditionnelles” :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;les inline styles. Exemple : &lt;code&gt;&amp;lt;p style=&amp;quot;margin-top: 1rem !important; line-height: 1.5 !important;&amp;quot;&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Quelques points d’attention sur &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; :
+Si vous forwardez l’email, tous les &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; seront supprimés et leur style ne sera pas appliqué. Également les comptes tiers utilisant un client mail autre que celui propriétaire verront leur &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tag supprimé.&lt;/p&gt;
+&lt;p&gt;Ainsi, le seul style qui ne sera pas suprrimé est le inline style.&lt;/p&gt;
+&lt;p&gt;Quel est l’intérêt d’utiliser le &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tag alors ?
+Il permet d’appliquer des éléments généraux à tous le document HTML et évite les répétitions, donc pratique pour déclarer
+&lt;strong&gt;&lt;code&gt;[:hover](https://css-tricks.com/almanac/selectors/h/hover/)&lt;/code&gt;&lt;/strong&gt;, les focus, un background-color sur la page… &lt;code&gt;!important&lt;/code&gt;** est requis pour passer outre un inline style.&lt;/p&gt;
+&lt;h3 id=&quot;%C3%A9viter-les-r%C3%A9p%C3%A9titions-en-utilisant-le-m%C3%A9canisme-css-d%E2%80%99h%C3%A9ritage&quot; tabindex=&quot;-1&quot;&gt;Éviter les répétitions en utilisant le mécanisme CSS d’héritage&lt;/h3&gt;
+&lt;p&gt;Plutôt que de définir &lt;code&gt;font-family: &amp;quot;Gill Sans&amp;quot;, sans-serif;&lt;/code&gt; à chaque fois que l’on pose un &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; il est plus pratique d’utiliser l’héritage :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;body&amp;gt;  &amp;lt;div style=&amp;quot;font-size:16px; font-family: system-ui;&amp;quot;&amp;gt;    &amp;lt;!-- email content goes here --&amp;gt;  &amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;les-unit%C3%A9s&quot; tabindex=&quot;-1&quot;&gt;Les unités&lt;/h3&gt;
+&lt;p&gt;De longueur :
+Seuls les &lt;code&gt;rem&lt;/code&gt; et les &lt;code&gt;px&lt;/code&gt; sont supportés. On aura tendance à privilégier les &lt;code&gt;rem&lt;/code&gt; pour leur accessibilité naturelle en cas de zoom.
+De couleur :
+Seuls &lt;code&gt;#fffff&lt;/code&gt; et &lt;code&gt;rgb()&lt;/code&gt; sont supportés.&lt;/p&gt;
+&lt;h3 id=&quot;fonts&quot; tabindex=&quot;-1&quot;&gt;Fonts&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;@font-face&lt;/code&gt; n’est pas supporté, impossible donc d’utiliser une font de son choix. Il est impératif de passer par les &lt;code&gt;system-fonts&lt;/code&gt;, des polices d’écriture incluses nativement dans les OS.&lt;/p&gt;
+&lt;p&gt;Une règle à suivre de bonne pratique pour déclarer ses system-fonts :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;font-family: “Custom Serif You Won’t Have”, Serif You Might Have, Serif Your System Almost Definitely has, serif;
+
+font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Pour choisir la system-font qui correspond le mieux au design imaginé, essayez de choisir une system-font qui a une hauteur-de-x similaire.&lt;/p&gt;
+&lt;h3 id=&quot;rendre-les-images-responsive&quot; tabindex=&quot;-1&quot;&gt;Rendre les images responsive&lt;/h3&gt;
+&lt;p&gt;Par défaut les images vont overflow, pour contrer cela :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div
+    class=&amp;quot;img-block&amp;quot;
+    style=&amp;quot;overflow: hidden; margin-top: 2rem; border-radius: 0.5rem !important;&amp;quot;&amp;gt;
+        &amp;lt;img
+          style=&amp;quot;max-width: 100%; object-fit: cover;
+            display: block;&amp;quot;
+          src=&amp;quot;https://i.imgur.com/twfNOSU.jpg&amp;quot;
+          alt=&amp;quot;The Material Web Components website : a landing page explaining what is Material UI.&amp;quot;
+        /&amp;gt;
+    &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Voici une illustration pratique de ce code :
+&lt;img src=&quot;https://www.teotimepacreau.fr/img/email-images-responsives.png&quot; alt=&quot;Images responsives dans les clients mails&quot; title=&quot;Illustration d&#39;utilisation d&#39;images responsives grâce à la technique ci-dessus dans un client mail&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;flexbox&quot; tabindex=&quot;-1&quot;&gt;Flexbox&lt;/h3&gt;
+&lt;p&gt;La flexbox est désormais supportée ! Très pratique pour afficher des images côte à côte ou créer des colonnes.
+&lt;code&gt;display: flex&lt;/code&gt; et &lt;code&gt;column-gap&lt;/code&gt; fonctionnent mais &lt;code&gt;flex-direction:column&lt;/code&gt; et &lt;code&gt;flex-wrap: wrap&lt;/code&gt; ne sont pas supportés dans GMAIL seulement. Ils fonctionnent dans les 2 autres clients.&lt;/p&gt;
+&lt;video width=&quot;640&quot; height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://www.teotimepacreau.fr/img/flexbox-email.mp4&quot; alt=&quot;Vidéo illustration l&#39;illustration de flexbox dans un client mail&quot; type=&quot;video/mp4&quot; /&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;h3 id=&quot;position&quot; tabindex=&quot;-1&quot;&gt;Position&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;position: relative&lt;/code&gt; et &lt;code&gt;position: absolute&lt;/code&gt; ne sont pas supportés du tout&lt;/p&gt;
+&lt;h3 id=&quot;liens&quot; tabindex=&quot;-1&quot;&gt;Liens&lt;/h3&gt;
+&lt;p&gt;Les clients mails scannent les adresses emails et les numéros de téléphone dans le contenu de vos mails et les transforment automatiquement en liens soulignés bleus. Pour contrer ces styles par défaut il faut les wrapper dans des &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; et enlever le style par défaut.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a style=&amp;quot;color: inherit; text-decoration: none;&amp;quot; href=&amp;quot;&amp;quot;&amp;gt;
+	some@example.com
+&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;cas-d%E2%80%99usage&quot; tabindex=&quot;-1&quot;&gt;Cas d’usage&lt;/h2&gt;
+&lt;p&gt;J’ai construit un site d’inscription et d’envoi de newsletter qui repose entièrement sur ces principes, voici le &lt;a href=&quot;https://www.teotimepacreau.fr/projets/projetnewsletter/&quot;&gt;lien du projet&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://dodov.dev/blog/why-does-email-development-have-to-suck/&quot;&gt;https://dodov.dev/blog/why-does-email-development-have-to-suck/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.hteumeuleu.com/blog/&quot;&gt;https://www.hteumeuleu.com/blog/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.caniemail.com/&quot;&gt;https://www.caniemail.com/&lt;/a&gt;&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
 		<title>SQLite, la solution pragmatique en production pour le web</title>
 		<link href="https://www.teotimepacreau.fr/blog/SQLite/"/>
 		<updated>2023-11-10T00:00:00Z</updated>
 		<id>https://www.teotimepacreau.fr/blog/SQLite/</id>
-		<content type="html">&lt;h2 id=&quot;les-bdd-relationnelles%2C-pass%C3%A9es-de-mode-alors-qu&#39;elles-r%C3%A9pondent-aux-besoins-de-la-grande-majorit%C3%A9-des-projets-des-d%C3%A9veloppement-web&quot; tabindex=&quot;-1&quot;&gt;Les BDD relationnelles, passées de mode alors qu&#39;elles répondent aux besoins de la grande majorité des projets des développement web&lt;/h2&gt;
+		<content type="html">&lt;h2 id=&quot;les-bdd-relationnelles%2C-pass%C3%A9es-de-mode-alors-qu%E2%80%99elles-r%C3%A9pondent-aux-besoins-de-la-grande-majorit%C3%A9-des-projets-des-d%C3%A9veloppement-web&quot; tabindex=&quot;-1&quot;&gt;Les BDD relationnelles, passées de mode alors qu’elles répondent aux besoins de la grande majorité des projets des développement web&lt;/h2&gt;
 &lt;p&gt;Il existe deux types de BDD : &lt;a href=&quot;https://www.oracle.com/fr/database/base-donnees-relationnelle-difference-non-relationnelle/&quot;&gt;les relationnelles et les non relationnelles&lt;/a&gt;.
-Les BDD relationnelles stockent les données dans des tables qui ont un lien entre elles (clé primaire qui est l&#39;identifiant unique d&#39;une entrée dans la table et la clé secondaire qui est l&#39;identifiant d&#39;une entrée qui permet de relier avec l&#39;entrée d&#39;une autre table). Il y a besoin de pré-définir une structure de données.
+Les BDD relationnelles stockent les données dans des tables qui ont un lien entre elles (clé primaire qui est l’identifiant unique d’une entrée dans la table et la clé secondaire qui est l’identifiant d’une entrée qui permet de relier avec l’entrée d’une autre table). Il y a besoin de pré-définir une structure de données.
 On traite les BDD relationnelles avec du SQL.
-Les BDD non relationelles ne stockent pas les données dans des tables mais les stockent au format clé-valeur, dans des documents, en colonnes, en graphiques. Il n&#39;y a pas besoin de pré-définir une structure de données. On traite les BDD non relationelles avec du NoSQL(MongoDB, Redis, Firebase...)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/Schema_bdd.png&quot; alt=&quot;Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle : le SQL est utilisé pour des tables relationnelles tandis que le NoSQL est approprié pour le non-relationnel&quot; title=&quot;Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Les grandes entreprises préfèrent aujourd&#39;hui les BDD non relationelles car elles permettent de stocker un très grand volume de données sans que ces données soient rassemblées en un seul endroit.
+Les BDD non relationelles ne stockent pas les données dans des tables mais les stockent au format clé-valeur, dans des documents, en colonnes, en graphiques. Il n’y a pas besoin de pré-définir une structure de données. On traite les BDD non relationelles avec du NoSQL(MongoDB, Redis, Firebase…)&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/Schema_bdd.png&quot; alt=&quot;Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle : le SQL est utilisé pour des tables relationnelles tandis que le NoSQL est approprié pour le non-relationnel&quot; /&gt;&lt;figcaption&gt;Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Les grandes entreprises préfèrent aujourd’hui les BDD non relationelles car elles permettent de stocker un très grand volume de données sans que ces données soient rassemblées en un seul endroit.
 La tendance actuelle vise à former les nouveaux développeurs directement sur du NoSQL pour préparer aux pratiques des grandes entreprises.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/Graph_outil_BDD.png&quot; alt=&quot;Graphique du State of DB 2023 comparant les résultats de l&#39;enquête portant sur la part d&#39;utilisation de chaque outil de management de BDD : Postgres est largement en tête,puis Redis, MySQL et enfin SQLite&quot; title=&quot;Graphique du State of DB 2023 comparant les résultats de l&#39;enquête portant sur la part d&#39;utilisation de chaque outil de management de BDD&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;De plus, les technologies NoSQL comme MongoDB ne sont pas faites pour le relationnel. Pourtant des bibliothèques comme Mongoose permettent de faire des schémas et ainsi récréer des relations entre les différentes données, cela revient donc à utiliser MongoDB exactement comme pour du relationnel. Sauf que MongoDB n&#39;est pas créé pour ça, et il arrive souvent que les schémas ne soient pas correctement mis à jour.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/Graph_outil_BDD.png&quot; alt=&quot;Graphique du State of DB 2023 comparant les résultats de l&#39;enquête portant sur la part d&#39;utilisation de chaque outil de management de BDD : Postgres est largement en tête,puis Redis, MySQL et enfin SQLite&quot; /&gt;&lt;figcaption&gt;Graphique du State of DB 2023 comparant les résultats de l’enquête portant sur la part d’utilisation de chaque outil de management de BDD&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;De plus, les technologies NoSQL comme MongoDB ne sont pas faites pour le relationnel. Pourtant des bibliothèques comme Mongoose permettent de faire des schémas et ainsi récréer des relations entre les différentes données, cela revient donc à utiliser MongoDB exactement comme pour du relationnel. Sauf que MongoDB n’est pas créé pour ça, et il arrive souvent que les schémas ne soient pas correctement mis à jour.&lt;/p&gt;
 &lt;p&gt;Pourtant, le SQL a de nombreux atouts :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;il est facile à apprendre&lt;/li&gt;
 &lt;li&gt;il est depuis sa création le système le plus performant de gestion de BDD&lt;/li&gt;
 &lt;li&gt;il est facilement maintenable dans le temps&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Ainsi, si l&#39;application est de taille petite à modérée et que les données ont matière à être structurées (exemple : un catalogue de produits avec des entrées articles, prix, quantité) on préférera toujours le SQL.
-Si tu as besoin d&#39;un schéma... Si tes données sont relationnelles... Si tu veux faire des liens, des requêtes, etc... -&amp;gt; SQL&lt;/p&gt;
+&lt;p&gt;Ainsi, si l’application est de taille petite à modérée et que les données ont matière à être structurées (exemple : un catalogue de produits avec des entrées articles, prix, quantité) on préférera toujours le SQL.
+Si tu as besoin d’un schéma… Si tes données sont relationnelles… Si tu veux faire des liens, des requêtes, etc… -&amp;gt; SQL&lt;/p&gt;
 &lt;p&gt;Pour les cas de très grandes applications de multinationales avec des données stockées sous des formes et des emplacements différents, on préférera le NoSQL.
 Le NoSQL est également plus adaptée pour le développement agile car les données ne sont pas structurées pendant les itérations.
-Si tu gères un grand volume de données... Si le type de tes données est changeant... Si tu as besoin de passer à l&#39;échelle de façon récurrente -&amp;gt; MongoDB&lt;/p&gt;
+Si tu gères un grand volume de données… Si le type de tes données est changeant… Si tu as besoin de passer à l’échelle de façon récurrente -&amp;gt; MongoDB&lt;/p&gt;
 &lt;h2 id=&quot;pourquoi-choisir-sql-en-2023&quot; tabindex=&quot;-1&quot;&gt;Pourquoi choisir SQL en 2023&lt;/h2&gt;
-&lt;p&gt;SQL a 50 ans. C&#39;est l&#39;une des seules technologies de la préhistoire de l&#39;informatique à avoir traversé les âges. Les raisons ?&lt;/p&gt;
+&lt;p&gt;SQL a 50 ans. C’est l’une des seules technologies de la préhistoire de l’informatique à avoir traversé les âges. Les raisons ?&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;sa simplicité&lt;/strong&gt; : Les instructions SQL s&#39;écrivent d&#39;une manière qui ressemble à celle de phrases ordinaires en anglais. Cette ressemblance voulue vise à faciliter l&#39;apprentissage et la lecture. Les créateurs du SQL voulaient qu&#39;il soit compréhensible aussi bien par des scientifiques que par des personnes en charge de la gestion commerciale d&#39;entreprise sans avoir à faire appel à des informaticiens pour l&#39;apprentissage.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;sa rapidité&lt;/strong&gt; : sa rapidité : SQL est plus rapide que Python pour requêter les données, son avantage est d&#39;avoir un schéma de données pré-établi&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;sa stabilité&lt;/strong&gt; : les commandes de bases SELECT, UPDATE, INSERT, DELETE n&#39;ont pas changées en 50 ans, ainsi les manières d&#39;interagir avec les BDD sont largement documentées et partagées à tous les niveaux des équipes de développement&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sa simplicité&lt;/strong&gt; : Les instructions SQL s’écrivent d’une manière qui ressemble à celle de phrases ordinaires en anglais. Cette ressemblance voulue vise à faciliter l’apprentissage et la lecture. Les créateurs du SQL voulaient qu’il soit compréhensible aussi bien par des scientifiques que par des personnes en charge de la gestion commerciale d’entreprise sans avoir à faire appel à des informaticiens pour l’apprentissage.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sa rapidité&lt;/strong&gt; : sa rapidité : SQL est plus rapide que Python pour requêter les données, son avantage est d’avoir un schéma de données pré-établi&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sa stabilité&lt;/strong&gt; : les commandes de bases SELECT, UPDATE, INSERT, DELETE n’ont pas changées en 50 ans, ainsi les manières d’interagir avec les BDD sont largement documentées et partagées à tous les niveaux des équipes de développement&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;sqlite%2C-la-solution-pragmatique-pour-le-sql&quot; tabindex=&quot;-1&quot;&gt;SQLite, la solution pragmatique pour le SQL&lt;/h2&gt;
-&lt;p&gt;SQLite est une BDD SQL avec une fonctionnalité bien particulière : l&#39;entièreté de la BDD tient en un seul fichier qui est intégré à la solution.
-SQLite est traditionnellement associé au développement d&#39;applications Android/iOS et aux tests locaux. Pourtant SQLite se prête particulièrement bien pour les projets web par sa simplicité et par l&#39;intérêt d&#39;avoir son serveur et sa BDD sur la même machine.&lt;/p&gt;
+&lt;p&gt;SQLite est une BDD SQL avec une fonctionnalité bien particulière : l’entièreté de la BDD tient en un seul fichier qui est intégré à la solution.
+SQLite est traditionnellement associé au développement d’applications Android/iOS et aux tests locaux. Pourtant SQLite se prête particulièrement bien pour les projets web par sa simplicité et par l’intérêt d’avoir son serveur et sa BDD sur la même machine.&lt;/p&gt;
 &lt;h3 id=&quot;les-avantages-de-sqlite&quot; tabindex=&quot;-1&quot;&gt;Les avantages de SQLite&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;facilité d&#39;administration&lt;/strong&gt; : toutes les tâches d&#39;administration de la BDD deviennent beaucoup plus simple. Pas besoin de compte pour administrer, la BDD est constituée d&#39;un seul fichier intégré à l&#39;application qu&#39;il est possible de visualiser entièrement dans VSCode grâce à https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;facilité d’administration&lt;/strong&gt; : toutes les tâches d’administration de la BDD deviennent beaucoup plus simple. Pas besoin de compte pour administrer, la BDD est constituée d’un seul fichier intégré à l’application qu’il est possible de visualiser entièrement dans VSCode grâce à &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer&quot;&gt;https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;facilité de déploiement&lt;/strong&gt; : comme SQLite est un simple fichier binaire, il est facile de le pousser en production et de le faire migrer.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;simplicité&lt;/strong&gt; : des NPM package simples d&#39;utilisation comme https://www.npmjs.com/package/sqlite3 asynchrones par défaut, non bloquants et intuitifs, s&#39;intègrent remarquablement bien avec NodeJS.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;rapidité&lt;/strong&gt; : la proximité de la BDD avec l&#39;application permet de réduire grandement la latence par rapport à d&#39;autres BDD, si bien que SQLite est de loin le plus rapide mais également plus rapide que le &lt;a href=&quot;https://www.sqlite.org/fasterthanfs.html&quot;&gt;filesystem lui même&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;capacité&lt;/strong&gt; : la capacité de stockage est immense, une seule BDD peut contenir plus d&#39;un milliards de Gigabits de données&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;simplicité&lt;/strong&gt; : des NPM package simples d’utilisation comme &lt;a href=&quot;https://www.npmjs.com/package/sqlite3&quot;&gt;https://www.npmjs.com/package/sqlite3&lt;/a&gt; asynchrones par défaut, non bloquants et intuitifs, s’intègrent remarquablement bien avec NodeJS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rapidité&lt;/strong&gt; : la proximité de la BDD avec l’application permet de réduire grandement la latence par rapport à d’autres BDD, si bien que SQLite est de loin le plus rapide mais également plus rapide que le &lt;a href=&quot;https://www.sqlite.org/fasterthanfs.html&quot;&gt;filesystem lui même&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;capacité&lt;/strong&gt; : la capacité de stockage est immense, une seule BDD peut contenir plus d’un milliards de Gigabits de données&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;les-limites-de-sqlite&quot; tabindex=&quot;-1&quot;&gt;Les limites de SQLite&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;requêtes concurrentes&lt;/strong&gt; : comme la BDD SQLite est composée d&#39;un seul fichier, les opérations d&#39;ECRITURE ne peuvent pas se faire en même temps. Chaque opération est placée dans une file d&#39;attente et la BDD est bloquée pendant ce temps. Les opérations se réalisent très rapidement, de l&#39;ordre la milliseconde, si bien que le blocage est très court. Les opérations de LECTURE de la BDD elles supportent un nombre illimité de lectures concurrentes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;les types de données sont limitées&lt;/strong&gt; : NULL, INTEGER (chiffres entiers), REA L(nombres à virgules), TEXT, BLOB (données binaires d&#39;une image, vidéo...). SQLite ne supporte donc pas les BOOLÉENS, les DATES&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;la validation des données&lt;/strong&gt; : SQLite vous permettra volontiers d&#39;insérer &amp;quot;abcd&amp;quot; dans votre colonne INTEGER. Ou une chaîne de 20 caractères dans votre colonne VARCHAR(5)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;pas d&#39;outils de récupération des données en cas d&#39;incident sur le serveur&lt;/strong&gt; : si le serveur meurt les données disparaissent. Il faut soi-même mettre en place une solution de réplication en continu de la BDD sur un serveur pour avoir un backup, notamment via https://litestream.io/&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;hébergement&lt;/strong&gt; de la BDD SQLite dans le cloud n&#39;est pas possible avec tous les providers, personnellement j&#39;utilise fly.io qui le propose nativement&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;requêtes concurrentes&lt;/strong&gt; : comme la BDD SQLite est composée d’un seul fichier, les opérations d’ECRITURE ne peuvent pas se faire en même temps. Chaque opération est placée dans une file d’attente et la BDD est bloquée pendant ce temps. Les opérations se réalisent très rapidement, de l’ordre la milliseconde, si bien que le blocage est très court. Les opérations de LECTURE de la BDD elles supportent un nombre illimité de lectures concurrentes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;les types de données sont limitées&lt;/strong&gt; : NULL, INTEGER (chiffres entiers), REA L(nombres à virgules), TEXT, BLOB (données binaires d’une image, vidéo…). SQLite ne supporte donc pas les BOOLÉENS, les DATES&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;la validation des données&lt;/strong&gt; : SQLite vous permettra volontiers d’insérer “abcd” dans votre colonne INTEGER. Ou une chaîne de 20 caractères dans votre colonne VARCHAR(5)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pas d’outils de récupération des données en cas d’incident sur le serveur&lt;/strong&gt; : si le serveur meurt les données disparaissent. Il faut soi-même mettre en place une solution de réplication en continu de la BDD sur un serveur pour avoir un backup, notamment via &lt;a href=&quot;https://litestream.io/&quot;&gt;https://litestream.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;hébergement&lt;/strong&gt; de la BDD SQLite dans le cloud n’est pas possible avec tous les providers, personnellement j’utilise &lt;a href=&quot;http://fly.io/&quot;&gt;fly.io&lt;/a&gt; qui le propose nativement&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;cas-d&#39;usage&quot; tabindex=&quot;-1&quot;&gt;Cas d&#39;usage&lt;/h2&gt;
-&lt;p&gt;J&#39;ai construit un site d&#39;inscription et d&#39;envoi de newsletter qui repose entièrement sur SQLite, voici le &lt;a href=&quot;https://www.teotimepacreau.fr/projets/projetnewsletter/&quot;&gt;lien du projet&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;cas-d%E2%80%99usage&quot; tabindex=&quot;-1&quot;&gt;Cas d’usage&lt;/h2&gt;
+&lt;p&gt;J’ai construit un site d’inscription et d’envoi de newsletter qui repose entièrement sur SQLite, voici le &lt;a href=&quot;https://www.teotimepacreau.fr/projets/projetnewsletter/&quot;&gt;lien du projet&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.unixsheikh.com/articles/sqlite-the-only-database-you-will-ever-need-in-most-cases.html&quot;&gt;https://www.unixsheikh.com/articles/sqlite-the-only-database-you-will-ever-need-in-most-cases.html&lt;/a&gt;&lt;/li&gt;
@@ -82,27 +205,27 @@ SQLite est traditionnellement associé au développement d&#39;applications Andr
 		<updated>2023-01-13T00:00:00Z</updated>
 		<id>https://www.teotimepacreau.fr/blog/mesure-d&amp;#39;impact/</id>
 		<content type="html">&lt;h2 id=&quot;contexte&quot; tabindex=&quot;-1&quot;&gt;Contexte&lt;/h2&gt;
-&lt;p&gt;La &lt;a href=&quot;https://www.consilium.europa.eu/fr/press/press-releases/2022/11/28/council-gives-final-green-light-to-corporate-sustainability-reporting-directive/&quot;&gt;directive européene CSRD (Corporate Sustainability Reporting Directive)&lt;/a&gt; prendra effet le 1er Janvier 2024 et s&#39;imposera d&#39;abord aux structures de plus de 250 salariés puis progressivement à toutes les entreprises, y compris les PME.&lt;/p&gt;
-&lt;p&gt;Le but de cette directive est d&#39;inciter les structures à mesurer, centraliser et publier régulièrement les données de leur impact sociétal et environnemental.&lt;/p&gt;
+&lt;p&gt;La &lt;a href=&quot;https://www.consilium.europa.eu/fr/press/press-releases/2022/11/28/council-gives-final-green-light-to-corporate-sustainability-reporting-directive/&quot;&gt;directive européene CSRD (Corporate Sustainability Reporting Directive)&lt;/a&gt; prendra effet le 1er Janvier 2024 et s’imposera d’abord aux structures de plus de 250 salariés puis progressivement à toutes les entreprises, y compris les PME.&lt;/p&gt;
+&lt;p&gt;Le but de cette directive est d’inciter les structures à mesurer, centraliser et publier régulièrement les données de leur impact sociétal et environnemental.&lt;/p&gt;
 &lt;p&gt;Cela modifiera les exigences actuelles en matière de reporting extra-financier issues de la &lt;a href=&quot;https://finance.ec.europa.eu/capital-markets-union-and-financial-markets/company-reporting-and-auditing/company-reporting/corporate-sustainability-reporting_en&quot;&gt;Non-Financial reporting Directive (NFRD)&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Les entreprises devront renseigner des indicateurs dans les thématiques E, S, G (Environnementales, Sociales, Gouvernance).&lt;/p&gt;
 &lt;p&gt;Environ &lt;a href=&quot;https://www.europarl.europa.eu/news/fr/press-room/20221107IPR49611/durabilite-le-parlement-adopte-de-nouvelles-regles-pour-les-multinationales&quot;&gt;50 000 entreprises seront concernées par ces nouvelles règles, contre 11 700 actuellement&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;les-outils-gratuits&quot; tabindex=&quot;-1&quot;&gt;Les outils gratuits&lt;/h2&gt;
 &lt;p&gt;Plusieurs plateformes gratuites de qualité existent :&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.impact.gouv.fr/&quot;&gt;Impact.gouv.fr&lt;/a&gt; est un service de l&#39;État qui permet aux entreprises de mesurer, collecter et transmettre les données Environnementales, Sociales et de bonne Gouvernance. Un formulaire est à remplir avec les données de l&#39;entreprise, il est possible de publier publiquement celles-ci ou non. L’outil réutilise des informations déjà à la disposition de l’administration, pour réduire au maximum la charge de travail des entreprises.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://impactntechscore.impactscore.fr/&quot;&gt;Impact Score&lt;/a&gt; d&#39;Impact France permet de cartographier l&#39;impact pour toutes les tailles d&#39;entreprises. Le résultat est un score noté sur 100, prenant en compte 20 indicateurs clés. Le score repose sur 5 piliers : la stratégie, les externalités sociales et écologiques, le partage du pouvoir et de la valeur.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://communemesure.fr/&quot;&gt;Commune Mesure&lt;/a&gt; de Plateau Urbain s&#39;adresse uniquement aux tiers lieux et aux lieux hybrides. Au moyen de data-panorama, d&#39;un formulaire et d&#39;une boîte à outils, l&#39;évaluation est guidée et permet de valoriser les impacts&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.valoress-udes.fr/&quot;&gt;Valor&#39;ESS&lt;/a&gt; de l&#39;UDES s&#39;adresse aux structures de l&#39;Economie Sociale et Solidaire et permet de mettre en avant la plus-value sociale, au moyen d&#39;indicateurs adaptés pour les petites organisations.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.impact.gouv.fr/&quot;&gt;Impact.gouv.fr&lt;/a&gt; est un service de l’État qui permet aux entreprises de mesurer, collecter et transmettre les données Environnementales, Sociales et de bonne Gouvernance. Un formulaire est à remplir avec les données de l’entreprise, il est possible de publier publiquement celles-ci ou non. L’outil réutilise des informations déjà à la disposition de l’administration, pour réduire au maximum la charge de travail des entreprises.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://impactntechscore.impactscore.fr/&quot;&gt;Impact Score&lt;/a&gt; d’Impact France permet de cartographier l’impact pour toutes les tailles d’entreprises. Le résultat est un score noté sur 100, prenant en compte 20 indicateurs clés. Le score repose sur 5 piliers : la stratégie, les externalités sociales et écologiques, le partage du pouvoir et de la valeur.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://communemesure.fr/&quot;&gt;Commune Mesure&lt;/a&gt; de Plateau Urbain s’adresse uniquement aux tiers lieux et aux lieux hybrides. Au moyen de data-panorama, d’un formulaire et d’une boîte à outils, l’évaluation est guidée et permet de valoriser les impacts&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.valoress-udes.fr/&quot;&gt;Valor’ESS&lt;/a&gt; de l’UDES s’adresse aux structures de l’Economie Sociale et Solidaire et permet de mettre en avant la plus-value sociale, au moyen d’indicateurs adaptés pour les petites organisations.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://kelimpact.grandlyon.com/&quot;&gt;Kel Impact&lt;/a&gt; de la métropole du Grand Lyon permet de  mesurer sa performance, identifier les axes d’amélioration, identifier des solutions concrètes, suivre sa progression dans le temps.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&quot;s&#39;informer-et-s&#39;outiller-sur-les-enjeux-de-rse&quot; tabindex=&quot;-1&quot;&gt;S&#39;informer et s&#39;outiller sur les enjeux de RSE&lt;/h2&gt;
-&lt;p&gt;La &lt;a href=&quot;https://www.strategie.gouv.fr/reseau-france-strategie/plateforme-rse&quot;&gt;Plateforme RSE&lt;/a&gt; est l&#39;espace ressource de l&#39;Etat pour suivre les dernières recommandations sur les questions sociales, environnementales et de gouvernance. Celle-ci permet de tenir à jour ses indicateurs et d&#39;orienter le développement.&lt;/p&gt;
-&lt;h2 id=&quot;les-b%C3%A9n%C3%A9fices-de-la-mesure-d&#39;impact&quot; tabindex=&quot;-1&quot;&gt;Les bénéfices de la mesure d&#39;impact&lt;/h2&gt;
-&lt;p&gt;Les indicateurs d&#39;impact permettent non seulement de se mettre en adéquation avec la législation, mais sont aussi un formidable levier pour véhiculer une image positive de l&#39;entreprise.&lt;/p&gt;
-&lt;p&gt;Mettre en avant les actions concrètes et leurs résultats permet à la structure d&#39;attirer une nouvelle clientèle/de nouveaux usagers.&lt;/p&gt;
+&lt;h2 id=&quot;s%E2%80%99informer-et-s%E2%80%99outiller-sur-les-enjeux-de-rse&quot; tabindex=&quot;-1&quot;&gt;S’informer et s’outiller sur les enjeux de RSE&lt;/h2&gt;
+&lt;p&gt;La &lt;a href=&quot;https://www.strategie.gouv.fr/reseau-france-strategie/plateforme-rse&quot;&gt;Plateforme RSE&lt;/a&gt; est l’espace ressource de l’Etat pour suivre les dernières recommandations sur les questions sociales, environnementales et de gouvernance. Celle-ci permet de tenir à jour ses indicateurs et d’orienter le développement.&lt;/p&gt;
+&lt;h2 id=&quot;les-b%C3%A9n%C3%A9fices-de-la-mesure-d%E2%80%99impact&quot; tabindex=&quot;-1&quot;&gt;Les bénéfices de la mesure d’impact&lt;/h2&gt;
+&lt;p&gt;Les indicateurs d’impact permettent non seulement de se mettre en adéquation avec la législation, mais sont aussi un formidable levier pour véhiculer une image positive de l’entreprise.&lt;/p&gt;
+&lt;p&gt;Mettre en avant les actions concrètes et leurs résultats permet à la structure d’attirer une nouvelle clientèle/de nouveaux usagers.&lt;/p&gt;
 &lt;p&gt;La confiance en interne des collaborateurs et leur adhésion se voit également renforcée car les données sociales et de gouvernance sont lisibles et partagées.&lt;/p&gt;
-&lt;p&gt;Enfin, la mesure d&#39;impact permet de mesurer les progrès en interne et axer la stratégie dans le réel.&lt;/p&gt;
+&lt;p&gt;Enfin, la mesure d’impact permet de mesurer les progrès en interne et axer la stratégie dans le réel.&lt;/p&gt;
 </content>
 	</entry>
 	
@@ -112,10 +235,10 @@ SQLite est traditionnellement associé au développement d&#39;applications Andr
 		<updated>2022-11-26T00:00:00Z</updated>
 		<id>https://www.teotimepacreau.fr/blog/rythme-vertical-css/</id>
 		<content type="html">&lt;h2 id=&quot;rythme-vertical&quot; tabindex=&quot;-1&quot;&gt;Rythme vertical&lt;/h2&gt;
-&lt;p&gt;Adopter un rythme vertical proportionnel et prédictible sur une page web permet de ressentir une &lt;a href=&quot;https://24ways.org/2006/compose-to-a-vertical-rhythm/&quot;&gt;hiérarchie visuelle qui facilite l&#39;expérience utilisateur&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Adopter un rythme vertical proportionnel et prédictible sur une page web permet de ressentir une &lt;a href=&quot;https://24ways.org/2006/compose-to-a-vertical-rhythm/&quot;&gt;hiérarchie visuelle qui facilite l’expérience utilisateur&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&quot;comment-le-d%C3%A9terminer-%3F&quot; tabindex=&quot;-1&quot;&gt;Comment le déterminer ?&lt;/h3&gt;
 &lt;p&gt;On établit une &lt;em&gt;unité de mesure commune&lt;/em&gt; qui régit tous nos espacements et tailles.
-Pour la déterminer, la règle typographique communément admise est &lt;strong&gt;d&#39;ajouter la hauteur de la ligne à la taille de la police d&#39;écriture utilisée&lt;/strong&gt;. Cela crée notre &lt;em&gt;&amp;quot;unité de rythme&amp;quot;&lt;/em&gt; que l&#39;on va moduler pour tous nos espacements/tailles.
+Pour la déterminer, la règle typographique communément admise est &lt;strong&gt;d’ajouter la hauteur de la ligne à la taille de la police d’écriture utilisée&lt;/strong&gt;. Cela crée notre &lt;em&gt;“unité de rythme”&lt;/em&gt; que l’on va moduler pour tous nos espacements/tailles.
 Notre base est la &lt;code&gt;line-eight&lt;/code&gt; des paragraphes couplée à la &lt;code&gt;font-size&lt;/code&gt; :&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;p {
   font-size: 1rem; /* =16px par défaut */
@@ -124,38 +247,38 @@ Notre base est la &lt;code&gt;line-eight&lt;/code&gt; des paragraphes couplée �
 _____________
 16*1.4=22.4
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Notre &lt;em&gt;&amp;quot;unité de rythme&amp;quot;&lt;/em&gt; est 22.4. L&#39;objectif est d&#39;essayer que chaque espacement en soit le multiple.&lt;/p&gt;
-&lt;h3 id=&quot;exemple-concret-d&#39;utilisation&quot; tabindex=&quot;-1&quot;&gt;Exemple concret d&#39;utilisation&lt;/h3&gt;
+&lt;p&gt;Notre &lt;em&gt;“unité de rythme”&lt;/em&gt; est 22.4. L’objectif est d’essayer que chaque espacement en soit le multiple.&lt;/p&gt;
+&lt;h3 id=&quot;exemple-concret-d%E2%80%99utilisation&quot; tabindex=&quot;-1&quot;&gt;Exemple concret d’utilisation&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;On souhaite un &amp;lt;h1&amp;gt; qui ferait 4 fois la taille de notre &amp;lt;p&amp;gt;.&lt;/li&gt;
+&lt;li&gt;On souhaite un &lt;h1&gt; qui ferait 4 fois la taille de notre &lt;p&gt;.&lt;/p&gt;&lt;/h1&gt;&lt;/li&gt;
 &lt;li&gt;On souhaite également adapter la hauteur de ligne pour faciliter la lecture sur le gros-titre : &lt;code&gt;line-eight: 1.1;&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Un premier réflexe pourrait-être d&#39;utiliser &lt;code&gt;font-size: 4rem;&lt;/code&gt;.
-Pourtant on veut que notre &amp;lt;h1&amp;gt; soit 4 fois plus grand que notre &lt;em&gt;&amp;quot;unité de rythme&amp;quot;&lt;/em&gt; et non pas de notre taille de police. On module donc la font-size :&lt;/p&gt;
+&lt;p&gt;Un premier réflexe pourrait-être d’utiliser &lt;code&gt;font-size: 4rem;&lt;/code&gt;.
+Pourtant on veut que notre &lt;/p&gt;&lt;h1&gt; soit 4 fois plus grand que notre &lt;em&gt;“unité de rythme”&lt;/em&gt; et non pas de notre taille de police. On module donc la font-size :&lt;p&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;?*1.1=67.2
 &amp;lt;=&amp;gt;61.09*1.1=67.2
 
 On convertit 61.09px en rem : 16/61.09=3.81rem
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;le-%22hibou-lobotomis%C3%A9%22-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps&quot; tabindex=&quot;-1&quot;&gt;Le &amp;quot;hibou lobotomisé&amp;quot; : le sélecteur CSS qui fait gagner du temps&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;* + *&lt;/code&gt;, &lt;a href=&quot;https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/&quot;&gt;autrement appelé le &amp;quot;hibou lobotomisé&amp;quot;&lt;/a&gt; est un formidable moyen de mettre en place une règle CSS anonyme et automatique pour faciliter la mise en page.&lt;/p&gt;
+&lt;h2 id=&quot;le-%E2%80%9Chibou-lobotomis%C3%A9%E2%80%9D-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps&quot; tabindex=&quot;-1&quot;&gt;Le “hibou lobotomisé” : le sélecteur CSS qui fait gagner du temps&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;* + *&lt;/code&gt;, &lt;a href=&quot;https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/&quot;&gt;autrement appelé le “hibou lobotomisé”&lt;/a&gt; est un formidable moyen de mettre en place une règle CSS anonyme et automatique pour faciliter la mise en page.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;le sélecteur &amp;quot;&amp;gt;&amp;quot; cible tous les éléments enfants de la div parente&lt;/li&gt;
-&lt;li&gt;le sélecteur &amp;quot;*&amp;quot; cible tous les éléments&lt;/li&gt;
+&lt;li&gt;le sélecteur “&amp;gt;” cible tous les éléments enfants de la div parente&lt;/li&gt;
+&lt;li&gt;le sélecteur “*” cible tous les éléments&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;article &amp;gt; * + *&lt;/code&gt; nous permet donc de cibler tous les éléments de notre article suivant directement d&#39;autres éléments.&lt;/p&gt;
-&lt;h2 id=&quot;...-et-une-touche-de-custom-properties&quot; tabindex=&quot;-1&quot;&gt;... et une touche de Custom Properties&lt;/h2&gt;
-&lt;p&gt;Les &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/--*&quot;&gt;Custom Properties&lt;/a&gt; permettent de déclarer des variables réutilisables. On en profite pour utiliser également la fonction &amp;quot;clamp&amp;quot; qui permet de switcher entre une valeur minimale, une valeur de circonstance et une valeur maximale. Cela permet à notre &lt;em&gt;unité de rythme&lt;/em&gt; d&#39;évoluer en accord avec l&#39;espace disponible.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;article &amp;gt; * + *&lt;/code&gt; nous permet donc de cibler tous les éléments de notre article suivant directement d’autres éléments.&lt;/p&gt;
+&lt;h2 id=&quot;%E2%80%A6-et-une-touche-de-custom-properties&quot; tabindex=&quot;-1&quot;&gt;… et une touche de Custom Properties&lt;/h2&gt;
+&lt;p&gt;Les &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/--*&quot;&gt;Custom Properties&lt;/a&gt; permettent de déclarer des variables réutilisables. On en profite pour utiliser également la fonction “clamp” qui permet de switcher entre une valeur minimale, une valeur de circonstance et une valeur maximale. Cela permet à notre &lt;em&gt;unité de rythme&lt;/em&gt; d’évoluer en accord avec l’espace disponible.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;:root {
   --baseline : clamp(1.4rem, 1.1200rem + 1.4000vw, 2.8rem);
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;notre-espacement-automatique-pour-l&#39;ensemble-du-site-en-2-lignes-de-code&quot; tabindex=&quot;-1&quot;&gt;Notre espacement automatique pour l&#39;ensemble du site en 2 lignes de code&lt;/h2&gt;
+&lt;h2 id=&quot;notre-espacement-automatique-pour-l%E2%80%99ensemble-du-site-en-2-lignes-de-code&quot; tabindex=&quot;-1&quot;&gt;Notre espacement automatique pour l’ensemble du site en 2 lignes de code&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;body &amp;gt; * + * {
   margin-top: var(--baseline);
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Pourquoi utiliser seulement &lt;code&gt;margin-top&lt;/code&gt; ? Les marges peuvent, dans certains cas, entrer en collision et se soustraire. &lt;a href=&quot;https://cssfordesigners.com/articles/managing-vertical-margins-in-css&quot;&gt;En ne déclarant que &lt;code&gt;margin-top&lt;/code&gt; on évite cet inconvénient&lt;/a&gt;.&lt;/p&gt;
-</content>
+&lt;/h1&gt;</content>
 	</entry>
 </feed>

@@ -46,10 +46,10 @@
     <meta property="og:locale" content="fr_FR">
     
     <!--Twitter-->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Téotime Pacreau">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Le blog de Téotime Pacreau">
     <meta name="twitter:description" content="SQLite, la solution pragmatique en production pour le web">
-    <meta name="twitter:image" content="https://www.teotimepacreau.fr/img/Favicon_Twitter.png/>
+    <meta name="twitter:image" content="https://www.teotimepacreau.fr/img/FaviconTwitter800x400.png/>
     <meta name=" twitter:image:alt"="">
     <meta name="twitter:creator" content="@teotimepacreau">
     <meta name="twitter:site" content="@teotimepacreau">
@@ -98,7 +98,7 @@
         <aside><nav class="table-of-content">
                 <ol>
                     
-                    <li><a href="#les-bdd-relationnelles%2C-pass%C3%A9es-de-mode-alors-qu'elles-r%C3%A9pondent-aux-besoins-de-la-grande-majorit%C3%A9-des-projets-des-d%C3%A9veloppement-web">Les BDD relationnelles, passées de mode alors qu'elles répondent aux besoins de la grande majorité des projets des développement web</a>
+                    <li><a href="#les-bdd-relationnelles%2C-pass%C3%A9es-de-mode-alors-qu%E2%80%99elles-r%C3%A9pondent-aux-besoins-de-la-grande-majorit%C3%A9-des-projets-des-d%C3%A9veloppement-web">Les BDD relationnelles, passées de mode alors qu’elles répondent aux besoins de la grande majorité des projets des développement web</a>
             		</li>
 
                     <li><a href="#pourquoi-choisir-sql-en-2023">Pourquoi choisir SQL en 2023</a>
@@ -116,7 +116,7 @@
                 </ol>
             		</li>
 
-                    <li><a href="#cas-d'usage">Cas d'usage</a>
+                    <li><a href="#cas-d%E2%80%99usage">Cas d’usage</a>
             		</li>
 
                     <li><a href="#sources">Sources</a>
@@ -146,55 +146,55 @@
               <time datetime="2023-11-10">10 novembre 2023</time>
             </time>
             <p>Pourquoi SQLite mérite d'être considéré à sa juste valeur pour les projets de développement web.</p>
-            <h2 id="les-bdd-relationnelles%2C-pass%C3%A9es-de-mode-alors-qu'elles-r%C3%A9pondent-aux-besoins-de-la-grande-majorit%C3%A9-des-projets-des-d%C3%A9veloppement-web" tabindex="-1">Les BDD relationnelles, passées de mode alors qu'elles répondent aux besoins de la grande majorité des projets des développement web</h2>
+            <h2 id="les-bdd-relationnelles%2C-pass%C3%A9es-de-mode-alors-qu%E2%80%99elles-r%C3%A9pondent-aux-besoins-de-la-grande-majorit%C3%A9-des-projets-des-d%C3%A9veloppement-web" tabindex="-1">Les BDD relationnelles, passées de mode alors qu’elles répondent aux besoins de la grande majorité des projets des développement web</h2>
 <p>Il existe deux types de BDD : <a href="https://www.oracle.com/fr/database/base-donnees-relationnelle-difference-non-relationnelle/">les relationnelles et les non relationnelles</a>.
-Les BDD relationnelles stockent les données dans des tables qui ont un lien entre elles (clé primaire qui est l'identifiant unique d'une entrée dans la table et la clé secondaire qui est l'identifiant d'une entrée qui permet de relier avec l'entrée d'une autre table). Il y a besoin de pré-définir une structure de données.
+Les BDD relationnelles stockent les données dans des tables qui ont un lien entre elles (clé primaire qui est l’identifiant unique d’une entrée dans la table et la clé secondaire qui est l’identifiant d’une entrée qui permet de relier avec l’entrée d’une autre table). Il y a besoin de pré-définir une structure de données.
 On traite les BDD relationnelles avec du SQL.
-Les BDD non relationelles ne stockent pas les données dans des tables mais les stockent au format clé-valeur, dans des documents, en colonnes, en graphiques. Il n'y a pas besoin de pré-définir une structure de données. On traite les BDD non relationelles avec du NoSQL(MongoDB, Redis, Firebase...)</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAATCAYAAABlcqYFAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC1ElEQVR4nK2VDXPaRhCG8/9/T0NS29OmHYwR4xpTDNixAfMhIZBkiZPuTp88mZOLJzSkdic5zY5Gmtt9b9/dd+/dbrfjrVZV1Yv9H793bwlcFAVZmqG1frE0Tev/bwE8CmKWeZdliU5TpJJIrQ5A9pZlWb3va79XQfYb8yInkoJl6DIJFtjbdf2dZilZmtYASqna9lnt/f8NdjQTc7KtFEz9BV13hLW+4SYcs9I+uszqIHsaTaZ7oLIsTPTvZ/JygmpXn9YO11ytRpzOLRrzc35zLhlEE4JsS7Wr2JUVZZaRyQQpBDJJauqqI7TVIMYpr0ryqkDnaU3Lnf9I07nmw7zF+3mTj3abTjBkqTfoTJJHEdpdoewlsWMjNhvkNqJIU/inRgcgZVWSljmqzIi1ZBM/0fce+GT/xftZk8bsnBO3QzsaMpU2UbhGL2bEowFydIMYDYjG98QrmzQWUBbfB5FFilAJTrSh695ytujQWJxz6nb4FF5jyTse4hkbe4wY9AmsFmHngqBzgd/rEk3H6ChkdwzE8Fgaysqi7ho38ui5d5zNLX6ZNTlZWfz+1KWjPnMfTXAfb9n2ujVIdGkRtM/xri4JJw9oIb4p/kHhzduIzhdPDLwxfzhXNJYtThyLM++SthhxHz3i2xOim7/xTPCLJp7Vwuv32No2WqnXW9h0yDYRjKMFljfgV8eisWjxYXlB2x8wFUvi0EMt5nUtxLDP9nZIOJ0QB36tof8EMcv0vlH4KvHoR2P+DHp8dNqc2h2ug8+4KiDPUnIh0Js1euWQuCti30clSe3/KogRmckmlFsetw696AErGNIN7pglLnGu2JnHDMo8J1cKGccoKZ91UlWv02WWUbxKNX4cMhcuE2HjSA+Ry7pB2B0qXr4ovjw6v77JZL/pOYBGyLgWZ6wSlH4Oth+OPzS7vp7ChoJj01f/yBQ+dp/kRXGQwU+5T362fQH5JyipvforagAAAABJRU5ErkJggg==" alt="Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle : le SQL est utilisé pour des tables relationnelles tandis que le NoSQL est approprié pour le non-relationnel" title="Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle" data-src="/img/Schema_bdd.png" class="lazyload" width="2176" height="1664"></p>
-<p>Les grandes entreprises préfèrent aujourd'hui les BDD non relationelles car elles permettent de stocker un très grand volume de données sans que ces données soient rassemblées en un seul endroit.
+Les BDD non relationelles ne stockent pas les données dans des tables mais les stockent au format clé-valeur, dans des documents, en colonnes, en graphiques. Il n’y a pas besoin de pré-définir une structure de données. On traite les BDD non relationelles avec du NoSQL(MongoDB, Redis, Firebase…)</p>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAATCAYAAABlcqYFAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC1ElEQVR4nK2VDXPaRhCG8/9/T0NS29OmHYwR4xpTDNixAfMhIZBkiZPuTp88mZOLJzSkdic5zY5Gmtt9b9/dd+/dbrfjrVZV1Yv9H793bwlcFAVZmqG1frE0Tev/bwE8CmKWeZdliU5TpJJIrQ5A9pZlWb3va79XQfYb8yInkoJl6DIJFtjbdf2dZilZmtYASqna9lnt/f8NdjQTc7KtFEz9BV13hLW+4SYcs9I+uszqIHsaTaZ7oLIsTPTvZ/JygmpXn9YO11ytRpzOLRrzc35zLhlEE4JsS7Wr2JUVZZaRyQQpBDJJauqqI7TVIMYpr0ryqkDnaU3Lnf9I07nmw7zF+3mTj3abTjBkqTfoTJJHEdpdoewlsWMjNhvkNqJIU/inRgcgZVWSljmqzIi1ZBM/0fce+GT/xftZk8bsnBO3QzsaMpU2UbhGL2bEowFydIMYDYjG98QrmzQWUBbfB5FFilAJTrSh695ytujQWJxz6nb4FF5jyTse4hkbe4wY9AmsFmHngqBzgd/rEk3H6ChkdwzE8Fgaysqi7ho38ui5d5zNLX6ZNTlZWfz+1KWjPnMfTXAfb9n2ujVIdGkRtM/xri4JJw9oIb4p/kHhzduIzhdPDLwxfzhXNJYtThyLM++SthhxHz3i2xOim7/xTPCLJp7Vwuv32No2WqnXW9h0yDYRjKMFljfgV8eisWjxYXlB2x8wFUvi0EMt5nUtxLDP9nZIOJ0QB36tof8EMcv0vlH4KvHoR2P+DHp8dNqc2h2ug8+4KiDPUnIh0Js1euWQuCti30clSe3/KogRmckmlFsetw696AErGNIN7pglLnGu2JnHDMo8J1cKGccoKZ91UlWv02WWUbxKNX4cMhcuE2HjSA+Ry7pB2B0qXr4ovjw6v77JZL/pOYBGyLgWZ6wSlH4Oth+OPzS7vp7ChoJj01f/yBQ+dp/kRXGQwU+5T362fQH5JyipvforagAAAABJRU5ErkJggg==" alt="Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle : le SQL est utilisé pour des tables relationnelles tandis que le NoSQL est approprié pour le non-relationnel" data-src="/img/Schema_bdd.png" class="lazyload" width="2176" height="1664"><figcaption>Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle</figcaption></figure>
+<p>Les grandes entreprises préfèrent aujourd’hui les BDD non relationelles car elles permettent de stocker un très grand volume de données sans que ces données soient rassemblées en un seul endroit.
 La tendance actuelle vise à former les nouveaux développeurs directement sur du NoSQL pour préparer aux pratiques des grandes entreprises.</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAIAAACeBPOyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC8ElEQVR4nG2S3WscVRjG93/UIgVL6Z24Ws1FoQUvpPbGC7F6IbYlNDcWlGYLNqmVQmIobdIaYwKynd2s+5nZ3fk635/vOTMrMxO3Ke3Dy3DmGd7feeact8EYU0oZY6wFa62xVgiBK0kpAcABSMEZo5xzY4xzbhpOH7QeXLt67fwH5y98eOH9985dunip+fEnDSllBbKUS8IEZUJrLSqVnQAKZWw+o7OpEgIseOcwxgcHf7fWW7dv31ldXb314621u2v3frrXMMYAlIkQpkmGEaHWWqjknAMAnsRkGtLZ1GjlnPPeG2OyNOv3B+12OwiCbrfb7/cHg0Gj/gwAGcLzKEkRBoDif3nvWRKjaUjmM2ft0nfOSSkpY0IIAPDeO+dOWWUuhKIoQgjZN3sopWmWYULO7uGcI4REUZSmqdb6DRYAEEKSJMH4rVyMIYQIpQCwWCzO+mma1nvnee69L1n1inNOCOGce+/PsoQQte+cW7LyPK+vm1R58zwvc5VjYJTRUgjOhVCqPOCiKBaViqIoB6W66DzPa3Ppa62NMfUPGmMaxmijuJKMc8oYE5waxZ0VHmRdoLnVzGpWvQpvubfMG2YVsRIbicEIrQTn/JQlOWGM4izKpkE23EP9HTx8WhdaLgZP8egZmbxg4T4L/6qf5GSfzts4HiGUNqo5ArBGCInj8bz7R3iwNn5+c7L3/WS3rPHud+PnN0fPvh3u/hAe/Zz2tlj457tZ9dk754RU2aw3Obz/79aXwcOPOhvNzkYzeNjsbH52/PhK98kXvZ1vJoe/oOGeiF/JJKhLxIHIBjSbYpS9ZnEh01nv5Kg13LnR++1y7/Hnx48uB5srva0bk5d3Zv+04uNtMg+sZkWRL4qirlpaa0LI6XwZYyjjcdgdH633t7/qbH7aebTS+f1qd/vrk6P72filRCPDEzCiyF+D3sFyzimlMKHRSWd8uN7buv7q12Z7YyV4cr3/Yi0d7SsWF7kv8rzuXE7GUmUUSv8DoCj/XwVuFWcAAAAASUVORK5CYII=" alt="Graphique du State of DB 2023 comparant les résultats de l'enquête portant sur la part d'utilisation de chaque outil de management de BDD : Postgres est largement en tête,puis Redis, MySQL et enfin SQLite" title="Graphique du State of DB 2023 comparant les résultats de l'enquête portant sur la part d'utilisation de chaque outil de management de BDD" data-src="/img/Graph_outil_BDD.png" class="lazyload" width="1486" height="916"></p>
-<p>De plus, les technologies NoSQL comme MongoDB ne sont pas faites pour le relationnel. Pourtant des bibliothèques comme Mongoose permettent de faire des schémas et ainsi récréer des relations entre les différentes données, cela revient donc à utiliser MongoDB exactement comme pour du relationnel. Sauf que MongoDB n'est pas créé pour ça, et il arrive souvent que les schémas ne soient pas correctement mis à jour.</p>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAIAAACeBPOyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC8ElEQVR4nG2S3WscVRjG93/UIgVL6Z24Ws1FoQUvpPbGC7F6IbYlNDcWlGYLNqmVQmIobdIaYwKynd2s+5nZ3fk635/vOTMrMxO3Ke3Dy3DmGd7feeact8EYU0oZY6wFa62xVgiBK0kpAcABSMEZo5xzY4xzbhpOH7QeXLt67fwH5y98eOH9985dunip+fEnDSllBbKUS8IEZUJrLSqVnQAKZWw+o7OpEgIseOcwxgcHf7fWW7dv31ldXb314621u2v3frrXMMYAlIkQpkmGEaHWWqjknAMAnsRkGtLZ1GjlnPPeG2OyNOv3B+12OwiCbrfb7/cHg0Gj/gwAGcLzKEkRBoDif3nvWRKjaUjmM2ft0nfOSSkpY0IIAPDeO+dOWWUuhKIoQgjZN3sopWmWYULO7uGcI4REUZSmqdb6DRYAEEKSJMH4rVyMIYQIpQCwWCzO+mma1nvnee69L1n1inNOCOGce+/PsoQQte+cW7LyPK+vm1R58zwvc5VjYJTRUgjOhVCqPOCiKBaViqIoB6W66DzPa3Ppa62NMfUPGmMaxmijuJKMc8oYE5waxZ0VHmRdoLnVzGpWvQpvubfMG2YVsRIbicEIrQTn/JQlOWGM4izKpkE23EP9HTx8WhdaLgZP8egZmbxg4T4L/6qf5GSfzts4HiGUNqo5ArBGCInj8bz7R3iwNn5+c7L3/WS3rPHud+PnN0fPvh3u/hAe/Zz2tlj457tZ9dk754RU2aw3Obz/79aXwcOPOhvNzkYzeNjsbH52/PhK98kXvZ1vJoe/oOGeiF/JJKhLxIHIBjSbYpS9ZnEh01nv5Kg13LnR++1y7/Hnx48uB5srva0bk5d3Zv+04uNtMg+sZkWRL4qirlpaa0LI6XwZYyjjcdgdH633t7/qbH7aebTS+f1qd/vrk6P72filRCPDEzCiyF+D3sFyzimlMKHRSWd8uN7buv7q12Z7YyV4cr3/Yi0d7SsWF7kv8rzuXE7GUmUUSv8DoCj/XwVuFWcAAAAASUVORK5CYII=" alt="Graphique du State of DB 2023 comparant les résultats de l'enquête portant sur la part d'utilisation de chaque outil de management de BDD : Postgres est largement en tête,puis Redis, MySQL et enfin SQLite" data-src="/img/Graph_outil_BDD.png" class="lazyload" width="1486" height="916"><figcaption>Graphique du State of DB 2023 comparant les résultats de l’enquête portant sur la part d’utilisation de chaque outil de management de BDD</figcaption></figure>
+<p>De plus, les technologies NoSQL comme MongoDB ne sont pas faites pour le relationnel. Pourtant des bibliothèques comme Mongoose permettent de faire des schémas et ainsi récréer des relations entre les différentes données, cela revient donc à utiliser MongoDB exactement comme pour du relationnel. Sauf que MongoDB n’est pas créé pour ça, et il arrive souvent que les schémas ne soient pas correctement mis à jour.</p>
 <p>Pourtant, le SQL a de nombreux atouts :</p>
 <ul>
 <li>il est facile à apprendre</li>
 <li>il est depuis sa création le système le plus performant de gestion de BDD</li>
 <li>il est facilement maintenable dans le temps</li>
 </ul>
-<p>Ainsi, si l'application est de taille petite à modérée et que les données ont matière à être structurées (exemple : un catalogue de produits avec des entrées articles, prix, quantité) on préférera toujours le SQL.
-Si tu as besoin d'un schéma... Si tes données sont relationnelles... Si tu veux faire des liens, des requêtes, etc... -&gt; SQL</p>
+<p>Ainsi, si l’application est de taille petite à modérée et que les données ont matière à être structurées (exemple : un catalogue de produits avec des entrées articles, prix, quantité) on préférera toujours le SQL.
+Si tu as besoin d’un schéma… Si tes données sont relationnelles… Si tu veux faire des liens, des requêtes, etc… -&gt; SQL</p>
 <p>Pour les cas de très grandes applications de multinationales avec des données stockées sous des formes et des emplacements différents, on préférera le NoSQL.
 Le NoSQL est également plus adaptée pour le développement agile car les données ne sont pas structurées pendant les itérations.
-Si tu gères un grand volume de données... Si le type de tes données est changeant... Si tu as besoin de passer à l'échelle de façon récurrente -&gt; MongoDB</p>
+Si tu gères un grand volume de données… Si le type de tes données est changeant… Si tu as besoin de passer à l’échelle de façon récurrente -&gt; MongoDB</p>
 <h2 id="pourquoi-choisir-sql-en-2023" tabindex="-1">Pourquoi choisir SQL en 2023</h2>
-<p>SQL a 50 ans. C'est l'une des seules technologies de la préhistoire de l'informatique à avoir traversé les âges. Les raisons ?</p>
+<p>SQL a 50 ans. C’est l’une des seules technologies de la préhistoire de l’informatique à avoir traversé les âges. Les raisons ?</p>
 <ul>
-<li><strong>sa simplicité</strong> : Les instructions SQL s'écrivent d'une manière qui ressemble à celle de phrases ordinaires en anglais. Cette ressemblance voulue vise à faciliter l'apprentissage et la lecture. Les créateurs du SQL voulaient qu'il soit compréhensible aussi bien par des scientifiques que par des personnes en charge de la gestion commerciale d'entreprise sans avoir à faire appel à des informaticiens pour l'apprentissage.</li>
-<li><strong>sa rapidité</strong> : sa rapidité : SQL est plus rapide que Python pour requêter les données, son avantage est d'avoir un schéma de données pré-établi</li>
-<li><strong>sa stabilité</strong> : les commandes de bases SELECT, UPDATE, INSERT, DELETE n'ont pas changées en 50 ans, ainsi les manières d'interagir avec les BDD sont largement documentées et partagées à tous les niveaux des équipes de développement</li>
+<li><strong>sa simplicité</strong> : Les instructions SQL s’écrivent d’une manière qui ressemble à celle de phrases ordinaires en anglais. Cette ressemblance voulue vise à faciliter l’apprentissage et la lecture. Les créateurs du SQL voulaient qu’il soit compréhensible aussi bien par des scientifiques que par des personnes en charge de la gestion commerciale d’entreprise sans avoir à faire appel à des informaticiens pour l’apprentissage.</li>
+<li><strong>sa rapidité</strong> : sa rapidité : SQL est plus rapide que Python pour requêter les données, son avantage est d’avoir un schéma de données pré-établi</li>
+<li><strong>sa stabilité</strong> : les commandes de bases SELECT, UPDATE, INSERT, DELETE n’ont pas changées en 50 ans, ainsi les manières d’interagir avec les BDD sont largement documentées et partagées à tous les niveaux des équipes de développement</li>
 </ul>
 <h2 id="sqlite%2C-la-solution-pragmatique-pour-le-sql" tabindex="-1">SQLite, la solution pragmatique pour le SQL</h2>
-<p>SQLite est une BDD SQL avec une fonctionnalité bien particulière : l'entièreté de la BDD tient en un seul fichier qui est intégré à la solution.
-SQLite est traditionnellement associé au développement d'applications Android/iOS et aux tests locaux. Pourtant SQLite se prête particulièrement bien pour les projets web par sa simplicité et par l'intérêt d'avoir son serveur et sa BDD sur la même machine.</p>
+<p>SQLite est une BDD SQL avec une fonctionnalité bien particulière : l’entièreté de la BDD tient en un seul fichier qui est intégré à la solution.
+SQLite est traditionnellement associé au développement d’applications Android/iOS et aux tests locaux. Pourtant SQLite se prête particulièrement bien pour les projets web par sa simplicité et par l’intérêt d’avoir son serveur et sa BDD sur la même machine.</p>
 <h3 id="les-avantages-de-sqlite" tabindex="-1">Les avantages de SQLite</h3>
 <ul>
-<li><strong>facilité d'administration</strong> : toutes les tâches d'administration de la BDD deviennent beaucoup plus simple. Pas besoin de compte pour administrer, la BDD est constituée d'un seul fichier intégré à l'application qu'il est possible de visualiser entièrement dans VSCode grâce à https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer</li>
+<li><strong>facilité d’administration</strong> : toutes les tâches d’administration de la BDD deviennent beaucoup plus simple. Pas besoin de compte pour administrer, la BDD est constituée d’un seul fichier intégré à l’application qu’il est possible de visualiser entièrement dans VSCode grâce à <a href="https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer">https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer</a></li>
 <li><strong>facilité de déploiement</strong> : comme SQLite est un simple fichier binaire, il est facile de le pousser en production et de le faire migrer.</li>
-<li><strong>simplicité</strong> : des NPM package simples d'utilisation comme https://www.npmjs.com/package/sqlite3 asynchrones par défaut, non bloquants et intuitifs, s'intègrent remarquablement bien avec NodeJS.</li>
-<li><strong>rapidité</strong> : la proximité de la BDD avec l'application permet de réduire grandement la latence par rapport à d'autres BDD, si bien que SQLite est de loin le plus rapide mais également plus rapide que le <a href="https://www.sqlite.org/fasterthanfs.html">filesystem lui même</a></li>
-<li><strong>capacité</strong> : la capacité de stockage est immense, une seule BDD peut contenir plus d'un milliards de Gigabits de données</li>
+<li><strong>simplicité</strong> : des NPM package simples d’utilisation comme <a href="https://www.npmjs.com/package/sqlite3">https://www.npmjs.com/package/sqlite3</a> asynchrones par défaut, non bloquants et intuitifs, s’intègrent remarquablement bien avec NodeJS.</li>
+<li><strong>rapidité</strong> : la proximité de la BDD avec l’application permet de réduire grandement la latence par rapport à d’autres BDD, si bien que SQLite est de loin le plus rapide mais également plus rapide que le <a href="https://www.sqlite.org/fasterthanfs.html">filesystem lui même</a></li>
+<li><strong>capacité</strong> : la capacité de stockage est immense, une seule BDD peut contenir plus d’un milliards de Gigabits de données</li>
 </ul>
 <h3 id="les-limites-de-sqlite" tabindex="-1">Les limites de SQLite</h3>
 <ul>
-<li><strong>requêtes concurrentes</strong> : comme la BDD SQLite est composée d'un seul fichier, les opérations d'ECRITURE ne peuvent pas se faire en même temps. Chaque opération est placée dans une file d'attente et la BDD est bloquée pendant ce temps. Les opérations se réalisent très rapidement, de l'ordre la milliseconde, si bien que le blocage est très court. Les opérations de LECTURE de la BDD elles supportent un nombre illimité de lectures concurrentes.</li>
-<li><strong>les types de données sont limitées</strong> : NULL, INTEGER (chiffres entiers), REA L(nombres à virgules), TEXT, BLOB (données binaires d'une image, vidéo...). SQLite ne supporte donc pas les BOOLÉENS, les DATES</li>
-<li><strong>la validation des données</strong> : SQLite vous permettra volontiers d'insérer "abcd" dans votre colonne INTEGER. Ou une chaîne de 20 caractères dans votre colonne VARCHAR(5)</li>
-<li><strong>pas d'outils de récupération des données en cas d'incident sur le serveur</strong> : si le serveur meurt les données disparaissent. Il faut soi-même mettre en place une solution de réplication en continu de la BDD sur un serveur pour avoir un backup, notamment via https://litestream.io/</li>
-<li><strong>hébergement</strong> de la BDD SQLite dans le cloud n'est pas possible avec tous les providers, personnellement j'utilise fly.io qui le propose nativement</li>
+<li><strong>requêtes concurrentes</strong> : comme la BDD SQLite est composée d’un seul fichier, les opérations d’ECRITURE ne peuvent pas se faire en même temps. Chaque opération est placée dans une file d’attente et la BDD est bloquée pendant ce temps. Les opérations se réalisent très rapidement, de l’ordre la milliseconde, si bien que le blocage est très court. Les opérations de LECTURE de la BDD elles supportent un nombre illimité de lectures concurrentes.</li>
+<li><strong>les types de données sont limitées</strong> : NULL, INTEGER (chiffres entiers), REA L(nombres à virgules), TEXT, BLOB (données binaires d’une image, vidéo…). SQLite ne supporte donc pas les BOOLÉENS, les DATES</li>
+<li><strong>la validation des données</strong> : SQLite vous permettra volontiers d’insérer “abcd” dans votre colonne INTEGER. Ou une chaîne de 20 caractères dans votre colonne VARCHAR(5)</li>
+<li><strong>pas d’outils de récupération des données en cas d’incident sur le serveur</strong> : si le serveur meurt les données disparaissent. Il faut soi-même mettre en place une solution de réplication en continu de la BDD sur un serveur pour avoir un backup, notamment via <a href="https://litestream.io/">https://litestream.io/</a></li>
+<li><strong>hébergement</strong> de la BDD SQLite dans le cloud n’est pas possible avec tous les providers, personnellement j’utilise <a href="http://fly.io">fly.io</a> qui le propose nativement</li>
 </ul>
-<h2 id="cas-d'usage" tabindex="-1">Cas d'usage</h2>
-<p>J'ai construit un site d'inscription et d'envoi de newsletter qui repose entièrement sur SQLite, voici le <a href="https://www.teotimepacreau.fr/projets/projetnewsletter/">lien du projet</a></p>
+<h2 id="cas-d%E2%80%99usage" tabindex="-1">Cas d’usage</h2>
+<p>J’ai construit un site d’inscription et d’envoi de newsletter qui repose entièrement sur SQLite, voici le <a href="https://www.teotimepacreau.fr/projets/projetnewsletter/">lien du projet</a></p>
 <h2 id="sources" tabindex="-1">Sources</h2>
 <ul>
 <li><a href="https://www.unixsheikh.com/articles/sqlite-the-only-database-you-will-ever-need-in-most-cases.html">https://www.unixsheikh.com/articles/sqlite-the-only-database-you-will-ever-need-in-most-cases.html</a></li>

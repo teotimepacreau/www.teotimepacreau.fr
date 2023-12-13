@@ -20,7 +20,7 @@ Ainsi, si vous avez l'habitude d'utiliser des méthodes CSS modernes comme  `dar
 - ne fonctionnent pas comme attendu au rendu
 - ne sont pas supportés de la même façon entre les différents clients mails
 
-Le développement d'emails est donc devenu un casse tête où le développeur doit sans cesser vérifier si la règle CSS ou l'élément HTML utilisé est supporté grâce à des outils indispensables comme https://www.caniemail.com/. 
+Le développement d'emails est donc devenu un casse tête où le développeur doit sans cesser vérifier si la règle CSS ou l'élément HTML utilisé est supporté grâce à des outils indispensables comme https://www.caniemail.com/ de [Hteumeuleu](https://www.hteumeuleu.fr/). 
 
 Le peu d'effort mis par Google, Apple et Microsoft pour intégrer le support des nouveautés CSS et HTML s'explique par des raisons de [sécurité](https://www.darkreading.com/cyberattacks-data-breaches/attackers-use-unicode-html-to-bypass-email-security-tools), de [guerre commerciale](https://www.linkedin.com/pulse/brief-update-email-client-wars-david-taitelbaum/), et d'impossibilité à se mettre d'accord sur un [HTML email standard](https://medium.com/email-design/will-there-ever-be-an-html-email-standard-bf8a2b7f48d8). A titre d'exemple [Outlook utilise encore Word pour rendre les emails sur mobile (?)](https://www.hteumeuleu.com/2020/outlook-rendering-engine/).
 

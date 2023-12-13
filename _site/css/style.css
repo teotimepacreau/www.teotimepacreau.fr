@@ -108,7 +108,7 @@ input {
   --baseline: clamp(1.75rem, 1.4rem + 1.75vw, 3.5rem);
   --baselineh2: clamp(1.4rem, 1rem + 1.3vw, 2.5rem);
   --baselineh3: clamp(1.2rem, 0.98rem + 1vw, 2rem);
-  --bg: oklch(35.5%, 13.5%, 174.846);
+  --bg: oklch(35.5% 13.5% 174.846);
   --bgdarken65: oklch(from var(--bg) calc(l + 70) c h / 65%);
   --txt: #dfd6d6;
   --accent: oklch(91.64% 0.073 77.44);

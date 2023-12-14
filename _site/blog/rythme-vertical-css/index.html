@@ -2,60 +2,88 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-        <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="always">
-    <meta name="robots" content="index,follow">
-    <meta name="author" content="Téotime Pacreau">
-    <meta name="description" content="Gérer facilement le rythme vertical de son site">
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="referrer" content="always" />
+<meta name="robots" content="index,follow" />
+<meta name="author" content="Téotime Pacreau" />
+<meta name="description" content="Gérer facilement le rythme vertical de son site" />
 
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- Auto detection of the RSS feed for RSS readers -->
-    <link rel="alternate" href="/feed/feed.xml" title="Flux RSS du blog de Téotime Pacreau" type="application/atom+xml">
-    <!--Favicon-->
-    <link rel="icon" href="/favicon/favicon.svg"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg"/>
-    <link rel="mask-icon" href="/favicon/favicon.svg">
-    <link rel="apple-touch-startup-image" href="/favicon/favicon.svg" media="orientation: portrait">
-    <link rel="apple-touch-startup-image" href="/favicon/favicon.svg" media="orientation: landscape">
-    <link rel="icon" type="image/x-icon" href="/favicon/favicon.svg">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg"/>
-    <!--ICONS-->
-    <script rel="preconnect" src="https://unpkg.com/@phosphor-icons/web"></script>
-    <!--Theme-->
-    <meta name="theme-color" content="#c3e2ff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#hsl(165, 51%, 18%)" media="(prefers-color-scheme: dark)">
-    <meta name="msapplication-TileColor" content="#c3e2ff" media="(prefers-color-scheme: light)">
-    <meta name="msapplication-TileColor" content="#hsl(165, 51%, 18%)" media="(prefers-color-scheme: dark)">
-    
-    <!--Social-->
-    <link rel="me authn" href="https://twitter.com/teotimepacreau">
-    <link rel="me" href="https://mastodon.design/@teotimepacreau">
-    <meta name="generator" content="Eleventy">
-    
-    <!--Linkedin-->
-    <!-- <meta property="og:title" content="Téotime Pacreau"/>
-    <meta property="og:description" content="Gérer facilement le rythme vertical de son site"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://teotimepacreau.fr/"/>
-    <meta property="og:site_name" content="Téotime Pacreau"/>
-    <link rel="image_src" href="https://www.teotimepacreau.fr/img/FaviconTwitter800x400.png">
-    <meta property="og:image" content="https://www.teotimepacreau.fr/img/FaviconTwitter800x400.png"/>
-    <meta property="og:image:alt" content="Mon logo : 2 cercles et un truchet"/>
-    <meta property="og:image:width" content="1600"/>
-    <meta property="og:image:height" content="1600"/>
-    <meta property="og:locale" content="fr_FR"/> -->
-    
-    <!--Twitter-->
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="Le blog de Téotime Pacreau"/>
-    <meta name="twitter:description" content="Gérer facilement le rythme vertical de son site"/>
-    <meta name="twitter:image" content="http://teotimepacreau.fr/img/Favicon_Twitter.jpg">
-    <meta name="twitter:image:alt" content="Mon logo,2 cercles et un truchet"/>
-    <meta name="twitter:creator" content="@teotimepacreau"/>
-    <meta name="twitter:site" content="@teotimepacreau"/>
-        <title>Gérer facilement le rythme vertical de son site</title>
+<link rel="stylesheet" href="/css/style.css" />
+<!-- Auto detection of the RSS feed for RSS readers -->
+<link
+  rel="alternate"
+  href="/feed/feed.xml"
+  title="Flux RSS du blog de Téotime Pacreau"
+  type="application/atom+xml"
+/>
+<!--Favicon-->
+<link rel="icon" href="/favicon/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg" />
+<link rel="mask-icon" href="/favicon/favicon.svg" />
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: portrait"
+/>
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: landscape"
+/>
+<link rel="icon" type="image/x-icon" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg" />
+<!--ICONS-->
+<script rel="preconnect" src="https://unpkg.com/@phosphor-icons/web"></script>
+<!--Theme-->
+<meta
+  name="theme-color"
+  content="#c3e2ff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#hsl(165, 51%, 18%)"
+  media="(prefers-color-scheme: dark)"
+/>
+<meta
+  name="msapplication-TileColor"
+  content="#c3e2ff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="msapplication-TileColor"
+  content="#hsl(165, 51%, 18%)"
+  media="(prefers-color-scheme: dark)"
+/>
+
+<!--Social-->
+<link rel="me authn" href="https://twitter.com/teotimepacreau" />
+<link rel="me" href="https://mastodon.design/@teotimepacreau" />
+<meta name="generator" content="Eleventy" />
+
+<!-- open graph tags -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Le site web de Téotime Pacreau" />
+<meta property="og:url" content="https://www.teotimepacreau.fr" />
+<meta property="og:title" content="Téotime Pacreau, management de projet & numérique" />
+<meta property="og:image" content="https://www.teotimepacreau.fr/img/twitterlargecard.png" />
+<meta property="og:description" content="Logo du site web de Téotime Pacreau : deux truchets entrecroisés" />
+
+<!-- twitter cards -->
+<meta content="summary_large_image" name="twitter:card" />
+<meta name="twitter:site" content="@teotimepacreau">
+<meta name="twitter:creator" content="@teotimepacreau">
+<meta content="Téotime Pacreau, management de projet & numérique" name="twitter:title" />
+<meta content="Gérer facilement le rythme vertical de son site" name="twitter:description" />
+<meta content="https://www.teotimepacreau.fr/img/twitterlargecard.png" name="twitter:image" />
+
+<!-- meta description -->
+<meta content="Gérer facilement le rythme vertical de son site" name="description" />
+
+<title>Gérer facilement le rythme vertical de son site</title>
+
   </head>
   <body>
     <form class="color-picker" action="">

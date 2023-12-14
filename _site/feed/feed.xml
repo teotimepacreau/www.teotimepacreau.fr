@@ -17,36 +17,36 @@
 		<link href="https://www.teotimepacreau.fr/blog/emails-html-modernes/"/>
 		<updated>2023-12-13T00:00:00Z</updated>
 		<id>https://www.teotimepacreau.fr/blog/emails-html-modernes/</id>
-		<content type="html">&lt;p&gt;Le monde du développement d&#39;emails est rempli d&#39;inconsistences, de hacks, d&#39;éléments HTML obsolètes, et de règles CSS abandonnées depuis longtemps.
-Les développeurs d&#39;emails se retrouvent ainsi à devoir jongler entre des &lt;code&gt;&amp;lt;tables&amp;gt;&lt;/code&gt; layouts, des &lt;code&gt;&amp;lt;tr&amp;gt;&lt;/code&gt; et &lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt; (une façon de structurer le HTML en colonne et lignes comme on le ferait dans un tableau), les inline-styles CSS, &lt;code&gt;float&lt;/code&gt; une propriété CSS qui a perdu de son usage, à juste titre, depuis l&#39;arrivée de &lt;code&gt;flexbox&lt;/code&gt; et &lt;code&gt;grid&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;En théorie, le monde du développement d&#39;emails devrait être simple car les emails ne sont rien de plus que des documents HTML, comme une page web, échangés entre nos clients mails. Cependant l&#39;élément bloquant est bien cette dépendance aux clients mails qui ont tous des manières de différente de transformer le HTML en rendu visuel pour l&#39;utilisateur.
+		<content type="html">&lt;p&gt;Le monde du développement d’emails est rempli d’inconsistences, de hacks, d’éléments HTML obsolètes, et de règles CSS abandonnées depuis longtemps.
+Les développeurs d’emails se retrouvent ainsi à devoir jongler entre des &lt;code&gt;&amp;lt;tables&amp;gt;&lt;/code&gt; layouts, des &lt;code&gt;&amp;lt;tr&amp;gt;&lt;/code&gt; et &lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt; (une façon de structurer le HTML en colonne et lignes comme on le ferait dans un tableau), les inline-styles CSS, &lt;code&gt;float&lt;/code&gt; une propriété CSS qui a perdu de son usage, à juste titre, depuis l’arrivée de &lt;code&gt;flexbox&lt;/code&gt; et &lt;code&gt;grid&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En théorie, le monde du développement d’emails devrait être simple car les emails ne sont rien de plus que des documents HTML, comme une page web, échangés entre nos clients mails. Cependant l’élément bloquant est bien cette dépendance aux clients mails qui ont tous des manières de différente de transformer le HTML en rendu visuel pour l’utilisateur.
 Le support de chaque client mail des règles CSS et du HTML est différent et a pris énormément de retard par rapport au développement web classique.&lt;/p&gt;
-&lt;p&gt;Ainsi, si vous avez l&#39;habitude d&#39;utiliser des méthodes CSS modernes comme  &lt;code&gt;dark-mode&lt;/code&gt;, &lt;code&gt;grid&lt;/code&gt;, &lt;code&gt;@font-face&lt;/code&gt; celles-ci sont soient :&lt;/p&gt;
+&lt;p&gt;Ainsi, si vous avez l’habitude d’utiliser des méthodes CSS modernes comme  &lt;code&gt;dark-mode&lt;/code&gt;, &lt;code&gt;grid&lt;/code&gt;, &lt;code&gt;@font-face&lt;/code&gt; celles-ci sont soient :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;pas supportés du tout&lt;/li&gt;
 &lt;li&gt;ne fonctionnent pas comme attendu au rendu&lt;/li&gt;
 &lt;li&gt;ne sont pas supportés de la même façon entre les différents clients mails&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Le développement d&#39;emails est donc devenu un casse tête où le développeur doit sans cesser vérifier si la règle CSS ou l&#39;élément HTML utilisé est supporté grâce à des outils indispensables comme https://www.caniemail.com/ de &lt;a href=&quot;https://www.hteumeuleu.fr/&quot;&gt;Hteumeuleu&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Le peu d&#39;effort mis par Google, Apple et Microsoft pour intégrer le support des nouveautés CSS et HTML s&#39;explique par des raisons de &lt;a href=&quot;https://www.darkreading.com/cyberattacks-data-breaches/attackers-use-unicode-html-to-bypass-email-security-tools&quot;&gt;sécurité&lt;/a&gt;, de &lt;a href=&quot;https://www.linkedin.com/pulse/brief-update-email-client-wars-david-taitelbaum/&quot;&gt;guerre commerciale&lt;/a&gt;, et d&#39;impossibilité à se mettre d&#39;accord sur un &lt;a href=&quot;https://medium.com/email-design/will-there-ever-be-an-html-email-standard-bf8a2b7f48d8&quot;&gt;HTML email standard&lt;/a&gt;. A titre d&#39;exemple &lt;a href=&quot;https://www.hteumeuleu.com/2020/outlook-rendering-engine/&quot;&gt;Outlook utilise encore Word pour rendre les emails sur mobile (?)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Le développement d’emails est donc devenu un casse tête où le développeur doit sans cesser vérifier si la règle CSS ou l’élément HTML utilisé est supporté grâce à des outils indispensables comme &lt;a href=&quot;https://www.caniemail.com/&quot;&gt;https://www.caniemail.com/&lt;/a&gt; de &lt;a href=&quot;https://www.hteumeuleu.fr/&quot;&gt;Hteumeuleu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Le peu d’effort mis par Google, Apple et Microsoft pour intégrer le support des nouveautés CSS et HTML s’explique par des raisons de &lt;a href=&quot;https://www.darkreading.com/cyberattacks-data-breaches/attackers-use-unicode-html-to-bypass-email-security-tools&quot;&gt;sécurité&lt;/a&gt;, de &lt;a href=&quot;https://www.linkedin.com/pulse/brief-update-email-client-wars-david-taitelbaum/&quot;&gt;guerre commerciale&lt;/a&gt;, et d’impossibilité à se mettre d’accord sur un &lt;a href=&quot;https://medium.com/email-design/will-there-ever-be-an-html-email-standard-bf8a2b7f48d8&quot;&gt;HTML email standard&lt;/a&gt;. A titre d’exemple &lt;a href=&quot;https://www.hteumeuleu.com/2020/outlook-rendering-engine/&quot;&gt;Outlook utilise encore Word pour rendre les emails sur mobile (?)&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;une-r%C3%A9volution-en-cours-dans-le-monde-du-d%C3%A9veloppement-des-emails&quot; tabindex=&quot;-1&quot;&gt;Une révolution en cours dans le monde du développement des emails&lt;/h2&gt;
 &lt;p&gt;Une révolution de la façon de développer des emails est en cours grâce à deux facteurs :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;la part d&#39;utilisation des différents clients mails&lt;/li&gt;
+&lt;li&gt;la part d’utilisation des différents clients mails&lt;/li&gt;
 &lt;li&gt;les récentes changements en terme de support des règles CSS/HTML des 3 principaux clients mails
 &lt;img src=&quot;https://www.teotimepacreau.fr/img/part-de-marche-clients-mails.png&quot; alt=&quot;Part de marché des différents clients mails&quot; title=&quot;Graphique représentant les différentes par de marchés des clients mails&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Si l&#39;on développe des emails, c&#39;est avant tout pour qu&#39;ils soient lus, et pour cela il est important d&#39;avoir bien en tête les parts d&#39;usages des différents clients mails car il est IMPOSSIBLE de développer des emails compatibles pour les dizaines de clients mails qui existent (certains clients mails encore actifs comme AOL ont des parts d&#39;utilisation infimes).&lt;/p&gt;
-&lt;h2 id=&quot;guide-de-d%C3%A9veloppement-moderne-d&#39;email&quot; tabindex=&quot;-1&quot;&gt;Guide de développement moderne d&#39;email&lt;/h2&gt;
-&lt;p&gt;Les préconisations ci-dessous s&#39;appuient sur deux considérations pragmatiques :&lt;/p&gt;
+&lt;p&gt;Si l’on développe des emails, c’est avant tout pour qu’ils soient lus, et pour cela il est important d’avoir bien en tête les parts d’usages des différents clients mails car il est IMPOSSIBLE de développer des emails compatibles pour les dizaines de clients mails qui existent (certains clients mails encore actifs comme AOL ont des parts d’utilisation infimes).&lt;/p&gt;
+&lt;h2 id=&quot;guide-de-d%C3%A9veloppement-moderne-d%E2%80%99email&quot; tabindex=&quot;-1&quot;&gt;Guide de développement moderne d’email&lt;/h2&gt;
+&lt;p&gt;Les préconisations ci-dessous s’appuient sur deux considérations pragmatiques :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;nous prenons en compte seulement les clients Apple Mail, Gmail et Outlook qui couvre ainsi 90% des lecteurs de mails dans le monde.&lt;/li&gt;
 &lt;li&gt;nous utiliserons des règles CSS/HTML supportés à minima part 70% de tout les clients mails&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Ainsi tous les éléments ci-dessous sont compatibles et supportés pour les 2 conditions précédentes et devraient combler la grande majorité des besoins. Il s&#39;agit de recommandations et ne constituent, en aucun cas, un guide exhaustif de la conception d&#39;emails HTML.&lt;/p&gt;
+&lt;p&gt;Ainsi tous les éléments ci-dessous sont compatibles et supportés pour les 2 conditions précédentes et devraient combler la grande majorité des besoins. Il s’agit de recommandations et ne constituent, en aucun cas, un guide exhaustif de la conception d’emails HTML.&lt;/p&gt;
 &lt;h3 id=&quot;stopper-les-table-layouts-et-float&quot; tabindex=&quot;-1&quot;&gt;Stopper les table layouts et float&lt;/h3&gt;
-&lt;p&gt;Les table layouts dans les emails mènent à de nombreux problème d&#39;accessibilité et de rendering.&lt;/p&gt;
-&lt;p&gt;Outlook pour Windows est &lt;a href=&quot;https://blocksedit.com/content-code/dealing-with-outlook/&quot;&gt;la seule raison&lt;/a&gt; pour laquelle on pourrait être tenté de continuer à utiliser les tables, mais il représente désormais moins de 3% de l&#39;usage total des clients mails. Les divs sont désormais totalement supportées et simplifient grandement la structuration des emails.&lt;/p&gt;
+&lt;p&gt;Les table layouts dans les emails mènent à de nombreux problème d’accessibilité et de rendering.&lt;/p&gt;
+&lt;p&gt;Outlook pour Windows est &lt;a href=&quot;https://blocksedit.com/content-code/dealing-with-outlook/&quot;&gt;la seule raison&lt;/a&gt; pour laquelle on pourrait être tenté de continuer à utiliser les tables, mais il représente désormais moins de 3% de l’usage total des clients mails. Les divs sont désormais totalement supportées et simplifient grandement la structuration des emails.&lt;/p&gt;
 &lt;h3 id=&quot;%C3%A9l%C3%A9ments-html&quot; tabindex=&quot;-1&quot;&gt;Éléments HTML&lt;/h3&gt;
 &lt;p&gt;Les divs, headings (&lt;strong&gt;&lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;&lt;/strong&gt;, etc.), paragraphes (&lt;strong&gt;&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;&lt;/strong&gt;), et les listes (&lt;strong&gt;&lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt;&lt;/strong&gt;) sont supportés partout.&lt;/p&gt;
 &lt;p&gt;Il est donc possible de se passer totalement des &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt; grâce aux divs ! Fini le besoin de structurer en colonnes et en lignes.&lt;/p&gt;
@@ -67,20 +67,20 @@ Le support de chaque client mail des règles CSS et du HTML est différent et a 
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;time&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;appliquer-du-css&quot; tabindex=&quot;-1&quot;&gt;Appliquer du CSS&lt;/h3&gt;
-&lt;p&gt;Il n&#39;est pas possible d&#39;appliquer un style pour un fichier CSS externe via &lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; src=&amp;quot;style.css&amp;quot;&amp;gt;&lt;/code&gt; car le client mail ne le lira pas.&lt;/p&gt;
-&lt;p&gt;Il faut donc se tourner vers deux méthodes CSS &amp;quot;traditionnelles&amp;quot; :&lt;/p&gt;
+&lt;p&gt;Il n’est pas possible d’appliquer un style pour un fichier CSS externe via &lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; src=&amp;quot;style.css&amp;quot;&amp;gt;&lt;/code&gt; car le client mail ne le lira pas.&lt;/p&gt;
+&lt;p&gt;Il faut donc se tourner vers deux méthodes CSS “traditionnelles” :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;les inline styles. Exemple : &lt;code&gt;&amp;lt;p style=&amp;quot;margin-top: 1rem !important; line-height: 1.5 !important;&amp;quot;&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Quelques points d&#39;attention sur &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; :
-Si vous forwardez l&#39;email, tous les &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; seront supprimés et leur style ne sera pas appliqué. Également les comptes tiers utilisant un client mail autre que celui propriétaire verront leur &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tag supprimé.&lt;/p&gt;
+&lt;p&gt;Quelques points d’attention sur &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; :
+Si vous forwardez l’email, tous les &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; seront supprimés et leur style ne sera pas appliqué. Également les comptes tiers utilisant un client mail autre que celui propriétaire verront leur &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tag supprimé.&lt;/p&gt;
 &lt;p&gt;Ainsi, le seul style qui ne sera pas suprrimé est le inline style.&lt;/p&gt;
-&lt;p&gt;Quel est l&#39;intérêt d&#39;utiliser le &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tag alors ?
-Il permet d&#39;appliquer des éléments généraux à tous le document HTML et évite les répétitions, donc pratique pour déclarer
-&lt;strong&gt;&lt;code&gt;[:hover](https://css-tricks.com/almanac/selectors/h/hover/)&lt;/code&gt;&lt;/strong&gt;, les focus, un background-color sur la page... &lt;code&gt;!important&lt;/code&gt;** est requis pour passer outre un inline style.&lt;/p&gt;
-&lt;h3 id=&quot;%C3%A9viter-les-r%C3%A9p%C3%A9titions-en-utilisant-le-m%C3%A9canisme-css-d&#39;h%C3%A9ritage&quot; tabindex=&quot;-1&quot;&gt;Éviter les répétitions en utilisant le mécanisme CSS d&#39;héritage&lt;/h3&gt;
-&lt;p&gt;Plutôt que de définir &lt;code&gt;font-family: &amp;quot;Gill Sans&amp;quot;, sans-serif;&lt;/code&gt; à chaque fois que l&#39;on pose un &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; il est plus pratique d&#39;utiliser l&#39;héritage :&lt;/p&gt;
+&lt;p&gt;Quel est l’intérêt d’utiliser le &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tag alors ?
+Il permet d’appliquer des éléments généraux à tous le document HTML et évite les répétitions, donc pratique pour déclarer
+&lt;strong&gt;&lt;code&gt;[:hover](https://css-tricks.com/almanac/selectors/h/hover/)&lt;/code&gt;&lt;/strong&gt;, les focus, un background-color sur la page… &lt;code&gt;!important&lt;/code&gt;** est requis pour passer outre un inline style.&lt;/p&gt;
+&lt;h3 id=&quot;%C3%A9viter-les-r%C3%A9p%C3%A9titions-en-utilisant-le-m%C3%A9canisme-css-d%E2%80%99h%C3%A9ritage&quot; tabindex=&quot;-1&quot;&gt;Éviter les répétitions en utilisant le mécanisme CSS d’héritage&lt;/h3&gt;
+&lt;p&gt;Plutôt que de définir &lt;code&gt;font-family: &amp;quot;Gill Sans&amp;quot;, sans-serif;&lt;/code&gt; à chaque fois que l’on pose un &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; il est plus pratique d’utiliser l’héritage :&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;body&amp;gt;  &amp;lt;div style=&amp;quot;font-size:16px; font-family: system-ui;&amp;quot;&amp;gt;    &amp;lt;!-- email content goes here --&amp;gt;  &amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;les-unit%C3%A9s&quot; tabindex=&quot;-1&quot;&gt;Les unités&lt;/h3&gt;
@@ -89,7 +89,7 @@ Seuls les &lt;code&gt;rem&lt;/code&gt; et les &lt;code&gt;px&lt;/code&gt; sont s
 De couleur :
 Seuls &lt;code&gt;#fffff&lt;/code&gt; et &lt;code&gt;rgb()&lt;/code&gt; sont supportés.&lt;/p&gt;
 &lt;h3 id=&quot;fonts&quot; tabindex=&quot;-1&quot;&gt;Fonts&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;@font-face&lt;/code&gt; n&#39;est pas supporté, impossible donc d&#39;utiliser une font de son choix. Il est impératif de passer par les &lt;code&gt;system-fonts&lt;/code&gt;, des polices d&#39;écriture incluses nativement dans les OS.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@font-face&lt;/code&gt; n’est pas supporté, impossible donc d’utiliser une font de son choix. Il est impératif de passer par les &lt;code&gt;system-fonts&lt;/code&gt;, des polices d’écriture incluses nativement dans les OS.&lt;/p&gt;
 &lt;p&gt;Une règle à suivre de bonne pratique pour déclarer ses system-fonts :&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;font-family: “Custom Serif You Won’t Have”, Serif You Might Have, Serif Your System Almost Definitely has, serif;
 
@@ -114,10 +114,10 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
 &lt;h3 id=&quot;flexbox&quot; tabindex=&quot;-1&quot;&gt;Flexbox&lt;/h3&gt;
 &lt;p&gt;La flexbox est désormais supportée ! Très pratique pour afficher des images côte à côte ou créer des colonnes.
 &lt;code&gt;display: flex&lt;/code&gt; et &lt;code&gt;column-gap&lt;/code&gt; fonctionnent mais &lt;code&gt;flex-direction:column&lt;/code&gt; et &lt;code&gt;flex-wrap: wrap&lt;/code&gt; ne sont pas supportés dans GMAIL seulement. Ils fonctionnent dans les 2 autres clients.&lt;/p&gt;
-&lt;p&gt;&amp;lt;video width=&amp;quot;640&amp;quot; height=&amp;quot;360&amp;quot; controls&amp;gt;
-&amp;lt;source src=&amp;quot;/img/flexbox-email.mp4&amp;quot; alt=&amp;quot;Vidéo illustration l&#39;illustration de flexbox dans un client mail&amp;quot; type=&amp;quot;video/mp4&amp;quot;&amp;gt;
-Your browser does not support the video tag.
-&amp;lt;/video&amp;gt;&lt;/p&gt;
+&lt;video width=&quot;640&quot; height=&quot;360&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;https://www.teotimepacreau.fr/img/flexbox-email.mp4&quot; alt=&quot;Vidéo illustration l&#39;illustration de flexbox dans un client mail&quot; type=&quot;video/mp4&quot; /&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
 &lt;h3 id=&quot;position&quot; tabindex=&quot;-1&quot;&gt;Position&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;position: relative&lt;/code&gt; et &lt;code&gt;position: absolute&lt;/code&gt; ne sont pas supportés du tout&lt;/p&gt;
 &lt;h3 id=&quot;liens&quot; tabindex=&quot;-1&quot;&gt;Liens&lt;/h3&gt;
@@ -126,8 +126,8 @@ Your browser does not support the video tag.
 	some@example.com
 &amp;lt;/a&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;cas-d&#39;usage&quot; tabindex=&quot;-1&quot;&gt;Cas d&#39;usage&lt;/h2&gt;
-&lt;p&gt;J&#39;ai construit un site d&#39;inscription et d&#39;envoi de newsletter qui repose entièrement sur ces principes, voici le &lt;a href=&quot;https://www.teotimepacreau.fr/projets/projetnewsletter/&quot;&gt;lien du projet&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;cas-d%E2%80%99usage&quot; tabindex=&quot;-1&quot;&gt;Cas d’usage&lt;/h2&gt;
+&lt;p&gt;J’ai construit un site d’inscription et d’envoi de newsletter qui repose entièrement sur ces principes, voici le &lt;a href=&quot;https://www.teotimepacreau.fr/projets/projetnewsletter/&quot;&gt;lien du projet&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://dodov.dev/blog/why-does-email-development-have-to-suck/&quot;&gt;https://dodov.dev/blog/why-does-email-development-have-to-suck/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.hteumeuleu.com/blog/&quot;&gt;https://www.hteumeuleu.com/blog/&lt;/a&gt;&lt;/p&gt;

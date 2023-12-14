@@ -58,6 +58,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(lazyImagesPlugin);
   // ... copy paster folders in _site
   eleventyConfig.addPassthroughCopy("src/css/");
+  eleventyConfig.addPassthroughCopy("src/_includes/");
   eleventyConfig.addPassthroughCopy("src/assets/");
   eleventyConfig.addPassthroughCopy("src/fonts/");
   eleventyConfig.addPassthroughCopy("src/img/");

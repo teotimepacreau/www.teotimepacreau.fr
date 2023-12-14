@@ -131,7 +131,7 @@ Voici une illustration pratique de ce code :
 La flexbox est désormais supportée ! Très pratique pour afficher des images côte à côte ou créer des colonnes.
 `display: flex` et `column-gap` fonctionnent mais `flex-direction:column` et `flex-wrap: wrap` ne sont pas supportés dans GMAIL seulement. Ils fonctionnent dans les 2 autres clients.
 
-<video width="640" height="360" controls>
+<video controls>
   <source src="/img/flexbox-email.mp4" alt="Vidéo illustration l'illustration de flexbox dans un client mail" type="video/mp4">
   Your browser does not support the video tag.
 </video>

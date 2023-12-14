@@ -40,6 +40,8 @@ body {
   font-family: "Inter-Variable", Helvetica, system, sans-serif;
 }
 
+
+
 /* Set shorter line heights on headings and text-wrap */
 h1,
 h2,
@@ -789,10 +791,9 @@ input {
 
 .post-grid {
   display: grid;
-  grid-template-columns: minmax(0rem, 0.5fr) minmax(auto, 65ch);
+  grid-template-columns: minmax(0rem, 20%) minmax(auto, 70ch) minmax(0, 20%);
   grid-template-rows: min-content min-content auto auto;
   column-gap: calc(3 * var(--baseline));
-  margin: auto;
 }
 
 

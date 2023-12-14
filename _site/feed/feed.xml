@@ -114,7 +114,7 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
 &lt;h3 id=&quot;flexbox&quot; tabindex=&quot;-1&quot;&gt;Flexbox&lt;/h3&gt;
 &lt;p&gt;La flexbox est désormais supportée ! Très pratique pour afficher des images côte à côte ou créer des colonnes.
 &lt;code&gt;display: flex&lt;/code&gt; et &lt;code&gt;column-gap&lt;/code&gt; fonctionnent mais &lt;code&gt;flex-direction:column&lt;/code&gt; et &lt;code&gt;flex-wrap: wrap&lt;/code&gt; ne sont pas supportés dans GMAIL seulement. Ils fonctionnent dans les 2 autres clients.&lt;/p&gt;
-&lt;video width=&quot;640&quot; height=&quot;360&quot; controls=&quot;&quot;&gt;
+&lt;video controls=&quot;&quot;&gt;
   &lt;source src=&quot;https://www.teotimepacreau.fr/img/flexbox-email.mp4&quot; alt=&quot;Vidéo illustration l&#39;illustration de flexbox dans un client mail&quot; type=&quot;video/mp4&quot; /&gt;
   Your browser does not support the video tag.
 &lt;/video&gt;

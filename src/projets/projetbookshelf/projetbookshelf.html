@@ -1,0 +1,38 @@
+---
+title: Construction du backend et du frontend d'un système d'une bibliothèque de réservation de livres
+layout: projetlayout.html
+---
+<h2>Construction du backend et du frontend d'un système d'une bibliothèque de réservation de livres</h2>
+<div id="project-img-wrapper">
+    <a href="https://bookshelf.teotimepacreau.fr/"><img src="../../img/bookshelf.png" alt="capture of the hompage of the bookshelf organizer website"></a>
+</div>
+<h3>Stack</h3>
+<ul>
+    <li>Backend : NodeJS, Fastify, SQLite, SQL, Fly.io</li>
+    <li>Frontend : HTML, CSS, Javascript, Vite, Vercel</li>
+</ul>
+<h3>Détails du projet</h3>
+<p>Site de visualisation et de gestion d'une bibliothèque de livres. Il est possible de rechercher, de filtrer et de trier les résultats. Les résultats sont paginés pour une meilleure lisibilité. L'administrateur peut se connecter pour ajouter des livres. Tous les utilisateurs peuvent réserver des livres en ajoutant leur date de retour.</p>
+<h3>Fonctionnalités</h3>
+<ol id="projet-ol">
+    <li><strong>Base de données :</strong> à la base il s'agit d'un export CSV de ma base de livres Goodreads. J'ai transformé ce fichie CSV en BDD SQLite grâce aux fonctionnalités bash de SQLite.</li>
+    <li><strong>Retrouver l'image de couverture de chaque livre :</strong> L'export CSV de Goodreads ne fournit pas les images de couverture des livres. J'ai donc utilisé une libraire de "data scrapping" qui récupère l'image de couverture de chaque livre sur Amazon via l'ISBN.</li>
+    <li><strong>UI :</strong> conception du style "bento". Intégration d'une vidéo montrant le contenu de la newsletter sur la page d'accueil. Possible d'afficher les derniers sujets de la newsletter dans "Issues".</li>
+    <li><strong>Composition dynamique de la newsletter :</strong> une requête SQL est effectuée dans la BDD pour personnaliser le prénom et le nom du destinataire.</li>
+    <li><strong>Envoi régulier de la newsletter :</strong> un Node Cronjob automatise l'envoi par mail chaque mois.</li>
+    <li><strong>Permettre au client d'afficher la newsletter dans son navigateur :</strong> une route Express prend en paramètre la requête pour savoir quel mail elle doit afficher.</li>
+    <li><strong>Déploiement :</strong> afin de déployer la BDD SQLite j'ai choisi <a href="https://fly.io/">fly.io</a>, la BDD locale SQLite est répliquée sur le serveur dans les Volumes.</li>
+</ol>
+<h3>Ce que j'ai appris</h3>
+<ul>
+    <li>comment utiliser NodeJS : asynchrone, gestion des erreurs</li>
+    <li>Express : gestion des requêtes HTTP, concept de routes, controllers, configuration de serveur</li>
+    <li>Requêtes et réponses HTTP, status code</li>
+    <li>HTML emails (les différentes règles de compatibilité CSS des clients mails)</li>
+    <li>FLy.io : comment répliquer une BDD SQLite sur un serveur, déployer un front et un back sur un serveur en ligne</li>
+</ul>
+<h3>Lien du projet et code source</h3>
+<ul>
+    <li><strong>Projet en ligne : </strong><a href="https://feuillu-newsletter.teotimepacreau.fr">Site d'inscription à la newsletter</a></li>
+    <li><strong>Code source du projet : </strong><a href="https://github.com/teotimepacreau/Express-Newsletter">Lien Github</a></li>
+</ul>

@@ -283,6 +283,7 @@ h1 {
   font-family: BricolageGrotesque, system, sans-serif;
   font-variation-settings: "opsz" 24, "wght" 800, "wdth" 100;
   font-size: var(--baseline);
+  letter-spacing: -0.05rem;
 }
 h2 {
   font-family: BricolageGrotesque, system, sans-serif;
@@ -542,7 +543,13 @@ input {
 /*---MEDIA QUERY HOMEPAGE---*/
 
 @media (width < 1000px) {
+  #project-card-container{
+    grid-template-columns: unset!important;
+  }
 
+  #project-card-container > * + * {
+    margin-top: var(--baseline)!important;
+  }
     .navigation-announcer{
         display: none;
     }
@@ -584,8 +591,8 @@ input {
     inset: 0 30% 0 0;
     padding: min(30dvh, 10rem) 2rem;
     background-color: hsla(0, 0%, 42%, 0.3);
-    backdrop-filter: blur(1.4rem);
-    -webkit-backdrop-filter: blur(1.4rem);
+    backdrop-filter: blur(1.7rem);
+    -webkit-backdrop-filter: blur(1.7rem);
     transform: translateX(-100%);
     transition: transform 0.4s ease-out;
   }
@@ -1203,28 +1210,41 @@ hr {
 /* PROJETS-INDEX */
 
 #projets {
-  max-width: 80ch;
-  margin-inline: auto;
   margin-top: var(--baseline);
+  margin-inline: auto;
 }
 
 
 #project-card-container {
+  max-width: 90ch;
+  margin-inline: auto;
   display: grid;
-  place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
   column-gap: var(--baseline);
 }
 .projets-container #footer {
   margin-top: var(--baseline);
 }
+
+.project-descripter {
+  display: flex;
+  flex-direction: column;
+  gap: calc(0.5*var(--baseline));
+}
+
+.project-descripter p {
+  flex: 1 0;
+  color: var(--bg);
+  opacity: .9;
+  margin-top: auto;
+}
+
 #project-card {
-  box-shadow: 1px 1px 5px 0px var(--shadow);
+  box-shadow: 2px 2px 3px 0px var(--shadow);
   margin-top: calc(0.5*var(--baseline));
   padding: calc(0.5 * var(--baseline));
   border-radius: 1rem;
   background-color: var(--accent);
-  max-width: 35ch;
 }
 
 #project-img-wrapper {
@@ -1254,7 +1274,7 @@ hr {
   margin-inline: auto;
 }
 
-.projet-layout p, #project-img-wrapper,.projet-layout ul,.projet-layout ol {
+.projet-layout p,.projet-layout ul,.projet-layout ol {
   margin-top: calc(0.5*var(--baseline));
 }
 .projet-layout h2,.projet-layout h3 {

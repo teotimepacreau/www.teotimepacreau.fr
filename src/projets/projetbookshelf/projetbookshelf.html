@@ -2,9 +2,9 @@
 title: Construction du backend et du frontend d'un système d'une bibliothèque de réservation de livres
 layout: projetlayout.html
 ---
-<h2>Construction du backend et du frontend d'un système d'une bibliothèque de réservation de livres</h2>
+<h2>Construction du backend et du frontend d'une bibliothèque de réservation de livres</h2>
 <div id="project-img-wrapper">
-    <a href="https://bookshelf.teotimepacreau.fr/"><img src="../../img/bookshelf.png" alt="capture of the hompage of the bookshelf organizer website"></a>
+    <a target="_blank" href="https://bookshelf.teotimepacreau.fr/"><img src="../../img/bookshelf.png" alt="capture of the hompage of the bookshelf organizer website"></a>
 </div>
 <h3>Stack</h3>
 <ul>
@@ -15,26 +15,58 @@ layout: projetlayout.html
 <p>Site de visualisation et de gestion d'une bibliothèque de livres. Il est possible de rechercher, de filtrer et de trier les résultats. Les résultats sont paginés pour une meilleure lisibilité. L'administrateur peut se connecter pour ajouter des livres. Tous les utilisateurs peuvent réserver des livres en ajoutant leur date de retour.</p>
 <h3>Fonctionnalités</h3>
 <ol id="projet-ol">
-    <li><strong>Base de données :</strong> à la base il s'agit d'un export CSV de ma base de livres Goodreads. J'ai transformé ce fichie CSV en BDD SQLite grâce aux fonctionnalités bash de SQLite.</li>
-    <li><strong>Retrouver l'image de couverture de chaque livre :</strong> L'export CSV de Goodreads ne fournit pas les images de couverture des livres. J'ai donc utilisé une libraire de "data scrapping" qui récupère l'image de couverture de chaque livre sur Amazon via l'ISBN. [voir getBookCovers.js](https://github.com/teotimepacreau/bookshelf/blob/v2/backend/controllers/getBookCovers.js)</li>
-    <li><strong>Requêtage de la BDD et transfert des données au frontend :</strong> requête SQL pour croiser les données de tous les livres avec leurs images de couvertures correspondantes. Envoi des données au frontend. [voir passBookDataToFront.js](https://github.com/teotimepacreau/bookshelf/blob/v2/backend/controllers/passBookDataToFront.js)</li>
-    <li><strong>Composition dynamique des "containers" de livres au moyen de "HTML template" : </strong> [voir displayBooks.js](https://github.com/teotimepacreau/bookshelf/blob/v2/frontend/utils/displayBooks.js)</li>
+    <li><strong>Conception de l'UI et responsive :</strong> j'ai conçu l'interface en partant des usages pour qu'elle soit sobre et fonctionnelle. Adaptation à la navigation sur mobile.</li>
+    <li><strong>Base de données :</strong> à l'origne il s'agit d'un export CSV de mes livres sur l'application Goodreads (Goodreads ne fournissant pas d'API). J'ai transformé ce fichier CSV en BDD SQLite grâce aux fonctionnalités bash de SQLite.</li>
+    <li><strong>Retrouver l'image de couverture de chaque livre :</strong> L'export CSV de Goodreads ne fournit pas les images de couverture des livres. J'ai donc utilisé une libraire de "data scrapping" qui récupère l'image de couverture de chaque livre sur Amazon via l'ISBN. <a target="_blank" href="https://github.com/teotimepacreau/bookshelf/blob/v2/backend/controllers/getBookCovers.js">voir getBookCovers.js</a></li>
+    <li><strong>Requêtage de la BDD et transfert des données au frontend :</strong> requête SQL pour croiser les données de tous les livres avec leurs images de couvertures correspondantes. Envoi des données au frontend. <a target="_blank" href="https://github.com/teotimepacreau/bookshelf/blob/v2/backend/controllers/passBookDataToFront.js">voir passBookDataToFront.js</a></li>
+    <li><strong>Composition dynamique des "templates" de livres au moyen de "HTML template" :</strong> <a target="_blank" href="https://github.com/teotimepacreau/bookshelf/blob/v2/frontend/utils/displayBooks.js">voir displayBooks.js</a></li>
 
+    <li><strong>Barre de recherche :</strong></li>
+    <div id="project-img-wrapper">
+        <video controls muted src="../../img/bookshelf-recherche.mp4" aria-label="Search function"></video>
+    </div>
+
+    <li><strong>Filtre :</strong> classement des résultats par note moyenne</li>
+    <div id="project-img-wrapper">
+        <video controls muted src="../../img/bookshelf-filtre.mp4" aria-label="Filter function"></video>
+    </div>
+
+    <li><strong>Tri :</strong></li>
+    <div id="project-img-wrapper">
+        <video controls muted src="../../img/bookshelf-tri.mp4" aria-label="Filter function"></video>
+    </div>
+
+    <li><strong>Connexion et ajout de livre :</strong> système d'authentification administrateur via session-cookie. L'administrateur à l'authorisation d'ajouter un livre à la collection.</li>
+    <div id="project-img-wrapper">
+        <video controls muted src="../../img/bookshelf-login.mp4" aria-label="Login and adding book"></video>
+    </div>
+
+    <li><strong>Réservations :</strong> l'utilisateur peut ajouter dans son panier un livre et le réserver en sélectionnant une date de rendu.</li>
+    <div id="project-img-wrapper">
+        <video controls muted src="../../img/bookshelf-reservation.mp4" aria-label="Reservation book"></video>
+    </div>
     
-    <li><strong>Envoi régulier de la newsletter :</strong> un Node Cronjob automatise l'envoi par mail chaque mois.</li>
-    <li><strong>Permettre au client d'afficher la newsletter dans son navigateur :</strong> une route Express prend en paramètre la requête pour savoir quel mail elle doit afficher.</li>
-    <li><strong>Déploiement :</strong> afin de déployer la BDD SQLite j'ai choisi <a href="https://fly.io/">fly.io</a>, la BDD locale SQLite est répliquée sur le serveur dans les Volumes.</li>
+
+
+    <li><strong>Déploiement :</strong> afin d'héberger la BDD SQLite j'ai choisi de déployer tout le backend sur <a target="_blank" href="https://fly.io/">Fly.io</a>. Le frontend est déployé sur <a target="_blank" href="https://vercel.com">Vercel</a>.</li>
 </ol>
 <h3>Ce que j'ai appris</h3>
 <ul>
-    <li>comment utiliser NodeJS : asynchrone, gestion des erreurs</li>
-    <li>Express : gestion des requêtes HTTP, concept de routes, controllers, configuration de serveur</li>
-    <li>Requêtes et réponses HTTP, status code</li>
-    <li>HTML emails (les différentes règles de compatibilité CSS des clients mails)</li>
-    <li>FLy.io : comment répliquer une BDD SQLite sur un serveur, déployer un front et un back sur un serveur en ligne</li>
+    <li>Séparer le frontend et le backend en dossiers différents dès les débuts du développement.</li>
+    <li>Passer les données du backend au frontend grâce aux routes</li>
+    <li>Utiliser <a target="_blank" href="https://vitejs.dev/">Vite</a> afin de bénéficier des Hot Module Replacements, du bundling et la logique d'importer tous les modules dans un seul fichier JS</li>
+    <li>Travailler avec les ES Modules</li>
+    <li>Charger de façon asynchrone les ES Modules et mes scripts grâce à `import('')`</li>
+    <li>Comprendre et réparer les erreurs CORS (origin, method, credentials...)</li>
+    <li>Utiliser les fonctions pre-handler sur le serveur pour s'assurer que seul un utilisateur authenitifié peut faire une POST request</li>
+    <li>Différencier BasicAuth, SessionAuth et JWT</li>
+    <li>Construire un système de login via les secure-session-cookies, authentifier != autoriser</li>
+    <li>Animations liés au scroll en pur CSS (Scroll-progress-timeline)</li>
+    <li>Animations au changement de page en CSS (ViewTransitionsAPI)</li>
+    <li>Savoir quand utiliser une modale ou non-modale (`<dialog>`)</li>
 </ul>
 <h3>Lien du projet et code source</h3>
 <ul>
-    <li><strong>Projet en ligne : </strong><a href="https://feuillu-newsletter.teotimepacreau.fr">Site d'inscription à la newsletter</a></li>
-    <li><strong>Code source du projet : </strong><a href="https://github.com/teotimepacreau/Express-Newsletter">Lien Github</a></li>
+    <li><strong>Projet en ligne : </strong><a target="_blank" href="https://bookshelf.teotimepacreau.fr/">Mon projet déployé "The Bookshelf"</a></li>
+    <li><strong>Code source du projet : </strong><a target="_blank" href="https://github.com/teotimepacreau/bookshelf">Lien Github</a></li>
 </ul>

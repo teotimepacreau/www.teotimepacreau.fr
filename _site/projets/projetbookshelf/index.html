@@ -93,9 +93,9 @@
           </ul>
         </nav>
       </header>
-      <main class="projet-layout"><h2>Construction du backend et du frontend d'un système d'une bibliothèque de réservation de livres</h2>
+      <main class="projet-layout"><h2>Construction du backend et du frontend d'une bibliothèque de réservation de livres</h2>
 <div id="project-img-wrapper">
-    <a href="https://bookshelf.teotimepacreau.fr/"><img src="../../img/bookshelf.png" alt="capture of the hompage of the bookshelf organizer website" data-src="../../img/bookshelf.png" class="lazyload"></a>
+    <a target="_blank" href="https://bookshelf.teotimepacreau.fr/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAOCAYAAADaOrdAAAAACXBIWXMAAAsTAAALEwEAmpwYAAADuElEQVR4nF3U6W8UZRzA8f3HfOc7jMcLJcYYQ2JCojG+NCFIsKnBoxaaVALaSgMaC5RyNND7wHIUi+0uuzvXXnPvzuzutN2ze8x8zcyWgL745PduvnmeeZ4npuQDlAKvqKBokAnpoIS0APmIpB8xAiTzFdH6HxtEO5wBMaUQRgIUNdRHVg+RCy2kQjOiaG2yZoe83SP3H12yr8lEOkhmB9HqIVg+YjGIxF4FfBS1jZjzSMoWCdGIZkb3MMtt3AMf56CPc+Dj1nycmk9xr4vpHWJ6HYy9biRTbCJabVJGZxAphZEoEJDRfHJmi7xZJW9YZDUDpaCS1VQKhobtOjieh+W6qKaFnMmQ03R0Xaes61QUibKQIi8oiNkSL/RWFBCdMKIF0Z5ndB+1eIjlHlCqVLDLLlk1SyK5zZPHS+zsbCIpSRKJ52yuL3FneoqN1XlePNogt7FE+uovxC+dZ3fmJum/kyS0BoITILpHkfCHZgwfw+3h1bu0u13avR6GrbL1dJmZ6Z+Zuz3J5uYC83MzXBkf4eyXnzI5PsLG75PsXB5j4eRHzB4/xuK33xBfekhCbyC4AWI5jOgBcniCjiLVWodW55BWp0NelVlbuc1vl4f58+ooy4u3uDV9hfNDp/j8g2OMDJ1i4eIozy+c4/7H73LjrTeYP/0V8fvLg0g5iMRkI0A2QDF9jHIPrzFYRaigZ9hYv8vUxDmm/xhjZXmW2etTjA1/zRcfvsPo8GnuXRzl0YXvmDnxPlPvvcnts6fZCiNGA6ESRAYRExTLx6j28Zo92v0+rX4P3Srw+NFCFLhz61cePnzAg7vXmRz7kTOfnWBi7AdmJy4yNz7KpZOf8NPxt7k2PMTK/RXiUQSEahiJLhPIUcTHa/Vp+37EqZRIpZ/z18Ycz7ZWEKU4u/9ssTZ/j5tXLrG+MMfm2hKLd2aZGPme8aEzTF+9xvqTHeJWIwoIXkBMsgIkC2TbR6v0cWtdDg47kfDI5rU8opQim1ewSjYFTUVIp9jdfoYiS0iZDNu7cRZXV3mwuMj60222JI243STtBZEoIlog2QHZUg+1fIhZbUU0t0bWqpI1KxRKexjVBqpbI1f0yBWrqOUD9EqdgrNPvuShOntkSvsIToOE0ya950diL9+ZMCLZfWS7g2y3I5LVRDDrpM0aglVHKjYR7AZpq45g1xFLzUi6WCdl1waz1CDptklWuqTCyL5PLPz4y4csJNg+abs/UBxIlY44r3GPlAeSlVCPZLVHyuuR2uuT2g/5/Atx1tDBF3EPwAAAAABJRU5ErkJggg==" alt="capture of the hompage of the bookshelf organizer website" data-src="../../img/bookshelf.png" class="lazyload" width="1920" height="1080"></a>
 </div>
 <h3>Stack</h3>
 <ul>
@@ -106,26 +106,60 @@
 <p>Site de visualisation et de gestion d'une bibliothèque de livres. Il est possible de rechercher, de filtrer et de trier les résultats. Les résultats sont paginés pour une meilleure lisibilité. L'administrateur peut se connecter pour ajouter des livres. Tous les utilisateurs peuvent réserver des livres en ajoutant leur date de retour.</p>
 <h3>Fonctionnalités</h3>
 <ol id="projet-ol">
-    <li><strong>Base de données :</strong> à la base il s'agit d'un export CSV de ma base de livres Goodreads. J'ai transformé ce fichie CSV en BDD SQLite grâce aux fonctionnalités bash de SQLite.</li>
-    <li><strong>Retrouver l'image de couverture de chaque livre :</strong> L'export CSV de Goodreads ne fournit pas les images de couverture des livres. J'ai donc utilisé une libraire de "data scrapping" qui récupère l'image de couverture de chaque livre sur Amazon via l'ISBN.</li>
-    <li><strong>UI :</strong> conception du style "bento". Intégration d'une vidéo montrant le contenu de la newsletter sur la page d'accueil. Possible d'afficher les derniers sujets de la newsletter dans "Issues".</li>
-    <li><strong>Composition dynamique de la newsletter :</strong> une requête SQL est effectuée dans la BDD pour personnaliser le prénom et le nom du destinataire.</li>
-    <li><strong>Envoi régulier de la newsletter :</strong> un Node Cronjob automatise l'envoi par mail chaque mois.</li>
-    <li><strong>Permettre au client d'afficher la newsletter dans son navigateur :</strong> une route Express prend en paramètre la requête pour savoir quel mail elle doit afficher.</li>
-    <li><strong>Déploiement :</strong> afin de déployer la BDD SQLite j'ai choisi <a href="https://fly.io/">fly.io</a>, la BDD locale SQLite est répliquée sur le serveur dans les Volumes.</li>
+    <li><strong>Conception de l'UI et responsive :</strong> j'ai conçu l'interface en partant des usages pour qu'elle soit sobre et fonctionnelle. Adaptation à la navigation sur mobile.</li>
+    <li><strong>Base de données :</strong> à l'origne il s'agit d'un export CSV de mes livres sur l'application Goodreads (Goodreads ne fournissant pas d'API). J'ai transformé ce fichier CSV en BDD SQLite grâce aux fonctionnalités bash de SQLite.</li>
+    <li><strong>Retrouver l'image de couverture de chaque livre :</strong> L'export CSV de Goodreads ne fournit pas les images de couverture des livres. J'ai donc utilisé une libraire de "data scrapping" qui récupère l'image de couverture de chaque livre sur Amazon via l'ISBN. <a target="_blank" href="https://github.com/teotimepacreau/bookshelf/blob/v2/backend/controllers/getBookCovers.js">voir getBookCovers.js</a></li>
+    <li><strong>Requêtage de la BDD et transfert des données au frontend :</strong> requête SQL pour croiser les données de tous les livres avec leurs images de couvertures correspondantes. Envoi des données au frontend. <a target="_blank" href="https://github.com/teotimepacreau/bookshelf/blob/v2/backend/controllers/passBookDataToFront.js">voir passBookDataToFront.js</a></li>
+    <li><strong>Composition dynamique des "templates" de livres au moyen de "HTML template" :</strong> <a target="_blank" href="https://github.com/teotimepacreau/bookshelf/blob/v2/frontend/utils/displayBooks.js">voir displayBooks.js</a></li>
+
+    <li><strong>Barre de recherche :</strong></li>
+    <div id="project-img-wrapper">
+        <video controls="" muted="" src="../../img/bookshelf-recherche.mp4" aria-label="Search function"></video>
+    </div>
+
+    <li><strong>Filtre :</strong> classement des résultats par note moyenne</li>
+    <div id="project-img-wrapper">
+        <video controls="" muted="" src="../../img/bookshelf-filtre.mp4" aria-label="Filter function"></video>
+    </div>
+
+    <li><strong>Tri :</strong></li>
+    <div id="project-img-wrapper">
+        <video controls="" muted="" src="../../img/bookshelf-tri.mp4" aria-label="Filter function"></video>
+    </div>
+
+    <li><strong>Connexion et ajout de livre :</strong> système d'authentification administrateur via session-cookie. L'administrateur à l'authorisation d'ajouter un livre à la collection.</li>
+    <div id="project-img-wrapper">
+        <video controls="" muted="" src="../../img/bookshelf-login.mp4" aria-label="Login and adding book"></video>
+    </div>
+
+    <li><strong>Réservations :</strong> l'utilisateur peut ajouter dans son panier un livre et le réserver en sélectionnant une date de rendu.</li>
+    <div id="project-img-wrapper">
+        <video controls="" muted="" src="../../img/bookshelf-reservation.mp4" aria-label="Reservation book"></video>
+    </div>
+    
+
+
+    <li><strong>Déploiement :</strong> afin d'héberger la BDD SQLite j'ai choisi de déployer tout le backend sur <a target="_blank" href="https://fly.io/">Fly.io</a>. Le frontend est déployé sur <a target="_blank" href="https://vercel.com">Vercel</a>.</li>
 </ol>
 <h3>Ce que j'ai appris</h3>
 <ul>
-    <li>comment utiliser NodeJS : asynchrone, gestion des erreurs</li>
-    <li>Express : gestion des requêtes HTTP, concept de routes, controllers, configuration de serveur</li>
-    <li>Requêtes et réponses HTTP, status code</li>
-    <li>HTML emails (les différentes règles de compatibilité CSS des clients mails)</li>
-    <li>FLy.io : comment répliquer une BDD SQLite sur un serveur, déployer un front et un back sur un serveur en ligne</li>
+    <li>Séparer le frontend et le backend en dossiers différents dès les débuts du développement.</li>
+    <li>Passer les données du backend au frontend grâce aux routes</li>
+    <li>Utiliser <a target="_blank" href="https://vitejs.dev/">Vite</a> afin de bénéficier des Hot Module Replacements, du bundling et la logique d'importer tous les modules dans un seul fichier JS</li>
+    <li>Travailler avec les ES Modules</li>
+    <li>Charger de façon asynchrone les ES Modules et mes scripts grâce à `import('')`</li>
+    <li>Comprendre et réparer les erreurs CORS (origin, method, credentials...)</li>
+    <li>Utiliser les fonctions pre-handler sur le serveur pour s'assurer que seul un utilisateur authenitifié peut faire une POST request</li>
+    <li>Différencier BasicAuth, SessionAuth et JWT</li>
+    <li>Construire un système de login via les secure-session-cookies, authentifier != autoriser</li>
+    <li>Animations liés au scroll en pur CSS (Scroll-progress-timeline)</li>
+    <li>Animations au changement de page en CSS (ViewTransitionsAPI)</li>
+    <li>Savoir quand utiliser une modale ou non-modale (`<dialog>`)</dialog></li>
 </ul>
 <h3>Lien du projet et code source</h3>
 <ul>
-    <li><strong>Projet en ligne : </strong><a href="https://feuillu-newsletter.teotimepacreau.fr">Site d'inscription à la newsletter</a></li>
-    <li><strong>Code source du projet : </strong><a href="https://github.com/teotimepacreau/Express-Newsletter">Lien Github</a></li>
+    <li><strong>Projet en ligne : </strong><a target="_blank" href="https://bookshelf.teotimepacreau.fr/">Mon projet déployé "The Bookshelf"</a></li>
+    <li><strong>Code source du projet : </strong><a target="_blank" href="https://github.com/teotimepacreau/bookshelf">Lien Github</a></li>
 </ul></main>
       <footer id="footer" role="contentinfo">
   <ul>

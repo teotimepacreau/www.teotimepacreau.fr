@@ -1252,10 +1252,16 @@ hr {
 }
 
 #project-img-wrapper img, #project-img-wrapper video {
+  margin-top: calc(0.5*var(--baseline));
   max-width: 100%;
   height: auto;
   border-radius: 0.3rem;
   overflow: hidden;
+  box-shadow: 1px 1px 3px 0px var(--shadow);
+}
+
+#project-img-wrapper video {
+  margin-top: calc(0.25*var(--baseline));
 }
 
 #project-card-title{

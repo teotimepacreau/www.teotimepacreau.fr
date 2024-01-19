@@ -853,8 +853,8 @@ h3 {
   margin-top: var(--baseline);
 }
 
-#article-post h2 + *,
-#article-post h3 + *{
+#article-post h2 + p,
+#article-post h3 + p{
   margin-top: calc(0.5*var(--baseline))
 }
 
@@ -1350,13 +1350,7 @@ hr {
   width: 1px;
 }
 
-figure {
-  display: grid;
-  place-items: center;
-}
 
 figcaption {
-  margin-top: 0;
-  opacity: 0.85;
-  text-align: center;
+  
 }

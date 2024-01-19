@@ -1,13 +1,12 @@
 ---
-title: 'Le legal design : qu'est-ce que c'est ?'
-date: '2024-01-20'
+title: "Le legal design : qu'est-ce que c'est ?"
+date: "2024-01-20"
 description: "Découverte des enjeux de simplification et d'accessibilité des normes juridiques."
 tags: 
   - 'design'
   - 'droit'
 layout: postlayout.html
 ---
-
 ## Définition
 Le legal design est une application des pratiques du design centré sur l'humain, visant à rendre les systèmes, services et documents juridiques plus compréhensibles, appropriables et accessibles.
 Le but de cette démarche est de permettre aussi bien à des non-initiés qu'à des experts en droit d'accéder à des documents/process/services légaux.
@@ -22,6 +21,7 @@ L'objectif étant de délivrer des services juridiques faciles à lire et à com
 
 ### 1. Structurer l'information dans un contrat
 Un exemple basique : la plupart des contrats démarrent par une section “définitions”, alors que l’on ne connait pas encore l’objet même du contrat. De même, les questions liées au prix sont souvent reléguées à la énième page, quand c’est souvent celle qui intéresse le plus l'utilisateur.
+
 ![Capture d'écran mobile d'un contrat à génération dynamique](/img/structuration-information-contrat.png "Exemple de contrat à génération dynamique qui guide l'utilisateur")
 
 ### 2. Utiliser un langage Facile A Lire et à Comprendre (FALC)
@@ -35,17 +35,20 @@ Méthode :
 - si besoin d'utiliser des termes techniques, prendre le temps de les définir au préalable
 - illustrer par des exemples
 - symboliser par des des icônes, images, illustrations
+
 ![Capture d'écran de clauses RGPD rédigées avec les méthodes du FALC](/img/falc-rgpd-1.png "Exemple de clauses RGPD rédigées avec les méthodes du FALC")
 
 ### 3. Donner du contexte aux informations
 - donner une vue d'ensemble et replacer l'acte administratif dans son contexte global
 - expliquer ce qui est touché par le périmètre de l'acte juridique et ce qui ne l'est pas
 - donner des éléments de réassurance au lecteur : temps de lecture attendu, but visé par le document, replacer l'acte administratif dans le contexte qui l'entoure...
+
 ![Capture d'écran d'un contrat juridique qui affiche une timeline de contextualisation des étapes juridiques](/img/contextualiser-acte-administratif.png "Exemple d'un contrat qui situe le lecteur grâce à une time des actes juridiques entourant l'acte en cours")
 ## Exemples de projets utilisant le Legal Design
 
 ### 1. Travail de la Commission Européenne pour inciter à l'utilisation de "pages de garde de synthèse" dans les contrats d'assurance 
 Le but : visualiser en une seule page les éléments essentiels couverts par le contrat.
+
 ![Page de garde de contrat d'assurance pensé par l'UE pour que le lecteur puisse se saisir des éléments essentiels du contrat en un coup d'oeil](/img/clauses-essentielles-contrat.png "Page de garde de contrat d'assurance pensé par l'UE pour que le lecteur puisse se saisir des éléments essentiels du contrat en un coup d'oeil")
 
 ### 2. Etude du "Behavioral insights group" sur l'impact des FAQ sur la compréhension
@@ -60,9 +63,14 @@ Chaque étape est cliquable, pour révéler des informations en profondeur.
 
 ![Capture d'écran tablette d'un processus contractuel pensé pour simplifer les étapes juridiques nécessaires à la conclusion de la vente de commerciaux sur le terrain](/img/processus-contractuel.png "Un processus contractuel pensé pour simplifer les étapes juridiques nécessaires à la conclusion de la vente de commerciaux sur le terrain")
 ## Sources
-<https://lawbydesign.co/legal-design//>
+<https://lawbydesign.co/legal-design/>
+
 [Guide "Comment bien démarrer en legal design" par Amurabi](https://amurabi.eu/wp-content/uploads/amurabi-guide-debutant-legal-design.pdf)
+
 <https://amurabi.eu/renault-repenser-un-processus-contractuel-pour-autonomiser-les-operationnels//>
+
 <https://sketchlex.com/documents/legaldesign-sketchlex-lawyersnow-legitech-mars-2019.pdf/>
+
 [Thèse "La forme de la norme peut-elle lui redonner sa fonction ?"](https://amurabi.eu/wp-content/uploads/These-marie-potel-la-forme-fonction.pdf)
-<https://www.lagazettedescommunes.com/892026/avec-le-legal-design-le-droit-a-la-portee-de-tous/ />
+
+<https://www.lagazettedescommunes.com/892026/avec-le-legal-design-le-droit-a-la-portee-de-tous/>

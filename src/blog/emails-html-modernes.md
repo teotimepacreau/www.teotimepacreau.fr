@@ -29,6 +29,7 @@ Le peu d'effort mis par Google, Apple et Microsoft pour intégrer le support des
 Une révolution de la façon de développer des emails est en cours grâce à deux facteurs :
 - la part d'utilisation des différents clients mails
 - les récentes changements en terme de support des règles CSS/HTML des 3 principaux clients mails
+
 ![Part de marché des différents clients mails](/img/part-de-marche-clients-mails.png "Graphique représentant les différentes par de marchés des clients mails")
 
 Si l'on développe des emails, c'est avant tout pour qu'ils soient lus, et pour cela il est important d'avoir bien en tête les parts d'usages des différents clients mails car il est IMPOSSIBLE de développer des emails compatibles pour les dizaines de clients mails qui existent (certains clients mails encore actifs comme AOL ont des parts d'utilisation infimes).
@@ -124,6 +125,7 @@ Par défaut les images vont overflow, pour contrer cela :
 ```
 
 Voici une illustration pratique de ce code : 
+
 ![Images responsives dans les clients mails](/img/email-images-responsives.png "Illustration d'utilisation d'images responsives grâce à la technique ci-dessus dans un client mail")
 
 

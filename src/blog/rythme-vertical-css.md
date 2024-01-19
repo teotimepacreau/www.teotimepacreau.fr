@@ -17,6 +17,7 @@ Adopter un rythme vertical proportionnel et prédictible sur une page web permet
 On établit une *unité de mesure commune* qui régit tous nos espacements et tailles. 
 Pour la déterminer, la règle typographique communément admise est **d'ajouter la hauteur de la ligne à la taille de la police d'écriture utilisée**. Cela crée notre *"unité de rythme"* que l'on va moduler pour tous nos espacements/tailles.
 Notre base est la ```line-eight``` des paragraphes couplée à la ```font-size``` :
+
 ```
 p {
   font-size: 1rem; /* =16px par défaut */

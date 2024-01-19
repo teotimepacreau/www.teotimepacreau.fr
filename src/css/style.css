@@ -1349,3 +1349,14 @@ hr {
   white-space: nowrap;
   width: 1px;
 }
+
+figure {
+  display: grid;
+  place-items: center;
+}
+
+figcaption {
+  margin-top: 0;
+  opacity: 0.85;
+  text-align: center;
+}

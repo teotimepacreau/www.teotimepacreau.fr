@@ -5,12 +5,73 @@
 	
 	<link href="https://www.teotimepacreau.fr/feed/feed.xml" rel="self"/>
 	<link href="https://www.teotimepacreau.fr/"/>
-	<updated>2023-12-13T00:00:00Z</updated>
+	<updated>2024-01-20T00:00:00Z</updated>
 	<id>https://www.teotimepacreau.fr/</id>
 	<author>
 		<name>Téotime Pacreau</name>
 		<email>teotime.pac@outlook.fr</email>
 	</author>
+	
+	<entry>
+		<title>Le legal design : qu&#39;est-ce que c&#39;est ?</title>
+		<link href="https://www.teotimepacreau.fr/blog/legal-design/"/>
+		<updated>2024-01-20T00:00:00Z</updated>
+		<id>https://www.teotimepacreau.fr/blog/legal-design/</id>
+		<content type="html">&lt;h2 id=&quot;d%C3%A9finition&quot; tabindex=&quot;-1&quot;&gt;Définition&lt;/h2&gt;
+&lt;p&gt;Le legal design est une application des pratiques du design centré sur l’humain, visant à rendre les systèmes, services et documents juridiques plus compréhensibles, appropriables et accessibles.
+Le but de cette démarche est de permettre aussi bien à des non-initiés qu’à des experts en droit d’accéder à des documents/process/services légaux.
+On retrouve dans cette méthodologie toutes les composantes majeures du design : idéation, conception, test usagers… avec un focus sur le fait de redonner du sens à la fonction première du droit : **être actionnable et actionné pour permettre à tous de s’approprier les normes.
+L’objectif étant de délivrer des services juridiques faciles à lire et à comprendre, qui favorisent la prise de décision et l’engagement, qui font gagner du temps.&lt;/p&gt;
+&lt;h3 id=&quot;enjeux-du-legal-design-dans-la-fonction-publique&quot; tabindex=&quot;-1&quot;&gt;Enjeux du legal design dans la fonction publique&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Contrer la surcharge d’informations et simplifier l’analyse des commanditaires. &lt;em&gt;Exemple d’une juriste qui s’est initiée au legal design après avoir été interpellée par un maire au sujet de notes juridiques envoyées avant un conseil municipal “Il m’a dit qu’il n’avait pas le temps de lire trois pages, qu’il fallait tout mettre sur une seule page, avec des éléments très visuels pour avoir toutes les informations sur les yeux.”&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Adresser un message accessible à la diversité des profils techniques de l’administration.&lt;em&gt;“Le legal design aide à la pédagogie et nous permet de parler de manière plus concrète aux ingénieurs en interne, aux acheteurs publics, aux décideurs et aux élus…”&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;exemples-de-techniques-de-legal-design&quot; tabindex=&quot;-1&quot;&gt;Exemples de techniques de legal design&lt;/h2&gt;
+&lt;h3 id=&quot;1.-structurer-l%E2%80%99information-dans-un-contrat&quot; tabindex=&quot;-1&quot;&gt;1. Structurer l’information dans un contrat&lt;/h3&gt;
+&lt;p&gt;Un exemple basique : la plupart des contrats démarrent par une section “définitions”, alors que l’on ne connait pas encore l’objet même du contrat. De même, les questions liées au prix sont souvent reléguées à la énième page, quand c’est souvent celle qui intéresse le plus l’utilisateur.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/structuration-information-contrat.png&quot; alt=&quot;Capture d&#39;écran mobile d&#39;un contrat à génération dynamique&quot; /&gt;&lt;figcaption&gt;Exemple de contrat à génération dynamique qui guide l’utilisateur&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;2.-utiliser-un-langage-facile-a-lire-et-%C3%A0-comprendre-(falc)&quot; tabindex=&quot;-1&quot;&gt;2. Utiliser un langage Facile A Lire et à Comprendre (FALC)&lt;/h3&gt;
+&lt;p&gt;Méthode :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;définir les attentes du lecteur&lt;/li&gt;
+&lt;li&gt;synthétiser et réduire aux informations essentielles&lt;/li&gt;
+&lt;li&gt;commencer avec ce qui aide les utilisateurs à décider ou à agir&lt;/li&gt;
+&lt;li&gt;s’adresser directement au lecteur&lt;/li&gt;
+&lt;li&gt;limiter chaque paragraphe à une idée&lt;/li&gt;
+&lt;li&gt;utiliser des mots du vocabulaire courant des utilisateurs&lt;/li&gt;
+&lt;li&gt;si besoin d’utiliser des termes techniques, prendre le temps de les définir au préalable&lt;/li&gt;
+&lt;li&gt;illustrer par des exemples&lt;/li&gt;
+&lt;li&gt;symboliser par des des icônes, images, illustrations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/falc-rgpd-1.png&quot; alt=&quot;Capture d&#39;écran de clauses RGPD rédigées avec les méthodes du FALC&quot; /&gt;&lt;figcaption&gt;Exemple de clauses RGPD rédigées avec les méthodes du FALC&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;3.-donner-du-contexte-aux-informations&quot; tabindex=&quot;-1&quot;&gt;3. Donner du contexte aux informations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;donner une vue d’ensemble et replacer l’acte administratif dans son contexte global&lt;/li&gt;
+&lt;li&gt;expliquer ce qui est touché par le périmètre de l’acte juridique et ce qui ne l’est pas&lt;/li&gt;
+&lt;li&gt;donner des éléments de réassurance au lecteur : temps de lecture attendu, but visé par le document, replacer l’acte administratif dans le contexte qui l’entoure…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/contextualiser-acte-administratif.png&quot; alt=&quot;Capture d&#39;écran d&#39;un contrat juridique qui affiche une timeline de contextualisation des étapes juridiques&quot; /&gt;&lt;figcaption&gt;Exemple d’un contrat qui situe le lecteur grâce à une time des actes juridiques entourant l’acte en cours&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;exemples-de-projets-utilisant-le-legal-design&quot; tabindex=&quot;-1&quot;&gt;Exemples de projets utilisant le Legal Design&lt;/h2&gt;
+&lt;h3 id=&quot;1.-travail-de-la-commission-europ%C3%A9enne-pour-inciter-%C3%A0-l%E2%80%99utilisation-de-%E2%80%9Cpages-de-garde-de-synth%C3%A8se%E2%80%9D-dans-les-contrats-d%E2%80%99assurance&quot; tabindex=&quot;-1&quot;&gt;1. Travail de la Commission Européenne pour inciter à l’utilisation de “pages de garde de synthèse” dans les contrats d’assurance&lt;/h3&gt;
+&lt;p&gt;Le but : visualiser en une seule page les éléments essentiels couverts par le contrat.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/clauses-essentielles-contrat.png&quot; alt=&quot;Page de garde de contrat d&#39;assurance pensé par l&#39;UE pour que le lecteur puisse se saisir des éléments essentiels du contrat en un coup d&#39;oeil&quot; /&gt;&lt;figcaption&gt;Page de garde de contrat d’assurance pensé par l’UE pour que le lecteur puisse se saisir des éléments essentiels du contrat en un coup d’oeil&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;2.-etude-du-%E2%80%9Cbehavioral-insights-group%E2%80%9D-sur-l%E2%80%99impact-des-faq-sur-la-compr%C3%A9hension&quot; tabindex=&quot;-1&quot;&gt;2. Etude du “Behavioral insights group” sur l’impact des FAQ sur la compréhension&lt;/h3&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/effets-faq.png&quot; alt=&quot;Extrait d&#39;une étude révélant les effets des FAQ : 36% des tests montrent une compréhension améliorée, exemple d&#39;une FAQ utilisée pour expliquer les étapes d&#39;un paiement&quot; /&gt;&lt;figcaption&gt;Extrait d’une étude révélant les effets des FAQ : 36% des tests montrent une compréhension améliorée&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;3.-repr%C3%A9sentation-d%E2%80%99un-processus-juridique-contractuel-afin-de-r%C3%A9duire-les-sollicitations-adress%C3%A9es-au-service-juridique&quot; tabindex=&quot;-1&quot;&gt;3. Représentation d’un processus juridique contractuel afin de réduire les sollicitations adressées au service juridique&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Constat initial :&lt;/strong&gt; “Les équipes commerciales itinérantes concluent des contrats importants mais ne sont pas autonomes pour mener une négociation juridique de A à Z ce qui les conduit régulièrement à solliciter la Direction Juridique en dernière minute, avant la vente.”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Résultat :&lt;/strong&gt; Modification du document d’origine en page web responsive, plus adaptée aux usages des commerciaux en voiture. La première page de couverture donne une vision d’ensemble du processus contractuel, pour permettre aux utilisateurs de mieux se situer.
+Chaque étape est cliquable, pour révéler des informations en profondeur.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/processus-contractuel.png&quot; alt=&quot;Capture d&#39;écran tablette d&#39;un processus contractuel pensé pour simplifer les étapes juridiques nécessaires à la conclusion de la vente de commerciaux sur le terrain&quot; /&gt;&lt;figcaption&gt;Un processus contractuel pensé pour simplifer les étapes juridiques nécessaires à la conclusion de la vente de commerciaux sur le terrain&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://lawbydesign.co/legal-design/&quot;&gt;https://lawbydesign.co/legal-design/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://amurabi.eu/wp-content/uploads/amurabi-guide-debutant-legal-design.pdf&quot;&gt;Guide “Comment bien démarrer en legal design” par Amurabi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://amurabi.eu/renault-repenser-un-processus-contractuel-pour-autonomiser-les-operationnels//&quot;&gt;https://amurabi.eu/renault-repenser-un-processus-contractuel-pour-autonomiser-les-operationnels//&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://sketchlex.com/documents/legaldesign-sketchlex-lawyersnow-legitech-mars-2019.pdf/&quot;&gt;https://sketchlex.com/documents/legaldesign-sketchlex-lawyersnow-legitech-mars-2019.pdf/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://amurabi.eu/wp-content/uploads/These-marie-potel-la-forme-fonction.pdf&quot;&gt;Thèse “La forme de la norme peut-elle lui redonner sa fonction ?”&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.lagazettedescommunes.com/892026/avec-le-legal-design-le-droit-a-la-portee-de-tous/&quot;&gt;https://www.lagazettedescommunes.com/892026/avec-le-legal-design-le-droit-a-la-portee-de-tous/&lt;/a&gt;&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Emails HTML modernes : en finir avec les tables</title>
@@ -33,9 +94,9 @@ Le support de chaque client mail des règles CSS et du HTML est différent et a 
 &lt;p&gt;Une révolution de la façon de développer des emails est en cours grâce à deux facteurs :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;la part d’utilisation des différents clients mails&lt;/li&gt;
-&lt;li&gt;les récentes changements en terme de support des règles CSS/HTML des 3 principaux clients mails
-&lt;img src=&quot;https://www.teotimepacreau.fr/img/part-de-marche-clients-mails.png&quot; alt=&quot;Part de marché des différents clients mails&quot; title=&quot;Graphique représentant les différentes par de marchés des clients mails&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;les récentes changements en terme de support des règles CSS/HTML des 3 principaux clients mails&lt;/li&gt;
 &lt;/ul&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/part-de-marche-clients-mails.png&quot; alt=&quot;Part de marché des différents clients mails&quot; /&gt;&lt;figcaption&gt;Graphique représentant les différentes par de marchés des clients mails&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;Si l’on développe des emails, c’est avant tout pour qu’ils soient lus, et pour cela il est important d’avoir bien en tête les parts d’usages des différents clients mails car il est IMPOSSIBLE de développer des emails compatibles pour les dizaines de clients mails qui existent (certains clients mails encore actifs comme AOL ont des parts d’utilisation infimes).&lt;/p&gt;
 &lt;h2 id=&quot;guide-de-d%C3%A9veloppement-moderne-d%E2%80%99email&quot; tabindex=&quot;-1&quot;&gt;Guide de développement moderne d’email&lt;/h2&gt;
 &lt;p&gt;Les préconisations ci-dessous s’appuient sur deux considérations pragmatiques :&lt;/p&gt;
@@ -109,8 +170,8 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
         /&amp;gt;
     &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Voici une illustration pratique de ce code :
-&lt;img src=&quot;https://www.teotimepacreau.fr/img/email-images-responsives.png&quot; alt=&quot;Images responsives dans les clients mails&quot; title=&quot;Illustration d&#39;utilisation d&#39;images responsives grâce à la technique ci-dessus dans un client mail&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Voici une illustration pratique de ce code :&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/email-images-responsives.png&quot; alt=&quot;Images responsives dans les clients mails&quot; /&gt;&lt;figcaption&gt;Illustration d’utilisation d’images responsives grâce à la technique ci-dessus dans un client mail&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;flexbox&quot; tabindex=&quot;-1&quot;&gt;Flexbox&lt;/h3&gt;
 &lt;p&gt;La flexbox est désormais supportée ! Très pratique pour afficher des images côte à côte ou créer des colonnes.
 &lt;code&gt;display: flex&lt;/code&gt; et &lt;code&gt;column-gap&lt;/code&gt; fonctionnent mais &lt;code&gt;flex-direction:column&lt;/code&gt; et &lt;code&gt;flex-wrap: wrap&lt;/code&gt; ne sont pas supportés dans GMAIL seulement. Ils fonctionnent dans les 2 autres clients.&lt;/p&gt;

@@ -55,25 +55,25 @@
 
   </head>
   <body>
-    <form class="color-picker" action="">
-    <fieldset>
+    <form tabindex="-1" class="color-picker" action="">
+    <fieldset tabindex="-1">
       <legend class="visually-hidden">Pick a color scheme</legend>
       <div id="light-group" class="color-select-group">
         <label for="light">Light</label>
-        <input type="radio" name="theme" id="light">
+        <input tabindex="-1" type="radio" name="theme" id="light">
       </div>
       <div id="dark-group" class="color-select-group">
         <label for="dark">Dark</label>
-        <input type="radio" id="dark" name="theme">
+        <input tabindex="-1" type="radio" id="dark" name="theme">
       </div>
       <div id="eco-group" class="color-select-group">
         <label for="eco">Eco</label>
-        <input type="radio" id="eco" name="theme">
+        <input tabindex="-1" type="radio" id="eco" name="theme">
       </div>
     </fieldset>
   </form>
     <div class="wrapper-post">
-      <container class="post-grid">
+      <div class="post-grid">
         <header id="post-header">
           <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
             <span class="sr-only">Menu</span>
@@ -82,15 +82,15 @@
             <span class="navigation-announcer">NAVIGATION</span>
             <ul class="menu" id="post-menu">
               <li>
-                <a href="../../index">HOME</a>
+                <a tabindex="0" href="../../index">HOME</a>
                 <!-- <a id="home" href="../index.html" aria-label="Home page"
                       ><i class="ph-bold ph-house-simple"></i
                     ></a> -->
               </li>
-              <li><a href="/curriculum">CV</a></li>
-              <li><a href="/blog">BLOG</a></li>
-              <li><a href="/projets">PROJETS</a></li>
-              <li><a href="../../colophon">COLOPHON</a></li>
+              <li><a tabindex="0" href="/curriculum">CV</a></li>
+              <li><a tabindex="0" href="/blog">BLOG</a></li>
+              <li><a tabindex="0" href="/projets">PROJETS</a></li>
+              <li><a tabindex="0" href="../../colophon">COLOPHON</a></li>
             </ul>
           </nav>
         </header>
@@ -144,7 +144,8 @@
                 </ol>
             </nav></aside>
         <main class="post-main">
-          <article>
+          <article id="article-post">
+            <header>
             <h1>Emails HTML modernes : en finir avec les tables</h1>
             <ul class="post-tags">
               
@@ -166,6 +167,8 @@
               <time datetime="2023-12-13">13 décembre 2023</time>
             </time>
             <p>Comment mettre à jour ses pratiques de développement d'emails HTML dans l'environnement complexe et changeant des clients mails ?</p>
+          </header>
+          <main>
             <p>Le monde du développement d’emails est rempli d’inconsistences, de hacks, d’éléments HTML obsolètes, et de règles CSS abandonnées depuis longtemps.
 Les développeurs d’emails se retrouvent ainsi à devoir jongler entre des <code>&lt;tables&gt;</code> layouts, des <code>&lt;tr&gt;</code> et <code>&lt;td&gt;</code> (une façon de structurer le HTML en colonne et lignes comme on le ferait dans un tableau), les inline-styles CSS, <code>float</code> une propriété CSS qui a perdu de son usage, à juste titre, depuis l’arrivée de <code>flexbox</code> et <code>grid</code>.</p>
 <p>En théorie, le monde du développement d’emails devrait être simple car les emails ne sont rien de plus que des documents HTML, comme une page web, échangés entre nos clients mails. Cependant l’élément bloquant est bien cette dépendance aux clients mails qui ont tous des manières de différente de transformer le HTML en rendu visuel pour l’utilisateur.
@@ -227,7 +230,7 @@ Si vous forwardez l’email, tous les <code>&lt;style&gt;</code> seront supprim�
 <p>Ainsi, le seul style qui ne sera pas suprrimé est le inline style.</p>
 <p>Quel est l’intérêt d’utiliser le <code>&lt;style&gt;</code> tag alors ?
 Il permet d’appliquer des éléments généraux à tous le document HTML et évite les répétitions, donc pratique pour déclarer
-<strong><code>[:hover](https://css-tricks.com/almanac/selectors/h/hover/)</code></strong>, les focus, un background-color sur la page… <code>!important</code>** est requis pour passer outre un inline style.</p>
+<a href="https://css-tricks.com/almanac/selectors/h/hover/">:hover</a>, les focus, un background-color sur la page… <code>!important</code> est requis pour passer outre un inline style.</p>
 <h3 id="%C3%A9viter-les-r%C3%A9p%C3%A9titions-en-utilisant-le-m%C3%A9canisme-css-d%E2%80%99h%C3%A9ritage" tabindex="-1">Éviter les répétitions en utilisant le mécanisme CSS d’héritage</h3>
 <p>Plutôt que de définir <code>font-family: "Gill Sans", sans-serif;</code> à chaque fois que l’on pose un <code>&lt;p&gt;</code> il est plus pratique d’utiliser l’héritage :</p>
 <pre><code>&lt;body&gt;  &lt;div style="font-size:16px; font-family: system-ui;"&gt;    &lt;!-- email content goes here --&gt;  &lt;/div&gt;&lt;/body&gt;
@@ -282,6 +285,7 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
 <p><a href="https://www.hteumeuleu.com/blog/">https://www.hteumeuleu.com/blog/</a></p>
 <p><a href="https://www.caniemail.com/">https://www.caniemail.com/</a></p>
 
+          </main>
           </article>
         </main>
         <footer id="footer" role="contentinfo">
@@ -349,7 +353,7 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
             });
           })();
         </script>
-      </container>
+      </div>
     </div>
     <script src="/scripts/colorTheme.js"></script>
     <script src="/scripts/nav.js"></script>

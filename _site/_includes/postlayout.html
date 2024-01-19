@@ -10,7 +10,7 @@ title: Blog post de Téotime Pacreau
   <body>
     {% include "color-picker.html"%}
     <div class="wrapper-post">
-      <container class="post-grid">
+      <div class="post-grid">
         <header id="post-header">
           <button
             class="mobile-nav-toggle"
@@ -27,21 +27,22 @@ title: Blog post de Téotime Pacreau
             <span class="navigation-announcer">NAVIGATION</span>
             <ul class="menu" id="post-menu">
               <li>
-                <a href="../../index">HOME</a>
+                <a tabindex="0" href="../../index">HOME</a>
                 <!-- <a id="home" href="../index.html" aria-label="Home page"
                       ><i class="ph-bold ph-house-simple"></i
                     ></a> -->
               </li>
-              <li><a href="/curriculum">CV</a></li>
-              <li><a href="/blog">BLOG</a></li>
-              <li><a href="/projets">PROJETS</a></li>
-              <li><a href="../../colophon">COLOPHON</a></li>
+              <li><a tabindex="0" href="/curriculum">CV</a></li>
+              <li><a tabindex="0" href="/blog">BLOG</a></li>
+              <li><a tabindex="0" href="/projets">PROJETS</a></li>
+              <li><a tabindex="0" href="../../colophon">COLOPHON</a></li>
             </ul>
           </nav>
         </header>
         <aside>{{ content | toc | safe }}</aside>
         <main class="post-main">
-          <article>
+          <article id="article-post">
+            <header>
             <h1>{{ title }}</h1>
             <ul class="post-tags">
               {% for tag in tags %}
@@ -59,7 +60,10 @@ title: Blog post de Téotime Pacreau
               >
             </time>
             <p>{{ description }}</p>
+          </header>
+          <main>
             {{ content | safe }}
+          </main>
           </article>
         </main>
         <footer id="footer" role="contentinfo">
@@ -83,7 +87,7 @@ title: Blog post de Téotime Pacreau
             });
           })();
         </script>
-      </container>
+      </div>
     </div>
     <script src="/scripts/colorTheme.js"></script>
     <script src="/scripts/nav.js"></script>

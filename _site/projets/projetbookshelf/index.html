@@ -55,20 +55,20 @@
 
   </head>
   <body>
-    <form class="color-picker" action="">
-    <fieldset>
+    <form tabindex="-1" class="color-picker" action="">
+    <fieldset tabindex="-1">
       <legend class="visually-hidden">Pick a color scheme</legend>
       <div id="light-group" class="color-select-group">
         <label for="light">Light</label>
-        <input type="radio" name="theme" id="light">
+        <input tabindex="-1" type="radio" name="theme" id="light">
       </div>
       <div id="dark-group" class="color-select-group">
         <label for="dark">Dark</label>
-        <input type="radio" id="dark" name="theme">
+        <input tabindex="-1" type="radio" id="dark" name="theme">
       </div>
       <div id="eco-group" class="color-select-group">
         <label for="eco">Eco</label>
-        <input type="radio" id="eco" name="theme">
+        <input tabindex="-1" type="radio" id="eco" name="theme">
       </div>
     </fieldset>
   </form>
@@ -81,15 +81,15 @@
           <span class="navigation-announcer">NAVIGATION</span>
           <ul class="menu">
             <li>
-              <a href="../../index">HOME</a>
+              <a tabindex="0" href="../../index">HOME</a>
               <!-- <a id="home" href="../index.html" aria-label="Home page"
                   ><i class="ph-bold ph-house-simple"></i
                 ></a> -->
             </li>
-            <li><a href="/../curriculum">CV</a></li>
-            <li><a href="../../blog">BLOG</a></li>
-            <li><a href="../../projets">PROJETS</a></li>
-            <li><a href="../../colophon">COLOPHON</a></li>
+            <li><a tabindex="0" href="/../curriculum">CV</a></li>
+            <li><a tabindex="0" href="../../blog">BLOG</a></li>
+            <li><a tabindex="0" href="../../projets">PROJETS</a></li>
+            <li><a tabindex="0" href="../../colophon">COLOPHON</a></li>
           </ul>
         </nav>
       </header>

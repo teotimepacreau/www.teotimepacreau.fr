@@ -86,20 +86,20 @@
 
   </head>
   <body>
-    <form class="color-picker" action="">
-    <fieldset>
+    <form tabindex="-1" class="color-picker" action="">
+    <fieldset tabindex="-1">
       <legend class="visually-hidden">Pick a color scheme</legend>
       <div id="light-group" class="color-select-group">
         <label for="light">Light</label>
-        <input type="radio" name="theme" id="light">
+        <input tabindex="-1" type="radio" name="theme" id="light">
       </div>
       <div id="dark-group" class="color-select-group">
         <label for="dark">Dark</label>
-        <input type="radio" id="dark" name="theme">
+        <input tabindex="-1" type="radio" id="dark" name="theme">
       </div>
       <div id="eco-group" class="color-select-group">
         <label for="eco">Eco</label>
-        <input type="radio" id="eco" name="theme">
+        <input tabindex="-1" type="radio" id="eco" name="theme">
       </div>
     </fieldset>
   </form>
@@ -135,91 +135,125 @@
       <main id="blog">
 <!DOCTYPE html>
 <h1>Blog</h1>
-<ul>
+<section id="blog-article-list">
   
-  <li>
-    <tag id="blog-card-tags">
+  <article>
+    <header class="blog-card-tags">
        
-      <a id="blog-card-tags-link" rel="tag" href="/tags/email/">email</a>
-       
-      <a id="blog-card-tags-link" rel="tag" href="/tags/html/">HTML</a>
-       
-      <a id="blog-card-tags-link" rel="tag" href="/tags/webmail/">webmail</a>
-      
-    </tag>
-    <a id="blog-card-title-link" href="/blog/emails-html-modernes/"
-      ><h2 id="blog-card-title">Emails HTML modernes : en finir avec les tables</h2></a
-    >
-    <time class="tags-date">
-      <time datetime="13 décembre 2023"
-        >13 décembre 2023</time
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/email/"
+        >email</a
       >
-    </time>
-  </li>
-  
-  <li>
-    <tag id="blog-card-tags">
        
-      <a id="blog-card-tags-link" rel="tag" href="/tags/sql/">SQL</a>
-       
-      <a id="blog-card-tags-link" rel="tag" href="/tags/backend/">Backend</a>
-       
-      <a id="blog-card-tags-link" rel="tag" href="/tags/sqlite/">SQLite</a>
-      
-    </tag>
-    <a id="blog-card-title-link" href="/blog/SQLite/"
-      ><h2 id="blog-card-title">SQLite, la solution pragmatique en production pour le web</h2></a
-    >
-    <time class="tags-date">
-      <time datetime="10 novembre 2023"
-        >10 novembre 2023</time
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/html/"
+        >HTML</a
       >
-    </time>
-  </li>
-  
-  <li>
-    <tag id="blog-card-tags">
        
-      <a id="blog-card-tags-link" rel="tag" href="/tags/mesure-d-impact/">Mesure dʼimpact</a>
-       
-      <a id="blog-card-tags-link" rel="tag" href="/tags/entrepreneuriat/">Entrepreneuriat</a>
-       
-      <a id="blog-card-tags-link" rel="tag" href="/tags/rse/">RSE</a>
-       
-      <a id="blog-card-tags-link" rel="tag" href="/tags/outils/">Outils</a>
-      
-    </tag>
-    <a id="blog-card-title-link" href="/blog/mesure-d&#39;impact/"
-      ><h2 id="blog-card-title">Comment réaliser sa mesure dʼimpact gratuitement et pourquoi ?</h2></a
-    >
-    <time class="tags-date">
-      <time datetime="13 janvier 2023"
-        >13 janvier 2023</time
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/webmail/"
+        >webmail</a
       >
-    </time>
-  </li>
-  
-  <li>
-    <tag id="blog-card-tags">
-       
-      <a id="blog-card-tags-link" rel="tag" href="/tags/css/">CSS</a>
-       
-      <a id="blog-card-tags-link" rel="tag" href="/tags/rythme-vertical/">Rythme vertical</a>
-       
-      <a id="blog-card-tags-link" rel="tag" href="/tags/web-design/">Web design</a>
       
-    </tag>
-    <a id="blog-card-title-link" href="/blog/rythme-vertical-css/"
-      ><h2 id="blog-card-title">Gérer facilement le rythme vertical de son site</h2></a
-    >
-    <time class="tags-date">
-      <time datetime="26 novembre 2022"
-        >26 novembre 2022</time
+    </header>
+    <main>
+      <a tabindex="1" class="blog-card-title" href="/blog/emails-html-modernes/"
+        >Emails HTML modernes : en finir avec les tables</a
       >
-    </time>
-  </li>
+      <time class="tags-date">
+        <time datetime="13 décembre 2023"
+          >13 décembre 2023</time
+        >
+      </time>
+    </main>
+  </article>
   
-</ul>
+  <article>
+    <header class="blog-card-tags">
+       
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/sql/"
+        >SQL</a
+      >
+       
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/backend/"
+        >Backend</a
+      >
+       
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/sqlite/"
+        >SQLite</a
+      >
+      
+    </header>
+    <main>
+      <a tabindex="1" class="blog-card-title" href="/blog/SQLite/"
+        >SQLite, la solution pragmatique en production pour le web</a
+      >
+      <time class="tags-date">
+        <time datetime="10 novembre 2023"
+          >10 novembre 2023</time
+        >
+      </time>
+    </main>
+  </article>
+  
+  <article>
+    <header class="blog-card-tags">
+       
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/mesure-d-impact/"
+        >Mesure dʼimpact</a
+      >
+       
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/entrepreneuriat/"
+        >Entrepreneuriat</a
+      >
+       
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/rse/"
+        >RSE</a
+      >
+       
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/outils/"
+        >Outils</a
+      >
+      
+    </header>
+    <main>
+      <a tabindex="1" class="blog-card-title" href="/blog/mesure-d&#39;impact/"
+        >Comment réaliser sa mesure dʼimpact gratuitement et pourquoi ?</a
+      >
+      <time class="tags-date">
+        <time datetime="13 janvier 2023"
+          >13 janvier 2023</time
+        >
+      </time>
+    </main>
+  </article>
+  
+  <article>
+    <header class="blog-card-tags">
+       
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/css/"
+        >CSS</a
+      >
+       
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/rythme-vertical/"
+        >Rythme vertical</a
+      >
+       
+      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/web-design/"
+        >Web design</a
+      >
+      
+    </header>
+    <main>
+      <a tabindex="1" class="blog-card-title" href="/blog/rythme-vertical-css/"
+        >Gérer facilement le rythme vertical de son site</a
+      >
+      <time class="tags-date">
+        <time datetime="26 novembre 2022"
+          >26 novembre 2022</time
+        >
+      </time>
+    </main>
+  </article>
+  
+</section>
 </main>
       <footer id="footer" role="contentinfo">
   <ul>

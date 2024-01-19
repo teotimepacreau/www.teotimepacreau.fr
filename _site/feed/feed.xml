@@ -78,7 +78,7 @@ Si vous forwardez l’email, tous les &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code
 &lt;p&gt;Ainsi, le seul style qui ne sera pas suprrimé est le inline style.&lt;/p&gt;
 &lt;p&gt;Quel est l’intérêt d’utiliser le &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tag alors ?
 Il permet d’appliquer des éléments généraux à tous le document HTML et évite les répétitions, donc pratique pour déclarer
-&lt;strong&gt;&lt;code&gt;[:hover](https://css-tricks.com/almanac/selectors/h/hover/)&lt;/code&gt;&lt;/strong&gt;, les focus, un background-color sur la page… &lt;code&gt;!important&lt;/code&gt;** est requis pour passer outre un inline style.&lt;/p&gt;
+&lt;a href=&quot;https://css-tricks.com/almanac/selectors/h/hover/&quot;&gt;:hover&lt;/a&gt;, les focus, un background-color sur la page… &lt;code&gt;!important&lt;/code&gt; est requis pour passer outre un inline style.&lt;/p&gt;
 &lt;h3 id=&quot;%C3%A9viter-les-r%C3%A9p%C3%A9titions-en-utilisant-le-m%C3%A9canisme-css-d%E2%80%99h%C3%A9ritage&quot; tabindex=&quot;-1&quot;&gt;Éviter les répétitions en utilisant le mécanisme CSS d’héritage&lt;/h3&gt;
 &lt;p&gt;Plutôt que de définir &lt;code&gt;font-family: &amp;quot;Gill Sans&amp;quot;, sans-serif;&lt;/code&gt; à chaque fois que l’on pose un &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; il est plus pratique d’utiliser l’héritage :&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;body&amp;gt;  &amp;lt;div style=&amp;quot;font-size:16px; font-family: system-ui;&amp;quot;&amp;gt;    &amp;lt;!-- email content goes here --&amp;gt;  &amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;

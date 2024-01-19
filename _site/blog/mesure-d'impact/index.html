@@ -87,25 +87,25 @@
 
   </head>
   <body>
-    <form class="color-picker" action="">
-    <fieldset>
+    <form tabindex="-1" class="color-picker" action="">
+    <fieldset tabindex="-1">
       <legend class="visually-hidden">Pick a color scheme</legend>
       <div id="light-group" class="color-select-group">
         <label for="light">Light</label>
-        <input type="radio" name="theme" id="light">
+        <input tabindex="-1" type="radio" name="theme" id="light">
       </div>
       <div id="dark-group" class="color-select-group">
         <label for="dark">Dark</label>
-        <input type="radio" id="dark" name="theme">
+        <input tabindex="-1" type="radio" id="dark" name="theme">
       </div>
       <div id="eco-group" class="color-select-group">
         <label for="eco">Eco</label>
-        <input type="radio" id="eco" name="theme">
+        <input tabindex="-1" type="radio" id="eco" name="theme">
       </div>
     </fieldset>
   </form>
     <div class="wrapper-post">
-      <container class="post-grid">
+      <div class="post-grid">
         <header id="post-header">
           <button
             class="mobile-nav-toggle"
@@ -122,15 +122,15 @@
             <span class="navigation-announcer">NAVIGATION</span>
             <ul class="menu" id="post-menu">
               <li>
-                <a href="../../index">HOME</a>
+                <a tabindex="0" href="../../index">HOME</a>
                 <!-- <a id="home" href="../index.html" aria-label="Home page"
                       ><i class="ph-bold ph-house-simple"></i
                     ></a> -->
               </li>
-              <li><a href="/curriculum">CV</a></li>
-              <li><a href="/blog">BLOG</a></li>
-              <li><a href="/projets">PROJETS</a></li>
-              <li><a href="../../colophon">COLOPHON</a></li>
+              <li><a tabindex="0" href="/curriculum">CV</a></li>
+              <li><a tabindex="0" href="/blog">BLOG</a></li>
+              <li><a tabindex="0" href="/projets">PROJETS</a></li>
+              <li><a tabindex="0" href="../../colophon">COLOPHON</a></li>
             </ul>
           </nav>
         </header>
@@ -151,7 +151,8 @@
                 </ol>
             </nav></aside>
         <main class="post-main">
-          <article>
+          <article id="article-post">
+            <header>
             <h1>Comment réaliser sa mesure dʼimpact gratuitement et pourquoi ?</h1>
             <ul class="post-tags">
               
@@ -187,6 +188,8 @@
               >
             </time>
             <p>La mesure d&#39;impact va devenir obligatoire, des plateformes gratuites permettent de s&#39;y préparer. Produire et partager les données à impact est incontournable pour mieux communiquer en externe, susciter l&#39;adhésion des collaborateurs en interne et mesurer le progrès.</p>
+          </header>
+          <main>
             <h2 id="contexte" tabindex="-1">Contexte</h2>
 <p>La <a href="https://www.consilium.europa.eu/fr/press/press-releases/2022/11/28/council-gives-final-green-light-to-corporate-sustainability-reporting-directive/">directive européene CSRD (Corporate Sustainability Reporting Directive)</a> prendra effet le 1er Janvier 2024 et s’imposera d’abord aux structures de plus de 250 salariés puis progressivement à toutes les entreprises, y compris les PME.</p>
 <p>Le but de cette directive est d’inciter les structures à mesurer, centraliser et publier régulièrement les données de leur impact sociétal et environnemental.</p>
@@ -210,6 +213,7 @@
 <p>La confiance en interne des collaborateurs et leur adhésion se voit également renforcée car les données sociales et de gouvernance sont lisibles et partagées.</p>
 <p>Enfin, la mesure d’impact permet de mesurer les progrès en interne et axer la stratégie dans le réel.</p>
 
+          </main>
           </article>
         </main>
         <footer id="footer" role="contentinfo">
@@ -299,7 +303,7 @@
             });
           })();
         </script>
-      </container>
+      </div>
     </div>
     <script src="/scripts/colorTheme.js"></script>
     <script src="/scripts/nav.js"></script>

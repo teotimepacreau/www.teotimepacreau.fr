@@ -80,7 +80,7 @@ Ainsi, le seul style qui ne sera pas suprrimé est le inline style.
 
 Quel est l'intérêt d'utiliser le `<style>` tag alors ?
 Il permet d'appliquer des éléments généraux à tous le document HTML et évite les répétitions, donc pratique pour déclarer
-**`[:hover](https://css-tricks.com/almanac/selectors/h/hover/)`**, les focus, un background-color sur la page... `!important`** est requis pour passer outre un inline style.
+[:hover](https://css-tricks.com/almanac/selectors/h/hover/), les focus, un background-color sur la page... `!important` est requis pour passer outre un inline style.
 
 ### Éviter les répétitions en utilisant le mécanisme CSS d'héritage
 

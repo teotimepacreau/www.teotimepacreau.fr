@@ -87,25 +87,25 @@
 
   </head>
   <body>
-    <form class="color-picker" action="">
-    <fieldset>
+    <form tabindex="-1" class="color-picker" action="">
+    <fieldset tabindex="-1">
       <legend class="visually-hidden">Pick a color scheme</legend>
       <div id="light-group" class="color-select-group">
         <label for="light">Light</label>
-        <input type="radio" name="theme" id="light">
+        <input tabindex="-1" type="radio" name="theme" id="light">
       </div>
       <div id="dark-group" class="color-select-group">
         <label for="dark">Dark</label>
-        <input type="radio" id="dark" name="theme">
+        <input tabindex="-1" type="radio" id="dark" name="theme">
       </div>
       <div id="eco-group" class="color-select-group">
         <label for="eco">Eco</label>
-        <input type="radio" id="eco" name="theme">
+        <input tabindex="-1" type="radio" id="eco" name="theme">
       </div>
     </fieldset>
   </form>
     <div class="wrapper-post">
-      <container class="post-grid">
+      <div class="post-grid">
         <header id="post-header">
           <button
             class="mobile-nav-toggle"
@@ -122,15 +122,15 @@
             <span class="navigation-announcer">NAVIGATION</span>
             <ul class="menu" id="post-menu">
               <li>
-                <a href="../../index">HOME</a>
+                <a tabindex="0" href="../../index">HOME</a>
                 <!-- <a id="home" href="../index.html" aria-label="Home page"
                       ><i class="ph-bold ph-house-simple"></i
                     ></a> -->
               </li>
-              <li><a href="/curriculum">CV</a></li>
-              <li><a href="/blog">BLOG</a></li>
-              <li><a href="/projets">PROJETS</a></li>
-              <li><a href="../../colophon">COLOPHON</a></li>
+              <li><a tabindex="0" href="/curriculum">CV</a></li>
+              <li><a tabindex="0" href="/blog">BLOG</a></li>
+              <li><a tabindex="0" href="/projets">PROJETS</a></li>
+              <li><a tabindex="0" href="../../colophon">COLOPHON</a></li>
             </ul>
           </nav>
         </header>
@@ -160,7 +160,8 @@
                 </ol>
             </nav></aside>
         <main class="post-main">
-          <article>
+          <article id="article-post">
+            <header>
             <h1>Gérer facilement le rythme vertical de son site</h1>
             <ul class="post-tags">
               
@@ -190,6 +191,8 @@
               >
             </time>
             <p>En 2 lignes de code, il est possible de mettre en place un système d&#39;espacement modulable et réutilisable qui s&#39;adapte à toutes les mises en page.</p>
+          </header>
+          <main>
             <h2 id="rythme-vertical" tabindex="-1">Rythme vertical</h2>
 <p>Adopter un rythme vertical proportionnel et prédictible sur une page web permet de ressentir une <a href="https://24ways.org/2006/compose-to-a-vertical-rhythm/">hiérarchie visuelle qui facilite l’expérience utilisateur</a>.</p>
 <h3 id="comment-le-d%C3%A9terminer-%3F" tabindex="-1">Comment le déterminer ?</h3>
@@ -236,6 +239,7 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
 </code></pre>
 <p>Pourquoi utiliser seulement <code>margin-top</code> ? Les marges peuvent, dans certains cas, entrer en collision et se soustraire. <a href="https://cssfordesigners.com/articles/managing-vertical-margins-in-css">En ne déclarant que <code>margin-top</code> on évite cet inconvénient</a>.</p>
 
+          </main>
           </article>
         </main>
         <footer id="footer" role="contentinfo">
@@ -325,7 +329,7 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
             });
           })();
         </script>
-      </container>
+      </div>
     </div>
     <script src="/scripts/colorTheme.js"></script>
     <script src="/scripts/nav.js"></script>

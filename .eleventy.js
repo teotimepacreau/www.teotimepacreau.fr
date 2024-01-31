@@ -10,8 +10,6 @@ let figoptions = {
     figcaption: true
 };
 
-
-
 module.exports = function(eleventyConfig) {
   // EMBED VIDEO IN MARKDOWN
   eleventyConfig.addPlugin(embeds);

@@ -821,16 +821,42 @@ input {
   grid-column: 2 / 3;
   grid-row: 1 / 4;
 }
+
+/* TOC  */
+
 .table-of-content {
   list-style-position: inside;
 }
+
+.table-of-content::before {
+  content: "Table de contenu ↓";
+  margin-top: calc(2*var(--baseline));
+  margin-bottom: calc(0.25*var(--baseline));
+  display: block;
+  background-color : var(--txt);
+  color: var(--bg);
+  padding: calc(0.5 * var(--baseline));
+  border-radius: .3rem;
+}
+
 .table-of-content > ol > li > ol {
   text-indent: 1rem;
-  padding-top: calc(0.5 * (var(--baseline)));
+  padding-top: calc(0.25 * (var(--baseline)));
+  font-weight: 300;
 }
+
+.table-of-content > ol > li > ol > li > a {
+  text-decoration: none;
+}
+
 .table-of-content > ol > li > ol > li::marker {
   content: "→ ";
 }
+
+.table-of-content > ol > li + li {
+  margin-top: calc(0.5*var(--baseline))
+} 
+
 
 .table-of-content a {
   color: var(--txt);
@@ -844,7 +870,7 @@ input {
 }
 
 #article-post h2,
-h3 {
+h3, h4 {
   margin-top: var(--baseline);
 }
 
@@ -853,12 +879,12 @@ h3 {
   margin-top: calc(0.5 * var(--baseline));
 }
 
-#article-post > p + p {
+#article-post > p + p, #article-post ol, #article-post ul {
   margin-top: calc(0.5 * var(--baseline));
 }
 
-#article-post ol li + li {
-  margin-top: calc(0.5 * var(--baseline));
+#article-post :not(.post-tags) > li + li {
+  margin-top: calc(0.25 * var(--baseline));
 }
 
 blockquote > p {
@@ -948,13 +974,7 @@ pre {
   hyphens: none;
 }
 
-.table-of-content::before {
-  content: "Table de contenu ↓";
-  margin-bottom: calc(0.5 * var(--baseline));
-  padding-bottom: calc(0.5 * var(--baseline));
-  display: block;
-  border-bottom: 2px solid var(--accent);
-}
+
 
 #post-tags {
   text-decoration: none;
@@ -1318,9 +1338,7 @@ hr {
     --txt: #1d533e;
     --accent: #752a04;
   }
-  .post-grid img {
-    mix-blend-mode: luminosity;
-  }
+
   p > code,
   li > code,
   code {
@@ -1354,13 +1372,14 @@ figure {
 
 figcaption {
   margin-top: calc(0.25 * var(--baseline));
-  opacity: 0.85;
+  font-variation-settings: 'wght' 320;
   text-align: center;
 }
 
 /* TABLES */
  table {
   border-collapse: collapse;
+  margin-block: var(--baseline)
 } 
 
 th {
@@ -1369,7 +1388,7 @@ th {
 }
 
 th,td, caption {
-  padding: calc(0.5*var(--baseline));
+  padding: calc(0.25*var(--baseline));
   text-align: left;
 }
 

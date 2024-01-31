@@ -5,7 +5,7 @@
 	
 	<link href="https://www.teotimepacreau.fr/feed/feed.xml" rel="self"/>
 	<link href="https://www.teotimepacreau.fr/"/>
-	<updated>2024-01-30T00:00:00Z</updated>
+	<updated>2024-01-31T00:00:00Z</updated>
 	<id>https://www.teotimepacreau.fr/</id>
 	<author>
 		<name>Téotime Pacreau</name>
@@ -13,9 +13,9 @@
 	</author>
 	
 	<entry>
-		<title>Tour d&#39;horizon des Headless CMS Git based</title>
+		<title>Tour d&#39;horizon des CMS Headless basés sur Git</title>
 		<link href="https://www.teotimepacreau.fr/blog/git-based-headless-cms/"/>
-		<updated>2024-01-30T00:00:00Z</updated>
+		<updated>2024-01-31T00:00:00Z</updated>
 		<id>https://www.teotimepacreau.fr/blog/git-based-headless-cms/</id>
 		<content type="html">&lt;h2 id=&quot;qu%E2%80%99est-ce-qu%E2%80%99un-cms-%3F&quot; tabindex=&quot;-1&quot;&gt;Qu’est-ce qu’un CMS ?&lt;/h2&gt;
 &lt;p&gt;CMS désigne Content Management System, il s’agit d’un système qui rend possible de créer, gérer de modifier facilement un site web, sans avoir besoin de connaissances techniques en langage informatique.
@@ -24,13 +24,14 @@ L’implémentation d’un CMS est donc particulièrement utile dans le dévelop
 &lt;p&gt;Le CMS le plus connu, Wordpress, est traditionnel dans le sens où l’administrateur vient modifier visuellement le contenu du site, ce qui entraîne une mise à jour de la base de données. Le frontend et le backend sont intrinsèquement liés, ce qui limite les possibilités de personnalisation de l’affichage et contraint à utiliser des rendus visuels normés issus de template.&lt;/p&gt;
 &lt;p&gt;Un CMS Headless, quand à lui, ne s’intéresse qu’au backend et vise donc à répertorier le contenu. Cela permet de séparer les données (le “corps”) de la manière dont elles sont présentées (la “tête”), d’où le terme “headless”. Un développeur peut ainsi utiliser la technologie de son choix sans se soucier de l’impact sur le frontend, et réutiliser le contenu pour tout type de support de sortie (site web, application, logiciel…)&lt;/p&gt;
 &lt;h2 id=&quot;pourquoi-adosser-un-cms-headless-%C3%A0-git-%3F&quot; tabindex=&quot;-1&quot;&gt;Pourquoi adosser un CMS Headless à Git ?&lt;/h2&gt;
-&lt;p&gt;Un CMS Headless basé sur Git a plusieurs avantages :&lt;/p&gt;
+&lt;p&gt;Un CMS Headless basé sur Git permet de :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;il permet de versionner le contenu, ce qui facilite la restauration du contenu antérieur en cas de mauvaise manipulation&lt;/li&gt;
-&lt;li&gt;il permet de “ramifier”(git branch), pour créer des bifurcations de contenu par exemple, déployables à tout moment&lt;/li&gt;
-&lt;li&gt;il permet d’échapper aux verrous de propriété que pourrait imposer l’éditeur du CMS&lt;/li&gt;
-&lt;li&gt;et surtout il enlève une couche de complexité car il n’y a pas de base de données à gérer car tout le contenu est répertorié dans des dossiers/documents&lt;/li&gt;
+&lt;li&gt;versionner le contenu, ce qui facilite la restauration du contenu antérieur en cas de mauvaise manipulation&lt;/li&gt;
+&lt;li&gt;“ramifier”(git branch), pour créer des bifurcations de contenu par exemple, déployables à tout moment&lt;/li&gt;
+&lt;li&gt;échapper aux verrous de propriété que pourrait imposer l’éditeur du CMS&lt;/li&gt;
+&lt;li&gt;enlever une couche de complexité car il n’y a pas de base de données à gérer car tout le contenu est répertorié dans des dossiers/documents&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Notre contenu prend forme au moyen de fichiers Markdown. Ceux-ci vont contenir toutes les données associées au fichier dans le &lt;em&gt;frontmatter&lt;/em&gt; (ex: date, description, titre, etc…) ainsi que le corps du document. Il est alors très simple de créer, éditer et supprimer ce type de fichier 100% versionné par Git.&lt;/p&gt;
 &lt;h2 id=&quot;comparaison-des-cms-headless-git-based&quot; tabindex=&quot;-1&quot;&gt;Comparaison des CMS Headless Git based&lt;/h2&gt;
 &lt;h3 id=&quot;decap-cms&quot; tabindex=&quot;-1&quot;&gt;Decap CMS&lt;/h3&gt;
 &lt;table&gt;
@@ -48,18 +49,102 @@ L’implémentation d’un CMS est donc particulièrement utile dans le dévelop
 &lt;td&gt;Oui&lt;/td&gt;
 &lt;td&gt;Oui&lt;/td&gt;
 &lt;td&gt;Github, Gitlab, Bitbucket(Jira)&lt;/td&gt;
-&lt;td&gt;Possible mais conditionné à une configuration alternative (pas possible d’avoir les changements à la fois sur le repo distant et à la fois en local)&lt;/td&gt;
-&lt;td&gt;Compatible uniquement avec Netlify&lt;/td&gt;
+&lt;td&gt;Possible mais conditionné à une configuration alternative (pas possible d’avoir les changements sur le repo distant et local en même temps)&lt;/td&gt;
+&lt;td&gt;uniquement sur Netlify&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h4 id=&quot;philosophie-de-decap-cms&quot; tabindex=&quot;-1&quot;&gt;Philosophie de DECAP CMS&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;comment-impl%C3%A9menter-decap-cms-%3F&quot; tabindex=&quot;-1&quot;&gt;Comment implémenter Decap CMS ?&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Installer la dernière version de DECAP CMS via &lt;code&gt;npm install decap-cms&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Dans le dossier qui sert les &lt;code&gt;assets&lt;/code&gt; habituellement créer un dossier &lt;code&gt;admin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Au sein du dossier &lt;code&gt;admin&lt;/code&gt; créer un fichier &lt;code&gt;index.html&lt;/code&gt; et un fichier &lt;code&gt;config.yml&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/decap-project-structure.png&quot; alt=&quot;Exemple de structuration des dossiers pour DECAP CMS&quot; /&gt;&lt;figcaption&gt;Exemple de structuration des dossiers pour DECAP CMS&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;Le fichier &lt;code&gt;index.html&lt;/code&gt; est le point d’entrée pour l’interface d’administration de DECAP CMS, coller dedans :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot; /&amp;gt;
+  &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot; /&amp;gt;
+  &amp;lt;meta name=&amp;quot;robots&amp;quot; content=&amp;quot;noindex&amp;quot; /&amp;gt;
+  &amp;lt;script src=&amp;quot;https://identity.netlify.com/v1/netlify-identity-widget.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;title&amp;gt;Content Manager&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;!-- Include the script that builds the page and powers Decap CMS --&amp;gt;
+  &amp;lt;script src=&amp;quot;https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;&lt;code&gt;config.yml&lt;/code&gt; est le coeur de la configuration du CMS : il permet de créer les différents champs de saisie et de paramétrer le fonctionnement global du CMS, coller dedans :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;local_backend: true # Si besoin d&#39;utiliser le CMS en localhost, si site déjà déployé supprimer cette ligne
+
+backend:
+  name: git-gateway
+
+
+# These lines should *not* be indented
+media_folder: &amp;quot;static/uploads&amp;quot;  # Media files will be stored in the repo under static/uploads
+public_folder: &amp;quot;/uploads&amp;quot;  # The src attribute for uploaded media will begin with /uploads
+
+collections:
+  - name: &amp;quot;articles&amp;quot;  # Used in routes, e.g., /admin/collections/articles
+    label: &amp;quot;Articles&amp;quot;  # Displayed in the UI
+    folder: &amp;quot;src/articles&amp;quot;  # The path to the folder where the documents are stored
+    create: true  # Allow users to create new documents in this collection
+    slug: &amp;quot;&amp;quot;  # Filename template, e.g., title.md
+    fields: 
+      - { label: &amp;quot;Layout&amp;quot;, name: &amp;quot;layout&amp;quot;, widget: &amp;quot;hidden&amp;quot;, default: &amp;quot;blog&amp;quot; }
+      - { label: &amp;quot;Title&amp;quot;, name: &amp;quot;title&amp;quot;, widget: &amp;quot;string&amp;quot; }
+      - { label: &amp;quot;Description&amp;quot;, name: &amp;quot;description&amp;quot;, widget: &amp;quot;string&amp;quot; }
+      - { label: &amp;quot;Publish Date&amp;quot;, name: &amp;quot;date&amp;quot;, widget: &amp;quot;datetime&amp;quot; }
+      - { label: &amp;quot;Featured Photo&amp;quot;, name: &amp;quot;featured&amp;quot;, widget: &amp;quot;image&amp;quot;, required: false }
+      - { label: &amp;quot;Body&amp;quot;, name: &amp;quot;body&amp;quot;, widget: &amp;quot;markdown&amp;quot; }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;A partir d’ici il est nécessaire de déployer le site sur Netlify même pour faire simplement fonctionner le CMS en localhost&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dans la configuration sur le site de Netlify il faut commencer par activer “l’identity” pour permettre aux futurs utilisateurs d’utiliser le CMS :&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/netlify-identity.png&quot; alt=&quot;Activation identity Netlify&quot; /&gt;&lt;figcaption&gt;Activation identity Netlify&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;ol start=&quot;8&quot;&gt;
+&lt;li&gt;Puis il faut enregistrer Github comme provider :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/github-provider.png&quot; alt=&quot;Activation de Github provider sous Netlify&quot; /&gt;&lt;figcaption&gt;Activation de Github provider sous Netlify&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;ol start=&quot;9&quot;&gt;
+&lt;li&gt;Dernière étape de la configuration Netlify : l’activation de Git-Gateway pour permettre à Github de communiquer avec notre CMS&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/git-gateway.png&quot; alt=&quot;Activation de Git-gateway sous Netlify&quot; /&gt;&lt;figcaption&gt;Activation de Git-gateway sous Netlify&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;ol start=&quot;10&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;Pour lancer DECAP CMS en localhost il faut le lancer &lt;strong&gt;en parallèle&lt;/strong&gt; du serveur de développement. Donc un premier terminal avec &lt;code&gt;npm run dev&lt;/code&gt; pour lancer le serveur de développement classique de votre site et un second terminal avec &lt;code&gt;npx decap-server&lt;/code&gt;. Si les 2 ne sont pas run en parallel, il ne sera pas possible d’accéder à Decap CMS en localhost, celui-ci renverra constamment vers la version déployée.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Se rendre sur la page d’adminstration du CMS à partir de votre serveur de developpement local “&lt;a href=&quot;http://localhost:5173/admin/index.html&quot;&gt;http://localhost:5173/admin/index.html&lt;/a&gt;”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Permettre la connexion via Github&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/demande-connexion-decap.png&quot; alt=&quot;Demande de première connexion DECAP CMS&quot; /&gt;&lt;figcaption&gt;Demande de première connexion DECAP CMS&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/netlify-login-cms.png&quot; alt=&quot;Autoriser la connexion via Github&quot; /&gt;&lt;figcaption&gt;Autoriser la connexion via Github&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;ol start=&quot;13&quot;&gt;
+&lt;li&gt;L’accès à l’interface d’administration est enfin possible&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://lawbydesign.co/legal-design/&quot;&gt;https://lawbydesign.co/legal-design/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://amurabi.eu/wp-content/uploads/amurabi-guide-debutant-legal-design.pdf&quot;&gt;Guide “Comment bien démarrer en legal design” par Amurabi&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://amurabi.eu/renault-repenser-un-processus-contractuel-pour-autonomiser-les-operationnels//&quot;&gt;https://amurabi.eu/renault-repenser-un-processus-contractuel-pour-autonomiser-les-operationnels//&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://sketchlex.com/documents/legaldesign-sketchlex-lawyersnow-legitech-mars-2019.pdf/&quot;&gt;https://sketchlex.com/documents/legaldesign-sketchlex-lawyersnow-legitech-mars-2019.pdf/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://amurabi.eu/wp-content/uploads/These-marie-potel-la-forme-fonction.pdf&quot;&gt;Thèse “La forme de la norme peut-elle lui redonner sa fonction ?”&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.lagazettedescommunes.com/892026/avec-le-legal-design-le-droit-a-la-portee-de-tous/&quot;&gt;https://www.lagazettedescommunes.com/892026/avec-le-legal-design-le-droit-a-la-portee-de-tous/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://decapcms.org/docs/add-to-your-site/&quot;&gt;https://decapcms.org/docs/add-to-your-site/&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	

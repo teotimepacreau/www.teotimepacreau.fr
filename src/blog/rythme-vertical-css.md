@@ -30,11 +30,11 @@ Notre *"unité de rythme"* est 22.4. L'objectif est d'essayer que chaque espacem
 
 ### Exemple concret d'utilisation
 
-- On souhaite un <h1> qui ferait 4 fois la taille de notre <p>.
+- On souhaite un ```<h1>``` qui ferait 4 fois la taille de notre <p>.
 - On souhaite également adapter la hauteur de ligne pour faciliter la lecture sur le gros-titre : ```line-eight: 1.1;```.
 
 Un premier réflexe pourrait-être d'utiliser ```font-size: 4rem;```. 
-Pourtant on veut que notre <h1> soit 4 fois plus grand que notre *"unité de rythme"* et non pas de notre taille de police. On module donc la font-size :
+Pourtant on veut que notre ```<h1>``` soit 4 fois plus grand que notre *"unité de rythme"* et non pas de notre taille de police. On module donc la font-size :
 
 ```
 ?*1.1=67.2

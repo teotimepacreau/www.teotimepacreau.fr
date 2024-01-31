@@ -209,11 +209,11 @@ _____________
 <p>Notre <em>“unité de rythme”</em> est 22.4. L’objectif est d’essayer que chaque espacement en soit le multiple.</p>
 <h3 id="exemple-concret-d%E2%80%99utilisation" tabindex="-1">Exemple concret d’utilisation</h3>
 <ul>
-<li>On souhaite un <h1> qui ferait 4 fois la taille de notre <p>.</li>
+<li>On souhaite un <code>&lt;h1&gt;</code> qui ferait 4 fois la taille de notre <p>.</li>
 <li>On souhaite également adapter la hauteur de ligne pour faciliter la lecture sur le gros-titre : <code>line-eight: 1.1;</code>.</li>
 </ul>
 <p>Un premier réflexe pourrait-être d’utiliser <code>font-size: 4rem;</code>.
-Pourtant on veut que notre <h1> soit 4 fois plus grand que notre <em>“unité de rythme”</em> et non pas de notre taille de police. On module donc la font-size :</p>
+Pourtant on veut que notre <code>&lt;h1&gt;</code> soit 4 fois plus grand que notre <em>“unité de rythme”</em> et non pas de notre taille de police. On module donc la font-size :</p>
 <pre><code>?*1.1=67.2
 &lt;=&gt;61.09*1.1=67.2
 
@@ -333,5 +333,6 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
     </div>
     <script src="/scripts/colorTheme.js"></script>
     <script src="/scripts/nav.js"></script>
+    <script defer src="/scripts/table.js"></script>
   </body>
 </html>

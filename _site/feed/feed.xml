@@ -5,12 +5,63 @@
 	
 	<link href="https://www.teotimepacreau.fr/feed/feed.xml" rel="self"/>
 	<link href="https://www.teotimepacreau.fr/"/>
-	<updated>2024-01-20T00:00:00Z</updated>
+	<updated>2024-01-30T00:00:00Z</updated>
 	<id>https://www.teotimepacreau.fr/</id>
 	<author>
 		<name>Téotime Pacreau</name>
 		<email>teotime.pac@outlook.fr</email>
 	</author>
+	
+	<entry>
+		<title>Tour d&#39;horizon des Headless CMS Git based</title>
+		<link href="https://www.teotimepacreau.fr/blog/git-based-headless-cms/"/>
+		<updated>2024-01-30T00:00:00Z</updated>
+		<id>https://www.teotimepacreau.fr/blog/git-based-headless-cms/</id>
+		<content type="html">&lt;h2 id=&quot;qu%E2%80%99est-ce-qu%E2%80%99un-cms-%3F&quot; tabindex=&quot;-1&quot;&gt;Qu’est-ce qu’un CMS ?&lt;/h2&gt;
+&lt;p&gt;CMS désigne Content Management System, il s’agit d’un système qui rend possible de créer, gérer de modifier facilement un site web, sans avoir besoin de connaissances techniques en langage informatique.
+L’implémentation d’un CMS est donc particulièrement utile dans le développement d’un site web, afin de permettre aux non-initiés d’administrer le site.&lt;/p&gt;
+&lt;h2 id=&quot;les-2-types-de-cms-%3A-traditionnel-et-headless&quot; tabindex=&quot;-1&quot;&gt;Les 2 types de CMS : traditionnel et headless&lt;/h2&gt;
+&lt;p&gt;Le CMS le plus connu, Wordpress, est traditionnel dans le sens où l’administrateur vient modifier visuellement le contenu du site, ce qui entraîne une mise à jour de la base de données. Le frontend et le backend sont intrinsèquement liés, ce qui limite les possibilités de personnalisation de l’affichage et contraint à utiliser des rendus visuels normés issus de template.&lt;/p&gt;
+&lt;p&gt;Un CMS Headless, quand à lui, ne s’intéresse qu’au backend et vise donc à répertorier le contenu. Cela permet de séparer les données (le “corps”) de la manière dont elles sont présentées (la “tête”), d’où le terme “headless”. Un développeur peut ainsi utiliser la technologie de son choix sans se soucier de l’impact sur le frontend, et réutiliser le contenu pour tout type de support de sortie (site web, application, logiciel…)&lt;/p&gt;
+&lt;h2 id=&quot;pourquoi-adosser-un-cms-headless-%C3%A0-git-%3F&quot; tabindex=&quot;-1&quot;&gt;Pourquoi adosser un CMS Headless à Git ?&lt;/h2&gt;
+&lt;p&gt;Un CMS Headless basé sur Git a plusieurs avantages :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;il permet de versionner le contenu, ce qui facilite la restauration du contenu antérieur en cas de mauvaise manipulation&lt;/li&gt;
+&lt;li&gt;il permet de “ramifier”(git branch), pour créer des bifurcations de contenu par exemple, déployables à tout moment&lt;/li&gt;
+&lt;li&gt;il permet d’échapper aux verrous de propriété que pourrait imposer l’éditeur du CMS&lt;/li&gt;
+&lt;li&gt;et surtout il enlève une couche de complexité car il n’y a pas de base de données à gérer car tout le contenu est répertorié dans des dossiers/documents&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;comparaison-des-cms-headless-git-based&quot; tabindex=&quot;-1&quot;&gt;Comparaison des CMS Headless Git based&lt;/h2&gt;
+&lt;h3 id=&quot;decap-cms&quot; tabindex=&quot;-1&quot;&gt;Decap CMS&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Interface d’édition en français&lt;/th&gt;
+&lt;th&gt;Pré-visualition de l’édition&lt;/th&gt;
+&lt;th&gt;Support d’authentification&lt;/th&gt;
+&lt;th&gt;Edition possible en localhost&lt;/th&gt;
+&lt;th&gt;Dépendance à une plateforme pour le déploiement&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Oui&lt;/td&gt;
+&lt;td&gt;Oui&lt;/td&gt;
+&lt;td&gt;Github, Gitlab, Bitbucket(Jira)&lt;/td&gt;
+&lt;td&gt;Possible mais conditionné à une configuration alternative (pas possible d’avoir les changements à la fois sur le repo distant et à la fois en local)&lt;/td&gt;
+&lt;td&gt;Compatible uniquement avec Netlify&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://lawbydesign.co/legal-design/&quot;&gt;https://lawbydesign.co/legal-design/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://amurabi.eu/wp-content/uploads/amurabi-guide-debutant-legal-design.pdf&quot;&gt;Guide “Comment bien démarrer en legal design” par Amurabi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://amurabi.eu/renault-repenser-un-processus-contractuel-pour-autonomiser-les-operationnels//&quot;&gt;https://amurabi.eu/renault-repenser-un-processus-contractuel-pour-autonomiser-les-operationnels//&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://sketchlex.com/documents/legaldesign-sketchlex-lawyersnow-legitech-mars-2019.pdf/&quot;&gt;https://sketchlex.com/documents/legaldesign-sketchlex-lawyersnow-legitech-mars-2019.pdf/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://amurabi.eu/wp-content/uploads/These-marie-potel-la-forme-fonction.pdf&quot;&gt;Thèse “La forme de la norme peut-elle lui redonner sa fonction ?”&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.lagazettedescommunes.com/892026/avec-le-legal-design-le-droit-a-la-portee-de-tous/&quot;&gt;https://www.lagazettedescommunes.com/892026/avec-le-legal-design-le-droit-a-la-portee-de-tous/&lt;/a&gt;&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Le legal design : qu&#39;est-ce que c&#39;est ?</title>
@@ -311,11 +362,11 @@ _____________
 &lt;p&gt;Notre &lt;em&gt;“unité de rythme”&lt;/em&gt; est 22.4. L’objectif est d’essayer que chaque espacement en soit le multiple.&lt;/p&gt;
 &lt;h3 id=&quot;exemple-concret-d%E2%80%99utilisation&quot; tabindex=&quot;-1&quot;&gt;Exemple concret d’utilisation&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;On souhaite un &lt;h1&gt; qui ferait 4 fois la taille de notre &lt;p&gt;.&lt;/p&gt;&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;On souhaite un &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; qui ferait 4 fois la taille de notre &lt;p&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;On souhaite également adapter la hauteur de ligne pour faciliter la lecture sur le gros-titre : &lt;code&gt;line-eight: 1.1;&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Un premier réflexe pourrait-être d’utiliser &lt;code&gt;font-size: 4rem;&lt;/code&gt;.
-Pourtant on veut que notre &lt;/p&gt;&lt;h1&gt; soit 4 fois plus grand que notre &lt;em&gt;“unité de rythme”&lt;/em&gt; et non pas de notre taille de police. On module donc la font-size :&lt;p&gt;&lt;/p&gt;
+Pourtant on veut que notre &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; soit 4 fois plus grand que notre &lt;em&gt;“unité de rythme”&lt;/em&gt; et non pas de notre taille de police. On module donc la font-size :&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;?*1.1=67.2
 &amp;lt;=&amp;gt;61.09*1.1=67.2
 
@@ -340,6 +391,6 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Pourquoi utiliser seulement &lt;code&gt;margin-top&lt;/code&gt; ? Les marges peuvent, dans certains cas, entrer en collision et se soustraire. &lt;a href=&quot;https://cssfordesigners.com/articles/managing-vertical-margins-in-css&quot;&gt;En ne déclarant que &lt;code&gt;margin-top&lt;/code&gt; on évite cet inconvénient&lt;/a&gt;.&lt;/p&gt;
-&lt;/h1&gt;</content>
+</content>
 	</entry>
 </feed>

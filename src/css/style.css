@@ -807,7 +807,7 @@ input {
 
 .post-grid {
   display: grid;
-  grid-template-columns: minmax(min-content, 15dvw) auto;
+  grid-template-columns: minmax(min-content, 15dvw) minmax(min-content, 70ch);
   grid-template-rows: min-content min-content auto auto;
   column-gap: calc(4 * var(--baseline));
 }
@@ -837,7 +837,7 @@ input {
 }
 
 #article-post {
-  max-width: 70ch;
+  max-width: 65ch;
 }
 #article-post > main > p + p {
   margin-top: calc(0.5 * var(--baseline));
@@ -1356,4 +1356,46 @@ figcaption {
   margin-top: calc(0.25 * var(--baseline));
   opacity: 0.85;
   text-align: center;
+}
+
+/* TABLES */
+ table {
+  border-collapse: collapse;
+} 
+
+th {
+  font-weight: bold;
+  background-color: var(--bgdarken65);
+}
+
+th,td, caption {
+  padding: calc(0.5*var(--baseline));
+  text-align: left;
+}
+
+tr {
+  border-bottom: 1px solid var(--txt);
+}
+
+/* RESPONSIVE TABLES ON MOBILE : pour que ça fonctionne nécessaire que chaque td ait un attribute 'data-cell' qui soit égal au th de sa colonne, par exemple : th "job-title", td doit être <td data-cell="job-title"> */
+@media (width < 700px){
+  th {
+    display: none;
+  }
+  td{
+    display: grid;
+    grid-template-columns: 15ch auto;
+    gap: calc(0.75*var(--baseline));
+    padding: calc(0.25*var(--baseline));
+  }
+  td::before{
+    content: attr(data-cell) ": ";
+    font-weight: 700;
+  }
+  td:first-child{
+    padding-top: calc(0.5*var(--baseline));
+  }
+  td:last-child{
+    padding-bottom: calc(0.5*var(--baseline));
+  }
 }

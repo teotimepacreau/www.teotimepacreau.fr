@@ -26,9 +26,10 @@ Un CMS Headless basé sur Git permet de :
 - échapper aux verrous de propriété que pourrait imposer l'éditeur du CMS
 - enlever une couche de complexité car il n'y a pas de base de données à gérer car tout le contenu est répertorié dans des dossiers/documents
 
+
 Notre contenu prend forme au moyen de fichiers Markdown. Ceux-ci vont contenir toutes les données associées au fichier dans le *frontmatter* (ex: date, description, titre, etc...) ainsi que le corps du document. Il est alors très simple de créer, éditer et supprimer ce type de fichier 100% versionné par Git.
 
-## Comparaison des CMS Headless Git based
+## Comparaison de deux CMS Headless Git based
 
 ### Decap CMS
 
@@ -37,7 +38,11 @@ Notre contenu prend forme au moyen de fichiers Markdown. Ceux-ci vont contenir t
 | Oui  | Oui    | Github, Gitlab, Bitbucket(Jira) | Possible mais conditionné à une configuration alternative (pas possible d'avoir les changements sur le repo distant et local en même temps)  | uniquement sur Netlify |
 
 #### Philosophie de DECAP CMS
-- 
+- pas d'API fournie, tout le workflow est basé sur Git
+- très facile à installer (deux fichiers à copier coller), dépendances non obligatoire
+- customisation du CMS uniquement en language YAML
+- pas de cloud associé pour gérer le contenu à distance
+- interface sobre mais efficace
 
 #### Comment implémenter Decap CMS ?
 
@@ -117,6 +122,150 @@ collections:
 
 13. L'accès à l'interface d'administration est enfin possible
 
+![Interface d'administration de DECAP CMS](/img/admin-decap.png "Interface d'administration de DECAP CMS")
+
+![Création d'un article sous DECAP CMS](/img/creation-article-decap.png "Création d'un article sous DECAP CMS")
+
+### Tina CMS
+
+| Interface d'édition en français   | Pré-visualition de l'édition | Support d'authentification | Edition possible en localhost | Dépendance à une plateforme pour le déploiement |
+| -------- | ------- | ------- | ------- | ------- |
+| Non  | Non (à moins d'utiliser React)    | Uniquement via des serverless functions de Vercel ou Netlify | Activé par défaut (0 config)  | Tina Cloud gratuit pour déployer CMS jusqu'à 2 utilisateurs, possible de sinon de déployer sur toutes plateformes |
+
+#### Philosophie de Tina CMS
+- API GraphQL fournie par défaut (requêtes sont pré-faites nativement en fonction du schéma de données)
+- très facile à installer mais nécessite dépendance NPM
+- customisation du CMS en fichier JS très simple via les objets
+- Tina cloud gratuit jusqu'à 2 utilisateurs pour ne pas avoir besoin de déployer le CMS
+- interface moderne et soignée
+
+#### Comment implémenter Tina CMS ?
+
+1. Installer la dernière version de Tina CMS via ` npx @tinacms/cli@latest init`
+
+2. Mettre à jour les scripts de lancement du serveur de développement local pour run en parallele le CMS
+```
+ "scripts": {
+    "dev": "tinacms dev -c \"vite dev\"",
+		"build": "tinacms build && vite build",
+		"preview": "vite preview"
+  }
+```
+
+3. Pour lancer Tina CMS et visiter la page d'administration il suffit de lancer la commande `npm run dev` et de visiter "http://localhost:5173/admin/index.html"
+
+![Page d'administration Tina CMS](/img/tina-home.png "Page d'administration Tina CMS")
+
+4. Pour customiser les champs d'entrée il suffit de modifier l'objet 'collections' ./tina/config.js
+```
+import { defineConfig } from "tinacms";
+
+// Your hosting provider likely exposes this as an environment variable
+const branch =
+  process.env.GITHUB_BRANCH ||
+  process.env.VERCEL_GIT_COMMIT_REF ||
+  process.env.HEAD ||
+  "tina";
+
+export default defineConfig({
+  branch,
+
+  // Get this from tina.io
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  // Get this from tina.io
+  token: process.env.TINA_TOKEN,
+
+  build: {
+    outputFolder: "admin",
+    publicFolder: "static",
+  },
+  media: {
+    tina: {
+      mediaRoot: "",
+      publicFolder: "static",
+    },
+  },
+  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
+  schema: {
+    collections: [
+      {
+        name: "article",
+        label: "Articles",
+        path: "src/articles",
+        fields: [
+          {
+            type: "string",
+            name: "titre",
+            label: "Titre",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "desc",
+            label: "Description",
+            required: true,
+          },
+          {
+            type: 'datetime',
+            name: 'date',
+            label: 'Date',
+            required: true,
+          },
+          {
+            type: "image",
+            name: "image",
+            label: "Image",
+          },
+          {
+            type: "string",
+            name: "imagealt",
+            label: "Description de l'image"
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Corps de texte",
+            isBody: true,
+          },
+        ],
+      },
+    ],
+  },
+});
+```
+
+5. Les champs créés viennent modifier l'API GraphQL, le CMS génère nativement les requêtes types dans le dossier `./tina/__generated__/client`
+
+6. Aller chercher les données de l'API : TinaCMS génère automatiquement deux requêtes types que l’on peut retrouver dans ./tina/__generated/queries.gql :
+
+Obtenir plusieurs articles et leur détails via blablablaConnection
+```
+import { client } from '../[pathToTina]/tina/__generated__/client'
+
+const result = await client.queries.articleConnection();
+
+const {
+      data: {
+        articleConnection: { edges },
+      },
+    } = result;
+    console.log(edges)
+```
+
+Obtenir un seul article et ses détails (mais indiquer son path est obligatoire)
+
+```
+import { client } from '../[pathToTina]/tina/__generated__/client'
+
+const myPost = await client.queries.post({ relativePath: 'HelloWorld.md' })
+
+console.log(myPost.data.title)
+```
+
+7. Les supports d'authentification nécessaire à la connexion pour les futurs utilisateurs avec le repo distant peuvent être configuré ultérieurement
+
 ## Sources
 
 <https://decapcms.org/docs/add-to-your-site/>
+<https://tina.io/docs/>

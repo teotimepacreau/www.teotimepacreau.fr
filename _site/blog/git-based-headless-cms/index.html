@@ -106,7 +106,7 @@
                     <li><a href="#pourquoi-adosser-un-cms-headless-%C3%A0-git-%3F">Pourquoi adosser un CMS Headless à Git ?</a>
             		</li>
 
-                    <li><a href="#comparaison-des-cms-headless-git-based">Comparaison des CMS Headless Git based</a>
+                    <li><a href="#comparaison-de-deux-cms-headless-git-based">Comparaison de deux CMS Headless Git based</a>
             
                 <ol>
                     
@@ -118,6 +118,18 @@
             		</li>
 
                     <li><a href="#comment-impl%C3%A9menter-decap-cms-%3F">Comment implémenter Decap CMS ?</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#tina-cms">Tina CMS</a>
+            
+                <ol>
+                    
+                    <li><a href="#philosophie-de-tina-cms">Philosophie de Tina CMS</a>
+            		</li>
+
+                    <li><a href="#comment-impl%C3%A9menter-tina-cms-%3F">Comment implémenter Tina CMS ?</a>
             		</li>
                 </ol>
             		</li>
@@ -165,7 +177,7 @@ L’implémentation d’un CMS est donc particulièrement utile dans le dévelop
 <li>enlever une couche de complexité car il n’y a pas de base de données à gérer car tout le contenu est répertorié dans des dossiers/documents</li>
 </ul>
 <p>Notre contenu prend forme au moyen de fichiers Markdown. Ceux-ci vont contenir toutes les données associées au fichier dans le <em>frontmatter</em> (ex: date, description, titre, etc…) ainsi que le corps du document. Il est alors très simple de créer, éditer et supprimer ce type de fichier 100% versionné par Git.</p>
-<h2 id="comparaison-des-cms-headless-git-based" tabindex="-1">Comparaison des CMS Headless Git based</h2>
+<h2 id="comparaison-de-deux-cms-headless-git-based" tabindex="-1">Comparaison de deux CMS Headless Git based</h2>
 <h3 id="decap-cms" tabindex="-1">Decap CMS</h3>
 <table>
 <thead>
@@ -189,7 +201,11 @@ L’implémentation d’un CMS est donc particulièrement utile dans le dévelop
 </table>
 <h4 id="philosophie-de-decap-cms" tabindex="-1">Philosophie de DECAP CMS</h4>
 <ul>
-<li></li>
+<li>pas d’API fournie, tout le workflow est basé sur Git</li>
+<li>très facile à installer (deux fichiers à copier coller), dépendances non obligatoire</li>
+<li>customisation du CMS uniquement en language YAML</li>
+<li>pas de cloud associé pour gérer le contenu à distance</li>
+<li>interface sobre mais efficace</li>
 </ul>
 <h4 id="comment-impl%C3%A9menter-decap-cms-%3F" tabindex="-1">Comment implémenter Decap CMS ?</h4>
 <ol>
@@ -276,8 +292,168 @@ collections:
 <ol start="13">
 <li>L’accès à l’interface d’administration est enfin possible</li>
 </ol>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAFCAYAAACw/UeDAAAACXBIWXMAABJ0AAASdAHeZh94AAAA+UlEQVR4nHWQy07DMBBF8/9fh1QV2qqiTaOQhtTxa/xIujgorgARYHHkjWfOvVNZn3GS8ZKIMZNSJk8z03xn/oeYMsY61Kix1hNiIuWJlGdimmi7nu3Lns12R31pqbQVrBO8hCJYFixDRZinIvvBdGfUhtdzzXa351Q33JQpIb1EnI+8DyOXpqNu3rj2NyqlPaMVnCRCmpCYy8dlIIRUkq0ZbiOH44mnzTOH45lrr9BGGLUv75qqV55BC6OL2PA4nfVLolBEEtIvtHF014G66Wi7gUHZL8lfVL2ODCahfEb7jPEJ6x/VP0+wRmSRZUQerY0NaPPdYi35AA+63g7SHyyBAAAAAElFTkSuQmCC" alt="Interface d'administration de DECAP CMS" data-src="/img/admin-decap.png" class="lazyload" width="1813" height="355"><figcaption>Interface d’administration de DECAP CMS</figcaption></figure>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAALCAYAAACK9ybzAAAACXBIWXMAABJ0AAASdAHeZh94AAABVElEQVR4nJWS4W7DIAyE8/5vN2kvsF9T1iUBg4EkJDcdFLXJWm1F+hQQxOez3SXnEY1gtg4XI3i/THj7GvFhHeZlRc4r1rUyzzNCCFBVxBixLAtyzk8JMcGKRxe8InnFEiJ8TOh9wKcPmGLCevoppQRrLYZhgDGmCFKoJXEP38/zAg0JnaMTBlxXbNt2IOdK3eeS/TiO6Pu+CHnvi7szzSGTXJZ8FNn3HduV/QSF6MQ5V9xQgOfq5OamCfB9i9eJOKiGksHNxf4LZkUnLBG/rSSPaAKEq7PWQcRDlY1sJauZ3+8ZlMFr9iv+uyjUGQmYROGuIucyNVrjW4lagL8oTiarmCQUkTSzto9LcHRyFPlrdd+jYJgcRuPKTHMQnFN4r3DEKUS03IlwSGo/XhIxVsDmMwAF5IlIvdfihM5eEuFkFQIn5wbHmoSQyh3hmaXiILwi8gO95zbmyzDVEwAAAABJRU5ErkJggg==" alt="Création d'un article sous DECAP CMS" data-src="/img/creation-article-decap.png" class="lazyload" width="1911" height="856"><figcaption>Création d’un article sous DECAP CMS</figcaption></figure>
+<h3 id="tina-cms" tabindex="-1">Tina CMS</h3>
+<table>
+<thead>
+<tr>
+<th>Interface d’édition en français</th>
+<th>Pré-visualition de l’édition</th>
+<th>Support d’authentification</th>
+<th>Edition possible en localhost</th>
+<th>Dépendance à une plateforme pour le déploiement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Non</td>
+<td>Non (à moins d’utiliser React)</td>
+<td>Uniquement via des serverless functions de Vercel ou Netlify</td>
+<td>Activé par défaut (0 config)</td>
+<td>Tina Cloud gratuit pour déployer CMS jusqu’à 2 utilisateurs, possible de sinon de déployer sur toutes plateformes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="philosophie-de-tina-cms" tabindex="-1">Philosophie de Tina CMS</h4>
+<ul>
+<li>API GraphQL fournie par défaut (requêtes sont pré-faites nativement en fonction du schéma de données)</li>
+<li>très facile à installer mais nécessite dépendance NPM</li>
+<li>customisation du CMS en fichier JS très simple via les objets</li>
+<li>Tina cloud gratuit jusqu’à 2 utilisateurs pour ne pas avoir besoin de déployer le CMS</li>
+<li>interface moderne et soignée</li>
+</ul>
+<h4 id="comment-impl%C3%A9menter-tina-cms-%3F" tabindex="-1">Comment implémenter Tina CMS ?</h4>
+<ol>
+<li>
+<p>Installer la dernière version de Tina CMS via <code> npx @tinacms/cli@latest init</code></p>
+</li>
+<li>
+<p>Mettre à jour les scripts de lancement du serveur de développement local pour run en parallele le CMS</p>
+</li>
+</ol>
+<pre><code> "scripts": {
+    "dev": "tinacms dev -c \"vite dev\"",
+		"build": "tinacms build &amp;&amp; vite build",
+		"preview": "vite preview"
+  }
+</code></pre>
+<ol start="3">
+<li>Pour lancer Tina CMS et visiter la page d’administration il suffit de lancer la commande <code>npm run dev</code> et de visiter “<a href="http://localhost:5173/admin/index.html">http://localhost:5173/admin/index.html</a>”</li>
+</ol>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAYAAAARZmTlAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoUlEQVR4nK2U626bQBCFef+3a39F/VOpjZI6jg17mb3MXk41YyCQ2m2sFOkTAha+PbM7DOwMOAQUZvTeZxp6TShpQnK/QOMjwvQEpiMaj0A1QJ2AMgLlDJQTuvKKzseZF3Q+KEOwFsF7pJTQWkPvUFGrBZwI5EbY6QhvTkjBoDKh1YhWwgxt8BvcyuAcgSggpawSOURSa0WMGdYRjPFwLug1c0Ep9R3tJlwahskGWB8R4l6SM8P7AGu9nkUgE0mJ7yNmDJ4SYmJwqVqqRSIDJOU0OT0TxQs+qvRjyNiIwc0pci7zmvRdEmOcphGRlOwCXccS7MwyXr4xBAoIIWopZB0WidQ+hLS+9FeMV8wGvaeygEHrHBNyzqjlTSILKuuwRP4Mg8y+lMuO2ZZrkRClTzPgyrGX/Ickfe3yC39K9rPygr+Pf0rez4roLrqwluuaRHrlWhLnP84uyfLxt99KA+eiabTbpXSRcXaM54nx48T4eb5Jl+dPI/eD4X5TIjtNtrT0izSq9k2qONiKb8eKL88NX1fqBr3X5fnDS+3fT7X/Bu7IstmXddafAAAAAElFTkSuQmCC" alt="Page d'administration Tina CMS" data-src="/img/tina-home.png" class="lazyload" width="800" height="479"><figcaption>Page d’administration Tina CMS</figcaption></figure>
+<ol start="4">
+<li>Pour customiser les champs d’entrée il suffit de modifier l’objet ‘collections’ ./tina/config.js</li>
+</ol>
+<pre><code>import { defineConfig } from "tinacms";
+
+// Your hosting provider likely exposes this as an environment variable
+const branch =
+  process.env.GITHUB_BRANCH ||
+  process.env.VERCEL_GIT_COMMIT_REF ||
+  process.env.HEAD ||
+  "tina";
+
+export default defineConfig({
+  branch,
+
+  // Get this from tina.io
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  // Get this from tina.io
+  token: process.env.TINA_TOKEN,
+
+  build: {
+    outputFolder: "admin",
+    publicFolder: "static",
+  },
+  media: {
+    tina: {
+      mediaRoot: "",
+      publicFolder: "static",
+    },
+  },
+  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
+  schema: {
+    collections: [
+      {
+        name: "article",
+        label: "Articles",
+        path: "src/articles",
+        fields: [
+          {
+            type: "string",
+            name: "titre",
+            label: "Titre",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "desc",
+            label: "Description",
+            required: true,
+          },
+          {
+            type: 'datetime',
+            name: 'date',
+            label: 'Date',
+            required: true,
+          },
+          {
+            type: "image",
+            name: "image",
+            label: "Image",
+          },
+          {
+            type: "string",
+            name: "imagealt",
+            label: "Description de l'image"
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Corps de texte",
+            isBody: true,
+          },
+        ],
+      },
+    ],
+  },
+});
+</code></pre>
+<ol start="5">
+<li>
+<p>Les champs créés viennent modifier l’API GraphQL, le CMS génère nativement les requêtes types dans le dossier <code>./tina/__generated__/client</code></p>
+</li>
+<li>
+<p>Aller chercher les données de l’API : TinaCMS génère automatiquement deux requêtes types que l’on peut retrouver dans ./tina/__generated/queries.gql :</p>
+</li>
+</ol>
+<p>Obtenir plusieurs articles et leur détails via blablablaConnection</p>
+<pre><code>import { client } from '../[pathToTina]/tina/__generated__/client'
+
+const result = await client.queries.articleConnection();
+
+const {
+      data: {
+        articleConnection: { edges },
+      },
+    } = result;
+    console.log(edges)
+</code></pre>
+<p>Obtenir un seul article et ses détails (mais indiquer son path est obligatoire)</p>
+<pre><code>import { client } from '../[pathToTina]/tina/__generated__/client'
+
+const myPost = await client.queries.post({ relativePath: 'HelloWorld.md' })
+
+console.log(myPost.data.title)
+</code></pre>
+<ol start="7">
+<li>Les supports d’authentification nécessaire à la connexion pour les futurs utilisateurs avec le repo distant peuvent être configuré ultérieurement</li>
+</ol>
 <h2 id="sources" tabindex="-1">Sources</h2>
-<p><a href="https://decapcms.org/docs/add-to-your-site/">https://decapcms.org/docs/add-to-your-site/</a></p>
+<p><a href="https://decapcms.org/docs/add-to-your-site/">https://decapcms.org/docs/add-to-your-site/</a>
+<a href="https://tina.io/docs/">https://tina.io/docs/</a></p>
 
           </main>
           </article>

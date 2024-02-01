@@ -7,6 +7,20 @@ tags:
   - 'Backend'
   - 'SQLite'
 layout: postlayout.html
+type: post
+eleventyComputed:
+  meta:
+    site:
+      name: "{{ metadata.title }}"
+      description: "{{ metadata.description }}"
+      url: "{{ metadata.url }}"
+    title: "{{ title }}"
+    description: "{{ description }}"
+    image:
+      src: "{% if image %}{{ metadata.url }}{{ image }}{% endif %}"
+    author:
+      name: "Teotime Pacreau"
+    published: "{{ date }}"
 ---
 
 ## Les BDD relationnelles, passées de mode alors qu'elles répondent aux besoins de la grande majorité des projets des développement web

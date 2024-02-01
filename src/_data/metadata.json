@@ -1,8 +1,8 @@
 {
-    "title": "Téotime Pacreau",
+    "title": "Le site web personnel de Teotime Pacreau",
     "url": "https://www.teotimepacreau.fr/",
     "language": "fr",
-    "description": "Le flux web de mon blog : management de projet et numérique.",
+    "description": "Management de projet et numérique à Nantes",
     "feed": {
       "subtitle": "Le flux web de mon blog : management de projet et numérique.",
       "filename": "feed.xml",

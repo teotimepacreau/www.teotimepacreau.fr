@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Téotime Pacreau</title>
+	<title>Le site web personnel de Teotime Pacreau</title>
 	<subtitle>Le flux web de mon blog : management de projet et numérique.</subtitle>
 	
 	<link href="https://www.teotimepacreau.fr/feed/feed.xml" rel="self"/>

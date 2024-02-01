@@ -5,6 +5,10 @@ const pluginTOC = require('eleventy-plugin-nesting-toc');
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const embeds = require("eleventy-plugin-embed-everything");
+
+// ADD STRUCTURED DATA FOR GOOGLE RICH RESULTS
+const schema = require("@quasibit/eleventy-plugin-schema");
+
 let mdfigcaption = require('markdown-it-image-figures');
 let figoptions = {
     figcaption: true
@@ -16,6 +20,12 @@ module.exports = function(eleventyConfig) {
   
   // RSS
   eleventyConfig.addPlugin(pluginRss);
+
+  // ADD STRUCTURED DATA FOR GOOGLE RICH RESULTS
+  eleventyConfig.addPlugin(schema);
+  eleventyConfig.addFilter('iso8601', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toISO()
+  })
   
   // Markdown configuration
   eleventyConfig.setLibrary("md", markdownIt({

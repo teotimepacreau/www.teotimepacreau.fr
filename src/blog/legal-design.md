@@ -6,6 +6,20 @@ tags:
   - 'design'
   - 'droit'
 layout: postlayout.html
+type: post
+eleventyComputed:
+  meta:
+    site:
+      name: "{{ metadata.title }}"
+      description: "{{ metadata.description }}"
+      url: "{{ metadata.url }}"
+    title: "{{ title }}"
+    description: "{{ description }}"
+    image:
+      src: "{% if image %}{{ metadata.url }}{{ image }}{% endif %}"
+    author:
+      name: "Teotime Pacreau"
+    published: "{{ date }}"
 ---
 ## Définition
 Le legal design est une application des pratiques du design centré sur l'humain, visant à rendre les systèmes, services et documents juridiques plus compréhensibles, appropriables et accessibles.

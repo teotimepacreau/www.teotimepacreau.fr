@@ -6,6 +6,20 @@ tags:
   - 'CMS'
   - 'Git'
 layout: postlayout.html
+type: post
+eleventyComputed:
+  meta:
+    site:
+      name: "{{ metadata.title }}"
+      description: "{{ metadata.description }}"
+      url: "{{ metadata.url }}"
+    title: "{{ title }}"
+    description: "{{ description }}"
+    image:
+      src: "{% if image %}{{ metadata.url }}{{ image }}{% endif %}"
+    author:
+      name: "Teotime Pacreau"
+    published: "{{ date }}"
 ---
 ## Qu'est-ce qu'un CMS ?
 

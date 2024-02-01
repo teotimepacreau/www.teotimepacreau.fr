@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy-cache-assets": "^2.3.0",
-    "@11ty/eleventy-plugin-rss": "^1.2.0"
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@quasibit/eleventy-plugin-schema": "^1.11.0"
   }
 }

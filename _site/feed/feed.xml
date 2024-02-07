@@ -32,6 +32,13 @@ L’implémentation d’un CMS est donc particulièrement utile dans le dévelop
 &lt;li&gt;enlever une couche de complexité car il n’y a pas de base de données à gérer car tout le contenu est répertorié dans des dossiers/documents&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Notre contenu prend forme au moyen de fichiers Markdown. Ceux-ci vont contenir toutes les données associées au fichier dans le &lt;em&gt;frontmatter&lt;/em&gt; (ex: date, description, titre, etc…) ainsi que le corps du document. Il est alors très simple de créer, éditer et supprimer ce type de fichier 100% versionné par Git.&lt;/p&gt;
+&lt;h2 id=&quot;cms-headless-git-based-conseill%C3%A9s&quot; tabindex=&quot;-1&quot;&gt;CMS Headless Git Based conseillés&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.staticcms.org/&quot;&gt;Static CMS&lt;/a&gt; &lt;a href=&quot;https://mastodon.design/@timotheegoguely/111851562642935066&quot;&gt;conseillé par Timothée Goguely, voir l’échange&lt;/a&gt;, pas encore creusé de mon côté&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://decapcms.org/&quot;&gt;Decap CMS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tina.io/&quot;&gt;Tina CMS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mattrbld.com/&quot;&gt;Mattrbld&lt;/a&gt; &lt;a href=&quot;https://mastodon.design/@timotheegoguely/111852331418845469&quot;&gt;conseillé par Timothée Goguely, voir l’échange&lt;/a&gt;, pas encore creusé de mon côté&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&quot;comparaison-de-deux-cms-headless-git-based&quot; tabindex=&quot;-1&quot;&gt;Comparaison de deux CMS Headless Git based&lt;/h2&gt;
 &lt;h3 id=&quot;decap-cms&quot; tabindex=&quot;-1&quot;&gt;Decap CMS&lt;/h3&gt;
 &lt;table&gt;
@@ -50,7 +57,7 @@ L’implémentation d’un CMS est donc particulièrement utile dans le dévelop
 &lt;td&gt;Oui&lt;/td&gt;
 &lt;td&gt;Github, Gitlab, Bitbucket(Jira)&lt;/td&gt;
 &lt;td&gt;Possible mais conditionné à une configuration alternative (pas possible d’avoir les changements sur le repo distant et local en même temps)&lt;/td&gt;
-&lt;td&gt;uniquement sur Netlify&lt;/td&gt;
+&lt;td&gt;plus facile sur Netlify mais possible de déployer ailleurs avec beaucoup de configuration&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

@@ -43,13 +43,20 @@ Un CMS Headless basé sur Git permet de :
 
 Notre contenu prend forme au moyen de fichiers Markdown. Ceux-ci vont contenir toutes les données associées au fichier dans le *frontmatter* (ex: date, description, titre, etc...) ainsi que le corps du document. Il est alors très simple de créer, éditer et supprimer ce type de fichier 100% versionné par Git.
 
+## CMS Headless Git Based conseillés
+
+- [Static CMS](https://www.staticcms.org/) [conseillé par Timothée Goguely, voir l'échange](https://mastodon.design/@timotheegoguely/111851562642935066), pas encore creusé de mon côté
+- [Decap CMS](https://decapcms.org/)
+- [Tina CMS](https://tina.io/)
+- [Mattrbld](https://mattrbld.com/) [conseillé par Timothée Goguely, voir l'échange](https://mastodon.design/@timotheegoguely/111852331418845469), pas encore creusé de mon côté
+
 ## Comparaison de deux CMS Headless Git based
 
 ### Decap CMS
 
 | Interface d'édition en français   | Pré-visualition de l'édition | Support d'authentification | Edition possible en localhost | Dépendance à une plateforme pour le déploiement |
 | -------- | ------- | ------- | ------- | ------- |
-| Oui  | Oui    | Github, Gitlab, Bitbucket(Jira) | Possible mais conditionné à une configuration alternative (pas possible d'avoir les changements sur le repo distant et local en même temps)  | uniquement sur Netlify |
+| Oui  | Oui    | Github, Gitlab, Bitbucket(Jira) | Possible mais conditionné à une configuration alternative (pas possible d'avoir les changements sur le repo distant et local en même temps)  | plus facile sur Netlify mais possible de déployer ailleurs avec beaucoup de configuration |
 
 #### Philosophie de DECAP CMS
 - pas d'API fournie, tout le workflow est basé sur Git

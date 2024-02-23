@@ -1,6 +1,5 @@
 // select
 const colorThemes = document.querySelectorAll('[name="theme"]');
-
 // store theme in local storage
 const storeTheme = function (theme) {
   localStorage.setItem("theme", theme);
@@ -12,6 +11,8 @@ colorThemes.forEach((themeOption) => {
     storeTheme(themeOption.id);
     // fallback for no :has() support
     document.documentElement.className = themeOption.id;
+    adaptHomepageButtonTextColorIfDarkTheme();
+    checkLocalStorage();
   });
 });
 
@@ -27,18 +28,46 @@ const setTheme = function () {
   document.documentElement.className = activeTheme;
 };
 
-function checkLocalStorage(){
-  const allCodes = document.querySelectorAll('code')
+function checkLocalStorage() {
+  const allCodes = document.querySelectorAll("code");
   const activeTheme = localStorage.getItem("theme");
-  console.log(activeTheme)
-  if(activeTheme === "light"){
-    for(let code of allCodes){
-      code.style.color = "#1d533e"
+  if (activeTheme === "light") {
+    for (let code of allCodes) {
+      code.style.color = "#1d533e";
+    }
+  }
+  if (activeTheme === "dark") {
+    for (let code of allCodes) {
+      code.style.color = "#f7f5f1e6";
     }
   }
 }
-checkLocalStorage()
+
+function adaptHomepageButtonTextColorIfDarkTheme() {
+  const activeTheme = localStorage.getItem("theme");
+  console.log(activeTheme)
+  const allHomepageText = document.querySelectorAll(".homepage-projets-grid-item__left button");
+  if (activeTheme === "dark") {
+    allHomepageText.forEach((text) => {
+      text.style.color = "#17453a";
+    });
+  }
+  if (activeTheme === "light") {
+    allHomepageText.forEach((text) => {
+      text.style.color = "white";
+    });
+  }
+}
 
 
-
-document.onload = setTheme();
+window.onload = setTheme();
+document.addEventListener("DOMContentLoaded", () => {
+  const allHomepageText = document.querySelectorAll(".homepage-projets-grid-item__left button");
+  const activeTheme = localStorage.getItem("theme");
+  
+  if (activeTheme === "dark") {
+    allHomepageText.forEach((text) => {
+      text.style.color = "#17453a";
+    });
+  }
+});

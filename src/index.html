@@ -8,51 +8,106 @@ title: Management de projet, conduite du changement et numérique à Nantes
     {% include "head.html"%}
   </head>
   <body>
-      {% include "color-picker.html"%}
-      <div class="container" id="homepage-container">
-        <main id="homepage-hero">
-          <h1 class="anim-1 intersect">
-            Téotime Pacreau,<br />
-            Manage<wbr />ment de projet & Numérique
-          </h1>
-          <section id="homepage-prose">
-            <p class="anim-2 intersect">
-              Je suis apprenti en gestion de projet, transversalité et conduite
-              du changement pour
-              <a tabindex="-1"
-                href="https://www.prefectures-regions.gouv.fr/pays-de-la-loire/Region-et-institutions/Organisation-administrative-de-la-region/Secretariat-General-pour-les-Affaires-Regionales-SGAR/Etat-LIN-le-Laboratoire-d-Innovation-Publique-de-l-Etat-en-region-Pays-de-la-Loire/Etat-LIN-qu-est-ce-que-c-est"
-                target="_blank"
-                rel="noopener noreferrer"
-                >État'LIN, le laboratoire d'innovation publique de l'État en
-                Pays de la Loire</a
-              >. Dans ce cadre j'étudie au sein du Master de Management,
-              Organisation et Conduite du Changement à Nantes.
-            </p>
-            <p class="intersect anim-3">
-              Impliqué professionnellement par les enjeux de transformation des
-              organisations.<br />
-              J'entame également un apprentissage personnel du développement
-              web.
-            </p>
-          </section>
-        </main>
-        <header id="homepage-menu">
-          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-          </button>
-          <nav class="homepage-nav" id="primary-navigation" data-visible="false">
-            <ul class="intersect anim-5" id="dont-animate">
-              <li><a href="../curriculum">01 Curriculum Vitae</a></li>
-              <li><a href="blog">02 Blog</a></li>
-              <li><a href="/projets">03 Projets</a></li>
-              <li><a href="/colophon">04 Colophon</a></li>
-            </ul>
-          </nav>
-        </header>
-        <footer class="anim-4 intersect" id="footer" role="contentinfo">
-          {% include "footer.html"%}
-        </footer>
-      </div>
+    {% include "color-picker.html"%}
+    <div class="container" id="homepage-container">
+      <main id="homepage-hero">
+        <h1 class="anim-1 intersect">
+          Téotime Pacreau,<br />
+          Manage<wbr />ment de projet & Numérique
+        </h1>
+        <section id="homepage-prose">
+          <p class="anim-2 intersect">
+            Je suis apprenti en gestion de projet et conduite du changement pour
+            <a
+              tabindex="-1"
+              href="https://www.prefectures-regions.gouv.fr/pays-de-la-loire/Region-et-institutions/Organisation-administrative-de-la-region/Secretariat-General-pour-les-Affaires-Regionales-SGAR/Etat-LIN-le-Laboratoire-d-Innovation-Publique-de-l-Etat-en-region-Pays-de-la-Loire/Etat-LIN-qu-est-ce-que-c-est"
+              target="_blank"
+              rel="noopener noreferrer"
+              >État'LIN, le laboratoire d'innovation publique de l'État en Pays
+              de la Loire</a
+            >. J'étudie au sein du Master de Management,
+            Organisation et Conduite du Changement à Nantes.
+          </p>
+          <p class="intersect anim-3">
+            Impliqué professionnellement par les enjeux de transformation des
+            organisations.<br />
+            J'entame également un apprentissage personnel du développement web.
+          </p>
+        </section>
+        <section id="homepage-projets" class="intersect anim-4">
+          <div id="homepage-projets-titre-flexer">
+            <h2>Projets</h2>
+            <hr />
+          </div>
+          <div id="homepage-projets-grid">
+            <div class="homepage-projets-grid-item">
+              <div class="homepage-projets-grid-item__left">
+                <img
+                  src="/img/bookshelf_mini.png"
+                  alt="Miniature de mon site web fullstack The Bookshelf"
+                />
+                <button tabindex="-1">
+                  <a href="/projets/projetbookshelf/">Découvrir </a>
+                </button>
+              </div>
+              <div class="homepage-projets-grid-item__right">
+                <ul>
+                  <li>Vite</li>
+                  <li>Fastify</li>
+                  <li>SQLite</li>
+                </ul>
+                <div class="homepage-projets-grid-item__right__titleanddesc">
+                  <h3>The Bookshelf - Web App</h3>
+                  <span>Site web fullstack de réservation de livres</span>
+                </div>
+              </div>
+            </div>
+            <div class="homepage-projets-grid-item">
+              <div class="homepage-projets-grid-item__left">
+                <img
+                  src="/img/feuillu_mini.png"
+                  alt="Miniature de mon site web de newsletter"
+                />
+                <button tabindex="-1" >
+                  <a href="/projets/projetnewsletter/">Découvrir </a>
+                </button>
+              </div>
+              <div class="homepage-projets-grid-item__right">
+                <ul>
+                  <li>Javascript</li>
+                  <li>Express</li>
+                  <li>SQLite</li>
+                </ul>
+                <div class="homepage-projets-grid-item__right__titleanddesc">
+                  <h3>Feuillu newsletter - Web App</h3>
+                  <span>Site web fullstack d'inscription et d'envoi de newsletter</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <header id="homepage-menu">
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav class="homepage-nav" id="primary-navigation" data-visible="false">
+          <ul class="intersect anim-5" id="dont-animate">
+            <li><a tabindex="1" href="../curriculum">01 Curriculum Vitae</a></li>
+            <li><a tabindex="1" href="blog">02 Blog</a></li>
+            <li><a tabindex="1" href="/projets">03 Projets</a></li>
+            <li><a tabindex="1" href="/colophon">04 Colophon</a></li>
+          </ul>
+        </nav>
+      </header>
+      <footer class="anim-4 intersect" id="footer" role="contentinfo">
+        {% include "footer.html"%}
+      </footer>
+    </div>
     <script defer src="/scripts/colorTheme.js"></script>
     <script src="/scripts/nav.js"></script>
     <script src="/scripts/animationHomepage.js"></script>

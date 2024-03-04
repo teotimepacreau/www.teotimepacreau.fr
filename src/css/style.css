@@ -582,7 +582,7 @@ input {
 }
 
 .anim-4 {
-  transition-delay: 700ms;
+  transition-delay: 10ms;
 }
 
 @media (width > 1000px) {

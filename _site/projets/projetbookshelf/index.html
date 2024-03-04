@@ -96,13 +96,19 @@
 <div id="project-img-wrapper">
     <a target="_blank" href="https://bookshelf.teotimepacreau.fr/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAOCAYAAADaOrdAAAAACXBIWXMAAAsTAAALEwEAmpwYAAADuElEQVR4nF3U6W8UZRzA8f3HfOc7jMcLJcYYQ2JCojG+NCFIsKnBoxaaVALaSgMaC5RyNND7wHIUi+0uuzvXXnPvzuzutN2ze8x8zcyWgL745PduvnmeeZ4npuQDlAKvqKBokAnpoIS0APmIpB8xAiTzFdH6HxtEO5wBMaUQRgIUNdRHVg+RCy2kQjOiaG2yZoe83SP3H12yr8lEOkhmB9HqIVg+YjGIxF4FfBS1jZjzSMoWCdGIZkb3MMtt3AMf56CPc+Dj1nycmk9xr4vpHWJ6HYy9biRTbCJabVJGZxAphZEoEJDRfHJmi7xZJW9YZDUDpaCS1VQKhobtOjieh+W6qKaFnMmQ03R0Xaes61QUibKQIi8oiNkSL/RWFBCdMKIF0Z5ndB+1eIjlHlCqVLDLLlk1SyK5zZPHS+zsbCIpSRKJ52yuL3FneoqN1XlePNogt7FE+uovxC+dZ3fmJum/kyS0BoITILpHkfCHZgwfw+3h1bu0u13avR6GrbL1dJmZ6Z+Zuz3J5uYC83MzXBkf4eyXnzI5PsLG75PsXB5j4eRHzB4/xuK33xBfekhCbyC4AWI5jOgBcniCjiLVWodW55BWp0NelVlbuc1vl4f58+ooy4u3uDV9hfNDp/j8g2OMDJ1i4eIozy+c4/7H73LjrTeYP/0V8fvLg0g5iMRkI0A2QDF9jHIPrzFYRaigZ9hYv8vUxDmm/xhjZXmW2etTjA1/zRcfvsPo8GnuXRzl0YXvmDnxPlPvvcnts6fZCiNGA6ESRAYRExTLx6j28Zo92v0+rX4P3Srw+NFCFLhz61cePnzAg7vXmRz7kTOfnWBi7AdmJy4yNz7KpZOf8NPxt7k2PMTK/RXiUQSEahiJLhPIUcTHa/Vp+37EqZRIpZ/z18Ycz7ZWEKU4u/9ssTZ/j5tXLrG+MMfm2hKLd2aZGPme8aEzTF+9xvqTHeJWIwoIXkBMsgIkC2TbR6v0cWtdDg47kfDI5rU8opQim1ewSjYFTUVIp9jdfoYiS0iZDNu7cRZXV3mwuMj60222JI243STtBZEoIlog2QHZUg+1fIhZbUU0t0bWqpI1KxRKexjVBqpbI1f0yBWrqOUD9EqdgrNPvuShOntkSvsIToOE0ya950diL9+ZMCLZfWS7g2y3I5LVRDDrpM0aglVHKjYR7AZpq45g1xFLzUi6WCdl1waz1CDptklWuqTCyL5PLPz4y4csJNg+abs/UBxIlY44r3GPlAeSlVCPZLVHyuuR2uuT2g/5/Atx1tDBF3EPwAAAAABJRU5ErkJggg==" alt="capture of the hompage of the bookshelf organizer website" data-src="../../img/bookshelf.png" class="lazyload" width="1920" height="1080"></a>
 </div>
-<h3>Stack</h3>
+<h3>Rôle</h3>
+<p>Développeur et designer du projet</p>
+
+<h3>Commande / Objectifs </h3>
+<p>Site de visualisation et de gestion des réservations d'une bibliothèque de livres. Il est possible de rechercher, de filtrer et de trier les résultats. Les résultats sont paginés pour une meilleure lisibilité. L'administrateur peut se connecter pour ajouter des livres. Tous les utilisateurs peuvent réserver des livres.</p>
+
+<h3>Technologies utilisées</h3>
 <ul>
-    <li>Backend : NodeJS, Fastify, SQLite, SQL, Fly.io</li>
-    <li>Frontend : HTML, CSS, Javascript, Vite, Vercel</li>
+    <li>Backend : NodeJS, Fastify, SQLite, SQL</li>
+    <li>Frontend : HTML, CSS, Javascript, Vite</li>
+    <li>Déploiement : Fly.io, Vercel</li>
 </ul>
-<h3>Détails du projet</h3>
-<p>Site de visualisation et de gestion d'une bibliothèque de livres. Il est possible de rechercher, de filtrer et de trier les résultats. Les résultats sont paginés pour une meilleure lisibilité. L'administrateur peut se connecter pour ajouter des livres. Tous les utilisateurs peuvent réserver des livres en ajoutant leur date de retour.</p>
+
 <h3>Fonctionnalités</h3>
 <ol id="projet-ol">
     <li><strong>Conception de l'UI et responsive :</strong> j'ai conçu l'interface en partant des usages pour qu'elle soit sobre et fonctionnelle. Adaptation à la navigation sur mobile.</li>
@@ -144,16 +150,16 @@
 <ul>
     <li>Séparer le frontend et le backend en dossiers différents dès les débuts du développement.</li>
     <li>Passer les données du backend au frontend grâce aux routes</li>
-    <li>Utiliser <a target="_blank" href="https://vitejs.dev/">Vite</a> afin de bénéficier des Hot Module Replacements, du bundling et la logique d'importer tous les modules dans un seul fichier JS</li>
+    <li>Utiliser <a target="_blank" href="https://vitejs.dev/">Vite</a> pour bénéficier du Hot Module Replacement, du bundling et de la logique d'importer tous les modules dans un seul fichier JS</li>
     <li>Travailler avec les ES Modules</li>
     <li>Charger de façon asynchrone les ES Modules et mes scripts grâce à `import('')`</li>
     <li>Comprendre et réparer les erreurs CORS (origin, method, credentials...)</li>
-    <li>Utiliser les fonctions pre-handler sur le serveur pour s'assurer que seul un utilisateur authenitifié peut faire une POST request</li>
+    <li>Utiliser les fonctions pre-handler sur le serveur pour s'assurer que seul un utilisateur authentifié a l'autorisation de faire une POST request</li>
     <li>Différencier BasicAuth, SessionAuth et JWT</li>
     <li>Construire un système de login via les secure-session-cookies, authentifier != autoriser</li>
     <li>Animations liés au scroll en pur CSS (Scroll-progress-timeline)</li>
     <li>Animations au changement de page en CSS (ViewTransitionsAPI)</li>
-    <li>Savoir quand utiliser une modale ou non-modale (`<dialog>`)</dialog></li>
+    <li>Savoir quand utiliser ou une modale</li>
 </ul>
 <h3>Lien du projet et code source</h3>
 <ul>

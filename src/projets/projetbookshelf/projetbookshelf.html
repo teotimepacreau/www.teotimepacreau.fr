@@ -6,13 +6,19 @@ layout: projetlayout.html
 <div id="project-img-wrapper">
     <a target="_blank" href="https://bookshelf.teotimepacreau.fr/"><img src="../../img/bookshelf.png" alt="capture of the hompage of the bookshelf organizer website"></a>
 </div>
-<h3>Stack</h3>
+<h3>Rôle</h3>
+<p>Développeur et designer du projet</p>
+
+<h3>Commande / Objectifs </h3>
+<p>Site de visualisation et de gestion des réservations d'une bibliothèque de livres. Il est possible de rechercher, de filtrer et de trier les résultats. Les résultats sont paginés pour une meilleure lisibilité. L'administrateur peut se connecter pour ajouter des livres. Tous les utilisateurs peuvent réserver des livres.</p>
+
+<h3>Technologies utilisées</h3>
 <ul>
-    <li>Backend : NodeJS, Fastify, SQLite, SQL, Fly.io</li>
-    <li>Frontend : HTML, CSS, Javascript, Vite, Vercel</li>
+    <li>Backend : NodeJS, Fastify, SQLite, SQL</li>
+    <li>Frontend : HTML, CSS, Javascript, Vite</li>
+    <li>Déploiement : Fly.io, Vercel</li>
 </ul>
-<h3>Détails du projet</h3>
-<p>Site de visualisation et de gestion d'une bibliothèque de livres. Il est possible de rechercher, de filtrer et de trier les résultats. Les résultats sont paginés pour une meilleure lisibilité. L'administrateur peut se connecter pour ajouter des livres. Tous les utilisateurs peuvent réserver des livres en ajoutant leur date de retour.</p>
+
 <h3>Fonctionnalités</h3>
 <ol id="projet-ol">
     <li><strong>Conception de l'UI et responsive :</strong> j'ai conçu l'interface en partant des usages pour qu'elle soit sobre et fonctionnelle. Adaptation à la navigation sur mobile.</li>
@@ -54,16 +60,16 @@ layout: projetlayout.html
 <ul>
     <li>Séparer le frontend et le backend en dossiers différents dès les débuts du développement.</li>
     <li>Passer les données du backend au frontend grâce aux routes</li>
-    <li>Utiliser <a target="_blank" href="https://vitejs.dev/">Vite</a> afin de bénéficier des Hot Module Replacements, du bundling et la logique d'importer tous les modules dans un seul fichier JS</li>
+    <li>Utiliser <a target="_blank" href="https://vitejs.dev/">Vite</a> pour bénéficier du Hot Module Replacement, du bundling et de la logique d'importer tous les modules dans un seul fichier JS</li>
     <li>Travailler avec les ES Modules</li>
     <li>Charger de façon asynchrone les ES Modules et mes scripts grâce à `import('')`</li>
     <li>Comprendre et réparer les erreurs CORS (origin, method, credentials...)</li>
-    <li>Utiliser les fonctions pre-handler sur le serveur pour s'assurer que seul un utilisateur authenitifié peut faire une POST request</li>
+    <li>Utiliser les fonctions pre-handler sur le serveur pour s'assurer que seul un utilisateur authentifié a l'autorisation de faire une POST request</li>
     <li>Différencier BasicAuth, SessionAuth et JWT</li>
     <li>Construire un système de login via les secure-session-cookies, authentifier != autoriser</li>
     <li>Animations liés au scroll en pur CSS (Scroll-progress-timeline)</li>
     <li>Animations au changement de page en CSS (ViewTransitionsAPI)</li>
-    <li>Savoir quand utiliser une modale ou non-modale (`<dialog>`)</li>
+    <li>Savoir quand utiliser ou une modale</li>
 </ul>
 <h3>Lien du projet et code source</h3>
 <ul>

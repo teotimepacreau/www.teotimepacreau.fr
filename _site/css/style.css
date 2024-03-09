@@ -195,6 +195,7 @@ pre::-webkit-scrollbar-thumb {
   line-height: 1rem;
   overflow: hidden;
 }
+
 .navigation-flexer,
 .homepage-nav {
   font-weight: 600;
@@ -249,7 +250,7 @@ footer li {
 
 .menu a:hover {
   color: var(--accent);
-  transition: color 0.3s ease;
+  transition: color .2s ease-out;
 }
 
 p > a {
@@ -265,14 +266,13 @@ a {
 }
 p > a:hover {
   color: var(--accent);
-  transition: color 0.3s ease;
+  transition: color .2s ease-out;
 }
 a:hover {
   text-underline-offset: 0.3ex;
   text-decoration-thickness: 3px;
   text-decoration-skip-ink: none;
-  transition: text-underline-offset 0.3s ease,
-    text-decoration-thickness 0.3s ease;
+  transition: text-underline-offset .2s ease-out,
 }
 
 #footer a:hover {
@@ -280,7 +280,7 @@ a:hover {
   text-decoration-color: var(--accent);
   text-decoration-thickness: 3px;
   text-decoration-skip-ink: none;
-  transition: color 0.3s ease;
+  transition: color .2s ease-out;
 }
 /*----TYPO------*/
 h1 {
@@ -298,7 +298,7 @@ h2 {
 h2::after {
   content: " #";
   font-style: italic;
-  transition: all 0.3s ease-out;
+  transition: all .2s ease-out;
   opacity: 0; /* Start with opacity 0 to hide it */
 }
 
@@ -314,7 +314,7 @@ h3 {
 h3::after {
   content: " ##";
   font-style: italic;
-  transition: all 0.3s ease-out;
+  transition: all .2s ease-out;
   opacity: 0; /* Start with opacity 0 to hide it */
 }
 
@@ -345,6 +345,7 @@ main a::after {
   position: absolute;
   left: 0;
   right: 0;
+  top: 0;
 }
 .visually-hidden {
   clip: rect(0 0 0 0);
@@ -407,9 +408,10 @@ input {
 #homepage-container {
   min-height: 100dvh;
   padding-inline: var(--baseline);
-  display: grid;
-  grid-template-columns: minmax(3rem, 1fr) minmax(3rem, min-content);
-  grid-template-rows: auto min-content;
+}
+
+#homepage-hero, .homepage-footer {
+  max-width: 70dvw;
 }
 
 #homepage-hero h1 {
@@ -430,6 +432,10 @@ input {
 }
 
 #homepage-menu {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 20dvw;
   grid-row: 1 / 3;
   margin-left: calc(2*var(--baseline));
   font-size: var(--baselineh3);
@@ -455,7 +461,7 @@ input {
 
 .homepage-nav a:hover {
   color: var(--accent);
-  transition: color 0.3s ease;
+  transition: color .2s ease-out;
 }
 
 /* HOMEPAGE PROJETS */
@@ -507,6 +513,7 @@ input {
   font-family: "Inter-Variable";
   gap: .5ex;
   color: var(--btnHomepage);
+  transition: opacity .2s ease-out;
 }
 
 .homepage-projets-grid-item button a {
@@ -532,7 +539,7 @@ input {
   grid-column: 2 / 3;
 }
 
-.homepage-projets-grid-item li {
+.homepage-projets-tags {
   list-style-type: none;
   padding-inline: calc(0.08*var(--baseline));
   padding-block: calc(0.02*var(--baseline));
@@ -541,6 +548,13 @@ input {
   opacity: .8;
   font-weight: 500;
   font-size: .7rem;
+  transition: all .2s ease;
+  cursor: default;
+}
+.homepage-projets-tags:hover {
+  color: var(--accent);
+  background-color: var(--bg);
+  border-color: var(--accent);
 }
 
 .homepage-projets-grid-item span {
@@ -548,6 +562,12 @@ input {
   opacity: .9;
   font-size: .75rem;
 }
+
+.homepage-projets-btn:hover {
+  opacity: .9;
+}
+
+
 
 .ph-house-simple {
   font-size: var(--baselineh3);
@@ -631,6 +651,15 @@ input {
 /*---MEDIA QUERY HOMEPAGE---*/
 
 @media (width < 1000px) {
+  #homepage-container {
+    display: grid;
+  }
+  #homepage-hero, .homepage-footer {
+    max-width: 100dvw;
+  }
+  #homepage-menu {
+    position: unset;
+  }
   #project-card-container {
     grid-template-columns: unset !important;
   }
@@ -690,8 +719,8 @@ input {
     inset: 0 30% 0 0;
     padding: min(30dvh, 10rem) 2rem;
     background-color: hsla(0, 0%, 42%, 0.3);
-    backdrop-filter: blur(1.7rem);
-    -webkit-backdrop-filter: blur(1.7rem);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
     transform: translateX(-100%);
     transition: transform 0.4s ease-out;
   }
@@ -767,6 +796,7 @@ input {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  gap: 1ex;
 }
 
 @media (width>1000px) {
@@ -823,7 +853,7 @@ input {
 #blog-index-tags:hover {
   color: var(--accent);
   background-color: var(--bg);
-  transition: all 0.3s ease-out;
+  transition: all .2s ease-out;
 }
 #blog-index-tags::before {
   content: "# ";
@@ -924,9 +954,7 @@ input {
 
 /* TOC  */
 
-.table-of-content {
-  list-style-position: inside;
-}
+
 
 .table-of-content::before {
   content: "Table de contenu ↓";
@@ -991,9 +1019,7 @@ blockquote > p {
   hanging-punctuation: first last;
   text-indent: -0.4em;
 }
-li {
-  list-style-position: outside;
-}
+
 
 #article-post li::marker {
   color: var(--accent);
@@ -1082,7 +1108,7 @@ pre {
 
 #post-tags:hover {
   color: var(--accent);
-  transition: all 0.3s ease;
+  transition: all .2s ease;
   background-color: var(--bg);
   outline: 1px ridge var(--accent);
 }

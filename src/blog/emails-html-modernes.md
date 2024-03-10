@@ -61,24 +61,24 @@ Les table layouts dans les emails mènent à de nombreux problème d'accessibili
 Outlook pour Windows est [la seule raison](https://blocksedit.com/content-code/dealing-with-outlook/) pour laquelle on pourrait être tenté de continuer à utiliser les tables, mais il représente désormais moins de 3% de l'usage total des clients mails. Les divs sont désormais totalement supportées et simplifient grandement la structuration des emails.
 
 ### Éléments HTML
-Les divs, headings (**`<h1>`**, **`<h2>`**, etc.), paragraphes (**`<p>`**), et les listes (**`<ul>`**, **`<li>`**) sont supportés partout.
+Les divs, headings (`<h1>`, `<h2>`, etc.), paragraphes (`<p>`), et les listes (`<ul>`, `<li>`) sont supportés partout.
 
 Il est donc possible de se passer totalement des `<table>` grâce aux divs ! Fini le besoin de structurer en colonnes et en lignes.
 
 Les élements HTML sémantiques ne sont pas supportés : 
-- **`<article>`**
-- **`<aside>`**
-- **`<details>`**
-- **`<figcaption>`**
-- **`<figure>`**
-- **`<footer>`**
-- **`<header>`**
-- **`<main>`**
-- **`<mark>`**
-- **`<nav>`**
-- **`<section>`**
-- **`<summary>`**
-- **`<time>`**
+- `<article>`
+- `<aside>`
+- `<details>`
+- `<figcaption>`
+- `<figure>`
+- `<footer>`
+- `<header>`
+- `<main>`
+- `<mark>`
+- `<nav>`
+- `<section>`
+- `<summary>`
+- `<time>`
 
 ### Appliquer du CSS
 

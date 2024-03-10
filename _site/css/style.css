@@ -87,6 +87,8 @@ hr {
   overflow: visible;
 }
 
+/* FOCUS */
+
 *:focus-visible {
   transition: all 0.2s ease;
   outline: 4px chartreuse solid;
@@ -120,8 +122,17 @@ input {
 }
 @supports (color: rgb(from white r g b)) {
   :root {
-    --bglighten: oklch(from var(--bg) calc(l + 50) c h / 35%);
-    --txtlighten: oklch(from var(--txt) l c h / 75%);
+    --bglighten20: oklch(from var(--bg) calc(l + 10) c h / 20%);
+    --bglighten10: oklch(from var(--bg) calc(l + 10) c h / 10%);
+    --txtlighten20: oklch(from var(--txt) l c h / 50%);
+  }
+}
+
+@supports not (color: rgb(from white r g b)) {
+  :root {
+    --bglighten20: oklch(from var(--bg) calc(l + 10) c h / 20%);
+    --bglighten10: oklch(from var(--bg) calc(l + 10) c h / 10%);
+    --txtlighten20: var(--txt);
   }
 }
 
@@ -331,7 +342,7 @@ pre {
 
 p > code,
 li > code {
-  background-color: var(--bglighten);
+  background-color: var(--bglighten20);
   padding-inline: 0.4ch;
   border-radius: 0.15rem;
   font-weight: 400;
@@ -540,13 +551,13 @@ input {
 }
 
 .homepage-projets-tags {
+  line-height: 0.85rlh;
   list-style-type: none;
   padding-inline: calc(0.08*var(--baseline));
-  padding-block: calc(0.02*var(--baseline));
   border-radius: .2rem;
-  border: 1px solid var(--txtlighten);
-  opacity: .8;
+  border: 1px solid var(--txtlighten20);
   font-weight: 500;
+  opacity: .83;
   font-size: .7rem;
   transition: all .2s ease;
   cursor: default;
@@ -648,7 +659,7 @@ input {
   display: none;
 }
 
-/*---MEDIA QUERY HOMEPAGE---*/
+/*---MEDIA QUERY MOBILE---*/
 
 @media (width < 1000px) {
   #homepage-container {
@@ -776,6 +787,9 @@ input {
   }
   #me {
     grid-column: 1 / 4;
+  }
+  .travail-titre-poste {
+    font-weight: 600;
   }
 }
 
@@ -1074,7 +1088,7 @@ article > p > a:hover {
 }
 
 pre {
-  background-color: var(--bglighten);
+  background-color: var(--bglighten20);
   margin-block: var(--baseline);
   border-radius: 0.3rem;
   padding: calc(0.25 * var(--baseline));
@@ -1331,7 +1345,7 @@ hr {
   padding: 1rem;
 }
 /*---------------CV.COMPETENCES-------------*/
-.competences li {
+li {
   list-style-position: inside;
 }
 .competences-details {
@@ -1550,7 +1564,7 @@ figcaption {
 
 th {
   font-weight: bold;
-  background-color: var(--bglighten);
+  background-color: var(--bglighten20);
 }
 
 th,td, caption {
@@ -1560,6 +1574,7 @@ th,td, caption {
 
 tr {
   border-bottom: 1px solid var(--txt);
+  background-color: var(--bglighten10);
 }
 
 /* RESPONSIVE TABLES ON MOBILE : pour que ça fonctionne nécessaire que chaque td ait un attribute 'data-cell' qui soit égal au th de sa colonne, par exemple : th "job-title", td doit être <td data-cell="job-title"> */

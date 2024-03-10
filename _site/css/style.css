@@ -75,6 +75,7 @@ picture,
 video {
   max-width: 100%;
   display: block;
+  width: auto;
   height: auto;
   border-radius: 0.3rem;
 }
@@ -551,7 +552,7 @@ input {
 }
 
 .homepage-projets-tags {
-  line-height: 0.85rlh;
+  line-height: 0.75rlh;
   list-style-type: none;
   padding-inline: calc(0.08*var(--baseline));
   border-radius: .2rem;

@@ -10,6 +10,23 @@ title: Management de projet, conduite du changement et numérique à Nantes
   <body>
     {% include "color-picker.html"%}
     <div class="container" id="homepage-container">
+      <header id="homepage-menu">
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav class="homepage-nav" id="primary-navigation" data-visible="false">
+          <ul class="intersect anim-3" id="dont-animate">
+            <li><a href="../curriculum">01 Curriculum Vitae</a></li>
+            <li><a href="blog">02 Blog</a></li>
+            <li><a href="/projets">03 Projets</a></li>
+            <li><a href="/colophon">04 Colophon</a></li>
+          </ul>
+        </nav>
+      </header>
       <main id="homepage-hero">
         <h1 class="anim-1 intersect">
           Téotime Pacreau,<br />
@@ -42,7 +59,7 @@ title: Management de projet, conduite du changement et numérique à Nantes
           <div id="homepage-projets-grid">
             <div class="homepage-projets-grid-item">
               <div class="homepage-projets-grid-item__left">
-                <img
+                <img width="200" height="100"
                   src="/img/bookshelf_mini.png"
                   alt="Miniature de mon site web fullstack The Bookshelf"
                 />
@@ -64,7 +81,7 @@ title: Management de projet, conduite du changement et numérique à Nantes
             </div>
             <div class="homepage-projets-grid-item">
               <div class="homepage-projets-grid-item__left">
-                <img
+                <img width="200" height="100"
                   src="/img/feuillu_mini.png"
                   alt="Miniature de mon site web de newsletter"
                 />
@@ -87,23 +104,6 @@ title: Management de projet, conduite du changement et numérique à Nantes
           </div>
         </section>
       </main>
-      <header id="homepage-menu">
-        <button
-          class="mobile-nav-toggle"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Menu</span>
-        </button>
-        <nav class="homepage-nav" id="primary-navigation" data-visible="false">
-          <ul class="intersect anim-3" id="dont-animate">
-            <li><a tabindex="1" href="../curriculum">01 Curriculum Vitae</a></li>
-            <li><a tabindex="1" href="blog">02 Blog</a></li>
-            <li><a tabindex="1" href="/projets">03 Projets</a></li>
-            <li><a tabindex="1" href="/colophon">04 Colophon</a></li>
-          </ul>
-        </nav>
-      </header>
       <footer class="homepage-footer anim-4 intersect" id="footer" role="contentinfo">
         {% include "footer.html"%}
       </footer>

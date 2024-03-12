@@ -86,22 +86,31 @@
         </nav>
       </header>
       <main id="homepage-hero">
-        <h1 class="anim-1 intersect">
-          Téotime Pacreau,<br>
-          Manage<wbr>ment de projet &amp; Numérique
-        </h1>
-        <section id="homepage-prose">
-          <p class="anim-2 intersect">
-            Je suis apprenti en gestion de projet et conduite du changement pour
-            <a tabindex="-1" href="https://www.prefectures-regions.gouv.fr/pays-de-la-loire/Region-et-institutions/Organisation-administrative-de-la-region/Secretariat-General-pour-les-Affaires-Regionales-SGAR/Etat-LIN-le-Laboratoire-d-Innovation-Publique-de-l-Etat-en-region-Pays-de-la-Loire/Etat-LIN-qu-est-ce-que-c-est" target="_blank" rel="noopener noreferrer">État'LIN, le laboratoire d'innovation publique de l'État en Pays
-              de la Loire</a>. J'étudie au sein du Master de Management,
-            Organisation et Conduite du Changement à Nantes.
-          </p>
-          <p class="intersect anim-3">
-            Impliqué professionnellement par les enjeux de transformation des
-            organisations.<br>
-            J'entame également un apprentissage personnel du développement web.
-          </p>
+        <div id="homepage-profil" class="anim-1 intersect">
+          <img src="data:image/png;base64,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" alt="Photo de mon visage" height="50" width="50" data-src="/img/photo.png" class="lazyload">
+          <h1>
+            Téotime Pacreau
+          </h1>
+        </div>
+
+        <section id="homepage-brief">
+          <h2 class="anim-2 intersect">
+            Du code léger pour des projets web maîtrisés
+          </h2>
+          <article class="services intersect anim-3">
+            <div>
+              <i class="ph ph-arrow-circle-right"></i>
+              <span>Conception de sites webs</span>
+            </div>
+            <div>
+              <i class="ph ph-arrow-circle-right"></i>
+              <span>Maintenance &amp; refonte</span>
+            </div>
+            <div>
+              <i class="ph ph-arrow-circle-right"></i>
+              <span>Développement spécifique</span>
+            </div>
+          </article>
         </section>
         <section id="homepage-projets" class="intersect anim-3">
           <div id="homepage-projets-titre-flexer">

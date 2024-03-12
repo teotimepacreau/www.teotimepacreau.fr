@@ -419,30 +419,44 @@ input {
 
 #homepage-container {
   min-height: 100dvh;
+  padding-top: var(--baseline);
   padding-inline: var(--baseline);
+}
+
+#homepage-profil {
+  display: flex;
+  align-items: center;
+  gap: calc(0.25*var(--baseline));
+}
+
+#homepage-profil img {
+  max-width: calc(2*var(--baseline));
+  max-height: calc(2*var(--baseline));
 }
 
 #homepage-hero, .homepage-footer {
   max-width: 70dvw;
 }
 
-#homepage-hero h1 {
-  max-width: 15ch;
-  margin-top: var(--baseline);
+#homepage-brief {
+  margin-top: calc(2*var(--baseline));
 }
 
-#homepage-prose {
-  display: flex;
-  column-gap: calc(2 * var(--baseline));
+#homepage-brief article {
   margin-top: calc(0.5*var(--baseline));
 }
-
-#homepage-prose > * {
-  flex-basis: 40rem;
-  flex-grow: 0;
-  flex-shrink: 1;
+#homepage-brief .services span, #homepage-brief .services i  {
+  font-size: var(--baselineh3);
 }
 
+#homepage-brief .services div {
+  display: flex;
+  gap: 1ex;
+  align-items: center;
+}
+#homepage-brief .services div:not(:first-child) {
+  margin-top: calc(0.25*var(--baseline));
+}
 #homepage-menu {
   position: fixed;
   right: 0;
@@ -589,7 +603,7 @@ input {
 .intersect-hidden {
   visibility: hidden;
   opacity: 0;
-  transition: transform 0.33s ease-out, opacity 0.33s ease-out;
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
 
 .intersect-anim {
@@ -602,7 +616,7 @@ input {
 }
 
 .anim-1 {
-  transition-delay: 75ms;
+  transition-delay: 0ms;
 }
 
 .anim-2 {

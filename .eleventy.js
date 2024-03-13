@@ -2,7 +2,6 @@
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const pluginTOC = require('eleventy-plugin-nesting-toc');
-const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const embeds = require("eleventy-plugin-embed-everything");
 
@@ -63,7 +62,7 @@ module.exports = function(eleventyConfig) {
   // ... Eleventy date en FR
   eleventyConfig.addFilter("date", require("./src/filters/date.js"));
   // ... Img lazy laoding
-  eleventyConfig.addPlugin(lazyImagesPlugin);
+
   // ... copy paster folders in _site
   eleventyConfig.addPassthroughCopy("src/css/");
   eleventyConfig.addPassthroughCopy("src/_includes/");

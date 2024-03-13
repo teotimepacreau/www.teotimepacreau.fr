@@ -7,13 +7,7 @@
     {% include "color-picker.html"%}
     <div class="container projets-container" id="normal-page-container">
       <header>
-        <button
-          class="mobile-nav-toggle"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Menu</span>
-        </button>
+        {% include "menumobile.html"%}
         <nav
           class="navigation-flexer"
           id="primary-navigation"
@@ -40,7 +34,7 @@
           <article id="project-card">
             <header id="project-img-wrapper">
               <img
-                src="../img/bookshelf.png"
+                src="../img/bookshelf.png" loading="lazy" width="400" height="200"
                 alt="capture of the hompage of the bookshelf organizer website"
               />
             </header>
@@ -54,7 +48,7 @@
           <article id="project-card">
             <header id="project-img-wrapper">
               <img
-                src="../img/newsletter.png"
+                src="../img/newsletter.png" loading="lazy" width="400" height="200"
                 alt="capture of the hompage of the newsletter subscription website"
               />
             </header>
@@ -69,7 +63,5 @@
       </main>
       <footer id="footer" role="contentinfo">{% include "footer.html"%}</footer>
     </div>
-    <script src="../script.js"></script>
-    <script src="../nav.js"></script>
   </body>
 </html>

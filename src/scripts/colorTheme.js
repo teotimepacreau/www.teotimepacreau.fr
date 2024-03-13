@@ -11,8 +11,9 @@ colorThemes.forEach((themeOption) => {
     storeTheme(themeOption.id);
     // fallback for no :has() support
     document.documentElement.className = themeOption.id;
-    adaptHomepageButtonTextColorIfDarkTheme();
     checkLocalStorage();
+    adaptHamburgerButton()
+    adaptHomepageButtonTextColorIfDarkTheme();
   });
 });
 
@@ -45,7 +46,6 @@ function checkLocalStorage() {
 
 function adaptHomepageButtonTextColorIfDarkTheme() {
   const activeTheme = localStorage.getItem("theme");
-  console.log(activeTheme)
   const allHomepageText = document.querySelectorAll(".homepage-projets-grid-item__left button");
   if (activeTheme === "dark") {
     allHomepageText.forEach((text) => {
@@ -56,6 +56,17 @@ function adaptHomepageButtonTextColorIfDarkTheme() {
     allHomepageText.forEach((text) => {
       text.style.color = "white";
     });
+  }
+}
+
+function adaptHamburgerButton() {
+  const activeTheme = localStorage.getItem("theme");
+  const hamburger = document.querySelector("#hamburger-icon");
+  if (activeTheme === "dark") {
+    hamburger.setAttribute('fill', 'white')
+  }
+  if (activeTheme === "light") {
+    hamburger.setAttribute('fill', '#000000')
   }
 }
 

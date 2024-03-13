@@ -1,30 +1,61 @@
-<!DOCTYPE html><html lang="fr"><head>
-    <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/css/style.css">
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/style.css" />
 <!-- Auto detection of the RSS feed for RSS readers -->
-<link rel="alternate" href="/feed/feed.xml" title="Flux RSS du blog de Téotime Pacreau" type="application/atom+xml">
+<link
+  rel="alternate"
+  href="/feed/feed.xml"
+  title="Flux RSS du blog de Téotime Pacreau"
+  type="application/atom+xml"
+/>
 <!--Favicon-->
-<link rel="icon" href="/favicon/favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg">
-<link rel="mask-icon" href="/favicon/favicon.svg">
-<link rel="apple-touch-startup-image" href="/favicon/favicon.svg" media="orientation: portrait">
-<link rel="apple-touch-startup-image" href="/favicon/favicon.svg" media="orientation: landscape">
-<link rel="icon" type="image/x-icon" href="/favicon/favicon.svg">
-<link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg">
-<!--ICONS-->
-<script rel="preconnect" src="https://unpkg.com/@phosphor-icons/web"></script>
+<link rel="icon" href="/favicon/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg" />
+<link rel="mask-icon" href="/favicon/favicon.svg" />
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: portrait"
+/>
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: landscape"
+/>
+<link rel="icon" type="image/x-icon" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg" />
+
 <!--Theme-->
-<meta name="theme-color" content="#c3e2ff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#hsl(165, 51%, 18%)" media="(prefers-color-scheme: dark)">
-<meta name="msapplication-TileColor" content="#c3e2ff" media="(prefers-color-scheme: light)">
-<meta name="msapplication-TileColor" content="#hsl(165, 51%, 18%)" media="(prefers-color-scheme: dark)">
+<meta
+  name="theme-color"
+  content="#c3e2ff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#hsl(165, 51%, 18%)"
+  media="(prefers-color-scheme: dark)"
+/>
+<meta
+  name="msapplication-TileColor"
+  content="#c3e2ff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="msapplication-TileColor"
+  content="#hsl(165, 51%, 18%)"
+  media="(prefers-color-scheme: dark)"
+/>
 
 <!--Social-->
-<link rel="me authn" href="https://twitter.com/teotimepacreau">
-<link rel="me" href="https://mastodon.design/@teotimepacreau">
-<meta name="generator" content="Eleventy">
+<link rel="me authn" href="https://twitter.com/teotimepacreau" />
+<link rel="me" href="https://mastodon.design/@teotimepacreau" />
+<meta name="generator" content="Eleventy" />
 
 
 <!-- open graph tags -->
@@ -34,20 +65,23 @@
 <meta name="twitter:image" content="https://www.teotimepacreau.fr/favicon/favicon.png">
 <meta property="twitter:title" content="SQLite, la solution pragmatique en production pour le web">
 <meta name="robots" content="max-image-preview:large">
-<meta name="description" content="Management de projet &amp; Numérique à Nantes"> 
+<meta name="description" content="Développement web et projet numérique à Nantes"> 
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image:type" content="image/png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Le site web de Teotime Pacreau">
-<meta property="og:title" content="SQLite, la solution pragmatique en production pour le web">
-<meta property="og:image" content="https://www.teotimepacreau.fr/favicon/favicon.png">
-<meta property="og:description" content="Management de projet &amp; Numérique à Nantes">
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Teotime Pacreau : Développement web et projet numérique à Nantes" />
+<meta property="og:title" content="SQLite, la solution pragmatique en production pour le web" />
+<meta property="og:image" content="https://www.teotimepacreau.fr/favicon/favicon.png" />
+<meta property="og:description" content="Développement web et projet numérique à Nantes" />
 
-<meta content="Management de projet &amp; Numérique à Nantes" name="description">
-<meta name="topic" content="Numérique, développement, gestion de projet, management, UI, Indieweb">
-<meta name="keywords" content="Numérique, développement, frontend, backend, gestion de projet, management, UI, Indieweb">
-<meta name="author" content="Téotime Pacreau">
+<meta content="Développement web et projet numérique à Nantes" name="description" />
+<meta name="topic" content="Numérique, web, développement, gestion de projet, management, UI, Indieweb">
+<meta name="keywords" content="Numérique, web, développement, frontend, backend, gestion de projet, management, UI, Indieweb"/>
+<meta name="author" content="Téotime Pacreau" />
 <meta name="owner" content="Téotime Pacreau">
+
+
+
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -85,7 +119,6 @@
 }</script>
 
 <title>SQLite, la solution pragmatique en production pour le web</title>
-
   </head>
   <body>
     <form tabindex="-1" class="color-picker" action="">
@@ -108,10 +141,19 @@
     <div class="wrapper-post">
       <div class="post-grid">
         <header id="post-header">
-          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-          </button>
-          <nav class="navigation-flexer navigation-flexer-post" id="primary-navigation" data-visible="false">
+          <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"></path></svg>
+          <span class="sr-only">Menu</span>
+        </button>
+          <nav
+            class="navigation-flexer navigation-flexer-post"
+            id="primary-navigation"
+            data-visible="false"
+          >
             <span class="navigation-announcer">NAVIGATION</span>
             <ul class="menu" id="post-menu">
               <li>
@@ -162,23 +204,31 @@
             <ul class="post-tags">
               
               <li>
-                <a class="tags-style" id="post-tags" href="/tags/sql">SQL</a>
+                <a class="tags-style" id="post-tags" href="/tags/sql"
+                  >SQL</a
+                >
               </li>
               
               <li>
-                <a class="tags-style" id="post-tags" href="/tags/backend">Backend</a>
+                <a class="tags-style" id="post-tags" href="/tags/backend"
+                  >Backend</a
+                >
               </li>
               
               <li>
-                <a class="tags-style" id="post-tags" href="/tags/sqlite">SQLite</a>
+                <a class="tags-style" id="post-tags" href="/tags/sqlite"
+                  >SQLite</a
+                >
               </li>
               
             </ul>
             <time class="post-date">
               Publié le :
-              <time datetime="2023-11-10">10 novembre 2023</time>
+              <time datetime="2023-11-10"
+                >10 novembre 2023</time
+              >
             </time>
-            <p>Pourquoi SQLite mérite d'être considéré à sa juste valeur pour les projets de développement web.</p>
+            <p>Pourquoi SQLite mérite d&#39;être considéré à sa juste valeur pour les projets de développement web.</p>
           </header>
           <main>
             <h2 id="les-bdd-relationnelles%2C-pass%C3%A9es-de-mode-alors-qu%E2%80%99elles-r%C3%A9pondent-aux-besoins-de-la-grande-majorit%C3%A9-des-projets-des-d%C3%A9veloppement-web" tabindex="-1">Les BDD relationnelles, passées de mode alors qu’elles répondent aux besoins de la grande majorité des projets des développement web</h2>
@@ -186,10 +236,10 @@
 Les BDD relationnelles stockent les données dans des tables qui ont un lien entre elles (clé primaire qui est l’identifiant unique d’une entrée dans la table et la clé secondaire qui est l’identifiant d’une entrée qui permet de relier avec l’entrée d’une autre table). Il y a besoin de pré-définir une structure de données.
 On traite les BDD relationnelles avec du SQL.
 Les BDD non relationelles ne stockent pas les données dans des tables mais les stockent au format clé-valeur, dans des documents, en colonnes, en graphiques. Il n’y a pas besoin de pré-définir une structure de données. On traite les BDD non relationelles avec du NoSQL(MongoDB, Redis, Firebase…)</p>
-<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAATCAYAAABlcqYFAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC1ElEQVR4nK2VDXPaRhCG8/9/T0NS29OmHYwR4xpTDNixAfMhIZBkiZPuTp88mZOLJzSkdic5zY5Gmtt9b9/dd+/dbrfjrVZV1Yv9H793bwlcFAVZmqG1frE0Tev/bwE8CmKWeZdliU5TpJJIrQ5A9pZlWb3va79XQfYb8yInkoJl6DIJFtjbdf2dZilZmtYASqna9lnt/f8NdjQTc7KtFEz9BV13hLW+4SYcs9I+uszqIHsaTaZ7oLIsTPTvZ/JygmpXn9YO11ytRpzOLRrzc35zLhlEE4JsS7Wr2JUVZZaRyQQpBDJJauqqI7TVIMYpr0ryqkDnaU3Lnf9I07nmw7zF+3mTj3abTjBkqTfoTJJHEdpdoewlsWMjNhvkNqJIU/inRgcgZVWSljmqzIi1ZBM/0fce+GT/xftZk8bsnBO3QzsaMpU2UbhGL2bEowFydIMYDYjG98QrmzQWUBbfB5FFilAJTrSh695ytujQWJxz6nb4FF5jyTse4hkbe4wY9AmsFmHngqBzgd/rEk3H6ChkdwzE8Fgaysqi7ho38ui5d5zNLX6ZNTlZWfz+1KWjPnMfTXAfb9n2ujVIdGkRtM/xri4JJw9oIb4p/kHhzduIzhdPDLwxfzhXNJYtThyLM++SthhxHz3i2xOim7/xTPCLJp7Vwuv32No2WqnXW9h0yDYRjKMFljfgV8eisWjxYXlB2x8wFUvi0EMt5nUtxLDP9nZIOJ0QB36tof8EMcv0vlH4KvHoR2P+DHp8dNqc2h2ug8+4KiDPUnIh0Js1euWQuCti30clSe3/KogRmckmlFsetw696AErGNIN7pglLnGu2JnHDMo8J1cKGccoKZ91UlWv02WWUbxKNX4cMhcuE2HjSA+Ry7pB2B0qXr4ovjw6v77JZL/pOYBGyLgWZ6wSlH4Oth+OPzS7vp7ChoJj01f/yBQ+dp/kRXGQwU+5T362fQH5JyipvforagAAAABJRU5ErkJggg==" alt="Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle : le SQL est utilisé pour des tables relationnelles tandis que le NoSQL est approprié pour le non-relationnel" data-src="/img/Schema_bdd.png" class="lazyload" width="2176" height="1664"><figcaption>Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle</figcaption></figure>
+<figure><img src="/img/Schema_bdd.png" alt="Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle : le SQL est utilisé pour des tables relationnelles tandis que le NoSQL est approprié pour le non-relationnel"><figcaption>Schéma comparant les outils appropriés pour traiter une BDD relationnelle ou non relationnelle</figcaption></figure>
 <p>Les grandes entreprises préfèrent aujourd’hui les BDD non relationelles car elles permettent de stocker un très grand volume de données sans que ces données soient rassemblées en un seul endroit.
 La tendance actuelle vise à former les nouveaux développeurs directement sur du NoSQL pour préparer aux pratiques des grandes entreprises.</p>
-<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAIAAACeBPOyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC8ElEQVR4nG2S3WscVRjG93/UIgVL6Z24Ws1FoQUvpPbGC7F6IbYlNDcWlGYLNqmVQmIobdIaYwKynd2s+5nZ3fk635/vOTMrMxO3Ke3Dy3DmGd7feeact8EYU0oZY6wFa62xVgiBK0kpAcABSMEZo5xzY4xzbhpOH7QeXLt67fwH5y98eOH9985dunip+fEnDSllBbKUS8IEZUJrLSqVnQAKZWw+o7OpEgIseOcwxgcHf7fWW7dv31ldXb314621u2v3frrXMMYAlIkQpkmGEaHWWqjknAMAnsRkGtLZ1GjlnPPeG2OyNOv3B+12OwiCbrfb7/cHg0Gj/gwAGcLzKEkRBoDif3nvWRKjaUjmM2ft0nfOSSkpY0IIAPDeO+dOWWUuhKIoQgjZN3sopWmWYULO7uGcI4REUZSmqdb6DRYAEEKSJMH4rVyMIYQIpQCwWCzO+mma1nvnee69L1n1inNOCOGce+/PsoQQte+cW7LyPK+vm1R58zwvc5VjYJTRUgjOhVCqPOCiKBaViqIoB6W66DzPa3Ppa62NMfUPGmMaxmijuJKMc8oYE5waxZ0VHmRdoLnVzGpWvQpvubfMG2YVsRIbicEIrQTn/JQlOWGM4izKpkE23EP9HTx8WhdaLgZP8egZmbxg4T4L/6qf5GSfzts4HiGUNqo5ArBGCInj8bz7R3iwNn5+c7L3/WS3rPHud+PnN0fPvh3u/hAe/Zz2tlj457tZ9dk754RU2aw3Obz/79aXwcOPOhvNzkYzeNjsbH52/PhK98kXvZ1vJoe/oOGeiF/JJKhLxIHIBjSbYpS9ZnEh01nv5Kg13LnR++1y7/Hnx48uB5srva0bk5d3Zv+04uNtMg+sZkWRL4qirlpaa0LI6XwZYyjjcdgdH633t7/qbH7aebTS+f1qd/vrk6P72filRCPDEzCiyF+D3sFyzimlMKHRSWd8uN7buv7q12Z7YyV4cr3/Yi0d7SsWF7kv8rzuXE7GUmUUSv8DoCj/XwVuFWcAAAAASUVORK5CYII=" alt="Graphique du State of DB 2023 comparant les résultats de l'enquête portant sur la part d'utilisation de chaque outil de management de BDD : Postgres est largement en tête,puis Redis, MySQL et enfin SQLite" data-src="/img/Graph_outil_BDD.png" class="lazyload" width="1486" height="916"><figcaption>Graphique du State of DB 2023 comparant les résultats de l’enquête portant sur la part d’utilisation de chaque outil de management de BDD</figcaption></figure>
+<figure><img src="/img/Graph_outil_BDD.png" alt="Graphique du State of DB 2023 comparant les résultats de l'enquête portant sur la part d'utilisation de chaque outil de management de BDD : Postgres est largement en tête,puis Redis, MySQL et enfin SQLite"><figcaption>Graphique du State of DB 2023 comparant les résultats de l’enquête portant sur la part d’utilisation de chaque outil de management de BDD</figcaption></figure>
 <p>De plus, les technologies NoSQL comme MongoDB ne sont pas faites pour le relationnel. Pourtant des bibliothèques comme Mongoose permettent de faire des schémas et ainsi récréer des relations entre les différentes données, cela revient donc à utiliser MongoDB exactement comme pour du relationnel. Sauf que MongoDB n’est pas créé pour ça, et il arrive souvent que les schémas ne soient pas correctement mis à jour.</p>
 <p>Pourtant, le SQL a de nombreux atouts :</p>
 <ul>
@@ -246,7 +296,12 @@ SQLite est traditionnellement associé au développement d’applications Androi
   <ul>
     <li><p id="me">Téotime Pacreau</p></li>
     <li>
-      <a href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site">teotime.pac<span class="hidden">anti</span>@<span class="hidden">spam</span>outlook.fr</a>
+      <a
+        href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site"
+        >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
+          >spam</span
+        >outlook.fr</a
+      >
     </li>
     <li>
       <a class="rss" href="/feed/feed.xml">
@@ -257,19 +312,34 @@ SQLite est traditionnellement associé au développement d’applications Androi
   </ul>
   <ul id="links">
     <li>
-      <a class="social-footer" rel="me" href="https://github.com/teotimepacreau" target="_blank">
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://github.com/teotimepacreau"
+        target="_blank"
+      >
         <i class="ph ph-github-logo"></i>
         <span>Github</span>
       </a>
     </li>
     <li>
-      <a class="social-footer" rel="me" href="https://mastodon.design/@teotimepacreau" target="_blank">
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://mastodon.design/@teotimepacreau"
+        target="_blank"
+      >
         <i class="ph ph-dots-nine"></i>
         <span>Mastodon</span>
       </a>
     </li>
     <li>
-      <a class="social-footer" rel="me" href="https://www.linkedin.com/in/teotime-p-a1194b20a/" target="_blank">
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
+        target="_blank"
+      >
         <i class="ph ph-linkedin-logo"></i>
         <span>LinkedIn</span>
       </a>
@@ -281,14 +351,16 @@ SQLite est traditionnellement associé au développement d’applications Androi
     <li class="stat">
       <p class="stat-name">
         Conformité :
-        <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>
+        <abbr title="Référentiel général d’amélioration de l’accessibilité"
+          >RGAA</abbr
+        >
         100%
       </p>
     </li>
   </ul>
 
         </footer>
-        <!--Script Java pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
+        <!--Script pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
         <script>
           (function () {
             const links = document.querySelectorAll(
@@ -308,41 +380,9 @@ SQLite est traditionnellement associé au développement d’applications Androi
         </script>
       </div>
     </div>
-    <script src="/scripts/colorTheme.js"></script>
-    <script src="/scripts/nav.js"></script>
-    <script defer="" src="/scripts/table.js"></script>
-    
-  
-
-<script>
-            (function (selector, src, preferNativeLazyLoad) {
-  var images = document.querySelectorAll(selector);
-  var numImages = images.length;
-
-  if (numImages > 0) {
-    if (preferNativeLazyLoad && 'loading' in HTMLImageElement.prototype) {
-      for (var i = 0; i < numImages; i++) {
-        var keys = ['src', 'srcset'];
-
-        for (var j = 0; j < keys.length; j++) {
-          if (images[i].hasAttribute('data-' + keys[j])) {
-            var value = images[i].getAttribute('data-' + keys[j]);
-            images[i].setAttribute(keys[j], value);
-          }
-        }
-      }
-
-      return;
-    }
-
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = src;
-    document.body.appendChild(script);
-  }
-})(
-              'img',
-              'https://cdn.jsdelivr.net/npm/lazysizes@5/lazysizes.min.js',
-              false
-            );
-          </script></body></html>
+    <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
+<script defer src="/scripts/nav.js"></script>
+<script fetchpriority="low" defer src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="/scripts/table.js"></script>  
+  </body>
+</html>

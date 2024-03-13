@@ -1,30 +1,60 @@
-<!DOCTYPE html><html lang="fr"><head>
-    <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/css/style.css">
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/style.css" />
 <!-- Auto detection of the RSS feed for RSS readers -->
-<link rel="alternate" href="/feed/feed.xml" title="Flux RSS du blog de Téotime Pacreau" type="application/atom+xml">
+<link
+  rel="alternate"
+  href="/feed/feed.xml"
+  title="Flux RSS du blog de Téotime Pacreau"
+  type="application/atom+xml"
+/>
 <!--Favicon-->
-<link rel="icon" href="/favicon/favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg">
-<link rel="mask-icon" href="/favicon/favicon.svg">
-<link rel="apple-touch-startup-image" href="/favicon/favicon.svg" media="orientation: portrait">
-<link rel="apple-touch-startup-image" href="/favicon/favicon.svg" media="orientation: landscape">
-<link rel="icon" type="image/x-icon" href="/favicon/favicon.svg">
-<link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg">
-<!--ICONS-->
-<script rel="preconnect" src="https://unpkg.com/@phosphor-icons/web"></script>
+<link rel="icon" href="/favicon/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg" />
+<link rel="mask-icon" href="/favicon/favicon.svg" />
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: portrait"
+/>
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: landscape"
+/>
+<link rel="icon" type="image/x-icon" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg" />
+
 <!--Theme-->
-<meta name="theme-color" content="#c3e2ff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#hsl(165, 51%, 18%)" media="(prefers-color-scheme: dark)">
-<meta name="msapplication-TileColor" content="#c3e2ff" media="(prefers-color-scheme: light)">
-<meta name="msapplication-TileColor" content="#hsl(165, 51%, 18%)" media="(prefers-color-scheme: dark)">
+<meta
+  name="theme-color"
+  content="#c3e2ff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#hsl(165, 51%, 18%)"
+  media="(prefers-color-scheme: dark)"
+/>
+<meta
+  name="msapplication-TileColor"
+  content="#c3e2ff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="msapplication-TileColor"
+  content="#hsl(165, 51%, 18%)"
+  media="(prefers-color-scheme: dark)"
+/>
 
 <!--Social-->
-<link rel="me authn" href="https://twitter.com/teotimepacreau">
-<link rel="me" href="https://mastodon.design/@teotimepacreau">
-<meta name="generator" content="Eleventy">
+<link rel="me authn" href="https://twitter.com/teotimepacreau" />
+<link rel="me" href="https://mastodon.design/@teotimepacreau" />
+<meta name="generator" content="Eleventy" />
 
 
 <!-- open graph tags -->
@@ -34,24 +64,26 @@
 <meta name="twitter:image" content="https://www.teotimepacreau.fr/favicon/favicon.png">
 <meta property="twitter:title" content="">
 <meta name="robots" content="max-image-preview:large">
-<meta name="description" content="Management de projet &amp; Numérique à Nantes"> 
+<meta name="description" content="Développement web et projet numérique à Nantes"> 
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image:type" content="image/png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Le site web de Teotime Pacreau">
-<meta property="og:title" content="">
-<meta property="og:image" content="https://www.teotimepacreau.fr/favicon/favicon.png">
-<meta property="og:description" content="Management de projet &amp; Numérique à Nantes">
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Teotime Pacreau : Développement web et projet numérique à Nantes" />
+<meta property="og:title" content="" />
+<meta property="og:image" content="https://www.teotimepacreau.fr/favicon/favicon.png" />
+<meta property="og:description" content="Développement web et projet numérique à Nantes" />
 
-<meta content="Management de projet &amp; Numérique à Nantes" name="description">
-<meta name="topic" content="Numérique, développement, gestion de projet, management, UI, Indieweb">
-<meta name="keywords" content="Numérique, développement, frontend, backend, gestion de projet, management, UI, Indieweb">
-<meta name="author" content="Téotime Pacreau">
+<meta content="Développement web et projet numérique à Nantes" name="description" />
+<meta name="topic" content="Numérique, web, développement, gestion de projet, management, UI, Indieweb">
+<meta name="keywords" content="Numérique, web, développement, frontend, backend, gestion de projet, management, UI, Indieweb"/>
+<meta name="author" content="Téotime Pacreau" />
 <meta name="owner" content="Téotime Pacreau">
 
 
-<title></title>
 
+
+
+<title></title>
   </head>
   <body>
     <form tabindex="-1" class="color-picker" action="">
@@ -73,10 +105,19 @@
   </form>
     <div class="container projets-container" id="normal-page-container">
       <header>
-        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"></path></svg>
           <span class="sr-only">Menu</span>
         </button>
-        <nav class="navigation-flexer" id="primary-navigation" data-visible="false">
+        <nav
+          class="navigation-flexer"
+          id="primary-navigation"
+          data-visible="false"
+        >
           <span class="navigation-announcer">NAVIGATION</span>
           <ul class="menu">
             <li>
@@ -97,7 +138,10 @@
         <div id="project-card-container">
           <article id="project-card">
             <header id="project-img-wrapper">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAOCAYAAADaOrdAAAAACXBIWXMAAAsTAAALEwEAmpwYAAADuElEQVR4nF3U6W8UZRzA8f3HfOc7jMcLJcYYQ2JCojG+NCFIsKnBoxaaVALaSgMaC5RyNND7wHIUi+0uuzvXXnPvzuzutN2ze8x8zcyWgL745PduvnmeeZ4npuQDlAKvqKBokAnpoIS0APmIpB8xAiTzFdH6HxtEO5wBMaUQRgIUNdRHVg+RCy2kQjOiaG2yZoe83SP3H12yr8lEOkhmB9HqIVg+YjGIxF4FfBS1jZjzSMoWCdGIZkb3MMtt3AMf56CPc+Dj1nycmk9xr4vpHWJ6HYy9biRTbCJabVJGZxAphZEoEJDRfHJmi7xZJW9YZDUDpaCS1VQKhobtOjieh+W6qKaFnMmQ03R0Xaes61QUibKQIi8oiNkSL/RWFBCdMKIF0Z5ndB+1eIjlHlCqVLDLLlk1SyK5zZPHS+zsbCIpSRKJ52yuL3FneoqN1XlePNogt7FE+uovxC+dZ3fmJum/kyS0BoITILpHkfCHZgwfw+3h1bu0u13avR6GrbL1dJmZ6Z+Zuz3J5uYC83MzXBkf4eyXnzI5PsLG75PsXB5j4eRHzB4/xuK33xBfekhCbyC4AWI5jOgBcniCjiLVWodW55BWp0NelVlbuc1vl4f58+ooy4u3uDV9hfNDp/j8g2OMDJ1i4eIozy+c4/7H73LjrTeYP/0V8fvLg0g5iMRkI0A2QDF9jHIPrzFYRaigZ9hYv8vUxDmm/xhjZXmW2etTjA1/zRcfvsPo8GnuXRzl0YXvmDnxPlPvvcnts6fZCiNGA6ESRAYRExTLx6j28Zo92v0+rX4P3Srw+NFCFLhz61cePnzAg7vXmRz7kTOfnWBi7AdmJy4yNz7KpZOf8NPxt7k2PMTK/RXiUQSEahiJLhPIUcTHa/Vp+37EqZRIpZ/z18Ycz7ZWEKU4u/9ssTZ/j5tXLrG+MMfm2hKLd2aZGPme8aEzTF+9xvqTHeJWIwoIXkBMsgIkC2TbR6v0cWtdDg47kfDI5rU8opQim1ewSjYFTUVIp9jdfoYiS0iZDNu7cRZXV3mwuMj60222JI243STtBZEoIlog2QHZUg+1fIhZbUU0t0bWqpI1KxRKexjVBqpbI1f0yBWrqOUD9EqdgrNPvuShOntkSvsIToOE0ya950diL9+ZMCLZfWS7g2y3I5LVRDDrpM0aglVHKjYR7AZpq45g1xFLzUi6WCdl1waz1CDptklWuqTCyL5PLPz4y4csJNg+abs/UBxIlY44r3GPlAeSlVCPZLVHyuuR2uuT2g/5/Atx1tDBF3EPwAAAAABJRU5ErkJggg==" alt="capture of the hompage of the bookshelf organizer website" data-src="../img/bookshelf.png" class="lazyload" width="1920" height="1080">
+              <img
+                src="../img/bookshelf.png" loading="lazy" width="400" height="200"
+                alt="capture of the hompage of the bookshelf organizer website"
+              />
             </header>
             <main class="project-descripter">
               <h2 id="project-card-title">
@@ -108,7 +152,10 @@
           </article>
           <article id="project-card">
             <header id="project-img-wrapper">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAOCAYAAADaOrdAAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEUUlEQVR4nG3R60+TZxyH8bvlODoPnCZMBBRlEwcqBRltsX165PC0tH3apyekFApUhBbkzGAwz8NDVGZmnBiJOjMTptPEbfrO/WHXApIsy/biyn2/++SXr7D6igkOfElqxsTgZCuxkTq8fRV0RIuxBQto82oxdWv+U1u3oKlDR21AoiI5z4GFJ1TPblCT3uDI4GOOJp9yMHKPMs9VhEMtIpA8yMDkCRITDcRGawkOH8A3UIa7r5j2mA57KBcpqMUS0GAJCKxqDkqyDHeiDmksTsPUFfQ3X9K8uol+6VdOTmzSPPGGuuQTqkNrCGdoL97+MmJj1UTPVREaqSCY+hxlaB++ZAld8V24YnnYwprtrCGBM5ZHfPww0bQBZWkc6eIdPBvv6F7/E9etd1hW3mNb+UDL+d842v8Y0eHS4e3eQyhUQij82U6lqMEi/IFC5OAuHGoBUjAHs6KlzSeQArmEhqtRhppRZkaQV67T9+g18Z9eE737hp5bfzB6/y/OfP8W5/TPiJAhh7hzL6nAflKRagYD5fR7S0m07yLsLMDTmYvdn48tlIcUyMLs1yAFcnDHC3HGapDHovi/vcLo+iYjDzbpu/OS+K3fGbv/gd7VtzinniGGjmvJWIqY81YzF6ll0r+fcbmMcctukm06VHsuTn8+jkg+NjUbKaDd3kTu3Y09WknXWQX1mxWmHjxn4v5zelZf0H3hFcrV93QsvuLUyGNE5mQWs/ZSVtQaVuK1LKjlzPrLmXMUMirtJurIwqVk4Yhl4YhosUc0OGPZ+JJ7aI9X05nyoM7MMbu2zswPG3QtPuPw4C/s7XnJnuAGBfIaYuxkNgudFVzua+BauoVLqXouJBtY9lUxZi8iZBM4fAJrRGALCWzhrTR0nMnBrJZg7jHjT6eZvbHGwu2HuGY22Bd7ivC8QHQ+RDhuI9KN2SwHj3Jh+DQLmXbGkyYWz9n4Lnacia5yVOsOEv6IWHfa+rd0f0KLosebGmb28nUWb9yjY3KdstgThPcFGnkdjfMOItOYw6X4KZYzbjLnIySSMnPTIS4PW5j2VaFK/0Zs4Y+IPSz42qejVdHjTsQ5NzXP2elvMQ7cpFh9tI2IrnXEFpJuzGElepz5QYmhpItQsJVMyslybzOTnoptxP4/l9i3EK+OFk89ktdDUI3iVXv5yjvP7u4fd5CHCOftrUuyWfTWsBRvZHrQwGi0nplEE4vKYTLtpYS3NvHvbBL+J3tEYPB/ir69lmazEYvBiMFopUoaIb9zDeHfRMiPEM67iOEGLWOni5mUK5kKfsG4t5K0fICMuZABow6/RWCRBacVgdkvMG+9isCiCE65dRyzHKK2qZn6hlaONUqUm4bJc6wi5A2Eaw2N9SoiXqcl0ahjwFBMwlJOr6mEXkMR/foCIvpcZJPA5BIYPAKj+2MGt8DkEejbCzjSVkOl3sihE3YONcmUGM+Sa72IcN1DY72Gpm2JvwF0x5ItXG7JigAAAABJRU5ErkJggg==" alt="capture of the hompage of the newsletter subscription website" data-src="../img/newsletter.png" class="lazyload" width="3840" height="2160">
+              <img
+                src="../img/newsletter.png" loading="lazy" width="400" height="200"
+                alt="capture of the hompage of the newsletter subscription website"
+              />
             </header>
             <main class="project-descripter">
               <h2 id="project-card-title">
@@ -123,7 +170,12 @@
   <ul>
     <li><p id="me">Téotime Pacreau</p></li>
     <li>
-      <a href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site">teotime.pac<span class="hidden">anti</span>@<span class="hidden">spam</span>outlook.fr</a>
+      <a
+        href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site"
+        >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
+          >spam</span
+        >outlook.fr</a
+      >
     </li>
     <li>
       <a class="rss" href="/feed/feed.xml">
@@ -134,19 +186,34 @@
   </ul>
   <ul id="links">
     <li>
-      <a class="social-footer" rel="me" href="https://github.com/teotimepacreau" target="_blank">
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://github.com/teotimepacreau"
+        target="_blank"
+      >
         <i class="ph ph-github-logo"></i>
         <span>Github</span>
       </a>
     </li>
     <li>
-      <a class="social-footer" rel="me" href="https://mastodon.design/@teotimepacreau" target="_blank">
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://mastodon.design/@teotimepacreau"
+        target="_blank"
+      >
         <i class="ph ph-dots-nine"></i>
         <span>Mastodon</span>
       </a>
     </li>
     <li>
-      <a class="social-footer" rel="me" href="https://www.linkedin.com/in/teotime-p-a1194b20a/" target="_blank">
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
+        target="_blank"
+      >
         <i class="ph ph-linkedin-logo"></i>
         <span>LinkedIn</span>
       </a>
@@ -158,46 +225,14 @@
     <li class="stat">
       <p class="stat-name">
         Conformité :
-        <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>
+        <abbr title="Référentiel général d’amélioration de l’accessibilité"
+          >RGAA</abbr
+        >
         100%
       </p>
     </li>
   </ul>
 </footer>
     </div>
-    <script src="../script.js"></script>
-    <script src="../nav.js"></script>
-  
-
-<script>
-            (function (selector, src, preferNativeLazyLoad) {
-  var images = document.querySelectorAll(selector);
-  var numImages = images.length;
-
-  if (numImages > 0) {
-    if (preferNativeLazyLoad && 'loading' in HTMLImageElement.prototype) {
-      for (var i = 0; i < numImages; i++) {
-        var keys = ['src', 'srcset'];
-
-        for (var j = 0; j < keys.length; j++) {
-          if (images[i].hasAttribute('data-' + keys[j])) {
-            var value = images[i].getAttribute('data-' + keys[j]);
-            images[i].setAttribute(keys[j], value);
-          }
-        }
-      }
-
-      return;
-    }
-
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = src;
-    document.body.appendChild(script);
-  }
-})(
-              'img',
-              'https://cdn.jsdelivr.net/npm/lazysizes@5/lazysizes.min.js',
-              false
-            );
-          </script></body></html>
+  </body>
+</html>

@@ -29,8 +29,7 @@
 />
 <link rel="icon" type="image/x-icon" href="/favicon/favicon.svg" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg" />
-<!--ICONS-->
-<script rel="preconnect" src="https://unpkg.com/@phosphor-icons/web"></script>
+
 <!--Theme-->
 <meta
   name="theme-color"
@@ -66,24 +65,26 @@
 <meta name="twitter:image" content="https://www.teotimepacreau.fr/favicon/favicon.png">
 <meta property="twitter:title" content="">
 <meta name="robots" content="max-image-preview:large">
-<meta name="description" content="Management de projet & Numérique à Nantes"> 
+<meta name="description" content="Développement web et projet numérique à Nantes"> 
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image:type" content="image/png">
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="Le site web de Teotime Pacreau" />
+<meta property="og:site_name" content="Teotime Pacreau : Développement web et projet numérique à Nantes" />
 <meta property="og:title" content="" />
 <meta property="og:image" content="https://www.teotimepacreau.fr/favicon/favicon.png" />
-<meta property="og:description" content="Management de projet & Numérique à Nantes" />
+<meta property="og:description" content="Développement web et projet numérique à Nantes" />
 
-<meta content="Management de projet & Numérique à Nantes" name="description" />
-<meta name="topic" content="Numérique, développement, gestion de projet, management, UI, Indieweb">
-<meta name="keywords" content="Numérique, développement, frontend, backend, gestion de projet, management, UI, Indieweb"/>
+<meta content="Développement web et projet numérique à Nantes" name="description" />
+<meta name="topic" content="Numérique, web, développement, gestion de projet, management, UI, Indieweb">
+<meta name="keywords" content="Numérique, web, développement, frontend, backend, gestion de projet, management, UI, Indieweb"/>
 <meta name="author" content="Téotime Pacreau" />
 <meta name="owner" content="Téotime Pacreau">
 
 
-<title></title>
 
+
+
+<title></title>
   </head>
   <body>
     <form tabindex="-1" class="color-picker" action="">
@@ -110,6 +111,7 @@
           aria-controls="primary-navigation"
           aria-expanded="false"
         >
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"></path></svg>
           <span class="sr-only">Menu</span>
         </button>
         <nav
@@ -246,7 +248,8 @@
   </ul>
 </footer>
     </div>
-    <script src="/scripts/colorTheme.js"></script>
-    <script src="/scripts/nav.js"></script>
+    <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
+<script defer src="/scripts/nav.js"></script>
+<script fetchpriority="low" defer src="https://unpkg.com/@phosphor-icons/web"></script>
   </body>
 </html>

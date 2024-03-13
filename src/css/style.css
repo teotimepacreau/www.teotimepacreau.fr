@@ -1,3 +1,4 @@
+/* CSS RESET */
 /* Box sizing rules */
 *,
 *::before,
@@ -14,10 +15,6 @@ html {
   text-size-adjust: none;
 }
 
-p, li {
-  line-height: 1.5;
-  text-wrap: pretty;
-}
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -57,6 +54,18 @@ h4 {
   line-height: 1.15;
   text-wrap: balance;
   letter-spacing: -0.03rem;
+}
+
+h1, h2, h3, h4, h5, h6,
+dt, blockquote, figcaption {
+  text-wrap: balance;
+  max-inline-size: 25ch;
+}
+
+
+p, li {
+  line-height: 1.5;
+  text-wrap: pretty;
 }
 
 /* A elements that don't have a class get default styles */
@@ -424,9 +433,24 @@ input {
 }
 
 #homepage-profil {
+  overflow: hidden;
   display: flex;
   align-items: center;
   gap: calc(0.25*var(--baseline));
+}
+
+#homepage-profil h1, #homepage-profil img {
+  transform: translateY(-100%);
+  animation-name: slideDown;
+  animation-duration: .4s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+  }
 }
 
 #homepage-profil img {
@@ -438,9 +462,11 @@ input {
   max-width: 70dvw;
 }
 
-#homepage-brief {
+#homepage-hero > section {
   margin-top: calc(2*var(--baseline));
+
 }
+
 
 #homepage-brief article {
   margin-top: calc(0.5*var(--baseline));
@@ -491,22 +517,19 @@ input {
 }
 
 /* HOMEPAGE PROJETS */
-#homepage-projets {
-  margin-top: calc(2*var(--baseline));
-}
 
-#homepage-projets h2::after{
+#homepage-hero h2::after{
   content: '';
 }
 
-#homepage-projets-titre-flexer{
+.homepage-projets-titre-flexer{
   display: flex;
   gap: calc(0.25*var(--baseline));
   align-items: center;
   justify-content: space-between;
 }
 
-#homepage-projets-titre-flexer hr {
+.homepage-projets-titre-flexer hr {
   flex: 1;
     height: 1px;
     border: none;
@@ -606,8 +629,8 @@ input {
   transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
 
-.intersect-anim {
-  transform: translateY(-100px);
+.intersect-movetotop {
+  transform: translateY(-150px);
 }
 
 .intersect-visible {
@@ -616,15 +639,15 @@ input {
 }
 
 .anim-1 {
-  transition-delay: 0ms;
+  transition-delay: 100ms;
 }
 
 .anim-2 {
-  transition-delay: 300ms;
+  transition-delay: 400ms;
 }
 
 .anim-3 {
-  transition-delay: 300ms;
+  transition-delay: 400ms;
 }
 
 .anim-4 {
@@ -649,7 +672,7 @@ input {
   grid-template-columns: repeat(3, minmax(100px, 0.5fr));
   grid-template-rows: min-content;
   justify-items: start;
-  margin-top: auto;
+  margin-top: calc(2*var(--baseline));
   padding-top: calc(0.5 * var(--baseline));
   border-top: 2px solid var(--txt);
 }
@@ -716,27 +739,27 @@ input {
     gap: calc(2*var(--baseline))
   }
 
-  #homepage-projets {
-    margin-bottom: calc(2*var(--baseline));
-  }
-
   /* HAMBURGER MENU IN THE MEDIA QUERY */
   .mobile-nav-toggle {
     display: block;
     color: inherit;
     position: absolute;
-    background: url("../assets/list.svg");
-    background-repeat: no-repeat;
+    /* background: url("../assets/list.svg");
+    background-size: contain;
+    background-repeat: no-repeat; */
     z-index: 9999;
     width: 2rem;
     aspect-ratio: 1;
     border: 0;
     top: calc(2 * var(--baseline));
     left: var(--baseline);
+    background-color: unset;
   }
   .mobile-nav-toggle[aria-expanded="true"] {
     position: fixed;
-    background: url("../assets/x-circle.svg");
+  }
+  .mobile-nav-toggle[aria-expanded="true"] svg path {
+    d: path('M164.24,100.24,136.48,128l27.76,27.76a6,6,0,1,1-8.48,8.48L128,136.48l-27.76,27.76a6,6,0,0,1-8.48-8.48L119.52,128,91.76,100.24a6,6,0,0,1,8.48-8.48L128,119.52l27.76-27.76a6,6,0,0,1,8.48,8.48ZM230,128A102,102,0,1,1,128,26,102.12,102.12,0,0,1,230,128Zm-12,0a90,90,0,1,0-90,90A90.1,90.1,0,0,0,218,128Z')
   }
 
   #primary-navigation {
@@ -748,7 +771,7 @@ input {
     backdrop-filter: blur(32px);
     -webkit-backdrop-filter: blur(32px);
     transform: translateX(-100%);
-    transition: transform 0.4s ease-out;
+    transition: transform 0.3s ease-out;
   }
 
   #primary-navigation[data-visible="true"] {
@@ -932,7 +955,7 @@ input {
   background-color: var(--bg);
   color: var(--accent);
   text-decoration: none;
-  transition: background-color 0.6s ease-out;
+  transition: background-color .2s ease-out;
 }
 
 /*---------------POST-------------*/
@@ -1157,6 +1180,7 @@ pre {
 }
 
 #tags-page-li {
+  list-style-type: none;
   padding: var(--baseline);
   background-color: var(--accent);
   color: var(--bg);
@@ -1356,7 +1380,7 @@ hr {
 .diplome-desc:hover {
   background-color: var(--accent);
   color: var(--bg);
-  transition: all 0.6s ease-out;
+  transition: all .3s ease-out;
   padding: 1rem;
 }
 /*---------------CV.COMPETENCES-------------*/

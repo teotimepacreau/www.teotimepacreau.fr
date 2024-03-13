@@ -12,13 +12,7 @@ title: Blog post de Téotime Pacreau
     <div class="wrapper-post">
       <div class="post-grid">
         <header id="post-header">
-          <button
-            class="mobile-nav-toggle"
-            aria-controls="primary-navigation"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Menu</span>
-          </button>
+          {% include "menumobile.html"%}
           <nav
             class="navigation-flexer navigation-flexer-post"
             id="primary-navigation"
@@ -69,7 +63,7 @@ title: Blog post de Téotime Pacreau
         <footer id="footer" role="contentinfo">
           {% include "footer.html"%}
         </footer>
-        <!--Script Java pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
+        <!--Script pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
         <script>
           (function () {
             const links = document.querySelectorAll(
@@ -89,9 +83,7 @@ title: Blog post de Téotime Pacreau
         </script>
       </div>
     </div>
-    <script src="/scripts/colorTheme.js"></script>
-    <script src="/scripts/nav.js"></script>
-    <script defer src="/scripts/table.js"></script>
-    
+    {% include "loadscripts.html"%}
+    <script defer src="/scripts/table.js"></script>  
   </body>
 </html>

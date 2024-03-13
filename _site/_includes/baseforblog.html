@@ -7,13 +7,7 @@
     {% include "color-picker.html"%}
     <div class="container" id="normal-page-container">
       <header>
-        <button
-          class="mobile-nav-toggle"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Menu</span>
-        </button>
+        {% include "menumobile.html"%}
         <nav
           class="navigation-flexer"
           id="primary-navigation"
@@ -37,7 +31,6 @@
       <main id="blog">{{ content | safe }}</main>
       <footer id="footer" role="contentinfo">{% include "footer.html"%}</footer>
     </div>
-    <script src="/scripts/colorTheme.js"></script>
-    <script src="/scripts/nav.js"></script>
+    {% include "loadscripts.html"%}
   </body>
 </html>

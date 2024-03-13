@@ -1,5 +1,5 @@
 ---
-title: Management de projet, conduite du changement et numérique à Nantes
+title: Développement web et projet numérique à Nantes
 ---
 
 <!DOCTYPE html>
@@ -11,13 +11,7 @@ title: Management de projet, conduite du changement et numérique à Nantes
     {% include "color-picker.html"%}
     <div class="container" id="homepage-container">
       <header id="homepage-menu">
-        <button
-          class="mobile-nav-toggle"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Menu</span>
-        </button>
+        {% include "menumobile.html"%}
         <nav class="homepage-nav" id="primary-navigation" data-visible="false">
           <ul class="intersect anim-3" id="dont-animate">
             <li><a href="../curriculum">01 Curriculum Vitae</a></li>
@@ -28,8 +22,8 @@ title: Management de projet, conduite du changement et numérique à Nantes
         </nav>
       </header>
       <main id="homepage-hero">
-        <div id="homepage-profil" class="anim-1 intersect">
-          <img src="/img/photo.png" alt="Photo de mon visage" height="50" width="50">
+        <div id="homepage-profil">
+          <img loading="lazy" src="/img/photo.png" alt="Photo de mon visage" height="90" width="90">
           <h1>
             Téotime Pacreau
           </h1>
@@ -55,14 +49,14 @@ title: Management de projet, conduite du changement et numérique à Nantes
           </article>
         </section>
         <section id="homepage-projets" class="intersect anim-3">
-          <div id="homepage-projets-titre-flexer">
+          <div class="homepage-projets-titre-flexer">
             <h2>Projets</h2>
             <hr />
           </div>
           <div id="homepage-projets-grid">
             <div class="homepage-projets-grid-item">
               <div class="homepage-projets-grid-item__left">
-                <img width="200" height="100"
+                <img loading="lazy" width="207" height="90"
                   src="/img/bookshelf_mini.png"
                   alt="Miniature de mon site web fullstack The Bookshelf"
                 />
@@ -84,7 +78,7 @@ title: Management de projet, conduite du changement et numérique à Nantes
             </div>
             <div class="homepage-projets-grid-item">
               <div class="homepage-projets-grid-item__left">
-                <img width="200" height="100"
+                <img loading="lazy" width="207" height="90"
                   src="/img/feuillu_mini.png"
                   alt="Miniature de mon site web de newsletter"
                 />
@@ -106,13 +100,18 @@ title: Management de projet, conduite du changement et numérique à Nantes
             </div>
           </div>
         </section>
+        <section id="homepage-services" class="anim-4 intersect">
+          <div class="homepage-projets-titre-flexer">
+            <h2>Services</h2>
+            <hr />
+          </div>
+        </section>
       </main>
       <footer class="homepage-footer anim-4 intersect" id="footer" role="contentinfo">
         {% include "footer.html"%}
       </footer>
     </div>
-    <script defer src="/scripts/colorTheme.js"></script>
-    <script src="/scripts/nav.js"></script>
-    <script  src="/scripts/animationHomepage.js"></script>
+    {% include "loadscripts.html"%}
+    <!-- <script defer src="/scripts/animationHomepage.js"></script> -->
   </body>
 </html>

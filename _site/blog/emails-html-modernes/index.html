@@ -1,30 +1,61 @@
-<!DOCTYPE html><html lang="fr"><head>
-    <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/css/style.css">
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/style.css" />
 <!-- Auto detection of the RSS feed for RSS readers -->
-<link rel="alternate" href="/feed/feed.xml" title="Flux RSS du blog de Téotime Pacreau" type="application/atom+xml">
+<link
+  rel="alternate"
+  href="/feed/feed.xml"
+  title="Flux RSS du blog de Téotime Pacreau"
+  type="application/atom+xml"
+/>
 <!--Favicon-->
-<link rel="icon" href="/favicon/favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg">
-<link rel="mask-icon" href="/favicon/favicon.svg">
-<link rel="apple-touch-startup-image" href="/favicon/favicon.svg" media="orientation: portrait">
-<link rel="apple-touch-startup-image" href="/favicon/favicon.svg" media="orientation: landscape">
-<link rel="icon" type="image/x-icon" href="/favicon/favicon.svg">
-<link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg">
-<!--ICONS-->
-<script rel="preconnect" src="https://unpkg.com/@phosphor-icons/web"></script>
+<link rel="icon" href="/favicon/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg" />
+<link rel="mask-icon" href="/favicon/favicon.svg" />
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: portrait"
+/>
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: landscape"
+/>
+<link rel="icon" type="image/x-icon" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg" />
+
 <!--Theme-->
-<meta name="theme-color" content="#c3e2ff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#hsl(165, 51%, 18%)" media="(prefers-color-scheme: dark)">
-<meta name="msapplication-TileColor" content="#c3e2ff" media="(prefers-color-scheme: light)">
-<meta name="msapplication-TileColor" content="#hsl(165, 51%, 18%)" media="(prefers-color-scheme: dark)">
+<meta
+  name="theme-color"
+  content="#c3e2ff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#hsl(165, 51%, 18%)"
+  media="(prefers-color-scheme: dark)"
+/>
+<meta
+  name="msapplication-TileColor"
+  content="#c3e2ff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="msapplication-TileColor"
+  content="#hsl(165, 51%, 18%)"
+  media="(prefers-color-scheme: dark)"
+/>
 
 <!--Social-->
-<link rel="me authn" href="https://twitter.com/teotimepacreau">
-<link rel="me" href="https://mastodon.design/@teotimepacreau">
-<meta name="generator" content="Eleventy">
+<link rel="me authn" href="https://twitter.com/teotimepacreau" />
+<link rel="me" href="https://mastodon.design/@teotimepacreau" />
+<meta name="generator" content="Eleventy" />
 
 
 <!-- open graph tags -->
@@ -34,20 +65,23 @@
 <meta name="twitter:image" content="https://www.teotimepacreau.fr/favicon/favicon.png">
 <meta property="twitter:title" content="Emails HTML modernes : en finir avec les tables">
 <meta name="robots" content="max-image-preview:large">
-<meta name="description" content="Management de projet &amp; Numérique à Nantes"> 
+<meta name="description" content="Développement web et projet numérique à Nantes"> 
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image:type" content="image/png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Le site web de Teotime Pacreau">
-<meta property="og:title" content="Emails HTML modernes : en finir avec les tables">
-<meta property="og:image" content="https://www.teotimepacreau.fr/favicon/favicon.png">
-<meta property="og:description" content="Management de projet &amp; Numérique à Nantes">
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Teotime Pacreau : Développement web et projet numérique à Nantes" />
+<meta property="og:title" content="Emails HTML modernes : en finir avec les tables" />
+<meta property="og:image" content="https://www.teotimepacreau.fr/favicon/favicon.png" />
+<meta property="og:description" content="Développement web et projet numérique à Nantes" />
 
-<meta content="Management de projet &amp; Numérique à Nantes" name="description">
-<meta name="topic" content="Numérique, développement, gestion de projet, management, UI, Indieweb">
-<meta name="keywords" content="Numérique, développement, frontend, backend, gestion de projet, management, UI, Indieweb">
-<meta name="author" content="Téotime Pacreau">
+<meta content="Développement web et projet numérique à Nantes" name="description" />
+<meta name="topic" content="Numérique, web, développement, gestion de projet, management, UI, Indieweb">
+<meta name="keywords" content="Numérique, web, développement, frontend, backend, gestion de projet, management, UI, Indieweb"/>
+<meta name="author" content="Téotime Pacreau" />
 <meta name="owner" content="Téotime Pacreau">
+
+
+
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -85,7 +119,6 @@
 }</script>
 
 <title>Emails HTML modernes : en finir avec les tables</title>
-
   </head>
   <body>
     <form tabindex="-1" class="color-picker" action="">
@@ -108,10 +141,19 @@
     <div class="wrapper-post">
       <div class="post-grid">
         <header id="post-header">
-          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-          </button>
-          <nav class="navigation-flexer navigation-flexer-post" id="primary-navigation" data-visible="false">
+          <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"></path></svg>
+          <span class="sr-only">Menu</span>
+        </button>
+          <nav
+            class="navigation-flexer navigation-flexer-post"
+            id="primary-navigation"
+            data-visible="false"
+          >
             <span class="navigation-announcer">NAVIGATION</span>
             <ul class="menu" id="post-menu">
               <li>
@@ -183,23 +225,31 @@
             <ul class="post-tags">
               
               <li>
-                <a class="tags-style" id="post-tags" href="/tags/email">email</a>
+                <a class="tags-style" id="post-tags" href="/tags/email"
+                  >email</a
+                >
               </li>
               
               <li>
-                <a class="tags-style" id="post-tags" href="/tags/html">HTML</a>
+                <a class="tags-style" id="post-tags" href="/tags/html"
+                  >HTML</a
+                >
               </li>
               
               <li>
-                <a class="tags-style" id="post-tags" href="/tags/webmail">webmail</a>
+                <a class="tags-style" id="post-tags" href="/tags/webmail"
+                  >webmail</a
+                >
               </li>
               
             </ul>
             <time class="post-date">
               Publié le :
-              <time datetime="2023-12-13">13 décembre 2023</time>
+              <time datetime="2023-12-13"
+                >13 décembre 2023</time
+              >
             </time>
-            <p>Comment mettre à jour ses pratiques de développement d'emails HTML dans l'environnement complexe et changeant des clients mails ?</p>
+            <p>Comment mettre à jour ses pratiques de développement d&#39;emails HTML dans l&#39;environnement complexe et changeant des clients mails ?</p>
           </header>
           <main>
             <p>Le monde du développement d’emails est rempli d’inconsistences, de hacks, d’éléments HTML obsolètes, et de règles CSS abandonnées depuis longtemps.
@@ -220,7 +270,7 @@ Le support de chaque client mail des règles CSS et du HTML est différent et a 
 <li>la part d’utilisation des différents clients mails</li>
 <li>les récentes changements en terme de support des règles CSS/HTML des 3 principaux clients mails</li>
 </ul>
-<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAZCAYAAADnstS2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+klEQVR4nF1Ty46bQBCc//+sXCI5q0TaeO21WYPNa2DeDOBrRd0DBO+hBBI1TXVVjfjx54RjlqOVHUIIjGEYEGPEOM2Y5ifiNDPEuSiRlzXaVsJoDe89E6dpYuIewjgPpQ26roNWiicTcX4+Mc8L6P35hMjrFrXsoLSGc44nk4whRsRxxEh/IDkk47Mo8WgktDEI3jOZDjlH7wE+DHA+MMTheMGlKNErzRKIaKyFMRbW+Y3I5OPtwZOt8xjHkZcjGYERGZ4QIrlRoZI9fAiYWd+0HBoRx+kF4u38hexesYxh8ZlAh1lvGGBcYIjLvULZyM2NPUjaHuLn+yfOtzsaKWGtgTEGlhZkpAO0HP1FfJUtml7DLcmtIJ+HOG5gzb8vOW5VC21sCmPpxZ5M4TD5PSuQVw1rpkAIvOAuELtA/CVy2aDvFZyzrNfyco6lvYRy+Lhygl2vtqjX6Uk/SUmyxK2WkMoghGELJD3/F4h6TYUSh48M1yWUsCs/6aWoVyd4QQ6lfQ3F+xSC+QbxdspwLUrIrkthLKGkBZMjKfqQrCvqltNaG7e2blhbxwciyahRd4o/zjMtlJbj1n1P8NcpQ/aouQvkBE+lS7B4S1q1pQvhIchjWpDiDiH5THrXIhFRGcuXWpzzB+51g16pbUGtNbtDBBrS0+3vFf4B7oYMbHI6C9cAAAAASUVORK5CYII=" alt="Part de marché des différents clients mails" data-src="/img/part-de-marche-clients-mails.png" class="lazyload" width="860" height="1971"><figcaption>Graphique représentant les différentes par de marchés des clients mails</figcaption></figure>
+<figure><img src="/img/part-de-marche-clients-mails.png" alt="Part de marché des différents clients mails"><figcaption>Graphique représentant les différentes par de marchés des clients mails</figcaption></figure>
 <p>Si l’on développe des emails, c’est avant tout pour qu’ils soient lus, et pour cela il est important d’avoir bien en tête les parts d’usages des différents clients mails car il est IMPOSSIBLE de développer des emails compatibles pour les dizaines de clients mails qui existent (certains clients mails encore actifs comme AOL ont des parts d’utilisation infimes).</p>
 <h2 id="guide-de-d%C3%A9veloppement-moderne-d%E2%80%99email" tabindex="-1">Guide de développement moderne d’email</h2>
 <p>Les préconisations ci-dessous s’appuient sur deux considérations pragmatiques :</p>
@@ -252,10 +302,10 @@ Le support de chaque client mail des règles CSS et du HTML est différent et a 
 <li><code>&lt;time&gt;</code></li>
 </ul>
 <h3 id="appliquer-du-css" tabindex="-1">Appliquer du CSS</h3>
-<p>Il n’est pas possible d’appliquer un style pour un fichier CSS externe via <code>&lt;link rel="stylesheet" src="style.css"&gt;</code> car le client mail ne le lira pas.</p>
+<p>Il n’est pas possible d’appliquer un style pour un fichier CSS externe via <code>&lt;link rel=&quot;stylesheet&quot; src=&quot;style.css&quot;&gt;</code> car le client mail ne le lira pas.</p>
 <p>Il faut donc se tourner vers deux méthodes CSS “traditionnelles” :</p>
 <ul>
-<li>les inline styles. Exemple : <code>&lt;p style="margin-top: 1rem !important; line-height: 1.5 !important;"&gt;</code></li>
+<li>les inline styles. Exemple : <code>&lt;p style=&quot;margin-top: 1rem !important; line-height: 1.5 !important;&quot;&gt;</code></li>
 <li><code>&lt;style&gt;</code></li>
 </ul>
 <p>Quelques points d’attention sur <code>&lt;style&gt;</code> :
@@ -265,8 +315,8 @@ Si vous forwardez l’email, tous les <code>&lt;style&gt;</code> seront supprim�
 Il permet d’appliquer des éléments généraux à tous le document HTML et évite les répétitions, donc pratique pour déclarer
 <a href="https://css-tricks.com/almanac/selectors/h/hover/">:hover</a>, les focus, un background-color sur la page… <code>!important</code> est requis pour passer outre un inline style.</p>
 <h3 id="%C3%A9viter-les-r%C3%A9p%C3%A9titions-en-utilisant-le-m%C3%A9canisme-css-d%E2%80%99h%C3%A9ritage" tabindex="-1">Éviter les répétitions en utilisant le mécanisme CSS d’héritage</h3>
-<p>Plutôt que de définir <code>font-family: "Gill Sans", sans-serif;</code> à chaque fois que l’on pose un <code>&lt;p&gt;</code> il est plus pratique d’utiliser l’héritage :</p>
-<pre><code>&lt;body&gt;  &lt;div style="font-size:16px; font-family: system-ui;"&gt;    &lt;!-- email content goes here --&gt;  &lt;/div&gt;&lt;/body&gt;
+<p>Plutôt que de définir <code>font-family: &quot;Gill Sans&quot;, sans-serif;</code> à chaque fois que l’on pose un <code>&lt;p&gt;</code> il est plus pratique d’utiliser l’héritage :</p>
+<pre><code>&lt;body&gt;  &lt;div style=&quot;font-size:16px; font-family: system-ui;&quot;&gt;    &lt;!-- email content goes here --&gt;  &lt;/div&gt;&lt;/body&gt;
 </code></pre>
 <h3 id="les-unit%C3%A9s" tabindex="-1">Les unités</h3>
 <p>De longueur :
@@ -284,22 +334,22 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
 <h3 id="rendre-les-images-responsive" tabindex="-1">Rendre les images responsive</h3>
 <p>Par défaut les images vont overflow, pour contrer cela :</p>
 <pre><code>&lt;div
-    class="img-block"
-    style="overflow: hidden; margin-top: 2rem; border-radius: 0.5rem !important;"&gt;
+    class=&quot;img-block&quot;
+    style=&quot;overflow: hidden; margin-top: 2rem; border-radius: 0.5rem !important;&quot;&gt;
         &lt;img
-          style="max-width: 100%; object-fit: cover;
-            display: block;"
-          src="https://i.imgur.com/twfNOSU.jpg"
-          alt="The Material Web Components website : a landing page explaining what is Material UI."
+          style=&quot;max-width: 100%; object-fit: cover;
+            display: block;&quot;
+          src=&quot;https://i.imgur.com/twfNOSU.jpg&quot;
+          alt=&quot;The Material Web Components website : a landing page explaining what is Material UI.&quot;
         /&gt;
     &lt;/div&gt;
 </code></pre>
 <p>Voici une illustration pratique de ce code :</p>
-<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAZCAYAAAASTF8GAAAACXBIWXMAAAsTAAALEwEAmpwYAAACJ0lEQVR4nE3SW0+ScQCA8f/nqNbpopu2Zje1WavmuqjVuijbMg95YFZqsTQRipoG0zxhCntBXjwg00RRXiNQDuEBMQ6aEKk0zbroezydbrr+XTw3j8il/LxztTKgv0avpohJSU1sXkZkk+/xOp/Toy3i9dNzjEv1xBYciFw2jNOhQ117lrrKAqz99cRXJhC7PzYYGe+m5uFVKlSXsTrayGxHEfm9BPZhA+VVF7lTWsiApGM9s4DIbswzJDXSUFnAg7KTSKb7xKJORHp5Eld/LXrVCZ5VHUfuvEvY24dIRidwmmrQVRyjpfQQNkMxwenu/+Eomj9gvE3I0/sPRnuraSk7QnPJQayG4n+QWpzAZapGX3EYXekB7MZbhD09iLUVBdncxOOaM9TdO01fhwq/14ZYTa8y8taO1qBG09qAZagPX9iHSOzsosTi2LwKdkXBvbjMwnoWkdz7yUImjzv+CW8yS2AzT/jLN8Ty1j5jS+u0e8J0zkYY/pBESW0jvMktWlxBLr10cOGFTIPDx2AohZiK53jk8FHQZOFUo5kqywzmwEdEOJvnjX8OlbUbla2LjlnP355I733HtxHEHrEwvGhhJuEnmttBpHb3mUuHkIIS9ojE9FqAyOdtxPzmV7qUEGX9MuUDMm1TfsZXNhFKPIFGHuX8Ex2Fag31ZhtyIIiIJJdoHzFxs7mcG40l6CUj7tAsIp0J4XS/Qmu8TnPbFQbHtER+X/ILKWCgYzxnPPcAAAAASUVORK5CYII=" alt="Images responsives dans les clients mails" data-src="/img/email-images-responsives.png" class="lazyload" width="993" height="4151"><figcaption>Illustration d’utilisation d’images responsives grâce à la technique ci-dessus dans un client mail</figcaption></figure>
+<figure><img src="/img/email-images-responsives.png" alt="Images responsives dans les clients mails"><figcaption>Illustration d’utilisation d’images responsives grâce à la technique ci-dessus dans un client mail</figcaption></figure>
 <h3 id="flexbox" tabindex="-1">Flexbox</h3>
 <p>La flexbox est désormais supportée ! Très pratique pour afficher des images côte à côte ou créer des colonnes.
 <code>display: flex</code> et <code>column-gap</code> fonctionnent mais <code>flex-direction:column</code> et <code>flex-wrap: wrap</code> ne sont pas supportés dans GMAIL seulement. Ils fonctionnent dans les 2 autres clients.</p>
-<video controls="">
+<video controls>
   <source src="/img/flexbox-email.mp4" alt="Vidéo illustration l'illustration de flexbox dans un client mail" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -307,7 +357,7 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
 <p><code>position: relative</code> et <code>position: absolute</code> ne sont pas supportés du tout</p>
 <h3 id="liens" tabindex="-1">Liens</h3>
 <p>Les clients mails scannent les adresses emails et les numéros de téléphone dans le contenu de vos mails et les transforment automatiquement en liens soulignés bleus. Pour contrer ces styles par défaut il faut les wrapper dans des <code>&lt;a&gt;</code> et enlever le style par défaut.</p>
-<pre><code>&lt;a style="color: inherit; text-decoration: none;" href=""&gt;
+<pre><code>&lt;a style=&quot;color: inherit; text-decoration: none;&quot; href=&quot;&quot;&gt;
 	some@example.com
 &lt;/a&gt;
 </code></pre>
@@ -326,7 +376,12 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
   <ul>
     <li><p id="me">Téotime Pacreau</p></li>
     <li>
-      <a href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site">teotime.pac<span class="hidden">anti</span>@<span class="hidden">spam</span>outlook.fr</a>
+      <a
+        href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site"
+        >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
+          >spam</span
+        >outlook.fr</a
+      >
     </li>
     <li>
       <a class="rss" href="/feed/feed.xml">
@@ -337,19 +392,34 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
   </ul>
   <ul id="links">
     <li>
-      <a class="social-footer" rel="me" href="https://github.com/teotimepacreau" target="_blank">
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://github.com/teotimepacreau"
+        target="_blank"
+      >
         <i class="ph ph-github-logo"></i>
         <span>Github</span>
       </a>
     </li>
     <li>
-      <a class="social-footer" rel="me" href="https://mastodon.design/@teotimepacreau" target="_blank">
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://mastodon.design/@teotimepacreau"
+        target="_blank"
+      >
         <i class="ph ph-dots-nine"></i>
         <span>Mastodon</span>
       </a>
     </li>
     <li>
-      <a class="social-footer" rel="me" href="https://www.linkedin.com/in/teotime-p-a1194b20a/" target="_blank">
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
+        target="_blank"
+      >
         <i class="ph ph-linkedin-logo"></i>
         <span>LinkedIn</span>
       </a>
@@ -361,14 +431,16 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
     <li class="stat">
       <p class="stat-name">
         Conformité :
-        <abbr title="Référentiel général d’amélioration de l’accessibilité">RGAA</abbr>
+        <abbr title="Référentiel général d’amélioration de l’accessibilité"
+          >RGAA</abbr
+        >
         100%
       </p>
     </li>
   </ul>
 
         </footer>
-        <!--Script Java pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
+        <!--Script pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
         <script>
           (function () {
             const links = document.querySelectorAll(
@@ -388,41 +460,9 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
         </script>
       </div>
     </div>
-    <script src="/scripts/colorTheme.js"></script>
-    <script src="/scripts/nav.js"></script>
-    <script defer="" src="/scripts/table.js"></script>
-    
-  
-
-<script>
-            (function (selector, src, preferNativeLazyLoad) {
-  var images = document.querySelectorAll(selector);
-  var numImages = images.length;
-
-  if (numImages > 0) {
-    if (preferNativeLazyLoad && 'loading' in HTMLImageElement.prototype) {
-      for (var i = 0; i < numImages; i++) {
-        var keys = ['src', 'srcset'];
-
-        for (var j = 0; j < keys.length; j++) {
-          if (images[i].hasAttribute('data-' + keys[j])) {
-            var value = images[i].getAttribute('data-' + keys[j]);
-            images[i].setAttribute(keys[j], value);
-          }
-        }
-      }
-
-      return;
-    }
-
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = src;
-    document.body.appendChild(script);
-  }
-})(
-              'img',
-              'https://cdn.jsdelivr.net/npm/lazysizes@5/lazysizes.min.js',
-              false
-            );
-          </script></body></html>
+    <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
+<script defer src="/scripts/nav.js"></script>
+<script fetchpriority="low" defer src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="/scripts/table.js"></script>  
+  </body>
+</html>

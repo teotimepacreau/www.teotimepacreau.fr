@@ -145,11 +145,21 @@ input {
   }
 }
 
+/* COLOR PICKER */
+
 :root:has(#light:checked) {
   --bg: #c3e2ff;
   --txt: #1d533e;
   --accent: #752a04;
   --code: oklch(24% 0.03 42.02 / 0.6);
+}
+:root:has(#dark:checked) {
+  --bg: oklch(35.5% 13.5% 174.846);
+  --txt: #dfd6d6;
+  --accent: oklch(91.64% 0.073 77.44);
+  --shadow: oklch(10% 0 0 / 0.25);
+  --code: oklch(97% 0.005 77.44 / 0.9);
+  --btnHomepage: white;
 }
 :root:has(#eco:checked) {
   mix-blend-mode: luminosity;
@@ -523,9 +533,54 @@ input {
 #homepage-projets-grid {
   margin-top: var(--baseline);
   margin-bottom: calc(3*var(--baseline));
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--baseline);
+}
+
+.homepage-projets-grid-item-wrapper {
+  container-type: inline-size;
+}
+
+.homepage-projets-grid-item-wrapper + .homepage-projets-grid-item-wrapper {
+  margin-top: var(--baseline);
+}
+
+@container (width >= 950px){
+  .homepage-projets-grid-item {
+    position: relative;
+  }
+  .homepage-projets-grid-item__left {
+    grid-column: 1 / 3;
+  }
+  .homepage-projets-grid-item img {
+    transform: scale(.75);
+  }
+  .homepage-projets-grid-item__right {
+    position: absolute;
+    background-color: var(--txt);
+    padding-inline: calc(.5*var(--baseline));
+    padding-block: calc(.25*var(--baseline));
+    color: var(--bg);
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    border-radius: .3rem;
+    box-shadow: 1px 1px 2px 0px var(--shadow);
+  }
+  .homepage-projets-tags{
+    border-color: var(--bg)!important;
+    background-color: var(--bg);
+    color: var(--txt);
+    font-size: .85rem!important;
+    font-weight: 400!important;
+    padding-block: calc(.05*var(--baseline));
+    opacity: 1!important;
+  }
+  .homepage-projets-grid-item h3 {
+    font-size: var(--baselineh2)!important;
+    font-weight: 700 !important;
+  }
+  .homepage-projets-grid-item h3::after{
+    content: '';
+  }
 }
 
 .homepage-projets-grid-item{
@@ -626,9 +681,16 @@ input {
   font-size: var(--baselineh3);
   text-wrap: balance;
   display: flex;
+  flex-wrap: wrap;
+  gap: calc(.25*var(--baseline));
   justify-content: space-between;
   align-items: center;
 }
+
+.homepage-services-item-header > span{
+  flex: 0 1 300px;
+}
+
 
 .services-icon {
   display: grid;
@@ -636,6 +698,7 @@ input {
   padding: calc(.125*var(--baseline));
   background-color: var(--bg);
   border-radius: 50%;
+  min-width: 3rem;
   width: 3rem;
   height: 3rem;
   aspect-ratio: 1;
@@ -1560,6 +1623,7 @@ li {
     color: var(--txt);
   }
 }
+
 
 .ascii {
   margin-left: auto;

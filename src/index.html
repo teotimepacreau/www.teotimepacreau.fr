@@ -13,7 +13,7 @@ title: Développement web et projet numérique à Nantes
       <header id="homepage-menu">
         {% include "menumobile.html"%}
         <nav class="homepage-nav" id="primary-navigation" data-visible="false">
-          <ul class="intersect anim-3" id="dont-animate">
+          <ul class="menu-anim">
             <li><a href="../curriculum">01 Curriculum Vitae</a></li>
             <li><a href="blog">02 Blog</a></li>
             <li><a href="/projets">03 Projets</a></li>
@@ -22,7 +22,7 @@ title: Développement web et projet numérique à Nantes
         </nav>
       </header>
       <main id="homepage-hero">
-        <div id="homepage-profil">
+        <div id="homepage-profil" class="intersect">
           <img
             loading="lazy"
             src="/img/photo.png"
@@ -33,11 +33,9 @@ title: Développement web et projet numérique à Nantes
           <h1>Téotime Pacreau</h1>
         </div>
 
-        <section id="homepage-brief">
-          <h2 class="intersect">
-            Du code léger pour des projets web maîtrisés
-          </h2>
-          <article class="services intersect">
+        <section id="homepage-brief" class="intersect">
+          <h2>Du code léger pour des projets web maîtrisés</h2>
+          <article class="services">
             <div>
               <i class="ph ph-arrow-circle-right"></i>
               <span>Conception de sites webs</span>
@@ -58,62 +56,66 @@ title: Développement web et projet numérique à Nantes
             <hr />
           </div>
           <div id="homepage-projets-grid">
-            <div class="homepage-projets-grid-item">
-              <div class="homepage-projets-grid-item__left">
-                <img
-                  loading="lazy"
-                  width="207"
-                  height="90"
-                  src="/img/bookshelf_mini.png"
-                  alt="Miniature de mon site web fullstack The Bookshelf"
-                />
-                <button class="homepage-projets-btn" tabindex="-1">
-                  <a href="/projets/projetbookshelf/">Découvrir </a>
-                </button>
-              </div>
-              <div class="homepage-projets-grid-item__right">
-                <ul>
-                  <li class="homepage-projets-tags">Vite</li>
-                  <li class="homepage-projets-tags">Fastify</li>
-                  <li class="homepage-projets-tags">SQLite</li>
-                </ul>
-                <div class="homepage-projets-grid-item__right__titleanddesc">
-                  <h3>The Bookshelf - Web App</h3>
-                  <span>Site web fullstack de réservation de livres</span>
+            <div class="homepage-projets-grid-item-wrapper">
+              <div class="homepage-projets-grid-item">
+                <div class="homepage-projets-grid-item__left">
+                  <img
+                    loading="lazy"
+                    width="207"
+                    height="90"
+                    src="/img/bookshelf_mini.png"
+                    alt="Miniature de mon site web fullstack The Bookshelf"
+                  />
+                  <button class="homepage-projets-btn" tabindex="-1">
+                    <a href="/projets/projetbookshelf/">Découvrir </a>
+                  </button>
+                </div>
+                <div class="homepage-projets-grid-item__right">
+                  <ul>
+                    <li class="homepage-projets-tags">Vite</li>
+                    <li class="homepage-projets-tags">Fastify</li>
+                    <li class="homepage-projets-tags">SQLite</li>
+                  </ul>
+                  <div class="homepage-projets-grid-item__right__titleanddesc">
+                    <h3>The Bookshelf - Web App</h3>
+                    <span>Site web fullstack de réservation de livres</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="homepage-projets-grid-item">
-              <div class="homepage-projets-grid-item__left">
-                <img
-                  loading="lazy"
-                  width="207"
-                  height="90"
-                  src="/img/feuillu_mini.png"
-                  alt="Miniature de mon site web de newsletter"
-                />
-                <button class="homepage-projets-btn" tabindex="-1">
-                  <a href="/projets/projetnewsletter/">Découvrir </a>
-                </button>
-              </div>
-              <div class="homepage-projets-grid-item__right">
-                <ul>
-                  <li class="homepage-projets-tags">Javascript</li>
-                  <li class="homepage-projets-tags">Express</li>
-                  <li class="homepage-projets-tags">SQLite</li>
-                </ul>
-                <div class="homepage-projets-grid-item__right__titleanddesc">
-                  <h3>Feuillu newsletter - Web App</h3>
-                  <span
-                    >Site web fullstack d'inscription et d'envoi de
-                    newsletter</span
-                  >
+            <div class="homepage-projets-grid-item-wrapper">
+              <div class="homepage-projets-grid-item">
+                <div class="homepage-projets-grid-item__left">
+                  <img
+                    loading="lazy"
+                    width="207"
+                    height="90"
+                    src="/img/feuillu_mini.png"
+                    alt="Miniature de mon site web de newsletter"
+                  />
+                  <button class="homepage-projets-btn" tabindex="-1">
+                    <a href="/projets/projetnewsletter/">Découvrir </a>
+                  </button>
+                </div>
+                <div class="homepage-projets-grid-item__right">
+                  <ul>
+                    <li class="homepage-projets-tags">Javascript</li>
+                    <li class="homepage-projets-tags">Express</li>
+                    <li class="homepage-projets-tags">SQLite</li>
+                  </ul>
+                  <div class="homepage-projets-grid-item__right__titleanddesc">
+                    <h3>Feuillu newsletter - Web App</h3>
+                    <span
+                      >Site web fullstack d'inscription et d'envoi de
+                      newsletter</span
+                    >
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section id="homepage-services" class="anim-4 intersect">
+        <section id="homepage-services" class="intersect">
           <div class="homepage-projets-titre-flexer">
             <h2>Services</h2>
             <hr />
@@ -140,7 +142,8 @@ title: Développement web et projet numérique à Nantes
                 <li>
                   Sites vitrines
                   <span class="homepage-services-item-category-details"
-                    >100% responsive, gestion du contenu facile et intuitive</span
+                    >100% responsive, formulaires de contact, gestion du contenu
+                    facile et intuitive</span
                   >
                 </li>
                 <li>
@@ -161,7 +164,17 @@ title: Développement web et projet numérique à Nantes
               <div class="homepage-services-item-header">
                 <span>Refonte & maintenance</span>
                 <div class="services-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="var(--accent)" viewBox="0 0 256 256"><path d="M224.91,69.75a6,6,0,0,0-9.63-2.16l-41.07,37.9L154.7,101.3l-4.19-19.51,37.9-41.07a6,6,0,0,0-2.16-9.63,70,70,0,0,0-89.77,94.39l-61.39,53c-.11.09-.21.19-.32.3A30,30,0,0,0,77.2,221.23c.11-.11.21-.21.3-.32l53-61.39a70,70,0,0,0,94.39-89.77ZM160,154a58,58,0,0,1-28-7.22,6,6,0,0,0-7.45,1.33L68.57,212.88a18,18,0,0,1-25.45-25.45l64.76-55.94A6,6,0,0,0,109.2,124a58,58,0,0,1,64-84.53L139.58,75.93a6,6,0,0,0-1.45,5.33l5.65,26.35a6,6,0,0,0,4.61,4.61l26.35,5.65a6,6,0,0,0,5.33-1.45L216.49,82.8A58.06,58.06,0,0,1,160,154Z"></path></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="var(--accent)"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M224.91,69.75a6,6,0,0,0-9.63-2.16l-41.07,37.9L154.7,101.3l-4.19-19.51,37.9-41.07a6,6,0,0,0-2.16-9.63,70,70,0,0,0-89.77,94.39l-61.39,53c-.11.09-.21.19-.32.3A30,30,0,0,0,77.2,221.23c.11-.11.21-.21.3-.32l53-61.39a70,70,0,0,0,94.39-89.77ZM160,154a58,58,0,0,1-28-7.22,6,6,0,0,0-7.45,1.33L68.57,212.88a18,18,0,0,1-25.45-25.45l64.76-55.94A6,6,0,0,0,109.2,124a58,58,0,0,1,64-84.53L139.58,75.93a6,6,0,0,0-1.45,5.33l5.65,26.35a6,6,0,0,0,4.61,4.61l26.35,5.65a6,6,0,0,0,5.33-1.45L216.49,82.8A58.06,58.06,0,0,1,160,154Z"
+                    ></path>
+                  </svg>
                 </div>
               </div>
               <ul class="homepage-services-item-category-list">
@@ -175,14 +188,25 @@ title: Développement web et projet numérique à Nantes
               <div class="homepage-services-item-header">
                 <span>Développement spécifique</span>
                 <div class="services-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="var(--accent)" viewBox="0 0 256 256"><path d="M222.72,67.91l-88-48.18a13.9,13.9,0,0,0-13.44,0l-88,48.17A14,14,0,0,0,26,80.18v95.64a14,14,0,0,0,7.28,12.28l88,48.17a13.92,13.92,0,0,0,13.44,0l88-48.17A14,14,0,0,0,230,175.82V80.18A14,14,0,0,0,222.72,67.91ZM128,121.16,44.49,75.44,83.14,54.29l42,23a6,6,0,0,0,5.76,0l42-23,38.65,21.15Zm-1-90.91a2,2,0,0,1,1.92,0l31.4,17.2L128,65.16,95.63,47.45ZM38,175.82v-40l36,19.7v41.16L39,177.57A2,2,0,0,1,38,175.82Zm48,27.46V152a6,6,0,0,0-3.12-5.26L38,122.17V85.57l84,46V223ZM134,223V131.56l84-46v36.6l-44.88,24.57A6,6,0,0,0,170,152v51.28Zm83-45.42-35,19.14V155.55l36-19.7v40A2,2,0,0,1,217,177.57Z"></path></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="var(--accent)"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M222.72,67.91l-88-48.18a13.9,13.9,0,0,0-13.44,0l-88,48.17A14,14,0,0,0,26,80.18v95.64a14,14,0,0,0,7.28,12.28l88,48.17a13.92,13.92,0,0,0,13.44,0l88-48.17A14,14,0,0,0,230,175.82V80.18A14,14,0,0,0,222.72,67.91ZM128,121.16,44.49,75.44,83.14,54.29l42,23a6,6,0,0,0,5.76,0l42-23,38.65,21.15Zm-1-90.91a2,2,0,0,1,1.92,0l31.4,17.2L128,65.16,95.63,47.45ZM38,175.82v-40l36,19.7v41.16L39,177.57A2,2,0,0,1,38,175.82Zm48,27.46V152a6,6,0,0,0-3.12-5.26L38,122.17V85.57l84,46V223ZM134,223V131.56l84-46v36.6l-44.88,24.57A6,6,0,0,0,170,152v51.28Zm83-45.42-35,19.14V155.55l36-19.7v40A2,2,0,0,1,217,177.57Z"
+                    ></path>
+                  </svg>
                 </div>
               </div>
               <ul class="homepage-services-item-category-list">
                 <li>
-                  Éco-conception & bonnes pratiques
+                  Gestion de projet numérique
                   <span class="homepage-services-item-category-details"
-                    >Référentiel environnemental, bases d'accessibilité</span
+                    >User stories, cartographie du parcours utilisateur,
+                    backlog...</span
                   >
                 </li>
                 <li>
@@ -191,23 +215,48 @@ title: Développement web et projet numérique à Nantes
                     >Emails HTML, intégrations, maquettage</span
                   >
                 </li>
-                <li>
-                  Intégration de maquettes
-                </li>
+                <li>Éco-conception</li>
+                <li>Intégration de maquettes</li>
               </ul>
             </div>
           </div>
         </section>
       </main>
-      <footer
-        class="homepage-footer anim-4 intersect"
-        id="footer"
-        role="contentinfo"
-      >
+      <footer class="homepage-footer intersect" id="footer" role="contentinfo">
         {% include "footer.html"%}
       </footer>
     </div>
     {% include "loadscripts.html"%}
-    <!-- <script defer src="/scripts/animationHomepage.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+      gsap.fromTo(
+        ".intersect",
+        {
+          y: "-20dvh",
+          opacity: 0,
+          duration: 0.5,
+          ease: "power2.out",
+        },
+        {
+          y: "0dvh",
+          opacity: 1,
+          stagger: 0.3,
+        }
+      );
+      gsap.fromTo(
+        ".menu-anim",
+        {
+          y: "-20dvh",
+          opacity: 0,
+          duration: 0.5,
+          ease: "power4.out",
+        },
+        {
+          y: "0dvh",
+          opacity: 1,
+          delay: 1,
+        }
+      );
+    </script>
   </body>
 </html>

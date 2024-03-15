@@ -11,7 +11,7 @@ colorThemes.forEach((themeOption) => {
     storeTheme(themeOption.id);
     // fallback for no :has() support
     document.documentElement.className = themeOption.id;
-    checkLocalStorage();
+    adaptCodeBlockColor();
     adaptHamburgerButton()
     adaptHomepageButtonTextColorIfDarkTheme();
   });
@@ -29,7 +29,7 @@ const setTheme = function () {
   document.documentElement.className = activeTheme;
 };
 
-function checkLocalStorage() {
+function adaptCodeBlockColor() {
   const allCodes = document.querySelectorAll("code");
   const activeTheme = localStorage.getItem("theme");
   if (activeTheme === "light") {
@@ -71,7 +71,6 @@ function adaptHamburgerButton() {
 }
 
 
-window.onload = setTheme();
 document.addEventListener("DOMContentLoaded", () => {
   const allHomepageText = document.querySelectorAll(".homepage-projets-grid-item__left button");
   const activeTheme = localStorage.getItem("theme");
@@ -82,3 +81,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+window.onload = setTheme();

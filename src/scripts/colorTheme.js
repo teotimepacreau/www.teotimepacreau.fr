@@ -13,7 +13,6 @@ colorThemes.forEach((themeOption) => {
     document.documentElement.className = themeOption.id;
     adaptCodeBlockColor();
     adaptHamburgerButton()
-    adaptHomepageButtonTextColorIfDarkTheme();
   });
 });
 
@@ -44,20 +43,6 @@ function adaptCodeBlockColor() {
   }
 }
 
-function adaptHomepageButtonTextColorIfDarkTheme() {
-  const activeTheme = localStorage.getItem("theme");
-  const allHomepageText = document.querySelectorAll(".homepage-projets-grid-item__left button");
-  if (activeTheme === "dark") {
-    allHomepageText.forEach((text) => {
-      text.style.color = "#17453a";
-    });
-  }
-  if (activeTheme === "light") {
-    allHomepageText.forEach((text) => {
-      text.style.color = "white";
-    });
-  }
-}
 
 function adaptHamburgerButton() {
   const activeTheme = localStorage.getItem("theme");
@@ -69,17 +54,5 @@ function adaptHamburgerButton() {
     hamburger.setAttribute('fill', '#000000')
   }
 }
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const allHomepageText = document.querySelectorAll(".homepage-projets-grid-item__left button");
-  const activeTheme = localStorage.getItem("theme");
-  
-  if (activeTheme === "dark") {
-    allHomepageText.forEach((text) => {
-      text.style.color = "#17453a";
-    });
-  }
-});
 
 window.onload = setTheme();

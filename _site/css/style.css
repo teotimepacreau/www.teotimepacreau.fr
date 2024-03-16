@@ -543,11 +543,8 @@ input {
   margin-bottom: calc(3 * var(--baseline));
 }
 
-.homepage-projets-grid-item-wrapper {
-  container-type: inline-size;
-}
 
-.homepage-projets-grid-item-wrapper + .homepage-projets-grid-item-wrapper {
+.homepage-projets-grid-item+ .homepage-projets-grid-item {
   margin-top: var(--baseline);
 }
 
@@ -559,13 +556,14 @@ input {
 }
 
 @media (width >=1000px) {
+  
   .homepage-projets-grid-item {
     grid-template-columns: 15% 85% !important;
   }
-  .homepage-projets-grid-item-wrapper {
+  .homepage-projets-grid-item {
     margin-top: calc(2 * var(--baseline));
   }
-  .homepage-projets-grid-item-wrapper + .homepage-projets-grid-item-wrapper {
+  .homepage-projets-grid-item + .homepage-projets-grid-item {
     margin-top: calc(3 * var(--baseline));
   }
   .homepage-projets-grid-item {
@@ -600,14 +598,6 @@ input {
     font-weight: 400 !important;
     padding-block: calc(0.05 * var(--baseline));
     opacity: 1 !important;
-  }
-  .homepage-projets-grid-item h3 {
-    font-family: "Inter-Variable";
-    font-size: var(--baselineh2) !important;
-    font-weight: 700 !important;
-  }
-  .homepage-projets-grid-item h3::after {
-    content: "";
   }
   .projets-btn-mobile {
     display: none;
@@ -670,8 +660,8 @@ input {
 .homepage-projets-tags {
   line-height: 0.75rlh;
   list-style-type: none;
-  padding-block: .2ex;
-  padding-inline: .6ex;
+  padding-block: .4ex;
+  padding-inline: .8ex;
   border-radius: 0.2rem;
   border: 1px solid var(--txtlighten20);
   font-weight: 500;
@@ -810,6 +800,10 @@ input {
   #homepage-services-grid {
     display: flex;
     flex-direction: column;
+  }
+  .homepage-projets-grid-item__right__titleanddesc span {
+    color: var(--txt) !important;
+
   }
   .homepage-services-item-header {
     flex-wrap: nowrap;
@@ -1752,4 +1746,11 @@ tr {
   td:last-child {
     padding-bottom: calc(0.5 * var(--baseline));
   }
+}
+
+/* HOMEPAGE PROJET GSAP ANIM */
+.homepage-projet-hidden {
+  transform: translateX(-10dvw);
+  opacity: 0;
+  transition: all .3s cubic-bezier(.64,1.15,.58,.91);
 }

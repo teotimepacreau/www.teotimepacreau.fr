@@ -698,7 +698,7 @@ a:hover {
 #homepage-services-grid {
   margin-block: var(--baseline);
   display: grid;
-  gap: calc(0.5 * var(--baseline));
+  gap: var(--baseline);
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 

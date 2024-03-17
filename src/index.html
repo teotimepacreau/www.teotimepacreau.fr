@@ -132,8 +132,6 @@ title: Développement web et projet numérique à Nantes
                   >
                 </div>
               </div>
-
-          
         </section>
         <section id="homepage-services" class="intersect">
           <div class="homepage-projets-titre-flexer">
@@ -249,6 +247,11 @@ title: Développement web et projet numérique à Nantes
     {% include "loadscripts.html"%}
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script>
+      // Grab the prefers reduced motion preference of the user.
+    let prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // SI L'UTILISATEUR N'A PAS ACTIVE prefers-reduced-motion alors on déroule l'animation
+    if (!prefersReducedMotion) {
       gsap.fromTo(
         ".intersect",
         {
@@ -324,6 +327,7 @@ title: Développement web et projet numérique à Nantes
           observer.observe(section);
         });
       });
+    }
     </script>
   </body>
 </html>

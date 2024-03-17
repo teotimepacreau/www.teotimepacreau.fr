@@ -1752,5 +1752,5 @@ tr {
 .homepage-projet-hidden {
   transform: translateX(-10dvw);
   opacity: 0;
-  transition: all .3s cubic-bezier(.64,1.15,.58,.91);
+  transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
 }

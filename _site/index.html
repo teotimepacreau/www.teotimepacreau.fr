@@ -439,6 +439,8 @@
         }
       );
 
+      
+
       let elementsToAnimate = document.querySelectorAll(".homepage-projets-grid-item");
 
       function hide() {
@@ -450,11 +452,17 @@
         });
       }
 
+      // EVITER QUE L'INTERSECTION OBSERVER SE DECLENCHE TROP TOT SUR MOBILE
+      function isMobile() {
+        return window.matchMedia("(max-width: 600px)").matches;
+      }
+      let rootMarginValue = isMobile() ? "-20%" : "-50%";
+
       // INTERSECTION OBSERVER
       const options = {
         root: null, // c'est l'élément qui est utilisée comme zone d'affichage pour évaluer la visibilité de la cible. Doit être un ancêtre de la cible. Par défaut "null" donc c'est le viewport.
         threshold: 0, //échelle de 0 à 1. 0 par défaut signifie que dès qu'on voit un micro bout de l'intersection ça se déclenche. 1 signifie qu'il vaut voir l'entièreté de l'intersection pour que ça se déclenche. 0.25 signifie qu'il faut voir 25% de la section pour que ça se déclenche.
-        rootMargin: "-50%", //applique une distance à partir de laquelle l'IntersectionObserve se déclenche, par défaut 0, là si on met -200px ça se déclenchera 200px AU DESSUS de la ligne. Marche que en px ou %. Marche aussi de la droite vers la gauche si on fait du sidescrolling.
+        rootMargin: rootMarginValue, //applique une distance à partir de laquelle l'IntersectionObserve se déclenche, par défaut 0, là si on met -200px ça se déclenchera 200px AU DESSUS de la ligne. Marche que en px ou %. Marche aussi de la droite vers la gauche si on fait du sidescrolling.
       };
 
       const observer = new IntersectionObserver(function (entries, observer) {
@@ -466,8 +474,7 @@
               x: '0dvh',
               opacity: 1,
             })
-            observer.unobserve(entry.target); //indispensable pour pas que l'animation se rejoue en remontant
-            
+            observer.unobserve(entry.target); //indispensable pour pas que l'animation se rejoue en remontant 
           }
         });
       }, options);

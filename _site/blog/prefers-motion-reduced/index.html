@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/style.css" />
+<!-- Auto detection of the RSS feed for RSS readers -->
+<link
+  rel="alternate"
+  href="/feed/feed.xml"
+  title="Flux RSS du blog de Téotime Pacreau"
+  type="application/atom+xml"
+/>
+<!--Favicon-->
+<link rel="icon" href="/favicon/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg" />
+<link rel="mask-icon" href="/favicon/favicon.svg" />
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: portrait"
+/>
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: landscape"
+/>
+<link rel="icon" type="image/x-icon" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg" />
+
+<!--Theme-->
+
+<meta
+  name="msapplication-TileColor"
+  content="#c3e2ff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="msapplication-TileColor"
+  content="#hsl(165, 51%, 18%)"
+  media="(prefers-color-scheme: dark)"
+/>
+
+<!--Social-->
+<link rel="me authn" href="https://twitter.com/teotimepacreau" />
+<link rel="me" href="https://mastodon.design/@teotimepacreau" />
+<meta name="generator" content="Eleventy" />
+
+
+<!-- open graph tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@teotimepacreau">
+<meta name="twitter:creator" content="@teotimepacreau">
+<meta name="twitter:image" content="https://www.teotimepacreau.fr/favicon/favicon.png">
+<meta property="twitter:title" content="Accessibilité &amp; animations : laisser la main à l&#39;utilisateur avec prefers-reduced-motion">
+<meta name="robots" content="max-image-preview:large">
+<meta name="description" content="Développement web et projet numérique à Nantes"> 
+<meta property="og:locale" content="fr_FR">
+<meta property="og:image:type" content="image/png">
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Teotime Pacreau : Développement web et projet numérique à Nantes" />
+<meta property="og:title" content="Accessibilité &amp; animations : laisser la main à l&#39;utilisateur avec prefers-reduced-motion" />
+<meta property="og:image" content="https://www.teotimepacreau.fr/favicon/favicon.png" />
+<meta property="og:description" content="Développement web et projet numérique à Nantes" />
+
+<meta content="Développement web et projet numérique à Nantes" name="description" />
+<meta name="topic" content="Numérique, web, développement, gestion de projet, management, UI, Indieweb">
+<meta name="keywords" content="Numérique, web, développement, frontend, backend, gestion de projet, management, UI, Indieweb"/>
+<meta name="author" content="Téotime Pacreau" />
+<meta name="owner" content="Téotime Pacreau">
+
+
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.teotimepacreau.fr/#website",
+      "url": "https://www.teotimepacreau.fr/",
+      "name": "Le site web personnel de Teotime Pacreau",
+      "description": "Management de projet et numérique à Nantes"
+    },
+    {
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage"
+      },
+      "isPartOf": {
+        "@id": "https://www.teotimepacreau.fr/#website"
+      },
+      "headline": "Accessibilité &amp; animations : laisser la main à l&#39;utilisateur avec prefers-reduced-motion",
+      "description": "Certains utilisateurs peuvent ressentir une gêne face aux animations des pages web. Prefers-reduced-motion détecte si l&#39;utilisateur a demandé au système de minimiser la quantité d&#39;animation ou de mouvement.",
+      "image": "",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Le site web personnel de Teotime Pacreau",
+        "url": "https://www.teotimepacreau.fr/#organization"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Teotime Pacreau"
+      },
+      "keywords": "accessibilité,animations,UX",
+      "datePublished": "2024-03-17"
+    }
+  ]
+}</script>
+
+<title>Accessibilité &amp; animations : laisser la main à l&#39;utilisateur avec prefers-reduced-motion</title>
+  </head>
+  <body>
+    <form tabindex="-1" class="color-picker" action="">
+    <fieldset tabindex="-1">
+      <legend class="visually-hidden">Pick a color scheme</legend>
+      <div id="light-group" class="color-select-group">
+        <label for="light">Light</label>
+        <input tabindex="-1" type="radio" name="theme" id="light">
+      </div>
+      <div id="dark-group" class="color-select-group">
+        <label for="dark">Dark</label>
+        <input tabindex="-1" type="radio" id="dark" name="theme">
+      </div>
+      <div id="eco-group" class="color-select-group">
+        <label for="eco">Eco</label>
+        <input tabindex="-1" type="radio" id="eco" name="theme">
+      </div>
+    </fieldset>
+  </form>
+    <div class="wrapper-post">
+      <div class="post-grid">
+        <header id="post-header">
+          <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"></path></svg>
+          <span class="sr-only">Menu</span>
+        </button>
+          <nav
+            class="navigation-flexer navigation-flexer-post"
+            id="primary-navigation"
+            data-visible="false"
+          >
+            <span class="navigation-announcer">NAVIGATION</span>
+            <ul class="menu" id="post-menu">
+              <li>
+                <a tabindex="0" href="../../index">HOME</a>
+                <!-- <a id="home" href="../index.html" aria-label="Home page"
+                      ><i class="ph-bold ph-house-simple"></i
+                    ></a> -->
+              </li>
+              <li><a tabindex="0" href="/curriculum">CV</a></li>
+              <li><a tabindex="0" href="/blog">BLOG</a></li>
+              <li><a tabindex="0" href="/projets">PROJETS</a></li>
+              <li><a tabindex="0" href="../../colophon">COLOPHON</a></li>
+            </ul>
+          </nav>
+        </header>
+        <aside><nav class="table-of-content">
+                <ol>
+                    
+                    <li><a href="#laisser-la-main-%C3%A0-l%E2%80%99utilisateur-concernant-l%E2%80%99affichage-des-animations">Laisser la main à l’utilisateur concernant l’affichage des animations</a>
+            		</li>
+
+                    <li><a href="#s%E2%80%99en-saisir-en-tant-que-d%C3%A9veloppeur">S’en saisir en tant que développeur</a>
+            		</li>
+
+                    <li><a href="#d%C3%A9monstration">Démonstration</a>
+            		</li>
+
+                    <li><a href="#sources">Sources</a>
+            		</li>
+                </ol>
+            </nav></aside>
+        <main class="post-main">
+          <article id="article-post">
+            <header>
+            <h1>Accessibilité &amp; animations : laisser la main à l&#39;utilisateur avec prefers-reduced-motion</h1>
+            <ul class="post-tags">
+              
+              <li>
+                <a class="tags-style" id="post-tags" href="/tags/accessibilite"
+                  >accessibilité</a
+                >
+              </li>
+              
+              <li>
+                <a class="tags-style" id="post-tags" href="/tags/animations"
+                  >animations</a
+                >
+              </li>
+              
+              <li>
+                <a class="tags-style" id="post-tags" href="/tags/ux"
+                  >UX</a
+                >
+              </li>
+              
+            </ul>
+            <time class="post-date">
+              Publié le :
+              <time datetime="2024-03-17"
+                >17 mars 2024</time
+              >
+            </time>
+            <p>Certains utilisateurs peuvent ressentir une gêne face aux animations des pages web. Prefers-reduced-motion détecte si l&#39;utilisateur a demandé au système de minimiser la quantité d&#39;animation ou de mouvement.</p>
+          </header>
+          <main>
+            <p>Le “Responsive Design” ne se limite plus à adapter l’affichage d’un site web au format desktop et mobile. Il est nécessaire de prendre en compte de nouveaux éléments :</p>
+<ul>
+<li>Être responsive à l’utilisateur : prendre en compte ses préférences avec, par exemple, <code>dark-mode/light-mode</code>, <code>prefers-reduced-motion</code>, <code>prefers-contrast</code>…</li>
+<li>Être responsive aux composants eux-mêmes : un composant carte peut être recomposée en fonction de la largeur d’écran disponible mais aussi de sa hauteur intrinsèque.</li>
+<li>Être responsive aux nouveaux appareils : smartphones pliables, montres connectées.
+Cette approche est appelée le “New Responsive Design”
+<img src="/img/new-responsive.png" alt="Graphique reprenant les éléments essentiels de l'approche New Responsive Design" title="Graphique reprenant les éléments essentiels de l'approche New Responsive Design"></li>
+</ul>
+<h2 id="laisser-la-main-%C3%A0-l%E2%80%99utilisateur-concernant-l%E2%80%99affichage-des-animations" tabindex="-1">Laisser la main à l’utilisateur concernant l’affichage des animations</h2>
+<p><code>prefers-reduced-motion</code> a été intégré entre 2018 et 2020 sur tous les navigateurs. C’est une préférence activable dans les paramètres du navigateurs, celle-ci prend deux états :</p>
+<ul>
+<li><code>reduced</code> : indique que l’utilisateur souhaitent que les interfaces minimisent le mouvement ou l’animation, de préférence au point où tous les mouvements non essentiels sont supprimés.</li>
+<li><code>no-preference</code> : indique que l’utilisateur n’a formulé aucune préférence. Cette valeur de mot clé est évaluée comme étant false dans le contexte booléen</li>
+</ul>
+<h2 id="s%E2%80%99en-saisir-en-tant-que-d%C3%A9veloppeur" tabindex="-1">S’en saisir en tant que développeur</h2>
+<p>Tout d’abord il est plutôt simple de simuler la préférence via navigateur mais la fonctionnalité est caché. Il convient d’ouvrir le Chrome Dev Inspector (CTRl+SHIFT+I) puis ouvrir le <code>...</code> du bandeau “Console” puis cliquer sur “More Tools” puis “Rendering”.</p>
+<p><video controls muted src="/img/activer-reduced-motion-navigateur.mp4" aria-label="Activer prefers-reduced-motion dans le navigateur" title="Activer prefers-reduced-motion dans le navigateur"></video></p>
+<p>Pour adapter le code en fonction de la préférence sélectionnée par l’utilisateur, il est possible de cibler via une requête CSS :</p>
+<pre><code>/*
+  Si l'utilisateur a exprimé le souhait, ne pas montrer l'animation sur les boutons.
+*/
+@media (prefers-reduced-motion: reduce) {
+  button {
+    animation: none;
+  }
+}
+
+/*
+  Si l'utilisateur n'a pas statué sur la préférence, montrer l'animation.
+*/
+@media (prefers-reduced-motion: no-preference) {
+  button {
+    /* `vibrate` keyframes are defined elsewhere */
+    animation: vibrate 0.3s linear infinite both;
+  }
+}
+</code></pre>
+<p>Il est également possible d’utiliser Javascript pour détecter la préference, et choisir de jouer en conséquence ou adapter les animations :</p>
+<pre><code>  // On attrape la préférence exprimée par l'utilisateur
+    let prefersReducedMotion = window.matchMedia(&quot;(prefers-reduced-motion: reduce)&quot;).matches;
+
+    // SI L'UTILISATEUR N'A PAS ACTIVÉ prefers-reduced-motion alors on déroule l'animation
+    if (!prefersReducedMotion) {
+      gsap.to(
+        &quot;.intersect&quot;,
+        {
+          y: &quot;-20dvh&quot;,
+          opacity: 0,
+          duration: 0.5,
+          ease: &quot;power2.out&quot;,
+        })
+    }
+</code></pre>
+<h2 id="d%C3%A9monstration" tabindex="-1">Démonstration</h2>
+<p><video controls muted src="/img/prefers-reduced-motion.mp4" aria-label="Démonstration de l'avant après du déroulement des animations en fonction de la préférence exprimée par l'utilisateur" title="Démonstration de l'avant après du déroulement des animations en fonction de la préférence exprimée par l'utilisateur"></video></p>
+<h2 id="sources" tabindex="-1">Sources</h2>
+<div id="dhrX_biPH8c" class="eleventy-plugin-youtube-embed" style="position:relative;width:100%;padding-top: 56.25%;"><iframe style="position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;" width="100%" height="100%" frameborder="0" title="Embedded YouTube video" src="https://www.youtube-nocookie.com/embed/dhrX_biPH8c" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p><a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C39.html/">https://www.w3.org/WAI/WCAG22/Techniques/css/C39.html/</a></p>
+<p><a href="https://web.dev/articles/prefers-reduced-motion?hl=fr/">https://web.dev/articles/prefers-reduced-motion?hl=fr/</a></p>
+
+          </main>
+          </article>
+        </main>
+        <footer id="footer" role="contentinfo">
+          
+  <ul>
+    <li><p id="me">Téotime Pacreau</p></li>
+    <li>
+      <a
+        href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site"
+        >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
+          >spam</span
+        >outlook.fr</a
+      >
+    </li>
+    <li>
+      <a class="rss" href="/feed/feed.xml">
+        <i class="ph ph-rss"></i>
+        <span>RSS</span>
+      </a>
+    </li>
+  </ul>
+  <ul id="links">
+    <li>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://github.com/teotimepacreau"
+        target="_blank"
+      >
+        <i class="ph ph-github-logo"></i>
+        <span>Github</span>
+      </a>
+    </li>
+    <li>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://mastodon.design/@teotimepacreau"
+        target="_blank"
+      >
+        <i class="ph ph-dots-nine"></i>
+        <span>Mastodon</span>
+      </a>
+    </li>
+    <li>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
+        target="_blank"
+      >
+        <i class="ph ph-linkedin-logo"></i>
+        <span>LinkedIn</span>
+      </a>
+    </li>
+  </ul>
+  <ul id="stats">
+    <li class="stat"><p class="stat-name">Score EcoIndex : A</p></li>
+    <li class="stat"><p class="stat-name">Score Lighthouse : 100</p></li>
+    <li class="stat">
+      <p class="stat-name">
+        Conformité :
+        <abbr title="Référentiel général d’amélioration de l’accessibilité"
+          >RGAA</abbr
+        >
+        100%
+      </p>
+    </li>
+  </ul>
+
+        </footer>
+        <!--Script pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
+        <script>
+          (function () {
+            const links = document.querySelectorAll(
+              "a[href^='https://'], a[href^='http://']"
+            );
+            const host = window.location.hostname;
+
+            const isInternalLink = (link) => new URL(link).hostname === host;
+
+            links.forEach((link) => {
+              if (isInternalLink(link)) return;
+
+              link.setAttribute("target", "_blank");
+              link.setAttribute("rel", "noopener");
+            });
+          })();
+        </script>
+      </div>
+    </div>
+    <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
+<script defer src="/scripts/nav.js"></script>
+<script fetchpriority="low" defer src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="/scripts/table.js"></script>  
+  </body>
+</html>

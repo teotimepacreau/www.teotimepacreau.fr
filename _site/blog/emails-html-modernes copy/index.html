@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/style.css" />
+<!-- Auto detection of the RSS feed for RSS readers -->
+<link
+  rel="alternate"
+  href="/feed/feed.xml"
+  title="Flux RSS du blog de Téotime Pacreau"
+  type="application/atom+xml"
+/>
+<!--Favicon-->
+<link rel="icon" href="/favicon/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg" />
+<link rel="mask-icon" href="/favicon/favicon.svg" />
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: portrait"
+/>
+<link
+  rel="apple-touch-startup-image"
+  href="/favicon/favicon.svg"
+  media="orientation: landscape"
+/>
+<link rel="icon" type="image/x-icon" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg" />
+
+<!--Theme-->
+
+<meta
+  name="msapplication-TileColor"
+  content="#c3e2ff"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="msapplication-TileColor"
+  content="#hsl(165, 51%, 18%)"
+  media="(prefers-color-scheme: dark)"
+/>
+
+<!--Social-->
+<link rel="me authn" href="https://twitter.com/teotimepacreau" />
+<link rel="me" href="https://mastodon.design/@teotimepacreau" />
+<meta name="generator" content="Eleventy" />
+
+
+<!-- open graph tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@teotimepacreau">
+<meta name="twitter:creator" content="@teotimepacreau">
+<meta name="twitter:image" content="https://www.teotimepacreau.fr/favicon/favicon.png">
+<meta property="twitter:title" content="Emails HTML modernes : en finir avec les tables">
+<meta name="robots" content="max-image-preview:large">
+<meta name="description" content="Développement web et projet numérique à Nantes"> 
+<meta property="og:locale" content="fr_FR">
+<meta property="og:image:type" content="image/png">
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Teotime Pacreau : Développement web et projet numérique à Nantes" />
+<meta property="og:title" content="Emails HTML modernes : en finir avec les tables" />
+<meta property="og:image" content="https://www.teotimepacreau.fr/favicon/favicon.png" />
+<meta property="og:description" content="Développement web et projet numérique à Nantes" />
+
+<meta content="Développement web et projet numérique à Nantes" name="description" />
+<meta name="topic" content="Numérique, web, développement, gestion de projet, management, UI, Indieweb">
+<meta name="keywords" content="Numérique, web, développement, frontend, backend, gestion de projet, management, UI, Indieweb"/>
+<meta name="author" content="Téotime Pacreau" />
+<meta name="owner" content="Téotime Pacreau">
+
+
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.teotimepacreau.fr/#website",
+      "url": "https://www.teotimepacreau.fr/",
+      "name": "Le site web personnel de Teotime Pacreau",
+      "description": "Management de projet et numérique à Nantes"
+    },
+    {
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage"
+      },
+      "isPartOf": {
+        "@id": "https://www.teotimepacreau.fr/#website"
+      },
+      "headline": "Emails HTML modernes : en finir avec les tables",
+      "description": "Comment mettre à jour ses pratiques de développement d&#39;emails HTML dans l&#39;environnement complexe et changeant des clients mails ?",
+      "image": "",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Le site web personnel de Teotime Pacreau",
+        "url": "https://www.teotimepacreau.fr/#organization"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Teotime Pacreau"
+      },
+      "keywords": "email,HTML,webmail",
+      "datePublished": "2023-12-13"
+    }
+  ]
+}</script>
+
+<title>Emails HTML modernes : en finir avec les tables</title>
+  </head>
+  <body>
+    <form tabindex="-1" class="color-picker" action="">
+    <fieldset tabindex="-1">
+      <legend class="visually-hidden">Pick a color scheme</legend>
+      <div id="light-group" class="color-select-group">
+        <label for="light">Light</label>
+        <input tabindex="-1" type="radio" name="theme" id="light">
+      </div>
+      <div id="dark-group" class="color-select-group">
+        <label for="dark">Dark</label>
+        <input tabindex="-1" type="radio" id="dark" name="theme">
+      </div>
+      <div id="eco-group" class="color-select-group">
+        <label for="eco">Eco</label>
+        <input tabindex="-1" type="radio" id="eco" name="theme">
+      </div>
+    </fieldset>
+  </form>
+    <div class="wrapper-post">
+      <div class="post-grid">
+        <header id="post-header">
+          <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"></path></svg>
+          <span class="sr-only">Menu</span>
+        </button>
+          <nav
+            class="navigation-flexer navigation-flexer-post"
+            id="primary-navigation"
+            data-visible="false"
+          >
+            <span class="navigation-announcer">NAVIGATION</span>
+            <ul class="menu" id="post-menu">
+              <li>
+                <a tabindex="0" href="../../index">HOME</a>
+                <!-- <a id="home" href="../index.html" aria-label="Home page"
+                      ><i class="ph-bold ph-house-simple"></i
+                    ></a> -->
+              </li>
+              <li><a tabindex="0" href="/curriculum">CV</a></li>
+              <li><a tabindex="0" href="/blog">BLOG</a></li>
+              <li><a tabindex="0" href="/projets">PROJETS</a></li>
+              <li><a tabindex="0" href="../../colophon">COLOPHON</a></li>
+            </ul>
+          </nav>
+        </header>
+        <aside><nav class="table-of-content">
+                <ol>
+                    
+                    <li><a href="#une-r%C3%A9volution-en-cours-dans-le-monde-du-d%C3%A9veloppement-des-emails">Une révolution en cours dans le monde du développement des emails</a>
+            		</li>
+
+                    <li><a href="#guide-de-d%C3%A9veloppement-moderne-d%E2%80%99email">Guide de développement moderne d’email</a>
+            
+                <ol>
+                    
+                    <li><a href="#stopper-les-table-layouts-et-float">Stopper les table layouts et float</a>
+            		</li>
+
+                    <li><a href="#%C3%A9l%C3%A9ments-html">Éléments HTML</a>
+            		</li>
+
+                    <li><a href="#appliquer-du-css">Appliquer du CSS</a>
+            		</li>
+
+                    <li><a href="#%C3%A9viter-les-r%C3%A9p%C3%A9titions-en-utilisant-le-m%C3%A9canisme-css-d%E2%80%99h%C3%A9ritage">Éviter les répétitions en utilisant le mécanisme CSS d’héritage</a>
+            		</li>
+
+                    <li><a href="#les-unit%C3%A9s">Les unités</a>
+            		</li>
+
+                    <li><a href="#fonts">Fonts</a>
+            		</li>
+
+                    <li><a href="#rendre-les-images-responsive">Rendre les images responsive</a>
+            		</li>
+
+                    <li><a href="#flexbox">Flexbox</a>
+            		</li>
+
+                    <li><a href="#position">Position</a>
+            		</li>
+
+                    <li><a href="#liens">Liens</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#cas-d%E2%80%99usage">Cas d’usage</a>
+            		</li>
+
+                    <li><a href="#sources">Sources</a>
+            		</li>
+                </ol>
+            </nav></aside>
+        <main class="post-main">
+          <article id="article-post">
+            <header>
+            <h1>Emails HTML modernes : en finir avec les tables</h1>
+            <ul class="post-tags">
+              
+              <li>
+                <a class="tags-style" id="post-tags" href="/tags/email"
+                  >email</a
+                >
+              </li>
+              
+              <li>
+                <a class="tags-style" id="post-tags" href="/tags/html"
+                  >HTML</a
+                >
+              </li>
+              
+              <li>
+                <a class="tags-style" id="post-tags" href="/tags/webmail"
+                  >webmail</a
+                >
+              </li>
+              
+            </ul>
+            <time class="post-date">
+              Publié le :
+              <time datetime="2023-12-13"
+                >13 décembre 2023</time
+              >
+            </time>
+            <p>Comment mettre à jour ses pratiques de développement d&#39;emails HTML dans l&#39;environnement complexe et changeant des clients mails ?</p>
+          </header>
+          <main>
+            <p>Le monde du développement d’emails est rempli d’inconsistences, de hacks, d’éléments HTML obsolètes, et de règles CSS abandonnées depuis longtemps.
+Les développeurs d’emails se retrouvent ainsi à devoir jongler entre des <code>&lt;tables&gt;</code> layouts, des <code>&lt;tr&gt;</code> et <code>&lt;td&gt;</code> (une façon de structurer le HTML en colonne et lignes comme on le ferait dans un tableau), les inline-styles CSS, <code>float</code> une propriété CSS qui a perdu de son usage, à juste titre, depuis l’arrivée de <code>flexbox</code> et <code>grid</code>.</p>
+<p>En théorie, le monde du développement d’emails devrait être simple car les emails ne sont rien de plus que des documents HTML, comme une page web, échangés entre nos clients mails. Cependant l’élément bloquant est bien cette dépendance aux clients mails qui ont tous des manières de différente de transformer le HTML en rendu visuel pour l’utilisateur.
+Le support de chaque client mail des règles CSS et du HTML est différent et a pris énormément de retard par rapport au développement web classique.</p>
+<p>Ainsi, si vous avez l’habitude d’utiliser des méthodes CSS modernes comme  <code>dark-mode</code>, <code>grid</code>, <code>@font-face</code> celles-ci sont soient :</p>
+<ul>
+<li>pas supportés du tout</li>
+<li>ne fonctionnent pas comme attendu au rendu</li>
+<li>ne sont pas supportés de la même façon entre les différents clients mails</li>
+</ul>
+<p>Le développement d’emails est donc devenu un casse tête où le développeur doit sans cesser vérifier si la règle CSS ou l’élément HTML utilisé est supporté grâce à des outils indispensables comme <a href="https://www.caniemail.com/">https://www.caniemail.com/</a> de <a href="https://www.hteumeuleu.fr/">Hteumeuleu</a>.</p>
+<p>Le peu d’effort mis par Google, Apple et Microsoft pour intégrer le support des nouveautés CSS et HTML s’explique par des raisons de <a href="https://www.darkreading.com/cyberattacks-data-breaches/attackers-use-unicode-html-to-bypass-email-security-tools">sécurité</a>, de <a href="https://www.linkedin.com/pulse/brief-update-email-client-wars-david-taitelbaum/">guerre commerciale</a>, et d’impossibilité à se mettre d’accord sur un <a href="https://medium.com/email-design/will-there-ever-be-an-html-email-standard-bf8a2b7f48d8">HTML email standard</a>. A titre d’exemple <a href="https://www.hteumeuleu.com/2020/outlook-rendering-engine/">Outlook utilise encore Word pour rendre les emails sur mobile (?)</a>.</p>
+<h2 id="une-r%C3%A9volution-en-cours-dans-le-monde-du-d%C3%A9veloppement-des-emails" tabindex="-1">Une révolution en cours dans le monde du développement des emails</h2>
+<p>Une révolution de la façon de développer des emails est en cours grâce à deux facteurs :</p>
+<ul>
+<li>la part d’utilisation des différents clients mails</li>
+<li>les récentes changements en terme de support des règles CSS/HTML des 3 principaux clients mails</li>
+</ul>
+<figure><img src="/img/part-de-marche-clients-mails.png" alt="Part de marché des différents clients mails"><figcaption>Graphique représentant les différentes par de marchés des clients mails</figcaption></figure>
+<p>Si l’on développe des emails, c’est avant tout pour qu’ils soient lus, et pour cela il est important d’avoir bien en tête les parts d’usages des différents clients mails car il est IMPOSSIBLE de développer des emails compatibles pour les dizaines de clients mails qui existent (certains clients mails encore actifs comme AOL ont des parts d’utilisation infimes).</p>
+<h2 id="guide-de-d%C3%A9veloppement-moderne-d%E2%80%99email" tabindex="-1">Guide de développement moderne d’email</h2>
+<p>Les préconisations ci-dessous s’appuient sur deux considérations pragmatiques :</p>
+<ul>
+<li>nous prenons en compte seulement les clients Apple Mail, Gmail et Outlook qui couvre ainsi 90% des lecteurs de mails dans le monde.</li>
+<li>nous utiliserons des règles CSS/HTML supportés à minima part 70% de tout les clients mails</li>
+</ul>
+<p>Ainsi tous les éléments ci-dessous sont compatibles et supportés pour les 2 conditions précédentes et devraient combler la grande majorité des besoins. Il s’agit de recommandations et ne constituent, en aucun cas, un guide exhaustif de la conception d’emails HTML.</p>
+<h3 id="stopper-les-table-layouts-et-float" tabindex="-1">Stopper les table layouts et float</h3>
+<p>Les table layouts dans les emails mènent à de nombreux problème d’accessibilité et de rendering.</p>
+<p>Outlook pour Windows est <a href="https://blocksedit.com/content-code/dealing-with-outlook/">la seule raison</a> pour laquelle on pourrait être tenté de continuer à utiliser les tables, mais il représente désormais moins de 3% de l’usage total des clients mails. Les divs sont désormais totalement supportées et simplifient grandement la structuration des emails.</p>
+<h3 id="%C3%A9l%C3%A9ments-html" tabindex="-1">Éléments HTML</h3>
+<p>Les divs, headings (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.), paragraphes (<code>&lt;p&gt;</code>), et les listes (<code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>) sont supportés partout.</p>
+<p>Il est donc possible de se passer totalement des <code>&lt;table&gt;</code> grâce aux divs ! Fini le besoin de structurer en colonnes et en lignes.</p>
+<p>Les élements HTML sémantiques ne sont pas supportés :</p>
+<ul>
+<li><code>&lt;article&gt;</code></li>
+<li><code>&lt;aside&gt;</code></li>
+<li><code>&lt;details&gt;</code></li>
+<li><code>&lt;figcaption&gt;</code></li>
+<li><code>&lt;figure&gt;</code></li>
+<li><code>&lt;footer&gt;</code></li>
+<li><code>&lt;header&gt;</code></li>
+<li><code>&lt;main&gt;</code></li>
+<li><code>&lt;mark&gt;</code></li>
+<li><code>&lt;nav&gt;</code></li>
+<li><code>&lt;section&gt;</code></li>
+<li><code>&lt;summary&gt;</code></li>
+<li><code>&lt;time&gt;</code></li>
+</ul>
+<h3 id="appliquer-du-css" tabindex="-1">Appliquer du CSS</h3>
+<p>Il n’est pas possible d’appliquer un style pour un fichier CSS externe via <code>&lt;link rel=&quot;stylesheet&quot; src=&quot;style.css&quot;&gt;</code> car le client mail ne le lira pas.</p>
+<p>Il faut donc se tourner vers deux méthodes CSS “traditionnelles” :</p>
+<ul>
+<li>les inline styles. Exemple : <code>&lt;p style=&quot;margin-top: 1rem !important; line-height: 1.5 !important;&quot;&gt;</code></li>
+<li><code>&lt;style&gt;</code></li>
+</ul>
+<p>Quelques points d’attention sur <code>&lt;style&gt;</code> :
+Si vous forwardez l’email, tous les <code>&lt;style&gt;</code> seront supprimés et leur style ne sera pas appliqué. Également les comptes tiers utilisant un client mail autre que celui propriétaire verront leur <code>&lt;style&gt;</code> tag supprimé.</p>
+<p>Ainsi, le seul style qui ne sera pas suprrimé est le inline style.</p>
+<p>Quel est l’intérêt d’utiliser le <code>&lt;style&gt;</code> tag alors ?
+Il permet d’appliquer des éléments généraux à tous le document HTML et évite les répétitions, donc pratique pour déclarer
+<a href="https://css-tricks.com/almanac/selectors/h/hover/">:hover</a>, les focus, un background-color sur la page… <code>!important</code> est requis pour passer outre un inline style.</p>
+<h3 id="%C3%A9viter-les-r%C3%A9p%C3%A9titions-en-utilisant-le-m%C3%A9canisme-css-d%E2%80%99h%C3%A9ritage" tabindex="-1">Éviter les répétitions en utilisant le mécanisme CSS d’héritage</h3>
+<p>Plutôt que de définir <code>font-family: &quot;Gill Sans&quot;, sans-serif;</code> à chaque fois que l’on pose un <code>&lt;p&gt;</code> il est plus pratique d’utiliser l’héritage :</p>
+<pre><code>&lt;body&gt;  &lt;div style=&quot;font-size:16px; font-family: system-ui;&quot;&gt;    &lt;!-- email content goes here --&gt;  &lt;/div&gt;&lt;/body&gt;
+</code></pre>
+<h3 id="les-unit%C3%A9s" tabindex="-1">Les unités</h3>
+<p>De longueur :
+Seuls les <code>rem</code> et les <code>px</code> sont supportés. On aura tendance à privilégier les <code>rem</code> pour leur accessibilité naturelle en cas de zoom.
+De couleur :
+Seuls <code>#fffff</code> et <code>rgb()</code> sont supportés.</p>
+<h3 id="fonts" tabindex="-1">Fonts</h3>
+<p><code>@font-face</code> n’est pas supporté, impossible donc d’utiliser une font de son choix. Il est impératif de passer par les <code>system-fonts</code>, des polices d’écriture incluses nativement dans les OS.</p>
+<p>Une règle à suivre de bonne pratique pour déclarer ses system-fonts :</p>
+<pre><code>font-family: “Custom Serif You Won’t Have”, Serif You Might Have, Serif Your System Almost Definitely has, serif;
+
+font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
+</code></pre>
+<p>Pour choisir la system-font qui correspond le mieux au design imaginé, essayez de choisir une system-font qui a une hauteur-de-x similaire.</p>
+<h3 id="rendre-les-images-responsive" tabindex="-1">Rendre les images responsive</h3>
+<p>Par défaut les images vont overflow, pour contrer cela :</p>
+<pre><code>&lt;div
+    class=&quot;img-block&quot;
+    style=&quot;overflow: hidden; margin-top: 2rem; border-radius: 0.5rem !important;&quot;&gt;
+        &lt;img
+          style=&quot;max-width: 100%; object-fit: cover;
+            display: block;&quot;
+          src=&quot;https://i.imgur.com/twfNOSU.jpg&quot;
+          alt=&quot;The Material Web Components website : a landing page explaining what is Material UI.&quot;
+        /&gt;
+    &lt;/div&gt;
+</code></pre>
+<p>Voici une illustration pratique de ce code :</p>
+<figure><img src="/img/email-images-responsives.png" alt="Images responsives dans les clients mails"><figcaption>Illustration d’utilisation d’images responsives grâce à la technique ci-dessus dans un client mail</figcaption></figure>
+<h3 id="flexbox" tabindex="-1">Flexbox</h3>
+<p>La flexbox est désormais supportée ! Très pratique pour afficher des images côte à côte ou créer des colonnes.
+<code>display: flex</code> et <code>column-gap</code> fonctionnent mais <code>flex-direction:column</code> et <code>flex-wrap: wrap</code> ne sont pas supportés dans GMAIL seulement. Ils fonctionnent dans les 2 autres clients.</p>
+<video controls>
+  <source src="/img/flexbox-email.mp4" alt="Vidéo illustration l'illustration de flexbox dans un client mail" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<h3 id="position" tabindex="-1">Position</h3>
+<p><code>position: relative</code> et <code>position: absolute</code> ne sont pas supportés du tout</p>
+<h3 id="liens" tabindex="-1">Liens</h3>
+<p>Les clients mails scannent les adresses emails et les numéros de téléphone dans le contenu de vos mails et les transforment automatiquement en liens soulignés bleus. Pour contrer ces styles par défaut il faut les wrapper dans des <code>&lt;a&gt;</code> et enlever le style par défaut.</p>
+<pre><code>&lt;a style=&quot;color: inherit; text-decoration: none;&quot; href=&quot;&quot;&gt;
+	some@example.com
+&lt;/a&gt;
+</code></pre>
+<h2 id="cas-d%E2%80%99usage" tabindex="-1">Cas d’usage</h2>
+<p>J’ai construit un site d’inscription et d’envoi de newsletter qui repose entièrement sur ces principes, voici le <a href="https://www.teotimepacreau.fr/projets/projetnewsletter/">lien du projet</a></p>
+<h2 id="sources" tabindex="-1">Sources</h2>
+<p><a href="https://dodov.dev/blog/why-does-email-development-have-to-suck/">https://dodov.dev/blog/why-does-email-development-have-to-suck/</a></p>
+<p><a href="https://www.hteumeuleu.com/blog/">https://www.hteumeuleu.com/blog/</a></p>
+<p><a href="https://www.caniemail.com/">https://www.caniemail.com/</a></p>
+
+          </main>
+          </article>
+        </main>
+        <footer id="footer" role="contentinfo">
+          
+  <ul>
+    <li><p id="me">Téotime Pacreau</p></li>
+    <li>
+      <a
+        href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis site"
+        >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
+          >spam</span
+        >outlook.fr</a
+      >
+    </li>
+    <li>
+      <a class="rss" href="/feed/feed.xml">
+        <i class="ph ph-rss"></i>
+        <span>RSS</span>
+      </a>
+    </li>
+  </ul>
+  <ul id="links">
+    <li>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://github.com/teotimepacreau"
+        target="_blank"
+      >
+        <i class="ph ph-github-logo"></i>
+        <span>Github</span>
+      </a>
+    </li>
+    <li>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://mastodon.design/@teotimepacreau"
+        target="_blank"
+      >
+        <i class="ph ph-dots-nine"></i>
+        <span>Mastodon</span>
+      </a>
+    </li>
+    <li>
+      <a
+        class="social-footer"
+        rel="me"
+        href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
+        target="_blank"
+      >
+        <i class="ph ph-linkedin-logo"></i>
+        <span>LinkedIn</span>
+      </a>
+    </li>
+  </ul>
+  <ul id="stats">
+    <li class="stat"><p class="stat-name">Score EcoIndex : A</p></li>
+    <li class="stat"><p class="stat-name">Score Lighthouse : 100</p></li>
+    <li class="stat">
+      <p class="stat-name">
+        Conformité :
+        <abbr title="Référentiel général d’amélioration de l’accessibilité"
+          >RGAA</abbr
+        >
+        100%
+      </p>
+    </li>
+  </ul>
+
+        </footer>
+        <!--Script pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
+        <script>
+          (function () {
+            const links = document.querySelectorAll(
+              "a[href^='https://'], a[href^='http://']"
+            );
+            const host = window.location.hostname;
+
+            const isInternalLink = (link) => new URL(link).hostname === host;
+
+            links.forEach((link) => {
+              if (isInternalLink(link)) return;
+
+              link.setAttribute("target", "_blank");
+              link.setAttribute("rel", "noopener");
+            });
+          })();
+        </script>
+      </div>
+    </div>
+    <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
+<script defer src="/scripts/nav.js"></script>
+<script fetchpriority="low" defer src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="/scripts/table.js"></script>  
+  </body>
+</html>

@@ -996,6 +996,10 @@ p > a {
 #article-post {
   max-width: 65ch;
 }
+
+#article-post img {
+  margin-top: calc(.5*var(--baseline));
+}
 #article-post > main > * + p {
   margin-top: calc(0.5 * var(--baseline));
 }

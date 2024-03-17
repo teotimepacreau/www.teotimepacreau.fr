@@ -5,12 +5,79 @@
 	
 	<link href="https://www.teotimepacreau.fr/feed/feed.xml" rel="self"/>
 	<link href="https://www.teotimepacreau.fr/"/>
-	<updated>2024-01-31T00:00:00Z</updated>
+	<updated>2024-03-17T00:00:00Z</updated>
 	<id>https://www.teotimepacreau.fr/</id>
 	<author>
 		<name>Téotime Pacreau</name>
 		<email>teotime.pac@outlook.fr</email>
 	</author>
+	
+	<entry>
+		<title>Accessibilité &amp; animations : laisser la main à l&#39;utilisateur avec prefers-reduced-motion</title>
+		<link href="https://www.teotimepacreau.fr/blog/prefers-motion-reduced/"/>
+		<updated>2024-03-17T00:00:00Z</updated>
+		<id>https://www.teotimepacreau.fr/blog/prefers-motion-reduced/</id>
+		<content type="html">&lt;p&gt;Le “Responsive Design” ne se limite plus à adapter l’affichage d’un site web au format desktop et mobile. Il est nécessaire de prendre en compte de nouveaux éléments :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Être responsive à l’utilisateur : prendre en compte ses préférences avec, par exemple, &lt;code&gt;dark-mode/light-mode&lt;/code&gt;, &lt;code&gt;prefers-reduced-motion&lt;/code&gt;, &lt;code&gt;prefers-contrast&lt;/code&gt;…&lt;/li&gt;
+&lt;li&gt;Être responsive aux composants eux-mêmes : un composant carte peut être recomposée en fonction de la largeur d’écran disponible mais aussi de sa hauteur intrinsèque.&lt;/li&gt;
+&lt;li&gt;Être responsive aux nouveaux appareils : smartphones pliables, montres connectées.
+Cette approche est appelée le “New Responsive Design”
+&lt;img src=&quot;https://www.teotimepacreau.fr/img/new-responsive.png&quot; alt=&quot;Graphique reprenant les éléments essentiels de l&#39;approche New Responsive Design&quot; title=&quot;Graphique reprenant les éléments essentiels de l&#39;approche New Responsive Design&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;laisser-la-main-%C3%A0-l%E2%80%99utilisateur-concernant-l%E2%80%99affichage-des-animations&quot; tabindex=&quot;-1&quot;&gt;Laisser la main à l’utilisateur concernant l’affichage des animations&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;prefers-reduced-motion&lt;/code&gt; a été intégré entre 2018 et 2020 sur tous les navigateurs. C’est une préférence activable dans les paramètres du navigateurs, celle-ci prend deux états :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;reduced&lt;/code&gt; : indique que l’utilisateur souhaitent que les interfaces minimisent le mouvement ou l’animation, de préférence au point où tous les mouvements non essentiels sont supprimés.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;no-preference&lt;/code&gt; : indique que l’utilisateur n’a formulé aucune préférence. Cette valeur de mot clé est évaluée comme étant false dans le contexte booléen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;s%E2%80%99en-saisir-en-tant-que-d%C3%A9veloppeur&quot; tabindex=&quot;-1&quot;&gt;S’en saisir en tant que développeur&lt;/h2&gt;
+&lt;p&gt;Tout d’abord il est plutôt simple de simuler la préférence via navigateur mais la fonctionnalité est caché. Il convient d’ouvrir le Chrome Dev Inspector (CTRl+SHIFT+I) puis ouvrir le &lt;code&gt;...&lt;/code&gt; du bandeau “Console” puis cliquer sur “More Tools” puis “Rendering”.&lt;/p&gt;
+&lt;p&gt;&lt;video controls=&quot;&quot; muted=&quot;&quot; src=&quot;https://www.teotimepacreau.fr/img/activer-reduced-motion-navigateur.mp4&quot; aria-label=&quot;Activer prefers-reduced-motion dans le navigateur&quot; title=&quot;Activer prefers-reduced-motion dans le navigateur&quot;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;Pour adapter le code en fonction de la préférence sélectionnée par l’utilisateur, il est possible de cibler via une requête CSS :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/*
+  Si l&#39;utilisateur a exprimé le souhait, ne pas montrer l&#39;animation sur les boutons.
+*/
+@media (prefers-reduced-motion: reduce) {
+  button {
+    animation: none;
+  }
+}
+
+/*
+  Si l&#39;utilisateur n&#39;a pas statué sur la préférence, montrer l&#39;animation.
+*/
+@media (prefers-reduced-motion: no-preference) {
+  button {
+    /* `vibrate` keyframes are defined elsewhere */
+    animation: vibrate 0.3s linear infinite both;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Il est également possible d’utiliser Javascript pour détecter la préference, et choisir de jouer en conséquence ou adapter les animations :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  // On attrape la préférence exprimée par l&#39;utilisateur
+    let prefersReducedMotion = window.matchMedia(&amp;quot;(prefers-reduced-motion: reduce)&amp;quot;).matches;
+
+    // SI L&#39;UTILISATEUR N&#39;A PAS ACTIVÉ prefers-reduced-motion alors on déroule l&#39;animation
+    if (!prefersReducedMotion) {
+      gsap.to(
+        &amp;quot;.intersect&amp;quot;,
+        {
+          y: &amp;quot;-20dvh&amp;quot;,
+          opacity: 0,
+          duration: 0.5,
+          ease: &amp;quot;power2.out&amp;quot;,
+        })
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;d%C3%A9monstration&quot; tabindex=&quot;-1&quot;&gt;Démonstration&lt;/h2&gt;
+&lt;p&gt;&lt;video controls=&quot;&quot; muted=&quot;&quot; src=&quot;https://www.teotimepacreau.fr/img/prefers-reduced-motion.mp4&quot; aria-label=&quot;Démonstration de l&#39;avant après du déroulement des animations en fonction de la préférence exprimée par l&#39;utilisateur&quot; title=&quot;Démonstration de l&#39;avant après du déroulement des animations en fonction de la préférence exprimée par l&#39;utilisateur&quot;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dhrX_biPH8c/&quot;&gt;https://www.youtube.com/watch?v=dhrX_biPH8c/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.w3.org/WAI/WCAG22/Techniques/css/C39.html/&quot;&gt;https://www.w3.org/WAI/WCAG22/Techniques/css/C39.html/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://web.dev/articles/prefers-reduced-motion?hl=fr/&quot;&gt;https://web.dev/articles/prefers-reduced-motion?hl=fr/&lt;/a&gt;&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Tour d&#39;horizon des CMS Headless basés sur Git</title>
@@ -382,9 +449,9 @@ Chaque étape est cliquable, pour révéler des informations en profondeur.&lt;/
 	
 	<entry>
 		<title>Emails HTML modernes : en finir avec les tables</title>
-		<link href="https://www.teotimepacreau.fr/blog/emails-html-modernes/"/>
+		<link href="https://www.teotimepacreau.fr/blog/emails-html-modernes%20copy/"/>
 		<updated>2023-12-13T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/emails-html-modernes/</id>
+		<id>https://www.teotimepacreau.fr/blog/emails-html-modernes%20copy/</id>
 		<content type="html">&lt;p&gt;Le monde du développement d’emails est rempli d’inconsistences, de hacks, d’éléments HTML obsolètes, et de règles CSS abandonnées depuis longtemps.
 Les développeurs d’emails se retrouvent ainsi à devoir jongler entre des &lt;code&gt;&amp;lt;tables&amp;gt;&lt;/code&gt; layouts, des &lt;code&gt;&amp;lt;tr&amp;gt;&lt;/code&gt; et &lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt; (une façon de structurer le HTML en colonne et lignes comme on le ferait dans un tableau), les inline-styles CSS, &lt;code&gt;float&lt;/code&gt; une propriété CSS qui a perdu de son usage, à juste titre, depuis l’arrivée de &lt;code&gt;flexbox&lt;/code&gt; et &lt;code&gt;grid&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;En théorie, le monde du développement d’emails devrait être simple car les emails ne sont rien de plus que des documents HTML, comme une page web, échangés entre nos clients mails. Cependant l’élément bloquant est bien cette dépendance aux clients mails qui ont tous des manières de différente de transformer le HTML en rendu visuel pour l’utilisateur.

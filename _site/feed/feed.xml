@@ -33,7 +33,7 @@ Cette approche est appelée le “New Responsive Design”
 &lt;/ul&gt;
 &lt;h2 id=&quot;s%E2%80%99en-saisir-en-tant-que-d%C3%A9veloppeur&quot; tabindex=&quot;-1&quot;&gt;S’en saisir en tant que développeur&lt;/h2&gt;
 &lt;p&gt;Tout d’abord il est plutôt simple de simuler la préférence via navigateur mais la fonctionnalité est caché. Il convient d’ouvrir le Chrome Dev Inspector (CTRl+SHIFT+I) puis ouvrir le &lt;code&gt;...&lt;/code&gt; du bandeau “Console” puis cliquer sur “More Tools” puis “Rendering”.&lt;/p&gt;
-&lt;p&gt;&lt;video controls=&quot;&quot; muted=&quot;&quot; src=&quot;https://www.teotimepacreau.fr/img/activer-reduced-motion-navigateur.mp4&quot; aria-label=&quot;Activer prefers-reduced-motion dans le navigateur&quot; title=&quot;Activer prefers-reduced-motion dans le navigateur&quot;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;&lt;video controls=&quot;&quot; muted=&quot;&quot; src=&quot;https://www.teotimepacreau.fr/img/activer-reduced-motion-navigateur.mp4&quot; aria-description=&quot;Activer prefers-reduced-motion dans le navigateur&quot; title=&quot;Activer prefers-reduced-motion dans le navigateur&quot;&gt;&lt;/video&gt;&lt;/p&gt;
 &lt;p&gt;Pour adapter le code en fonction de la préférence sélectionnée par l’utilisateur, il est possible de cibler via une requête CSS :&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;/*
   Si l&#39;utilisateur a exprimé le souhait, ne pas montrer l&#39;animation sur les boutons.
@@ -71,7 +71,7 @@ Cette approche est appelée le “New Responsive Design”
     }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&quot;d%C3%A9monstration&quot; tabindex=&quot;-1&quot;&gt;Démonstration&lt;/h2&gt;
-&lt;p&gt;&lt;video controls=&quot;&quot; muted=&quot;&quot; src=&quot;https://www.teotimepacreau.fr/img/prefers-reduced-motion.mp4&quot; aria-label=&quot;Démonstration de l&#39;avant après du déroulement des animations en fonction de la préférence exprimée par l&#39;utilisateur&quot; title=&quot;Démonstration de l&#39;avant après du déroulement des animations en fonction de la préférence exprimée par l&#39;utilisateur&quot;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;&lt;video controls=&quot;&quot; muted=&quot;&quot; src=&quot;https://www.teotimepacreau.fr/img/prefers-reduced-motion.mp4&quot; aria-description=&quot;Démonstration de l&#39;avant après du déroulement des animations en fonction de la préférence exprimée par l&#39;utilisateur&quot; title=&quot;Démonstration de l&#39;avant après du déroulement des animations en fonction de la préférence exprimée par l&#39;utilisateur&quot;&gt;&lt;/video&gt;&lt;/p&gt;
 &lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dhrX_biPH8c/&quot;&gt;https://www.youtube.com/watch?v=dhrX_biPH8c/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.w3.org/WAI/WCAG22/Techniques/css/C39.html/&quot;&gt;https://www.w3.org/WAI/WCAG22/Techniques/css/C39.html/&lt;/a&gt;&lt;/p&gt;

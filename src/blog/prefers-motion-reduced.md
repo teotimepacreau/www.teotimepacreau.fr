@@ -38,7 +38,7 @@ Cette approche est appelée le "New Responsive Design"
 ## S'en saisir en tant que développeur
 Tout d'abord il est plutôt simple de simuler la préférence via navigateur mais la fonctionnalité est caché. Il convient d'ouvrir le Chrome Dev Inspector (CTRl+SHIFT+I) puis ouvrir le `...` du bandeau "Console" puis cliquer sur "More Tools" puis "Rendering".
 
-<video controls muted src="/img/activer-reduced-motion-navigateur.mp4" aria-label="Activer prefers-reduced-motion dans le navigateur" title="Activer prefers-reduced-motion dans le navigateur"></video>
+<video controls muted src="/img/activer-reduced-motion-navigateur.mp4" aria-description="Activer prefers-reduced-motion dans le navigateur" title="Activer prefers-reduced-motion dans le navigateur"></video>
 
 Pour adapter le code en fonction de la préférence sélectionnée par l'utilisateur, il est possible de cibler via une requête CSS :
 
@@ -81,7 +81,7 @@ Il est également possible d'utiliser Javascript pour détecter la préference, 
 ```
 
 ## Démonstration
-<video controls muted src="/img/prefers-reduced-motion.mp4" aria-label="Démonstration de l'avant après du déroulement des animations en fonction de la préférence exprimée par l'utilisateur" title="Démonstration de l'avant après du déroulement des animations en fonction de la préférence exprimée par l'utilisateur"></video>
+<video controls muted src="/img/prefers-reduced-motion.mp4" aria-description="Démonstration de l'avant après du déroulement des animations en fonction de la préférence exprimée par l'utilisateur" title="Démonstration de l'avant après du déroulement des animations en fonction de la préférence exprimée par l'utilisateur"></video>
 
 ## Sources 
 <https://www.youtube.com/watch?v=dhrX_biPH8c/>

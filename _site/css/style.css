@@ -388,20 +388,13 @@ pre::-webkit-scrollbar-thumb {
   .homepage-nav ul {
     height: 100%;
     writing-mode: tb-rl;
-    transform: rotate(-180deg);
+    transform: rotate(-180deg)!important;
     border-left: 2px solid var(--txt);
   }
   .homepage-nav li {
     height: 100%;
     border-right: 2px solid var(--txt);
     padding: calc(0.25 * var(--baseline));
-  }
-}
-
-/*---MENU DESKTOP---*/
-@media (width>1000px) {
-  .post-grid .menu {
-    padding-top: 0;
   }
 }
 
@@ -414,11 +407,6 @@ pre::-webkit-scrollbar-thumb {
 }
 .menu li {
   line-height: 1rem;
-}
-
-/*--- HAMBURGER MENU ---*/
-.mobile-nav-toggle {
-  display: none;
 }
 
 /*---LINKS---*/
@@ -1004,6 +992,10 @@ p > a {
   margin-top: calc(0.5 * var(--baseline));
 }
 
+#article-post > main a {
+  word-break: break-all;
+}
+
 #article-post h2,
 h3,
 h4 {
@@ -1052,12 +1044,17 @@ blockquote > p {
 }
 
 .post-date {
+  margin-top: calc(.125*var(--baseline))!important;
   display: block;
+  opacity: .85;
+  font-size: .85rem;
 }
 .post-tags {
+  opacity: .85;
+  font-size: .85rem;
   display: flex;
   flex-wrap: wrap;
-  gap: calc(0.5 * var(--baseline));
+  gap: calc(0.25 * var(--baseline));
 }
 
 .post-tags li {
@@ -1066,9 +1063,9 @@ blockquote > p {
 
 .tags-style {
   display: inline-block;
-  padding-inline: calc(0.3 * var(--baseline));
-  padding-block: calc(0.1 * var(--baseline));
-  border-radius: 0.3rem;
+  padding-inline: calc(0.15 * var(--baseline));
+  padding-block: calc(0.04 * var(--baseline));
+  border-radius: 0.2rem;
   color: var(--bg);
   background-color: var(--txt);
 }
@@ -1076,6 +1073,7 @@ blockquote > p {
 .tags-style::before {
   content: "# ";
 }
+
 
 article > p > a:hover {
   text-decoration-thickness: 3px;
@@ -1661,6 +1659,8 @@ tr {
   }
 
   #primary-navigation {
+    content-visibility: auto;
+    contain-intrinsic-size: 100vh 70vw;
     z-index: 1000;
     position: fixed;
     inset: 0 30% 0 0;
@@ -1668,7 +1668,7 @@ tr {
     background-color: hsla(0, 0%, 42%, 0.3);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
-    transform: translateX(-100%);
+    transform: translateX(-100%) rotate(0);
     transition: transform 0.3s ease-out;
   }
 

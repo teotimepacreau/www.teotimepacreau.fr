@@ -113,9 +113,6 @@
           <ul class="menu">
             <li>
               <a tabindex="0" href="../../index">HOME</a>
-              <!-- <a id="home" href="../index.html" aria-label="Home page"
-                  ><i class="ph-bold ph-house-simple"></i
-                ></a> -->
             </li>
             <li><a tabindex="0" href="/../curriculum">CV</a></li>
             <li><a tabindex="0" href="../../blog">BLOG</a></li>
@@ -134,7 +131,7 @@
 <h3>Commande / Objectifs</h3>
 <p>Site d'inscription à une newsletter consacrée au web-design. Envoi d'un mail de bienvenue à l'inscription. Chaque mois, une édition de la newsletter est envoyée via une tâche automatisée. Les mails envoyés peuvent-être lus dans le client mail ou dans le navigateur. Il est possible de se désinscrire de la newsletter à tout moment.</p>
 <div id="project-img-wrapper">
-    <video controls muted src="../../img/newsletter-full.mp4" aria-label="showcase of the functionalities of the newsletter website"></video>
+    <video controls muted src="../../img/newsletter-full.mp4" title="showcase of the functionalities of the newsletter website"></video>
 </div>
 <h3>Technologies utilisées</h3>
 <ul>
@@ -149,11 +146,11 @@
 <ol id="projet-ol">
     <li><strong>Logique de souscription :</strong> les utilisateurs s'inscrivent sur la page d'accueil en remplissant le formulaire. lastName, firstName, et email sont ajoutés à la BDD SQL. Une notification visuelle confirme la souscription à l'utilisateur, si l'email est déjà présent dans la BDD une notification visuelle informe de l'erreur. Un email de bienvenue est envoyé au nouvel inscrit.</li>
     <div id="project-img-wrapper">
-        <video controls muted src="../../img/newsletter-subscribe.mp4" aria-label="subscription function"></video>
+        <video controls muted src="../../img/newsletter-subscribe.mp4" title="subscription function"></video>
     </div>
     <li><strong>Logique de désinscription :</strong> les utilisateurs peuvent se désinscrire sur la page /unsubscribe. L'utilisateur entre son mail dans le formulaire de désinscription, la BDD se met à jour en conséquence. Une vérification s'opère avec une requête SQL pour vérifier si le mail est dans la BDD, si ce n'est pas le cas une notification visuelle informe l'utilisateur.</li>
     <div id="project-img-wrapper">
-        <video controls muted src="../../img/newsletter-unsubscribe.mp4" aria-label="unsubscription function"></video>
+        <video controls muted src="../../img/newsletter-unsubscribe.mp4" title="unsubscription function"></video>
     </div>
     <li><strong>UI :</strong> conception du style "bento". Intégration d'une vidéo montrant le contenu de la newsletter sur la page d'accueil. Possible d'afficher les derniers sujets de la newsletter dans "Issues".</li>
     <li><strong>Composition dynamique de la newsletter :</strong> une requête SQL est effectuée dans la BDD pour personnaliser le prénom et le nom du destinataire.</li>

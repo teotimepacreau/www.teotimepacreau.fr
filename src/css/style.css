@@ -339,6 +339,9 @@ pre::-webkit-scrollbar-thumb {
 }
 
 /*---NAVIGATION---*/
+.mobile-nav-toggle {
+  display: none;
+}
 .navigation-flexer {
   display: flex;
   align-items: center;

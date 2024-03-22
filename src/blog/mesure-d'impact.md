@@ -1,12 +1,12 @@
 ---
-title: 'Comment réaliser la mesure dʼimpact de son entreprise gratuitement et pourquoi ?'
-date: '2023-01-13'
+title: "Comment réaliser la mesure d'impact de son entreprise gratuitement et pourquoi ?"
+date: "2023-01-13"
 description: "La mesure d'impact va devenir obligatoire, des plateformes gratuites permettent de s'y préparer. Produire et partager les données à impact est incontournable pour mieux communiquer en externe, susciter l'adhésion des collaborateurs en interne et mesurer le progrès."
 tags: 
-  - 'Mesure dʼimpact'
-  - 'Entrepreneuriat'
-  - 'RSE'
-  - 'Outils'
+  - "Mesure d'impact"
+  - "Entrepreneuriat"
+  - "RSE"
+  - "Outils"
 layout: postlayout.html
 type: post
 eleventyComputed:

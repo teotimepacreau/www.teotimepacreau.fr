@@ -4,6 +4,9 @@ const markdownItAnchor = require('markdown-it-anchor')
 const pluginTOC = require('eleventy-plugin-nesting-toc');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const embeds = require("eleventy-plugin-embed-everything");
+// OPENGRAPH IMAGES
+const fs = require('fs');
+const EleventyPluginOgImage = require('eleventy-plugin-og-image');
 
 // ADD STRUCTURED DATA FOR GOOGLE RICH RESULTS
 const schema = require("@quasibit/eleventy-plugin-schema");
@@ -14,6 +17,21 @@ let figoptions = {
 };
 
 module.exports = function(eleventyConfig) {
+  
+  // AUTO GENERATED OPENGRAPH IMAGES
+  eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    satoriOptions: {
+      fonts: [
+        {
+          name: 'Satoshi-Variable',
+          data: fs.readFileSync('./src/fonts/Satoshi-Variable.woff'),
+          weight: 500,
+          style: 'normal',
+        },
+      ],
+    },
+  });
+
   // EMBED VIDEO IN MARKDOWN
   eleventyConfig.addPlugin(embeds);
   
@@ -61,7 +79,6 @@ module.exports = function(eleventyConfig) {
   });
   // ... Eleventy date en FR
   eleventyConfig.addFilter("date", require("./src/filters/date.js"));
-  // ... Img lazy laoding
 
   // ... copy paster folders in _site
   eleventyConfig.addPassthroughCopy("src/css/");
@@ -72,11 +89,14 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/favicon/");
   eleventyConfig.addPassthroughCopy("src/filters/");
   eleventyConfig.addPassthroughCopy("src/scripts/");
+  eleventyConfig.addPassthroughCopy("src/og-images/");
+
   // ... posts collection
   eleventyConfig.addCollection('posts', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/blog/*.md');
   })
-// ... Monitor instant change for CSS
+
+  // ... Monitor instant change for CSS
   eleventyConfig.addWatchTarget("src/css/");
 
 return {

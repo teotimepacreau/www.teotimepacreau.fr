@@ -5,7 +5,8 @@ const pluginTOC = require('eleventy-plugin-nesting-toc');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const embeds = require("eleventy-plugin-embed-everything");
 // OPENGRAPH IMAGES
-const fs = require('fs');
+const fs = require('node:fs');
+const path = require('node:path')
 const EleventyPluginOgImage = require('eleventy-plugin-og-image');
 
 // ADD STRUCTURED DATA FOR GOOGLE RICH RESULTS
@@ -20,6 +21,8 @@ module.exports = function(eleventyConfig) {
   
   // AUTO GENERATED OPENGRAPH IMAGES
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    outputDir: "_site/og-images",
+    urlPath: "/og-images/",
     satoriOptions: {
       fonts: [
         {
@@ -90,6 +93,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/filters/");
   eleventyConfig.addPassthroughCopy("src/scripts/");
   eleventyConfig.addPassthroughCopy("src/og-images/");
+  eleventyConfig.addPassthroughCopy("_site/og-images/");
+
 
   // ... posts collection
   eleventyConfig.addCollection('posts', function(collectionApi) {
@@ -106,7 +111,7 @@ return {
     output: '_site',
   },
   // Control which files Eleventy will process
-  templateFormats: ['md', 'njk', 'html'],
+  templateFormats: ["md", "njk", "html"],
   // Pre-process *.md files with:
   markdownTemplateEngine: 'njk',
   // Pre-process *.html files with:

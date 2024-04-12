@@ -24,7 +24,7 @@ title: Développement web et management de projets numériques à Nantes
       <main id="homepage-hero">
         <div id="homepage-profil" class="intersect">
           <img
-            loading="lazy"
+            loading="eager"
             src="/img/profil_mobile_59.webp"
             alt="Mon visage"
             height="59"
@@ -58,15 +58,56 @@ title: Développement web et management de projets numériques à Nantes
             <hr />
           </div>
           <div id="homepage-projets-grid">
+
+            <div class="homepage-projets-grid-item">
+              <div class="homepage-projets-grid-item__left">
+                <img
+            loading="eager"
+            src="/img/mairies_mobile_169.webp"
+            alt="Vue de la page d'accueil de mon site de mairie"
+            height="111"
+            width="169"
+            srcset="/img/mairies_mobile_169.webp 169w, /img/mairies_desktop_1142.webp 1142w"
+            sizes="(max-width: 600px) 169px, 1142px"
+          />
+                <a
+                  class="homepage-projets-link projets-btn-mobile"
+                  href="/projets/projetmairies/"
+                  ><button class="homepage-projets-btn" tabindex="-1">
+                    Découvrir ↗
+                  </button></a
+                >
+              </div>
+              <div class="homepage-projets-grid-item__right">
+                <ul>
+                  <li class="homepage-projets-tags">SvelteKit</li>
+                  <li class="homepage-projets-tags">TinaCMS</li>
+                  <li class="homepage-projets-tags">Fastify</li>
+                </ul>
+                <div class="homepage-projets-grid-item__right__titleanddesc">
+                  <span>Site web de Mairie administrable par CMS</span>
+                </div>
+                <a
+                  class="homepage-projets-link projets-btn-desktop"
+                  href="/projets/projetmairies/"
+                  ><button class="homepage-projets-btn" tabindex="-1">
+                    Découvrir ↗
+                  </button></a
+                >
+              </div>
+            </div>
+
               <div class="homepage-projets-grid-item">
                 <div class="homepage-projets-grid-item__left">
                   <img
-                    loading="lazy"
-                    width="169"
-                    height="81"
-                    src="/img/bookshelf_mini.webp"
-                    alt="Miniature de mon site web fullstack The Bookshelf"
-                  />
+            loading="lazy"
+            src="/img/bookshelf_mobile_168.webp"
+            alt="Vue de la page d'accueil de mon site de réservation de livres"
+            height="80"
+            width="168"
+            srcset="/img/bookshelf_mobile_168.webp 168w, /img/bookshelf_desktop_1142.webp 1142w"
+            sizes="(max-width: 600px) 168px, 1142px"
+          />
                   <a
                     class="homepage-projets-link projets-btn-mobile"
                     href="/projets/projetbookshelf/"
@@ -97,12 +138,14 @@ title: Développement web et management de projets numériques à Nantes
               <div class="homepage-projets-grid-item">
                 <div class="homepage-projets-grid-item__left">
                   <img
-                    loading="lazy"
-                    width="169"
-                    height="81"
-                    src="/img/feuillu_mini.webp"
-                    alt="Miniature de mon site web de newsletter"
-                  />
+            loading="lazy"
+            src="/img/feuillu_mobile_168.webp"
+            alt="Vue de la page d'accueil de mon site de newsletter"
+            height="80"
+            width="168"
+            srcset="/img/feuillu_mobile_168.webp 168w, /img/feuillu_desktop_1142.webp 1142w"
+            sizes="(max-width: 600px) 168px, 1142px"
+          />
 
                   <a
                     class="homepage-projets-link projets-btn-mobile"
@@ -304,9 +347,9 @@ title: Développement web et management de projets numériques à Nantes
 
       // INTERSECTION OBSERVER
       const options = {
-        root: null, // c'est l'élément qui est utilisée comme zone d'affichage pour évaluer la visibilité de la cible. Doit être un ancêtre de la cible. Par défaut "null" donc c'est le viewport.
-        threshold: 0, //échelle de 0 à 1. 0 par défaut signifie que dès qu'on voit un micro bout de l'intersection ça se déclenche. 1 signifie qu'il vaut voir l'entièreté de l'intersection pour que ça se déclenche. 0.25 signifie qu'il faut voir 25% de la section pour que ça se déclenche.
-        rootMargin: rootMarginValue, //applique une distance à partir de laquelle l'IntersectionObserve se déclenche, par défaut 0, là si on met -200px ça se déclenchera 200px EN DESSOUS de la ligne. Marche que en px ou %. Marche aussi de la droite vers la gauche si on fait du sidescrolling.
+        root: null,
+        threshold: 0,
+        rootMargin: rootMarginValue
       };
 
       const observer = new IntersectionObserver(function (entries, observer) {

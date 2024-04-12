@@ -1745,4 +1745,8 @@ tr {
   .travail-titre-poste {
     font-weight: 600;
   }
+  /* INDISPENSABLE POUR PAS QUE LE MENU ROTATE EN DIMINUANT LARGEUR DE LA PAGE */
+  .menu-anim {
+    transform: rotate(0deg)!important;
+  }
 }

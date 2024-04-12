@@ -1,0 +1,62 @@
+---
+title: Développement d'un site de Mairie facile à administrer et plaisant à utiliser
+layout: projetlayout.html
+---
+<h2>Développement d'un site de Mairie facile à administrer et plaisant à utiliser</h2>
+<div id="project-img-wrapper">
+    <a target="_blank" href="https://mairies.teotimepacreau.fr/"><img src="../../img/mairies-projet.png" loading="lazy" width="600" height="300" alt="Vue de la page d'accueil du site de mairie"></a>
+</div>
+<h3>Rôle</h3>
+<p>Développeur du projet, intégration d'un design pré-existant élaboré par <a href="https://timothee.goguely.com/">Timothée Goguely</a></p>
+
+<h3>Commande / Objectifs </h3>
+<p>Création d'un site de commune. Chaque page du site peut-être créée, modifiée, supprimée via l'interface d'administration. Interface d'administration accessible & claire. Tout le contenu interne est recherchable via la barre de recherche. Formulaire de contact. Transitions fluides entre les pages.</p>
+
+<h3>Technologies utilisées</h3>
+<ul>
+    <li>Frontend : SvelteKit, HTML, TailwindCSS, Javascript, Pagefind</li>
+    <li>Backend : NodeJS, Fastify, TinaCMS</li>
+    <li>Déploiement : Fly.io, Vercel</li>
+</ul>
+
+<h3>Fonctionnalités</h3>
+<div id="project-img-wrapper">
+    <video width="603" height="339" controls muted src="../../img/mairies-showcase.mp4" title="Démonstration des fonctionnalités du site"></video>
+</div>
+<ol id="projet-ol">
+    <li><strong>Responsive :</strong> adapté à la navigation sur mobile.</li>
+    <li><strong>Administration simple & claire du site :</strong> permet à n'importe quelle personne de créer/modifier/supprimer toutes les pages</li>
+    <div id="project-img-wrapper">
+        <video width="603" height="339" controls muted src="../../img/mairies-showcase.mp4" title="Création d'un article via TinaCMS et résultat sur le site"></video>
+    </div>
+    <li><strong>Recherche interne :</strong> tout le contenu du site est accessible via la barre de recherche.</li>
+    <div id="project-img-wrapper">
+        <video width="603" height="339" controls muted src="../../img/mairies-pagefind.mp4" title="Requête via la barre de recherche interne"></video>
+    </div>
+    <li><strong>Amélioration de l'expérience utilisateur via la pagination :</strong> pour éviter d'afficher une trop longue liste d'actualités, j'ai fait appel au composant "Pagination" de la librairie <a target="_blank" href="https://ui.shadcn.com/">Shadcn-UI</a>.</li>
+    <div id="project-img-wrapper">
+        <video width="603" height="339" controls muted src="../../img/mairies-pagination.mp4" title="Démonstration des fonctionnalités du site"></video>
+    </div>
+    <li><strong>Formulaire de contact :</strong> le formulaire adressé est transféré directement sur le mail de l'administrateur.</li>
+    <div id="project-img-wrapper">
+        <video width="603" height="339" controls muted src="../../img/mairies-contact.mp4" title="Remplissage du formulaire et envoi"></video>
+    </div>
+</ol>
+<h3>Ce que j'ai appris</h3>
+<ul>
+    <li>Utiliser un framework frontend : SvelteKit</li>
+    <li>Implémenter un CMS Headless</li>
+    <li>Requêter une API GraphQL</li>
+    <li>Utiliser Tailwind et travailler avec un Design System existant</li>
+    <li>Faire de l'amélioration progressive avec un menu hamburger qui n'a pas besoin de Javascript en utilisant la Popover API</li>
+    <li>Faire appel à un composant externe d'une librarie UI</li>
+    <li>Travailler avec des composants Svelte pour éviter les répétitions</li>
+    <li>Customiser Svelte pour générer un site statique</li>
+    <li>Appliquer les layouts partagé de SvelteKit</li>
+    <li>Générer du HTML à partir de Markdown dans SvelteKit</li>
+</ul>
+<h3>Lien du projet et code source</h3>
+<ul>
+    <li><strong>Projet en ligne : </strong><a target="_blank" href="https://mairies.teotimepacreau.fr/">Mon projet déployé "Mairies"</a></li>
+    <li><strong>Code source du projet : </strong><a target="_blank" href="https://github.com/teotimepacreau/Mairies-Sveltekit">Lien Github</a></li>
+</ul>

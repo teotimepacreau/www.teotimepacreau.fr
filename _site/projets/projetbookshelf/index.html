@@ -52,13 +52,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@teotimepacreau">
 <meta name="twitter:creator" content="@teotimepacreau">
-<meta property="twitter:title" content="Construction du backend et du frontend d&#39;une bibliothèque de réservation de livres">
+<meta property="twitter:title" content="Conception d&#39;un site de réservation de livres">
 <meta name="robots" content="max-image-preview:large">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image:type" content="image/png">
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Teotime Pacreau : Développement web et management de projets numériques à Nantes" />
-<meta property="og:title" content="Construction du backend et du frontend d&#39;une bibliothèque de réservation de livres" />
+<meta property="og:title" content="Conception d&#39;un site de réservation de livres" />
 <meta property="og:description" content="Développement web et management de projets numériques à Nantes" />
 <meta content="Développement web et management de projets numériques à Nantes" name="description" />
 <meta name="topic" content="Numérique, web, développement, gestion de projet, management, UI, Indieweb">
@@ -66,12 +66,12 @@
 <meta name="author" content="Téotime Pacreau" />
 <meta name="owner" content="Téotime Pacreau">
 
-<meta property="og:image" content="/og-images/projets-projetbookshelf.png" />
+<meta property="og:image" content="/og-images/zNxWL4RUd6.png" />
 
 
 
 
-<title>Construction du backend et du frontend d&#39;une bibliothèque de réservation de livres</title>
+<title>Conception d&#39;un site de réservation de livres</title>
   </head>
   <body>
     <form tabindex="-1" class="color-picker" action="">
@@ -118,7 +118,7 @@
           </ul>
         </nav>
       </header>
-      <main class="projet-layout"><h2>Construction du backend et du frontend d'une bibliothèque de réservation de livres</h2>
+      <main class="projet-layout"><h2>Conception d'un site de réservation de livres</h2>
 <div id="project-img-wrapper">
     <a target="_blank" href="https://bookshelf.teotimepacreau.fr/"><img src="../../img/bookshelf.png" loading="lazy" width="600" height="300" alt="Homepage of the bookshelf organizer website : a friendly UI filled with a list of books"></a>
 </div>
@@ -126,7 +126,7 @@
 <p>Développeur et designer du projet</p>
 
 <h3>Commande / Objectifs </h3>
-<p>Site de visualisation et de gestion des réservations d'une bibliothèque de livres. Il est possible de rechercher, de filtrer et de trier les résultats. Les résultats sont paginés pour une meilleure lisibilité. L'administrateur peut se connecter pour ajouter des livres. Tous les utilisateurs peuvent réserver des livres.</p>
+<p>Site de visualisation et de gestion des réservations d'une bibliothèque de livres. Il est possible de rechercher, filtrer et trier les résultats. Les résultats sont paginés pour une meilleure lisibilité. L'administrateur peut se connecter pour ajouter des livres. Tous les utilisateurs peuvent réserver des livres.</p>
 
 <h3>Technologies utilisées</h3>
 <ul>
@@ -137,55 +137,50 @@
 
 <h3>Fonctionnalités</h3>
 <ol id="projet-ol">
-    <li><strong>Conception de l'UI et responsive :</strong> j'ai conçu l'interface en partant des usages pour qu'elle soit sobre et fonctionnelle. Adaptation à la navigation sur mobile.</li>
-    <li><strong>Base de données :</strong> à l'origine il s'agit d'un export CSV de mes livres sur l'application Goodreads (Goodreads ne fournissant pas d'API). J'ai transformé ce fichier CSV en BDD SQLite grâce aux fonctionnalités bash de SQLite.</li>
-    <li><strong>Retrouver l'image de couverture de chaque livre :</strong> L'export CSV de Goodreads ne fournit pas les images de couverture des livres. J'ai donc utilisé une libraire de "data scrapping" qui récupère l'image de couverture de chaque livre sur Amazon via l'ISBN. <a target="_blank" href="https://github.com/teotimepacreau/bookshelf/blob/v2/backend/controllers/getBookCovers.js">voir getBookCovers.js</a></li>
-    <li><strong>Requêtage de la BDD et transfert des données au frontend :</strong> requête SQL pour croiser les données de tous les livres avec leurs images de couvertures correspondantes. Envoi des données au frontend. <a target="_blank" href="https://github.com/teotimepacreau/bookshelf/blob/v2/backend/controllers/passBookDataToFront.js">voir passBookDataToFront.js</a></li>
-    <li><strong>Composition dynamique des "templates" de livres au moyen de "HTML template" :</strong> <a target="_blank" href="https://github.com/teotimepacreau/bookshelf/blob/v2/frontend/utils/displayBooks.js">voir displayBooks.js</a></li>
+    <li><strong>Conception de l'UI et responsive :</strong> j'ai conçu l'interface en partant des usages pour qu'elle soit sobre et fonctionnelle. Adaptée à la navigation sur mobile.</li>
+    <li><strong>Base de données :</strong> à l'origine il s'agit d'un export CSV de livres depuis l'application Goodreads (Goodreads ne fournissant pas d'API). J'ai transformé ce fichier CSV en BDD SQLite.</li>
+    <li><strong>Retrouver et associer l'image de couverture de chaque livre :</strong> L'export CSV de Goodreads ne fournit pas les images de couverture des livres. J'ai donc utilisé une librairie de "web scrapping" qui récupère l'image de couverture de chaque livre sur Amazon. </li>
+    <li><strong>Transfert des données du backend au frontend :</strong> création d'une API d'envoi des données.
 
     <li><strong>Barre de recherche :</strong></li>
     <div id="project-img-wrapper">
-        <video controls muted src="../../img/bookshelf-recherche.mp4" title="Search function"></video>
+        <video width="603" height="339" controls muted src="../../img/bookshelf-recherche.mp4" title="Search function"></video>
     </div>
 
     <li><strong>Filtre :</strong> classement des résultats par note moyenne</li>
     <div id="project-img-wrapper">
-        <video controls muted src="../../img/bookshelf-filtre.mp4" title="Filter function"></video>
+        <video width="603" height="339" controls muted src="../../img/bookshelf-filtre.mp4" title="Filter function"></video>
     </div>
 
     <li><strong>Tri :</strong></li>
     <div id="project-img-wrapper">
-        <video controls muted src="../../img/bookshelf-tri.mp4" title="Filter function"></video>
+        <video width="603" height="339" controls muted src="../../img/bookshelf-tri.mp4" title="Filter function"></video>
     </div>
 
-    <li><strong>Connexion et ajout de livre :</strong> système d'authentification administrateur via session-cookie. L'administrateur à l'authorisation d'ajouter un livre à la collection.</li>
+    <li><strong>Connexion et ajout de livre :</strong> mise en place d'un système de connexion administrateur. L'administrateur à l'autorisation d'ajouter un livre à la collection via un formulaire.</li>
     <div id="project-img-wrapper">
-        <video controls muted src="../../img/bookshelf-login.mp4" title="Login and adding book"></video>
+        <video width="603" height="339" controls muted src="../../img/bookshelf-login.mp4" title="Login and adding book"></video>
     </div>
 
     <li><strong>Réservations :</strong> l'utilisateur peut ajouter dans son panier un livre et le réserver en sélectionnant une date de rendu.</li>
     <div id="project-img-wrapper">
         <video controls muted src="../../img/bookshelf-reservation.mp4" title="Reservation book"></video>
     </div>
-    
-
-
-    <li><strong>Déploiement :</strong> afin d'héberger la BDD SQLite j'ai choisi de déployer tout le backend sur <a target="_blank" href="https://fly.io/">Fly.io</a>. Le frontend est déployé sur <a target="_blank" href="https://vercel.com">Vercel</a>.</li>
 </ol>
 <h3>Ce que j'ai appris</h3>
 <ul>
-    <li>Séparer le frontend et le backend en dossiers différents dès les débuts du développement.</li>
+    <li>Séparer le frontend et le backend en dossiers différents dès le début du développement.</li>
     <li>Passer les données du backend au frontend grâce aux routes</li>
     <li>Utiliser <a target="_blank" href="https://vitejs.dev/">Vite</a> pour bénéficier du Hot Module Replacement, du bundling et de la logique d'importer tous les modules dans un seul fichier JS</li>
     <li>Travailler avec les ES Modules</li>
-    <li>Charger de façon asynchrone les ES Modules et mes scripts grâce à `import('')`</li>
+    <li>Charger de façon asynchrone les ES Modules et les scripts</li>
     <li>Comprendre et réparer les erreurs CORS (origin, method, credentials...)</li>
     <li>Utiliser les fonctions pre-handler sur le serveur pour s'assurer que seul un utilisateur authentifié a l'autorisation de faire une POST request</li>
     <li>Différencier BasicAuth, SessionAuth et JWT</li>
-    <li>Construire un système de login via les secure-session-cookies, authentifier != autoriser</li>
+    <li>Construire un système de login via les secure-session-cookies, différence entre authentification et autorisation</li>
     <li>Animations liés au scroll en pur CSS (Scroll-progress-timeline)</li>
     <li>Animations au changement de page en CSS (ViewTransitionsAPI)</li>
-    <li>Savoir quand utiliser ou une modale</li>
+    <li>Savoir quand utiliser ou non une modale</li>
 </ul>
 <h3>Lien du projet et code source</h3>
 <ul>
@@ -252,6 +247,6 @@
     </div>
     <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
 <script defer src="/scripts/nav.js"></script>
-<script fetchpriority="low" defer src="https://unpkg.com/@phosphor-icons/web"></script>
+<script fetchpriority="low" defer src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web"></script>
   </body>
 </html>

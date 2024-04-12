@@ -52,13 +52,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@teotimepacreau">
 <meta name="twitter:creator" content="@teotimepacreau">
-<meta property="twitter:title" content="Construction du frontend et du backend d&#39;une newsletter">
+<meta property="twitter:title" content="Construction d&#39;un site d&#39;inscription et d&#39;envoi de newsletter">
 <meta name="robots" content="max-image-preview:large">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image:type" content="image/png">
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Teotime Pacreau : Développement web et management de projets numériques à Nantes" />
-<meta property="og:title" content="Construction du frontend et du backend d&#39;une newsletter" />
+<meta property="og:title" content="Construction d&#39;un site d&#39;inscription et d&#39;envoi de newsletter" />
 <meta property="og:description" content="Développement web et management de projets numériques à Nantes" />
 <meta content="Développement web et management de projets numériques à Nantes" name="description" />
 <meta name="topic" content="Numérique, web, développement, gestion de projet, management, UI, Indieweb">
@@ -66,12 +66,12 @@
 <meta name="author" content="Téotime Pacreau" />
 <meta name="owner" content="Téotime Pacreau">
 
-<meta property="og:image" content="/og-images/projets-projetnewsletter.png" />
+<meta property="og:image" content="/og-images/B4VE2I8D2n.png" />
 
 
 
 
-<title>Construction du frontend et du backend d&#39;une newsletter</title>
+<title>Construction d&#39;un site d&#39;inscription et d&#39;envoi de newsletter</title>
   </head>
   <body>
     <form tabindex="-1" class="color-picker" action="">
@@ -118,7 +118,7 @@
           </ul>
         </nav>
       </header>
-      <main class="projet-layout"><h2>Construction du frontend et du backend d'un site de newsletter</h2>
+      <main class="projet-layout"><h2>Construction d'un site d'inscription et d'envoi de newsletter. Développement d'email.</h2>
 <div id="project-img-wrapper">
     <a target="_blank" href="https://feuillu-newsletter.teotimepacreau.fr/"><img src="../../img/newsletter.png" loading="lazy" width="600" height="300" alt="Homepage of the newsletter subscription website : a bento UI with a subscription form aside"></a>
 </div>
@@ -128,7 +128,7 @@
 <h3>Commande / Objectifs</h3>
 <p>Site d'inscription à une newsletter consacrée au web-design. Envoi d'un mail de bienvenue à l'inscription. Chaque mois, une édition de la newsletter est envoyée via une tâche automatisée. Les mails envoyés peuvent-être lus dans le client mail ou dans le navigateur. Il est possible de se désinscrire de la newsletter à tout moment.</p>
 <div id="project-img-wrapper">
-    <video controls muted src="../../img/newsletter-full.mp4" title="showcase of the functionalities of the newsletter website"></video>
+    <video width="603" height="339" controls muted src="../../img/newsletter-full.mp4" title="showcase of the functionalities of the newsletter website"></video>
 </div>
 <h3>Technologies utilisées</h3>
 <ul>
@@ -141,19 +141,19 @@
 </ul>
 <h3>Fonctionnalités</h3>
 <ol id="projet-ol">
-    <li><strong>Logique de souscription :</strong> les utilisateurs s'inscrivent sur la page d'accueil en remplissant le formulaire. lastName, firstName, et email sont ajoutés à la BDD SQL. Une notification visuelle confirme la souscription à l'utilisateur, si l'email est déjà présent dans la BDD une notification visuelle informe de l'erreur. Un email de bienvenue est envoyé au nouvel inscrit.</li>
+    <li><strong>Logique de souscription :</strong> les utilisateurs s'inscrivent sur la page d'accueil en remplissant le formulaire. Les données sont enregistrées dans une base de données SQL. Une notification visuelle confirme la souscription à l'utilisateur, si l'email est déjà présent dans la BDD une notification visuelle informe de l'erreur. Un email de bienvenue est envoyé au nouvel inscrit.</li>
     <div id="project-img-wrapper">
-        <video controls muted src="../../img/newsletter-subscribe.mp4" title="subscription function"></video>
+        <video width="603" height="339" controls muted src="../../img/newsletter-subscribe.mp4" title="subscription function"></video>
     </div>
     <li><strong>Logique de désinscription :</strong> les utilisateurs peuvent se désinscrire sur la page /unsubscribe. L'utilisateur entre son mail dans le formulaire de désinscription, la BDD se met à jour en conséquence. Une vérification s'opère avec une requête SQL pour vérifier si le mail est dans la BDD, si ce n'est pas le cas une notification visuelle informe l'utilisateur.</li>
     <div id="project-img-wrapper">
-        <video controls muted src="../../img/newsletter-unsubscribe.mp4" title="unsubscription function"></video>
+        <video width="603" height="339" controls muted src="../../img/newsletter-unsubscribe.mp4" title="unsubscription function"></video>
     </div>
-    <li><strong>UI :</strong> conception du style "bento". Intégration d'une vidéo montrant le contenu de la newsletter sur la page d'accueil. Possible d'afficher les derniers sujets de la newsletter dans "Issues".</li>
+    <li><strong>UI :</strong> conception du style "bento". Adaptation responsive mobile. Intégration d'une vidéo montrant le contenu de la newsletter sur la page d'accueil. Possible d'afficher les derniers sujets de la newsletter dans "Issues".</li>
     <li><strong>Composition dynamique de la newsletter :</strong> une requête SQL est effectuée dans la BDD pour personnaliser le prénom et le nom du destinataire.</li>
     <li><strong>Envoi régulier de la newsletter :</strong> un Node Cronjob automatise l'envoi par mail chaque mois.</li>
     <li><strong>Permettre au client d'afficher la newsletter dans son navigateur :</strong> une route Express prend en paramètre la requête pour savoir quel mail elle doit afficher.</li>
-    <li><strong>Déploiement :</strong> afin de déployer la BDD SQLite j'ai choisi <a target="_blank" href="https://fly.io/">fly.io</a>, la BDD locale SQLite est répliquée sur le serveur dans les Volumes.</li>
+    <li><strong>Déploiement :</strong> afin de déployer la BDD SQLite j'ai choisi <a target="_blank" href="https://fly.io/">fly.io</a>, la BDD locale SQLite est répliquée sur le serveur.</li>
 </ol>
 <h3>Ce que j'ai appris</h3>
 <ul>
@@ -229,6 +229,6 @@
     </div>
     <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
 <script defer src="/scripts/nav.js"></script>
-<script fetchpriority="low" defer src="https://unpkg.com/@phosphor-icons/web"></script>
+<script fetchpriority="low" defer src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web"></script>
   </body>
 </html>

@@ -628,10 +628,10 @@ Chaque étape est cliquable, pour révéler des informations en profondeur.&lt;/
 	</entry>
 	
 	<entry>
-		<title>Emails HTML modernes : en finir avec les tables</title>
-		<link href="https://www.teotimepacreau.fr/blog/emails-html-modernes%20copy/"/>
+		<title>Emails HTML modernes : en finir avec les &lt;table&gt;</title>
+		<link href="https://www.teotimepacreau.fr/blog/emails-html-modernes/"/>
 		<updated>2023-12-13T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/emails-html-modernes%20copy/</id>
+		<id>https://www.teotimepacreau.fr/blog/emails-html-modernes/</id>
 		<content type="html">&lt;p&gt;Le monde du développement d’emails est rempli d’inconsistences, de hacks, d’éléments HTML obsolètes, et de règles CSS abandonnées depuis longtemps.
 Les développeurs d’emails se retrouvent ainsi à devoir jongler entre des &lt;code&gt;&amp;lt;tables&amp;gt;&lt;/code&gt; layouts, des &lt;code&gt;&amp;lt;tr&amp;gt;&lt;/code&gt; et &lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt; (une façon de structurer le HTML en colonne et lignes comme on le ferait dans un tableau), les inline-styles CSS, &lt;code&gt;float&lt;/code&gt; une propriété CSS qui a perdu de son usage, à juste titre, depuis l’arrivée de &lt;code&gt;flexbox&lt;/code&gt; et &lt;code&gt;grid&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;En théorie, le monde du développement d’emails devrait être simple car les emails ne sont rien de plus que des documents HTML, comme une page web, échangés entre nos clients mails. Cependant l’élément bloquant est bien cette dépendance aux clients mails qui ont tous des manières de différente de transformer le HTML en rendu visuel pour l’utilisateur.

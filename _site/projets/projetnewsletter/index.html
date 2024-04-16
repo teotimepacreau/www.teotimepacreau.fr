@@ -52,13 +52,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@teotimepacreau">
 <meta name="twitter:creator" content="@teotimepacreau">
-<meta property="twitter:title" content="Construction d&#39;un site d&#39;inscription et d&#39;envoi de newsletter">
+<meta property="twitter:title" content="Développement d&#39;un site d&#39;inscription et d&#39;envoi de newsletter. Intégration d&#39;email HTML responsive">
 <meta name="robots" content="max-image-preview:large">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image:type" content="image/png">
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Teotime Pacreau : Développement web et management de projets numériques à Nantes" />
-<meta property="og:title" content="Construction d&#39;un site d&#39;inscription et d&#39;envoi de newsletter" />
+<meta property="og:title" content="Développement d&#39;un site d&#39;inscription et d&#39;envoi de newsletter. Intégration d&#39;email HTML responsive" />
 <meta property="og:description" content="Développement web et management de projets numériques à Nantes" />
 <meta content="Développement web et management de projets numériques à Nantes" name="description" />
 <meta name="topic" content="Numérique, web, développement, gestion de projet, management, UI, Indieweb">
@@ -66,12 +66,12 @@
 <meta name="author" content="Téotime Pacreau" />
 <meta name="owner" content="Téotime Pacreau">
 
-<meta property="og:image" content="/og-images/B4VE2I8D2n.png" />
+<meta property="og:image" content="/og-images/39tYOwiQei.png" />
 
 
 
 
-<title>Construction d&#39;un site d&#39;inscription et d&#39;envoi de newsletter</title>
+<title>Développement d&#39;un site d&#39;inscription et d&#39;envoi de newsletter. Intégration d&#39;email HTML responsive</title>
   </head>
   <body>
     <form tabindex="-1" class="color-picker" action="">
@@ -118,7 +118,7 @@
           </ul>
         </nav>
       </header>
-      <main class="projet-layout"><h2>Construction d'un site d'inscription et d'envoi de newsletter. Développement d'email.</h2>
+      <main class="projet-layout"><h2>Développement d'un site de newsletter & intégration d'email HTML responsive.</h2>
 <div class="project-img-wrapper">
     <a target="_blank" href="https://feuillu-newsletter.teotimepacreau.fr/"><img src="../../img/newsletter.png" loading="eager" width="600" height="300" alt="Homepage of the newsletter subscription website : a bento UI with a subscription form aside"></a>
 </div>
@@ -126,30 +126,23 @@
 <p>Développeur et designer du projet</p>
 
 <h3>Commande / Objectifs</h3>
-<p>Site d'inscription à une newsletter consacrée au web-design. Envoi d'un mail de bienvenue à l'inscription. Chaque mois, une édition de la newsletter est envoyée via une tâche automatisée. Les mails envoyés peuvent-être lus dans le client mail ou dans le navigateur. Il est possible de se désinscrire de la newsletter à tout moment.</p>
+<p>Création d'un site d'inscription et d'envoi d'une newsletter consacrée au web-design. Intégration d'email HTML responsive. Chaque mois, la newsletter est envoyée via une tâche automatisée. Les mails envoyés peuvent-être lus dans le client mail ou dans le navigateur. Il est possible de se désinscrire de la newsletter à tout moment.</p>
 <div class="project-img-wrapper">
-    <video width="603" height="339" controls muted src="../../img/newsletter-full.mp4" title="showcase of the functionalities of the newsletter website"></video>
+    <video width="603" height="339" controls muted src="../../img/newsletter-showcase.mp4" title="showcase of the functionalities of the newsletter website"></video>
 </div>
 <h3>Technologies utilisées</h3>
 <ul>
-    <li>Base de données SQLite et requêtes SQL</li>
-    <li>Express</li>
-    <li>NodeJS</li>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>Javascript</li>
+    <li>Backend : BDD SQLite et requêtes SQL, Express, NodeJS</li>
+    <li>Frontend : HTML, CSS, Javascript</li>
 </ul>
 <h3>Fonctionnalités</h3>
 <ol id="projet-ol">
     <li><strong>Logique de souscription :</strong> les utilisateurs s'inscrivent sur la page d'accueil en remplissant le formulaire. Les données sont enregistrées dans une base de données SQL. Une notification visuelle confirme la souscription à l'utilisateur, si l'email est déjà présent dans la BDD une notification visuelle informe de l'erreur. Un email de bienvenue est envoyé au nouvel inscrit.</li>
-    <div class="project-img-wrapper">
-        <video width="603" height="339" controls muted src="../../img/newsletter-subscribe.mp4" title="subscription function"></video>
-    </div>
     <li><strong>Logique de désinscription :</strong> les utilisateurs peuvent se désinscrire sur la page /unsubscribe. L'utilisateur entre son mail dans le formulaire de désinscription, la BDD se met à jour en conséquence. Une vérification s'opère avec une requête SQL pour vérifier si le mail est dans la BDD, si ce n'est pas le cas une notification visuelle informe l'utilisateur.</li>
+    <li><strong>UI :</strong> intégration HTML de l'email. Adaptation responsive mobile.</li>
     <div class="project-img-wrapper">
-        <video width="603" height="339" controls muted src="../../img/newsletter-unsubscribe.mp4" title="unsubscription function"></video>
+        <img src="../../img/email-html.png" alt="Rendu de l'email dans la boite mail : un bloc de bienvenue et un bloc montrant l'étude de cas">
     </div>
-    <li><strong>UI :</strong> conception du style "bento". Adaptation responsive mobile. Intégration d'une vidéo montrant le contenu de la newsletter sur la page d'accueil. Possible d'afficher les derniers sujets de la newsletter dans "Issues".</li>
     <li><strong>Composition dynamique de la newsletter :</strong> une requête SQL est effectuée dans la BDD pour personnaliser le prénom et le nom du destinataire.</li>
     <li><strong>Envoi régulier de la newsletter :</strong> un Node Cronjob automatise l'envoi par mail chaque mois.</li>
     <li><strong>Permettre au client d'afficher la newsletter dans son navigateur :</strong> une route Express prend en paramètre la requête pour savoir quel mail elle doit afficher.</li>
@@ -224,7 +217,6 @@
   </ul>
   <ul id="stats">
     <li><a class="social-footer" href="https://www.ecoindex.fr/resultat/?id=0b81b2d0-19ae-413a-8fcc-dac29c36ea9e" target="_blank" title="Consulter le score ecoindex de creasit.fr (nouvel onglet)">Score ecoindex <span class="ecoindex">B</span></a>
-    
   </ul></footer>
     </div>
     <script fetchpriority="high" src="/scripts/colorTheme.js"></script>

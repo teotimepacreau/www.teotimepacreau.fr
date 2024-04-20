@@ -72,7 +72,7 @@
 
 
 
-<title>Développement web et management de projets numériques à Nantes</title>  
+<title>Développement web et management de projets numériques à Nantes</title>
   </head>
   <body>
     <form tabindex="-1" class="color-picker" action="">
@@ -128,155 +128,176 @@
         <section id="homepage-brief" class="intersect">
           <h2>Du code léger pour des projets web maîtrisés</h2>
           <article class="services">
-            <div>
-              <i class="ph ph-arrow-circle-right"></i>
-              <span>Conception de sites webs</span>
-            </div>
-            <div>
-              <i class="ph ph-arrow-circle-right"></i>
-              <span>Maintenance & refonte</span>
-            </div>
-            <div>
-              <i class="ph ph-arrow-circle-right"></i>
-              <span>Développement spécifique</span>
-            </div>
+            <ul>
+              <li>
+                <i class="ph ph-arrow-circle-right"></i>
+                <span>Conception de sites webs</span>
+              </li>
+              <li>
+                <i class="ph ph-arrow-circle-right"></i>
+                <span>Maintenance & refonte</span>
+              </li>
+              <li>
+                <i class="ph ph-arrow-circle-right"></i>
+                <span>Développement spécifique</span>
+              </li>
+            </ul>
           </article>
         </section>
         <section id="homepage-projets" class="intersect">
-          <div class="homepage-projets-titre-flexer">
+          <header class="homepage-projets-titre-flexer">
             <h2>Projets</h2>
             <hr />
-          </div>
-          <div id="homepage-projets-grid">
+          </header>
 
-            <div class="homepage-projets-grid-item">
-              <div class="homepage-projets-grid-item__left">
-                <img
-            loading="eager"
-            src="/img/mairies_mobile_169.webp"
-            alt="Vue de la page d'accueil de mon site de mairie"
-            height="111"
-            width="169"
-            srcset="/img/mairies_mobile_169.webp 169w, /img/mairies_desktop_1142.webp 1142w"
-            sizes="(max-width: 600px) 169px, 1142px"
-          />
-                <a
-                  class="homepage-projets-link projets-btn-mobile"
-                  href="/projets/projetmairies/"
-                  ><button class="homepage-projets-btn" tabindex="-1">
-                    Découvrir ↗
-                  </button></a
-                >
-              </div>
-              <div class="homepage-projets-grid-item__right">
-                <ul>
-                  <li class="homepage-projets-tags">SvelteKit</li>
-                  <li class="homepage-projets-tags">TinaCMS</li>
-                  <li class="homepage-projets-tags">Fastify</li>
-                </ul>
-                <div class="homepage-projets-grid-item__right__titleanddesc">
-                  <span>Site web de Mairie administrable par CMS</span>
-                </div>
-                <a
-                  class="homepage-projets-link projets-btn-desktop"
-                  href="/projets/projetmairies/"
-                  ><button class="homepage-projets-btn" tabindex="-1">
-                    Découvrir ↗
-                  </button></a
-                >
-              </div>
+          <article class="homepage-projets-grid-item">
+            <div class="homepage-projets-grid-item__left">
+              <img
+                loading="eager"
+                src="/img/mairies_mobile_169.webp"
+                alt="Vue de la page d'accueil de mon site de mairie"
+                height="111"
+                width="169"
+                srcset="
+                  /img/mairies_mobile_169.webp    169w,
+                  /img/mairies_desktop_1142.webp 1142w
+                "
+                sizes="(max-width: 600px) 169px, 1142px"
+              />
+              <button
+                class="homepage-projets-btn projets-btn-mobile"
+                tabindex="-1"
+              >
+                <a class="homepage-projets-link" href="/projets/projetmairies/">
+                  Découvrir ↗
+                </a>
+              </button>
             </div>
+            <div class="homepage-projets-grid-item__right">
+              <ul>
+                <li class="homepage-projets-tags">SvelteKit</li>
+                <li class="homepage-projets-tags">TinaCMS</li>
+                <li class="homepage-projets-tags">Fastify</li>
+              </ul>
+              <div class="homepage-projets-grid-item__right__titleanddesc">
+                <span>Site web de Mairie administrable par CMS</span>
+              </div>
+              <button
+                class="homepage-projets-btn projets-btn-desktop"
+                tabindex="-1"
+              >
+                <a class="homepage-projets-link" href="/projets/projetmairies/">
+                  Découvrir ↗
+                </a>
+              </button>
+            </div>
+          </article>
 
-              <div class="homepage-projets-grid-item">
-                <div class="homepage-projets-grid-item__left">
-                  <img
-            loading="lazy"
-            src="/img/bookshelf_mobile_168.webp"
-            alt="Vue de la page d'accueil de mon site de réservation de livres"
-            height="80"
-            width="168"
-            srcset="/img/bookshelf_mobile_168.webp 168w, /img/bookshelf_desktop_1142.webp 1142w"
-            sizes="(max-width: 600px) 168px, 1142px"
-          />
-                  <a
-                    class="homepage-projets-link projets-btn-mobile"
-                    href="/projets/projetbookshelf/"
-                    ><button class="homepage-projets-btn" tabindex="-1">
-                      Découvrir ↗
-                    </button></a
-                  >
-                </div>
-                <div class="homepage-projets-grid-item__right">
-                  <ul>
-                    <li class="homepage-projets-tags">Vite</li>
-                    <li class="homepage-projets-tags">Fastify</li>
-                    <li class="homepage-projets-tags">SQLite</li>
-                  </ul>
-                  <div class="homepage-projets-grid-item__right__titleanddesc">
-                    <span>Site web fullstack de réservation de livres</span>
-                  </div>
-                  <a
-                    class="homepage-projets-link projets-btn-desktop"
-                    href="/projets/projetbookshelf/"
-                    ><button class="homepage-projets-btn" tabindex="-1">
-                      Découvrir ↗
-                    </button></a
-                  >
-                </div>
+          <article class="homepage-projets-grid-item">
+            <div class="homepage-projets-grid-item__left">
+              <img
+                loading="lazy"
+                src="/img/bookshelf_mobile_168.webp"
+                alt="Vue de la page d'accueil de mon site de réservation de livres"
+                height="80"
+                width="168"
+                srcset="
+                  /img/bookshelf_mobile_168.webp    168w,
+                  /img/bookshelf_desktop_1142.webp 1142w
+                "
+                sizes="(max-width: 600px) 168px, 1142px"
+              />
+              <button
+                class="homepage-projets-btn projets-btn-mobile"
+                tabindex="-1"
+              >
+                <a
+                  class="homepage-projets-link"
+                  href="/projets/projetbookshelf/"
+                >
+                  Découvrir ↗
+                </a>
+              </button>
+            </div>
+            <div class="homepage-projets-grid-item__right">
+              <ul>
+                <li class="homepage-projets-tags">Vite</li>
+                <li class="homepage-projets-tags">Fastify</li>
+                <li class="homepage-projets-tags">SQLite</li>
+              </ul>
+              <div class="homepage-projets-grid-item__right__titleanddesc">
+                <span>Site web fullstack de réservation de livres</span>
+              </div>
+              <button
+                class="homepage-projets-btn projets-btn-desktop"
+                tabindex="-1"
+              >
+                <a
+                  class="homepage-projets-link"
+                  href="/projets/projetbookshelf/"
+                >
+                  Découvrir ↗
+                </a>
+              </button>
+            </div>
+          </article>
+
+          <article class="homepage-projets-grid-item">
+            <div class="homepage-projets-grid-item__left">
+              <img
+                loading="lazy"
+                src="/img/feuillu_mobile_168.webp"
+                alt="Vue de la page d'accueil de mon site de newsletter"
+                height="80"
+                width="168"
+                srcset="
+                  /img/feuillu_mobile_168.webp    168w,
+                  /img/feuillu_desktop_1142.webp 1142w
+                "
+                sizes="(max-width: 600px) 168px, 1142px"
+              />
+
+              <button class="homepage-projets-btn projets-btn-mobile" tabindex="-1">
+                <a
+                class="homepage-projets-link"
+                href="/projets/projetnewsletter/"
+                >
+                  Découvrir ↗
+                  </a
+              >
+                </button>
+            </div>
+            <div class="homepage-projets-grid-item__right">
+              <ul>
+                <li class="homepage-projets-tags">Javascript</li>
+                <li class="homepage-projets-tags">Express</li>
+                <li class="homepage-projets-tags">SQLite</li>
+              </ul>
+              <div class="homepage-projets-grid-item__right__titleanddesc">
+                <span>Site web de newsletter & intégration HTML d'email</span>
               </div>
 
-              <div class="homepage-projets-grid-item">
-                <div class="homepage-projets-grid-item__left">
-                  <img
-            loading="lazy"
-            src="/img/feuillu_mobile_168.webp"
-            alt="Vue de la page d'accueil de mon site de newsletter"
-            height="80"
-            width="168"
-            srcset="/img/feuillu_mobile_168.webp 168w, /img/feuillu_desktop_1142.webp 1142w"
-            sizes="(max-width: 600px) 168px, 1142px"
-          />
-
-                  <a
-                    class="homepage-projets-link projets-btn-mobile"
-                    href="/projets/projetnewsletter/"
-                    ><button class="homepage-projets-btn" tabindex="-1">
-                      Découvrir ↗
-                    </button></a
-                  >
-                </div>
-                <div class="homepage-projets-grid-item__right">
-                  <ul>
-                    <li class="homepage-projets-tags">Javascript</li>
-                    <li class="homepage-projets-tags">Express</li>
-                    <li class="homepage-projets-tags">SQLite</li>
-                  </ul>
-                  <div class="homepage-projets-grid-item__right__titleanddesc">
-                    <span
-                      >Site web de
-                      newsletter & intégration HTML d'email</span
-                    >
-                  </div>
-
-                  <a
-                    class="homepage-projets-link projets-btn-desktop"
-                    href="/projets/projetnewsletter/"
-                    ><button class="homepage-projets-btn" tabindex="-1">
-                      Découvrir ↗
-                    </button></a
-                  >
-                </div>
-              </div>
+              <button class="homepage-projets-btn projets-btn-desktop" tabindex="-1">
+                <a
+                class="homepage-projets-link"
+                href="/projets/projetnewsletter/"
+                >
+                  Découvrir ↗
+                  </a
+              >
+                </button>
+            </div>
+          </article>
         </section>
         <section id="homepage-services" class="intersect">
-          <div class="homepage-projets-titre-flexer">
+          <header class="homepage-projets-titre-flexer">
             <h2>Services</h2>
             <hr />
-          </div>
+          </header>
           <div id="homepage-services-grid">
-            <div>
-              <div class="homepage-services-item-header">
-                <span>Conception de sites web sur-mesure</span>
+            <article>
+              <header class="homepage-services-item-header">
+                <h3>Conception de sites web sur-mesure</h3>
                 <div class="services-icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -290,7 +311,7 @@
                     ></path>
                   </svg>
                 </div>
-              </div>
+              </header>
               <ul class="homepage-services-item-category-list">
                 <li>
                   Sites vitrines
@@ -312,10 +333,10 @@
                   >
                 </li>
               </ul>
-            </div>
-            <div>
-              <div class="homepage-services-item-header">
-                <span>Refonte & maintenance</span>
+            </article>
+            <article>
+              <header class="homepage-services-item-header">
+                <h3>Refonte & maintenance</h3>
                 <div class="services-icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -329,17 +350,16 @@
                     ></path>
                   </svg>
                 </div>
-              </div>
+              </header>
               <ul class="homepage-services-item-category-list">
                 <li>Débuggage et mise à niveau</li>
                 <li>Optimisation de la performance</li>
                 <li>Mise à jour de l'interface graphique</li>
               </ul>
-            </div>
-
-            <div>
-              <div class="homepage-services-item-header">
-                <span>Développement spécifique</span>
+            </article>
+            <article>
+              <header class="homepage-services-item-header">
+                <h3>Développement spécifique</h3>
                 <div class="services-icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -353,7 +373,7 @@
                     ></path>
                   </svg>
                 </div>
-              </div>
+              </header>
               <ul class="homepage-services-item-category-list">
                 <li>
                   Gestion de projet numérique
@@ -371,11 +391,11 @@
                 <li>Éco-conception</li>
                 <li>Intégration de maquettes</li>
               </ul>
-            </div>
+            </article>
           </div>
         </section>
       </main>
-      <footer class="homepage-footer intersect" id="footer" role="contentinfo">
+      <footer class="homepage-footer intersect" id="footer">
         
   <ul>
     <li><p id="me">Téotime Pacreau</p></li>
@@ -440,86 +460,88 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script>
       // Grab the prefers reduced motion preference of the user.
-    let prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
 
-    // SI L'UTILISATEUR N'A PAS ACTIVE prefers-reduced-motion alors on déroule l'animation
-    if (!prefersReducedMotion) {
-      gsap.fromTo(
-        ".intersect",
-        {
-          y: "-20dvh",
-          opacity: 0,
-          duration: 0.5,
-          ease: "power2.out",
-        },
-        {
-          y: "0dvh",
-          opacity: 1,
-          stagger: 0.3,
-        }
-      );
-      gsap.fromTo(
-        ".menu-anim",
-        {
-          y: "-20dvh",
-          opacity: 0,
-          duration: 0.5,
-          ease: "power4.out",
-        },
-        {
-          y: "0dvh",
-          opacity: 1,
-          delay: 1,
-        }
-      );
-
-      
-
-      let elementsToAnimate = document.querySelectorAll(".homepage-projets-grid-item");
-
-      function hide() {
-        return new Promise((resolve) => {
-          for (let element of elementsToAnimate) {
-            element.classList.toggle("homepage-projet-hidden");
+      // SI L'UTILISATEUR N'A PAS ACTIVE prefers-reduced-motion alors on déroule l'animation
+      if (!prefersReducedMotion) {
+        gsap.fromTo(
+          ".intersect",
+          {
+            y: "-20dvh",
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.out",
+          },
+          {
+            y: "0dvh",
+            opacity: 1,
+            stagger: 0.3,
           }
-          resolve();
+        );
+        gsap.fromTo(
+          ".menu-anim",
+          {
+            y: "-20dvh",
+            opacity: 0,
+            duration: 0.5,
+            ease: "power4.out",
+          },
+          {
+            y: "0dvh",
+            opacity: 1,
+            delay: 1,
+          }
+        );
+
+        let elementsToAnimate = document.querySelectorAll(
+          ".homepage-projets-grid-item"
+        );
+
+        function hide() {
+          return new Promise((resolve) => {
+            for (let element of elementsToAnimate) {
+              element.classList.toggle("homepage-projet-hidden");
+            }
+            resolve();
+          });
+        }
+
+        // EVITER QUE L'INTERSECTION OBSERVER SE DECLENCHE TROP TOT SUR MOBILE
+        function isMobile() {
+          return window.matchMedia("(max-width: 600px)").matches;
+        }
+        let rootMarginValue = isMobile() ? "-30%" : "-50%";
+
+        // INTERSECTION OBSERVER
+        const options = {
+          root: null,
+          threshold: 0,
+          rootMargin: rootMarginValue,
+        };
+
+        const observer = new IntersectionObserver(function (entries, observer) {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              return;
+            } else {
+              gsap.to(entry.target, {
+                x: "0dvh",
+                opacity: 1,
+              });
+              observer.unobserve(entry.target); //indispensable pour pas que l'animation se rejoue en remontant
+            }
+          });
+        }, options);
+
+        hide().then(() => {
+          elementsToAnimate.forEach((section) => {
+            //pour appliquer l'action à la NodeList
+            observer.observe(section);
+          });
         });
       }
-
-      // EVITER QUE L'INTERSECTION OBSERVER SE DECLENCHE TROP TOT SUR MOBILE
-      function isMobile() {
-        return window.matchMedia("(max-width: 600px)").matches;
-      }
-      let rootMarginValue = isMobile() ? "-30%" : "-50%";
-
-      // INTERSECTION OBSERVER
-      const options = {
-        root: null,
-        threshold: 0,
-        rootMargin: rootMarginValue
-      };
-
-      const observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            return;
-          } else {
-            gsap.to(entry.target, {
-              x: '0dvh',
-              opacity: 1,
-            })
-            observer.unobserve(entry.target); //indispensable pour pas que l'animation se rejoue en remontant 
-          }
-        });
-      }, options);
-
-      hide().then(() => {
-        elementsToAnimate.forEach((section) => {
-          //pour appliquer l'action à la NodeList
-          observer.observe(section);
-        });
-      });
-    }
     </script>
   </body>
 </html>

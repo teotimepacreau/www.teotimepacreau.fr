@@ -1,9 +1,17 @@
 const workTitleParent = document.querySelector('.travail')
 
+function isMobile () {
+    return window.matchMedia("(max-width: 600px)").matches
+  }
+let mobile = isMobile()
+
 workTitleParent.addEventListener('mouseover', (event) => {
-    console.log(event)
+    const parentElement = event.target.closest('details')
     if(event.target.nodeName == "SUMMARY"){
-        event.target.parentElement.open = true
         event.target.style.fontWeight = "500"
+    }
+    if(event.target.nodeName == "SUMMARY" && !mobile){
+        event.target.style.fontWeight = "500";
+        parentElement.open = true
     }
 })

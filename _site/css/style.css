@@ -1421,7 +1421,10 @@ li {
 }
 
 /*---CV : MEDIA QUERY CV---*/
-@media (max-width: 700px) {
+@media (width < 700px) {
+  .travail {
+    gap: calc(0.5*var(--baseline));
+  }
   .container-cv {
     display: block;
     margin-top: 0;
@@ -1431,9 +1434,6 @@ li {
   }
   .contenu-pro-titre h1 {
     margin-bottom: var(--baseline);
-  }
-  .scolaire-titre {
-    margin-top: var(--baseline);
   }
   .scolaire-texte {
     margin-top: var(--baseline);
@@ -1457,19 +1457,15 @@ li {
   }
   .travail-titre-poste {
     grid-column: 1 / 4;
-    font-family: Inter-Variable, Helvetica, sans-serif;
   }
-  .travail details {
-    border-top: 2px solid var(--accent);
-    padding-top: calc(0.5 * var(--baseline));
-  }
+
   .travail-prose {
     display: block;
     grid-column: 1 / 4;
   }
   .travail-time ~ .travail-time {
     text-align: left;
-    margin-top: calc(0.5 * var(--baseline));
+    margin-top: calc(2*var(--baseline));
   }
   .hr-parent {
     display: none;
@@ -1479,6 +1475,9 @@ li {
   }
   .certifications-titre {
     margin-top: var(--baseline);
+  }
+  #diplomes-section {
+    margin-top: calc(2*var(--baseline));
   }
 }
 
@@ -1792,9 +1791,6 @@ tr {
   }
   #me {
     grid-column: 1 / 4;
-  }
-  .travail-titre-poste {
-    font-weight: 600;
   }
   /* INDISPENSABLE POUR PAS QUE LE MENU ROTATE EN DIMINUANT LARGEUR DE LA PAGE */
   .menu-anim {

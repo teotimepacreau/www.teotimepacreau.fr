@@ -30,150 +30,240 @@ title: CV de Téotime Pacreau
         </nav>
       </header>
       <main class="container-cv">
-        <button aria-description="Télecharger mon CV" id="download-cv">
-          <a href="/assets/CV_data.pdf" download>
+        <button tabindex="-1" aria-label="Télecharger mon CV" id="download-cv">
+          <a
+            aria-label="Télecharger mon CV"
+            href="/assets/CV_data.pdf"
+            download
+          >
             <icon class="ph ph-download"></icon>
           </a>
         </button>
         <section class="contenu-pro-titre">
-          <h1>Expériences professionnelles</h1>
+          <h2>Expériences professionnelles</h2>
         </section>
         <section class="travail">
-          <time class="travail-time">2022-2024</time>
-          <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
-            Apprenti en gestion de projet et conduite du
-            changement chez
-            <a
-              href="https://www.prefectures-regions.gouv.fr/pays-de-la-loire/Region-et-institutions/Organisation-administrative-de-la-region/Secretariat-General-pour-les-Affaires-Regionales-SGAR/Etat-LIN-le-Laboratoire-d-Innovation-Publique-de-l-Etat-en-region-Pays-de-la-Loire/Etat-LIN-qu-est-ce-que-c-est"
-              target="_blank"
-              rel="noopener noreferrer"
-              >État'LIN, le laboratoire d'innovation publique de l'État en Pays
-              de la Loire</a
-            >
-          </p>
-          <ul class="travail-prose">
-            <li>
-              Conduite de projets de transformation publique en mode projet.
-            </li>
-            <li>
-              Appui aux services de l’État en Pays de la Loire dans leurs projets de conduite du changement (outillage organisationnel, diagnostic stratégique...).
-            </li>
-            <li>Coordination et accompagnement de 2 projets de transformation numérique (AMOA, MOE...).</li>
-            <li>Collaboration avec une équipe de designer de 
-              services : appropriation de la méthode design et complémentarité avec le mode projet. </li>
-            <li>
-              Co-animation du réseau des
+          <time aria-label="Année de l'expérience" class="travail-time"
+            >2022-2024</time
+          >
+          <div aria-hidden="true" class="hr-parent"><hr /></div>
+          <details class="travail-titre-poste">
+            <summary aria-label="Titre du poste" class="travail-titre-poste">
+              Apprenti en gestion de projet et conduite du changement chez
               <a
-                href="https://www.modernisation.gouv.fr/communautes/les-innovacteurs-de-la-transformation-publique"
-                >"Innov’acteurs de la transformation publique"</a
+                href="https://www.prefectures-regions.gouv.fr/pays-de-la-loire/Region-et-institutions/Organisation-administrative-de-la-region/Secretariat-General-pour-les-Affaires-Regionales-SGAR/Etat-LIN-le-Laboratoire-d-Innovation-Publique-de-l-Etat-en-region-Pays-de-la-Loire/Etat-LIN-qu-est-ce-que-c-est"
+                target="_blank"
+                rel="noopener noreferrer"
+                >État'LIN, le laboratoire d'innovation publique de l'État en
+                Pays de la Loire</a
               >
-              (réseau d'essaimage de l'innovation publique, 50 agents).
-            </li>
-            <li>
-              Développement de la transversalité avec les services de transformation numérique et managériale
-            </li>
-          </ul>
-          <time class="travail-time">2021-2022</time>
-          <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
-            Chargé d'affaires et de gestion en alternance chez
-            <a
-              href="https://www.lieuxcommuns.coop/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Lieux Communs</a
+            </summary>
+            <ul
+              aria-expanded="false"
+              aria-label="Description des missions"
+              class="travail-prose"
+              id="desc-mission-1"
             >
-          </p>
-          <ul class="travail-prose">
-            <li>
-              Gestion commerciale de l'offre d'espaces du tiers-lieu
-              <a href="https://www.ecossolies.fr/-Le-Solilab-">Le Solilab</a
-              >(106 espaces de travail, 3 espaces événementiels, 5 salles de
-              réunion, 20 espaces de stockage).
-            </li>
-            <li>Coordination des prestataires.</li>
-            <li>
-              Actions de développement de la commercialisation (objectifs de CA,
-              optimisation des activités rentables).
-            </li>
-            <li>SEO et SEA pour le site internet.</li>
-          </ul>
-          <time class="travail-time">2020-2021</time>
-          <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
-            Assistant Technique chez
-            <a
-              href="https://www.habitat44.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Habitat 44</a
+              <li>
+                Conduite de projets de transformation publique en mode projet.
+              </li>
+              <li>
+                Appui aux services de l’État en Pays de la Loire dans leurs
+                projets de conduite du changement (outillage organisationnel,
+                diagnostic stratégique...).
+              </li>
+              <li>
+                Coordination et accompagnement de 2 projets de transformation
+                numérique (AMOA, MOE...).
+              </li>
+              <li>
+                Collaboration avec une équipe de designer de services :
+                appropriation de la méthode design et complémentarité avec le
+                mode projet.
+              </li>
+              <li>
+                Co-animation du réseau des
+                <a
+                  href="https://www.modernisation.gouv.fr/communautes/les-innovacteurs-de-la-transformation-publique"
+                  >"Innov’acteurs de la transformation publique"</a
+                >
+                (réseau d'essaimage de l'innovation publique, 50 agents).
+              </li>
+              <li>
+                Développement de la transversalité avec les services de
+                transformation numérique et managériale
+              </li>
+            </ul>
+          </details>
+
+          <time aria-label="Année de l'expérience" class="travail-time"
+            >2021-2022</time
+          >
+          <div aria-hidden="true" class="hr-parent"><hr /></div>
+          <details class="travail-titre-poste">
+            <summary aria-label="Titre du poste" class="travail-titre-poste">
+              Chargé d'affaires et de gestion en alternance chez
+              <a
+                href="https://www.lieuxcommuns.coop/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Lieux Communs</a
+              >
+            </summary>
+            <ul
+              aria-expanded="false"
+              aria-label="Description des missions"
+              class="travail-prose"
+              id="desc-mission-1"
             >
-          </p>
-          <ul class="travail-prose">
-            <li>
-              Gestion du déploiement de la fibre optique sur le parc de 7000 logements.
-            </li>
-            <li>
-              Assistance au marché de maintenance énergétique, marché de relève des compteurs, marché de déploiement des antennes téléphoniques 
-              Gestion technique et administrative des marchés de diagnostic
-              amiante et de la télérelève des compteurs d'eau.
-            </li>
-            <li>Gestion administrative du service.</li>
-          </ul>
-          <time class="travail-time">2020</time>
-          <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
-            Gérant Locatif chez
-            <a
-              href="https://www.nantaise-habitations.fr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >La Nantaise d'Habitations</a
+              <li>
+                Gestion commerciale de l'offre d'espaces du tiers-lieu
+                <a href="https://www.ecossolies.fr/-Le-Solilab-">Le Solilab</a
+                >(106 espaces de travail, 3 espaces événementiels, 5 salles de
+                réunion, 20 espaces de stockage).
+              </li>
+              <li>Coordination des prestataires.</li>
+              <li>
+                Actions de développement de la commercialisation (objectifs de
+                CA, optimisation des activités rentables).
+              </li>
+            </ul>
+          </details>
+
+          <time aria-label="Année de l'expérience" class="travail-time"
+            >2020-2021</time
+          >
+          <div aria-hidden="true" class="hr-parent"><hr /></div>
+          <details class="travail-titre-poste">
+            <summary aria-label="Titre du poste" class="travail-titre-poste">
+              Assistant Technique chez
+              <a
+                href="https://www.habitat44.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Habitat 44</a
+              >
+            </summary>
+            <ul
+              aria-expanded="false"
+              aria-label="Description des missions"
+              class="travail-prose"
+              id="desc-mission-1"
             >
-          </p>
-          <ul class="travail-prose">
-            <li>Responsable de la gestion locative de 650 logements HLM.</li>
-            <li>Chiffrage, planification et suivi des chantiers de remise en état des logements.</li>
-          </ul>
-          <time class="travail-time">2019-2020</time>
-          <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
-            Responsable de résidence sociale chez
-            <a
-              href="https://www.adoma.cdc-habitat.fr/adoma/Accueil/p-730-L-insertion-par-le-logement.htm"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Adoma Groupe CDC Habitat</a
+              <li>
+                Gestion du déploiement de la fibre optique sur le parc de 7000
+                logements.
+              </li>
+              <li>
+                Assistance au marché de maintenance énergétique, marché de
+                relève des compteurs, marché de déploiement des antennes
+                téléphoniques Gestion technique et administrative des marchés de
+                diagnostic amiante et de la télérelève des compteurs d'eau.
+              </li>
+              <li>Gestion administrative du service.</li>
+            </ul>
+          </details>
+
+          <time aria-label="Année de l'expérience" class="travail-time"
+            >2020</time
+          >
+          <div aria-hidden="true" class="hr-parent"><hr /></div>
+          <details class="travail-titre-poste">
+            <summary aria-label="Titre du poste" class="travail-titre-poste">
+              Gérant Locatif chez
+              <a
+                href="https://www.nantaise-habitations.fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >La Nantaise d'Habitations</a
+              >
+            </summary>
+            <ul
+              aria-expanded="false"
+              aria-label="Description des missions"
+              class="travail-prose"
+              id="desc-mission-1"
             >
-          </p>
-          <ul class="travail-prose">
-            <li>Gestion locative d’une résidence sociale de 160 logements.</li>
-            <li>Réduction des impayés, optimisation de la mise en location des logements</li>
-            <li>Management d'une équipe de nettoyage et de maintenance</li>
-            <li>Collaboration avec les services sociaux et accompagnement social des résidents</li>
-          </ul>
-          <time class="travail-time">2017-2019</time>
-          <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
-            Assistant de gestion locative chez
-            <a
-              href="https://www.residetape.fr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Résidetape</a
+              <li>Responsable de la gestion locative de 650 logements HLM.</li>
+              <li>
+                Chiffrage, planification et suivi des chantiers de remise en
+                état des logements.
+              </li>
+            </ul>
+          </details>
+
+          <time aria-label="Année de l'expérience" class="travail-time"
+            >2019-2020</time
+          >
+          <div aria-hidden="true" class="hr-parent"><hr /></div>
+          <details class="travail-titre-poste">
+            <summary aria-label="Titre du poste" class="travail-titre-poste">
+              Responsable de résidence sociale chez
+              <a
+                href="https://www.adoma.cdc-habitat.fr/adoma/Accueil/p-730-L-insertion-par-le-logement.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Adoma Groupe CDC Habitat</a
+              >
+            </summary>
+            <ul
+              aria-expanded="false"
+              aria-label="Description des missions"
+              class="travail-prose"
+              id="desc-mission-1"
             >
-          </p>
-          <ul class="travail-prose">
-            <li>
-              Appui à la gestion locative d’une résidence sociale de 135
-              logements.
-            </li>
-            <li>Réduction des impayés, optimisation de la mise en location des logements, actions de développement commercial</li>
-            <li>Mise en conformité RGPD.</li>
-            <li>Appui à la coordination d'un agent de nettoyage et d'un agent de maintenance</li>
-          </ul>
+              <li>
+                Gestion locative d’une résidence sociale de 160 logements.
+              </li>
+              <li>
+                Réduction des impayés, optimisation de la mise en location des
+                logements
+              </li>
+              <li>Management d'une équipe de nettoyage et de maintenance</li>
+              <li>
+                Collaboration avec les services sociaux et accompagnement social
+                des résidents
+              </li>
+            </ul>
+          </details>
+
+          <time aria-label="Année de l'expérience" class="travail-time"
+            >2017-2019</time
+          >
+          <div aria-hidden="true" class="hr-parent"><hr /></div>
+          <details class="travail-titre-poste">
+            <summary aria-label="Titre du poste" class="travail-titre-poste">
+              Assistant de gestion locative chez
+              <a
+                href="https://www.residetape.fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Résidetape</a
+              >
+            </summary>
+            <ul
+              aria-expanded="false"
+              aria-label="Description des missions"
+              class="travail-prose"
+              id="desc-mission-1"
+            >
+              <li>
+                Appui à la gestion locative d’une résidence sociale de 135
+                logements.
+              </li>
+              <li>
+                Réduction des impayés, optimisation de la mise en location des
+                logements, actions de développement commercial
+              </li>
+              <li>Mise en conformité RGPD.</li>
+              <li>
+                Appui à la coordination d'un agent de nettoyage et d'un agent de
+                maintenance
+              </li>
+            </ul>
+          </details>
         </section>
+        
         <section class="scolaire-titre">
           <h1>Diplômes</h1>
         </section>
@@ -235,7 +325,10 @@ title: CV de Téotime Pacreau
             <li>Management de projet</li>
             <li>Conduite du changement</li>
             <li>Diagnostic et conseil en transformation des organisations</li>
-            <li>Conduite de projet numérique dans un rôle de Product Owner côté client (AMOA, MOE)</li>
+            <li>
+              Conduite de projet numérique dans un rôle de Product Owner côté
+              client (AMOA, MOE)
+            </li>
             <li>Accompagnement à l'entrepreneuriat</li>
             <li>Animation de réseau</li>
           </ul>
@@ -244,15 +337,33 @@ title: CV de Téotime Pacreau
             <li>CSS</li>
             <li>Javascript</li>
             <li>NodeJS</li>
-            <li><a href="https://expressjs.com/fr/" target="_blank"
-              rel="noopener noreferrer">Express</a></li>
-            <li><a href="https://fastify.dev/" target="_blank"
-              rel="noopener noreferrer">Fastify</a></li>
+            <li>
+              <a
+                href="https://expressjs.com/fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Express</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://fastify.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Fastify</a
+              >
+            </li>
             <li>Git & Github</li>
-            <li><a href="https://www.11ty.dev/" target="_blank"
-              rel="noopener noreferrer">Eleventy</a></li>
-              <li>Vite</li>
-              <li>Svelte</li>
+            <li>
+              <a
+                href="https://www.11ty.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Eleventy</a
+              >
+            </li>
+            <li>Vite</li>
+            <li>Svelte</li>
           </ul>
         </section>
         <section class="certifications-titre">

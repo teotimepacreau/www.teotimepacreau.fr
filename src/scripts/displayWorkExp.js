@@ -1,8 +1,9 @@
 const workTitleParent = document.querySelector('.travail')
 
 workTitleParent.addEventListener('mouseover', (event) => {
-    if(event.target.classList.contains('travail-titre-poste')) {
-        let WorkDesc = event.target.nextElementSibling
-        WorkDesc.classList.add('visible')
+    console.log(event)
+    if(event.target.nodeName == "SUMMARY"){
+        event.target.parentElement.open = true
+        event.target.style.fontWeight = "500"
     }
 })

@@ -1,4 +1,4 @@
-const workTitleParent = document.querySelector('.travail')
+const workTitleParent = document.querySelector('#experiences')
 
 function isMobile () {
     return window.matchMedia("(max-width: 600px)").matches

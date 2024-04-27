@@ -1219,7 +1219,7 @@ pre {
 }
 
 /*---CV---*/
-.container-cv {
+#container-cv {
   position: relative;
   display: grid;
   grid-template-columns: minmax(300px, 0.5fr) minmax(300px, 1fr);
@@ -1229,7 +1229,7 @@ pre {
   margin-bottom: var(--baseline);
 }
 
-.container-cv h2 {
+#container-cv h2 {
   font-family: BricolageGrotesque, system, sans-serif;
     font-variation-settings: "opsz" 24, "wght" 800, "wdth" 100;
     font-size: var(--baseline);
@@ -1240,9 +1240,9 @@ pre {
 
 #download-cv {
   box-shadow: 0.5px 0.5px 1px 0px var(--shadow);
-  bottom: calc(0.5 * var(--baseline));
-  right: calc(0.5 * var(--baseline));
-  width: calc(0.75 * var(--baseline));
+  bottom: var(--baseline);
+  right: var(--baseline);
+  width: var(--baseline);
   aspect-ratio: 1;
   color: var(--txt);
   position: fixed;
@@ -1276,7 +1276,7 @@ pre {
 }
 
 /*---CV : SECTION PRO---*/
-.travail {
+#experiences {
   display: grid;
   grid-template-columns: max-content minmax(4rem, auto) minmax(4rem, auto);
   gap: var(--baseline);
@@ -1379,21 +1379,19 @@ hr {
 
 .time-diplomes {
   display: block;
-  padding-bottom: calc(0.5 * var(--baseline));
+  padding-bottom: calc(0.25 * var(--baseline));
   border-bottom: 2px solid var(--accent);
 }
 
-.card-texte {
-  margin: calc(0.1 * var(--baseline));
-  border-radius: 0.3rem;
-}
+
 .diplome-desc {
+  display: block;
   padding-top: calc(0.5 * var(--baseline));
+  transition: all 0.3s ease-out;
 }
 .diplome-desc:hover {
   background-color: var(--accent);
   color: var(--bg);
-  transition: all 0.3s ease-out;
   padding: 1rem;
 }
 /*---CV SECTION : COMPETENCES---*/
@@ -1420,32 +1418,34 @@ li {
   margin-top: calc(2 * var(--baseline));
 }
 
+/*--- CV SECTION : CERTIFICATIONS ---*/
+#certifications > p {
+  margin-top: calc(.25*var(--baseline));
+}
+
+#certifications time:not(:first-child) {
+  margin-top: calc(.5*var(--baseline));
+}
+
+#certifications time {
+  display: block;
+  padding-bottom: calc(.25*var(--baseline));
+}
+
 /*---CV : MEDIA QUERY CV---*/
 @media (width < 700px) {
-  .travail {
+  #experiences {
     gap: calc(0.5*var(--baseline));
   }
-  .container-cv {
+  #container-cv {
     display: block;
     margin-top: 0;
   }
-  .container-cv > *:nth-child(2n) {
+  #container-cv > *:nth-child(2n) {
     margin-top: calc(0.5 * var(--baseline));
   }
-  .contenu-pro-titre h1 {
-    margin-bottom: var(--baseline);
-  }
-  .scolaire-texte {
-    margin-top: var(--baseline);
-  }
-  .competences-titre {
-    margin-top: var(--baseline);
-  }
-  .competences {
-    margin-top: var(--baseline);
-  }
-  .travail {
-    margin-top: var(--baseline)
+  #container-cv > section {
+    margin-block: var(--baseline);
   }
   summary::before, summary::after {
     width: .75em;
@@ -1467,17 +1467,9 @@ li {
     text-align: left;
     margin-top: calc(2*var(--baseline));
   }
-  .hr-parent {
-    display: none;
-  }
-  .travail {
+  #experiences {
     grid-template-columns: auto;
-  }
-  .certifications-titre {
-    margin-top: var(--baseline);
-  }
-  #diplomes-section {
-    margin-top: calc(2*var(--baseline));
+    padding-bottom: calc(2*var(--baseline));
   }
 }
 

@@ -29,7 +29,7 @@ title: CV de Téotime Pacreau
           </ul>
         </nav>
       </header>
-      <main class="container-cv">
+      <main id="container-cv">
         <button tabindex="-1" aria-label="Télecharger mon CV" id="download-cv">
           <a
             aria-label="Télecharger mon CV"
@@ -39,10 +39,9 @@ title: CV de Téotime Pacreau
             <icon class="ph ph-download"></icon>
           </a>
         </button>
-        <section class="contenu-pro-titre">
-          <h2>Expériences professionnelles</h2>
-        </section>
-        <section class="travail">
+
+        <h2 id="experiences-pro-titre">Expériences professionnelles</h2>
+        <section aria-labelledby="experiences-pro-titre" id="experiences">
           <time aria-label="Année de l'expérience" class="travail-time"
             >2022-2024</time
           >
@@ -263,74 +262,56 @@ title: CV de Téotime Pacreau
             </ul>
           </details>
         </section>
-        
-        <section aria-label="Mon parcours scolaire" id="diplomes-section">
-          <h2>Diplômes</h2>
+
+        <h2>Diplômes</h2>
+        <section aria-label="Mon parcours scolaire" class="scolaire-texte">
+          <article class="card">
+            <time class="time-diplomes">2022-2024</time>
+            <span class="diplome-desc">
+              Master Management, Organisation et Conduite du Changement en
+              alternance au CNAM de Nantes
+            </span>
+          </article>
+
+          <article class="card">
+            <time class="time-diplomes">2021-2022</time>
+            <span class="diplome-desc">
+              Licence 3 Droit Économie Gestion mention Gestion des organisations
+              en alternance au CNAM de Nantes
+            </span>
+          </article>
+
+          <article class="card">
+            <time class="time-diplomes">2017-2019</time>
+            <span class="diplome-desc">
+              BTS Assistant de gestion en alternance à l'École Nantaise de
+              Commerce
+            </span>
+          </article>
+
+          <article class="card">
+            <time class="time-diplomes">2016-2017</time>
+            <span class="diplome-desc">
+              1ère année de BTS Assistant de gestion en initiale au Lycée Pierre
+              Mendes France à La Roche sur Yon
+            </span>
+          </article>
+
+          <article class="card">
+            <time class="time-diplomes">2015-2016</time>
+            <span class="diplome-desc">
+              Bac Scientifique au Lycée Alfred Kastler à La Roche sur Yon
+            </span>
+          </article>
         </section>
-        <section class="scolaire-texte">
-          <div class="card">
-            <div class="card-texte">
-              <time class="time-diplomes">2022-2024</time>
-              <p class="diplome-desc">
-                Master Management, Organisation et Conduite du Changement en
-                alternance au CNAM de Nantes
-              </p>
-            </div>
-          </div>
 
-          <div class="card">
-            <div class="card-texte">
-              <time class="time-diplomes">2021-2022</time>
-              <p class="diplome-desc">
-                Licence 3 Droit Économie Gestion mention Gestion des
-                organisations en alternance au CNAM de Nantes
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-texte">
-              <time class="time-diplomes">2017-2019</time>
-              <p class="diplome-desc">
-                BTS Assistant de gestion en alternance à l'École Nantaise de
-                Commerce
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-texte">
-              <time class="time-diplomes">2016-2017</time>
-              <p class="diplome-desc">
-                1ère année de BTS Assistant de gestion en initiale au Lycée
-                Pierre Mendes France à La Roche sur Yon
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-texte">
-              <time class="time-diplomes">2015-2016</time>
-              <p class="diplome-desc">
-                Bac Scientifique au Lycée Alfred Kastler à La Roche sur Yon
-              </p>
-            </div>
-          </div>
-        </section>
-        <section class="competences-titre">
-          <h1>Compétences</h1>
-        </section>
+        <h2>Compétences</h2>
         <section class="competences">
           <ul class="competences-details">
-            <li>Management de projet</li>
+            <li>Conduite de projet numérique (AMOA, MOE)</li>
             <li>Conduite du changement</li>
             <li>Diagnostic et conseil en transformation des organisations</li>
-            <li>
-              Conduite de projet numérique dans un rôle de Product Owner côté
-              client (AMOA, MOE)
-            </li>
-            <li>Accompagnement à l'entrepreneuriat</li>
-            <li>Animation de réseau</li>
+            <li>Gestion de projet</li>
           </ul>
           <ul class="competences-details">
             <li>HTML</li>
@@ -364,15 +345,15 @@ title: CV de Téotime Pacreau
             </li>
             <li>Vite</li>
             <li>Svelte</li>
+            <li>SQL</li>
           </ul>
         </section>
-        <section class="certifications-titre">
-          <h2>Certifications</h2>
-        </section>
-        <section class="travail">
+
+        <h2 id="certifications-title">Certifications</h2>
+        <section aria-labelledby="certifications-title" id="certifications">
           <time class="certif-time">2023</time>
           <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
+          <p>
             <a
               href="https://www.modernisation.gouv.fr/actualites/laboratoires-dinnovation-publique-la-ditp-lance-le-programme-de-formation-clip"
               target="_blank"
@@ -384,7 +365,7 @@ title: CV de Téotime Pacreau
           </p>
           <time class="certif-time">2023</time>
           <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
+          <p>
             <a
               href="https://github.com/teotimepacreau/Certificat-formation-mode-projet/blob/main/Certificat%20formation%20mode%20projet.pdf"
               target="_blank"
@@ -395,7 +376,7 @@ title: CV de Téotime Pacreau
           </p>
           <time class="certif-time">2023</time>
           <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
+          <p>
             <a
               href="https://www.ira-nantes.gouv.fr/index.php/2023/06/16/animer-et-developper-un-reseau/"
               target="_blank"
@@ -405,7 +386,7 @@ title: CV de Téotime Pacreau
           </p>
           <time class="certif-time">2023</time>
           <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
+          <p>
             <a
               href="https://jujotte.notion.site/Conception-num-rique-m-thodologie-du-designer-UX-a4eed1789fc244d786b9e6db2fbd6159"
               target="_blank"
@@ -415,7 +396,7 @@ title: CV de Téotime Pacreau
           </p>
           <time class="certif-time">2021</time>
           <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
+          <p>
             <a
               href="https://www.coursera.org/account/accomplishments/certificate/QS6M66QE32C9"
               target="_blank"
@@ -425,7 +406,7 @@ title: CV de Téotime Pacreau
           </p>
           <time class="certif-time">2021</time>
           <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
+          <p>
             <a
               href="https://skillshop.exceedlms.com/student/award/yZBSDdcS6REHdwUs3PWwycie?referer=https%3A%2F%2Fskillshop.exceedlms.com%2Fstudent%2Fpath%2F142277%2Factivity%2F171817"
               target="_blank"
@@ -435,7 +416,7 @@ title: CV de Téotime Pacreau
           </p>
           <time class="certif-time">2021</time>
           <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
+          <p>
             <a
               href="https://learndigital.withgoogle.com/link/1qh2gjrod8g"
               target="_blank"
@@ -446,7 +427,7 @@ title: CV de Téotime Pacreau
           </p>
           <time class="certif-time">2019</time>
           <div class="hr-parent"><hr /></div>
-          <p class="travail-titre-poste">
+          <p>
             <a
               href="https://www.afpols.fr/formations-inter-entreprises/nos-formations/gestion-de-proximite/relations-avec-les-habitants/troubles-de-voisinage-quelles-actions-mener"
               target="_blank"

@@ -2,6 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="/css/style.css" />
+
 <!-- Auto detection of the RSS feed for RSS readers -->
 <link
   rel="alternate"
@@ -9,6 +10,7 @@
   title="Flux RSS du blog de Téotime Pacreau"
   type="application/atom+xml"
 />
+
 <!--Favicon-->
 <link rel="icon" href="/favicon/favicon.svg" />
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg" />
@@ -27,7 +29,6 @@
 <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg" />
 
 <!--Theme-->
-
 <meta
   name="msapplication-TileColor"
   content="#c3e2ff"
@@ -44,7 +45,6 @@
 <link rel="me" href="https://mastodon.design/@teotimepacreau" />
 <meta name="generator" content="Eleventy" />
 
-
 <!-- open graph tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@teotimepacreau">
@@ -58,13 +58,13 @@
 <meta property="og:title" content="{{ title }}" />
 <meta property="og:description" content="Développement web et management de projets numériques à Nantes" />
 <meta content="Développement web et management de projets numériques à Nantes" name="description" />
-<meta name="topic" content="Numérique, web, développement, gestion de projet, management, UI, Indieweb">
-<meta name="keywords" content="Numérique, web, développement, frontend, backend, gestion de projet, management, UI, Indieweb"/>
+<meta name="topic" content="Numérique, Nantes, web, développement, gestion de projet, management, UI, Indieweb, AMOA">
+<meta name="keywords" content="Numérique, Nantes, web, développement, frontend, backend, gestion de projet, management, UI, Indieweb, AMOA"/>
 <meta name="author" content="Téotime Pacreau" />
 <meta name="owner" content="Téotime Pacreau">
 
+<!-- auto generator of OpenGraph images -->
 {% ogImage "og-image.og.njk", { title: title | safe} %}
-
 
 {% jsonLdScript meta, type, tags %}
 

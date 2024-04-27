@@ -1524,10 +1524,15 @@ li {
   border-radius: 0.3rem;
   overflow: hidden;
   box-shadow: 1px 1px 3px 0px var(--shadow);
+  transition: opacity .2s ease-out;
 }
 
 .project-img-wrapper video {
   margin-top: calc(0.25 * var(--baseline));
+}
+
+.project-img-wrapper img:hover {
+  opacity: .9;
 }
 
 .project-card-title {

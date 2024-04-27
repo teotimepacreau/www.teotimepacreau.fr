@@ -2,88 +2,36 @@
 title: Erreur 404
 permalink: 404.html
 ---
+
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
+  <head>
     {% include "head.html"%}
-</head>
-<body>
+  </head>
+  <body style=" background-color: rgb(21, 21, 21);
+  ">
     <style>
-    .ascii{
+      .ascii {
         color: #1ff042;
         font-family: monospace;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        place-items: center;
-    }
-    pre {
+      }
+      pre {
         grid-column: 2 / 3;
-    }
-    body {
-        background-color: black;
-    }
-    .homepagelink {
-        padding-top: 1rem;
-    }
-    .homepagelink a {
-        color: #1ff042;
-        font-family: SpaceMono-Bold;
-    }
-    @font-face {
-    font-family: "SpaceMono-Bold";
-    src: url("SpaceMono-Bold.woff") format("woff");
-}
+        text-align: center;
+        background-color: unset;
+      }
     </style>
-    <div></div>
-    <div class="ascii">
-<pre>
-    
+    <div style="display: flex; flex-direction: column; place-content: center;" class="ascii">
+        <pre style="display: block; box-shadow: none;">
             ╔═╗──────────╔╗─╔╦═══╦╗─╔╗
             ║╦╬╦╦╦╦═╦╦╦╦╗║║─║║╔═╗║║─║║
             ║╩╣╔╣╔╣╩╣║║╔╝║╚═╝║║║║║╚═╝║
             ╚═╩╝╚╝╚═╩═╩╝─╚══╗║║║║╠══╗║
             ────────────────║║╚═╝║──║║
-
-
-
-            .ed"""" """$$$$be.
-            -"           ^""**$$$e.
-          ."                   '$$$c
-         /                      "4$$b
-        d  3                      $$$$
-        $  *                   .$$$$$$
-       .$  ^c           $$$$$e$$$$$$$$.
-       d$L  4.         4$$$$$$$$$$$$$$b
-       $$$$b ^ceeeee.  4$$ECL.F*$$$$$$$
-e$""=.      $$$$P d$$$$F $ $$$$$$$$$- $$$$$$
-z$$b. ^c     3$$$F "$$$$b   $"$$$$$$$  $$$$*"      .=""$c
-4$$$$L        $$P"  "$$b   .$ $$$$$...e$$        .=  e$$$.
-^*$$$$$c  %..   *c    ..    $$ 3$$$$$$$$$$eF     zP  d$$$$$
-"**$$$ec   "   %ce""    $$$  $$$$$$$$$$*    .r" =$$$$P""
- "*$b.  "c  *$e.    *** d$$$$$"L$$    .d"  e$$***"
-   ^*$$c ^$c $$$      4J$$$$$% $$$ .e*".eeP"
-      "$$$$$$"'$=e....$*$$**$cz$$" "..d$*"
-        "*$$$  *=%4.$ L L$ P3$$$F $$$P"
-           "$   "%*ebJLzb$e$$$$$b $P"
-             %..      4$$$$$$$$$$ "
-              $$$e   z$$$$$$$$$$%
-               "*$c  "$$$$$$$P"
-                ."""*$$$$$$$$bc
-             .-"    .$***$$$"""*e.
-          .-"    .e$"     "*$c  ^*b.
-   .=*""""    .e$*"          "*bc  "*$e..
- .$"        .z*"               ^*$e.   "*****e.
- $$ee$c   .d"                     "*$.        3.
- ^*$E")$..$"                         *   .ee==d%
-    $.d$$$*                           *  J$$$e*
-     """""                              "$$$"
-
-
-<div class="homepagelink">
-<a href="../index.html">☠ Retourner à la page d'accueil ☠</a>
-</div>
-</pre>
-</div>
-<div></div>
-</body>
+        </pre>
+        <a class="ascii" style="text-align: center" href="/index.html"
+          >☠ Retourner à la page d'accueil ☠</a
+        >
+    </div>
+  </body>
 </html>

@@ -88,7 +88,6 @@ h4,
 h5,
 h6,
 dt,
-blockquote,
 figcaption {
   text-wrap: balance;
   max-inline-size: 25ch;
@@ -390,7 +389,7 @@ pre::-webkit-scrollbar-thumb {
   .homepage-nav ul {
     height: 100%;
     writing-mode: tb-rl;
-    transform: rotate(-180deg)!important;
+    transform: rotate(-180deg) !important;
     border-left: 2px solid var(--txt);
   }
   .homepage-nav li {
@@ -527,7 +526,7 @@ a:hover {
   background-color: var(--shadow);
 }
 
-#homepage-projets > :nth-child(2){
+#homepage-projets > :nth-child(2) {
   margin-top: var(--baseline);
 }
 
@@ -1011,7 +1010,7 @@ p > a {
 }
 
 #article-post img {
-  margin-top: calc(.5*var(--baseline));
+  margin-top: calc(0.5 * var(--baseline));
 }
 #article-post > main > * + p {
   margin-top: calc(0.5 * var(--baseline));
@@ -1042,11 +1041,6 @@ h4 {
   margin-top: calc(0.25 * var(--baseline));
 }
 
-blockquote > p {
-  hanging-punctuation: first last;
-  text-indent: -0.4em;
-}
-
 #article-post li::marker {
   color: var(--accent);
 }
@@ -1069,14 +1063,14 @@ blockquote > p {
 }
 
 .post-date {
-  margin-top: calc(.125*var(--baseline))!important;
+  margin-top: calc(0.125 * var(--baseline)) !important;
   display: block;
-  opacity: .85;
-  font-size: .85rem;
+  opacity: 0.85;
+  font-size: 0.85rem;
 }
 .post-tags {
-  opacity: .85;
-  font-size: .85rem;
+  opacity: 0.85;
+  font-size: 0.85rem;
   display: flex;
   flex-wrap: wrap;
   gap: calc(0.25 * var(--baseline));
@@ -1098,7 +1092,6 @@ blockquote > p {
 .tags-style::before {
   content: "# ";
 }
-
 
 article > p > a:hover {
   text-decoration-thickness: 3px;
@@ -1231,9 +1224,9 @@ pre {
 
 #container-cv h2 {
   font-family: BricolageGrotesque, system, sans-serif;
-    font-variation-settings: "opsz" 24, "wght" 800, "wdth" 100;
-    font-size: var(--baseline);
-    letter-spacing: -0.05rem;
+  font-variation-settings: "opsz" 24, "wght" 800, "wdth" 100;
+  font-size: var(--baseline);
+  letter-spacing: -0.05rem;
   max-width: 20ch;
   color: unset;
 }
@@ -1310,18 +1303,18 @@ summary::marker {
 
 summary::before,
 summary::after {
-  content: '';
+  content: "";
 }
 
 summary::before,
 summary::after {
-    width: .75em;
-    height: 0;
-    border-bottom: 3px solid;
-    position: absolute;
-    top: 50%;
-    left: -1.5rem;
-  }
+  width: 0.75em;
+  height: 0;
+  border-bottom: 3px solid;
+  position: absolute;
+  top: 50%;
+  left: -1.5rem;
+}
 summary::after {
   transform: rotate(90deg);
   transform-origin: 50% 50%;
@@ -1329,7 +1322,6 @@ summary::after {
 [open] summary::after {
   transform: rotate(0deg);
 }
-
 
 @keyframes fade-in {
   0% {
@@ -1383,7 +1375,6 @@ hr {
   border-bottom: 2px solid var(--accent);
 }
 
-
 .diplome-desc {
   display: block;
   padding-top: calc(0.5 * var(--baseline));
@@ -1420,22 +1411,22 @@ li {
 
 /*--- CV SECTION : CERTIFICATIONS ---*/
 #certifications > p {
-  margin-top: calc(.25*var(--baseline));
+  margin-top: calc(0.25 * var(--baseline));
 }
 
 #certifications time:not(:first-child) {
-  margin-top: calc(.5*var(--baseline));
+  margin-top: calc(0.5 * var(--baseline));
 }
 
 #certifications time {
   display: block;
-  padding-bottom: calc(.25*var(--baseline));
+  padding-bottom: calc(0.25 * var(--baseline));
 }
 
 /*---CV : MEDIA QUERY CV---*/
 @media (width < 700px) {
   #experiences {
-    gap: calc(0.5*var(--baseline));
+    gap: calc(0.5 * var(--baseline));
   }
   #container-cv {
     display: block;
@@ -1447,8 +1438,9 @@ li {
   #container-cv > section {
     margin-block: var(--baseline);
   }
-  summary::before, summary::after {
-    width: .75em;
+  summary::before,
+  summary::after {
+    width: 0.75em;
     height: 0;
     border-bottom: 3px solid;
     left: 0;
@@ -1465,11 +1457,11 @@ li {
   }
   .travail-time ~ .travail-time {
     text-align: left;
-    margin-top: calc(2*var(--baseline));
+    margin-top: calc(2 * var(--baseline));
   }
   #experiences {
     grid-template-columns: auto;
-    padding-bottom: calc(2*var(--baseline));
+    padding-bottom: calc(2 * var(--baseline));
   }
 }
 
@@ -1524,7 +1516,7 @@ li {
   border-radius: 0.3rem;
   overflow: hidden;
   box-shadow: 1px 1px 3px 0px var(--shadow);
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 .project-img-wrapper video {
@@ -1532,7 +1524,7 @@ li {
 }
 
 .project-img-wrapper img:hover {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .project-card-title {
@@ -1791,6 +1783,29 @@ tr {
   }
   /* INDISPENSABLE POUR PAS QUE LE MENU ROTATE EN DIMINUANT LARGEUR DE LA PAGE */
   .menu-anim {
-    transform: rotate(0deg)!important;
+    transform: rotate(0deg) !important;
   }
+}
+
+/*--- BLOCKQUOTE ---*/
+blockquote {
+  padding: calc(0.25 * var(--baseline));
+  border-left: 2px solid var(--txt);
+  background-color: var(--bglighten20);
+}
+
+blockquote:before {
+  content: "“";
+  font-family: "Helvetica";
+  font-weight: bold;
+}
+
+blockquote:after {
+  content: "”";
+  font-family: "Helvetica";
+  font-weight: bold;
+}
+
+blockquote ~ * {
+  margin-top: calc(0.5 * var(--baseline));
 }

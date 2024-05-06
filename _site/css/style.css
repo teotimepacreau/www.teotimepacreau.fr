@@ -372,12 +372,11 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .navigation-announcer {
-  line-height: 1rem;
   letter-spacing: 0.02rem;
-  padding-inline: 1.4rem;
+  padding-inline: calc(0.5*var(--baseline));
+  padding-block: calc(0.25*var(--baseline));
   background-color: var(--txt);
   color: var(--bg);
-  border: 4px solid var(--txt);
 }
 
 .menu li,
@@ -944,13 +943,13 @@ p > a {
   flex-direction: column;
   align-items: unset;
   border-radius: 0.3rem;
-  gap: calc(0.25 * var(--baseline));
+  gap: 0;
 }
 
 #post-menu {
   flex-direction: column;
   gap: calc(0.25 * var(--baseline));
-  padding-inline: 1.4rem;
+  padding-inline: calc(0.5 * var(--baseline));
   padding-block: calc(0.25 * var(--baseline));
 }
 
@@ -979,8 +978,10 @@ p > a {
   display: block;
   background-color: var(--txt);
   color: var(--bg);
-  padding: calc(0.5 * var(--baseline));
+  padding-inline: calc(0.5 * var(--baseline));
+  padding-block: calc(.25*var(--baseline));
   border-radius: 0.3rem;
+  font-weight: 600;
 }
 
 .table-of-content > ol > li > ol {

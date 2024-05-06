@@ -24,7 +24,7 @@ eleventyComputed:
 *[**DISCLAIMER**] Est-ce que j'aime Amazon ? Pas nécessairement. Est-ce que j'admire Jeff Bezos ou d'autres milliardaires des GAFAM ? Absolument pas. Par contre, l'efficacité d'Amazon en tant qu'organisation et service client est indéniable.*
 
 Jeff Bezos estime que la lecture et l'écriture ont joués un rôle majeur dans la construction d'Amazon en tant qu'organisation.
-> "If you want to clarify your thinking, remember something important, or communicate something clearly, write it down."
+>If you want to clarify your thinking, remember something important, or communicate something clearly, write it down.
 – **Jeff Bezos**
 
 Amazon s'est construit sur une culture de l'écrit dans le but de :

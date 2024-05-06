@@ -1,7 +1,7 @@
 ---
 title: "Le mémo à 6 pages d'Amazon"
 date: '2024-04-29'
-description: "Comment la culture de l'écrit d'Amazon garantie son efficacité ?"
+description: "Comment la culture de l'écrit d'Amazon garantie-t-elle son efficacité ?"
 tags: 
   - 'Management'
 layout: postlayout.html
@@ -21,7 +21,17 @@ eleventyComputed:
     published: "{{ date }}"
 ---
 
-[DISCLAIMER] Est-ce que j'aime Amazon ? Pas nécessairement. Est-ce que j'admire Jeff Bezos ou d'autres milliardaires des GAFAM ? Absolument pas. Par contre, l'efficacité d'Amazon en tant qu'organisation et service client est indéniable.
+*[**DISCLAIMER**] Est-ce que j'aime Amazon ? Pas nécessairement. Est-ce que j'admire Jeff Bezos ou d'autres milliardaires des GAFAM ? Absolument pas. Par contre, l'efficacité d'Amazon en tant qu'organisation et service client est indéniable.*
+
+Jeff Bezos estime que la lecture et l'écriture ont joués un rôle majeur dans la construction d'Amazon en tant qu'organisation.
+> "If you want to clarify your thinking, remember something important, or communicate something clearly, write it down."
+– **Jeff Bezos**
+
+Amazon s'est construit sur une culture de l'écrit dans le but de :
+- clarifier les raisonnements
+- faciliter les transferts de connaissance
+- éliminer les meetings non-nécessaires
+
 
 ## Pourquoi PowerPoint n'est pas efficace en réunion et banni par Amazon
 > **From:** Bezos, Jeff
@@ -69,10 +79,13 @@ Quand la réunion est terminée, il est de la responsabilité de l'auteur de met
 3. le timing de la réunion : le format timé permet de s'assurer que chaque membre a bien toutes les informations avant de poser des questions contrairement à une présentation en slides où l'on est plus facilement amener à interrompre pour poser des questions.
 4. le processus autour de la rédaction du document : permet de partager une vision commune au sein de l'organisation via le process de ré-écriture et de mise à jour suite au meeting.
 5. le contenu du document : permet de jongler entre metrics et verbatim clients. 
-> **Bezos** : I've noticed when the anecdotes and the metrics disagree, the anecdotes are usually right. That's why it's so important to check that data with your intuition and instincts, and you need to teach that to executives and junior executives.
+>I've noticed when the anecdotes and the metrics disagree, the anecdotes are usually right. That's why it's so important to check that data with your intuition and instincts, and you need to teach that to executives and junior executives.
+– **Jeff Bezos**
 
 ## Quelle durée pour construire le 6 Pager Memo
-> **from the 2017 annual Amazon letter by Jeff Bezos** : The great memos are written and re-written, shared with colleagues who are asked to improve the work, set aside for a couple of days, and then edited again with a fresh mind. They simply can’t be done in a day or two.
+> The great memos are written and re-written, shared with colleagues who are asked to improve the work, set aside for a couple of days, and then edited again with a fresh mind. They simply can’t be done in a day or two.
+>
+> -**Jeff Bezos 2017 annual letter to shareolders**
 
 ## Sources
 <https://www.inc.com/carmine-gallo/jeff-bezos-bans-powerpoint-in-meetings-his-replacement-is-brilliant.html/>

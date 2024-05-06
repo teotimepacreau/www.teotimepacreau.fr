@@ -1031,15 +1031,11 @@ h4 {
   margin-top: calc(0.5 * var(--baseline));
 }
 
-#article-post > p + p,
-#article-post ol,
-#article-post ul {
+#article-post > p + p {
   margin-top: calc(0.5 * var(--baseline));
 }
 
-#article-post :not(.post-tags) > li + li {
-  margin-top: calc(0.25 * var(--baseline));
-}
+
 
 #article-post li::marker {
   color: var(--accent);
@@ -1789,6 +1785,7 @@ tr {
 
 /*--- BLOCKQUOTE ---*/
 blockquote {
+  margin-top: calc(0.5*var(--baseline));
   padding: calc(0.25 * var(--baseline));
   border-left: 2px solid var(--txt);
   background-color: var(--bglighten20);

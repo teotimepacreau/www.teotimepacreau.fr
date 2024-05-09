@@ -6,7 +6,7 @@ tags:
   - 'email'
   - 'HTML'
   - 'webmail'
-layout: postlayout.html
+layout: blogpost_layout.html
 type: post
 eleventyComputed:
   meta:

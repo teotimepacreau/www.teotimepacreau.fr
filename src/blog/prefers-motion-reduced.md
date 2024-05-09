@@ -6,7 +6,7 @@ tags:
   - 'accessibilité'
   - 'animations'
   - 'UX'
-layout: postlayout.html
+layout: blogpost_layout.html
 type: post
 eleventyComputed:
   meta:

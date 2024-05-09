@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    {% include "head.html"%}
+  </head>
+  <body>
+    {% include "color-picker.html"%}
+    <div class="container" id="normal-page-container">
+      <header>
+        {% include "navigation.html"%}
+        {% include "mobilenav.html"%}
+      </header>
+      <main id="blog">{{ content | safe }}</main>
+      <footer id="footer">{% include "footer.html"%}</footer>
+    </div>
+    {% include "loadscripts.html"%}
+  </body>
+</html>

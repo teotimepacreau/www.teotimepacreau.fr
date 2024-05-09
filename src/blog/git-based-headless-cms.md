@@ -5,7 +5,7 @@ description: "Pourquoi utiliser un CMS ? Quel est l'intérêt d'un CMS Headless 
 tags: 
   - 'CMS'
   - 'Git'
-layout: postlayout.html
+layout: blogpost_layout.html
 type: post
 eleventyComputed:
   meta:

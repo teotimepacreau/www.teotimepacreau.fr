@@ -7,7 +7,7 @@ tags:
   - "Entrepreneuriat"
   - "RSE"
   - "Outils"
-layout: postlayout.html
+layout: blogpost_layout.html
 type: post
 eleventyComputed:
   meta:

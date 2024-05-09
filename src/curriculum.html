@@ -11,23 +11,8 @@ title: CV de Téotime Pacreau
     {% include "color-picker.html"%}
     <div class="container" id="normal-page-container">
       <header>
-        {% include "menumobile.html"%}
-        <nav
-          class="navigation-flexer"
-          id="primary-navigation"
-          data-visible="false"
-        >
-          <span class="navigation-announcer">NAVIGATION</span>
-          <ul class="menu">
-            <li>
-              <a href="../index">HOME</a>
-            </li>
-            <li><a href="/curriculum">CV</a></li>
-            <li><a href="/blog">BLOG</a></li>
-            <li><a href="/projets">PROJETS</a></li>
-            <li><a href="../colophon">COLOPHON</a></li>
-          </ul>
-        </nav>
+        {% include "mobilenav.html"%}
+        {% include "navigation.html"%}
       </header>
       <main id="container-cv">
         <button tabindex="-1" aria-label="Télecharger mon CV" id="download-cv">
@@ -40,7 +25,7 @@ title: CV de Téotime Pacreau
           </a>
         </button>
 
-        <h2 id="experiences-pro-titre">Expériences professionnelles</h2>
+        <h2 aria-hidden="true" id="experiences-pro-titre">Expériences professionnelles</h2>
         <section aria-labelledby="experiences-pro-titre" id="experiences">
           <time aria-label="Année de l'expérience" class="travail-time"
             >2022-2024</time
@@ -263,7 +248,7 @@ title: CV de Téotime Pacreau
           </details>
         </section>
 
-        <h2>Diplômes</h2>
+        <h2 aria-hidden="true">Diplômes</h2>
         <section aria-label="Mon parcours scolaire" class="scolaire-texte">
           <article class="card">
             <time class="time-diplomes">2022-2024</time>
@@ -305,8 +290,8 @@ title: CV de Téotime Pacreau
           </article>
         </section>
 
-        <h2>Compétences</h2>
-        <section class="competences">
+        <h2 aria-hidden="true">Compétences</h2>
+        <section aria-label="Mes compétences" class="competences">
           <ul class="competences-details">
             <li>Conduite de projet numérique (AMOA, MOE)</li>
             <li>Conduite du changement</li>
@@ -349,7 +334,7 @@ title: CV de Téotime Pacreau
           </ul>
         </section>
 
-        <h2 id="certifications-title">Certifications</h2>
+        <h2 aria-hidden="true" id="certifications-title">Certifications</h2>
         <section aria-labelledby="certifications-title" id="certifications">
           <time class="certif-time">2023</time>
           <div class="hr-parent"><hr /></div>

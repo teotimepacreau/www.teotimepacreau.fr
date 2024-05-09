@@ -1,7 +1,7 @@
 // plugins
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
-const pluginTOC = require('eleventy-plugin-nesting-toc');
+const pluginTOC = require('eleventy-plugin-toc');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const embeds = require("eleventy-plugin-embed-everything");
 // OPENGRAPH IMAGES
@@ -59,7 +59,7 @@ module.exports = function(eleventyConfig) {
   // Table of content (require markdown anchor)
   eleventyConfig.addPlugin(pluginTOC, {
     wrapperClass: 'table-of-content',
-    ul: 'true',
+    wrapperLabel: 'Table de contenu',
     headingTag: 'h2',
   })
 

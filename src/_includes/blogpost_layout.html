@@ -8,21 +8,21 @@
     <div class="wrapper-post">
       <div class="post-grid">
         <header id="post-header">
-          {% include "menumobile.html"%}
+          {% include "mobilenav.html"%}
           <nav
             class="navigation-flexer navigation-flexer-post"
             id="primary-navigation"
-            data-visible="false"
+            aria-label="Principale"
           >
-            <span class="navigation-announcer" id="navigation-announcing">NAVIGATION</span>
-            <ul aria-labelledby="navigation-announcing" class="menu" id="post-menu">
+            <span id="navigation-announcer">NAVIGATION</span>
+            <ul class="menu" id="post-menu">
               <li>
-                <a tabindex="0" href="../../index">HOME</a>
+                <a tabindex="0" href="/index">HOME</a>
               </li>
               <li><a tabindex="0" href="/curriculum">CV</a></li>
               <li><a tabindex="0" href="/blog">BLOG</a></li>
               <li><a tabindex="0" href="/projets">PROJETS</a></li>
-              <li><a tabindex="0" href="../../colophon">COLOPHON</a></li>
+              <li><a tabindex="0" href="/colophon">COLOPHON</a></li>
             </ul>
           </nav>
         </header>

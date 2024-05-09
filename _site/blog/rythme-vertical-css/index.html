@@ -108,7 +108,7 @@
 <title>Gérer facilement le rythme vertical de son site web</title>
   </head>
   <body>
-    <form tabindex="-1" class="color-picker" action="">
+    <form tabindex="-1" class="color-picker" action="" aria-label="Color scheme picker">
     <fieldset tabindex="-1">
       <legend class="visually-hidden">Pick a color scheme</legend>
       <div id="light-group" class="color-select-group">
@@ -129,55 +129,46 @@
       <div class="post-grid">
         <header id="post-header">
           <button
-          class="mobile-nav-toggle"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-        >
-        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"></path></svg>
-          <span class="sr-only">Menu</span>
-        </button>
+  class="mobile-nav-toggle"
+  aria-label="Navigation"
+  aria-controls="primary-navigation"
+  aria-expanded="false"
+  aria-haspopup="menu"
+>
+  <svg aria-hidden="true"
+    id="hamburger-icon"
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    fill="#000000"
+    viewBox="0 0 256 256"
+  >
+    <path
+      d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"
+    ></path>
+  </svg>
+</button>
+
           <nav
             class="navigation-flexer navigation-flexer-post"
             id="primary-navigation"
-            data-visible="false"
+            aria-label="Principale"
           >
-            <span class="navigation-announcer" id="navigation-announcing">NAVIGATION</span>
-            <ul aria-labelledby="navigation-announcing" class="menu" id="post-menu">
+            <span id="navigation-announcer">NAVIGATION</span>
+            <ul class="menu" id="post-menu">
               <li>
-                <a tabindex="0" href="../../index">HOME</a>
+                <a tabindex="0" href="/index">HOME</a>
               </li>
               <li><a tabindex="0" href="/curriculum">CV</a></li>
               <li><a tabindex="0" href="/blog">BLOG</a></li>
               <li><a tabindex="0" href="/projets">PROJETS</a></li>
-              <li><a tabindex="0" href="../../colophon">COLOPHON</a></li>
+              <li><a tabindex="0" href="/colophon">COLOPHON</a></li>
             </ul>
           </nav>
         </header>
-        <aside><nav class="table-of-content">
-                <ol>
-                    
-                    <li><a href="#rythme-vertical">Rythme vertical</a>
-            
-                <ol>
-                    
-                    <li><a href="#comment-le-d%C3%A9terminer-%3F">Comment le déterminer ?</a>
-            		</li>
-
-                    <li><a href="#exemple-concret-d%E2%80%99utilisation">Exemple concret d’utilisation</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#le-%E2%80%9Chibou-lobotomis%C3%A9%E2%80%9D-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps">Le “hibou lobotomisé” : le sélecteur CSS qui fait gagner du temps</a>
-            		</li>
-
-                    <li><a href="#%E2%80%A6-et-une-touche-de-custom-properties">… et une touche de Custom Properties</a>
-            		</li>
-
-                    <li><a href="#notre-espacement-automatique-pour-l%E2%80%99ensemble-du-site-en-2-lignes-de-code">Notre espacement automatique pour l’ensemble du site en 2 lignes de code</a>
-            		</li>
-                </ol>
-            </nav></aside>
+        <aside><nav class="table-of-content" aria-label="Table de contenu">
+        <ol><li><a href="#rythme-vertical">Rythme vertical</a><ol><li><a href="#comment-le-d%C3%A9terminer-%3F">Comment le déterminer ?</a></li><li><a href="#exemple-concret-d%E2%80%99utilisation">Exemple concret d’utilisation</a></li></ol></li><li><a href="#le-%E2%80%9Chibou-lobotomis%C3%A9%E2%80%9D-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps">Le “hibou lobotomisé” : le sélecteur CSS qui fait gagner du temps</a></li><li><a href="#%E2%80%A6-et-une-touche-de-custom-properties">… et une touche de Custom Properties</a></li><li><a href="#notre-espacement-automatique-pour-l%E2%80%99ensemble-du-site-en-2-lignes-de-code">Notre espacement automatique pour l’ensemble du site en 2 lignes de code</a></li></ol>
+      </nav></aside>
         <main class="post-main">
           <article id="article-post">
             <header>
@@ -260,62 +251,72 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
           </article>
         </main>
         <footer id="footer" role="contentinfo">
-          
-  <ul>
-    <li><p id="me">Téotime Pacreau</p></li>
-    <li>
+          <ul>
+  <li><p id="me">Téotime Pacreau</p></li>
+  <li>
+    <address>
       <a
         href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis teotimepacreau.fr"
         >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
           >spam</span
         >outlook.fr</a
       >
-    </li>
-    <li>
-      <a class="rss" href="/feed/feed.xml">
-        <i class="ph ph-rss"></i>
-        <span>RSS</span>
-      </a>
-    </li>
-  </ul>
-  <ul id="links">
-    <li>
-      <a
-        class="social-footer"
-        rel="me"
-        href="https://github.com/teotimepacreau"
-        target="_blank"
-      >
-        <i class="ph ph-github-logo"></i>
-        <span>Github</span>
-      </a>
-    </li>
-    <li>
-      <a
-        class="social-footer"
-        rel="me"
-        href="https://mastodon.design/@teotimepacreau"
-        target="_blank"
-      >
-        <i class="ph ph-mastodon-logo"></i>
-        <span>Mastodon</span>
-      </a>
-    </li>
-    <li>
-      <a
-        class="social-footer"
-        rel="me"
-        href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
-        target="_blank"
-      >
-        <i class="ph ph-linkedin-logo"></i>
-        <span>LinkedIn</span>
-      </a>
-    </li>
-  </ul>
-  <ul id="stats">
-    <li><a class="social-footer" href="https://www.ecoindex.fr/resultat/?id=0b81b2d0-19ae-413a-8fcc-dac29c36ea9e" target="_blank" title="Consulter le score ecoindex de creasit.fr (nouvel onglet)">Score ecoindex <span class="ecoindex">B</span></a>
-  </ul>
+    </address>
+  </li>
+  <li>
+    <a class="rss" href="/feed/feed.xml">
+      <i class="ph ph-rss"></i>
+      <span>RSS</span>
+    </a>
+  </li>
+</ul>
+<ul id="links">
+  <li>
+    <a
+      class="social-footer"
+      rel="me"
+      href="https://github.com/teotimepacreau"
+      target="_blank"
+    >
+      <i class="ph ph-github-logo"></i>
+      <span>Github</span>
+    </a>
+  </li>
+  <li>
+    <a
+      class="social-footer"
+      rel="me"
+      href="https://mastodon.design/@teotimepacreau"
+      target="_blank"
+    >
+      <i class="ph ph-mastodon-logo"></i>
+      <span>Mastodon</span>
+    </a>
+  </li>
+  <li>
+    <a
+      class="social-footer"
+      rel="me"
+      href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
+      target="_blank"
+    >
+      <i class="ph ph-linkedin-logo"></i>
+      <span>LinkedIn</span>
+    </a>
+  </li>
+</ul>
+<ul id="stats">
+  <li>
+    <a
+      class="social-footer"
+      href="https://www.ecoindex.fr/resultat/?id=0b81b2d0-19ae-413a-8fcc-dac29c36ea9e"
+      target="_blank"
+      title="Consulter le score ecoindex de creasit.fr (nouvel onglet)"
+      >Score ecoindex <span class="ecoindex">B</span></a
+    >
+  </li>
+</ul>
+
         </footer>
         <!--Script pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
         <script>

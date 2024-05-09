@@ -108,7 +108,7 @@
 <title>Le legal design : qu&#39;est-ce que c&#39;est ?</title>
   </head>
   <body>
-    <form tabindex="-1" class="color-picker" action="">
+    <form tabindex="-1" class="color-picker" action="" aria-label="Color scheme picker">
     <fieldset tabindex="-1">
       <legend class="visually-hidden">Pick a color scheme</legend>
       <div id="light-group" class="color-select-group">
@@ -129,76 +129,46 @@
       <div class="post-grid">
         <header id="post-header">
           <button
-          class="mobile-nav-toggle"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-        >
-        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"></path></svg>
-          <span class="sr-only">Menu</span>
-        </button>
+  class="mobile-nav-toggle"
+  aria-label="Navigation"
+  aria-controls="primary-navigation"
+  aria-expanded="false"
+  aria-haspopup="menu"
+>
+  <svg aria-hidden="true"
+    id="hamburger-icon"
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    fill="#000000"
+    viewBox="0 0 256 256"
+  >
+    <path
+      d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"
+    ></path>
+  </svg>
+</button>
+
           <nav
             class="navigation-flexer navigation-flexer-post"
             id="primary-navigation"
-            data-visible="false"
+            aria-label="Principale"
           >
-            <span class="navigation-announcer" id="navigation-announcing">NAVIGATION</span>
-            <ul aria-labelledby="navigation-announcing" class="menu" id="post-menu">
+            <span id="navigation-announcer">NAVIGATION</span>
+            <ul class="menu" id="post-menu">
               <li>
-                <a tabindex="0" href="../../index">HOME</a>
+                <a tabindex="0" href="/index">HOME</a>
               </li>
               <li><a tabindex="0" href="/curriculum">CV</a></li>
               <li><a tabindex="0" href="/blog">BLOG</a></li>
               <li><a tabindex="0" href="/projets">PROJETS</a></li>
-              <li><a tabindex="0" href="../../colophon">COLOPHON</a></li>
+              <li><a tabindex="0" href="/colophon">COLOPHON</a></li>
             </ul>
           </nav>
         </header>
-        <aside><nav class="table-of-content">
-                <ol>
-                    
-                    <li><a href="#d%C3%A9finition">Définition</a>
-            
-                <ol>
-                    
-                    <li><a href="#enjeux-du-legal-design-dans-la-fonction-publique">Enjeux du legal design dans la fonction publique</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#exemples-de-techniques-de-legal-design">Exemples de techniques de legal design</a>
-            
-                <ol>
-                    
-                    <li><a href="#1.-structurer-l%E2%80%99information-dans-un-contrat">1. Structurer l’information dans un contrat</a>
-            		</li>
-
-                    <li><a href="#2.-utiliser-un-langage-facile-a-lire-et-%C3%A0-comprendre-(falc)">2. Utiliser un langage Facile A Lire et à Comprendre (FALC)</a>
-            		</li>
-
-                    <li><a href="#3.-donner-du-contexte-aux-informations">3. Donner du contexte aux informations</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#exemples-de-projets-utilisant-le-legal-design">Exemples de projets utilisant le Legal Design</a>
-            
-                <ol>
-                    
-                    <li><a href="#1.-travail-de-la-commission-europ%C3%A9enne-pour-inciter-%C3%A0-l%E2%80%99utilisation-de-%E2%80%9Cpages-de-garde-de-synth%C3%A8se%E2%80%9D-dans-les-contrats-d%E2%80%99assurance">1. Travail de la Commission Européenne pour inciter à l’utilisation de “pages de garde de synthèse” dans les contrats d’assurance</a>
-            		</li>
-
-                    <li><a href="#2.-etude-du-%E2%80%9Cbehavioral-insights-group%E2%80%9D-sur-l%E2%80%99impact-des-faq-sur-la-compr%C3%A9hension">2. Etude du “Behavioral insights group” sur l’impact des FAQ sur la compréhension</a>
-            		</li>
-
-                    <li><a href="#3.-repr%C3%A9sentation-d%E2%80%99un-processus-juridique-contractuel-afin-de-r%C3%A9duire-les-sollicitations-adress%C3%A9es-au-service-juridique">3. Représentation d’un processus juridique contractuel afin de réduire les sollicitations adressées au service juridique</a>
-            		</li>
-                </ol>
-            		</li>
-
-                    <li><a href="#sources">Sources</a>
-            		</li>
-                </ol>
-            </nav></aside>
+        <aside><nav class="table-of-content" aria-label="Table de contenu">
+        <ol><li><a href="#d%C3%A9finition">Définition</a><ol><li><a href="#enjeux-du-legal-design-dans-la-fonction-publique">Enjeux du legal design dans la fonction publique</a></li></ol></li><li><a href="#exemples-de-techniques-de-legal-design">Exemples de techniques de legal design</a><ol><li><a href="#1.-structurer-l%E2%80%99information-dans-un-contrat">1. Structurer l’information dans un contrat</a></li><li><a href="#2.-utiliser-un-langage-facile-a-lire-et-%C3%A0-comprendre-(falc)">2. Utiliser un langage Facile A Lire et à Comprendre (FALC)</a></li><li><a href="#3.-donner-du-contexte-aux-informations">3. Donner du contexte aux informations</a></li></ol></li><li><a href="#exemples-de-projets-utilisant-le-legal-design">Exemples de projets utilisant le Legal Design</a><ol><li><a href="#1.-travail-de-la-commission-europ%C3%A9enne-pour-inciter-%C3%A0-l%E2%80%99utilisation-de-%E2%80%9Cpages-de-garde-de-synth%C3%A8se%E2%80%9D-dans-les-contrats-d%E2%80%99assurance">1. Travail de la Commission Européenne pour inciter à l’utilisation de “pages de garde de synthèse” dans les contrats d’assurance</a></li><li><a href="#2.-etude-du-%E2%80%9Cbehavioral-insights-group%E2%80%9D-sur-l%E2%80%99impact-des-faq-sur-la-compr%C3%A9hension">2. Etude du “Behavioral insights group” sur l’impact des FAQ sur la compréhension</a></li><li><a href="#3.-repr%C3%A9sentation-d%E2%80%99un-processus-juridique-contractuel-afin-de-r%C3%A9duire-les-sollicitations-adress%C3%A9es-au-service-juridique">3. Représentation d’un processus juridique contractuel afin de réduire les sollicitations adressées au service juridique</a></li></ol></li><li><a href="#sources">Sources</a></li></ol>
+      </nav></aside>
         <main class="post-main">
           <article id="article-post">
             <header>
@@ -283,62 +253,72 @@ Chaque étape est cliquable, pour révéler des informations en profondeur.</p>
           </article>
         </main>
         <footer id="footer" role="contentinfo">
-          
-  <ul>
-    <li><p id="me">Téotime Pacreau</p></li>
-    <li>
+          <ul>
+  <li><p id="me">Téotime Pacreau</p></li>
+  <li>
+    <address>
       <a
         href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis teotimepacreau.fr"
         >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
           >spam</span
         >outlook.fr</a
       >
-    </li>
-    <li>
-      <a class="rss" href="/feed/feed.xml">
-        <i class="ph ph-rss"></i>
-        <span>RSS</span>
-      </a>
-    </li>
-  </ul>
-  <ul id="links">
-    <li>
-      <a
-        class="social-footer"
-        rel="me"
-        href="https://github.com/teotimepacreau"
-        target="_blank"
-      >
-        <i class="ph ph-github-logo"></i>
-        <span>Github</span>
-      </a>
-    </li>
-    <li>
-      <a
-        class="social-footer"
-        rel="me"
-        href="https://mastodon.design/@teotimepacreau"
-        target="_blank"
-      >
-        <i class="ph ph-mastodon-logo"></i>
-        <span>Mastodon</span>
-      </a>
-    </li>
-    <li>
-      <a
-        class="social-footer"
-        rel="me"
-        href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
-        target="_blank"
-      >
-        <i class="ph ph-linkedin-logo"></i>
-        <span>LinkedIn</span>
-      </a>
-    </li>
-  </ul>
-  <ul id="stats">
-    <li><a class="social-footer" href="https://www.ecoindex.fr/resultat/?id=0b81b2d0-19ae-413a-8fcc-dac29c36ea9e" target="_blank" title="Consulter le score ecoindex de creasit.fr (nouvel onglet)">Score ecoindex <span class="ecoindex">B</span></a>
-  </ul>
+    </address>
+  </li>
+  <li>
+    <a class="rss" href="/feed/feed.xml">
+      <i class="ph ph-rss"></i>
+      <span>RSS</span>
+    </a>
+  </li>
+</ul>
+<ul id="links">
+  <li>
+    <a
+      class="social-footer"
+      rel="me"
+      href="https://github.com/teotimepacreau"
+      target="_blank"
+    >
+      <i class="ph ph-github-logo"></i>
+      <span>Github</span>
+    </a>
+  </li>
+  <li>
+    <a
+      class="social-footer"
+      rel="me"
+      href="https://mastodon.design/@teotimepacreau"
+      target="_blank"
+    >
+      <i class="ph ph-mastodon-logo"></i>
+      <span>Mastodon</span>
+    </a>
+  </li>
+  <li>
+    <a
+      class="social-footer"
+      rel="me"
+      href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
+      target="_blank"
+    >
+      <i class="ph ph-linkedin-logo"></i>
+      <span>LinkedIn</span>
+    </a>
+  </li>
+</ul>
+<ul id="stats">
+  <li>
+    <a
+      class="social-footer"
+      href="https://www.ecoindex.fr/resultat/?id=0b81b2d0-19ae-413a-8fcc-dac29c36ea9e"
+      target="_blank"
+      title="Consulter le score ecoindex de creasit.fr (nouvel onglet)"
+      >Score ecoindex <span class="ecoindex">B</span></a
+    >
+  </li>
+</ul>
+
         </footer>
         <!--Script pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
         <script>

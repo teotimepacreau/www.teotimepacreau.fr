@@ -75,7 +75,7 @@
 <title>CV de Téotime Pacreau</title>
   </head>
   <body>
-    <form tabindex="-1" class="color-picker" action="">
+    <form tabindex="-1" class="color-picker" action="" aria-label="Color scheme picker">
     <fieldset tabindex="-1">
       <legend class="visually-hidden">Pick a color scheme</legend>
       <div id="light-group" class="color-select-group">
@@ -95,29 +95,42 @@
     <div class="container" id="normal-page-container">
       <header>
         <button
-          class="mobile-nav-toggle"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-        >
-        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"></path></svg>
-          <span class="sr-only">Menu</span>
-        </button>
+  class="mobile-nav-toggle"
+  aria-label="Navigation"
+  aria-controls="primary-navigation"
+  aria-expanded="false"
+  aria-haspopup="menu"
+>
+  <svg aria-hidden="true"
+    id="hamburger-icon"
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    fill="#000000"
+    viewBox="0 0 256 256"
+  >
+    <path
+      d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"
+    ></path>
+  </svg>
+</button>
+
         <nav
-          class="navigation-flexer"
-          id="primary-navigation"
-          data-visible="false"
-        >
-          <span class="navigation-announcer">NAVIGATION</span>
-          <ul class="menu">
-            <li>
-              <a href="../index">HOME</a>
-            </li>
-            <li><a href="/curriculum">CV</a></li>
-            <li><a href="/blog">BLOG</a></li>
-            <li><a href="/projets">PROJETS</a></li>
-            <li><a href="../colophon">COLOPHON</a></li>
-          </ul>
-        </nav>
+  class="navigation-flexer"
+  id="primary-navigation"
+  data-visible="false"
+  aria-label="Principale"
+>
+  <span aria-hidden="true" id="navigation-announcer">NAVIGATION</span>
+  <ul class="menu">
+    <li><a href="/index">HOME</a></li>
+    <li><a href="/curriculum">CV</a></li>
+    <li><a href="/blog">BLOG</a></li>
+    <li><a href="/projets">PROJETS</a></li>
+    <li><a href="/colophon">COLOPHON</a></li>
+  </ul>
+</nav>
+
       </header>
       <main id="container-cv">
         <button tabindex="-1" aria-label="Télecharger mon CV" id="download-cv">
@@ -130,7 +143,7 @@
           </a>
         </button>
 
-        <h2 id="experiences-pro-titre">Expériences professionnelles</h2>
+        <h2 aria-hidden="true" id="experiences-pro-titre">Expériences professionnelles</h2>
         <section aria-labelledby="experiences-pro-titre" id="experiences">
           <time aria-label="Année de l'expérience" class="travail-time"
             >2022-2024</time
@@ -353,7 +366,7 @@
           </details>
         </section>
 
-        <h2>Diplômes</h2>
+        <h2 aria-hidden="true">Diplômes</h2>
         <section aria-label="Mon parcours scolaire" class="scolaire-texte">
           <article class="card">
             <time class="time-diplomes">2022-2024</time>
@@ -395,8 +408,8 @@
           </article>
         </section>
 
-        <h2>Compétences</h2>
-        <section class="competences">
+        <h2 aria-hidden="true">Compétences</h2>
+        <section aria-label="Mes compétences" class="competences">
           <ul class="competences-details">
             <li>Conduite de projet numérique (AMOA, MOE)</li>
             <li>Conduite du changement</li>
@@ -439,7 +452,7 @@
           </ul>
         </section>
 
-        <h2 id="certifications-title">Certifications</h2>
+        <h2 aria-hidden="true" id="certifications-title">Certifications</h2>
         <section aria-labelledby="certifications-title" id="certifications">
           <time class="certif-time">2023</time>
           <div class="hr-parent"><hr /></div>
@@ -527,62 +540,72 @@
           </p>
         </section>
       </main>
-      <footer id="footer">
-  <ul>
-    <li><p id="me">Téotime Pacreau</p></li>
-    <li>
+      <footer id="footer"><ul>
+  <li><p id="me">Téotime Pacreau</p></li>
+  <li>
+    <address>
       <a
         href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis teotimepacreau.fr"
         >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
           >spam</span
         >outlook.fr</a
       >
-    </li>
-    <li>
-      <a class="rss" href="/feed/feed.xml">
-        <i class="ph ph-rss"></i>
-        <span>RSS</span>
-      </a>
-    </li>
-  </ul>
-  <ul id="links">
-    <li>
-      <a
-        class="social-footer"
-        rel="me"
-        href="https://github.com/teotimepacreau"
-        target="_blank"
-      >
-        <i class="ph ph-github-logo"></i>
-        <span>Github</span>
-      </a>
-    </li>
-    <li>
-      <a
-        class="social-footer"
-        rel="me"
-        href="https://mastodon.design/@teotimepacreau"
-        target="_blank"
-      >
-        <i class="ph ph-mastodon-logo"></i>
-        <span>Mastodon</span>
-      </a>
-    </li>
-    <li>
-      <a
-        class="social-footer"
-        rel="me"
-        href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
-        target="_blank"
-      >
-        <i class="ph ph-linkedin-logo"></i>
-        <span>LinkedIn</span>
-      </a>
-    </li>
-  </ul>
-  <ul id="stats">
-    <li><a class="social-footer" href="https://www.ecoindex.fr/resultat/?id=0b81b2d0-19ae-413a-8fcc-dac29c36ea9e" target="_blank" title="Consulter le score ecoindex de creasit.fr (nouvel onglet)">Score ecoindex <span class="ecoindex">B</span></a>
-  </ul></footer>
+    </address>
+  </li>
+  <li>
+    <a class="rss" href="/feed/feed.xml">
+      <i class="ph ph-rss"></i>
+      <span>RSS</span>
+    </a>
+  </li>
+</ul>
+<ul id="links">
+  <li>
+    <a
+      class="social-footer"
+      rel="me"
+      href="https://github.com/teotimepacreau"
+      target="_blank"
+    >
+      <i class="ph ph-github-logo"></i>
+      <span>Github</span>
+    </a>
+  </li>
+  <li>
+    <a
+      class="social-footer"
+      rel="me"
+      href="https://mastodon.design/@teotimepacreau"
+      target="_blank"
+    >
+      <i class="ph ph-mastodon-logo"></i>
+      <span>Mastodon</span>
+    </a>
+  </li>
+  <li>
+    <a
+      class="social-footer"
+      rel="me"
+      href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
+      target="_blank"
+    >
+      <i class="ph ph-linkedin-logo"></i>
+      <span>LinkedIn</span>
+    </a>
+  </li>
+</ul>
+<ul id="stats">
+  <li>
+    <a
+      class="social-footer"
+      href="https://www.ecoindex.fr/resultat/?id=0b81b2d0-19ae-413a-8fcc-dac29c36ea9e"
+      target="_blank"
+      title="Consulter le score ecoindex de creasit.fr (nouvel onglet)"
+      >Score ecoindex <span class="ecoindex">B</span></a
+    >
+  </li>
+</ul>
+</footer>
     </div>
     <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
 <script defer src="/scripts/nav.js"></script>

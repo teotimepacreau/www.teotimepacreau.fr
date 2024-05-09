@@ -11,11 +11,16 @@ title: Développement web et management de projets numériques à Nantes
     {% include "color-picker.html"%}
     <div class="container" id="homepage-container">
       <header id="homepage-menu">
-        {% include "menumobile.html"%}
-        <nav class="homepage-nav" id="primary-navigation" data-visible="false">
+        {% include "mobilenav.html"%}
+        <nav
+          class="homepage-nav"
+          id="primary-navigation"
+          data-visible="false"
+          aria-label="Principale"
+        >
           <ul class="menu-anim">
-            <li><a href="../curriculum">01 Curriculum Vitae</a></li>
-            <li><a href="blog">02 Blog</a></li>
+            <li><a href="/curriculum">01 Curriculum Vitae</a></li>
+            <li><a href="/blog">02 Blog</a></li>
             <li><a href="/projets">03 Projets</a></li>
             <li><a href="/colophon">04 Colophon</a></li>
           </ul>
@@ -167,15 +172,17 @@ title: Développement web et management de projets numériques à Nantes
                 sizes="(max-width: 600px) 168px, 1142px"
               />
 
-              <button class="homepage-projets-btn projets-btn-mobile" tabindex="-1">
+              <button
+                class="homepage-projets-btn projets-btn-mobile"
+                tabindex="-1"
+              >
                 <a
-                class="homepage-projets-link"
-                href="/projets/projetnewsletter/"
+                  class="homepage-projets-link"
+                  href="/projets/projetnewsletter/"
                 >
                   Découvrir ↗
-                  </a
-              >
-                </button>
+                </a>
+              </button>
             </div>
             <div class="homepage-projets-grid-item__right">
               <ul>
@@ -187,15 +194,17 @@ title: Développement web et management de projets numériques à Nantes
                 <span>Site web de newsletter & intégration HTML d'email</span>
               </div>
 
-              <button class="homepage-projets-btn projets-btn-desktop" tabindex="-1">
+              <button
+                class="homepage-projets-btn projets-btn-desktop"
+                tabindex="-1"
+              >
                 <a
-                class="homepage-projets-link"
-                href="/projets/projetnewsletter/"
+                  class="homepage-projets-link"
+                  href="/projets/projetnewsletter/"
                 >
                   Découvrir ↗
-                  </a
-              >
-                </button>
+                </a>
+              </button>
             </div>
           </article>
         </section>
@@ -355,7 +364,7 @@ title: Développement web et management de projets numériques à Nantes
         function hide() {
           return new Promise((resolve) => {
             for (let element of elementsToAnimate) {
-              element.classList.toggle("homepage-projet-hidden");
+              element.classList.toggle("homepage-projets-hidden");
             }
             resolve();
           });

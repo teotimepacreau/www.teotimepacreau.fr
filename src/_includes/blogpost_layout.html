@@ -34,18 +34,16 @@
             <ul class="post-tags">
               {% for tag in tags %}
               <li>
-                <a class="tags-style" id="post-tags" href="/tags/{{ tag | slugify }}"
+                <a href="/tags/{{ tag | slugify }}"
                   >{{tag}}</a
                 >
               </li>
               {% endfor %}
             </ul>
-            <time class="post-date">
-              Publié le :
-              <time datetime="{{ date }}"
-                >{{ date | date('dd LLLL yyyy') }}</time
+            <span class="post-date">
+              Publié le <time datetime="{{ date }}">{{ date | date('dd LLLL yyyy') }}</time
               >
-            </time>
+            </span>
             <p>{{ description }}</p>
           </header>
             {{ content | safe }}

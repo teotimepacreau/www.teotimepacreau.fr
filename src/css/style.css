@@ -1787,3 +1787,9 @@ blockquote:after {
 blockquote ~ * {
   margin-top: calc(0.5 * var(--baseline));
 }
+
+/*---ACCESSIBILITY---*/
+[aria-current="page"]{
+  font-weight: 700;
+  color: var(--accent)!important;
+}

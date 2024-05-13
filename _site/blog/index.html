@@ -111,10 +111,12 @@
 
         <button
   class="mobile-nav-toggle"
+  type="button"
   aria-label="Navigation"
   popovertarget="mobile-navigation"
   popovertargetaction="show"
   aria-haspopup="menu"
+  aria-controls="mobile-navigation"
 >
   <svg
     aria-hidden="true"
@@ -135,7 +137,7 @@
   aria-label="Principale"
   popover
 >
-  <button id="hamburger-button-close" popovertarget="mobile-navigation" popovertargetaction="hide" style="border: 0; background-color: unset;">
+  <button id="hamburger-button-close" aria-label="fermer la navigation principale" popovertarget="mobile-navigation" popovertargetaction="hide" style="border: 0; background-color: unset;">
     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
   </button>
   <ul class="menu">
@@ -162,7 +164,7 @@
       
     </header>
     <div>
-      <a tabindex="1" class="blog-card-title" href="/blog/amazon-memo-6-pages/"
+      <a class="blog-card-title" href="/blog/amazon-memo-6-pages/"
         >Le mémo à 6 pages d&#39;Amazon</a
       >
       <time class="tags-date">
@@ -186,7 +188,7 @@
       
     </header>
     <div>
-      <a tabindex="1" class="blog-card-title" href="/blog/heberger-soi-meme-des-applications/"
+      <a class="blog-card-title" href="/blog/heberger-soi-meme-des-applications/"
         >Héberger soi-même des applications en ayant peu de connaissances DevOps</a
       >
       <time class="tags-date">
@@ -214,7 +216,7 @@
       
     </header>
     <div>
-      <a tabindex="1" class="blog-card-title" href="/blog/prefers-motion-reduced/"
+      <a class="blog-card-title" href="/blog/prefers-motion-reduced/"
         >Accessibilité &amp; animations : laisser la main à l&#39;utilisateur avec prefers-reduced-motion</a
       >
       <time class="tags-date">
@@ -238,7 +240,7 @@
       
     </header>
     <div>
-      <a tabindex="1" class="blog-card-title" href="/blog/git-based-headless-cms/"
+      <a class="blog-card-title" href="/blog/git-based-headless-cms/"
         >Tour d&#39;horizon des CMS Headless basés sur Git</a
       >
       <time class="tags-date">
@@ -262,7 +264,7 @@
       
     </header>
     <div>
-      <a tabindex="1" class="blog-card-title" href="/blog/legal-design/"
+      <a class="blog-card-title" href="/blog/legal-design/"
         >Le legal design : qu&#39;est-ce que c&#39;est ?</a
       >
       <time class="tags-date">
@@ -283,14 +285,10 @@
       <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/html/"
         >HTML</a
       >
-       
-      <a tabindex="0" class="blog-card-tags-link" rel="tag" href="/tags/webmail/"
-        >webmail</a
-      >
       
     </header>
     <div>
-      <a tabindex="1" class="blog-card-title" href="/blog/emails-html-modernes/"
+      <a class="blog-card-title" href="/blog/emails-html-modernes/"
         >Emails HTML modernes : en finir avec les &lt;table&gt;</a
       >
       <time class="tags-date">
@@ -318,7 +316,7 @@
       
     </header>
     <div>
-      <a tabindex="1" class="blog-card-title" href="/blog/SQLite/"
+      <a class="blog-card-title" href="/blog/SQLite/"
         >SQLite, la solution pragmatique en production pour le web</a
       >
       <time class="tags-date">
@@ -350,7 +348,7 @@
       
     </header>
     <div>
-      <a tabindex="1" class="blog-card-title" href="/blog/mesure-d&#39;impact/"
+      <a class="blog-card-title" href="/blog/mesure-d&#39;impact/"
         >Comment réaliser la mesure d&#39;impact de son entreprise gratuitement et pourquoi ?</a
       >
       <time class="tags-date">
@@ -378,7 +376,7 @@
       
     </header>
     <div>
-      <a tabindex="1" class="blog-card-title" href="/blog/rythme-vertical-css/"
+      <a class="blog-card-title" href="/blog/rythme-vertical-css/"
         >Gérer facilement le rythme vertical de son site web</a
       >
       <time class="tags-date">

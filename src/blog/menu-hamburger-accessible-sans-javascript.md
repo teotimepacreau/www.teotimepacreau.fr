@@ -1,4 +1,6 @@
 ---
+eleventyExcludeFromCollections: true # A ENLEVER AU MOMENT DE POSTER
+
 title: "Menu hamburger accessible sans Javascript"
 date: '2024-05-11'
 description: "Comment construire un menu hamburger accessible à tous en respectant l'amélioration progressive ?"
@@ -39,6 +41,8 @@ Quand on crée un menu hamburger, plusieurs règles d'UX s'imposent :
 - le clic en dehors du menu ou la touche `ESC` doit fermer le menu
 
 Popover est un nouvel attribut HTML [supporté par l'ensemble des navigateurs](https://developer.mozilla.org/fr/docs/Web/API/Popover_API). Il offre un mécanisme natif pour afficher du contenu au dessus de la page **sans Javascript**.
+
+[METTRE ICI UNE DEMO DU FONCTIONNEMENT SANS JS]
 
 ## Les attributs d'accessibilité inclus par défaut dans le popover
 

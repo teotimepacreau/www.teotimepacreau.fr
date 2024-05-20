@@ -2,7 +2,7 @@
 eleventyExcludeFromCollections: true # A ENLEVER AU MOMENT DE POSTER
 
 title: "Créer un menu hamburger fonctionnant sans Javascript"
-date: '2024-05-20'
+date: '2024-05-21'
 description: "Comment construire un menu hamburger accessible à tous en respectant l'amélioration progressive ?"
 tags: 
   - 'Frontend'
@@ -35,10 +35,9 @@ Quand il y a plusieurs liens, il convient de créer une liste de liens en wrappa
 On wrap les `<li>` dans une liste non-ordonnée `<ul>`. Enfin, on wrap le tout dans l'élément HTML de navigation sémantique `<nav>`. Utiliser `<nav>` permet de bénéficier du **landmark** de navigation pour que le navigateur identifie plus facilement la section dédiée (un **landmark** est une région de la page de première importance identifiée par le navigateur)
 
 ## Popover, l'API de navigateur dédiée aux éléments flottants
-
 Popover est un nouvel attribut HTML [supporté par l'ensemble des navigateurs](https://developer.mozilla.org/fr/docs/Web/API/Popover_API). Il offre un mécanisme natif pour afficher du contenu au dessus de la page **sans Javascript**.
 Plusieurs fonctionnalités lui sont automatiquement associées :
-- "Top-layer", une couche de superposition est automatiquement créée pour le popover qui sera au-dessus de n'importe quel `z-index`
+- "Top-layer", une couche de superposition est automatiquement créée pour le popover. Celui-ci s'affichera au-dessus de n'importe quel `z-index`.
 - "Light-dismiss", un simple clic en dehors du popover le ferme automatiquement
 - "Tab focus", le focus se place automatiquement dans le popover après ouverture
 - "Keyboard support", tapper sur`ESC` ferme le popover et retourne le focus au contenu en arrière plan
@@ -47,8 +46,8 @@ Plusieurs fonctionnalités lui sont automatiquement associées :
 
 ### Comment créer notre menu avec Popover
 Quand on crée un menu hamburger, plusieurs règles d'UX s'imposent :
-- le reste de la page doit rester utilisable pour l'utilisateur. En terme technique c'est un comportement **non-modal** [(pour plus d'informations sur la différence modal - non modal voir ce lien)](https://hidde.blog/dialog-modal-popover-differences/#heading-3).
-- on souhaite que le menu se superpose au contenu plutôt que de pousser le contenu vers un côté. Cela préserve l'importance du contenu de la page en arrière plan.
+- le reste de la page doit rester utilisable pour l'utilisateur. On ne souhaite pas que l'ouverture du menu vienne interrompre l'action en cours. En terme technique c'est un comportement **non-modal** [(pour plus d'informations sur la différence modal - non modal voir ce lien)](https://www.nngroup.com/articles/modal-nonmodal-dialog/).
+- on souhaite que le menu se superpose au contenu plutôt que de pousser le contenu vers un côté. [Cela préserve l'importance du contenu de la page en arrière plan](https://ux.stackexchange.com/questions/46305/navigation-drawer-tablet-push-or-overlay/).
 - un simple clic en dehors du menu ou la touche `ESC` doit fermer le menu
 - un bouton actionne l'ouverture et la fermeture du menu
 
@@ -109,13 +108,14 @@ Il est possible de donner un style d'avant ouverture au popover via le sélecteu
 
 ## Les attributs d'accessibilité qu'il est pertinent d'ajouter au popover
 
-- aria-controls
-- aria-haspopup
-- type=”button”
+1. aria-controls
+2. aria-haspopup
+3. type=”button”
 
 
 ## Sources
-<https://ux.stackexchange.com/questions/46305/navigation-drawer-tablet-push-or-overlay/>
+
+<https://hidde.blog/dialog-modal-popover-differences/#heading-3/>
 
 <https://web.dev/articles/website-navigation/>
 

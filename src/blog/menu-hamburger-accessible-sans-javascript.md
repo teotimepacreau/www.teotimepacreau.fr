@@ -103,14 +103,16 @@ Il est possible de donner un style d'avant ouverture au popover via le sélecteu
 
 ## Les attributs d'accessibilité inclus par défaut dans le popover
 
-- `aria-expanded` : quand un popover est invoqué par un `<button>` (fonctionne seulement avec l'élément HTML bouton) le navigateur associe automatiquement l’état étendu `aria-expanded=”true”` ou replié `aria-expanded=”false”` au popover associé
-- `aria-details` : il s’agit d’un attribut qui établit la relation entre deux éléments HTML. SI notre popover ne suit pas directiment notre bouton, le navigateur se charge d’établir automatiquement le `aria-details`
+- `aria-expanded` : quand un popover est invoqué par un `<button>` le navigateur associe automatiquement l’état étendu `aria-expanded=”true”` ou replié `aria-expanded=”false”` au popover associé (fonctionne seulement avec l'élément HTML bouton)
+- `aria-details` : il s’agit d’un attribut qui démontre la relation entre deux éléments HTML. Si notre popover ne suit pas directiment notre bouton, le navigateur se charge d’établir automatiquement le `aria-details`
 
-## Les attributs d'accessibilité qu'il est pertinent d'ajouter au popover
+## Les attributs d'accessibilité qu'il est pertinent d'ajouter à notre hamburger menu popover
 
-1. aria-controls
-2. aria-haspopup
-3. type=”button”
+1. `aria-controls`. Permet d'indiquer quel est l'élément actionné par le bouton. **Se place sur le bouton.**
+2. `aria-haspopup`. Indique que le bouton sécrète un menu. Elle avertit que, lorsque le bouton est pressé, l'utilisateur sera déplacé vers le menu "popup”. **Se place sur le bouton.**
+3. `aria-label`. Permet de donner un nom accessible à un élément. On souhaite expliquer avec un nom accessible le rôle du bouton d'ouverture : "ouvrir la navigation principale". Pour l'élément `<nav>` on indique seulement le niveau de la navigation car le lecteur d'écran annoncer d'emblée qu'il s'agit d'un élément de navigation.
+4. `aria-current`. Permet de signifier sur quel page de la navigation se trouve actuellement l’utilisateur.
+4. type=”button”
 
 
 ## Sources

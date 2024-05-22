@@ -44,7 +44,7 @@ Le format invite naturellement à couper l’orateur pour poser des questions &l
 &lt;p&gt;En contrepied des présentations visuellement plaisantes, Amazon s’est construit sur une culture de l’écrit. Depuis 2004, le processus d’écriture est devenu une doctrine centrale pour guider toute prise de décision.
 Chaque réunion est obligatoirement basée sur un document écrit.&lt;/p&gt;
 &lt;p&gt;Un des documents clé utilisé par Amazon est le mémo à 6 pages.&lt;/p&gt;
-&lt;h2 id=&quot;comment-construire-le-amazon-6-pager&quot; tabindex=&quot;-1&quot;&gt;Comment construire le Amazon 6 Pager&lt;/h2&gt;
+&lt;h2 id=&quot;comment-construire-le-m%C3%A9mo-%C3%A0-6-pages-d%E2%80%99amazon&quot; tabindex=&quot;-1&quot;&gt;Comment construire le mémo à 6 pages d’Amazon&lt;/h2&gt;
 &lt;p&gt;Le document peut se structurer avec les 6 parties suivantes :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Introduction&lt;/strong&gt; : ce que le sujet couvre, données contextuelles.&lt;/li&gt;
@@ -60,7 +60,7 @@ Chaque réunion est obligatoirement basée sur un document écrit.&lt;/p&gt;
 &lt;p&gt;En amont de la réunion, le document est partagé à tous afin que chacun puisse s’en imprégner.&lt;/p&gt;
 &lt;p&gt;Pendant la réunion, chaque participant a 20-30 minutes pour lire le document en silence, tout le monde lit ensemble. La plupart des personnes notent leurs questions sur le document. S’en suit autant de temps que nécessaire pour que tous les paritipants discutent et échangent. Le format de discussion n’a pas à être cadrée, le but est de trouver un consensus.&lt;/p&gt;
 &lt;p&gt;Quand la réunion est terminée, il est de la responsabilité de l’auteur de mettre à jour le document et de l’adresser à tous autant de fois que nécessaire.&lt;/p&gt;
-&lt;h2 id=&quot;pourquoi-le-amazon-6-pager-fonctionne&quot; tabindex=&quot;-1&quot;&gt;Pourquoi le Amazon 6 Pager fonctionne&lt;/h2&gt;
+&lt;h2 id=&quot;pourquoi-cela-fonctionne&quot; tabindex=&quot;-1&quot;&gt;Pourquoi cela fonctionne&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;le format du document : les 6 catégories distinctes permettent aux managers de repérer et creuser les parties qu’ils souhaitent. Adapté aux emplois du temps du top management.&lt;/li&gt;
 &lt;li&gt;l’intérêt du storytelling : le fait de présenter sous forme narrative plutôt que par bullet points est plus adapté au fonctionnement de notre cerveau. En effet, nous percevons le monde plus facilement via des histoires.&lt;/li&gt;
@@ -72,7 +72,7 @@ Chaque réunion est obligatoirement basée sur un document écrit.&lt;/p&gt;
 &lt;p&gt;I’ve noticed when the anecdotes and the metrics disagree, the anecdotes are usually right. That’s why it’s so important to check that data with your intuition and instincts, and you need to teach that to executives and junior executives.
 – &lt;strong&gt;Jeff Bezos&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;quelle-dur%C3%A9e-pour-construire-le-6-pager-memo&quot; tabindex=&quot;-1&quot;&gt;Quelle durée pour construire le 6 Pager Memo&lt;/h2&gt;
+&lt;h2 id=&quot;combien-de-temps-pour-construire-le-m%C3%A9mo&quot; tabindex=&quot;-1&quot;&gt;Combien de temps pour construire le mémo&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The great memos are written and re-written, shared with colleagues who are asked to improve the work, set aside for a couple of days, and then edited again with a fresh mind. They simply can’t be done in a day or two.&lt;/p&gt;
 &lt;p&gt;-&lt;strong&gt;Jeff Bezos 2017 annual letter to shareolders&lt;/strong&gt;&lt;/p&gt;
@@ -515,7 +515,7 @@ collections:
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt; &amp;quot;scripts&amp;quot;: {
-    &amp;quot;dev&amp;quot;: &amp;quot;tinacms dev -c \&amp;quot;vite dev\&amp;quot;&amp;quot;,
+    &amp;quot;dev&amp;quot;: &amp;quot;tinacms dev -c &#92;&amp;quot;vite dev&#92;&amp;quot;&amp;quot;,
 		&amp;quot;build&amp;quot;: &amp;quot;tinacms build &amp;amp;&amp;amp; vite build&amp;quot;,
 		&amp;quot;preview&amp;quot;: &amp;quot;vite preview&amp;quot;
   }

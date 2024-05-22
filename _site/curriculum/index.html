@@ -45,8 +45,8 @@
 />
 
 <!--Social-->
-<link rel="me authn" href="https://twitter.com/teotimepacreau" />
-<link rel="me" href="https://mastodon.design/@teotimepacreau" />
+<link href="https://twitter.com/teotimepacreau" />
+<link href="https://mastodon.design/@teotimepacreau" />
 <meta name="generator" content="Eleventy" />
 
 <!-- open graph tags -->
@@ -67,8 +67,15 @@
 <meta name="author" content="Téotime Pacreau" />
 <meta name="owner" content="Téotime Pacreau">
 
+<link
+fetchpriority="low"
+  rel="stylesheet"
+  type="text/css"
+  href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+/>
+
 <!-- auto generator of OpenGraph images -->
-<meta property="og:image" content="/og-images/5vT9wnoHNs.png" />
+<meta property="og:image" content="/og-images/curriculum.png" />
 
 
 
@@ -92,15 +99,15 @@
       </div>
     </fieldset>
   </form>
-    <div class="container" id="normal-page-container">
+    <div id="normal-page-container">
       <header>
         <button
   class="mobile-nav-toggle"
   type="button"
-  aria-label="Navigation"
+  aria-label="ouvrir la navigation principale"
   popovertarget="mobile-navigation"
   popovertargetaction="show"
-  aria-haspopup="menu"
+  aria-haspopup="true"
   aria-controls="mobile-navigation"
 >
   <svg
@@ -122,7 +129,7 @@
   aria-label="Principale"
   popover
 >
-  <button id="hamburger-button-close" aria-label="fermer la navigation principale" popovertarget="mobile-navigation" popovertargetaction="hide" style="border: 0; background-color: unset;">
+  <button id="hamburger-button-close" aria-label="fermer la navigation principale" aria-controls="mobile-navigation" popovertarget="mobile-navigation" popovertargetaction="hide" style="border: 0; background-color: unset;">
     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
   </button>
   <ul class="menu">
@@ -137,7 +144,6 @@
         <nav
   class="navigation-flexer"
   id="primary-navigation"
-  data-visible="false"
   aria-label="Principale"
 >
   <span aria-hidden="true" id="navigation-announcer">NAVIGATION</span>
@@ -174,7 +180,6 @@
               <a
                 href="https://www.prefectures-regions.gouv.fr/pays-de-la-loire/Region-et-institutions/Organisation-administrative-de-la-region/Secretariat-General-pour-les-Affaires-Regionales-SGAR/Etat-LIN-le-Laboratoire-d-Innovation-Publique-de-l-Etat-en-region-Pays-de-la-Loire/Etat-LIN-qu-est-ce-que-c-est"
                 target="_blank"
-                rel="noopener noreferrer"
                 >État'LIN, le laboratoire d'innovation publique de l'État en
                 Pays de la Loire</a
               >
@@ -227,7 +232,6 @@
               <a
                 href="https://www.lieuxcommuns.coop/"
                 target="_blank"
-                rel="noopener noreferrer"
                 >Lieux Communs</a
               >
             </summary>
@@ -261,7 +265,6 @@
               <a
                 href="https://www.habitat44.org/"
                 target="_blank"
-                rel="noopener noreferrer"
                 >Habitat 44</a
               >
             </summary>
@@ -295,7 +298,6 @@
               <a
                 href="https://www.nantaise-habitations.fr/"
                 target="_blank"
-                rel="noopener noreferrer"
                 >La Nantaise d'Habitations</a
               >
             </summary>
@@ -323,7 +325,6 @@
               <a
                 href="https://www.adoma.cdc-habitat.fr/adoma/Accueil/p-730-L-insertion-par-le-logement.htm"
                 target="_blank"
-                rel="noopener noreferrer"
                 >Adoma Groupe CDC Habitat</a
               >
             </summary>
@@ -358,7 +359,6 @@
               <a
                 href="https://www.residetape.fr/"
                 target="_blank"
-                rel="noopener noreferrer"
                 >Résidetape</a
               >
             </summary>
@@ -444,7 +444,6 @@
               <a
                 href="https://expressjs.com/fr/"
                 target="_blank"
-                rel="noopener noreferrer"
                 >Express</a
               >
             </li>
@@ -452,7 +451,7 @@
               <a
                 href="https://fastify.dev/"
                 target="_blank"
-                rel="noopener noreferrer"
+                
                 >Fastify</a
               >
             </li>
@@ -461,7 +460,7 @@
               <a
                 href="https://www.11ty.dev/"
                 target="_blank"
-                rel="noopener noreferrer"
+                
                 >Eleventy</a
               >
             </li>
@@ -479,7 +478,7 @@
             <a
               href="https://www.modernisation.gouv.fr/actualites/laboratoires-dinnovation-publique-la-ditp-lance-le-programme-de-formation-clip"
               target="_blank"
-              rel="noopener noreferrer"
+              
               >Formation de 6 jours "Conduire un laboratoire d'innovation
               publique" par la Direction Interministérielle de la Transformation
               Publique</a
@@ -491,7 +490,7 @@
             <a
               href="https://github.com/teotimepacreau/Certificat-formation-mode-projet/blob/main/Certificat%20formation%20mode%20projet.pdf"
               target="_blank"
-              rel="noopener noreferrer"
+              
               >Formation "Conduite de projets au sein des services publics" par
               la Direction Interministérielle de la Transformation Publique</a
             >
@@ -502,7 +501,7 @@
             <a
               href="https://www.ira-nantes.gouv.fr/index.php/2023/06/16/animer-et-developper-un-reseau/"
               target="_blank"
-              rel="noopener noreferrer"
+              
               >Formation "Animer un réseau"</a
             >
           </p>
@@ -512,7 +511,7 @@
             <a
               href="https://jujotte.notion.site/Conception-num-rique-m-thodologie-du-designer-UX-a4eed1789fc244d786b9e6db2fbd6159"
               target="_blank"
-              rel="noopener noreferrer"
+              
               >Formation UX UI (design numérique)</a
             >
           </p>
@@ -522,7 +521,7 @@
             <a
               href="https://www.coursera.org/account/accomplishments/certificate/QS6M66QE32C9"
               target="_blank"
-              rel="noopener noreferrer"
+              
               >Les bases du management de projet</a
             >
           </p>
@@ -532,7 +531,7 @@
             <a
               href="https://skillshop.exceedlms.com/student/award/yZBSDdcS6REHdwUs3PWwycie?referer=https%3A%2F%2Fskillshop.exceedlms.com%2Fstudent%2Fpath%2F142277%2Factivity%2F171817"
               target="_blank"
-              rel="noopener noreferrer"
+              
               >Google My Business</a
             >
           </p>
@@ -542,7 +541,7 @@
             <a
               href="https://learndigital.withgoogle.com/link/1qh2gjrod8g"
               target="_blank"
-              rel="noopener noreferrer"
+              
               >Les principes fondamentaux du marketing numérique (clé de
               vérification : EZC 9XA BAR)</a
             >
@@ -553,14 +552,14 @@
             <a
               href="https://www.afpols.fr/formations-inter-entreprises/nos-formations/gestion-de-proximite/relations-avec-les-habitants/troubles-de-voisinage-quelles-actions-mener"
               target="_blank"
-              rel="noopener noreferrer"
+              
               >Formation "Gestion des conflits"</a
             >
           </p>
         </section>
       </main>
       <footer id="footer"><ul>
-  <li><p id="me">Téotime Pacreau</p></li>
+  <li><p>Téotime Pacreau</p></li>
   <li>
     <address>
       <a
@@ -582,7 +581,6 @@
   <li>
     <a
       class="social-footer"
-      rel="me"
       href="https://github.com/teotimepacreau"
       target="_blank"
     >
@@ -593,7 +591,6 @@
   <li>
     <a
       class="social-footer"
-      rel="me"
       href="https://mastodon.design/@teotimepacreau"
       target="_blank"
     >
@@ -604,7 +601,6 @@
   <li>
     <a
       class="social-footer"
-      rel="me"
       href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
       target="_blank"
     >
@@ -627,7 +623,6 @@
 </footer>
     </div>
     <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
-<script fetchpriority="low" defer src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web"></script>
 <script defer src="/scripts/aria-current.js"></script>
     <script defer src="/scripts/displayWorkExp.js"></script>
   </body>

@@ -45,8 +45,8 @@
 />
 
 <!--Social-->
-<link rel="me authn" href="https://twitter.com/teotimepacreau" />
-<link rel="me" href="https://mastodon.design/@teotimepacreau" />
+<link href="https://twitter.com/teotimepacreau" />
+<link href="https://mastodon.design/@teotimepacreau" />
 <meta name="generator" content="Eleventy" />
 
 <!-- open graph tags -->
@@ -67,8 +67,15 @@
 <meta name="author" content="Téotime Pacreau" />
 <meta name="owner" content="Téotime Pacreau">
 
+<link
+fetchpriority="low"
+  rel="stylesheet"
+  type="text/css"
+  href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+/>
+
 <!-- auto generator of OpenGraph images -->
-<meta property="og:image" content="/og-images/n0smO8Ce_V.png" />
+<meta property="og:image" content="/og-images/tags-taglist.png" />
 
 
 
@@ -92,15 +99,15 @@
       </div>
     </fieldset>
   </form>
-    <div class="container" id="normal-page-container">
+    <div id="normal-page-container">
       <header>
         <button
   class="mobile-nav-toggle"
   type="button"
-  aria-label="Navigation"
+  aria-label="ouvrir la navigation principale"
   popovertarget="mobile-navigation"
   popovertargetaction="show"
-  aria-haspopup="menu"
+  aria-haspopup="true"
   aria-controls="mobile-navigation"
 >
   <svg
@@ -122,7 +129,7 @@
   aria-label="Principale"
   popover
 >
-  <button id="hamburger-button-close" aria-label="fermer la navigation principale" popovertarget="mobile-navigation" popovertargetaction="hide" style="border: 0; background-color: unset;">
+  <button id="hamburger-button-close" aria-label="fermer la navigation principale" aria-controls="mobile-navigation" popovertarget="mobile-navigation" popovertargetaction="hide" style="border: 0; background-color: unset;">
     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
   </button>
   <ul class="menu">
@@ -137,7 +144,6 @@
         <nav
   class="navigation-flexer"
   id="primary-navigation"
-  data-visible="false"
   aria-label="Principale"
 >
   <span aria-hidden="true" id="navigation-announcer">NAVIGATION</span>
@@ -310,7 +316,7 @@
 </ul>
 </main>
       <footer id="footer"><ul>
-  <li><p id="me">Téotime Pacreau</p></li>
+  <li><p>Téotime Pacreau</p></li>
   <li>
     <address>
       <a
@@ -332,7 +338,6 @@
   <li>
     <a
       class="social-footer"
-      rel="me"
       href="https://github.com/teotimepacreau"
       target="_blank"
     >
@@ -343,7 +348,6 @@
   <li>
     <a
       class="social-footer"
-      rel="me"
       href="https://mastodon.design/@teotimepacreau"
       target="_blank"
     >
@@ -354,7 +358,6 @@
   <li>
     <a
       class="social-footer"
-      rel="me"
       href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
       target="_blank"
     >
@@ -377,7 +380,6 @@
 </footer>
     </div>
     <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
-<script fetchpriority="low" defer src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web"></script>
 <script defer src="/scripts/aria-current.js"></script>
   </body>
 </html>

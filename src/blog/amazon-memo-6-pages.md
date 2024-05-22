@@ -53,7 +53,7 @@ Chaque réunion est obligatoirement basée sur un document écrit.
 
 Un des documents clé utilisé par Amazon est le mémo à 6 pages.
 
-## Comment construire le Amazon 6 Pager
+## Comment construire le mémo à 6 pages d'Amazon
 Le document peut se structurer avec les 6 parties suivantes :
 1. **Introduction** : ce que le sujet couvre, données contextuelles.
 2. **Objectifs à atteindre** : l'objectif général en une phrase, puis décomposé en sous-objectifs. Une donnée passée suivie par la donnée future attendue, suivi par un calcul expliqué du changement entre les deux. Le résultat chiffré à atteindre. Bullet points acceptés ici.
@@ -73,7 +73,7 @@ Pendant la réunion, chaque participant a 20-30 minutes pour lire le document en
 
 Quand la réunion est terminée, il est de la responsabilité de l'auteur de mettre à jour le document et de l'adresser à tous autant de fois que nécessaire.
 
-## Pourquoi le Amazon 6 Pager fonctionne
+## Pourquoi cela fonctionne
 1. le format du document : les 6 catégories distinctes permettent aux managers de repérer et creuser les parties qu'ils souhaitent. Adapté aux emplois du temps du top management.
 2. l'intérêt du storytelling : le fait de présenter sous forme narrative plutôt que par bullet points est plus adapté au fonctionnement de notre cerveau. En effet, nous percevons le monde plus facilement via des histoires.
 3. le timing de la réunion : le format timé permet de s'assurer que chaque membre a bien toutes les informations avant de poser des questions contrairement à une présentation en slides où l'on est plus facilement amener à interrompre pour poser des questions.
@@ -82,7 +82,7 @@ Quand la réunion est terminée, il est de la responsabilité de l'auteur de met
 >I've noticed when the anecdotes and the metrics disagree, the anecdotes are usually right. That's why it's so important to check that data with your intuition and instincts, and you need to teach that to executives and junior executives.
 – **Jeff Bezos**
 
-## Quelle durée pour construire le 6 Pager Memo
+## Combien de temps pour construire le mémo
 > The great memos are written and re-written, shared with colleagues who are asked to improve the work, set aside for a couple of days, and then edited again with a fresh mind. They simply can’t be done in a day or two.
 >
 > -**Jeff Bezos 2017 annual letter to shareolders**

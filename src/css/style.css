@@ -1566,7 +1566,7 @@ tr {
   }
 }
 
-/*---MEDIA QUERY MOBILE---*/
+/*---MEDIA QUERY AFFICHAGE MOBILE---*/
 @media (width < 1000px) {
   /* HAMBURGER MENU */
   #homepage-menu {
@@ -1650,8 +1650,8 @@ tr {
     font-weight: 600;
     color: var(--txt);
   }
-
   /* FIN HAMBURGER MENU */
+
   #homepage-services-grid {
     display: flex;
     flex-direction: column;
@@ -1713,14 +1713,9 @@ tr {
     margin-top: var(--baseline);
   }
   #links {
-    grid-row: 2 / 3;
     grid-column: 1 / 4;
   }
   #stats {
-    grid-row: 3 / 4;
-    grid-column: 1 / 4;
-  }
-  #me {
     grid-column: 1 / 4;
   }
   /* INDISPENSABLE POUR PAS QUE LE MENU ROTATE EN DIMINUANT LARGEUR DE LA PAGE */
@@ -1728,7 +1723,7 @@ tr {
     transform: rotate(0deg) !important;
   }
 }
-/*---MEDIA QUERY POUR ENLEVER LE HAMBUGER POPOVER QUAND ON REVIENT SUR DESKTOP ---*/
+/*---MEDIA QUERY POUR ENLEVER LE HAMBURGER POPOVER QUAND ON REVIENT SUR DESKTOP ---*/
 @media (width > 1000px) {
   #mobile-navigation {
     display: none;
@@ -1762,4 +1757,9 @@ blockquote ~ * {
 [aria-current="page"] {
   font-weight: 700;
   color: var(--accent) !important;
+}
+
+/*---VIEW TRANSITIONS---*/
+@view-transition {
+  navigation: auto;
 }

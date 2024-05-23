@@ -74,7 +74,7 @@ fetchpriority="low"
 />
 
 <!-- auto generator of OpenGraph images -->
-<meta property="og:image" content="/og-images/blog-prefers-motion-reduced.png" />
+<meta property="og:image" content="/og-images/6d8ba81b.png" />
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -87,7 +87,7 @@ fetchpriority="low"
       "description": "Management de projet et numérique à Nantes"
     },
     {
-      "@type": "BlogPosting",
+      "@type": "WebPage",
       "mainEntityOfPage": {
         "@type": "WebPage"
       },
@@ -101,13 +101,7 @@ fetchpriority="low"
         "@type": "Organization",
         "name": "Le site web personnel de Teotime Pacreau",
         "url": "https://www.teotimepacreau.fr/#organization"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Teotime Pacreau"
-      },
-      "keywords": "accessibilité,animations,UX",
-      "datePublished": "2024-03-17"
+      }
     }
   ]
 }</script>
@@ -150,7 +144,7 @@ fetchpriority="low"
     xmlns="http://www.w3.org/2000/svg"
     width="32"
     height="32"
-    fill="#000000"
+    fill="var(--txt)"
     viewBox="0 0 256 256"
   >
     <path
@@ -196,36 +190,28 @@ fetchpriority="low"
         <ol><li><a href="#laisser-la-main-%C3%A0-l%E2%80%99utilisateur-concernant-l%E2%80%99affichage-des-animations">Laisser la main à l’utilisateur concernant l’affichage des animations</a></li><li><a href="#s%E2%80%99en-saisir-en-tant-que-d%C3%A9veloppeur">S’en saisir en tant que développeur</a></li><li><a href="#d%C3%A9monstration">Démonstration</a></li><li><a href="#sources">Sources</a></li></ol>
       </nav></aside>
         <main class="post-main">
-          <article id="article-post">
+          <article id="post">
             <header>
-            <h1>Accessibilité &amp; animations : laisser la main à l&#39;utilisateur avec prefers-reduced-motion</h1>
-            <ul class="post-tags">
-              
-              <li>
-                <a href="/tags/accessibilite"
-                  >accessibilité</a
-                >
-              </li>
-              
-              <li>
-                <a href="/tags/animations"
-                  >animations</a
-                >
-              </li>
-              
-              <li>
-                <a href="/tags/ux"
-                  >UX</a
-                >
-              </li>
-              
-            </ul>
-            <span class="post-date">
-              Publié le <time datetime="2024-03-17">17 mars 2024</time
-              >
-            </span>
-            <p>Certains utilisateurs peuvent ressentir une gêne face aux animations des pages web. Prefers-reduced-motion détecte si l&#39;utilisateur a demandé au système de minimiser la quantité d&#39;animation ou de mouvement.</p>
-          </header>
+              <h1>Accessibilité &amp; animations : laisser la main à l&#39;utilisateur avec prefers-reduced-motion</h1>
+              <ul class="post-tags">
+                
+                <li>
+                  <a href="/tags/accessibilite">Accessibilité</a>
+                </li>
+                
+                <li>
+                  <a href="/tags/ux">UX</a>
+                </li>
+                
+              </ul>
+              <span class="post-date">
+                Publié le
+                <time datetime="2024-03-17">
+                  17 mars 2024
+                </time>
+              </span>
+              <p>Certains utilisateurs peuvent ressentir une gêne face aux animations des pages web. Prefers-reduced-motion détecte si l&#39;utilisateur a demandé au système de minimiser la quantité d&#39;animation ou de mouvement.</p>
+            </header>
             <p>Le “Responsive Design” ne se limite plus à adapter l’affichage d’un site web au format desktop et mobile. Il est nécessaire de prendre en compte de nouveaux éléments :</p>
 <ul>
 <li>Être responsive à l’utilisateur : prendre en compte ses préférences avec, par exemple, <code>dark-mode/light-mode</code>, <code>prefers-reduced-motion</code>, <code>prefers-contrast</code>…</li>
@@ -303,7 +289,7 @@ Cette approche est appelée le “New Responsive Design”
   </li>
   <li>
     <a class="rss" href="/feed/feed.xml">
-      <i class="ph ph-rss"></i>
+      <span class="ph ph-rss"></span>
       <span>RSS</span>
     </a>
   </li>
@@ -315,7 +301,7 @@ Cette approche est appelée le “New Responsive Design”
       href="https://github.com/teotimepacreau"
       target="_blank"
     >
-      <i class="ph ph-github-logo"></i>
+      <span class="ph ph-github-logo"></span>
       <span>Github</span>
     </a>
   </li>
@@ -325,7 +311,7 @@ Cette approche est appelée le “New Responsive Design”
       href="https://mastodon.design/@teotimepacreau"
       target="_blank"
     >
-      <i class="ph ph-mastodon-logo"></i>
+      <span class="ph ph-mastodon-logo"></span>
       <span>Mastodon</span>
     </a>
   </li>
@@ -335,7 +321,7 @@ Cette approche est appelée le “New Responsive Design”
       href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
       target="_blank"
     >
-      <i class="ph ph-linkedin-logo"></i>
+      <span class="ph ph-linkedin-logo"></span>
       <span>LinkedIn</span>
     </a>
   </li>
@@ -375,6 +361,6 @@ Cette approche est appelée le “New Responsive Design”
     </div>
     <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
 <script defer src="/scripts/aria-current.js"></script>
-    <script defer src="/scripts/table.js"></script>  
+    <script defer src="/scripts/table.js"></script>
   </body>
 </html>

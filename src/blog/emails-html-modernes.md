@@ -3,10 +3,9 @@ title: 'Emails HTML modernes : en finir avec les <table>'
 date: '2023-12-13'
 description: "Comment mettre à jour ses pratiques de développement d'emails HTML dans l'environnement complexe et changeant des clients mails ?"
 tags: 
-  - 'email'
+  - 'Email'
   - 'HTML'
 layout: blogpost_layout.html
-type: post
 eleventyComputed:
   meta:
     site:
@@ -148,7 +147,6 @@ La flexbox est désormais supportée ! Très pratique pour afficher des images c
 
 <video controls>
   <source src="/img/flexbox-email.mp4" alt="Vidéo illustration l'illustration de flexbox dans un client mail" type="video/mp4">
-  Your browser does not support the video tag.
 </video>
 
 ### Position

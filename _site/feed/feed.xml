@@ -5,12 +5,142 @@
 	
 	<link href="https://www.teotimepacreau.fr/feed/feed.xml" rel="self"/>
 	<link href="https://www.teotimepacreau.fr/"/>
-	<updated>2024-04-29T00:00:00Z</updated>
+	<updated>2024-05-23T00:00:00Z</updated>
 	<id>https://www.teotimepacreau.fr/</id>
 	<author>
 		<name>Téotime Pacreau</name>
 		<email>teotime.pac@outlook.fr</email>
 	</author>
+	
+	<entry>
+		<title>Créer un menu hamburger fonctionnant sans Javascript grâce à Popover API</title>
+		<link href="https://www.teotimepacreau.fr/blog/menu-hamburger-fonctionnant-sans-javascript-accessible/"/>
+		<updated>2024-05-23T00:00:00Z</updated>
+		<id>https://www.teotimepacreau.fr/blog/menu-hamburger-fonctionnant-sans-javascript-accessible/</id>
+		<content type="html">&lt;h2 id=&quot;les-bases-d%E2%80%99un-menu-en-html-s%C3%A9mantique&quot; tabindex=&quot;-1&quot;&gt;Les bases d’un menu en HTML sémantique&lt;/h2&gt;
+&lt;p&gt;Un menu est constitué de liens, on utilise donc la balise HTML &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; pour représenter les liens.&lt;/p&gt;
+&lt;p&gt;Quand il y a plusieurs liens, il convient de créer une liste de liens en wrappant les &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; dans des &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt;. Cela confère plusieurs avantages pour les utilisateurs assistés par un lecteur d’écran :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;l’annonce vocale préalable de chaque liens&lt;/li&gt;
+&lt;li&gt;un raccourci pour sauter entre chaque élément de liste&lt;/li&gt;
+&lt;li&gt;l’annonce voccale de l’index de l’item sélectionné (par exemple “élément de liste, deux parmi quatre”)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On wrap les &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt; dans une liste non-ordonnée &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;. Enfin, on wrap le tout dans l’élément HTML de navigation sémantique &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt;. Utiliser &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt; permet de bénéficier du &lt;strong&gt;landmark&lt;/strong&gt; de navigation pour que le navigateur identifie plus facilement la section dédiée (un &lt;strong&gt;landmark&lt;/strong&gt; est une région de la page de première importance reconnue par le navigateur).&lt;/p&gt;
+&lt;h2 id=&quot;popover%2C-l%E2%80%99api-de-navigateur-d%C3%A9di%C3%A9e-aux-%C3%A9l%C3%A9ments-flottants&quot; tabindex=&quot;-1&quot;&gt;Popover, l’API de navigateur dédiée aux éléments flottants&lt;/h2&gt;
+&lt;p&gt;Popover est un nouvel attribut HTML &lt;a href=&quot;https://developer.mozilla.org/fr/docs/Web/API/Popover_API&quot;&gt;supporté par l’ensemble des navigateurs&lt;/a&gt;. Il offre un mécanisme natif pour afficher du contenu au dessus de la page &lt;strong&gt;sans Javascript&lt;/strong&gt;. L’élément est masqué par défaut avec &lt;code&gt;display: none&lt;/code&gt; jusqu’au déclenchement de son ouverture par l’élément qui le contrôle.
+Plusieurs fonctionnalités lui sont automatiquement associées :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Top-layer”, une couche de superposition est automatiquement créée pour que le popover s’affiche au-dessus de n’importe quel &lt;code&gt;z-index&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;“Light-dismiss”, un simple clic en dehors du popover le ferme automatiquement.&lt;/li&gt;
+&lt;li&gt;“Tab focus”, le focus se place automatiquement dans le popover après ouverture.&lt;/li&gt;
+&lt;li&gt;“Keyboard support”, tapper sur&lt;code&gt;ESC&lt;/code&gt; ferme le popover et retourne le focus au contenu en arrière plan.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+  &lt;video controls=&quot;&quot; muted=&quot;&quot;&gt;
+    &lt;source src=&quot;https://www.teotimepacreau.fr/img/popover-sans-javascript.mp4&quot; alt=&quot;Ouverture et fermeture d&#39;un menu de navigation popover sur un navigateur où Javascript est désactivé&quot; title=&quot;Ouverture et fermeture d&#39;un menu de navigation popover sur un navigateur où Javascript est désactivé&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;/video&gt;
+  &lt;figcaption&gt;
+  Ouverture et fermeture d&#39;un menu de navigation popover sur un navigateur où Javascript est désactivé
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id=&quot;comment-cr%C3%A9er-notre-menu-hamburger-de-navigation-avec-popover&quot; tabindex=&quot;-1&quot;&gt;Comment créer notre menu hamburger de navigation avec Popover&lt;/h3&gt;
+&lt;p&gt;Quand on crée un menu hamburger, plusieurs règles d’UX s’imposent :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;le reste de la page doit rester utilisable pour l’utilisateur. On ne souhaite pas que l’ouverture du menu vienne interrompre l’action en cours. En terme technique c’est un comportement &lt;strong&gt;non-modal&lt;/strong&gt; &lt;a href=&quot;https://www.nngroup.com/articles/modal-nonmodal-dialog/&quot;&gt;(pour plus d’informations sur la différence modal - non modal voir ce lien)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;on souhaite que le menu se superpose au contenu plutôt que de pousser le contenu vers un côté. &lt;a href=&quot;https://ux.stackexchange.com/questions/46305/navigation-drawer-tablet-push-or-overlay/&quot;&gt;Cela préserve l’importance du contenu de la page en arrière plan&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;un simple clic en dehors du menu ou la touche &lt;code&gt;ESC&lt;/code&gt; doit fermer le menu&lt;/li&gt;
+&lt;li&gt;un bouton actionne l’ouverture et la fermeture du menu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;L’API Popover est composée d’un attribut HTML &lt;code&gt;popover&lt;/code&gt; à placer sur l’élément à faire flotter. On place, sur un un bouton d’ouverture un attribut &lt;code&gt;popovertarget&lt;/code&gt; qui prend en valeur l’ID de notre élément flottant. On spécifie l’action via &lt;code&gt;popovertargetaction&lt;/code&gt; : celle-ci peut prendre 3 valeurs &lt;code&gt;show&lt;/code&gt;, &lt;code&gt;hide&lt;/code&gt; ou &lt;code&gt;auto&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;button popovertarget=&amp;quot;mobile-navigation&amp;quot; popovertargetaction=&amp;quot;show&amp;quot;&amp;gt;
+
+&amp;lt;nav popover id=&amp;quot;mobile-navigation&amp;quot;&amp;gt;
+
+	&amp;lt;button popovertarget=&amp;quot;mobile-navigation&amp;quot; popovertargetaction=&amp;quot;hide&amp;quot;&amp;gt;
+
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/index&amp;quot;&amp;gt;HOME&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/blog&amp;quot;&amp;gt;BLOG&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/projets&amp;quot;&amp;gt;PROJETS&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;animer-l%E2%80%99ouverture-et-la-fermeture-du-popover&quot; tabindex=&quot;-1&quot;&gt;Animer l’ouverture et la fermeture du Popover&lt;/h3&gt;
+&lt;p&gt;Il est possible de donner un style d’avant ouverture au popover via le sélecteur CSS &lt;code&gt;:popover-open&lt;/code&gt; et la règle &lt;code&gt;@starting-style&lt;/code&gt;. &lt;code&gt;@starting-style&lt;/code&gt; est une nouvelle règle CSS qui permet de définir le style d’un élément &lt;em&gt;avant&lt;/em&gt; son entrée dans le champ. On donne ensuite un style à l’état ouvert dans &lt;code&gt;:popover-open&lt;/code&gt;. Enfin on donne un style à l’état fermé directement dans l’attribut &lt;code&gt;[popover]&lt;/code&gt;. La propriété &lt;code&gt;display&lt;/code&gt; est dite “discrète” par nature : &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties#discrete&quot;&gt;cela signifie qu’elle ne peut pas être animée de façon native&lt;/a&gt;. Pour pouvoir animer &lt;code&gt;display&lt;/code&gt;, la propriété &lt;code&gt;transition-behavior: allow-discrete&lt;/code&gt; est désormais prise en charge par tous les navigateurs sauf Firefox.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[popover] {
+    left: 0;
+    top: 0;
+    height: 100dvh;
+    width: 60dvw;
+    transition: transform .2s ease-out, opacity .2s ease-out,
+    display .2s ease-out;
+    transition-behavior: allow-discrete;
+
+    /*POPOVER EN ETAT FERMÉ*/
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  [popover]:popover-open {
+    @starting-style {/*POPOVER AVANT L&#39;ENTREE DANS LE CHAMP*/
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    /*POPOVER EN ETAT OUVERT*/
+    opacity: 1;
+    transform: translateX(0px);
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+  &lt;video controls=&quot;&quot; muted=&quot;&quot; height=&quot;400&quot; style=&quot;height: 400px!important&quot;&gt;
+    &lt;source src=&quot;https://www.teotimepacreau.fr/img/popover.mp4&quot; alt=&quot;Ouverture et fermeture d&#39;un menu de navigation popover avec animation d&#39;opacité et de déplacement&quot; title=&quot;Animation d&#39;ouverture et de fermeture du popover&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;/video&gt;
+  &lt;figcaption&gt;
+  Animation d&#39;ouverture et de fermeture du popover
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 id=&quot;les-attributs-d%E2%80%99accessibilit%C3%A9-inclus-par-d%C3%A9faut-dans-le-popover&quot; tabindex=&quot;-1&quot;&gt;Les attributs d’accessibilité inclus par défaut dans le popover&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aria-expanded&lt;/code&gt; : quand un popover est invoqué par un &lt;code&gt;&amp;lt;button&amp;gt;&lt;/code&gt; le navigateur associe automatiquement l’état étendu &lt;code&gt;aria-expanded=”true”&lt;/code&gt; ou replié &lt;code&gt;aria-expanded=”false”&lt;/code&gt; au bouton associé (fonctionne seulement quand l’élément HTML bouton invoque le popover)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-details&lt;/code&gt; : il s’agit d’un attribut qui démontre la relation entre deux éléments HTML. Si notre popover ne suit pas directiment notre bouton, le navigateur se charge d’établir automatiquement le &lt;code&gt;aria-details&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;les-attributs-d%E2%80%99accessibilit%C3%A9-qu%E2%80%99il-est-pertinent-d%E2%80%99ajouter-%C3%A0-notre-hamburger-menu-popover&quot; tabindex=&quot;-1&quot;&gt;Les attributs d’accessibilité qu’il est pertinent d’ajouter à notre hamburger menu popover&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;aria-controls&lt;/code&gt;. Permet d’indiquer quel est l’élément actionné par le bouton. On indique l’ID de l’élément actionné. &lt;strong&gt;Se place sur le bouton.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-haspopup=&amp;quot;true&amp;quot;&lt;/code&gt;. Indique que le bouton sécrète un menu. Cela permet d’avertir que, lorsque le bouton est pressé, l’utilisateur sera déplacé vers le menu. &lt;strong&gt;Se place sur le bouton.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-label&lt;/code&gt;. Permet de donner un nom accessible à un élément. On souhaite expliquer avec un nom accessible le rôle du bouton d’ouverture : “ouvrir la navigation principale”. Pour l’élément &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt; on indique seulement le niveau de la navigation car le lecteur d’écran annoncer d’emblée qu’il s’agit d’un élément de navigation.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-current=&amp;quot;page&amp;quot;&lt;/code&gt;. Permet de signifier sur quel page de la navigation se trouve actuellement l’utilisateur.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;type=”button”&lt;/code&gt;. Permet de s’assurer que le bouton ne tente pas de soumettre un formulaire (comportement par défaut). &lt;strong&gt;Se place sur le bouton.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;button
+	type=&amp;quot;button&amp;quot;
+  aria-label=&amp;quot;ouvrir la navigation principale&amp;quot;
+  aria-controls=&amp;quot;mobile-navigation&amp;quot;
+  aria-haspopup=&amp;quot;true&amp;quot;
+&amp;gt;
+
+&amp;lt;nav
+  id=&amp;quot;mobile-navigation&amp;quot;
+  aria-label=&amp;quot;Principale&amp;quot;
+  popover
+&amp;gt;
+  &amp;lt;button aria-label=&amp;quot;fermer la navigation principale&amp;quot; aria-controls=&amp;quot;mobile-navigation&amp;quot; popovertarget=&amp;quot;mobile-navigation&amp;quot; popovertargetaction=&amp;quot;hide&amp;quot;&amp;gt;
+  &amp;lt;/button&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a aria-current=&amp;quot;page&amp;quot; href=&amp;quot;/index&amp;quot;&amp;gt;HOME&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/blog&amp;quot;&amp;gt;BLOG&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/projets&amp;quot;&amp;gt;PROJETS&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://hidde.blog/popover-accessibility/&quot;&gt;https://hidde.blog/popover-accessibility/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hidde.blog/dialog-modal-popover-differences/#heading-3/&quot;&gt;https://hidde.blog/dialog-modal-popover-differences/#heading-3/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://web.dev/articles/website-navigation/&quot;&gt;https://web.dev/articles/website-navigation/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hidde.blog/popover-semantics/&quot;&gt;https://hidde.blog/popover-semantics/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://nerdy.dev/using-starting-style-and-transition-behavior-for-enter-and-exit-stage-effects/&quot;&gt;https://nerdy.dev/using-starting-style-and-transition-behavior-for-enter-and-exit-stage-effects/&lt;/a&gt;&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Le mémo à 6 pages d&#39;Amazon</title>
@@ -804,7 +934,6 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
 &lt;code&gt;display: flex&lt;/code&gt; et &lt;code&gt;column-gap&lt;/code&gt; fonctionnent mais &lt;code&gt;flex-direction:column&lt;/code&gt; et &lt;code&gt;flex-wrap: wrap&lt;/code&gt; ne sont pas supportés dans GMAIL seulement. Ils fonctionnent dans les 2 autres clients.&lt;/p&gt;
 &lt;video controls=&quot;&quot;&gt;
   &lt;source src=&quot;https://www.teotimepacreau.fr/img/flexbox-email.mp4&quot; alt=&quot;Vidéo illustration l&#39;illustration de flexbox dans un client mail&quot; type=&quot;video/mp4&quot; /&gt;
-  Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;h3 id=&quot;position&quot; tabindex=&quot;-1&quot;&gt;Position&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;position: relative&lt;/code&gt; et &lt;code&gt;position: absolute&lt;/code&gt; ne sont pas supportés du tout&lt;/p&gt;

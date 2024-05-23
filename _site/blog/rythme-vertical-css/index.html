@@ -74,7 +74,7 @@ fetchpriority="low"
 />
 
 <!-- auto generator of OpenGraph images -->
-<meta property="og:image" content="/og-images/blog-rythme-vertical-css.png" />
+<meta property="og:image" content="/og-images/1862e5f9.png" />
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -87,7 +87,7 @@ fetchpriority="low"
       "description": "Management de projet et numérique à Nantes"
     },
     {
-      "@type": "BlogPosting",
+      "@type": "WebPage",
       "mainEntityOfPage": {
         "@type": "WebPage"
       },
@@ -101,13 +101,7 @@ fetchpriority="low"
         "@type": "Organization",
         "name": "Le site web personnel de Teotime Pacreau",
         "url": "https://www.teotimepacreau.fr/#organization"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Teotime Pacreau"
-      },
-      "keywords": "CSS,Rythme vertical,Web design",
-      "datePublished": "2022-11-26"
+      }
     }
   ]
 }</script>
@@ -150,7 +144,7 @@ fetchpriority="low"
     xmlns="http://www.w3.org/2000/svg"
     width="32"
     height="32"
-    fill="#000000"
+    fill="var(--txt)"
     viewBox="0 0 256 256"
   >
     <path
@@ -196,36 +190,32 @@ fetchpriority="low"
         <ol><li><a href="#rythme-vertical">Rythme vertical</a><ol><li><a href="#comment-le-d%C3%A9terminer-%3F">Comment le déterminer ?</a></li><li><a href="#exemple-concret-d%E2%80%99utilisation">Exemple concret d’utilisation</a></li></ol></li><li><a href="#le-%E2%80%9Chibou-lobotomis%C3%A9%E2%80%9D-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps">Le “hibou lobotomisé” : le sélecteur CSS qui fait gagner du temps</a></li><li><a href="#%E2%80%A6-et-une-touche-de-custom-properties">… et une touche de Custom Properties</a></li><li><a href="#notre-espacement-automatique-pour-l%E2%80%99ensemble-du-site-en-2-lignes-de-code">Notre espacement automatique pour l’ensemble du site en 2 lignes de code</a></li></ol>
       </nav></aside>
         <main class="post-main">
-          <article id="article-post">
+          <article id="post">
             <header>
-            <h1>Gérer facilement le rythme vertical de son site web</h1>
-            <ul class="post-tags">
-              
-              <li>
-                <a href="/tags/css"
-                  >CSS</a
-                >
-              </li>
-              
-              <li>
-                <a href="/tags/rythme-vertical"
-                  >Rythme vertical</a
-                >
-              </li>
-              
-              <li>
-                <a href="/tags/web-design"
-                  >Web design</a
-                >
-              </li>
-              
-            </ul>
-            <span class="post-date">
-              Publié le <time datetime="2022-11-26">26 novembre 2022</time
-              >
-            </span>
-            <p>En 2 lignes de code, il est possible de mettre en place un système d&#39;espacement modulable et réutilisable qui s&#39;adapte à toutes les mises en page.</p>
-          </header>
+              <h1>Gérer facilement le rythme vertical de son site web</h1>
+              <ul class="post-tags">
+                
+                <li>
+                  <a href="/tags/css">CSS</a>
+                </li>
+                
+                <li>
+                  <a href="/tags/rythme-vertical">Rythme vertical</a>
+                </li>
+                
+                <li>
+                  <a href="/tags/web-design">Web design</a>
+                </li>
+                
+              </ul>
+              <span class="post-date">
+                Publié le
+                <time datetime="2022-11-26">
+                  26 novembre 2022
+                </time>
+              </span>
+              <p>En 2 lignes de code, il est possible de mettre en place un système d&#39;espacement modulable et réutilisable qui s&#39;adapte à toutes les mises en page.</p>
+            </header>
             <h2 id="rythme-vertical" tabindex="-1">Rythme vertical</h2>
 <p>Adopter un rythme vertical proportionnel et prédictible sur une page web permet de ressentir une <a href="https://24ways.org/2006/compose-to-a-vertical-rhythm/">hiérarchie visuelle qui facilite l’expérience utilisateur</a>.</p>
 <h3 id="comment-le-d%C3%A9terminer-%3F" tabindex="-1">Comment le déterminer ?</h3>
@@ -289,7 +279,7 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
   </li>
   <li>
     <a class="rss" href="/feed/feed.xml">
-      <i class="ph ph-rss"></i>
+      <span class="ph ph-rss"></span>
       <span>RSS</span>
     </a>
   </li>
@@ -301,7 +291,7 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
       href="https://github.com/teotimepacreau"
       target="_blank"
     >
-      <i class="ph ph-github-logo"></i>
+      <span class="ph ph-github-logo"></span>
       <span>Github</span>
     </a>
   </li>
@@ -311,7 +301,7 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
       href="https://mastodon.design/@teotimepacreau"
       target="_blank"
     >
-      <i class="ph ph-mastodon-logo"></i>
+      <span class="ph ph-mastodon-logo"></span>
       <span>Mastodon</span>
     </a>
   </li>
@@ -321,7 +311,7 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
       href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
       target="_blank"
     >
-      <i class="ph ph-linkedin-logo"></i>
+      <span class="ph ph-linkedin-logo"></span>
       <span>LinkedIn</span>
     </a>
   </li>
@@ -361,6 +351,6 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
     </div>
     <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
 <script defer src="/scripts/aria-current.js"></script>
-    <script defer src="/scripts/table.js"></script>  
+    <script defer src="/scripts/table.js"></script>
   </body>
 </html>

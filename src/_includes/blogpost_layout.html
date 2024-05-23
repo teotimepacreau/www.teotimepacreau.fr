@@ -28,24 +28,24 @@
         </header>
         <aside>{{ content | toc | safe }}</aside>
         <main class="post-main">
-          <article id="article-post">
+          <article id="post">
             <header>
-            <h1>{{ title }}</h1>
-            <ul class="post-tags">
-              {% for tag in tags %}
-              <li>
-                <a href="/tags/{{ tag | slugify }}"
-                  >{{tag}}</a
-                >
-              </li>
-              {% endfor %}
-            </ul>
-            <span class="post-date">
-              Publié le <time datetime="{{ date }}">{{ date | date('dd LLLL yyyy') }}</time
-              >
-            </span>
-            <p>{{ description }}</p>
-          </header>
+              <h1>{{ title }}</h1>
+              <ul class="post-tags">
+                {% for tag in tags %}
+                <li>
+                  <a href="/tags/{{ tag | slugify }}">{{tag}}</a>
+                </li>
+                {% endfor %}
+              </ul>
+              <span class="post-date">
+                Publié le
+                <time datetime="{{ date }}">
+                  {{ date | date('dd LLLL yyyy') }}
+                </time>
+              </span>
+              <p>{{ description }}</p>
+            </header>
             {{ content | safe }}
           </article>
         </main>
@@ -73,6 +73,6 @@
       </div>
     </div>
     {% include "loadscripts.html"%}
-    <script defer src="/scripts/table.js"></script>  
+    <script defer src="/scripts/table.js"></script>
   </body>
 </html>

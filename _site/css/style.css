@@ -95,7 +95,6 @@ figcaption {
 
 p,
 li {
-  line-height: 1.5;
   text-wrap: pretty;
 }
 
@@ -795,10 +794,11 @@ footer li {
   display: inline-block;
 }
 
-/*---BLOG INDEX PAGE---*/
+/*---BLOG LIST PAGE---*/
 .tags-date {
   color: var(--bg);
   display: block;
+  padding-top: calc(.5*var(--baseline));
 }
 
 #blog {
@@ -806,6 +806,7 @@ footer li {
   padding-bottom: var(--baseline);
   margin-inline: auto;
 }
+
 
 #blog a {
   text-decoration: none;
@@ -858,10 +859,6 @@ footer li {
   padding: calc(0.5 * var(--baseline));
   border-radius: calc(0.25 * var(--baseline));
   background-color: var(--accent);
-}
-
-#blog-article-list time {
-  margin-top: calc(0.5 * var(--baseline));
 }
 
 #blog > h1 {
@@ -934,33 +931,33 @@ footer li {
   grid-row: 1 / 4;
 }
 
-#article-post {
+#post {
   max-width: 65ch;
 }
 
-#article-post img {
+#post img {
   margin-top: calc(0.5 * var(--baseline));
 }
 
-#article-post h2,
+#post h2,
 h3,
 h4 {
   margin-top: var(--baseline);
 }
 
-#article-post > p + p {
-  margin-top: calc(0.5 * var(--baseline));
+#post > p + p {
+  margin-top: calc(0.25 * var(--baseline));
 }
 
-#article-post li::marker {
+#post li::marker {
   color: var(--accent);
 }
 
-#article-post header > * + * {
+#post header > * + *, #post > * + * {
   margin-top: calc(0.5 * var(--baseline));
 }
 
-#article-post header {
+#post header {
   margin-bottom: var(--baseline);
 }
 

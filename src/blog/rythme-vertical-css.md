@@ -7,7 +7,6 @@ tags:
   - 'Rythme vertical'
   - 'Web design'
 layout: blogpost_layout.html
-type: post
 eleventyComputed:
   meta:
     site:

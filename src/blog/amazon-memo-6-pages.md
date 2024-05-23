@@ -5,7 +5,6 @@ description: "Comment la culture de l'écrit d'Amazon garantie-t-elle son effica
 tags: 
   - 'Management'
 layout: blogpost_layout.html
-type: post
 eleventyComputed:
   meta:
     site:

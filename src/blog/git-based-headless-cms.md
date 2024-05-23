@@ -6,7 +6,6 @@ tags:
   - 'CMS'
   - 'Git'
 layout: blogpost_layout.html
-type: post
 eleventyComputed:
   meta:
     site:

@@ -6,7 +6,6 @@ tags:
   - 'DevOps'
   - 'Hébergement'
 layout: blogpost_layout.html
-type: post
 eleventyComputed:
   meta:
     site:

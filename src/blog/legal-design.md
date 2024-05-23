@@ -3,10 +3,9 @@ title: "Le legal design : qu'est-ce que c'est ?"
 date: "2024-01-20"
 description: "Découverte des enjeux de simplification et d'accessibilité des normes juridiques."
 tags: 
-  - 'design'
-  - 'droit'
+  - 'Design'
+  - 'Droit'
 layout: blogpost_layout.html
-type: post
 eleventyComputed:
   meta:
     site:

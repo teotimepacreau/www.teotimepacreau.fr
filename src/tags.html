@@ -4,19 +4,40 @@ pagination:
   size: 1
   alias: tag
   addAllPagesToCollections: true
-layout: tagslist_layout.html
 permalink: /tags/{{tag | slugify }}/index.html
 eleventyComputed:
-  title: Posts tag
+  title: Posts taggés avec {{ tag }}
 ---
 
-<h1>Posts taggés avec <tag class="tags-style">{{ tag }}</a></h1>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    {% include "head.html"%}
+  </head>
+  <body>
+    {% include "color-picker.html"%}
+    <div id="normal-page-container">
+      <header>
+        {% include "mobilenav.html"%} {% include "navigation.html"%}
+      </header>
+      <main id="tags-page">
+        <h1>Posts taggés avec "<span class="tags-style">{{ tag }}</span>"</h1>
 
-{% for post in collections[tag] %}
-<ul id="tags-page-ul">
-  <li id="tags-page-li">
-    <h2><a href="{{post.url}}">{{post.data.title}}</a></h2>
-    <time class="tags-date" datetime="{{ post.data.date | date('dd LLLL yyyy') }}">{{ post.data.date | date('dd LLLL yyyy') }}</time>
-  </li>
-</ul>
-{% endfor %}
+        {% for post in collections[tag] %}
+        <ul id="tags-page-ul">
+          <li id="tags-page-li">
+            <h2><a href="{{post.url}}">{{post.data.title}}</a></h2>
+            <time
+              class="tags-date"
+              datetime="{{ post.data.date | date('dd LLLL yyyy') }}"
+              >{{ post.data.date | date('dd LLLL yyyy') }}</time
+            >
+          </li>
+        </ul>
+        {% endfor %}
+      </main>
+      <footer id="footer">{% include "footer.html"%}</footer>
+    </div>
+    {% include "loadscripts.html"%}
+  </body>
+</html>

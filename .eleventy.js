@@ -4,6 +4,7 @@ const markdownItAnchor = require('markdown-it-anchor')
 const pluginTOC = require('eleventy-plugin-toc');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const embeds = require("eleventy-plugin-embed-everything");
+
 // OPENGRAPH IMAGES
 const fs = require('node:fs');
 const path = require('node:path')
@@ -63,27 +64,30 @@ module.exports = function(eleventyConfig) {
     headingTag: 'h2',
   })
 
+  
+  // Convertir les dates en format FR
+  eleventyConfig.addFilter("date", require("./src/filters/date.js"));
+  
+  // CREER LA COLLECTION DE POSTS
+  eleventyConfig.addCollection('posts', function(collectionApi) {
+    return collectionApi.getFilteredByGlob('src/blog/*.md');
+  })
 
-  // Tags 1.1
-  function filterTagList(tags) {
-    return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
-  }
-
-  eleventyConfig.addFilter("filterTagList", filterTagList)
-
-  // Tags 1.2 : Create an array of all tags
+  // CREER L'ARRAY DE TAGS
   eleventyConfig.addCollection("tagList", function(collection) {
     let tagSet = new Set();
     collection.getAll().forEach(item => {
       (item.data.tags || []).forEach(tag => tagSet.add(tag));
     });
 
-    return filterTagList([...tagSet]);
+    return [...tagSet];
   });
-  // ... Eleventy date en FR
-  eleventyConfig.addFilter("date", require("./src/filters/date.js"));
+  
 
-  // ... copy paster folders in _site
+  // Monitor instant change for CSS
+  eleventyConfig.addWatchTarget("src/css/");
+
+  // Copy paste folders in _site
   eleventyConfig.addPassthroughCopy("src/css/");
   eleventyConfig.addPassthroughCopy("src/_includes/");
   eleventyConfig.addPassthroughCopy("src/assets/");
@@ -94,18 +98,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/scripts/");
   eleventyConfig.addPassthroughCopy("src/og-images/");
   eleventyConfig.addPassthroughCopy("_site/og-images/");
-
-
-  // ... posts collection
-  eleventyConfig.addCollection('posts', function(collectionApi) {
-    return collectionApi.getFilteredByGlob('src/blog/*.md');
-  })
-
-  // ... Monitor instant change for CSS
-  eleventyConfig.addWatchTarget("src/css/");
-
-return {
-  dir: {
+  
+  return {
+    dir: {
     input: 'src',
     includes: '_includes',
     output: '_site',

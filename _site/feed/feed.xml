@@ -52,11 +52,11 @@ Plusieurs fonctionnalités lui sont automatiquement associées :&lt;/p&gt;
 &lt;li&gt;un bouton actionne l’ouverture et la fermeture du menu&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;L’API Popover est composée d’un attribut HTML &lt;code&gt;popover&lt;/code&gt; à placer sur l’élément à faire flotter. On place, sur un un bouton d’ouverture un attribut &lt;code&gt;popovertarget&lt;/code&gt; qui prend en valeur l’ID de notre élément flottant. On spécifie l’action via &lt;code&gt;popovertargetaction&lt;/code&gt; : celle-ci peut prendre 3 valeurs &lt;code&gt;show&lt;/code&gt;, &lt;code&gt;hide&lt;/code&gt; ou &lt;code&gt;auto&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;button popovertarget=&amp;quot;mobile-navigation&amp;quot; popovertargetaction=&amp;quot;show&amp;quot;&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;button popovertarget=&amp;quot;mobile-navigation&amp;quot; popovertargetaction=&amp;quot;show&amp;quot;&amp;gt;&amp;lt;/button&amp;gt;
 
 &amp;lt;nav popover id=&amp;quot;mobile-navigation&amp;quot;&amp;gt;
 
-	&amp;lt;button popovertarget=&amp;quot;mobile-navigation&amp;quot; popovertargetaction=&amp;quot;hide&amp;quot;&amp;gt;
+	&amp;lt;button popovertarget=&amp;quot;mobile-navigation&amp;quot; popovertargetaction=&amp;quot;hide&amp;quot;&amp;gt;&amp;lt;/button&amp;gt;
 
   &amp;lt;ul&amp;gt;
     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/index&amp;quot;&amp;gt;HOME&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
@@ -113,11 +113,13 @@ Plusieurs fonctionnalités lui sont automatiquement associées :&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;type=”button”&lt;/code&gt;. Permet de s’assurer que le bouton ne tente pas de soumettre un formulaire (comportement par défaut). &lt;strong&gt;Se place sur le bouton.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;button
+  popovertarget=&amp;quot;mobile-navigation&amp;quot;
+  popovertargetaction=&amp;quot;show&amp;quot;
 	type=&amp;quot;button&amp;quot;
   aria-label=&amp;quot;ouvrir la navigation principale&amp;quot;
   aria-controls=&amp;quot;mobile-navigation&amp;quot;
   aria-haspopup=&amp;quot;true&amp;quot;
-&amp;gt;
+&amp;gt;&amp;lt;/button&amp;gt;
 
 &amp;lt;nav
   id=&amp;quot;mobile-navigation&amp;quot;

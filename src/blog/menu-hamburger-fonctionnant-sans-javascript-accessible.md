@@ -65,11 +65,11 @@ Quand on crée un menu hamburger, plusieurs règles d'UX s'imposent :
 L'API Popover est composée d'un attribut HTML `popover` à placer sur l'élément à faire flotter. On place, sur un un bouton d'ouverture un attribut `popovertarget` qui prend en valeur l'ID de notre élément flottant. On spécifie l'action via `popovertargetaction` : celle-ci peut prendre 3 valeurs `show`, `hide` ou `auto`.
 
 ```
-<button popovertarget="mobile-navigation" popovertargetaction="show">
+<button popovertarget="mobile-navigation" popovertargetaction="show"></button>
 
 <nav popover id="mobile-navigation">
 
-	<button popovertarget="mobile-navigation" popovertargetaction="hide">
+	<button popovertarget="mobile-navigation" popovertargetaction="hide"></button>
 
   <ul>
     <li><a href="/index">HOME</a></li>
@@ -133,11 +133,13 @@ Il est possible de donner un style d'avant ouverture au popover via le sélecteu
 
 ```
 <button
+  popovertarget="mobile-navigation"
+  popovertargetaction="show"
 	type="button"
   aria-label="ouvrir la navigation principale"
   aria-controls="mobile-navigation"
   aria-haspopup="true"
->
+></button>
 
 <nav
   id="mobile-navigation"

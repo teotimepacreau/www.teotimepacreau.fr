@@ -82,23 +82,28 @@ fetchpriority="low"
 <title>Posts taggés avec UX</title>
   </head>
   <body>
-    <form tabindex="-1" class="color-picker" action="" aria-label="Color scheme picker">
-    <fieldset tabindex="-1">
-      <legend class="visually-hidden">Pick a color scheme</legend>
-      <div id="light-group" class="color-select-group">
-        <label for="light">Light</label>
-        <input tabindex="-1" type="radio" name="theme" id="light">
-      </div>
-      <div id="dark-group" class="color-select-group">
-        <label for="dark">Dark</label>
-        <input tabindex="-1" type="radio" id="dark" name="theme">
-      </div>
-      <div id="eco-group" class="color-select-group">
-        <label for="eco">Eco</label>
-        <input tabindex="-1" type="radio" id="eco" name="theme">
-      </div>
-    </fieldset>
-  </form>
+    <form
+  class="color-picker"
+  aria-label="Sélecteur de thème coloré"
+  action=""
+>
+  <fieldset>
+    <legend class="visually-hidden">Choisir un thème de couleur</legend>
+    <div id="light-group" class="color-select-group">
+      <label for="light">Light</label>
+      <input type="radio" name="theme" id="light" />
+    </div>
+    <div id="dark-group" class="color-select-group">
+      <label for="dark">Dark</label>
+      <input type="radio" id="dark" name="theme" />
+    </div>
+    <div id="eco-group" class="color-select-group">
+      <label for="eco">Eco</label>
+      <input type="radio" id="eco" name="theme" />
+    </div>
+  </fieldset>
+</form>
+
     <div id="normal-page-container">
       <header>
         <button
@@ -172,33 +177,26 @@ fetchpriority="low"
         </ul>
         
       </main>
-      <footer id="footer"><ul>
-  <li><p>Téotime Pacreau</p></li>
-  <li>
-    <address>
-      <a
-        href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis teotimepacreau.fr"
-        >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
-          >spam</span
-        >outlook.fr</a
-      >
-    </address>
-  </li>
-  <li>
-    <a class="rss" href="/feed/feed.xml">
-      <span class="ph ph-rss"></span>
-      <span>RSS</span>
-    </a>
-  </li>
-</ul>
-<ul id="links">
+      <footer id="footer"><address>
+  <a
+    href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis teotimepacreau.fr"
+    >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
+      >spam</span
+    >outlook.fr</a
+  >
+  <a id="rss" href="/feed/feed.xml">
+    <span aria-hidden="true" class="ph ph-rss"></span>
+    <span>RSS</span>
+  </a>
+</address>
+<ul aria-label="Mes réseaux sociaux" id="links">
   <li>
     <a
       class="social-footer"
       href="https://github.com/teotimepacreau"
       target="_blank"
     >
-      <span class="ph ph-github-logo"></span>
+      <span aria-hidden="true" class="ph ph-github-logo"></span>
       <span>Github</span>
     </a>
   </li>
@@ -208,7 +206,7 @@ fetchpriority="low"
       href="https://mastodon.design/@teotimepacreau"
       target="_blank"
     >
-      <span class="ph ph-mastodon-logo"></span>
+      <span aria-hidden="true" class="ph ph-mastodon-logo"></span>
       <span>Mastodon</span>
     </a>
   </li>
@@ -218,19 +216,19 @@ fetchpriority="low"
       href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
       target="_blank"
     >
-      <span class="ph ph-linkedin-logo"></span>
+      <span aria-hidden="true" class="ph ph-linkedin-logo"></span>
       <span>LinkedIn</span>
     </a>
   </li>
 </ul>
-<ul id="stats">
+<ul aria-label="Scores de performance" id="stats">
   <li>
     <a
       class="social-footer"
       href="https://www.ecoindex.fr/resultat/?id=0b81b2d0-19ae-413a-8fcc-dac29c36ea9e"
       target="_blank"
       title="Consulter le score ecoindex de creasit.fr (nouvel onglet)"
-      >Score ecoindex <span class="ecoindex">B</span></a
+      >Score d'éco-conception <span class="ecoindex">B</span></a
     >
   </li>
 </ul>

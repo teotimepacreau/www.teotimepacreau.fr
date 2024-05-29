@@ -129,14 +129,14 @@ hr {
 
 /*---FOCUS---*/
 *:focus-visible {
-  transition: all 0.2s ease;
+  transition: outline 0.2s ease;
   outline: 4px chartreuse solid;
   outline-offset: 0.3ch;
 }
 
-button:focus-visible {
+/* button:focus-visible {
   outline-offset: 0.8ex;
-}
+} */
 
 /*---COLOR PICKER THEME SWITCH---*/
 :root:has(#light:checked) {
@@ -185,6 +185,10 @@ label {
   outline: 2px solid var(--radio-color, currentColor);
   outline-offset: 3px;
   border-radius: 50%;
+}
+.color-picker input[type="radio"]:focus-visible {
+  outline-color: chartreuse;
+  outline-width: 4px;
 }
 input {
   accent-color: var(--accent);
@@ -293,7 +297,7 @@ pre {
   line-height: 1.5;
 }
 main a::after {
-  content: "↗";
+  content: "↗" / "";
 }
 
 /*---LINKS---*/
@@ -741,15 +745,8 @@ address {
 }
 
 .social-footer::after {
-  content: "↗ ";
+  content: "↗ " / "";
   color: var(--accent);
-}
-
-.rss {
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 1ex;
 }
 
 .hidden {
@@ -777,6 +774,17 @@ footer li {
 }
 #footer li {
   padding-bottom: calc(0.5 * var(--baseline));
+}
+
+#footer address a {
+  display: inline-flex;
+  padding-bottom: calc(0.5 * var(--baseline));
+  align-items: center;
+  gap: 1ex;
+  
+  &#rss{
+    text-decoration: none;
+  }
 }
 
 .ecoindex {
@@ -839,7 +847,7 @@ footer li {
   transition: all 0.2s ease-out;
 }
 #blog-index-tags::before {
-  content: "# ";
+  content: "# " / "";
 }
 
 #blog-article-list {
@@ -993,7 +1001,7 @@ h4 {
     outline: 1px ridge var(--accent);
   }
   &::before {
-    content: "# ";
+    content: "# / "";
   }
 }
 
@@ -1052,7 +1060,7 @@ pre {
 
 /*---TOC---*/
 .table-of-content::before {
-  content: "Table de contenu ↓";
+  content: "Table de contenu ↓" / "Table de contenu";
   margin-top: calc(2 * var(--baseline));
   margin-bottom: calc(0.25 * var(--baseline));
   display: block;
@@ -1579,9 +1587,6 @@ tr {
     display: block;
     color: inherit;
     position: absolute;
-    /* background: url("../assets/list.svg");
-    background-size: contain;
-    background-repeat: no-repeat; */
     z-index: 9999;
     width: 2rem;
     aspect-ratio: 1;

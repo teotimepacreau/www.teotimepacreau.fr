@@ -1168,10 +1168,11 @@ pre {
 }
 
 #download-cv {
+  display: grid;
+  place-items: center;
   box-shadow: 0.5px 0.5px 1px 0px var(--shadow);
   bottom: var(--baseline);
   right: var(--baseline);
-  width: var(--baseline);
   aspect-ratio: 1;
   color: var(--txt);
   position: fixed;
@@ -1181,19 +1182,15 @@ pre {
   border: 1px ridge transparent;
   color: var(--bg);
   opacity: 0.8;
-}
-
-#download-cv a {
   text-decoration: none;
   transition: all 0.3s ease-out;
+  & span {
+    padding: calc(.25*var(--baseline));
+  }
 }
 
-#download-cv a::after {
+#download-cv::after {
   content: "";
-}
-
-#download-cv icon {
-  font-size: calc(0.35 * var(--baseline));
 }
 
 #download-cv:hover {

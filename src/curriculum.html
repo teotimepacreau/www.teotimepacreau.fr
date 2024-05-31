@@ -11,24 +11,23 @@ title: CV de Téotime Pacreau
     {% include "color-picker.html"%}
     <div id="normal-page-container">
       <header>
-        {% include "mobilenav.html"%}
-        {% include "navigation.html"%}
+        {% include "mobilenav.html"%} {% include "navigation.html"%}
       </header>
       <main id="container-cv">
-        <button tabindex="-1" aria-label="Télecharger mon CV" id="download-cv">
-          <a
-            aria-label="Télecharger mon CV"
-            href="/assets/CV_teotime_pacreau.pdf"
-          >
-            <span aria-hidden="true" class="ph ph-download"></span>
-          </a>
-        </button>
-
-        <h2 aria-hidden="true" id="experiences-pro-titre">Expériences professionnelles</h2>
+        <a
+          aria-label="Télecharger mon CV"
+          id="download-cv"
+          aria-label="Télecharger mon CV"
+          target="_blank"
+          href="/assets/CV_teotime_pacreau.pdf"
+        >
+          <span aria-hidden="true" class="ph ph-download"></span>
+        </a>
+        <h2 aria-hidden="true" id="experiences-pro-titre">
+          Expériences professionnelles
+        </h2>
         <section aria-labelledby="experiences-pro-titre" id="experiences">
-          <time class="travail-time"
-            >2022-2024</time
-          >
+          <time class="travail-time">2022-2024</time>
           <div aria-hidden="true" class="hr-parent"><hr /></div>
           <details class="travail-titre-poste">
             <summary aria-label="Titre du poste" class="travail-titre-poste">
@@ -78,16 +77,12 @@ title: CV de Téotime Pacreau
             </ul>
           </details>
 
-          <time class="travail-time"
-            >2021-2022</time
-          >
+          <time class="travail-time">2021-2022</time>
           <div aria-hidden="true" class="hr-parent"><hr /></div>
           <details class="travail-titre-poste">
             <summary aria-label="Titre du poste" class="travail-titre-poste">
               Chargé d'affaires et de gestion en alternance chez
-              <a
-                href="https://www.lieuxcommuns.coop/"
-                target="_blank"
+              <a href="https://www.lieuxcommuns.coop/" target="_blank"
                 >Lieux Communs</a
               >
             </summary>
@@ -111,16 +106,12 @@ title: CV de Téotime Pacreau
             </ul>
           </details>
 
-          <time class="travail-time"
-            >2020-2021</time
-          >
+          <time class="travail-time">2020-2021</time>
           <div aria-hidden="true" class="hr-parent"><hr /></div>
           <details class="travail-titre-poste">
             <summary aria-label="Titre du poste" class="travail-titre-poste">
               Assistant Technique chez
-              <a
-                href="https://www.habitat44.org/"
-                target="_blank"
+              <a href="https://www.habitat44.org/" target="_blank"
                 >Habitat 44</a
               >
             </summary>
@@ -151,9 +142,7 @@ title: CV de Téotime Pacreau
           <details class="travail-titre-poste">
             <summary aria-label="Titre du poste" class="travail-titre-poste">
               Gérant Locatif chez
-              <a
-                href="https://www.nantaise-habitations.fr/"
-                target="_blank"
+              <a href="https://www.nantaise-habitations.fr/" target="_blank"
                 >La Nantaise d'Habitations</a
               >
             </summary>
@@ -212,9 +201,7 @@ title: CV de Téotime Pacreau
           <details class="travail-titre-poste">
             <summary aria-label="Titre du poste" class="travail-titre-poste">
               Assistant de gestion locative chez
-              <a
-                href="https://www.residetape.fr/"
-                target="_blank"
+              <a href="https://www.residetape.fr/" target="_blank"
                 >Résidetape</a
               >
             </summary>
@@ -297,28 +284,14 @@ title: CV de Téotime Pacreau
             <li>Javascript</li>
             <li>NodeJS</li>
             <li>
-              <a
-                href="https://expressjs.com/fr/"
-                target="_blank"
-                >Express</a
-              >
+              <a href="https://expressjs.com/fr/" target="_blank">Express</a>
             </li>
             <li>
-              <a
-                href="https://fastify.dev/"
-                target="_blank"
-                
-                >Fastify</a
-              >
+              <a href="https://fastify.dev/" target="_blank">Fastify</a>
             </li>
             <li>Git & Github</li>
             <li>
-              <a
-                href="https://www.11ty.dev/"
-                target="_blank"
-                
-                >Eleventy</a
-              >
+              <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>
             </li>
             <li>Vite</li>
             <li>Svelte</li>
@@ -334,7 +307,6 @@ title: CV de Téotime Pacreau
             <a
               href="https://www.modernisation.gouv.fr/actualites/laboratoires-dinnovation-publique-la-ditp-lance-le-programme-de-formation-clip"
               target="_blank"
-              
               >Formation de 6 jours "Conduire un laboratoire d'innovation
               publique" par la Direction Interministérielle de la Transformation
               Publique</a
@@ -346,7 +318,6 @@ title: CV de Téotime Pacreau
             <a
               href="https://github.com/teotimepacreau/Certificat-formation-mode-projet/blob/main/Certificat%20formation%20mode%20projet.pdf"
               target="_blank"
-              
               >Formation "Conduite de projets au sein des services publics" par
               la Direction Interministérielle de la Transformation Publique</a
             >
@@ -357,7 +328,6 @@ title: CV de Téotime Pacreau
             <a
               href="https://www.ira-nantes.gouv.fr/index.php/2023/06/16/animer-et-developper-un-reseau/"
               target="_blank"
-              
               >Formation "Animer un réseau"</a
             >
           </p>
@@ -367,7 +337,6 @@ title: CV de Téotime Pacreau
             <a
               href="https://jujotte.notion.site/Conception-num-rique-m-thodologie-du-designer-UX-a4eed1789fc244d786b9e6db2fbd6159"
               target="_blank"
-              
               >Formation UX UI (design numérique)</a
             >
           </p>
@@ -377,7 +346,6 @@ title: CV de Téotime Pacreau
             <a
               href="https://www.coursera.org/account/accomplishments/certificate/QS6M66QE32C9"
               target="_blank"
-              
               >Les bases du management de projet</a
             >
           </p>
@@ -387,7 +355,6 @@ title: CV de Téotime Pacreau
             <a
               href="https://skillshop.exceedlms.com/student/award/yZBSDdcS6REHdwUs3PWwycie?referer=https%3A%2F%2Fskillshop.exceedlms.com%2Fstudent%2Fpath%2F142277%2Factivity%2F171817"
               target="_blank"
-              
               >Google My Business</a
             >
           </p>
@@ -397,7 +364,6 @@ title: CV de Téotime Pacreau
             <a
               href="https://learndigital.withgoogle.com/link/1qh2gjrod8g"
               target="_blank"
-              
               >Les principes fondamentaux du marketing numérique (clé de
               vérification : EZC 9XA BAR)</a
             >
@@ -408,7 +374,6 @@ title: CV de Téotime Pacreau
             <a
               href="https://www.afpols.fr/formations-inter-entreprises/nos-formations/gestion-de-proximite/relations-avec-les-habitants/troubles-de-voisinage-quelles-actions-mener"
               target="_blank"
-              
               >Formation "Gestion des conflits"</a
             >
           </p>

@@ -5,12 +5,37 @@
 	
 	<link href="https://www.teotimepacreau.fr/feed/feed.xml" rel="self"/>
 	<link href="https://www.teotimepacreau.fr/"/>
-	<updated>2024-05-23T00:00:00Z</updated>
+	<updated>2024-06-04T00:00:00Z</updated>
 	<id>https://www.teotimepacreau.fr/</id>
 	<author>
 		<name>Téotime Pacreau</name>
 		<email>teotime.pac@outlook.fr</email>
 	</author>
+	
+	<entry>
+		<title>Synchroniser un repo Github avec Gitlab</title>
+		<link href="https://www.teotimepacreau.fr/blog/synchroniser-github-et-gitlab/"/>
+		<updated>2024-06-04T00:00:00Z</updated>
+		<id>https://www.teotimepacreau.fr/blog/synchroniser-github-et-gitlab/</id>
+		<content type="html">&lt;p&gt;Pour des raisons techniques, j’ai eu besoin de cloner un repo existant sur Github dans l’alternative open-source &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;Gitlab&lt;/a&gt;. Je souhaitais synchroniser tout les changement effectués dans le repo Gitlab en les poussant vers le repo Github.&lt;/p&gt;
+&lt;h2 id=&quot;clonage-d%E2%80%99un-repo-github-dans-gitlab&quot; tabindex=&quot;-1&quot;&gt;Clonage d’un repo Github dans Gitlab&lt;/h2&gt;
+&lt;p&gt;Gitlab propose de créer un repo en créant un clône d’un repo pré-existant sur un autre service via “Importer un projet”. Il suffit de fournir l’URL du repo Github.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/gitlab-clonage1.png&quot; alt=&quot;Capture de la page de proposition des modalités de création de repo Gitlab&quot; /&gt;&lt;figcaption&gt;Clonage d’un repo pré-existant&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;L’interface demande ensuite de remplir des champs :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;le nom d’utilisateur correspond au nom d’utilisateur du repo distant Github&lt;/li&gt;
+&lt;li&gt;le mot de passe correspond à un token d’accès personnel que nous devons générer depuis &lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;https://github.com/settings/tokens&lt;/a&gt; pour autoriser Gitlab à tirer depuis notre compte Github&lt;/li&gt;
+&lt;li&gt;cocher la case “Dépôt miroir”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/gitlab-clonage2.png&quot; alt=&quot;Capture des Champs demandés par Gitlab pour autoriser le clonage du projet&quot; /&gt;&lt;figcaption&gt;Champs demandés par Gitlab pour autoriser le clonage du projet&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;synchroniser-les-2-repos&quot; tabindex=&quot;-1&quot;&gt;Synchroniser les 2 repos&lt;/h2&gt;
+&lt;p&gt;Il est possible de pousser et/ou récupérer automatiquement les modifications vers ou depuis l’autre dépôt. Les branches, les étiquettes et les commits seront automatiquement synchronisés.&lt;/p&gt;
+&lt;p&gt;Pour cela il faut se rendre dans le repo Gitlab -&amp;gt; Paramètres -&amp;gt; Dépôt -&amp;gt; Dépôts miroirs.
+Il faut de nouveau coller l’url du dépôt distant Github et placer le nom d’utilisateur Github. Le champ “mot de passe” correspond au token généré précédemment sur Github.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/gitlab-synchronisation.png&quot; alt=&quot;Capture des champs requis pour synchroniser&quot; /&gt;&lt;figcaption&gt;Champs requis pour synchroniser&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;N’importe quel commit effectué sera poussé depuis Gitlab vers Github. Le repo Gitlab tirera tout changement effectué sur Github.&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Créer un menu hamburger fonctionnant sans Javascript grâce à Popover API</title>

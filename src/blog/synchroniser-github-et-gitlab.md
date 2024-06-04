@@ -19,7 +19,7 @@ eleventyComputed:
     published: "{{ date }}"
 ---
 
-Pour des raisons techniques, j'ai eu besoin de cloner un repo existant sur Github dans l'alternative open-source [Gitlab](https://about.gitlab.com/). Je souhaitais synchroniser tout les changement effectués dans le repo Gitlab en les poussant vers le repo Github.
+Pour des raisons techniques, j'ai eu besoin de cloner un repo existant sur Github dans l'alternative open-source [Gitlab](https://about.gitlab.com/). Je souhaitais synchroniser tout les changements effectués dans le repo Gitlab en les poussant vers le repo Github.
 
 ## Clonage d'un repo Github dans Gitlab
 Gitlab propose de créer un repo en créant un clône d'un repo pré-existant sur un autre service via "Importer un projet". Il suffit de fournir l'URL du repo Github.

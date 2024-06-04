@@ -6,7 +6,7 @@
   --bg: oklch(35.5% 13.5% 174.846);
   --txt: #dfd6d6;
   --accent: oklch(91.64% 0.073 77.44);
-  --shadow: oklch(10% 0 0 / 0.25);
+  --shadow: oklch(10% 0 0 / 0.2);
   --code: oklch(97% 0.005 77.44 / 0.9);
   --btnHomepage: white;
 }
@@ -904,15 +904,18 @@ footer li {
     justify-content: center;
     gap: clamp(1rem, 1.5rem, calc(.5*var(--baseline)));
   }
+  & li {
+    line-height: 1rlh;
+  }
   & a {
     padding-inline: 1ex;
     padding-block: .5ex;
-    background-color: oklch(from var(--bg) calc(l - 30) c h / 10%);
+    background-color: oklch(from var(--bg) calc(l - 20) c h / 10%);
     border-radius: .1rem;
     transition: background-color .2s ease-out;
-    box-shadow: 1px 1px 2px 0px var(--shadow);
+    box-shadow: 1px 1px 1px 0px var(--shadow);
     &:hover {
-      background-color: oklch(from var(--bg) calc(l - 30) c h / 30%);
+      background-color: oklch(from var(--bg) calc(l - 20) c h / 30%);
     }
     &::after {
       content: "";

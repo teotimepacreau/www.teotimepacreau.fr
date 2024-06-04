@@ -2,7 +2,7 @@
   "name": "eleventy",
   "main": ".eleventy.js",
   "scripts": {
-    "dev": "npx eleventy --serve",
+    "dev": "npx eleventy --serve --quiet",
     "build": "npx @11ty/eleventy",
     "preview": "npx @11ty/eleventy --serve --port=8081"
   },

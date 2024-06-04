@@ -1,5 +1,10 @@
 ---
 title: Le blog de Téotime Pacreau
+pagination:
+  data: collections.posts
+  size: 6
+  alias: paginatedposts #on pointe vers cette variable dans la boucle pour toucher les pages paginées
+  reverse: true #trie par date du plus récent au plus ancien
 ---
 
 <!DOCTYPE html>
@@ -16,7 +21,7 @@ title: Le blog de Téotime Pacreau
       <main id="blog">
         <h1 aria-hidden="true">Blog</h1>
         <section aria-label="Liste des articles du blog" id="blog-article-list">
-          {% for post in collections.posts | reverse %}
+          {% for post in paginatedposts %}
           <article>
             <header class="blog-card-tags">
               {% for tag in post.data.tags %} {% set tagUrl %}/tags/{{ tag |
@@ -33,14 +38,23 @@ title: Le blog de Téotime Pacreau
             <a class="blog-card-title" href="{{post.url}}"
               >{{ post.data.title }}</a
             >
-            <time class="tags-date">
-              <time datetime="{{ post.data.date | date('dd LLLL yyyy') }}"
-                >{{ post.data.date | date('dd LLLL yyyy') }}</time
-              >
-            </time>
+            <time
+              class="tags-date"
+              datetime="{{ post.data.date | date('dd LLLL yyyy') }}"
+              >{{ post.data.date | date('dd LLLL yyyy') }}</time
+            >
           </article>
           {% endfor %}
         </section>
+        <nav id="nav-secondary" aria-label="secondary through blog posts">
+          <ol>
+            {% for pageEntry in pagination.pages %}
+            <li>
+              <a href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url == pagination.hrefs[ loop.index0] %} aria-current="page" {% endif %}>{{ loop.index }}</a>
+            </li>   
+            {% endfor %}
+          </ol>
+        </nav>
       </main>
       <footer id="footer">{% include "footer.html"%}</footer>
     </div>

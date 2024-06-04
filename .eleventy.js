@@ -72,7 +72,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection('posts', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/blog/*.md');
   })
-
+  
   // CREER L'ARRAY DE TAGS
   eleventyConfig.addCollection("tagList", function(collection) {
     let tagSet = new Set();

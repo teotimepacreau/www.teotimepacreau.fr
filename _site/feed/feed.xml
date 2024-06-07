@@ -5,7 +5,7 @@
 	
 	<link href="https://www.teotimepacreau.fr/feed/feed.xml" rel="self"/>
 	<link href="https://www.teotimepacreau.fr/"/>
-	<updated>2024-06-04T00:00:00Z</updated>
+	<updated>2024-06-07T00:00:00Z</updated>
 	<id>https://www.teotimepacreau.fr/</id>
 	<author>
 		<name>Téotime Pacreau</name>
@@ -13,11 +13,37 @@
 	</author>
 	
 	<entry>
+		<title>Miser sur l&#39;autonomie des collaborateurs via la double boucle de feedback en management</title>
+		<link href="https://www.teotimepacreau.fr/blog/double-boucle-feedback-management/"/>
+		<updated>2024-06-07T00:00:00Z</updated>
+		<id>https://www.teotimepacreau.fr/blog/double-boucle-feedback-management/</id>
+		<content type="html">&lt;p&gt;Personne ne souhaite être un micro-manager, mais bien souvent le manque de temps et la pression des objectifs empêche de laisser une part importante d’autonomie aux équipes. Pourtant &lt;a href=&quot;https://hbr.org/2021/10/forget-flexibility-your-employees-want-autonomy&quot;&gt;l’autonomie est le critère majeur d’engagement au travail&lt;/a&gt;. L’autonomie accordée est une marque de confiance dans les compétences du salarié. C’est un élément indispensable à toute performance.
+Alors comment garder une équipe aux compétences variées synchronisée sans être constamment dans la surveillance des tâches ?&lt;/p&gt;
+&lt;h2 id=&quot;mettre-en-place-des-objectifs-pour-inciter-plut%C3%B4t-que-surveiller&quot; tabindex=&quot;-1&quot;&gt;Mettre en place des objectifs pour inciter plutôt que surveiller&lt;/h2&gt;
+&lt;p&gt;Nous manquons souvent de sens dans les organisations. En comprenant l’intention globale d’une tâche celle-ci paraît toute de suite plus motivante et claire. Voici une méthode pour rendre du sens :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Créer un objectif de premier niveau&lt;/strong&gt;: Cet objectif devrait viser une atteinte cyclique (trimestriel/annuel…) réaliste. Celui-ci doit-être co-construit avec l’ensemble de l’équipe pour s’assurer qu’il est partagé et bien compris par tous, révisable si besoin. Il donne une vision du but global à atteindre.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Créer des sous-objectifs&lt;/strong&gt;: Une fois que toute l’équipe est alignée sur le premier objectif il faut confier à chaque membre de l’équipe la responsabilité de fixer lui-même son sous-objectif. Celui-ci devrait représenter une petite partie de &lt;em&gt;l’objectif de premier niveau&lt;/em&gt;. Il devrait résumer clairement le plan pour atteindre l’objectif. Les updates doivent être menés par le collaborateur selon le rythme adapté à l’ampleur de la tâche.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;la-double-boucle-de-feedback-pour-partager-ensemble-les-avanc%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;La double boucle de feedback pour partager ensemble les avancées&lt;/h2&gt;
+&lt;p&gt;On distingue deux types de rituel :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;la boucle de feedback &lt;strong&gt;journalière&lt;/strong&gt; aide l’équipe à rester synchronisée, à débugger les problèmes, prioriser les tâches.&lt;/li&gt;
+&lt;li&gt;la boucle de feedback à &lt;strong&gt;échéance fixe&lt;/strong&gt; (hebdomadaire/mensuelle…) permet de partager les updates des sous-objectifs et garder l’équipe alignée dans l’avancement des tâches.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cette méthode permet de partager le contexte de façon quotidtienne et de rester aligné avec un &lt;em&gt;sous-objectif&lt;/em&gt; atteignable à court terme et un &lt;em&gt;objectif de premier niveau&lt;/em&gt; qui donne du sens.&lt;/p&gt;
+&lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://continuouscoordination.org/keep-a-steady-beat/&quot;&gt;https://continuouscoordination.org/keep-a-steady-beat/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://steady.space/blog/cure-for-micromanagement/&quot;&gt;https://steady.space/blog/cure-for-micromanagement/&lt;/a&gt;&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
 		<title>Synchroniser un repo Github avec Gitlab</title>
 		<link href="https://www.teotimepacreau.fr/blog/synchroniser-github-et-gitlab/"/>
 		<updated>2024-06-04T00:00:00Z</updated>
 		<id>https://www.teotimepacreau.fr/blog/synchroniser-github-et-gitlab/</id>
-		<content type="html">&lt;p&gt;Pour des raisons techniques, j’ai eu besoin de cloner un repo existant sur Github dans l’alternative open-source &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;Gitlab&lt;/a&gt;. Je souhaitais synchroniser tout les changement effectués dans le repo Gitlab en les poussant vers le repo Github.&lt;/p&gt;
+		<content type="html">&lt;p&gt;Pour des raisons techniques, j’ai eu besoin de cloner un repo existant sur Github dans l’alternative open-source &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;Gitlab&lt;/a&gt;. Je souhaitais synchroniser tout les changements effectués dans le repo Gitlab en les poussant vers le repo Github.&lt;/p&gt;
 &lt;h2 id=&quot;clonage-d%E2%80%99un-repo-github-dans-gitlab&quot; tabindex=&quot;-1&quot;&gt;Clonage d’un repo Github dans Gitlab&lt;/h2&gt;
 &lt;p&gt;Gitlab propose de créer un repo en créant un clône d’un repo pré-existant sur un autre service via “Importer un projet”. Il suffit de fournir l’URL du repo Github.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/gitlab-clonage1.png&quot; alt=&quot;Capture de la page de proposition des modalités de création de repo Gitlab&quot; /&gt;&lt;figcaption&gt;Clonage d’un repo pré-existant&lt;/figcaption&gt;&lt;/figure&gt;

@@ -307,30 +307,26 @@ main a::after {
 
 .menu a:hover {
   color: var(--accent);
-  transition: color 0.2s ease-out;
 }
 
 a {
-  text-underline-offset: 0.2ex;
+  text-underline-offset: .2ex;
+  transition: text-underline-offset 30ms color .1s ease-out;
 }
 
 p > a:hover {
   color: var(--accent);
-  transition: color 0.2s ease-out;
 }
+
 a:hover {
-  text-underline-offset: 0.3ex;
+  text-underline-offset: .3ex;
   text-decoration-thickness: 3px;
   text-decoration-skip-ink: none;
-  transition: text-underline-offset 0.2s ease-out;
+
 }
 
 #footer a:hover {
   color: var(--accent);
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 3px;
-  text-decoration-skip-ink: none;
-  transition: color 0.2s ease-out;
 }
 
 /*---SCROLLBAR---*/
@@ -414,7 +410,6 @@ pre::-webkit-scrollbar-thumb {
 
 .homepage-nav a:hover {
   color: var(--accent);
-  transition: color 0.2s ease-out;
 }
 
 @media (width > 1000px) {
@@ -508,7 +503,7 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .homepage-projets-grid-item + .homepage-projets-grid-item {
-  margin-top: var(--baseline);
+  margin-top: calc(2*var(--baseline));
 }
 
 .homepage-projets-grid-item__right__titleanddesc span {
@@ -516,6 +511,9 @@ pre::-webkit-scrollbar-thumb {
   font-size: var(--baselineh3) !important;
   font-weight: 700;
   text-wrap: balance;
+}
+.homepage-projets-grid-item__left{
+  align-content: center;
 }
 
 @media (width >=1000px) {
@@ -561,16 +559,6 @@ pre::-webkit-scrollbar-thumb {
     padding-block: calc(0.05 * var(--baseline));
     opacity: 1 !important;
   }
-  .projets-btn-mobile {
-    display: none;
-  }
-  .projets-btn-desktop {
-    display: block !important;
-  }
-}
-
-.projets-btn-desktop {
-  display: none;
 }
 
 .homepage-projets-grid-item {
@@ -579,30 +567,11 @@ pre::-webkit-scrollbar-thumb {
   gap: var(--baseline);
 }
 
-.homepage-projets-grid-item button {
-  font-size: clamp(0.9rem, 0.9rem + 0.1dvh, 1.5rem);
-  appearance: none;
-  margin-top: calc(0.25 * var(--baseline));
-  padding-inline: calc(0.25 * var(--baseline));
-  padding-block: calc(0.125 * var(--baseline));
-  border-radius: 0.3rem;
-  box-shadow: 1px 1px 1px 0px var(--shadow);
-  border: 1px solid transparent;
-  background-color: var(--accent);
-  font-family: "Inter-Variable";
-  color: var(--btnHomepage);
-  transition: opacity 0.2s ease-out;
-  font-weight: 500;
-}
-
-.homepage-projets-grid-item button a {
-  text-decoration: none;
-}
-
 .homepage-projets-grid-item__right {
   display: flex;
+  gap: calc(.5 * var(--baseline));
+  justify-content: space-between;
   flex-direction: column;
-  gap: calc(0.5 * var(--baseline));
 }
 
 .homepage-projets-grid-item h3 {
@@ -628,7 +597,7 @@ pre::-webkit-scrollbar-thumb {
   font-weight: 500;
   opacity: 0.83;
   font-size: 0.7rem;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-out;
   cursor: default;
 }
 .homepage-projets-tags:hover {
@@ -641,25 +610,13 @@ pre::-webkit-scrollbar-thumb {
   grid-column: 2 / 3;
 }
 
-.homepage-projets-link {
-  text-decoration: none;
-}
 
-.homepage-projets-link::after {
-  content: "";
-}
-.homepage-projets-btn {
-  max-width: max-content;
-}
-.homepage-projets-btn:hover {
-  opacity: 0.9;
-}
 
 /*---PAGE D'ACCUEIL DU SITE, SECTION PROJET GSAP ANIM---*/
 .homepage-projets-hidden {
   transform: translateX(-10dvw);
   opacity: 0;
-  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all .2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 /*---PAGE D'ACCUEIL DU SITE : SECTION SERVICES---*/
@@ -839,12 +796,15 @@ footer li {
   padding-inline: 0.7rem;
   border: 2px solid;
   border-radius: 1rem;
+  transition: all .2s ease-out;
+
 }
+
 #blog-index-tags:hover {
   color: var(--accent);
   background-color: var(--bg);
-  transition: all 0.2s ease-out;
 }
+
 #blog-index-tags::before {
   content: "# " / "";
 }
@@ -893,7 +853,6 @@ footer li {
   background-color: var(--bg);
   color: var(--accent);
   text-decoration: none;
-  transition: background-color 0.2s ease-out;
 }
 
 #nav-secondary {
@@ -1212,7 +1171,7 @@ pre {
   color: var(--bg);
   opacity: 0.8;
   text-decoration: none;
-  transition: all 0.3s ease-out;
+  transition: all .2s ease-out;
   & span {
     padding: calc(.25*var(--baseline));
   }
@@ -1336,7 +1295,7 @@ hr {
 .diplome-desc {
   display: block;
   padding-top: calc(0.5 * var(--baseline));
-  transition: all 0.3s ease-out;
+  transition: all .2s ease-out;
 }
 .diplome-desc:hover {
   background-color: var(--accent);
@@ -1474,7 +1433,7 @@ li {
   border-radius: 0.3rem;
   overflow: hidden;
   box-shadow: 1px 1px 3px 0px var(--shadow);
-  transition: opacity 0.2s ease-out;
+  transition: opacity .2s ease-out;
 }
 
 .project-img-wrapper video {

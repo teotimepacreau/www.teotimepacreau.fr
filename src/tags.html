@@ -23,7 +23,7 @@ eleventyComputed:
       <main id="tags-page">
         <h1>Posts taggés avec "<span class="tags-style">{{ tag }}</span>"</h1>
 
-        {% for post in collections[tag] %}
+        {% for post in collections[tag] | reverse %}
         <ul id="tags-page-ul">
           <li id="tags-page-li">
             <h2><a href="{{post.url}}">{{post.data.title}}</a></h2>

@@ -480,6 +480,10 @@ pre::-webkit-scrollbar-thumb {
 }
 
 /*---PAGE D'ACCUEIL DU SITE : SECTION PROJETS---*/
+#homepage-projets {
+  container-type: inline-size;
+}
+
 #homepage-hero h2::after {
   content: "";
 }
@@ -516,51 +520,6 @@ pre::-webkit-scrollbar-thumb {
   align-content: center;
 }
 
-@media (width >=1000px) {
-  .homepage-projets-grid-item {
-    grid-template-columns: 15% 85% !important;
-  }
-  .homepage-projets-grid-item {
-    margin-top: calc(2 * var(--baseline));
-  }
-  .homepage-projets-grid-item + .homepage-projets-grid-item {
-    margin-top: calc(3 * var(--baseline));
-  }
-  .homepage-projets-grid-item {
-    position: relative;
-  }
-  .homepage-projets-grid-item__left {
-    grid-column: 2 / 3;
-  }
-  .homepage-projets-grid-item__right {
-    max-width: 20dvw;
-    background-clip: padding-box;
-    border: ridge 0.1px transparent;
-    z-index: infinite;
-    position: absolute;
-    background-color: oklch(80% 0.03 220 / 40%);
-    padding-inline: calc(0.5 * var(--baseline));
-    padding-block: calc(0.25 * var(--baseline));
-    color: var(--bg);
-    top: 0;
-    left: 0;
-    transform: translateY(5dvh);
-    border-radius: 0.3rem;
-    box-shadow: 1px 1px 5px 0px var(--shadow);
-    backdrop-filter: blur(30px);
-    color: var(--txt);
-  }
-  .homepage-projets-tags {
-    border-color: var(--bg) !important;
-    background-color: var(--bg);
-    color: var(--txt);
-    font-size: 0.85rem !important;
-    font-weight: 400 !important;
-    padding-block: calc(0.05 * var(--baseline));
-    opacity: 1 !important;
-  }
-}
-
 .homepage-projets-grid-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -588,15 +547,14 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .homepage-projets-tags {
-  line-height: 0.75rlh;
   list-style-type: none;
-  padding-block: 0.4ex;
-  padding-inline: 0.8ex;
+  padding-block: 0.1ex;
+  padding-inline: 0.6ex;
   border-radius: 0.2rem;
   border: 1px solid var(--txtlighten20);
-  font-weight: 500;
-  opacity: 0.83;
-  font-size: 0.7rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  opacity: .9;
   transition: all 0.2s ease-out;
   cursor: default;
 }
@@ -610,7 +568,64 @@ pre::-webkit-scrollbar-thumb {
   grid-column: 2 / 3;
 }
 
+/*MEDIA QUERY HOMEPAGE PROJETS FOR DESKTOP*/
+@media (width >= 1200px) {
+  .homepage-projets-grid-item {
+    grid-template-columns: 15% 85% !important;
+    gap: 0!important;
+  }
 
+  .homepage-projets-grid-item + .homepage-projets-grid-item {
+    margin-top: calc(3 * var(--baseline));
+  }
+  .homepage-projets-grid-item {
+    position: relative;
+  }
+  .homepage-projets-grid-item__left {
+    grid-column: 2 / 3;
+  }
+  .homepage-projets-grid-item__right {
+    max-width: 25dvw;
+    background-clip: padding-box;
+    border: ridge 0.1px transparent;
+    z-index: infinite;
+    position: absolute;
+    background-color: oklch(80% 0.03 220 / 40%);
+    padding-inline: calc(0.5 * var(--baseline));
+    padding-block: calc(0.25 * var(--baseline));
+    color: var(--bg);
+    top: 0;
+    left: 0;
+    transform: translateY(2dvh);
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 5px 0px var(--shadow);
+    backdrop-filter: blur(30px);
+    color: var(--txt);
+  }
+  .homepage-projets-tags {
+    border-color: var(--bg) !important;
+    background-color: var(--bg);
+    color: var(--txt);
+    font-size: 0.85rem !important;
+    font-weight: 400 !important;
+    padding-block: calc(0.05 * var(--baseline));
+    opacity: 1 !important;
+  }
+}
+/*CONTAINER QUERY HOMEPAGE PROJETS FOR MOBILE: ;*/
+@container (width <= 600px) {
+  .homepage-projets-grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: calc(.5*var(--baseline));
+    & img {
+      width: 100%;
+    }
+  }
+  .homepage-projets-grid-item__right {
+    gap: calc(.25*var(--baseline));
+  }
+}
 
 /*---PAGE D'ACCUEIL DU SITE, SECTION PROJET GSAP ANIM---*/
 .homepage-projets-hidden {

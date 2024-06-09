@@ -6,7 +6,7 @@ tags:
   - "Frontend"
   - "DevWeb"
   - "CSS"
-layout: blogpost_layout.html
+layout: blogpost_layout.njk
 eleventyComputed:
   meta:
     site:

@@ -4,7 +4,7 @@ date: '2024-04-29'
 description: "Comment la culture de l'écrit d'Amazon garantie-t-elle son efficacité ?"
 tags: 
   - 'Management'
-layout: blogpost_layout.html
+layout: blogpost_layout.njk
 eleventyComputed:
   meta:
     site:

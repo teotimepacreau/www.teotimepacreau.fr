@@ -5,7 +5,7 @@ description: "Comment mettre à jour ses pratiques de développement d'emails HT
 tags: 
   - 'Email'
   - 'HTML'
-layout: blogpost_layout.html
+layout: blogpost_layout.njk
 eleventyComputed:
   meta:
     site:

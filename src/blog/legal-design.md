@@ -5,7 +5,7 @@ description: "Découverte des enjeux de simplification et d'accessibilité des n
 tags: 
   - 'Design'
   - 'Droit'
-layout: blogpost_layout.html
+layout: blogpost_layout.njk
 eleventyComputed:
   meta:
     site:

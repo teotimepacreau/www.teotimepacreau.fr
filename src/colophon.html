@@ -1,57 +1,41 @@
 ---
 title: Indications sur la façon dont j'ai conçue mon site web
+pageId: "Colophon"
+layout: "base.html"
 ---
-
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    {% include "head.html"%}
-  </head>
-  <body>
-    {% include "color-picker.html"%}
-    <div id="normal-page-container">
-      <header>
-        {% include "mobilenav.html"%}
-        {% include "navigation.html"%}
-      </header>
-      <main id="colophon">
-        <h1>Colophon</h1>
-        <p>
-          Ce site <a href="https://1mb.club/">léger</a> et sans
-          <a
-            href="https://fr.wikipedia.org/wiki/%C3%89conomie_de_la_surveillance"
-            >cookies</a
-          >
-          respecte vos données personnelles.
-        </p>
-        <p>
-          Les 2 polices utilisées sont gratuites et open-source : Inter de
-          <a href="https://rsms.me/inter/">Rasmus Andersson</a>, une sans-serif particulièrement lisible, et Bricolage Grotesque de
-          <a href="https://ateliertriay.github.io/bricolage/">Mathieu Triay du studio Atelier Triay</a
-          >, une police Grotesk de caractère qui puise son inspiration dans les couvertures d'anciens magazines.
-        </p>
-        <p>
-          J'ai construit ce site propulsé par
-          <a class="colophon-link" href="11ty.dev">Eleventy</a>, un moteur
-          de site statique qui associe souplesse et éco-conception numérique grâce à sa prise en compte
-          du
-          <a
-            class="colophon-link"
-            href="https://www.arthurperret.fr/cours/markdown.html"
-            >Markdown</a
-          >
-          et du peu de dépendances requises.
-        </p>
-        <p>
-          Ce site suit les principes de l'IndieWeb, car j'aime être propriétaire
-          de mon contenu, loin de certaines plateformes sociales vacillantes. Le flux RSS
-          étant, à mon sens, l'approche la plus raisonnée pour suivre du contenu
-          web, voici celui de ce site
-          <a class="rss" href="/feed/feed.xml"><span class="ph ph-rss"></span></a>
-        </p>
-      </main>
-      <footer id="footer">{% include "footer.html"%}</footer>
-    </div>
-    {% include "loadscripts.html"%}
-  </body>
-</html>
+<h1>Colophon</h1>
+<p>
+  Ce site <a href="https://1mb.club/">léger</a> et sans
+  <a href="https://fr.wikipedia.org/wiki/%C3%89conomie_de_la_surveillance"
+    >cookies</a
+  >
+  respecte vos données personnelles.
+</p>
+<p>
+  Les 2 polices utilisées sont gratuites et open-source : Inter de
+  <a href="https://rsms.me/inter/">Rasmus Andersson</a>, une sans-serif
+  particulièrement lisible, et Bricolage Grotesque de
+  <a href="https://ateliertriay.github.io/bricolage/"
+    >Mathieu Triay du studio Atelier Triay</a
+  >, une police Grotesk de caractère qui puise son inspiration dans les
+  couvertures d'anciens magazines.
+</p>
+<p>
+  J'ai construit ce site propulsé par
+  <a class="colophon-link" href="11ty.dev">Eleventy</a>, un moteur de site
+  statique qui associe souplesse et éco-conception numérique grâce à sa prise en
+  compte du
+  <a
+    class="colophon-link"
+    href="https://www.arthurperret.fr/cours/markdown.html"
+    >Markdown</a
+  >
+  et du peu de dépendances requises.
+</p>
+<p>
+  Ce site suit les principes de l'IndieWeb, car j'aime être propriétaire de mon
+  contenu, loin de certaines plateformes sociales vacillantes. Le flux RSS
+  étant, à mon sens, l'approche la plus raisonnée pour suivre du contenu web,
+  voici celui de ce site
+  <a class="rss" href="/feed/feed.xml"><span class="ph ph-rss"></span></a>
+</p>

@@ -585,7 +585,7 @@ pre::-webkit-scrollbar-thumb {
     grid-column: 2 / 3;
   }
   .homepage-projets-grid-item__right {
-    max-width: 25dvw;
+    max-width: 18dvw;
     background-clip: padding-box;
     border: ridge 0.1px transparent;
     z-index: infinite;
@@ -594,9 +594,8 @@ pre::-webkit-scrollbar-thumb {
     padding-inline: calc(0.5 * var(--baseline));
     padding-block: calc(0.25 * var(--baseline));
     color: var(--bg);
-    top: 0;
+    top: 8dvh;
     left: 0;
-    transform: translateY(2dvh);
     border-radius: 0.3rem;
     box-shadow: 1px 1px 5px 0px var(--shadow);
     backdrop-filter: blur(30px);
@@ -1469,23 +1468,23 @@ li {
 }
 
 /*---PROJET LAYOUT---*/
-.projet-layout {
+#projet-layout {
   max-width: 60ch;
   margin-inline: auto;
 }
 
-.projet-layout p,
-.projet-layout ul,
-.projet-layout ol {
+#projet-layout p,
+#projet-layout ul,
+#projet-layout ol {
   margin-top: calc(0.5 * var(--baseline));
 }
 
-.projet-layout h2,
-.projet-layout h3 {
+#projet-layout h2,
+#projet-layout h3 {
   margin-top: var(--baseline);
 }
 
-.projet-layout > ul > li {
+#projet-layout > ul > li {
   list-style-type: disc;
 }
 

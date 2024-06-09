@@ -4,7 +4,7 @@ date: "2024-06-07"
 description: "Conserver un rythme synchronisé dans une équipes aux compétences diverses n'est pas aisé. Comment rester synchro sans tomber dans le micro-management ?"
 tags:
   - "Management"
-layout: blogpost_layout.html
+layout: blogpost_layout.njk
 eleventyComputed:
   meta:
     site:

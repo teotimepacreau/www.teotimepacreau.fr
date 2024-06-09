@@ -1,70 +1,64 @@
 ---
-title: Mes projets numériques
+title: "Mes projets numériques"
+pageId: "Projets_list"
+layout: "base.html"
 ---
-
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    {% include "head.html"%}
-  </head>
-  <body>
-    {% include "color-picker.html"%}
-    <div class="projets-container" id="normal-page-container">
-      <header>
-        {% include "mobilenav.html"%}
-        {% include "navigation.html"%}
-      </header>
-      <main id="projets">
-        <h1>Mes projets</h1>
-        <div id="project-card-container">
-
-          <article class="project-card">
-            <header class="project-img-wrapper">
-              <img
-                src="../img/mairies-projet.png" loading="lazy" width="400" height="200"
-                alt="page d'accueil de mon site de mairie"
-              />
-            </header>
-            <div class="project-descripter">
-              <h2 class="project-card-title">
-                <a href="projetmairies">Site de Mairie administrable par CMS</a>
-              </h2>
-              <p>Développeur du projet.</p>
-          </div>
-          </article>
-
-          <article class="project-card">
-            <header class="project-img-wrapper">
-              <img
-                src="../img/bookshelf.png" loading="lazy" width="400" height="200"
-                alt="capture of the hompage of the bookshelf organizer website"
-              />
-            </header>
-            <div class="project-descripter">
-              <h2 class="project-card-title">
-                <a href="projetbookshelf">"The Bookshelf", un site de réservation de livres</a>
-              </h2>
-              <p>Développeur et designeur du projet.</p>
-          </div>
-          </article>
-          <article class="project-card">
-            <header class="project-img-wrapper">
-              <img
-                src="../img/newsletter.png" loading="lazy" width="400" height="200"
-                alt="capture of the hompage of the newsletter subscription website"
-              />
-            </header>
-            <div class="project-descripter">
-              <h2 class="project-card-title">
-                <a href="projetnewsletter">"Feuillu", un site d'inscription et d'envoi de newsletter</a>
-              </h2>
-              <p>Développement du site web. Intégration d'email HTML responsive.</p>
-            </div>
-          </article>
-        </div>
-      </main>
-      <footer id="footer">{% include "footer.html"%}</footer>
+<h1>Mes projets</h1>
+<div id="project-card-container">
+  <article class="project-card">
+    <header class="project-img-wrapper">
+      <img
+        src="../img/mairies-projet.png"
+        loading="lazy"
+        width="400"
+        height="200"
+        alt="page d'accueil de mon site de mairie"
+      />
+    </header>
+    <div class="project-descripter">
+      <h2 class="project-card-title">
+        <a href="projetmairies">Site de Mairie administrable par CMS</a>
+      </h2>
+      <p>Développeur du projet.</p>
     </div>
-    {% include "loadscripts.html"%}
-  </body>
-</html>
+  </article>
+
+  <article class="project-card">
+    <header class="project-img-wrapper">
+      <img
+        src="../img/bookshelf.png"
+        loading="lazy"
+        width="400"
+        height="200"
+        alt="capture of the hompage of the bookshelf organizer website"
+      />
+    </header>
+    <div class="project-descripter">
+      <h2 class="project-card-title">
+        <a href="projetbookshelf"
+          >"The Bookshelf", un site de réservation de livres</a
+        >
+      </h2>
+      <p>Développeur et designeur du projet.</p>
+    </div>
+  </article>
+  <article class="project-card">
+    <header class="project-img-wrapper">
+      <img
+        src="../img/newsletter.png"
+        loading="lazy"
+        width="400"
+        height="200"
+        alt="capture of the hompage of the newsletter subscription website"
+      />
+    </header>
+    <div class="project-descripter">
+      <h2 class="project-card-title">
+        <a href="projetnewsletter"
+          >"Feuillu", un site d'inscription et d'envoi de newsletter</a
+        >
+      </h2>
+      <p>Développement du site web. Intégration d'email HTML responsive.</p>
+    </div>
+  </article>
+</div>

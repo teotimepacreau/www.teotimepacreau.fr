@@ -1,3 +1,6 @@
+---
+pageId: "blogpost"
+---
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -9,22 +12,7 @@
       <div class="post-grid">
         <header id="post-header">
           {% include "mobilenav.html"%}
-          <nav
-            class="navigation-flexer navigation-flexer-post"
-            id="primary-navigation"
-            aria-label="Principale"
-          >
-            <span id="navigation-announcer">NAVIGATION</span>
-            <ul class="menu" id="post-menu">
-              <li>
-                <a tabindex="0" href="/index">HOME</a>
-              </li>
-              <li><a tabindex="0" href="/curriculum">CV</a></li>
-              <li><a tabindex="0" href="/blog">BLOG</a></li>
-              <li><a tabindex="0" href="/projets">PROJETS</a></li>
-              <li><a tabindex="0" href="/colophon">COLOPHON</a></li>
-            </ul>
-          </nav>
+          {% include "navigation.njk" %}
         </header>
         <aside>{{ content | toc | safe }}</aside>
         <main class="post-main">
@@ -49,7 +37,7 @@
             {{ content | safe }}
           </article>
         </main>
-        <footer id="footer" role="contentinfo">
+        <footer id="footer">
           {% include "footer.html"%}
         </footer>
         <!--Script pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->

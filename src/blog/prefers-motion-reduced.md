@@ -5,7 +5,7 @@ description: "Certains utilisateurs peuvent ressentir une gêne face aux animati
 tags: 
   - 'Accessibilité'
   - 'UX'
-layout: blogpost_layout.html
+layout: blogpost_layout.njk
 eleventyComputed:
   meta:
     site:

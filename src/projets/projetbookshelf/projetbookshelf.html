@@ -1,75 +1,176 @@
 ---
 title: Conception d'un site de réservation de livres
-layout: projet_layout.html
+pageId: Projet
+layout: base.html
 ---
+
 <h2>Conception d'un site de réservation de livres</h2>
 <div class="project-img-wrapper">
-    <a target="_blank" aria-describedby="lien-projet" href="https://bookshelf.teotimepacreau.fr/">
-        <span id="lien-projet" class="visually-hidden">Page du projet</span>
-        <img src="../../img/bookshelf.png" loading="eager" width="600" height="300" alt="Homepage of the bookshelf organizer website : a friendly UI filled with a list of books"></a>
+  <a
+    target="_blank"
+    aria-describedby="lien-projet"
+    href="https://bookshelf.teotimepacreau.fr/"
+  >
+    <span id="lien-projet" class="visually-hidden">Page du projet</span>
+    <img
+      src="../../img/bookshelf.png"
+      loading="eager"
+      width="600"
+      height="300"
+      alt="Homepage of the bookshelf organizer website : a friendly UI filled with a list of books"
+  /></a>
 </div>
 <h3>Rôle</h3>
 <p>Développeur et designer du projet</p>
 
-<h3>Commande / Objectifs </h3>
-<p>Site de visualisation et de gestion des réservations d'une bibliothèque de livres. Il est possible de rechercher, filtrer et trier les résultats. Les résultats sont paginés pour une meilleure lisibilité. L'administrateur peut se connecter pour ajouter des livres. Tous les utilisateurs peuvent réserver des livres.</p>
+<h3>Commande / Objectifs</h3>
+<p>
+  Site de visualisation et de gestion des réservations d'une bibliothèque de
+  livres. Il est possible de rechercher, filtrer et trier les résultats. Les
+  résultats sont paginés pour une meilleure lisibilité. L'administrateur peut se
+  connecter pour ajouter des livres. Tous les utilisateurs peuvent réserver des
+  livres.
+</p>
 
 <h3>Technologies utilisées</h3>
 <ul>
-    <li>Backend : NodeJS, Fastify, SQLite, SQL</li>
-    <li>Frontend : HTML, CSS, Javascript, Vite</li>
-    <li>Déploiement : Fly.io, Vercel</li>
+  <li>Backend : NodeJS, Fastify, SQLite, SQL</li>
+  <li>Frontend : HTML, CSS, Javascript, Vite</li>
+  <li>Déploiement : Fly.io, Vercel</li>
 </ul>
 
 <h3>Fonctionnalités</h3>
 <ol id="projet-ol">
-    <li><strong>Conception de l'UI et responsive :</strong> j'ai conçu l'interface en partant des usages pour qu'elle soit sobre et fonctionnelle. Adaptée à la navigation sur mobile.</li>
-    <li><strong>Base de données :</strong> à l'origine il s'agit d'un export CSV de livres depuis l'application Goodreads (Goodreads ne fournissant pas d'API). J'ai transformé ce fichier CSV en BDD SQLite.</li>
-    <li><strong>Retrouver et associer l'image de couverture de chaque livre :</strong> L'export CSV de Goodreads ne fournit pas les images de couverture des livres. J'ai donc utilisé une librairie de "web scrapping" qui récupère l'image de couverture de chaque livre sur Amazon. </li>
-    <li><strong>Transfert des données du backend au frontend :</strong> création d'une API d'envoi des données.
+  <li>
+    <strong>Conception de l'UI et responsive :</strong> j'ai conçu l'interface
+    en partant des usages pour qu'elle soit sobre et fonctionnelle. Adaptée à la
+    navigation sur mobile.
+  </li>
+  <li>
+    <strong>Base de données :</strong> à l'origine il s'agit d'un export CSV de
+    livres depuis l'application Goodreads (Goodreads ne fournissant pas d'API).
+    J'ai transformé ce fichier CSV en BDD SQLite.
+  </li>
+  <li>
+    <strong
+      >Retrouver et associer l'image de couverture de chaque livre :</strong
+    >
+    L'export CSV de Goodreads ne fournit pas les images de couverture des
+    livres. J'ai donc utilisé une librairie de "web scrapping" qui récupère
+    l'image de couverture de chaque livre sur Amazon.
+  </li>
+  <li>
+    <strong>Transfert des données du backend au frontend :</strong> création
+    d'une API d'envoi des données.
+  </li>
 
-    <li><strong>Barre de recherche :</strong></li>
-    <div class="project-img-wrapper">
-        <video width="603" height="339" controls muted src="../../img/bookshelf-recherche.mp4" title="Search function"></video>
-    </div>
+  <li><strong>Barre de recherche :</strong></li>
+  <div class="project-img-wrapper">
+    <video
+      width="603"
+      height="339"
+      controls
+      muted
+      src="../../img/bookshelf-recherche.mp4"
+      title="Search function"
+    ></video>
+  </div>
 
-    <li><strong>Filtre :</strong> classement des résultats par note moyenne</li>
-    <div class="project-img-wrapper">
-        <video width="603" height="339" controls muted src="../../img/bookshelf-filtre.mp4" title="Filter function"></video>
-    </div>
+  <li><strong>Filtre :</strong> classement des résultats par note moyenne</li>
+  <div class="project-img-wrapper">
+    <video
+      width="603"
+      height="339"
+      controls
+      muted
+      src="../../img/bookshelf-filtre.mp4"
+      title="Filter function"
+    ></video>
+  </div>
 
-    <li><strong>Tri :</strong></li>
-    <div class="project-img-wrapper">
-        <video width="603" height="339" controls muted src="../../img/bookshelf-tri.mp4" title="Filter function"></video>
-    </div>
+  <li><strong>Tri :</strong></li>
+  <div class="project-img-wrapper">
+    <video
+      width="603"
+      height="339"
+      controls
+      muted
+      src="../../img/bookshelf-tri.mp4"
+      title="Filter function"
+    ></video>
+  </div>
 
-    <li><strong>Connexion et ajout de livre :</strong> mise en place d'un système de connexion administrateur. L'administrateur à l'autorisation d'ajouter un livre à la collection via un formulaire.</li>
-    <div class="project-img-wrapper">
-        <video width="603" height="339" controls muted src="../../img/bookshelf-login.mp4" title="Login and adding book"></video>
-    </div>
+  <li>
+    <strong>Connexion et ajout de livre :</strong> mise en place d'un système de
+    connexion administrateur. L'administrateur à l'autorisation d'ajouter un
+    livre à la collection via un formulaire.
+  </li>
+  <div class="project-img-wrapper">
+    <video
+      width="603"
+      height="339"
+      controls
+      muted
+      src="../../img/bookshelf-login.mp4"
+      title="Login and adding book"
+    ></video>
+  </div>
 
-    <li><strong>Réservations :</strong> l'utilisateur peut ajouter dans son panier un livre et le réserver en sélectionnant une date de rendu.</li>
-    <div class="project-img-wrapper">
-        <video controls muted src="../../img/bookshelf-reservation.mp4" title="Reservation book"></video>
-    </div>
+  <li>
+    <strong>Réservations :</strong> l'utilisateur peut ajouter dans son panier
+    un livre et le réserver en sélectionnant une date de rendu.
+  </li>
+  <div class="project-img-wrapper">
+    <video
+      controls
+      muted
+      src="../../img/bookshelf-reservation.mp4"
+      title="Reservation book"
+    ></video>
+  </div>
 </ol>
 <h3>Ce que j'ai appris</h3>
 <ul>
-    <li>Séparer le frontend et le backend en dossiers différents dès le début du développement.</li>
-    <li>Passer les données du backend au frontend grâce aux routes</li>
-    <li>Utiliser <a target="_blank" href="https://vitejs.dev/">Vite</a> pour bénéficier du Hot Module Replacement, du bundling et de la logique d'importer tous les modules dans un seul fichier JS</li>
-    <li>Travailler avec les ES Modules</li>
-    <li>Charger de façon asynchrone les ES Modules et les scripts</li>
-    <li>Comprendre et réparer les erreurs CORS (origin, method, credentials...)</li>
-    <li>Utiliser les fonctions pre-handler sur le serveur pour s'assurer que seul un utilisateur authentifié a l'autorisation de faire une POST request</li>
-    <li>Différencier BasicAuth, SessionAuth et JWT</li>
-    <li>Construire un système de login via les secure-session-cookies, différence entre authentification et autorisation</li>
-    <li>Animations liés au scroll en pur CSS (Scroll-progress-timeline)</li>
-    <li>Animations au changement de page en CSS (ViewTransitionsAPI)</li>
-    <li>Savoir quand utiliser ou non une modale</li>
+  <li>
+    Séparer le frontend et le backend en dossiers différents dès le début du
+    développement.
+  </li>
+  <li>Passer les données du backend au frontend grâce aux routes</li>
+  <li>
+    Utiliser <a target="_blank" href="https://vitejs.dev/">Vite</a> pour
+    bénéficier du Hot Module Replacement, du bundling et de la logique
+    d'importer tous les modules dans un seul fichier JS
+  </li>
+  <li>Travailler avec les ES Modules</li>
+  <li>Charger de façon asynchrone les ES Modules et les scripts</li>
+  <li>
+    Comprendre et réparer les erreurs CORS (origin, method, credentials...)
+  </li>
+  <li>
+    Utiliser les fonctions pre-handler sur le serveur pour s'assurer que seul un
+    utilisateur authentifié a l'autorisation de faire une POST request
+  </li>
+  <li>Différencier BasicAuth, SessionAuth et JWT</li>
+  <li>
+    Construire un système de login via les secure-session-cookies, différence
+    entre authentification et autorisation
+  </li>
+  <li>Animations liés au scroll en pur CSS (Scroll-progress-timeline)</li>
+  <li>Animations au changement de page en CSS (ViewTransitionsAPI)</li>
+  <li>Savoir quand utiliser ou non une modale</li>
 </ul>
 <h3>Lien du projet et code source</h3>
 <ul>
-    <li><strong>Projet en ligne : </strong><a target="_blank" href="https://bookshelf.teotimepacreau.fr/">Mon projet déployé "The Bookshelf"</a></li>
-    <li><strong>Code source du projet : </strong><a target="_blank" href="https://github.com/teotimepacreau/bookshelf">Lien Github</a></li>
+  <li>
+    <strong>Projet en ligne : </strong
+    ><a target="_blank" href="https://bookshelf.teotimepacreau.fr/"
+      >Mon projet déployé "The Bookshelf"</a
+    >
+  </li>
+  <li>
+    <strong>Code source du projet : </strong
+    ><a target="_blank" href="https://github.com/teotimepacreau/bookshelf"
+      >Lien Github</a
+    >
+  </li>
 </ul>

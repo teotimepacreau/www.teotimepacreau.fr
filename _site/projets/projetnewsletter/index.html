@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
+    <head>
+        <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="/css/style.css" />
@@ -79,9 +79,9 @@ fetchpriority="low"
 
 
 <title>Développement d&#39;un site d&#39;inscription et d&#39;envoi de newsletter. Intégration d&#39;email HTML responsive</title>
-  </head>
-  <body>
-    <form
+    </head>
+    <body>
+        <form
   class="color-picker"
   aria-label="Sélecteur de thème coloré"
   action=""
@@ -103,9 +103,12 @@ fetchpriority="low"
   </fieldset>
 </form>
 
-    <div class="projets-container" id="normal-page-container">
-      <header>
-        <button
+        <div  id="normal-page-container" 
+    
+        class="projets-container"
+        >
+            <header >
+            <button
   class="mobile-nav-toggle"
   type="button"
   aria-label="ouvrir la navigation principale"
@@ -145,12 +148,12 @@ fetchpriority="low"
   </ul>
 </nav>
 
-        <nav
-  class="navigation-flexer"
+            <nav
+  class="navigation-flexer" 
   id="primary-navigation"
   aria-label="Principale"
 >
-  <span aria-hidden="true" id="navigation-announcer">NAVIGATION</span>
+  <span aria-hidden="true" id="navigation-announcer" >NAVIGATION</span>
   <ul class="menu">
     <li><a href="/index">HOME</a></li>
     <li><a href="/curriculum">CV</a></li>
@@ -160,54 +163,143 @@ fetchpriority="low"
   </ul>
 </nav>
 
-      </header>
-      <main class="projet-layout"><h2>Développement d'un site de newsletter & intégration d'email HTML responsive.</h2>
+            </header>
+            <main id="projet-layout">
+                <h2>
+  Développement d'un site de newsletter & intégration d'email HTML responsive.
+</h2>
 <div class="project-img-wrapper">
-    <a target="_blank" aria-describedby="lien-projet" href="https://feuillu-newsletter.teotimepacreau.fr/">
-        <span id="lien-projet" class="visually-hidden">Page du projet</span>
-        <img src="../../img/newsletter.png" loading="eager" width="600" height="300" alt="Homepage of the newsletter subscription website : a bento UI with a subscription form aside"></a>
+  <a
+    target="_blank"
+    aria-describedby="lien-projet"
+    href="https://feuillu-newsletter.teotimepacreau.fr/"
+  >
+    <span id="lien-projet" class="visually-hidden">Page du projet</span>
+    <img
+      src="../../img/newsletter.png"
+      loading="eager"
+      width="600"
+      height="300"
+      alt="Homepage of the newsletter subscription website : a bento UI with a subscription form aside"
+  /></a>
 </div>
 <h3>Rôle</h3>
 <p>Développeur et designer du projet</p>
 
 <h3>Commande / Objectifs</h3>
-<p>Création d'un site d'inscription et d'envoi d'une newsletter consacrée au web-design. Intégration d'email HTML responsive. Chaque mois, la newsletter est envoyée via une tâche automatisée. Les mails envoyés peuvent-être lus dans le client mail ou dans le navigateur. Il est possible de se désinscrire de la newsletter à tout moment.</p>
+<p>
+  Création d'un site d'inscription et d'envoi d'une newsletter consacrée au
+  web-design. Intégration d'email HTML responsive. Chaque mois, la newsletter
+  est envoyée via une tâche automatisée. Les mails envoyés peuvent-être lus dans
+  le client mail ou dans le navigateur. Il est possible de se désinscrire de la
+  newsletter à tout moment.
+</p>
 <div class="project-img-wrapper">
-    <video width="603" height="339" controls muted src="../../img/newsletter-showcase.mp4" title="showcase of the functionalities of the newsletter website"></video>
+  <video
+    width="603"
+    height="339"
+    controls
+    muted
+    src="../../img/newsletter-showcase.mp4"
+    title="showcase of the functionalities of the newsletter website"
+  ></video>
 </div>
 <h3>Technologies utilisées</h3>
 <ul>
-    <li>Backend : BDD SQLite et requêtes SQL, Express, NodeJS</li>
-    <li>Frontend : HTML, CSS, Javascript</li>
+  <li>Backend : BDD SQLite et requêtes SQL, Express, NodeJS</li>
+  <li>Frontend : HTML, CSS, Javascript</li>
 </ul>
 <h3>Fonctionnalités</h3>
 <ol id="projet-ol">
-    <li><strong>Logique de souscription :</strong> les utilisateurs s'inscrivent sur la page d'accueil en remplissant le formulaire. Les données sont enregistrées dans une base de données SQL. Une notification visuelle confirme la souscription à l'utilisateur, si l'email est déjà présent dans la BDD une notification visuelle informe de l'erreur. Un email de bienvenue est envoyé au nouvel inscrit.</li>
-    <li><strong>Logique de désinscription :</strong> les utilisateurs peuvent se désinscrire sur la page /unsubscribe. L'utilisateur entre son mail dans le formulaire de désinscription, la BDD se met à jour en conséquence. Une vérification s'opère avec une requête SQL pour vérifier si le mail est dans la BDD, si ce n'est pas le cas une notification visuelle informe l'utilisateur.</li>
-    <li><strong>UI :</strong> intégration HTML de l'email. Adaptation responsive mobile.</li>
-    <div class="project-img-wrapper">
-        <img src="../../img/email-html.png" alt="Rendu de l'email dans la boite mail : un bloc de bienvenue et un bloc montrant l'étude de cas">
-    </div>
-    <li><strong>Composition dynamique de la newsletter :</strong> une requête SQL est effectuée dans la BDD pour personnaliser le prénom et le nom du destinataire.</li>
-    <li><strong>Envoi régulier de la newsletter :</strong> un Node Cronjob automatise l'envoi par mail chaque mois.</li>
-    <li><strong>Permettre au client d'afficher la newsletter dans son navigateur :</strong> une route Express prend en paramètre la requête pour savoir quel mail elle doit afficher.</li>
-    <li><strong>Déploiement :</strong> afin de déployer la BDD SQLite j'ai choisi <a target="_blank" href="https://fly.io/">fly.io</a>, la BDD locale SQLite est répliquée sur le serveur.</li>
+  <li>
+    <strong>Logique de souscription :</strong> les utilisateurs s'inscrivent sur
+    la page d'accueil en remplissant le formulaire. Les données sont
+    enregistrées dans une base de données SQL. Une notification visuelle
+    confirme la souscription à l'utilisateur, si l'email est déjà présent dans
+    la BDD une notification visuelle informe de l'erreur. Un email de bienvenue
+    est envoyé au nouvel inscrit.
+  </li>
+  <li>
+    <strong>Logique de désinscription :</strong> les utilisateurs peuvent se
+    désinscrire sur la page /unsubscribe. L'utilisateur entre son mail dans le
+    formulaire de désinscription, la BDD se met à jour en conséquence. Une
+    vérification s'opère avec une requête SQL pour vérifier si le mail est dans
+    la BDD, si ce n'est pas le cas une notification visuelle informe
+    l'utilisateur.
+  </li>
+  <li>
+    <strong>UI :</strong> intégration HTML de l'email. Adaptation responsive
+    mobile.
+  </li>
+  <div class="project-img-wrapper">
+    <img
+      src="../../img/email-html.png"
+      alt="Rendu de l'email dans la boite mail : un bloc de bienvenue et un bloc montrant l'étude de cas"
+    />
+  </div>
+  <li>
+    <strong>Composition dynamique de la newsletter :</strong> une requête SQL
+    est effectuée dans la BDD pour personnaliser le prénom et le nom du
+    destinataire.
+  </li>
+  <li>
+    <strong>Envoi régulier de la newsletter :</strong> un Node Cronjob
+    automatise l'envoi par mail chaque mois.
+  </li>
+  <li>
+    <strong
+      >Permettre au client d'afficher la newsletter dans son navigateur
+      :</strong
+    >
+    une route Express prend en paramètre la requête pour savoir quel mail elle
+    doit afficher.
+  </li>
+  <li>
+    <strong>Déploiement :</strong> afin de déployer la BDD SQLite j'ai choisi
+    <a target="_blank" href="https://fly.io/">fly.io</a>, la BDD locale SQLite
+    est répliquée sur le serveur.
+  </li>
 </ol>
 <h3>Ce que j'ai appris</h3>
 <ul>
-    <li>comment utiliser NodeJS : asynchrone, gestion des erreurs</li>
-    <li>Express : gestion des requêtes HTTP, concept de routes, controllers, configuration de serveur</li>
-    <li>Requêtes et réponses HTTP, status code</li>
-    <li>HTML emails (les différentes règles de compatibilité CSS des clients mails)</li>
-    <li>Organiser une architecture backend avec le frontend directement intégré</li>
-    <li>Hébergement: comment héberger et faire persister BDD SQLite grâce à Fly.io, déployer un front-in-back sur un serveur en ligne</li>
+  <li>comment utiliser NodeJS : asynchrone, gestion des erreurs</li>
+  <li>
+    Express : gestion des requêtes HTTP, concept de routes, controllers,
+    configuration de serveur
+  </li>
+  <li>Requêtes et réponses HTTP, status code</li>
+  <li>
+    HTML emails (les différentes règles de compatibilité CSS des clients mails)
+  </li>
+  <li>
+    Organiser une architecture backend avec le frontend directement intégré
+  </li>
+  <li>
+    Hébergement: comment héberger et faire persister BDD SQLite grâce à Fly.io,
+    déployer un front-in-back sur un serveur en ligne
+  </li>
 </ul>
 <h3>Lien du projet et code source</h3>
 <ul>
-    <li><strong>Projet en ligne : </strong><a target="_blank" href="https://feuillu-newsletter.teotimepacreau.fr">"Feuillu-newsletter"</a></li>
-    <li><strong>Code source du projet : </strong><a target="_blank" href="https://github.com/teotimepacreau/Express-Newsletter">Lien Github</a></li>
-</ul></main>
-      <footer id="footer"><address>
+  <li>
+    <strong>Projet en ligne : </strong
+    ><a target="_blank" href="https://feuillu-newsletter.teotimepacreau.fr"
+      >"Feuillu-newsletter"</a
+    >
+  </li>
+  <li>
+    <strong>Code source du projet : </strong
+    ><a
+      target="_blank"
+      href="https://github.com/teotimepacreau/Express-Newsletter"
+      >Lien Github</a
+    >
+  </li>
+</ul>
+
+            </main>
+            <footer  id="footer">
+                <address>
   <a
     href="mailto:teotime.pac@outlook.fr?subject=Demande de contact depuis teotimepacreau.fr"
     >teotime.pac<span class="hidden">anti</span>&#64;<span class="hidden"
@@ -262,9 +354,10 @@ fetchpriority="low"
     >
   </li>
 </ul>
-</footer>
-    </div>
-    <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
+
+            </footer>
+        </div>
+        <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
 <script defer src="/scripts/aria-current.js"></script>
-  </body>
+    </body>
 </html>

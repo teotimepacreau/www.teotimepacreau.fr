@@ -1,0 +1,14 @@
+<nav
+  {% if pageId == "blogpost" %}class="navigation-flexer navigation-flexer-post"{% elseif pageId == "Homepage" %}class="homepage-nav" data-visible="false"{% else %}class="navigation-flexer"{% endif %} 
+  id="primary-navigation"
+  aria-label="Principale"
+>
+  <span aria-hidden="true" id="navigation-announcer" {% if pageId == "Homepage" %}class="visually-hidden"{% endif %}>NAVIGATION</span>
+  <ul {% if pageId == "Homepage" %}class="menu-anim"{% else %}class="menu"{% endif %}{% if pageId == "blogpost" %}id="post-menu"{% endif %}>
+    {% if pageId != "Homepage" %}<li><a href="/index">HOME</a></li>{% endif %}
+    <li><a href="/curriculum">{% if pageId == "Homepage" %}01 {% endif %}CV</a></li>
+    <li><a href="/blog">{% if pageId == "Homepage" %}02 {% endif %}BLOG</a></li>
+    <li><a href="/projets">{% if pageId == "Homepage" %}03 {% endif %}PROJETS</a></li>
+    <li><a href="/colophon">{% if pageId == "Homepage" %}04 {% endif %}COLOPHON</a></li>
+  </ul>
+</nav>

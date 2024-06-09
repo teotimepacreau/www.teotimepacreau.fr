@@ -6,7 +6,7 @@ tags:
   - "Mesure d'impact"
   - "Entrepreneuriat"
   - "RSE"
-layout: blogpost_layout.html
+layout: blogpost_layout.njk
 eleventyComputed:
   meta:
     site:

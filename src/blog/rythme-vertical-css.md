@@ -6,7 +6,7 @@ tags:
   - 'CSS'
   - 'Rythme vertical'
   - 'Web design'
-layout: blogpost_layout.html
+layout: blogpost_layout.njk
 eleventyComputed:
   meta:
     site:

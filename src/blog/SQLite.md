@@ -6,7 +6,7 @@ tags:
   - 'SQL'
   - 'Backend'
   - 'SQLite'
-layout: blogpost_layout.html
+layout: blogpost_layout.njk
 eleventyComputed:
   meta:
     site:

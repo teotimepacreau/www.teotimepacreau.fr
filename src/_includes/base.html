@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% include "head.html"%}
+    </head>
+    <body>
+        {% include "color-picker.html"%}
+        <div {% if pageId == "Homepage" %} id="homepage-container" {% else %} id="normal-page-container" {% endif %}
+    
+        {% if pageId == "Projets_list" or pageId == "Projet" %}class="projets-container"{% endif %}
+        >
+            <header {% if pageId == "Homepage" %} id="homepage-menu" {% endif %}>
+            {% include "mobilenav.html"%}
+            {% include "navigation.njk"%}
+            </header>
+            <main {% if pageId == "Tags" %}id="tags-page"{% elseif pageId == "Homepage" %}id="homepage-hero"{% elseif pageId == "CV" %}id="container-cv"{% elseif pageId == "Colophon" %}id="colophon"{% elseif pageId == "Projets_list" %}id="projets"{% elseif pageId == "Blog" %}id="blog"{% elseif pageId == "Projet" %}id="projet-layout"{% endif %}>
+                {{ content | safe }}
+            </main>
+            <footer {% if pageId == "Homepage" %} class="homepage-footer intersect"{% endif %} id="footer">
+                {% include "footer.html"%}
+            </footer>
+        </div>
+        {% include "loadscripts.html"%}
+    </body>
+</html>

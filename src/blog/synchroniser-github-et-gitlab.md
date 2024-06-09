@@ -3,7 +3,7 @@ title: "Synchroniser un repo Github avec Gitlab"
 date: '2024-06-04'
 tags: 
   - 'Git'
-layout: blogpost_layout.html
+layout: blogpost_layout.njk
 eleventyComputed:
   meta:
     site:

@@ -13,15 +13,15 @@ eleventyComputed:
 
 <h1>Posts taggés avec "<span class="tags-style">{{ tag }}</span>"</h1>
 
-{% for post in collections[tag] | reverse %}
-<ul id="tags-page-ul">
-  <li id="tags-page-li">
+
+  {% for post in collections[tag] | reverse %}
+  <article class="tags-article-card">
     <h2><a href="{{post.url}}">{{post.data.title}}</a></h2>
     <time
       class="tags-date"
       datetime="{{ post.data.date | date('dd LLLL yyyy') }}"
-      >{{ post.data.date | date('dd LLLL yyyy') }}</time
-    >
-  </li>
+      >{{ post.data.date | date('dd LLLL yyyy') }}</time>
+  </article>
+  {% endfor %}
 </ul>
-{% endfor %}
+

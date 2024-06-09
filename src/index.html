@@ -42,108 +42,40 @@ layout: "base.html"
     <hr />
   </header>
 
+  {% for projet in projets %}
   <article class="homepage-projets-grid-item">
     <div class="homepage-projets-grid-item__left">
       <img
         loading="eager"
-        src="/img/mairies_mobile_169.webp"
-        alt="Vue de la page d'accueil de mon site de mairie"
-        height="111"
-        width="169"
-        srcset="
-          /img/mairies_mobile_169.webp    169w,
-          /img/mairies_desktop_1142.webp 1142w
-        "
-        sizes="(max-width: 600px) 169px, 1142px"
+        src="{{ projet.img_src }}"
+        alt="{{ projet.img_alt }}"
+        height="{{ projet.img_height }}"
+        width="{{ projet.img_width }}"
+        srcset="{{ projet.img_srcset }}"
+        sizes="{{ projet.img_sizes }}"
       />
     </div>
     <div class="homepage-projets-grid-item__right">
       <ul>
-        <li class="homepage-projets-tags">SvelteKit</li>
-        <li class="homepage-projets-tags">TinaCMS</li>
-        <li class="homepage-projets-tags">Fastify</li>
+        {% for tag in projet.projet_tags %}
+        <li class="homepage-projets-tags">{{ tag }}</li>
+        {% endfor %}
       </ul>
       <div class="homepage-projets-grid-item__right__titleanddesc">
-        <span>Site web de Mairie administrable par CMS</span>
+        <span>{{ projet.projet_title }}</span>
       </div>
 
       <a
-        aria-label="Consulter plus en détail le projet de site de mairie"
+        aria-label="{{ projet.internal_anchor_arialabel }}"
         class="homepage-projets-anchor"
-        href="/projets/projetmairies/"
+        href="{{ projet.internal_anchor }}"
       >
         Découvrir
       </a>
     </div>
   </article>
+  {% endfor %}
 
-  <article class="homepage-projets-grid-item">
-    <div class="homepage-projets-grid-item__left">
-      <img
-        loading="lazy"
-        src="/img/bookshelf_mobile_168.webp"
-        alt="Vue de la page d'accueil de mon site de réservation de livres"
-        height="80"
-        width="168"
-        srcset="
-          /img/bookshelf_mobile_168.webp    168w,
-          /img/bookshelf_desktop_1142.webp 1142w
-        "
-        sizes="(max-width: 600px) 168px, 1142px"
-      />
-    </div>
-    <div class="homepage-projets-grid-item__right">
-      <ul>
-        <li class="homepage-projets-tags">Vite</li>
-        <li class="homepage-projets-tags">Fastify</li>
-        <li class="homepage-projets-tags">SQLite</li>
-      </ul>
-      <div class="homepage-projets-grid-item__right__titleanddesc">
-        <span>Site web fullstack de réservation de livres</span>
-      </div>
-      <a
-        aria-label="Consulter plus en détail le projet de site de bibliothèque"
-        class="homepage-projets-anchor"
-        href="/projets/projetbookshelf/"
-      >
-        Découvrir
-      </a>
-    </div>
-  </article>
-
-  <article class="homepage-projets-grid-item">
-    <div class="homepage-projets-grid-item__left">
-      <img
-        loading="lazy"
-        src="/img/feuillu_mobile_168.webp"
-        alt="Vue de la page d'accueil de mon site de newsletter"
-        height="80"
-        width="168"
-        srcset="
-          /img/feuillu_mobile_168.webp    168w,
-          /img/feuillu_desktop_1142.webp 1142w
-        "
-        sizes="(max-width: 600px) 168px, 1142px"
-      />
-    </div>
-    <div class="homepage-projets-grid-item__right">
-      <ul>
-        <li class="homepage-projets-tags">Javascript</li>
-        <li class="homepage-projets-tags">Express</li>
-        <li class="homepage-projets-tags">SQLite</li>
-      </ul>
-      <div class="homepage-projets-grid-item__right__titleanddesc">
-        <span>Site web de newsletter & intégration HTML d'email</span>
-      </div>
-      <a
-        aria-label="Consulter plus en détail le projet de site de newsletter"
-        class="homepage-projets-anchor"
-        href="/projets/projetnewsletter/"
-      >
-        Découvrir
-      </a>
-    </div>
-  </article>
 </section>
 <section id="homepage-services" class="intersect">
   <header class="homepage-projets-titre-flexer">

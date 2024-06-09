@@ -1,0 +1,40 @@
+{
+    "projets": [
+        {
+            "img_src": "/img/mairies_mobile_169.webp",
+            "img_alt": "Vue de la page d'accueil de mon site de mairie",
+            "img_height": "111",
+            "img_width": "169",
+            "img_srcset": "/img/mairies_mobile_169.webp 169w, /img/mairies_desktop_1142.webp 1142w",
+            "img_sizes": "(max-width: 600px) 169px, 1142px",
+            "projet_title": "Site web de Mairie administrable par CMS",
+            "projet_tags": ["SvelteKit", "TinaCMS", "Fastify", "Tailwind"],
+            "internal_anchor": "/projets/projetmairies/",
+            "internal_anchor_arialabel": "Consulter plus en détail le projet de site de mairie"
+        },
+        {
+            "img_src": "/img/bookshelf_mobile_168.webp",
+            "img_alt": "Vue de la page d'accueil de mon site de réservation de livres",
+            "img_height": "80",
+            "img_width": "168",
+            "img_srcset": "/img/bookshelf_mobile_168.webp 168w, /img/bookshelf_desktop_1142.webp 1142w",
+            "img_sizes": "(max-width: 600px) 168px, 1142px",
+            "projet_title": "Site web fullstack de réservation de livres",
+            "projet_tags": ["Vite", "Fastify", "SQLite"],
+            "internal_anchor": "/projets/projetbookshelf/",
+            "internal_anchor_arialabel": "Consulter plus en détail le projet de site de bibliothèque"
+        },
+        {
+            "img_src": "/img/feuillu_mobile_168.webp",
+            "img_alt": "Vue de la page d'accueil de mon site de newsletter",
+            "img_height": "80",
+            "img_width": "168",
+            "img_srcset": "/img/feuillu_mobile_168.webp 168w, /img/feuillu_desktop_1142.webp 1142w",
+            "img_sizes": "(max-width: 600px) 168px, 1142px",
+            "projet_title": "Site web de newsletter & intégration HTML d'email",
+            "projet_tags": ["Javascript", "Express", "SQLite"],
+            "internal_anchor": "/projets/projetnewsletter/",
+            "internal_anchor_arialabel": "Consulter plus en détail le projet de site de newsletter"
+        }
+    ]
+}

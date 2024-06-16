@@ -1,10 +1,12 @@
 {
-    "title": "Le site web personnel de Teotime Pacreau",
+    "title": "Le site web personnel de Teotime Pacreau : Développement web et management de projets numériques à Nantes",
     "url": "https://www.teotimepacreau.fr/",
     "language": "fr",
-    "description": "Management de projet et numérique à Nantes",
+    "description": "Développement web et management de projets numériques à Nantes",
+    "category": "Blog",
+    "generator": "Eleventy",
     "feed": {
-      "subtitle": "Le flux web de mon blog : management de projet et numérique.",
+      "subtitle": "Le flux web du blog de Teotime Pacreau",
       "filename": "feed.xml",
       "path": "/feed/feed.xml",
       "id": "https://www.teotimepacreau.fr/"

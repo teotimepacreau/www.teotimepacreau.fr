@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Le site web personnel de Teotime Pacreau</title>
-	<subtitle>Le flux web de mon blog : management de projet et numérique.</subtitle>
-	
-	<link href="https://www.teotimepacreau.fr/feed/feed.xml" rel="self"/>
-	<link href="https://www.teotimepacreau.fr/"/>
-	<updated>2024-06-07T00:00:00Z</updated>
-	<id>https://www.teotimepacreau.fr/</id>
-	<author>
-		<name>Téotime Pacreau</name>
-		<email>teotime.pac@outlook.fr</email>
-	</author>
-	
-	<entry>
-		<title>Miser sur l&#39;autonomie des collaborateurs via la double boucle de feedback en management</title>
-		<link href="https://www.teotimepacreau.fr/blog/double-boucle-feedback-management/"/>
-		<updated>2024-06-07T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/double-boucle-feedback-management/</id>
-		<content type="html">&lt;p&gt;Personne ne souhaite être un micro-manager, mais bien souvent le manque de temps et la pression des objectifs empêche de laisser une part importante d’autonomie aux équipes. Pourtant &lt;a href=&quot;https://hbr.org/2021/10/forget-flexibility-your-employees-want-autonomy&quot;&gt;l’autonomie est le critère majeur d’engagement au travail&lt;/a&gt;. L’autonomie accordée est une marque de confiance dans les compétences du salarié. C’est un élément indispensable à toute performance.
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://www.teotimepacreau.fr/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Le site web personnel de Teotime Pacreau : Développement web et management de projets numériques à Nantes</title>
+    <link>https://www.teotimepacreau.fr/</link>
+    <atom:link href="https://www.teotimepacreau.fr/%7B%7B%20metadata.feed.path%20%7D%7D" rel="self" type="application/rss+xml" />
+    <description>Le flux web du blog de Teotime Pacreau</description>
+    <language>fr</language>
+	<category>Blog</category>
+	<generator>Eleventy</generator>
+    <item>
+      <title>Miser sur l&#39;autonomie des collaborateurs via la double boucle de feedback en management</title>
+      <link>https://www.teotimepacreau.fr/blog/double-boucle-feedback-management/</link>
+      <description>&lt;p&gt;Personne ne souhaite être un micro-manager, mais bien souvent le manque de temps et la pression des objectifs empêche de laisser une part importante d’autonomie aux équipes. Pourtant &lt;a href=&quot;https://hbr.org/2021/10/forget-flexibility-your-employees-want-autonomy&quot;&gt;l’autonomie est le critère majeur d’engagement au travail&lt;/a&gt;. L’autonomie accordée est une marque de confiance dans les compétences du salarié. C’est un élément indispensable à toute performance.
 Alors comment garder une équipe aux compétences variées synchronisée sans être constamment dans la surveillance des tâches ?&lt;/p&gt;
 &lt;h2 id=&quot;mettre-en-place-des-objectifs-pour-inciter-plut%C3%B4t-que-surveiller&quot; tabindex=&quot;-1&quot;&gt;Mettre en place des objectifs pour inciter plutôt que surveiller&lt;/h2&gt;
 &lt;p&gt;Nous manquons souvent de sens dans les organisations. En comprenant l’intention globale d’une tâche celle-ci paraît toute de suite plus motivante et claire. Voici une méthode pour rendre du sens :&lt;/p&gt;
@@ -35,15 +29,19 @@ Alors comment garder une équipe aux compétences variées synchronisée sans ê
 &lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://continuouscoordination.org/keep-a-steady-beat/&quot;&gt;https://continuouscoordination.org/keep-a-steady-beat/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://steady.space/blog/cure-for-micromanagement/&quot;&gt;https://steady.space/blog/cure-for-micromanagement/&lt;/a&gt;&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Synchroniser un repo Github avec Gitlab</title>
-		<link href="https://www.teotimepacreau.fr/blog/synchroniser-github-et-gitlab/"/>
-		<updated>2024-06-04T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/synchroniser-github-et-gitlab/</id>
-		<content type="html">&lt;p&gt;Pour des raisons techniques, j’ai eu besoin de cloner un repo existant sur Github dans l’alternative open-source &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;Gitlab&lt;/a&gt;. Je souhaitais synchroniser tout les changements effectués dans le repo Gitlab en les poussant vers le repo Github.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 07 Jun 2024 02:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/double-boucle-feedback-management/</guid>
+    </item>
+    <item>
+      <title>Synchroniser un repo Github avec Gitlab</title>
+      <link>https://www.teotimepacreau.fr/blog/synchroniser-github-et-gitlab/</link>
+      <description>&lt;p&gt;Pour des raisons techniques, j’ai eu besoin de cloner un repo existant sur Github dans l’alternative open-source &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;Gitlab&lt;/a&gt;. Je souhaitais synchroniser tout les changements effectués dans le repo Gitlab en les poussant vers le repo Github.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Mise à jour du 16 juin 2024&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Après multiples tests, côté Gitlab la synchronisation en GET est réservée aux comptes Gitlab PREMIUM (payant) tandis que le PUSH est disponible pour tous les comptes (même gratuits)&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&quot;clonage-d%E2%80%99un-repo-github-dans-gitlab&quot; tabindex=&quot;-1&quot;&gt;Clonage d’un repo Github dans Gitlab&lt;/h2&gt;
 &lt;p&gt;Gitlab propose de créer un repo en créant un clône d’un repo pré-existant sur un autre service via “Importer un projet”. Il suffit de fournir l’URL du repo Github.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/gitlab-clonage1.png&quot; alt=&quot;Capture de la page de proposition des modalités de création de repo Gitlab&quot; /&gt;&lt;figcaption&gt;Clonage d’un repo pré-existant&lt;/figcaption&gt;&lt;/figure&gt;
@@ -60,15 +58,15 @@ Alors comment garder une équipe aux compétences variées synchronisée sans ê
 Il faut de nouveau coller l’url du dépôt distant Github et placer le nom d’utilisateur Github. Le champ “mot de passe” correspond au token généré précédemment sur Github.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/gitlab-synchronisation.png&quot; alt=&quot;Capture des champs requis pour synchroniser&quot; /&gt;&lt;figcaption&gt;Champs requis pour synchroniser&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;N’importe quel commit effectué sera poussé depuis Gitlab vers Github. Le repo Gitlab tirera tout changement effectué sur Github.&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Créer un menu hamburger fonctionnant sans Javascript grâce à Popover API</title>
-		<link href="https://www.teotimepacreau.fr/blog/menu-hamburger-fonctionnant-sans-javascript-accessible/"/>
-		<updated>2024-05-23T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/menu-hamburger-fonctionnant-sans-javascript-accessible/</id>
-		<content type="html">&lt;h2 id=&quot;les-bases-d%E2%80%99un-menu-en-html-s%C3%A9mantique&quot; tabindex=&quot;-1&quot;&gt;Les bases d’un menu en HTML sémantique&lt;/h2&gt;
+</description>
+      <pubDate>Tue, 04 Jun 2024 02:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/synchroniser-github-et-gitlab/</guid>
+    </item>
+    <item>
+      <title>Créer un menu hamburger fonctionnant sans Javascript grâce à Popover API</title>
+      <link>https://www.teotimepacreau.fr/blog/menu-hamburger-fonctionnant-sans-javascript-accessible/</link>
+      <description>&lt;h2 id=&quot;les-bases-d%E2%80%99un-menu-en-html-s%C3%A9mantique&quot; tabindex=&quot;-1&quot;&gt;Les bases d’un menu en HTML sémantique&lt;/h2&gt;
 &lt;p&gt;Un menu est constitué de liens, on utilise donc la balise HTML &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; pour représenter les liens.&lt;/p&gt;
 &lt;p&gt;Quand il y a plusieurs liens, il convient de créer une liste de liens en wrappant les &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; dans des &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt;. Cela confère plusieurs avantages pour les utilisateurs assistés par un lecteur d’écran :&lt;/p&gt;
 &lt;ul&gt;
@@ -192,15 +190,15 @@ Plusieurs fonctionnalités lui sont automatiquement associées :&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://web.dev/articles/website-navigation/&quot;&gt;https://web.dev/articles/website-navigation/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://hidde.blog/popover-semantics/&quot;&gt;https://hidde.blog/popover-semantics/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://nerdy.dev/using-starting-style-and-transition-behavior-for-enter-and-exit-stage-effects/&quot;&gt;https://nerdy.dev/using-starting-style-and-transition-behavior-for-enter-and-exit-stage-effects/&lt;/a&gt;&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Le mémo à 6 pages d&#39;Amazon</title>
-		<link href="https://www.teotimepacreau.fr/blog/amazon-memo-6-pages/"/>
-		<updated>2024-04-29T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/amazon-memo-6-pages/</id>
-		<content type="html">&lt;p&gt;&lt;em&gt;[&lt;strong&gt;DISCLAIMER&lt;/strong&gt;] Est-ce que j’aime Amazon ? Pas nécessairement. Est-ce que j’admire Jeff Bezos ou d’autres milliardaires des GAFAM ? Absolument pas. Par contre, l’efficacité d’Amazon en tant qu’organisation et service client est indéniable.&lt;/em&gt;&lt;/p&gt;
+</description>
+      <pubDate>Thu, 23 May 2024 02:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/menu-hamburger-fonctionnant-sans-javascript-accessible/</guid>
+    </item>
+    <item>
+      <title>Le mémo à 6 pages d&#39;Amazon</title>
+      <link>https://www.teotimepacreau.fr/blog/amazon-memo-6-pages/</link>
+      <description>&lt;p&gt;&lt;em&gt;[&lt;strong&gt;DISCLAIMER&lt;/strong&gt;] Est-ce que j’aime Amazon ? Pas nécessairement. Est-ce que j’admire Jeff Bezos ou d’autres milliardaires des GAFAM ? Absolument pas. Par contre, l’efficacité d’Amazon en tant qu’organisation et service client est indéniable.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Jeff Bezos estime que la lecture et l’écriture ont joués un rôle majeur dans la construction d’Amazon en tant qu’organisation.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If you want to clarify your thinking, remember something important, or communicate something clearly, write it down.
@@ -265,15 +263,15 @@ Chaque réunion est obligatoirement basée sur un document écrit.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://writingcooperative.com/the-anatomy-of-an-amazon-6-pager-fc79f31a41c9/&quot;&gt;https://writingcooperative.com/the-anatomy-of-an-amazon-6-pager-fc79f31a41c9/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://newsletter.seomba.com/p/how-to-write-an-amazon-style-narrative/&quot;&gt;https://newsletter.seomba.com/p/how-to-write-an-amazon-style-narrative/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://youtu.be/e47wAgIhZ7o?si=D5we78NdxIhGaAj1&quot;&gt;https://youtu.be/e47wAgIhZ7o?si=D5we78NdxIhGaAj1&lt;/a&gt;&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Héberger soi-même des applications en ayant peu de connaissances DevOps</title>
-		<link href="https://www.teotimepacreau.fr/blog/heberger-soi-meme-des-applications/"/>
-		<updated>2024-04-04T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/heberger-soi-meme-des-applications/</id>
-		<content type="html">&lt;p&gt;Il n’est pas nécessaire d’avoir des connaissances parfaites en administration de systèmes et réseau pour héberger soi-même des services web. Avec un minimum de connaissance du terminal de commandes, les bases minimales de Docker et une compréhension du système de Ports, il est tout à fait possible d’y parvenir.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 29 Apr 2024 02:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/amazon-memo-6-pages/</guid>
+    </item>
+    <item>
+      <title>Héberger soi-même des applications en ayant peu de connaissances DevOps</title>
+      <link>https://www.teotimepacreau.fr/blog/heberger-soi-meme-des-applications/</link>
+      <description>&lt;p&gt;Il n’est pas nécessaire d’avoir des connaissances parfaites en administration de systèmes et réseau pour héberger soi-même des services web. Avec un minimum de connaissance du terminal de commandes, les bases minimales de Docker et une compréhension du système de Ports, il est tout à fait possible d’y parvenir.&lt;/p&gt;
 &lt;h2 id=&quot;serveur&quot; tabindex=&quot;-1&quot;&gt;Serveur&lt;/h2&gt;
 &lt;p&gt;Pour pouvoir héberger des applications, il est nécessaire d’avoir une machine disponible à tout moment.
 Plusieurs solutions existent : acheter du hardware pour avoir un serveur physique chez soi (NAS/Homelab), faire tourner une machine existante 24h/24, faire appel à un Virtual Private Server (VPS).
@@ -445,15 +443,15 @@ Mais cela ne suffit pas pour exposer notre app sur le web. Nous devons manuellem
 Nous pouvons enfin valider avec “Save”.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/nginx-proxy-2.png&quot; alt=&quot;Sous-menu SSL d&#39;ajout de proxy&quot; /&gt;&lt;figcaption&gt;Sous-menu SSL d’ajout de proxy&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;Notre Miniflux est finalement accessible sur son url dédiée en HTTPS “&lt;a href=&quot;http://miniflux-reader.blabla.fr/&quot;&gt;miniflux-reader.blabla.fr&lt;/a&gt;”&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Accessibilité &amp; animations : laisser la main à l&#39;utilisateur avec prefers-reduced-motion</title>
-		<link href="https://www.teotimepacreau.fr/blog/prefers-motion-reduced/"/>
-		<updated>2024-03-17T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/prefers-motion-reduced/</id>
-		<content type="html">&lt;p&gt;Le “Responsive Design” ne se limite plus à adapter l’affichage d’un site web au format desktop et mobile. Il est nécessaire de prendre en compte de nouveaux éléments :&lt;/p&gt;
+</description>
+      <pubDate>Thu, 04 Apr 2024 02:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/heberger-soi-meme-des-applications/</guid>
+    </item>
+    <item>
+      <title>Accessibilité &amp; animations : laisser la main à l&#39;utilisateur avec prefers-reduced-motion</title>
+      <link>https://www.teotimepacreau.fr/blog/prefers-motion-reduced/</link>
+      <description>&lt;p&gt;Le “Responsive Design” ne se limite plus à adapter l’affichage d’un site web au format desktop et mobile. Il est nécessaire de prendre en compte de nouveaux éléments :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Être responsive à l’utilisateur : prendre en compte ses préférences avec, par exemple, &lt;code&gt;dark-mode/light-mode&lt;/code&gt;, &lt;code&gt;prefers-reduced-motion&lt;/code&gt;, &lt;code&gt;prefers-contrast&lt;/code&gt;…&lt;/li&gt;
 &lt;li&gt;Être responsive aux composants eux-mêmes : un composant carte peut être recomposée en fonction de la largeur d’écran disponible mais aussi de sa hauteur intrinsèque.&lt;/li&gt;
@@ -512,15 +510,15 @@ Cette approche est appelée le “New Responsive Design”
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dhrX_biPH8c/&quot;&gt;https://www.youtube.com/watch?v=dhrX_biPH8c/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.w3.org/WAI/WCAG22/Techniques/css/C39.html/&quot;&gt;https://www.w3.org/WAI/WCAG22/Techniques/css/C39.html/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://web.dev/articles/prefers-reduced-motion?hl=fr/&quot;&gt;https://web.dev/articles/prefers-reduced-motion?hl=fr/&lt;/a&gt;&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Tour d&#39;horizon des CMS Headless basés sur Git</title>
-		<link href="https://www.teotimepacreau.fr/blog/git-based-headless-cms/"/>
-		<updated>2024-01-31T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/git-based-headless-cms/</id>
-		<content type="html">&lt;h2 id=&quot;qu%E2%80%99est-ce-qu%E2%80%99un-cms-%3F&quot; tabindex=&quot;-1&quot;&gt;Qu’est-ce qu’un CMS ?&lt;/h2&gt;
+</description>
+      <pubDate>Sun, 17 Mar 2024 01:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/prefers-motion-reduced/</guid>
+    </item>
+    <item>
+      <title>Tour d&#39;horizon des CMS Headless basés sur Git</title>
+      <link>https://www.teotimepacreau.fr/blog/git-based-headless-cms/</link>
+      <description>&lt;h2 id=&quot;qu%E2%80%99est-ce-qu%E2%80%99un-cms-%3F&quot; tabindex=&quot;-1&quot;&gt;Qu’est-ce qu’un CMS ?&lt;/h2&gt;
 &lt;p&gt;CMS désigne Content Management System, il s’agit d’un système qui rend possible de créer, gérer de modifier facilement un site web, sans avoir besoin de connaissances techniques en langage informatique.
 L’implémentation d’un CMS est donc particulièrement utile dans le développement d’un site web, afin de permettre aux non-initiés d’administrer le site.&lt;/p&gt;
 &lt;h2 id=&quot;les-2-types-de-cms-%3A-traditionnel-et-headless&quot; tabindex=&quot;-1&quot;&gt;Les 2 types de CMS : traditionnel et headless&lt;/h2&gt;
@@ -819,15 +817,15 @@ console.log(myPost.data.title)
 &lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://decapcms.org/docs/add-to-your-site/&quot;&gt;https://decapcms.org/docs/add-to-your-site/&lt;/a&gt;
 &lt;a href=&quot;https://tina.io/docs/&quot;&gt;https://tina.io/docs/&lt;/a&gt;&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Le legal design : qu&#39;est-ce que c&#39;est ?</title>
-		<link href="https://www.teotimepacreau.fr/blog/legal-design/"/>
-		<updated>2024-01-20T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/legal-design/</id>
-		<content type="html">&lt;h2 id=&quot;d%C3%A9finition&quot; tabindex=&quot;-1&quot;&gt;Définition&lt;/h2&gt;
+</description>
+      <pubDate>Wed, 31 Jan 2024 01:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/git-based-headless-cms/</guid>
+    </item>
+    <item>
+      <title>Le legal design : qu&#39;est-ce que c&#39;est ?</title>
+      <link>https://www.teotimepacreau.fr/blog/legal-design/</link>
+      <description>&lt;h2 id=&quot;d%C3%A9finition&quot; tabindex=&quot;-1&quot;&gt;Définition&lt;/h2&gt;
 &lt;p&gt;Le legal design est une application des pratiques du design centré sur l’humain, visant à rendre les systèmes, services et documents juridiques plus compréhensibles, appropriables et accessibles.
 Le but de cette démarche est de permettre aussi bien à des non-initiés qu’à des experts en droit d’accéder à des documents/process/services légaux.
 On retrouve dans cette méthodologie toutes les composantes majeures du design : idéation, conception, test usagers… avec un focus sur le fait de redonner du sens à la fonction première du droit : **être actionnable et actionné pour permettre à tous de s’approprier les normes.
@@ -880,15 +878,15 @@ Chaque étape est cliquable, pour révéler des informations en profondeur.&lt;/
 &lt;p&gt;&lt;a href=&quot;https://sketchlex.com/documents/legaldesign-sketchlex-lawyersnow-legitech-mars-2019.pdf/&quot;&gt;https://sketchlex.com/documents/legaldesign-sketchlex-lawyersnow-legitech-mars-2019.pdf/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://amurabi.eu/wp-content/uploads/These-marie-potel-la-forme-fonction.pdf&quot;&gt;Thèse “La forme de la norme peut-elle lui redonner sa fonction ?”&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.lagazettedescommunes.com/892026/avec-le-legal-design-le-droit-a-la-portee-de-tous/&quot;&gt;https://www.lagazettedescommunes.com/892026/avec-le-legal-design-le-droit-a-la-portee-de-tous/&lt;/a&gt;&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Emails HTML modernes : en finir avec les &lt;table&gt;</title>
-		<link href="https://www.teotimepacreau.fr/blog/emails-html-modernes/"/>
-		<updated>2023-12-13T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/emails-html-modernes/</id>
-		<content type="html">&lt;p&gt;Le monde du développement d’emails est rempli d’inconsistences, de hacks, d’éléments HTML obsolètes, et de règles CSS abandonnées depuis longtemps.
+</description>
+      <pubDate>Sat, 20 Jan 2024 01:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/legal-design/</guid>
+    </item>
+    <item>
+      <title>Emails HTML modernes : en finir avec les &lt;table&gt;</title>
+      <link>https://www.teotimepacreau.fr/blog/emails-html-modernes/</link>
+      <description>&lt;p&gt;Le monde du développement d’emails est rempli d’inconsistences, de hacks, d’éléments HTML obsolètes, et de règles CSS abandonnées depuis longtemps.
 Les développeurs d’emails se retrouvent ainsi à devoir jongler entre des &lt;code&gt;&amp;lt;tables&amp;gt;&lt;/code&gt; layouts, des &lt;code&gt;&amp;lt;tr&amp;gt;&lt;/code&gt; et &lt;code&gt;&amp;lt;td&amp;gt;&lt;/code&gt; (une façon de structurer le HTML en colonne et lignes comme on le ferait dans un tableau), les inline-styles CSS, &lt;code&gt;float&lt;/code&gt; une propriété CSS qui a perdu de son usage, à juste titre, depuis l’arrivée de &lt;code&gt;flexbox&lt;/code&gt; et &lt;code&gt;grid&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;En théorie, le monde du développement d’emails devrait être simple car les emails ne sont rien de plus que des documents HTML, comme une page web, échangés entre nos clients mails. Cependant l’élément bloquant est bien cette dépendance aux clients mails qui ont tous des manières de différente de transformer le HTML en rendu visuel pour l’utilisateur.
 Le support de chaque client mail des règles CSS et du HTML est différent et a pris énormément de retard par rapport au développement web classique.&lt;/p&gt;
@@ -1002,15 +1000,15 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
 &lt;p&gt;&lt;a href=&quot;https://dodov.dev/blog/why-does-email-development-have-to-suck/&quot;&gt;https://dodov.dev/blog/why-does-email-development-have-to-suck/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.hteumeuleu.com/blog/&quot;&gt;https://www.hteumeuleu.com/blog/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.caniemail.com/&quot;&gt;https://www.caniemail.com/&lt;/a&gt;&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>SQLite, la solution pragmatique en production pour le web</title>
-		<link href="https://www.teotimepacreau.fr/blog/SQLite/"/>
-		<updated>2023-11-10T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/SQLite/</id>
-		<content type="html">&lt;h2 id=&quot;les-bdd-relationnelles%2C-pass%C3%A9es-de-mode-alors-qu%E2%80%99elles-r%C3%A9pondent-aux-besoins-de-la-grande-majorit%C3%A9-des-projets-des-d%C3%A9veloppement-web&quot; tabindex=&quot;-1&quot;&gt;Les BDD relationnelles, passées de mode alors qu’elles répondent aux besoins de la grande majorité des projets des développement web&lt;/h2&gt;
+</description>
+      <pubDate>Wed, 13 Dec 2023 01:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/emails-html-modernes/</guid>
+    </item>
+    <item>
+      <title>SQLite, la solution pragmatique en production pour le web</title>
+      <link>https://www.teotimepacreau.fr/blog/SQLite/</link>
+      <description>&lt;h2 id=&quot;les-bdd-relationnelles%2C-pass%C3%A9es-de-mode-alors-qu%E2%80%99elles-r%C3%A9pondent-aux-besoins-de-la-grande-majorit%C3%A9-des-projets-des-d%C3%A9veloppement-web&quot; tabindex=&quot;-1&quot;&gt;Les BDD relationnelles, passées de mode alors qu’elles répondent aux besoins de la grande majorité des projets des développement web&lt;/h2&gt;
 &lt;p&gt;Il existe deux types de BDD : &lt;a href=&quot;https://www.oracle.com/fr/database/base-donnees-relationnelle-difference-non-relationnelle/&quot;&gt;les relationnelles et les non relationnelles&lt;/a&gt;.
 Les BDD relationnelles stockent les données dans des tables qui ont un lien entre elles (clé primaire qui est l’identifiant unique d’une entrée dans la table et la clé secondaire qui est l’identifiant d’une entrée qui permet de relier avec l’entrée d’une autre table). Il y a besoin de pré-définir une structure de données.
 On traite les BDD relationnelles avec du SQL.
@@ -1066,15 +1064,15 @@ SQLite est traditionnellement associé au développement d’applications Androi
 &lt;li&gt;&lt;a href=&quot;https://venturebeat.com/dev/why-sqlite-may-become-foundational-for-digital-progress/&quot;&gt;https://venturebeat.com/dev/why-sqlite-may-become-foundational-for-digital-progress/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.datacamp.com/blog/all-about-sql-the-essential-language-for-database-management&quot;&gt;https://www.datacamp.com/blog/all-about-sql-the-essential-language-for-database-management&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Comment réaliser la mesure d&#39;impact de son entreprise gratuitement et pourquoi ?</title>
-		<link href="https://www.teotimepacreau.fr/blog/mesure-d&amp;#39;impact/"/>
-		<updated>2023-01-13T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/mesure-d&amp;#39;impact/</id>
-		<content type="html">&lt;h2 id=&quot;contexte&quot; tabindex=&quot;-1&quot;&gt;Contexte&lt;/h2&gt;
+</description>
+      <pubDate>Fri, 10 Nov 2023 01:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/SQLite/</guid>
+    </item>
+    <item>
+      <title>Comment réaliser la mesure d&#39;impact de son entreprise gratuitement et pourquoi ?</title>
+      <link>https://www.teotimepacreau.fr/blog/mesure-d&#39;impact/</link>
+      <description>&lt;h2 id=&quot;contexte&quot; tabindex=&quot;-1&quot;&gt;Contexte&lt;/h2&gt;
 &lt;p&gt;La &lt;a href=&quot;https://www.consilium.europa.eu/fr/press/press-releases/2022/11/28/council-gives-final-green-light-to-corporate-sustainability-reporting-directive/&quot;&gt;directive européene CSRD (Corporate Sustainability Reporting Directive)&lt;/a&gt; prendra effet le 1er Janvier 2024 et s’imposera d’abord aux structures de plus de 250 salariés puis progressivement à toutes les entreprises, y compris les PME.&lt;/p&gt;
 &lt;p&gt;Le but de cette directive est d’inciter les structures à mesurer, centraliser et publier régulièrement les données de leur impact sociétal et environnemental.&lt;/p&gt;
 &lt;p&gt;Cela modifiera les exigences actuelles en matière de reporting extra-financier issues de la &lt;a href=&quot;https://finance.ec.europa.eu/capital-markets-union-and-financial-markets/company-reporting-and-auditing/company-reporting/corporate-sustainability-reporting_en&quot;&gt;Non-Financial reporting Directive (NFRD)&lt;/a&gt;.&lt;/p&gt;
@@ -1096,15 +1094,15 @@ SQLite est traditionnellement associé au développement d’applications Androi
 &lt;p&gt;Mettre en avant les actions concrètes et leurs résultats permet à la structure d’attirer une nouvelle clientèle/de nouveaux usagers.&lt;/p&gt;
 &lt;p&gt;La confiance en interne des collaborateurs et leur adhésion se voit également renforcée car les données sociales et de gouvernance sont lisibles et partagées.&lt;/p&gt;
 &lt;p&gt;Enfin, la mesure d’impact permet de mesurer les progrès en interne et axer la stratégie dans le réel.&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>Gérer facilement le rythme vertical de son site web</title>
-		<link href="https://www.teotimepacreau.fr/blog/rythme-vertical-css/"/>
-		<updated>2022-11-26T00:00:00Z</updated>
-		<id>https://www.teotimepacreau.fr/blog/rythme-vertical-css/</id>
-		<content type="html">&lt;h2 id=&quot;rythme-vertical&quot; tabindex=&quot;-1&quot;&gt;Rythme vertical&lt;/h2&gt;
+</description>
+      <pubDate>Fri, 13 Jan 2023 01:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/mesure-d&#39;impact/</guid>
+    </item>
+    <item>
+      <title>Gérer facilement le rythme vertical de son site web</title>
+      <link>https://www.teotimepacreau.fr/blog/rythme-vertical-css/</link>
+      <description>&lt;h2 id=&quot;rythme-vertical&quot; tabindex=&quot;-1&quot;&gt;Rythme vertical&lt;/h2&gt;
 &lt;p&gt;Adopter un rythme vertical proportionnel et prédictible sur une page web permet de ressentir une &lt;a href=&quot;https://24ways.org/2006/compose-to-a-vertical-rhythm/&quot;&gt;hiérarchie visuelle qui facilite l’expérience utilisateur&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&quot;comment-le-d%C3%A9terminer-%3F&quot; tabindex=&quot;-1&quot;&gt;Comment le déterminer ?&lt;/h3&gt;
 &lt;p&gt;On établit une &lt;em&gt;unité de mesure commune&lt;/em&gt; qui régit tous nos espacements et tailles.
@@ -1149,6 +1147,10 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Pourquoi utiliser seulement &lt;code&gt;margin-top&lt;/code&gt; ? Les marges peuvent, dans certains cas, entrer en collision et se soustraire. &lt;a href=&quot;https://cssfordesigners.com/articles/managing-vertical-margins-in-css&quot;&gt;En ne déclarant que &lt;code&gt;margin-top&lt;/code&gt; on évite cet inconvénient&lt;/a&gt;.&lt;/p&gt;
-</content>
-	</entry>
-</feed>
+</description>
+      <pubDate>Sat, 26 Nov 2022 01:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/rythme-vertical-css/</guid>
+    </item>
+  </channel>
+</rss>

@@ -547,6 +547,7 @@ pre::-webkit-scrollbar-thumb {
 }
 
 .homepage-projets-tags {
+  line-height: 1rlh;
   list-style-type: none;
   padding-block: 0.1ex;
   padding-inline: 0.6ex;

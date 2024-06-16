@@ -32,6 +32,14 @@ pageId: "blogpost"
                   {{ date | date('dd LLLL yyyy') }}
                 </time>
               </span>
+              {% if updatedate %}
+              <span class="post-date">
+              Mis à jour le
+                <time datetime="{{ updatedate }}">
+                  {{ updatedate | date('dd LLLL yyyy') }}
+                </time>
+              </span>
+              {%  endif %}
               <p>{{ description }}</p>
             </header>
             {{ content | safe }}

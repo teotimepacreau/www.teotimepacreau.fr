@@ -1,6 +1,7 @@
 ---
 title: "Synchroniser un repo Github avec Gitlab"
 date: '2024-06-04'
+updatedate: '2024-06-16'
 tags: 
   - 'Git'
 layout: blogpost_layout.njk
@@ -20,6 +21,10 @@ eleventyComputed:
 ---
 
 Pour des raisons techniques, j'ai eu besoin de cloner un repo existant sur Github dans l'alternative open-source [Gitlab](https://about.gitlab.com/). Je souhaitais synchroniser tout les changements effectués dans le repo Gitlab en les poussant vers le repo Github.
+
+> **Mise à jour du {{ updatedate | date('dd LLLL yyyy') }}**
+> 
+> Après multiples tests, côté Gitlab la synchronisation en GET est réservée aux comptes Gitlab PREMIUM (payant) tandis que le PUSH est disponible pour tous les comptes (même gratuits)
 
 ## Clonage d'un repo Github dans Gitlab
 Gitlab propose de créer un repo en créant un clône d'un repo pré-existant sur un autre service via "Importer un projet". Il suffit de fournir l'URL du repo Github.

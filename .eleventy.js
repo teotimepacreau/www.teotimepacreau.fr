@@ -19,6 +19,28 @@ let figoptions = {
 };
 
 module.exports = function(eleventyConfig) {
+
+  //SHORTCODE POUR LES CITATIONS
+  eleventyConfig.addPairedShortcode("blockquote", function (content, author, source) {
+    let markup = `
+  <figure class="figure-blockquote">
+    <blockquote>
+      ${content}
+    </blockquote>
+    <figcaption class="figcaption-blockquote-cite">
+      ${author}`;
+
+  // Check if source is provided (not undefined)
+  if (source) {
+    markup += ` - <cite>${source}</cite>`;
+  }
+
+  markup += `
+    </figcaption>
+  </figure>`;
+
+    return markup
+  })
   
   // AUTO GENERATED OPENGRAPH IMAGES
   eleventyConfig.addPlugin(EleventyPluginOgImage, {

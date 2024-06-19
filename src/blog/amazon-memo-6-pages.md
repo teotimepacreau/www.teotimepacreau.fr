@@ -23,8 +23,11 @@ eleventyComputed:
 *[**DISCLAIMER**] Est-ce que j'aime Amazon ? Pas nécessairement. Est-ce que j'admire Jeff Bezos ou d'autres milliardaires des GAFAM ? Absolument pas. Par contre, l'efficacité d'Amazon en tant qu'organisation et service client est indéniable.*
 
 Jeff Bezos estime que la lecture et l'écriture ont joués un rôle majeur dans la construction d'Amazon en tant qu'organisation.
->If you want to clarify your thinking, remember something important, or communicate something clearly, write it down.
-– **Jeff Bezos**
+
+{% blockquote "Jeff Bezos", "[citation dans un article de Quartr.com](https://quartr.com/insights/business-philosophy/amazon-s-writing-culture-explained)" %}
+If you want to clarify your thinking, remember something important, or communicate something clearly, write it down.
+{% endblockquote %}
+
 
 Amazon s'est construit sur une culture de l'écrit dans le but de :
 - clarifier les raisonnements
@@ -33,16 +36,20 @@ Amazon s'est construit sur une culture de l'écrit dans le but de :
 
 
 ## Pourquoi PowerPoint n'est pas efficace en réunion et banni par Amazon
-> **From:** Bezos, Jeff
->
-> **Sent:** Wednesday, June 09, 2004 6:02 pm
->
-> **Subject:** Re: No powerpoint presentations from now on at steam
->
->A little more help with the question “why.”
+{% blockquote "Jeff Bezos", "[Capture d'écran du mail original](https://www.anecdote.com/wp-content/uploads/2018/05/Bezos-email.jpg)" %}
+**From:** Bezos, Jeff
+
+**Sent:** Wednesday, June 09, 2004 6:02 pm
+
+**Subject:** Re: No powerpoint presentations from now on at steam
+
+A little more help with the question “why.”
 Well structured, narrative text is what we’re after rather than just text. If someone builds a list of bullet points in word, that would be just as bad as powerpoint.
 The reason writing a good 4 page memo is harder than “writing” a 20 page powerpoint is because the narrative structure of a good memo forces better thought and better understanding of what’s more important than what, and how things are related.
 Powerpoint-style presentations somehow give permission to gloss over ideas, flatten out any sense of relative importance, and ignore the interconnectedness of ideas.
+{% endblockquote %}
+
+
 
 Les présentations slides type "bullet points" que l'on connaît tous ont un écueil majeur : la difficulté pour les auditeurs à comprendre où l'orateur veut en venir. Les bullet points manquent naturellement de précision et peuvent cacher des sens contradictoires. Également, il est facile de se laisser happer par la façon dont sont présentées les informations plutôt que sur le fond.
 Le format invite naturellement à couper l'orateur pour poser des questions *durant* la présentation alors que la réponse peut-être inclus dans la slide d'après.
@@ -78,13 +85,16 @@ Quand la réunion est terminée, il est de la responsabilité de l'auteur de met
 3. le timing de la réunion : le format timé permet de s'assurer que chaque membre a bien toutes les informations avant de poser des questions contrairement à une présentation en slides où l'on est plus facilement amener à interrompre pour poser des questions.
 4. le processus autour de la rédaction du document : permet de partager une vision commune au sein de l'organisation via le process de ré-écriture et de mise à jour suite au meeting.
 5. le contenu du document : permet de jongler entre metrics et verbatim clients. 
->I've noticed when the anecdotes and the metrics disagree, the anecdotes are usually right. That's why it's so important to check that data with your intuition and instincts, and you need to teach that to executives and junior executives.
-– **Jeff Bezos**
+
+{% blockquote "Jeff Bezos", "[Citation dans un article de Inc.com](https://www.inc.com/carmine-gallo/jeff-bezos-bans-powerpoint-in-meetings-his-replacement-is-brilliant.html)" %}
+I've noticed when the anecdotes and the metrics disagree, the anecdotes are usually right. That's why it's so important to check that data with your intuition and instincts, and you need to teach that to executives and junior executives.
+{% endblockquote %}
+
 
 ## Combien de temps pour construire le mémo
-> The great memos are written and re-written, shared with colleagues who are asked to improve the work, set aside for a couple of days, and then edited again with a fresh mind. They simply can’t be done in a day or two.
->
-> -**Jeff Bezos 2017 annual letter to shareolders**
+{% blockquote "Jeff Bezos", "[Lettre aux actionnaires d'Amazon de 2017](https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders)" %}
+The great memos are written and re-written, shared with colleagues who are asked to improve the work, set aside for a couple of days, and then edited again with a fresh mind. They simply can’t be done in a day or two.
+{% endblockquote %}
 
 ## Sources
 <https://www.inc.com/carmine-gallo/jeff-bezos-bans-powerpoint-in-meetings-his-replacement-is-brilliant.html/>

@@ -39,3 +39,11 @@ layout: "base.html"
   voici celui de ce site
   <a class="rss" href="/feed/feed.xml"><span class="ph ph-rss"></span></a>
 </p>
+
+  <!-- j'appelle les données de colophon.json pour présenter les projets -->
+
+<h2 style="margin-top: var(--baseline); margin-bottom: calc(.5*var(--baseline));">Blogroll</h2>
+<ul></ul>
+{% for item in outline.outline %}
+  <li><a href="{{ item._htmlUrl }}">{{item._title}}</a></li>
+{% endfor %}

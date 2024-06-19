@@ -1,0 +1,570 @@
+﻿{
+    "outline": {
+        "outline": [
+            {
+                "_title": "AAADAAAM",
+                "_text": "AAADAAAM",
+                "_xmlUrl": "https://aaadaaam.com/feed.xml",
+                "_htmlUrl": "https://aaadaaam.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "A Beautiful Site",
+                "_text": "A Beautiful Site",
+                "_xmlUrl": "https://www.abeautifulsite.net/feed/feed.xml",
+                "_htmlUrl": "https://www.abeautifulsite.net/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Accentgrave ~ log",
+                "_text": "Accentgrave ~ log",
+                "_xmlUrl": "https://accentgrave.net/log/flux.xml",
+                "_htmlUrl": "https://accentgrave.net/log/flux.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Adam Argyle",
+                "_text": "Adam Argyle",
+                "_xmlUrl": "https://nerdy.dev/rss.xml",
+                "_htmlUrl": "https://nerdy.dev",
+                "_type": "rss"
+            },
+            {
+                "_title": "Ahmad Shadeed Blog",
+                "_text": "Ahmad Shadeed Blog",
+                "_xmlUrl": "https://ishadeed.com/feed.xml",
+                "_htmlUrl": "https://ishadeed.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Andy Bell",
+                "_text": "Andy Bell",
+                "_xmlUrl": "https://andy-bell.co.uk/feed/",
+                "_htmlUrl": "https://andy-bell.co.uk/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Blog on Jérémy Buget",
+                "_text": "Blog on Jérémy Buget",
+                "_xmlUrl": "https://jbuget.fr/posts/index.xml",
+                "_htmlUrl": "https://jbuget.fr/posts/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Bram.us",
+                "_text": "Bram.us",
+                "_xmlUrl": "https://www.bram.us/feed/",
+                "_htmlUrl": "https://www.bram.us",
+                "_type": "rss"
+            },
+            {
+                "_title": "Cahier Jaune | Blog",
+                "_text": "Cahier Jaune | Blog",
+                "_xmlUrl": "https://cahierjaune.com/rss.xml",
+                "_htmlUrl": "https://cahierjaune.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Chen Hui Jing",
+                "_text": "Chen Hui Jing",
+                "_xmlUrl": "https://chenhuijing.com/feed.xml",
+                "_htmlUrl": "https://chenhuijing.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Chris Coyier",
+                "_text": "Chris Coyier",
+                "_xmlUrl": "https://chriscoyier.net/feed/",
+                "_htmlUrl": "https://chriscoyier.net",
+                "_type": "rss"
+            },
+            {
+                "_title": "Code.larlet.fr",
+                "_text": "Code.larlet.fr",
+                "_xmlUrl": "https://code.larlet.fr/feed_rss_created.xml",
+                "_htmlUrl": "https://code.larlet.fr/",
+                "_type": "rss"
+            },
+            {
+                "_title": "daverupert.com",
+                "_text": "daverupert.com",
+                "_xmlUrl": "https://daverupert.com/atom.xml",
+                "_htmlUrl": "https://daverupert.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "Dave Smyth",
+                "_text": "Dave Smyth",
+                "_xmlUrl": "https://davesmyth.com/feed/",
+                "_htmlUrl": "https://davesmyth.com/feed/",
+                "_type": "rss"
+            },
+            {
+                "_title": "David Jonathan Ross",
+                "_text": "David Jonathan Ross",
+                "_xmlUrl": "https://djr.com/feed.rss",
+                "_htmlUrl": "https://djr.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "David Larlet",
+                "_text": "David Larlet",
+                "_xmlUrl": "https://larlet.fr/david/log/",
+                "_htmlUrl": "https://larlet.fr/david/log/",
+                "_type": "rss"
+            },
+            {
+                "_title": "ddbeck.com",
+                "_text": "ddbeck.com",
+                "_xmlUrl": "https://ddbeck.com/feed.xml",
+                "_htmlUrl": "https://ddbeck.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "DEV Community ‍‍: Bastien Calou",
+                "_text": "DEV Community ‍‍: Bastien Calou",
+                "_xmlUrl": "https://dev.to/feed/bcalou",
+                "_htmlUrl": "https://dev.to/bcalou",
+                "_type": "rss"
+            },
+            {
+                "_title": "Dmitri Pavlutin Blog",
+                "_text": "Dmitri Pavlutin Blog",
+                "_xmlUrl": "https://dmitripavlutin.com/rss.xml",
+                "_htmlUrl": "https://dmitripavlutin.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "Ethan Marcotte’s website",
+                "_text": "Ethan Marcotte’s website",
+                "_xmlUrl": "https://ethanmarcotte.com/wrote/feed.xml",
+                "_htmlUrl": "https://ethanmarcotte.com/wrote/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Evan Sheehan",
+                "_text": "Evan Sheehan",
+                "_xmlUrl": "https://darthmall.net/feed.xml",
+                "_htmlUrl": "https://darthmall.net",
+                "_type": "rss"
+            },
+            {
+                "_title": "Eystein codes",
+                "_text": "Eystein codes",
+                "_xmlUrl": "https://eystein.no/feed/feed.xml",
+                "_htmlUrl": "https://eystein.no/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Failing Forward",
+                "_text": "Failing Forward",
+                "_xmlUrl": "https://lesley.pizza/feed/",
+                "_htmlUrl": "https://lesley.pizza/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Frontend Stories",
+                "_text": "Frontend Stories",
+                "_xmlUrl": "https://frontendstories.com/feed.xml",
+                "_htmlUrl": "https://frontendstories.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "Fully Stacked",
+                "_text": "Fully Stacked",
+                "_xmlUrl": "https://fullystacked.net/rss.xml",
+                "_htmlUrl": "https://fullystacked.net/",
+                "_type": "rss"
+            },
+            {
+                "_title": "garrit.xyz",
+                "_text": "garrit.xyz",
+                "_xmlUrl": "https://garrit.xyz/rss.xml",
+                "_htmlUrl": "https://garrit.xyz",
+                "_type": "rss"
+            },
+            {
+                "_title": "Heather Buchel",
+                "_text": "Heather Buchel",
+                "_xmlUrl": "https://heather-buchel.com/feed/feed.xml",
+                "_htmlUrl": "https://heather-buchel.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Henry From Online | Writing",
+                "_text": "Henry From Online | Writing",
+                "_xmlUrl": "https://henry.codes/feed.xml",
+                "_htmlUrl": "https://henry.codes/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "HeydonWorks",
+                "_text": "HeydonWorks",
+                "_xmlUrl": "https://heydonworks.com/feed.xml",
+                "_htmlUrl": "https://heydonworks.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "Hidde's blog",
+                "_text": "Hidde's blog",
+                "_xmlUrl": "https://hidde.blog/feed",
+                "_htmlUrl": "https://hidde.blog/feed",
+                "_type": "rss"
+            },
+            {
+                "_title": "HTeuMeuLeu",
+                "_text": "HTeuMeuLeu",
+                "_xmlUrl": "https://www.hteumeuleu.fr/feed/",
+                "_htmlUrl": "https://www.hteumeuleu.fr",
+                "_type": "rss"
+            },
+            {
+                "_title": "Iain Bean",
+                "_text": "Iain Bean",
+                "_xmlUrl": "https://iainbean.com/feed.xml",
+                "_htmlUrl": "https://iainbean.com/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "jakelazaroff.com",
+                "_text": "jakelazaroff.com",
+                "_xmlUrl": "https://jakelazaroff.com/rss.xml",
+                "_htmlUrl": "https://jakelazaroff.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Jim Nielsen’s Blog",
+                "_text": "Jim Nielsen’s Blog",
+                "_xmlUrl": "https://blog.jim-nielsen.com/feed.xml",
+                "_htmlUrl": "https://blog.jim-nielsen.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "johndjameson.com",
+                "_text": "johndjameson.com",
+                "_xmlUrl": "https://feeds.feedburner.com/johndjameson",
+                "_htmlUrl": "http://johndjameson.com/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Josh Collinsworth",
+                "_text": "Josh Collinsworth",
+                "_xmlUrl": "https://joshcollinsworth.com/api/rss.xml",
+                "_htmlUrl": "https://joshcollinsworth.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "Josh Comeau's blog",
+                "_text": "Josh Comeau's blog",
+                "_xmlUrl": "https://www.joshwcomeau.com/rss.xml",
+                "_htmlUrl": "https://www.joshwcomeau.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "julian.digital",
+                "_text": "julian.digital",
+                "_xmlUrl": "https://julian.digital/feed/",
+                "_htmlUrl": "https://julian.digital",
+                "_type": "rss"
+            },
+            {
+                "_title": "Kev Quirk",
+                "_text": "Kev Quirk",
+                "_xmlUrl": "https://kevquirk.com/feed",
+                "_htmlUrl": "https://kevquirk.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "Kevin Powell",
+                "_text": "Kevin Powell",
+                "_xmlUrl": "https://www.kevinpowell.co/",
+                "_htmlUrl": "https://www.kevinpowell.co/",
+                "_type": "rss"
+            },
+            
+            {
+                "_title": "Koos Looijesteijn - Everything",
+                "_text": "Koos Looijesteijn - Everything",
+                "_xmlUrl": "https://www.kooslooijesteijn.net/feed.xml",
+                "_htmlUrl": "https://www.kooslooijesteijn.net?pk_campaign=rss",
+                "_type": "rss"
+            },
+            {
+                "_title": "La Cascade",
+                "_text": "La Cascade",
+                "_xmlUrl": "https://la-cascade.io/rss/feed.xml",
+                "_htmlUrl": "https://la-cascade.io",
+                "_type": "rss"
+            },
+            {
+                "_title": "Lea Verou",
+                "_text": "Lea Verou",
+                "_xmlUrl": "http://feeds2.feedburner.com/leaverou",
+                "_htmlUrl": "https://lea.verou.me/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Mark Thomas Miller",
+                "_text": "Mark Thomas Miller",
+                "_xmlUrl": "https://api.feedless.org/stream/bucket/93e8f3be-8b04-4d71-a176-bf4ff826e32b/atom",
+                "_htmlUrl": "https://api.feedless.org/bucket:93e8f3be-8b04-4d71-a176-bf4ff826e32b",
+                "_type": "rss"
+            },
+            {
+                "_title": "Matt Fantinel",
+                "_text": "Matt Fantinel",
+                "_xmlUrl": "https://fantinel.dev/rss.xml",
+                "_htmlUrl": "https://fantinel.dev",
+                "_type": "rss"
+            },
+            {
+                "_title": "Matthias Ott – User Experience Designer",
+                "_text": "Matthias Ott – User Experience Designer",
+                "_xmlUrl": "https://matthiasott.com/rss",
+                "_htmlUrl": "https://matthiasott.com/rss",
+                "_type": "rss"
+            },
+            {
+                "_title": "Max Böck",
+                "_text": "Max Böck",
+                "_xmlUrl": "https://mxb.dev/feed.xml",
+                "_htmlUrl": "https://mxb.dev/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Michele Nasti",
+                "_text": "Michele Nasti",
+                "_xmlUrl": "https://michelenasti.com/feed.xml",
+                "_htmlUrl": "https://michelenasti.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Mike Fallows",
+                "_text": "Mike Fallows",
+                "_xmlUrl": "https://mikefallows.com/feed/feed.xml",
+                "_htmlUrl": "https://mikefallows.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Miriam Eric Suzanne",
+                "_text": "Miriam Eric Suzanne",
+                "_xmlUrl": "https://www.miriamsuzanne.com/feed.xml",
+                "_htmlUrl": "https://www.miriamsuzanne.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Nathan Knowler",
+                "_text": "Nathan Knowler",
+                "_xmlUrl": "https://knowler.dev/feed.xml",
+                "_htmlUrl": "https://knowler.dev/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Nick Simson",
+                "_text": "Nick Simson",
+                "_xmlUrl": "https://nicksimson.com/feed/",
+                "_htmlUrl": "https://nicksimson.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "OddBird",
+                "_text": "OddBird",
+                "_xmlUrl": "https://www.oddbird.net/feed.atom",
+                "_htmlUrl": "https://www.oddbird.net/feed.atom",
+                "_type": "rss"
+            },
+            {
+                "_title": "Own Your Web",
+                "_text": "Own Your Web",
+                "_xmlUrl": "https://buttondown.email/ownyourweb/rss",
+                "_htmlUrl": "https://buttondown.email/ownyourweb",
+                "_type": "rss"
+            },
+            {
+                "_title": "Piccalilli",
+                "_text": "Piccalilli",
+                "_xmlUrl": "https://piccalil.li/feed.xml",
+                "_htmlUrl": "https://piccalil.li/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Quakkels.com",
+                "_text": "Quakkels.com",
+                "_xmlUrl": "https://quakkels.com/index.xml",
+                "_htmlUrl": "https://quakkels.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Rachel Andrew",
+                "_text": "Rachel Andrew",
+                "_xmlUrl": "https://rachelandrew.co.uk/feed/",
+                "_htmlUrl": "https://rachelandrew.co.uk",
+                "_type": "rss"
+            },
+            {
+                "_title": "Robb Knight • Posts • RSS Feed",
+                "_text": "Robb Knight • Posts • RSS Feed",
+                "_xmlUrl": "https://rknight.me/subscribe/posts/rss.xml",
+                "_htmlUrl": "https://rknight.me",
+                "_type": "rss"
+            },
+            {
+                "_title": "Robb Owen Digital",
+                "_text": "Robb Owen Digital",
+                "_xmlUrl": "https://robbowen.digital/feed.xml",
+                "_htmlUrl": "http://robbowen.digital/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Rob O'Leary",
+                "_text": "Rob O'Leary",
+                "_xmlUrl": "https://www.roboleary.net/feed.xml",
+                "_htmlUrl": "https://www.roboleary.net",
+                "_type": "rss"
+            },
+            {
+                "_title": "Robin Rendle",
+                "_text": "Rob Rendle",
+                "_xmlUrl": "https://robinrendle.com/feed.xml",
+                "_htmlUrl": "https://robinrendle.com",
+                "_type": "rss"
+            },
+            
+            {
+                "_title": "Ross Wintle",
+                "_text": "Ross Wintle",
+                "_xmlUrl": "https://rosswintle.uk/feed/",
+                "_htmlUrl": "https://rosswintle.uk/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Ryan Mulligan",
+                "_text": "Ryan Mulligan",
+                "_xmlUrl": "https://ryanmulligan.dev/feed.xml",
+                "_htmlUrl": "https://ryanmulligan.dev",
+                "_type": "rss"
+            },
+            
+            {
+                "_title": "Sara Soueidan – Blog",
+                "_text": "Sara Soueidan – Blog",
+                "_xmlUrl": "https://www.sarasoueidan.com/blog/index.xml",
+                "_htmlUrl": "https://sarasoueidan.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Sia Karamalegos, Web Performance",
+                "_text": "Sia Karamalegos, Web Performance",
+                "_xmlUrl": "https://sia.codes/feed/feed.xml",
+                "_htmlUrl": "https://sia.codes/feed/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Stephanie Eckles",
+                "_text": "Stephanie Eckles",
+                "_xmlUrl": "https://thinkdobecreate.com/feed/",
+                "_htmlUrl": "https://thinkdobecreate.com/feed/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Tatiana Mac",
+                "_text": "Tatiana Mac",
+                "_xmlUrl": "https://tatianamac.com/feed/feed.xml",
+                "_htmlUrl": "https://tatianamac.com/feed/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Thomas Bnt",
+                "_text": "Thomas Bnt",
+                "_xmlUrl": "https://thomasbnt.dev/rss.xml",
+                "_htmlUrl": "https://thomasbnt.dev",
+                "_type": "rss"
+            },
+            {
+                "_title": "Thomas Michael Semmler - helloyes.dev",
+                "_text": "Thomas Michael Semmler - helloyes.dev",
+                "_xmlUrl": "https://helloyes.dev/feeds/blog/feed.json",
+                "_htmlUrl": "https://helloyes.dev",
+                "_type": "rss"
+            },
+            {
+                "_title": "Thomas Parisot",
+                "_text": "Thomas Parisot",
+                "_xmlUrl": "https://thom4.net/feed/",
+                "_htmlUrl": "https://thom4.net/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Timothée Goguely",
+                "_text": "Timothée Goguely",
+                "_xmlUrl": "https://timothee.goguely.com/",
+                "_htmlUrl": "https://timothee.goguely.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Tobias Ahlin",
+                "_text": "Tobias Ahlin",
+                "_xmlUrl": "https://tobiasahlin.com/feed.xml",
+                "_htmlUrl": "https://tobiasahlin.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "Tom Hazledine",
+                "_text": "Tom Hazledine",
+                "_xmlUrl": "https://tomhazledine.com/feed.xml",
+                "_htmlUrl": "https://tomhazledine.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "ulfschneider.io",
+                "_text": "ulfschneider.io",
+                "_xmlUrl": "https://ulfschneider.io/feed.xml",
+                "_htmlUrl": "https://ulfschneider.io/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Una Kravets",
+                "_text": "Una Kravets",
+                "_xmlUrl": "https://una.im/rss.xml",
+                "_htmlUrl": "https://una.im",
+                "_type": "rss"
+            },
+            {
+                "_title": "Vadim Makeev",
+                "_text": "Vadim Makeev",
+                "_xmlUrl": "https://pepelsbey.dev/feed/",
+                "_htmlUrl": "https://pepelsbey.dev/feed/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Web development blog - Manuel Matuzović",
+                "_text": "Web development blog - Manuel Matuzović",
+                "_xmlUrl": "https://www.matuzo.at/feed.xml?rev=1645730434507",
+                "_htmlUrl": "https://matuzo.at/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Writing | Tom Quinonero",
+                "_text": "Writing | Tom Quinonero",
+                "_xmlUrl": "https://api.feedless.org/stream/bucket/3483c795-62ba-4542-8c1c-006d7132bf53/atom",
+                "_htmlUrl": "https://api.feedless.org/bucket:3483c795-62ba-4542-8c1c-006d7132bf53",
+                "_type": "rss"
+            },
+            {
+                "_title": "Yannick Nana",
+                "_text": "Yannick Nana",
+                "_xmlUrl": "https://blog.yannicknana.fr/rss.xml",
+                "_htmlUrl": "https://blog.yannicknana.fr",
+                "_type": "rss"
+            },
+            {
+                "_title": "Zach Leatherman",
+                "_text": "Zach Leatherman",
+                "_xmlUrl": "https://www.zachleat.com/web/feed/",
+                "_htmlUrl": "https://www.zachleat.com/web/feed/",
+                "_type": "rss"
+            }
+        ],
+        "_text": "Frontend"
+    }
+}

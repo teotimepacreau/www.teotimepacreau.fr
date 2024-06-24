@@ -65,6 +65,14 @@
                 "_type": "rss"
             },
             {
+                "_title": "Bertrand Keller",
+                "_text": "Bertrand Keller",
+                "_xmlUrl": "https://bertrandkeller.info/",
+                "_htmlUrl": "https://bertrandkeller.info/",
+                "_type": "rss"
+            },
+            
+            {
                 "_title": "Blog on Jérémy Buget",
                 "_text": "Blog on Jérémy Buget",
                 "_xmlUrl": "https://jbuget.fr/posts/index.xml",
@@ -289,6 +297,13 @@
                 "_type": "rss"
             },
             {
+                "_title": "Julie Blanc",
+                "_text": "Julie Blanc",
+                "_xmlUrl": "https://julie-blanc.fr/",
+                "_htmlUrl": "https://julie-blanc.fr/",
+                "_type": "rss"
+            },
+            {
                 "_title": "Kev Quirk",
                 "_text": "Kev Quirk",
                 "_xmlUrl": "https://kevquirk.com/feed",
@@ -324,6 +339,22 @@
                 "_htmlUrl": "https://lea.verou.me/feed.xml",
                 "_type": "rss"
             },
+            
+            {
+                "_title": "Louis-Olivier Brassard",
+                "_text": "Louis-Olivier Brassard",
+                "_xmlUrl": "https://journal.loupbrun.ca/",
+                "_htmlUrl": "https://journal.loupbrun.ca/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Louis Derrac",
+                "_text": "Louis Derrac",
+                "_xmlUrl": "https://louisderrac.com/",
+                "_htmlUrl": "https://louisderrac.com/",
+                "_type": "rss"
+            },
+            
             {
                 "_title": "Mark Thomas Miller",
                 "_text": "Mark Thomas Miller",
@@ -385,6 +416,20 @@
                 "_text": "Nick Simson",
                 "_xmlUrl": "https://nicksimson.com/feed/",
                 "_htmlUrl": "https://nicksimson.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "Nicolas Devenet",
+                "_text": "Nicolas Devenet",
+                "_xmlUrl": "https://www.nicolas.pm/",
+                "_htmlUrl": "https://www.nicolas.pm/",
+                "_type": "rss"
+            },
+            {
+                "_title": "N-O-D-E",
+                "_text": "N-O-D-E",
+                "_xmlUrl": "https://n-o-d-e.net/",
+                "_htmlUrl": "https://n-o-d-e.net/",
                 "_type": "rss"
             },
             {
@@ -471,6 +516,13 @@
                 "_text": "Sara Soueidan – Blog",
                 "_xmlUrl": "https://www.sarasoueidan.com/blog/index.xml",
                 "_htmlUrl": "https://sarasoueidan.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Seb Sauvage",
+                "_text": "Seb Sauvage",
+                "_xmlUrl": "https://sebsauvage.net/",
+                "_htmlUrl": "https://sebsauvage.net/",
                 "_type": "rss"
             },
             {

@@ -1082,6 +1082,18 @@ article > p > a:hover {
   font-weight: bold;
 }
 
+/*UPDATE POST ENTRY*/
+.post-update {
+  margin-top: calc(0.5 * var(--baseline));
+  padding: calc(0.25 * var(--baseline));
+  border-left: 2px solid var(--txt);
+  background-color: var(--bglighten20);
+  & span {
+    font-weight: bold;
+    display: block;
+  }
+}
+
 
 /*MEDIA QUERY POST*/
 @media (width < 1000px) {

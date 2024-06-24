@@ -23,6 +23,13 @@
                 "_type": "rss"
             },
             {
+                "_title": "Aleksandr Hovhannisyan",
+                "_text": "Aleksandr Hovhannisyan",
+                "_xmlUrl": "https://www.aleksandrhovhannisyan.com/",
+                "_htmlUrl": "https://www.aleksandrhovhannisyan.com/",
+                "_type": "rss"
+            },
+            {
                 "_title": "Adam Argyle",
                 "_text": "Adam Argyle",
                 "_xmlUrl": "https://nerdy.dev/rss.xml",
@@ -36,6 +43,14 @@
                 "_htmlUrl": "https://ishadeed.com/",
                 "_type": "rss"
             },
+            {
+                "_title": "Arthur Perret",
+                "_text": "Arthur Perret",
+                "_xmlUrl": "https://www.arthurperret.fr/",
+                "_htmlUrl": "https://www.arthurperret.fr/",
+                "_type": "rss"
+            },
+            
             {
                 "_title": "Andy Bell",
                 "_text": "Andy Bell",
@@ -392,6 +407,13 @@
                 "_text": "Quakkels.com",
                 "_xmlUrl": "https://quakkels.com/index.xml",
                 "_htmlUrl": "https://quakkels.com/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Antoine Fauchié",
+                "_text": "Antoine Fauchié",
+                "_xmlUrl": "https://www.quaternum.net/",
+                "_htmlUrl": "https://www.quaternum.net/",
                 "_type": "rss"
             },
             {

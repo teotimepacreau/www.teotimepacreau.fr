@@ -38,10 +38,10 @@ Alors comment garder une équipe aux compétences variées synchronisée sans ê
       <title>Synchroniser un repo Github avec Gitlab</title>
       <link>https://www.teotimepacreau.fr/blog/synchroniser-github-et-gitlab/</link>
       <description>&lt;p&gt;Pour des raisons techniques, j’ai eu besoin de cloner un repo existant sur Github dans l’alternative open-source &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;Gitlab&lt;/a&gt;. Je souhaitais synchroniser tout les changements effectués dans le repo Gitlab en les poussant vers le repo Github.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Mise à jour du 16 juin 2024&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Après multiples tests, côté Gitlab la synchronisation en GET est réservée aux comptes Gitlab PREMIUM (payant) tandis que le PUSH est disponible pour tous les comptes (même gratuits)&lt;/p&gt;
-&lt;/blockquote&gt;
+  &lt;p class=&quot;post-update&quot;&gt;
+  &lt;span&gt;Mise à jour du &lt;time datetime=&quot;16 juin 2024&quot;&gt;16 juin 2024&lt;/time&gt;&lt;/span&gt;
+Après multiples tests, côté Gitlab la synchronisation en GET est réservée aux comptes Gitlab PREMIUM (payant) tandis que le PUSH est disponible pour tous les comptes (même gratuits)
+&lt;/p&gt;
 &lt;h2 id=&quot;clonage-d%E2%80%99un-repo-github-dans-gitlab&quot; tabindex=&quot;-1&quot;&gt;Clonage d’un repo Github dans Gitlab&lt;/h2&gt;
 &lt;p&gt;Gitlab propose de créer un repo en créant un clône d’un repo pré-existant sur un autre service via “Importer un projet”. Il suffit de fournir l’URL du repo Github.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/gitlab-clonage1.png&quot; alt=&quot;Capture de la page de proposition des modalités de création de repo Gitlab&quot; /&gt;&lt;figcaption&gt;Clonage d’un repo pré-existant&lt;/figcaption&gt;&lt;/figure&gt;

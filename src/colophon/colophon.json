@@ -44,18 +44,24 @@
                 "_type": "rss"
             },
             {
-                "_title": "Arthur Perret",
-                "_text": "Arthur Perret",
-                "_xmlUrl": "https://www.arthurperret.fr/",
-                "_htmlUrl": "https://www.arthurperret.fr/",
-                "_type": "rss"
-            },
-            
-            {
                 "_title": "Andy Bell",
                 "_text": "Andy Bell",
                 "_xmlUrl": "https://andy-bell.co.uk/feed/",
                 "_htmlUrl": "https://andy-bell.co.uk/feed.xml",
+                "_type": "rss"
+            },
+            {
+                "_title": "Antoine Fauchié",
+                "_text": "Antoine Fauchié",
+                "_xmlUrl": "https://www.quaternum.net/",
+                "_htmlUrl": "https://www.quaternum.net/",
+                "_type": "rss"
+            },
+            {
+                "_title": "Arthur Perret",
+                "_text": "Arthur Perret",
+                "_xmlUrl": "https://www.arthurperret.fr/",
+                "_htmlUrl": "https://www.arthurperret.fr/",
                 "_type": "rss"
             },
             {
@@ -407,13 +413,6 @@
                 "_text": "Quakkels.com",
                 "_xmlUrl": "https://quakkels.com/index.xml",
                 "_htmlUrl": "https://quakkels.com/",
-                "_type": "rss"
-            },
-            {
-                "_title": "Antoine Fauchié",
-                "_text": "Antoine Fauchié",
-                "_xmlUrl": "https://www.quaternum.net/",
-                "_htmlUrl": "https://www.quaternum.net/",
                 "_type": "rss"
             },
             {

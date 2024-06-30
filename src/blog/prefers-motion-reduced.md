@@ -40,7 +40,7 @@ Tout d'abord il est plutôt simple de simuler la préférence via navigateur mai
 
 Pour adapter le code en fonction de la préférence sélectionnée par l'utilisateur, il est possible de cibler via une requête CSS :
 
-```
+```css
 /*
   Si l'utilisateur a exprimé le souhait, ne pas montrer l'animation sur les boutons.
 */
@@ -61,7 +61,7 @@ Pour adapter le code en fonction de la préférence sélectionnée par l'utilisa
 }
 ```
 Il est également possible d'utiliser Javascript pour détecter la préference, et choisir de jouer en conséquence ou adapter les animations :
-```
+```js
   // On attrape la préférence exprimée par l'utilisateur
     let prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

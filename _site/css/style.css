@@ -338,14 +338,6 @@ a:hover {
   background: var(--accent);
   border-radius: 100vw;
 }
-pre::-webkit-scrollbar {
-  height: 0.15rem;
-}
-
-pre::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 100vw;
-}
 
 /*---CONTAINER POUR TOUTES LES PAGES---*/
 #normal-page-container {
@@ -1012,32 +1004,6 @@ article > p > a:hover {
   text-decoration-skip-ink: none;
 }
 
-.post-main pre {
-  background-color: var(--bglighten20);
-  margin-block: var(--baseline);
-  border-radius: 0.3rem;
-  padding: calc(0.25 * var(--baseline));
-  box-shadow: 1px 1px 2px 0px var(--shadow);
-}
-
-.post-main code {
-  font-family: SpaceMono-Regular, monospace;
-}
-
-.post-main code,
-.post-main pre {
-  overflow-x: scroll;
-  letter-spacing: -0.07em;
-  font-feature-settings: none;
-  font-variant-ligatures: none;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  tab-size: 2;
-  hyphens: none;
-}
 
 .post-main figure {
   display: grid;

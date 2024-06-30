@@ -73,7 +73,7 @@ Notre contenu prend forme au moyen de fichiers Markdown. Ceux-ci vont contenir t
 ![Exemple de structuration des dossiers pour DECAP CMS](/img/decap-project-structure.png "Exemple de structuration des dossiers pour DECAP CMS")
 
 4. Le fichier `index.html` est le point d'entrée pour l'interface d'administration de DECAP CMS, coller dedans :
-```
+```html
 <!doctype html>
 <html>
 <head>
@@ -88,7 +88,7 @@ Notre contenu prend forme au moyen de fichiers Markdown. Ceux-ci vont contenir t
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
-```
+```yaml
 5. `config.yml` est le coeur de la configuration du CMS : il permet de créer les différents champs de saisie et de paramétrer le fonctionnement global du CMS, coller dedans : 
 ```
 local_backend: true # Si besoin d'utiliser le CMS en localhost, si site déjà déployé supprimer cette ligne
@@ -164,7 +164,7 @@ collections:
 1. Installer la dernière version de Tina CMS via ` npx @tinacms/cli@latest init`
 
 2. Mettre à jour les scripts de lancement du serveur de développement local pour run en parallele le CMS
-```
+```json
  "scripts": {
     "dev": "tinacms dev -c \"vite dev\"",
 		"build": "tinacms build && vite build",
@@ -177,7 +177,7 @@ collections:
 ![Page d'administration Tina CMS](/img/tina-home.png "Page d'administration Tina CMS")
 
 4. Pour customiser les champs d'entrée il suffit de modifier l'objet 'collections' ./tina/config.js
-```
+```js
 import { defineConfig } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
@@ -260,7 +260,7 @@ export default defineConfig({
 6. Aller chercher les données de l'API : TinaCMS génère automatiquement deux requêtes types que l’on peut retrouver dans ./tina/__generated/queries.gql :
 
 Obtenir plusieurs articles et leur détails via blablablaConnection
-```
+```js
 import { client } from '../[pathToTina]/tina/__generated__/client'
 
 const result = await client.queries.articleConnection();
@@ -275,7 +275,7 @@ const {
 
 Obtenir un seul article et ses détails (mais indiquer son path est obligatoire)
 
-```
+```js
 import { client } from '../[pathToTina]/tina/__generated__/client'
 
 const myPost = await client.queries.post({ relativePath: 'HelloWorld.md' })

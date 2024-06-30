@@ -33,7 +33,7 @@ Un VPS a besoin d'un OS pour tourner, il est recommandé de choisir un OS Linux 
 
 ## Accéder au VPS
 Il suffit d'utiliser le terminal de commande de votre ordinateur :
-```
+```bash
 ssh nomdutilisateur@adresseIP
 ```
 `ssh` est la commande qui permet d'accéder à une machine à distance.
@@ -56,7 +56,7 @@ Portainer est facilement utilisable grâce à son interface cliquable qui permet
 Nous allons donc d'abord installer Docker sur notre VPS pour être capable d'installer ensuite Portainer.
 
 Installer Docker sur son VPS 
-```
+```bash
 apt install docker.io
 ```
 
@@ -111,7 +111,7 @@ C'est ici que [Nginx Proxy Manager](https://nginxproxymanager.com/) intervient.
 ### Installer Nginx Proxy Manager via Portainer
 Via le menu **Stacks** on clique sur `+Add stack`, puis via `Web Editor` on entre cette commande docker-compose
 
-```
+```yaml
 version: "3.3"
 services:
   npm-app:
@@ -181,7 +181,7 @@ Nous reprenons notre exemple d'installation de Miniflux.
 Dans Portainer nous ajoutons une stack comme vu précédemment pour Nginx-Proxy-Manager.
 Ici le docker-compose :
 
-```
+```yaml
 services:
   miniflux:
     image: miniflux/miniflux:latest

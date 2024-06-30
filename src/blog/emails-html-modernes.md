@@ -98,7 +98,7 @@ Il permet d'appliquer des éléments généraux à tous le document HTML et évi
 ### Éviter les répétitions en utilisant le mécanisme CSS d'héritage
 
 Plutôt que de définir `font-family: "Gill Sans", sans-serif;` à chaque fois que l'on pose un `<p>` il est plus pratique d'utiliser l'héritage :
-```
+```html
 <body>  <div style="font-size:16px; font-family: system-ui;">    <!-- email content goes here -->  </div></body>
 ```
 
@@ -112,7 +112,7 @@ Seuls `#fffff` et `rgb()` sont supportés.
 `@font-face` n'est pas supporté, impossible donc d'utiliser une font de son choix. Il est impératif de passer par les `system-fonts`, des polices d'écriture incluses nativement dans les OS.
 
 Une règle à suivre de bonne pratique pour déclarer ses system-fonts :
-```
+```css
 font-family: “Custom Serif You Won’t Have”, Serif You Might Have, Serif Your System Almost Definitely has, serif;
 
 font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
@@ -123,7 +123,7 @@ Pour choisir la system-font qui correspond le mieux au design imaginé, essayez 
 
 Par défaut les images vont overflow, pour contrer cela : 
 
-```
+```html
 <div
     class="img-block"
     style="overflow: hidden; margin-top: 2rem; border-radius: 0.5rem !important;">
@@ -154,7 +154,7 @@ La flexbox est désormais supportée ! Très pratique pour afficher des images c
 
 ### Liens
 Les clients mails scannent les adresses emails et les numéros de téléphone dans le contenu de vos mails et les transforment automatiquement en liens soulignés bleus. Pour contrer ces styles par défaut il faut les wrapper dans des `<a>` et enlever le style par défaut.
-```
+```html
 <a style="color: inherit; text-decoration: none;" href="">
 	some@example.com
 </a>

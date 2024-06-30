@@ -31,7 +31,7 @@ On établit une *unité de mesure commune* qui régit tous nos espacements et ta
 Pour la déterminer, la règle typographique communément admise est **d'ajouter la hauteur de la ligne à la taille de la police d'écriture utilisée**. Cela crée notre *"unité de rythme"* que l'on va moduler pour tous nos espacements/tailles.
 Notre base est la ```line-eight``` des paragraphes couplée à la ```font-size``` :
 
-```
+```css
 p {
   font-size: 1rem; /* =16px par défaut */
   line-eight: 1.4;
@@ -49,12 +49,13 @@ Notre *"unité de rythme"* est 22.4. L'objectif est d'essayer que chaque espacem
 Un premier réflexe pourrait-être d'utiliser ```font-size: 4rem;```. 
 Pourtant on veut que notre ```<h1>``` soit 4 fois plus grand que notre *"unité de rythme"* et non pas de notre taille de police. On module donc la font-size :
 
-```
+{%update%}
 ?*1.1=67.2
 <=>61.09*1.1=67.2
 
 On convertit 61.09px en rem : 16/61.09=3.81rem
-```
+{%endupdate%}
+
 ## Le "hibou lobotomisé" : le sélecteur CSS qui fait gagner du temps
 
 ```* + *```, [autrement appelé le "hibou lobotomisé"](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/) est un formidable moyen de mettre en place une règle CSS anonyme et automatique pour faciliter la mise en page.
@@ -67,13 +68,13 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
 ## ... et une touche de Custom Properties
 
 Les [Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) permettent de déclarer des variables réutilisables. On en profite pour utiliser également la fonction "clamp" qui permet de switcher entre une valeur minimale, une valeur de circonstance et une valeur maximale. Cela permet à notre *unité de rythme* d'évoluer en accord avec l'espace disponible.
-```
+```css
 :root {
   --baseline : clamp(1.4rem, 1.1200rem + 1.4000vw, 2.8rem);
 }
 ```
 ## Notre espacement automatique pour l'ensemble du site en 2 lignes de code
-```
+```css
 body > * + * {
   margin-top: var(--baseline);
 }

@@ -4,8 +4,9 @@ const markdownItAnchor = require("markdown-it-anchor");
 const pluginTOC = require("eleventy-plugin-toc");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const embeds = require("eleventy-plugin-embed-everything");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-// OPENGRAPH IMAGES
+// OPENGRAPH IMAGES REQUIREMENTS
 const fs = require("node:fs");
 const path = require("node:path");
 const EleventyPluginOgImage = require("eleventy-plugin-og-image");
@@ -19,6 +20,10 @@ let figoptions = {
 };
 
 module.exports = function (eleventyConfig) {
+  
+  //  SHORTCODE MISE EN FORME BLOC DE CODES
+  eleventyConfig.addPlugin(syntaxHighlight);
+
   //SHORTCODE POUR COMPOSANT "CITATIONS"
   eleventyConfig.addPairedShortcode(
     "blockquote",

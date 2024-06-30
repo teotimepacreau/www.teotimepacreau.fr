@@ -6,6 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="/css/style.css" />
 
+ 
+<!-- STYLE FOR CODE BLOCKS -->
+<link rel="stylesheet" href="/css/prism-duotone-forest.css" />
+ 
+
 <!-- Auto detection of the RSS feed for RSS readers -->
 <link
   rel="alternate"
@@ -74,7 +79,7 @@ fetchpriority="low"
 />
 
 <!-- auto generator of OpenGraph images -->
-<meta property="og:image" content="/og-images/1862e5f9.png" />
+<meta property="og:image" content="/og-images/blog-rythme-vertical-css.png" />
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -227,13 +232,12 @@ fetchpriority="low"
 <p>On établit une <em>unité de mesure commune</em> qui régit tous nos espacements et tailles.
 Pour la déterminer, la règle typographique communément admise est <strong>d’ajouter la hauteur de la ligne à la taille de la police d’écriture utilisée</strong>. Cela crée notre <em>“unité de rythme”</em> que l’on va moduler pour tous nos espacements/tailles.
 Notre base est la <code>line-eight</code> des paragraphes couplée à la <code>font-size</code> :</p>
-<pre><code>p {
-  font-size: 1rem; /* =16px par défaut */
-  line-eight: 1.4;
-}
+<pre class="language-css"><code class="language-css"><span class="token selector">p</span> <span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span> <span class="token comment">/* =16px par défaut */</span>
+  <span class="token property">line-eight</span><span class="token punctuation">:</span> 1.4<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 _____________
-16*1.4=22.4
-</code></pre>
+16*1.4=22.4</code></pre>
 <p>Notre <em>“unité de rythme”</em> est 22.4. L’objectif est d’essayer que chaque espacement en soit le multiple.</p>
 <h3 id="exemple-concret-d%E2%80%99utilisation" tabindex="-1">Exemple concret d’utilisation</h3>
 <ul>
@@ -242,11 +246,12 @@ _____________
 </ul>
 <p>Un premier réflexe pourrait-être d’utiliser <code>font-size: 4rem;</code>.
 Pourtant on veut que notre <code>&lt;h1&gt;</code> soit 4 fois plus grand que notre <em>“unité de rythme”</em> et non pas de notre taille de police. On module donc la font-size :</p>
-<pre><code>?*1.1=67.2
-&lt;=&gt;61.09*1.1=67.2
-
-On convertit 61.09px en rem : 16/61.09=3.81rem
-</code></pre>
+  <p class="post-update">
+  <span>Mise à jour du <time datetime="Invalid Date">Invalid Date</time></span>
+?*1.1=67.2
+<=>61.09*1.1=67.2
+<p>On convertit 61.09px en rem : 16/61.09=3.81rem</p>
+</p>
 <h2 id="le-%E2%80%9Chibou-lobotomis%C3%A9%E2%80%9D-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps" tabindex="-1">Le “hibou lobotomisé” : le sélecteur CSS qui fait gagner du temps</h2>
 <p><code>* + *</code>, <a href="https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/">autrement appelé le “hibou lobotomisé”</a> est un formidable moyen de mettre en place une règle CSS anonyme et automatique pour faciliter la mise en page.</p>
 <ul>
@@ -256,15 +261,13 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
 <p><code>article &gt; * + *</code> nous permet donc de cibler tous les éléments de notre article suivant directement d’autres éléments.</p>
 <h2 id="%E2%80%A6-et-une-touche-de-custom-properties" tabindex="-1">… et une touche de Custom Properties</h2>
 <p>Les <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">Custom Properties</a> permettent de déclarer des variables réutilisables. On en profite pour utiliser également la fonction “clamp” qui permet de switcher entre une valeur minimale, une valeur de circonstance et une valeur maximale. Cela permet à notre <em>unité de rythme</em> d’évoluer en accord avec l’espace disponible.</p>
-<pre><code>:root {
-  --baseline : clamp(1.4rem, 1.1200rem + 1.4000vw, 2.8rem);
-}
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token selector">:root</span> <span class="token punctuation">{</span>
+  <span class="token property">--baseline</span> <span class="token punctuation">:</span> <span class="token function">clamp</span><span class="token punctuation">(</span>1.4rem<span class="token punctuation">,</span> 1.1200rem + 1.4000vw<span class="token punctuation">,</span> 2.8rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <h2 id="notre-espacement-automatique-pour-l%E2%80%99ensemble-du-site-en-2-lignes-de-code" tabindex="-1">Notre espacement automatique pour l’ensemble du site en 2 lignes de code</h2>
-<pre><code>body &gt; * + * {
-  margin-top: var(--baseline);
-}
-</code></pre>
+<pre class="language-css"><code class="language-css"><span class="token selector">body > * + *</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--baseline<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <p>Pourquoi utiliser seulement <code>margin-top</code> ? Les marges peuvent, dans certains cas, entrer en collision et se soustraire. <a href="https://cssfordesigners.com/articles/managing-vertical-margins-in-css">En ne déclarant que <code>margin-top</code> on évite cet inconvénient</a>.</p>
 
           </article>

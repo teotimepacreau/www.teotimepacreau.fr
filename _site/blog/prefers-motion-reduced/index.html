@@ -6,6 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="/css/style.css" />
 
+ 
+<!-- STYLE FOR CODE BLOCKS -->
+<link rel="stylesheet" href="/css/prism-duotone-forest.css" />
+ 
+
 <!-- Auto detection of the RSS feed for RSS readers -->
 <link
   rel="alternate"
@@ -74,7 +79,7 @@ fetchpriority="low"
 />
 
 <!-- auto generator of OpenGraph images -->
-<meta property="og:image" content="/og-images/6d8ba81b.png" />
+<meta property="og:image" content="/og-images/blog-prefers-motion-reduced.png" />
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -235,41 +240,39 @@ Cette approche est appelée le “New Responsive Design”
 <p>Tout d’abord il est plutôt simple de simuler la préférence via navigateur mais la fonctionnalité est caché. Il convient d’ouvrir le Chrome Dev Inspector (CTRl+SHIFT+I) puis ouvrir le <code>...</code> du bandeau “Console” puis cliquer sur “More Tools” puis “Rendering”.</p>
 <p><video controls muted src="/img/activer-reduced-motion-navigateur.mp4" aria-description="Activer prefers-reduced-motion dans le navigateur" title="Activer prefers-reduced-motion dans le navigateur"></video></p>
 <p>Pour adapter le code en fonction de la préférence sélectionnée par l’utilisateur, il est possible de cibler via une requête CSS :</p>
-<pre><code>/*
+<pre class="language-css"><code class="language-css"><span class="token comment">/*
   Si l'utilisateur a exprimé le souhait, ne pas montrer l'animation sur les boutons.
-*/
-@media (prefers-reduced-motion: reduce) {
-  button {
-    animation: none;
-  }
-}
+*/</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">prefers-reduced-motion</span><span class="token punctuation">:</span> reduce<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">button</span> <span class="token punctuation">{</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-/*
+<span class="token comment">/*
   Si l'utilisateur n'a pas statué sur la préférence, montrer l'animation.
-*/
-@media (prefers-reduced-motion: no-preference) {
-  button {
-    /* `vibrate` keyframes are defined elsewhere */
-    animation: vibrate 0.3s linear infinite both;
-  }
-}
-</code></pre>
+*/</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">prefers-reduced-motion</span><span class="token punctuation">:</span> no-preference<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">button</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* `vibrate` keyframes are defined elsewhere */</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> vibrate 0.3s linear infinite both<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <p>Il est également possible d’utiliser Javascript pour détecter la préference, et choisir de jouer en conséquence ou adapter les animations :</p>
-<pre><code>  // On attrape la préférence exprimée par l'utilisateur
-    let prefersReducedMotion = window.matchMedia(&quot;(prefers-reduced-motion: reduce)&quot;).matches;
+<pre class="language-js"><code class="language-js">  <span class="token comment">// On attrape la préférence exprimée par l'utilisateur</span>
+    <span class="token keyword">let</span> prefersReducedMotion <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span><span class="token string">"(prefers-reduced-motion: reduce)"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>matches<span class="token punctuation">;</span>
 
-    // SI L'UTILISATEUR N'A PAS ACTIVÉ prefers-reduced-motion alors on déroule l'animation
-    if (!prefersReducedMotion) {
-      gsap.to(
-        &quot;.intersect&quot;,
-        {
-          y: &quot;-20dvh&quot;,
-          opacity: 0,
-          duration: 0.5,
-          ease: &quot;power2.out&quot;,
-        })
-    }
-</code></pre>
+    <span class="token comment">// SI L'UTILISATEUR N'A PAS ACTIVÉ prefers-reduced-motion alors on déroule l'animation</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>prefersReducedMotion<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      gsap<span class="token punctuation">.</span><span class="token function">to</span><span class="token punctuation">(</span>
+        <span class="token string">".intersect"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token string">"-20dvh"</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">opacity</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token number">0.5</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">ease</span><span class="token operator">:</span> <span class="token string">"power2.out"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span></code></pre>
 <h2 id="d%C3%A9monstration" tabindex="-1">Démonstration</h2>
 <p><video controls muted src="/img/prefers-reduced-motion.mp4" aria-description="Démonstration de l'avant après du déroulement des animations en fonction de la préférence exprimée par l'utilisateur" title="Démonstration de l'avant après du déroulement des animations en fonction de la préférence exprimée par l'utilisateur"></video></p>
 <h2 id="sources" tabindex="-1">Sources</h2>

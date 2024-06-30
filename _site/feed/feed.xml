@@ -101,45 +101,43 @@ Plusieurs fonctionnalités lui sont automatiquement associées :&lt;/p&gt;
 &lt;li&gt;un bouton actionne l’ouverture et la fermeture du menu&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;L’API Popover est composée d’un attribut HTML &lt;code&gt;popover&lt;/code&gt; à placer sur l’élément à faire flotter. On place, sur un un bouton d’ouverture un attribut &lt;code&gt;popovertarget&lt;/code&gt; qui prend en valeur l’ID de notre élément flottant. On spécifie l’action via &lt;code&gt;popovertargetaction&lt;/code&gt; : celle-ci peut prendre 3 valeurs &lt;code&gt;show&lt;/code&gt;, &lt;code&gt;hide&lt;/code&gt; ou &lt;code&gt;auto&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;button popovertarget=&amp;quot;mobile-navigation&amp;quot; popovertargetaction=&amp;quot;show&amp;quot;&amp;gt;&amp;lt;/button&amp;gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;popovertarget&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;mobile-navigation&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;popovertargetaction&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;show&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 
-&amp;lt;nav popover id=&amp;quot;mobile-navigation&amp;quot;&amp;gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;nav&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;popover&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;mobile-navigation&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 
-	&amp;lt;button popovertarget=&amp;quot;mobile-navigation&amp;quot; popovertargetaction=&amp;quot;hide&amp;quot;&amp;gt;&amp;lt;/button&amp;gt;
+	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;popovertarget&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;mobile-navigation&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;popovertargetaction&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;hide&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 
-  &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/index&amp;quot;&amp;gt;HOME&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/blog&amp;quot;&amp;gt;BLOG&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/projets&amp;quot;&amp;gt;PROJETS&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/nav&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;/index&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;HOME&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;/blog&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;BLOG&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;/projets&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;PROJETS&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;nav&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;animer-l%E2%80%99ouverture-et-la-fermeture-du-popover&quot; tabindex=&quot;-1&quot;&gt;Animer l’ouverture et la fermeture du Popover&lt;/h3&gt;
 &lt;p&gt;Il est possible de donner un style d’avant ouverture au popover via le sélecteur CSS &lt;code&gt;:popover-open&lt;/code&gt; et la règle &lt;code&gt;@starting-style&lt;/code&gt;. &lt;code&gt;@starting-style&lt;/code&gt; est une nouvelle règle CSS qui permet de définir le style d’un élément &lt;em&gt;avant&lt;/em&gt; son entrée dans le champ. On donne ensuite un style à l’état ouvert dans &lt;code&gt;:popover-open&lt;/code&gt;. Enfin on donne un style à l’état fermé directement dans l’attribut &lt;code&gt;[popover]&lt;/code&gt;. La propriété &lt;code&gt;display&lt;/code&gt; est dite “discrète” par nature : &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties#discrete&quot;&gt;cela signifie qu’elle ne peut pas être animée de façon native&lt;/a&gt;. Pour pouvoir animer &lt;code&gt;display&lt;/code&gt;, la propriété &lt;code&gt;transition-behavior: allow-discrete&lt;/code&gt; est désormais prise en charge par tous les navigateurs sauf Firefox.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[popover] {
-    left: 0;
-    top: 0;
-    height: 100dvh;
-    width: 60dvw;
-    transition: transform .2s ease-out, opacity .2s ease-out,
-    display .2s ease-out;
-    transition-behavior: allow-discrete;
+&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;[popover]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 100dvh&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 60dvw&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; transform .2s ease-out&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; opacity .2s ease-out&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    display .2s ease-out&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;transition-behavior&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; allow-discrete&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-    /*POPOVER EN ETAT FERMÉ*/
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  [popover]:popover-open {
-    @starting-style {/*POPOVER AVANT L&#39;ENTREE DANS LE CHAMP*/
-      opacity: 0;
-      transform: translateX(-50px);
-    }
+    &lt;span class=&quot;token comment&quot;&gt;/*POPOVER EN ETAT FERMÉ*/&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;translateX&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;-50px&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;[popover]:popover-open&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@starting-style&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token comment&quot;&gt;/*POPOVER AVANT L&#39;ENTREE DANS LE CHAMP*/&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;translateX&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;-50px&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-    /*POPOVER EN ETAT OUVERT*/
-    opacity: 1;
-    transform: translateX(0px);
-  }
-&lt;/code&gt;&lt;/pre&gt;
+    &lt;span class=&quot;token comment&quot;&gt;/*POPOVER EN ETAT OUVERT*/&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 1&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;translateX&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;0px&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;figure&gt;
   &lt;video controls=&quot;&quot; muted=&quot;&quot; height=&quot;400&quot; style=&quot;height: 400px!important&quot;&gt;
     &lt;source src=&quot;https://www.teotimepacreau.fr/img/popover.mp4&quot; alt=&quot;Ouverture et fermeture d&#39;un menu de navigation popover avec animation d&#39;opacité et de déplacement&quot; title=&quot;Animation d&#39;ouverture et de fermeture du popover&quot; type=&quot;video/mp4&quot; /&gt;
@@ -161,29 +159,28 @@ Plusieurs fonctionnalités lui sont automatiquement associées :&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;aria-current=&amp;quot;page&amp;quot;&lt;/code&gt;. Permet de signifier sur quel page de la navigation se trouve actuellement l’utilisateur.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;type=”button”&lt;/code&gt;. Permet de s’assurer que le bouton ne tente pas de soumettre un formulaire (comportement par défaut). &lt;strong&gt;Se place sur le bouton.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;button
-  popovertarget=&amp;quot;mobile-navigation&amp;quot;
-  popovertargetaction=&amp;quot;show&amp;quot;
-	type=&amp;quot;button&amp;quot;
-  aria-label=&amp;quot;ouvrir la navigation principale&amp;quot;
-  aria-controls=&amp;quot;mobile-navigation&amp;quot;
-  aria-haspopup=&amp;quot;true&amp;quot;
-&amp;gt;&amp;lt;/button&amp;gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;popovertarget&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;mobile-navigation&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;popovertargetaction&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;show&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;aria-label&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;ouvrir la navigation principale&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;aria-controls&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;mobile-navigation&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;aria-haspopup&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;true&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 
-&amp;lt;nav
-  id=&amp;quot;mobile-navigation&amp;quot;
-  aria-label=&amp;quot;Principale&amp;quot;
-  popover
-&amp;gt;
-  &amp;lt;button aria-label=&amp;quot;fermer la navigation principale&amp;quot; aria-controls=&amp;quot;mobile-navigation&amp;quot; popovertarget=&amp;quot;mobile-navigation&amp;quot; popovertargetaction=&amp;quot;hide&amp;quot;&amp;gt;
-  &amp;lt;/button&amp;gt;
-  &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a aria-current=&amp;quot;page&amp;quot; href=&amp;quot;/index&amp;quot;&amp;gt;HOME&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/blog&amp;quot;&amp;gt;BLOG&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/projets&amp;quot;&amp;gt;PROJETS&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/nav&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;nav&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;mobile-navigation&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;aria-label&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;Principale&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token attr-name&quot;&gt;popover&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;aria-label&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;fermer la navigation principale&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;aria-controls&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;mobile-navigation&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;popovertarget&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;mobile-navigation&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;popovertargetaction&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;hide&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;aria-current&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;page&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;/index&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;HOME&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;/blog&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;BLOG&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;/projets&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;PROJETS&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;nav&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://hidde.blog/popover-accessibility/&quot;&gt;https://hidde.blog/popover-accessibility/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://hidde.blog/dialog-modal-popover-differences/#heading-3/&quot;&gt;https://hidde.blog/dialog-modal-popover-differences/#heading-3/&lt;/a&gt;&lt;/p&gt;
@@ -297,8 +294,7 @@ Les VPS au meilleur rapport qualité/prix, européens, pour une utilisation basi
 &lt;p&gt;Un VPS a besoin d’un OS pour tourner, il est recommandé de choisir un OS Linux pour installer plus facilement des solutions open-source.&lt;/p&gt;
 &lt;h2 id=&quot;acc%C3%A9der-au-vps&quot; tabindex=&quot;-1&quot;&gt;Accéder au VPS&lt;/h2&gt;
 &lt;p&gt;Il suffit d’utiliser le terminal de commande de votre ordinateur :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ssh nomdutilisateur@adresseIP
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; nomdutilisateur@adresseIP&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;ssh&lt;/code&gt; est la commande qui permet d’accéder à une machine à distance.
 &lt;code&gt;nomdutilisateur&lt;/code&gt; est souvent “admin” ou tout autre nom défini.
 &lt;code&gt;adresseIP&lt;/code&gt; est l’adresse IP publique de votre VPS, par exemple : “192.0.2.0”.&lt;/p&gt;
@@ -313,8 +309,7 @@ Portainer est facilement utilisable grâce à son interface cliquable qui permet
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/portainer.png&quot; alt=&quot;Interface graphique de Portainer&quot; /&gt;&lt;figcaption&gt;Interface graphique de Portainer&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;Nous allons donc d’abord installer Docker sur notre VPS pour être capable d’installer ensuite Portainer.&lt;/p&gt;
 &lt;p&gt;Installer Docker sur son VPS&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;apt install docker.io
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; docker.io&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;apt&lt;/code&gt; est une commande native dans Linux qui permet d’installer des applications.&lt;/p&gt;
 &lt;p&gt;Puis installer Portainer&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
@@ -350,54 +345,53 @@ On peut effectivement y accéder via n’importe quel naviagteur web mais celui-
 C’est ici que &lt;a href=&quot;https://nginxproxymanager.com/&quot;&gt;Nginx Proxy Manager&lt;/a&gt; intervient.&lt;/p&gt;
 &lt;h3 id=&quot;installer-nginx-proxy-manager-via-portainer&quot; tabindex=&quot;-1&quot;&gt;Installer Nginx Proxy Manager via Portainer&lt;/h3&gt;
 &lt;p&gt;Via le menu &lt;strong&gt;Stacks&lt;/strong&gt; on clique sur &lt;code&gt;+Add stack&lt;/code&gt;, puis via &lt;code&gt;Web Editor&lt;/code&gt; on entre cette commande docker-compose&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;version: &amp;quot;3.3&amp;quot;
-services:
-  npm-app:
-    image: &#39;jc21/nginx-proxy-manager:latest&#39;
-    container_name: npm-app
-    restart: unless-stopped
-    ports:
-      - &#39;80:80&#39; # Public HTTP Port
-      - &#39;443:443&#39; # Public HTTPS Port
-      - &#39;81:81&#39; # Admin Web Port
-      # Add any other Stream port you want to expose
-      # - &#39;21:21&#39; # FTP
-    environment:
-      DB_MYSQL_HOST: &amp;quot;blabla-db&amp;quot; #A remplacer
-      DB_MYSQL_PORT: 3306
-      DB_MYSQL_USER: &amp;quot;blabla&amp;quot; #A remplacer
-      DB_MYSQL_PASSWORD: ${DB_MYSQL_PASSWORD} #A definir en variable d&#39;environnement
-      DB_MYSQL_NAME: &amp;quot;blabla&amp;quot;
-      # Uncomment the line below if IPv6 is not enabled on your host
-      # DISABLE_IPV6: &#39;true&#39;
-    volumes:
-      - ./npm-data:/data:Z
-      - ./letsencrypt:/etc/letsencrypt:Z
-    depends_on:
-      - npm-db
-    networks:
-      - npm-network
-      - npm-internal
+&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;3.3&quot;&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;npm-app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;jc21/nginx-proxy-manager:latest&#39;&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; npm&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;app
+    &lt;span class=&quot;token key atrule&quot;&gt;restart&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; unless&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;stopped
+    &lt;span class=&quot;token key atrule&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;80:80&#39;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# Public HTTP Port&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;443:443&#39;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# Public HTTPS Port&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;81:81&#39;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# Admin Web Port&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# Add any other Stream port you want to expose&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# - &#39;21:21&#39; # FTP&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;DB_MYSQL_HOST&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;blabla-db&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;#A remplacer&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;DB_MYSQL_PORT&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3306&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;DB_MYSQL_USER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;blabla&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;#A remplacer&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;DB_MYSQL_PASSWORD&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;DB_MYSQL_PASSWORD&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;#A definir en variable d&#39;environnement&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;DB_MYSQL_NAME&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;blabla&quot;&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# Uncomment the line below if IPv6 is not enabled on your host&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# DISABLE_IPV6: &#39;true&#39;&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; ./npm&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;/data&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;Z
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; ./letsencrypt&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;/etc/letsencrypt&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;Z
+    &lt;span class=&quot;token key atrule&quot;&gt;depends_on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; npm&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;db
+    &lt;span class=&quot;token key atrule&quot;&gt;networks&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; npm&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;network
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; npm&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;internal
 
-  npm-db:
-    image: &#39;mariadb:latest&#39;
-    container_name: npm-db
-    restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} #A definir en variable d&#39;environnement
-      MYSQL_DATABASE: &#39;blabla&#39; #A remplacer
-      MYSQL_USER: &#39;blabla&#39; #A remplacer
-      MYSQL_PASSWORD: ${DB_MYSQL_PASSWORD} #A definir en variable d&#39;environnement
-    volumes:
-      - ./npm-data/mysql:/var/lib/mysql:Z
-    networks:
-      - npm-internal
+  &lt;span class=&quot;token key atrule&quot;&gt;npm-db&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;mariadb:latest&#39;&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; npm&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;db
+    &lt;span class=&quot;token key atrule&quot;&gt;restart&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; unless&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;stopped
+    &lt;span class=&quot;token key atrule&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;MYSQL_ROOT_PASSWORD&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;#A definir en variable d&#39;environnement&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;MYSQL_DATABASE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;blabla&#39;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;#A remplacer&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;MYSQL_USER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;blabla&#39;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;#A remplacer&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;MYSQL_PASSWORD&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;DB_MYSQL_PASSWORD&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;#A definir en variable d&#39;environnement&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; ./npm&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;data/mysql&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;/var/lib/mysql&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;Z
+    &lt;span class=&quot;token key atrule&quot;&gt;networks&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; npm&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;internal
 
-networks:
-  npm-internal:
-  npm-network:
-    external: true
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;networks&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;npm-internal&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;npm-network&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;external&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;A quoi sert cette commande ? Nous demandons à Nginx-Proxy-Manager de recueillir les ports 80 (HTTP) et les ports 443 (HTTPS), également nous créons un réseau dédidé “npm-network” qui devra être utilisé par chaque service web que nous installerons sur notre VPS.&lt;/p&gt;
 &lt;p&gt;Pour entrer sur Nginx-Proxy-Manager nous visitons notre IP:81.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/nginx-accueil.png&quot; alt=&quot;Page d&#39;accueil de Nginx-Proxy-Manager&quot; /&gt;&lt;figcaption&gt;Page d’accueil de Nginx-Proxy-Manager&lt;/figcaption&gt;&lt;/figure&gt;
@@ -410,39 +404,38 @@ networks:
 &lt;p&gt;Nous reprenons notre exemple d’installation de Miniflux.
 Dans Portainer nous ajoutons une stack comme vu précédemment pour Nginx-Proxy-Manager.
 Ici le docker-compose :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;services:
-  miniflux:
-    image: miniflux/miniflux:latest
-    ports:
-      - &amp;quot;8080:8080&amp;quot;
-    depends_on:
-      db:
-        condition: service_healthy
-    environment:
-      - DATABASE_URL=postgres://miniflux:secret@db/miniflux?sslmode=disable
-      - RUN_MIGRATIONS=1
-      - CREATE_ADMIN=1
-      - ADMIN_USERNAME=blabla #A remplacer
-      - ADMIN_PASSWORD=blabla #A remplacer
-  db:
-    image: postgres:15
-    environment:
-      - POSTGRES_USER=blabla #A remplacer
-      - POSTGRES_PASSWORD=blabla #A remplacer
-      - POSTGRES_DB=blabla #A remplacer
-    volumes:
-      - miniflux-db:/var/lib/postgresql/data
-    healthcheck:
-      test: [&amp;quot;CMD&amp;quot;, &amp;quot;pg_isready&amp;quot;, &amp;quot;-U&amp;quot;, &amp;quot;miniflux&amp;quot;]
-      interval: 10s
-      start_period: 30s
-volumes:
-  miniflux-db:
-networks:
-  npm-internal:
-  npm-network:
-    external: true
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;miniflux&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; miniflux/miniflux&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;latest
+    &lt;span class=&quot;token key atrule&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;8080:8080&quot;&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;depends_on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token key atrule&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; service_healthy
+    &lt;span class=&quot;token key atrule&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; DATABASE_URL=postgres&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;//miniflux&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;secret@db/miniflux&lt;span class=&quot;token punctuation&quot;&gt;?&lt;/span&gt;sslmode=disable
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; RUN_MIGRATIONS=1
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; CREATE_ADMIN=1
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; ADMIN_USERNAME=blabla &lt;span class=&quot;token comment&quot;&gt;#A remplacer&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; ADMIN_PASSWORD=blabla &lt;span class=&quot;token comment&quot;&gt;#A remplacer&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; postgres&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; POSTGRES_USER=blabla &lt;span class=&quot;token comment&quot;&gt;#A remplacer&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; POSTGRES_PASSWORD=blabla &lt;span class=&quot;token comment&quot;&gt;#A remplacer&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; POSTGRES_DB=blabla &lt;span class=&quot;token comment&quot;&gt;#A remplacer&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; miniflux&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;db&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;/var/lib/postgresql/data
+    &lt;span class=&quot;token key atrule&quot;&gt;healthcheck&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;CMD&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;pg_isready&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;-U&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;miniflux&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;interval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 10s
+      &lt;span class=&quot;token key atrule&quot;&gt;start_period&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 30s
+&lt;span class=&quot;token key atrule&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;miniflux-db&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;networks&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;npm-internal&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;npm-network&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;external&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Les 4 dernières lignes “Network” sont indispensables pour que le container Miniflux comprenne qu’il doit tourner sous le réseau de Nginx-Proxy-Manager.
 Mais cela ne suffit pas pour exposer notre app sur le web. Nous devons manuellement aller dans le container associé puis descendre en bas de la page pour accéder au sous-menu “Network”.&lt;/p&gt;
 &lt;p&gt;Il faut associer le container Miniflux au network nginx proxy manager “npm”, via le menu déroulant “Select a Network”.&lt;/p&gt;
@@ -486,41 +479,39 @@ Cette approche est appelée le “New Responsive Design”
 &lt;p&gt;Tout d’abord il est plutôt simple de simuler la préférence via navigateur mais la fonctionnalité est caché. Il convient d’ouvrir le Chrome Dev Inspector (CTRl+SHIFT+I) puis ouvrir le &lt;code&gt;...&lt;/code&gt; du bandeau “Console” puis cliquer sur “More Tools” puis “Rendering”.&lt;/p&gt;
 &lt;p&gt;&lt;video controls=&quot;&quot; muted=&quot;&quot; src=&quot;https://www.teotimepacreau.fr/img/activer-reduced-motion-navigateur.mp4&quot; aria-description=&quot;Activer prefers-reduced-motion dans le navigateur&quot; title=&quot;Activer prefers-reduced-motion dans le navigateur&quot;&gt;&lt;/video&gt;&lt;/p&gt;
 &lt;p&gt;Pour adapter le code en fonction de la préférence sélectionnée par l’utilisateur, il est possible de cibler via une requête CSS :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/*
+&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/*
   Si l&#39;utilisateur a exprimé le souhait, ne pas montrer l&#39;animation sur les boutons.
-*/
-@media (prefers-reduced-motion: reduce) {
-  button {
-    animation: none;
-  }
-}
+*/&lt;/span&gt;
+&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;prefers-reduced-motion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; reduce&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; none&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-/*
+&lt;span class=&quot;token comment&quot;&gt;/*
   Si l&#39;utilisateur n&#39;a pas statué sur la préférence, montrer l&#39;animation.
-*/
-@media (prefers-reduced-motion: no-preference) {
-  button {
-    /* `vibrate` keyframes are defined elsewhere */
-    animation: vibrate 0.3s linear infinite both;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
+*/&lt;/span&gt;
+&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;prefers-reduced-motion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; no-preference&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token selector&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;/* `vibrate` keyframes are defined elsewhere */&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; vibrate 0.3s linear infinite both&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Il est également possible d’utiliser Javascript pour détecter la préference, et choisir de jouer en conséquence ou adapter les animations :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  // On attrape la préférence exprimée par l&#39;utilisateur
-    let prefersReducedMotion = window.matchMedia(&amp;quot;(prefers-reduced-motion: reduce)&amp;quot;).matches;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;  &lt;span class=&quot;token comment&quot;&gt;// On attrape la préférence exprimée par l&#39;utilisateur&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; prefersReducedMotion &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;matchMedia&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;(prefers-reduced-motion: reduce)&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;matches&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-    // SI L&#39;UTILISATEUR N&#39;A PAS ACTIVÉ prefers-reduced-motion alors on déroule l&#39;animation
-    if (!prefersReducedMotion) {
-      gsap.to(
-        &amp;quot;.intersect&amp;quot;,
-        {
-          y: &amp;quot;-20dvh&amp;quot;,
-          opacity: 0,
-          duration: 0.5,
-          ease: &amp;quot;power2.out&amp;quot;,
-        })
-    }
-&lt;/code&gt;&lt;/pre&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// SI L&#39;UTILISATEUR N&#39;A PAS ACTIVÉ prefers-reduced-motion alors on déroule l&#39;animation&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;prefersReducedMotion&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      gsap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&quot;.intersect&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;token literal-property property&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;-20dvh&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token literal-property property&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token literal-property property&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token literal-property property&quot;&gt;ease&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;power2.out&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&quot;d%C3%A9monstration&quot; tabindex=&quot;-1&quot;&gt;Démonstration&lt;/h2&gt;
 &lt;p&gt;&lt;video controls=&quot;&quot; muted=&quot;&quot; src=&quot;https://www.teotimepacreau.fr/img/prefers-reduced-motion.mp4&quot; aria-description=&quot;Démonstration de l&#39;avant après du déroulement des animations en fonction de la préférence exprimée par l&#39;utilisateur&quot; title=&quot;Démonstration de l&#39;avant après du déroulement des animations en fonction de la préférence exprimée par l&#39;utilisateur&quot;&gt;&lt;/video&gt;&lt;/p&gt;
 &lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
@@ -597,122 +588,97 @@ L’implémentation d’un CMS est donc particulièrement utile dans le dévelop
 &lt;ol start=&quot;4&quot;&gt;
 &lt;li&gt;Le fichier &lt;code&gt;index.html&lt;/code&gt; est le point d’entrée pour l’interface d’administration de DECAP CMS, coller dedans :&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot; /&amp;gt;
-  &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot; /&amp;gt;
-  &amp;lt;meta name=&amp;quot;robots&amp;quot; content=&amp;quot;noindex&amp;quot; /&amp;gt;
-  &amp;lt;script src=&amp;quot;https://identity.netlify.com/v1/netlify-identity-widget.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-  &amp;lt;title&amp;gt;Content Manager&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-  &amp;lt;!-- Include the script that builds the page and powers Decap CMS --&amp;gt;
-  &amp;lt;script src=&amp;quot;https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&quot;5&quot;&gt;
-&lt;li&gt;&lt;code&gt;config.yml&lt;/code&gt; est le coeur de la configuration du CMS : il permet de créer les différents champs de saisie et de paramétrer le fonctionnement global du CMS, coller dedans :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;local_backend: true # Si besoin d&#39;utiliser le CMS en localhost, si site déjà déployé supprimer cette ligne
-
-backend:
-  name: git-gateway
-
-
-# These lines should *not* be indented
-media_folder: &amp;quot;static/uploads&amp;quot;  # Media files will be stored in the repo under static/uploads
-public_folder: &amp;quot;/uploads&amp;quot;  # The src attribute for uploaded media will begin with /uploads
-
-collections:
-  - name: &amp;quot;articles&amp;quot;  # Used in routes, e.g., /admin/collections/articles
-    label: &amp;quot;Articles&amp;quot;  # Displayed in the UI
-    folder: &amp;quot;src/articles&amp;quot;  # The path to the folder where the documents are stored
-    create: true  # Allow users to create new documents in this collection
-    slug: &amp;quot;&amp;quot;  # Filename template, e.g., title.md
-    fields: 
-      - { label: &amp;quot;Layout&amp;quot;, name: &amp;quot;layout&amp;quot;, widget: &amp;quot;hidden&amp;quot;, default: &amp;quot;blog&amp;quot; }
-      - { label: &amp;quot;Title&amp;quot;, name: &amp;quot;title&amp;quot;, widget: &amp;quot;string&amp;quot; }
-      - { label: &amp;quot;Description&amp;quot;, name: &amp;quot;description&amp;quot;, widget: &amp;quot;string&amp;quot; }
-      - { label: &amp;quot;Publish Date&amp;quot;, name: &amp;quot;date&amp;quot;, widget: &amp;quot;datetime&amp;quot; }
-      - { label: &amp;quot;Featured Photo&amp;quot;, name: &amp;quot;featured&amp;quot;, widget: &amp;quot;image&amp;quot;, required: false }
-      - { label: &amp;quot;Body&amp;quot;, name: &amp;quot;body&amp;quot;, widget: &amp;quot;markdown&amp;quot; }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&quot;6&quot;&gt;
-&lt;li&gt;
-&lt;p&gt;A partir d’ici il est nécessaire de déployer le site sur Netlify même pour faire simplement fonctionner le CMS en localhost&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Dans la configuration sur le site de Netlify il faut commencer par activer “l’identity” pour permettre aux futurs utilisateurs d’utiliser le CMS :&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/netlify-identity.png&quot; alt=&quot;Activation identity Netlify&quot; /&gt;&lt;figcaption&gt;Activation identity Netlify&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;ol start=&quot;8&quot;&gt;
-&lt;li&gt;Puis il faut enregistrer Github comme provider :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/github-provider.png&quot; alt=&quot;Activation de Github provider sous Netlify&quot; /&gt;&lt;figcaption&gt;Activation de Github provider sous Netlify&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;ol start=&quot;9&quot;&gt;
-&lt;li&gt;Dernière étape de la configuration Netlify : l’activation de Git-Gateway pour permettre à Github de communiquer avec notre CMS&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/git-gateway.png&quot; alt=&quot;Activation de Git-gateway sous Netlify&quot; /&gt;&lt;figcaption&gt;Activation de Git-gateway sous Netlify&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;ol start=&quot;10&quot;&gt;
-&lt;li&gt;
-&lt;p&gt;Pour lancer DECAP CMS en localhost il faut le lancer &lt;strong&gt;en parallèle&lt;/strong&gt; du serveur de développement. Donc un premier terminal avec &lt;code&gt;npm run dev&lt;/code&gt; pour lancer le serveur de développement classique de votre site et un second terminal avec &lt;code&gt;npx decap-server&lt;/code&gt;. Si les 2 ne sont pas run en parallel, il ne sera pas possible d’accéder à Decap CMS en localhost, celui-ci renverra constamment vers la version déployée.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Se rendre sur la page d’adminstration du CMS à partir de votre serveur de developpement local “&lt;a href=&quot;http://localhost:5173/admin/index.html&quot;&gt;http://localhost:5173/admin/index.html&lt;/a&gt;”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Permettre la connexion via Github&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/demande-connexion-decap.png&quot; alt=&quot;Demande de première connexion DECAP CMS&quot; /&gt;&lt;figcaption&gt;Demande de première connexion DECAP CMS&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/netlify-login-cms.png&quot; alt=&quot;Autoriser la connexion via Github&quot; /&gt;&lt;figcaption&gt;Autoriser la connexion via Github&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;ol start=&quot;13&quot;&gt;
-&lt;li&gt;L’accès à l’interface d’administration est enfin possible&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/admin-decap.png&quot; alt=&quot;Interface d&#39;administration de DECAP CMS&quot; /&gt;&lt;figcaption&gt;Interface d’administration de DECAP CMS&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/creation-article-decap.png&quot; alt=&quot;Création d&#39;un article sous DECAP CMS&quot; /&gt;&lt;figcaption&gt;Création d’un article sous DECAP CMS&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;tina-cms&quot; tabindex=&quot;-1&quot;&gt;Tina CMS&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Interface d’édition en français&lt;/th&gt;
-&lt;th&gt;Pré-visualition de l’édition&lt;/th&gt;
-&lt;th&gt;Support d’authentification&lt;/th&gt;
-&lt;th&gt;Edition possible en localhost&lt;/th&gt;
-&lt;th&gt;Dépendance à une plateforme pour le déploiement&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Non&lt;/td&gt;
-&lt;td&gt;Non (à moins d’utiliser React)&lt;/td&gt;
-&lt;td&gt;Uniquement via des serverless functions de Vercel ou Netlify&lt;/td&gt;
-&lt;td&gt;Activé par défaut (0 config)&lt;/td&gt;
-&lt;td&gt;Tina Cloud gratuit pour déployer CMS jusqu’à 2 utilisateurs, possible de sinon de déployer sur toutes plateformes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4 id=&quot;philosophie-de-tina-cms&quot; tabindex=&quot;-1&quot;&gt;Philosophie de Tina CMS&lt;/h4&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token doctype&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;token doctype-tag&quot;&gt;doctype&lt;/span&gt; &lt;span class=&quot;token name&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;charset&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;utf-8&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;viewport&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;width=device-width, initial-scale=1.0&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;robots&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;noindex&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;https://identity.netlify.com/v1/netlify-identity-widget.js&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Content Manager&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- Include the script that builds the page and powers Decap CMS --&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+```yaml
+5. `config.yml` est le coeur de la configuration du CMS : il permet de créer les différents champs de saisie et de paramétrer le fonctionnement global du CMS, coller dedans : &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;local_backend: true # Si besoin d’utiliser le CMS en localhost, si site déjà déployé supprimer cette ligne&lt;/p&gt;
+&lt;p&gt;backend:
+name: git-gateway&lt;/p&gt;
+&lt;h1 id=&quot;these-lines-should-not-be-indented&quot; tabindex=&quot;-1&quot;&gt;These lines should &lt;em&gt;not&lt;/em&gt; be indented&lt;/h1&gt;
+&lt;p&gt;media_folder: “static/uploads”  # Media files will be stored in the repo under static/uploads
+public_folder: “/uploads”  # The src attribute for uploaded media will begin with /uploads&lt;/p&gt;
+&lt;p&gt;collections:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;API GraphQL fournie par défaut (requêtes sont pré-faites nativement en fonction du schéma de données)&lt;/li&gt;
-&lt;li&gt;très facile à installer mais nécessite dépendance NPM&lt;/li&gt;
-&lt;li&gt;customisation du CMS en fichier JS très simple via les objets&lt;/li&gt;
-&lt;li&gt;Tina cloud gratuit jusqu’à 2 utilisateurs pour ne pas avoir besoin de déployer le CMS&lt;/li&gt;
-&lt;li&gt;interface moderne et soignée&lt;/li&gt;
+&lt;li&gt;name: “articles”  # Used in routes, e.g., /admin/collections/articles
+label: “Articles”  # Displayed in the UI
+folder: “src/articles”  # The path to the folder where the documents are stored
+create: true  # Allow users to create new documents in this collection
+slug: “”  # Filename template, e.g., &lt;a href=&quot;http://title.md/&quot;&gt;title.md&lt;/a&gt;
+fields:
+&lt;ul&gt;
+&lt;li&gt;{ label: “Layout”, name: “layout”, widget: “hidden”, default: “blog” }&lt;/li&gt;
+&lt;li&gt;{ label: “Title”, name: “title”, widget: “string” }&lt;/li&gt;
+&lt;li&gt;{ label: “Description”, name: “description”, widget: “string” }&lt;/li&gt;
+&lt;li&gt;{ label: “Publish Date”, name: “date”, widget: “datetime” }&lt;/li&gt;
+&lt;li&gt;{ label: “Featured Photo”, name: “featured”, widget: “image”, required: false }&lt;/li&gt;
+&lt;li&gt;{ label: “Body”, name: “body”, widget: “markdown” }&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;comment-impl%C3%A9menter-tina-cms-%3F&quot; tabindex=&quot;-1&quot;&gt;Comment implémenter Tina CMS ?&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Installer la dernière version de Tina CMS via &lt;code&gt; npx @tinacms/cli@latest init&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Mettre à jour les scripts de lancement du serveur de développement local pour run en parallele le CMS&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt; &amp;quot;scripts&amp;quot;: {
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;
+6. A partir d&#39;ici il est nécessaire de déployer le site sur Netlify même pour faire simplement fonctionner le CMS en localhost
+
+7. Dans la configuration sur le site de Netlify il faut commencer par activer &amp;quot;l&#39;identity&amp;quot; pour permettre aux futurs utilisateurs d&#39;utiliser le CMS :
+
+![Activation identity Netlify](/img/netlify-identity.png &amp;quot;Activation identity Netlify&amp;quot;)
+
+8. Puis il faut enregistrer Github comme provider :
+
+![Activation de Github provider sous Netlify](/img/github-provider.png &amp;quot;Activation de Github provider sous Netlify&amp;quot;)
+
+9. Dernière étape de la configuration Netlify : l&#39;activation de Git-Gateway pour permettre à Github de communiquer avec notre CMS
+
+![Activation de Git-gateway sous Netlify](/img/git-gateway.png &amp;quot;Activation de Git-gateway sous Netlify&amp;quot;)
+
+10. Pour lancer DECAP CMS en localhost il faut le lancer **en parallèle** du serveur de développement. Donc un premier terminal avec `npm run dev` pour lancer le serveur de développement classique de votre site et un second terminal avec `npx decap-server`. Si les 2 ne sont pas run en parallel, il ne sera pas possible d&#39;accéder à Decap CMS en localhost, celui-ci renverra constamment vers la version déployée.
+
+11. Se rendre sur la page d&#39;adminstration du CMS à partir de votre serveur de developpement local &amp;quot;http://localhost:5173/admin/index.html&amp;quot;
+
+12. Permettre la connexion via Github
+
+![Demande de première connexion DECAP CMS](/img/demande-connexion-decap.png &amp;quot;Demande de première connexion DECAP CMS&amp;quot;)
+
+![Autoriser la connexion via Github](/img/netlify-login-cms.png &amp;quot;Autoriser la connexion via Github&amp;quot;)
+
+13. L&#39;accès à l&#39;interface d&#39;administration est enfin possible
+
+![Interface d&#39;administration de DECAP CMS](/img/admin-decap.png &amp;quot;Interface d&#39;administration de DECAP CMS&amp;quot;)
+
+![Création d&#39;un article sous DECAP CMS](/img/creation-article-decap.png &amp;quot;Création d&#39;un article sous DECAP CMS&amp;quot;)
+
+### Tina CMS
+
+| Interface d&#39;édition en français   | Pré-visualition de l&#39;édition | Support d&#39;authentification | Edition possible en localhost | Dépendance à une plateforme pour le déploiement |
+| -------- | ------- | ------- | ------- | ------- |
+| Non  | Non (à moins d&#39;utiliser React)    | Uniquement via des serverless functions de Vercel ou Netlify | Activé par défaut (0 config)  | Tina Cloud gratuit pour déployer CMS jusqu&#39;à 2 utilisateurs, possible de sinon de déployer sur toutes plateformes |
+
+#### Philosophie de Tina CMS
+- API GraphQL fournie par défaut (requêtes sont pré-faites nativement en fonction du schéma de données)
+- très facile à installer mais nécessite dépendance NPM
+- customisation du CMS en fichier JS très simple via les objets
+- Tina cloud gratuit jusqu&#39;à 2 utilisateurs pour ne pas avoir besoin de déployer le CMS
+- interface moderne et soignée
+
+#### Comment implémenter Tina CMS ?
+
+1. Installer la dernière version de Tina CMS via ` npx @tinacms/cli@latest init`
+
+2. Mettre à jour les scripts de lancement du serveur de développement local pour run en parallele le CMS
+```json
+ &amp;quot;scripts&amp;quot;: {
     &amp;quot;dev&amp;quot;: &amp;quot;tinacms dev -c &#92;&amp;quot;vite dev&#92;&amp;quot;&amp;quot;,
 		&amp;quot;build&amp;quot;: &amp;quot;tinacms build &amp;amp;&amp;amp; vite build&amp;quot;,
 		&amp;quot;preview&amp;quot;: &amp;quot;vite preview&amp;quot;
@@ -725,82 +691,81 @@ collections:
 &lt;ol start=&quot;4&quot;&gt;
 &lt;li&gt;Pour customiser les champs d’entrée il suffit de modifier l’objet ‘collections’ ./tina/config.js&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;import { defineConfig } from &amp;quot;tinacms&amp;quot;;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; defineConfig &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;tinacms&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-// Your hosting provider likely exposes this as an environment variable
-const branch =
-  process.env.GITHUB_BRANCH ||
-  process.env.VERCEL_GIT_COMMIT_REF ||
-  process.env.HEAD ||
-  &amp;quot;tina&amp;quot;;
+&lt;span class=&quot;token comment&quot;&gt;// Your hosting provider likely exposes this as an environment variable&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; branch &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;
+  process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;GITHUB_BRANCH&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt;
+  process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;VERCEL_GIT_COMMIT_REF&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt;
+  process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;HEAD&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;tina&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-export default defineConfig({
-  branch,
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;defineConfig&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  branch&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
 
-  // Get this from tina.io
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
-  token: process.env.TINA_TOKEN,
+  &lt;span class=&quot;token comment&quot;&gt;// Get this from tina.io&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;clientId&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NEXT_PUBLIC_TINA_CLIENT_ID&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// Get this from tina.io&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;token&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;TINA_TOKEN&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
 
-  build: {
-    outputFolder: &amp;quot;admin&amp;quot;,
-    publicFolder: &amp;quot;static&amp;quot;,
-  },
-  media: {
-    tina: {
-      mediaRoot: &amp;quot;&amp;quot;,
-      publicFolder: &amp;quot;static&amp;quot;,
-    },
-  },
-  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
-  schema: {
-    collections: [
-      {
-        name: &amp;quot;article&amp;quot;,
-        label: &amp;quot;Articles&amp;quot;,
-        path: &amp;quot;src/articles&amp;quot;,
-        fields: [
-          {
-            type: &amp;quot;string&amp;quot;,
-            name: &amp;quot;titre&amp;quot;,
-            label: &amp;quot;Titre&amp;quot;,
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: &amp;quot;string&amp;quot;,
-            name: &amp;quot;desc&amp;quot;,
-            label: &amp;quot;Description&amp;quot;,
-            required: true,
-          },
-          {
-            type: &#39;datetime&#39;,
-            name: &#39;date&#39;,
-            label: &#39;Date&#39;,
-            required: true,
-          },
-          {
-            type: &amp;quot;image&amp;quot;,
-            name: &amp;quot;image&amp;quot;,
-            label: &amp;quot;Image&amp;quot;,
-          },
-          {
-            type: &amp;quot;string&amp;quot;,
-            name: &amp;quot;imagealt&amp;quot;,
-            label: &amp;quot;Description de l&#39;image&amp;quot;
-          },
-          {
-            type: &amp;quot;rich-text&amp;quot;,
-            name: &amp;quot;body&amp;quot;,
-            label: &amp;quot;Corps de texte&amp;quot;,
-            isBody: true,
-          },
-        ],
-      },
-    ],
-  },
-});
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;outputFolder&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;admin&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;publicFolder&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;static&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;tina&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token literal-property property&quot;&gt;mediaRoot&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token literal-property property&quot;&gt;publicFolder&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;static&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;schema&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;collections&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token literal-property property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;article&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token literal-property property&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Articles&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token literal-property property&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;src/articles&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token literal-property property&quot;&gt;fields&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;titre&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Titre&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;isTitle&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;desc&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Description&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;datetime&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;date&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Date&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;image&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;image&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Image&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;imagealt&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Description de l&#39;image&quot;&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;rich-text&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Corps de texte&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token literal-property property&quot;&gt;isBody&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&quot;5&quot;&gt;
 &lt;li&gt;
 &lt;p&gt;Les champs créés viennent modifier l’API GraphQL, le CMS génère nativement les requêtes types dans le dossier &lt;code&gt;./tina/__generated__/client&lt;/code&gt;&lt;/p&gt;
@@ -810,24 +775,22 @@ export default defineConfig({
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Obtenir plusieurs articles et leur détails via blablablaConnection&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import { client } from &#39;../[pathToTina]/tina/__generated__/client&#39;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; client &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;../[pathToTina]/tina/__generated__/client&#39;&lt;/span&gt;
 
-const result = await client.queries.articleConnection();
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;queries&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;articleConnection&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-const {
-      data: {
-        articleConnection: { edges },
-      },
-    } = result;
-    console.log(edges)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token literal-property property&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token literal-property property&quot;&gt;articleConnection&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; edges &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;edges&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Obtenir un seul article et ses détails (mais indiquer son path est obligatoire)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import { client } from &#39;../[pathToTina]/tina/__generated__/client&#39;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; client &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;../[pathToTina]/tina/__generated__/client&#39;&lt;/span&gt;
 
-const myPost = await client.queries.post({ relativePath: &#39;HelloWorld.md&#39; })
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myPost &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;queries&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token literal-property property&quot;&gt;relativePath&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;HelloWorld.md&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
-console.log(myPost.data.title)
-&lt;/code&gt;&lt;/pre&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;myPost&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&quot;7&quot;&gt;
 &lt;li&gt;Les supports d’authentification nécessaire à la connexion pour les futurs utilisateurs avec le repo distant peuvent être configuré ultérieurement&lt;/li&gt;
 &lt;/ol&gt;
@@ -967,8 +930,7 @@ Il permet d’appliquer des éléments généraux à tous le document HTML et é
 &lt;a href=&quot;https://css-tricks.com/almanac/selectors/h/hover/&quot;&gt;:hover&lt;/a&gt;, les focus, un background-color sur la page… &lt;code&gt;!important&lt;/code&gt; est requis pour passer outre un inline style.&lt;/p&gt;
 &lt;h3 id=&quot;%C3%A9viter-les-r%C3%A9p%C3%A9titions-en-utilisant-le-m%C3%A9canisme-css-d%E2%80%99h%C3%A9ritage&quot; tabindex=&quot;-1&quot;&gt;Éviter les répétitions en utilisant le mécanisme CSS d’héritage&lt;/h3&gt;
 &lt;p&gt;Plutôt que de définir &lt;code&gt;font-family: &amp;quot;Gill Sans&amp;quot;, sans-serif;&lt;/code&gt; à chaque fois que l’on pose un &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; il est plus pratique d’utiliser l’héritage :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;body&amp;gt;  &amp;lt;div style=&amp;quot;font-size:16px; font-family: system-ui;&amp;quot;&amp;gt;    &amp;lt;!-- email content goes here --&amp;gt;  &amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token special-attr&quot;&gt;&lt;span class=&quot;token attr-name&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;token value css language-css&quot;&gt;&lt;span class=&quot;token property&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;16px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; system-ui&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;    &lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- email content goes here --&gt;&lt;/span&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;les-unit%C3%A9s&quot; tabindex=&quot;-1&quot;&gt;Les unités&lt;/h3&gt;
 &lt;p&gt;De longueur :
 Seuls les &lt;code&gt;rem&lt;/code&gt; et les &lt;code&gt;px&lt;/code&gt; sont supportés. On aura tendance à privilégier les &lt;code&gt;rem&lt;/code&gt; pour leur accessibilité naturelle en cas de zoom.
@@ -977,24 +939,22 @@ Seuls &lt;code&gt;#fffff&lt;/code&gt; et &lt;code&gt;rgb()&lt;/code&gt; sont sup
 &lt;h3 id=&quot;fonts&quot; tabindex=&quot;-1&quot;&gt;Fonts&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;@font-face&lt;/code&gt; n’est pas supporté, impossible donc d’utiliser une font de son choix. Il est impératif de passer par les &lt;code&gt;system-fonts&lt;/code&gt;, des polices d’écriture incluses nativement dans les OS.&lt;/p&gt;
 &lt;p&gt;Une règle à suivre de bonne pratique pour déclarer ses system-fonts :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;font-family: “Custom Serif You Won’t Have”, Serif You Might Have, Serif Your System Almost Definitely has, serif;
+&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token property&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; “Custom Serif You Won’t Have”&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Serif You Might Have&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Serif Your System Almost Definitely has&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; serif&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;token property&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; “Canela”&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Adobe Caslon Pro&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Palatino&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; serif&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Pour choisir la system-font qui correspond le mieux au design imaginé, essayez de choisir une system-font qui a une hauteur-de-x similaire.&lt;/p&gt;
 &lt;h3 id=&quot;rendre-les-images-responsive&quot; tabindex=&quot;-1&quot;&gt;Rendre les images responsive&lt;/h3&gt;
 &lt;p&gt;Par défaut les images vont overflow, pour contrer cela :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div
-    class=&amp;quot;img-block&amp;quot;
-    style=&amp;quot;overflow: hidden; margin-top: 2rem; border-radius: 0.5rem !important;&amp;quot;&amp;gt;
-        &amp;lt;img
-          style=&amp;quot;max-width: 100%; object-fit: cover;
-            display: block;&amp;quot;
-          src=&amp;quot;https://i.imgur.com/twfNOSU.jpg&amp;quot;
-          alt=&amp;quot;The Material Web Components website : a landing page explaining what is Material UI.&amp;quot;
-        /&amp;gt;
-    &amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;img-block&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token special-attr&quot;&gt;&lt;span class=&quot;token attr-name&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;token value css language-css&quot;&gt;&lt;span class=&quot;token property&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; hidden&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;margin-top&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 2rem&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 0.5rem &lt;span class=&quot;token important&quot;&gt;!important&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt;
+          &lt;span class=&quot;token special-attr&quot;&gt;&lt;span class=&quot;token attr-name&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;token value css language-css&quot;&gt;&lt;span class=&quot;token property&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 100%&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;object-fit&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; cover&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;https://i.imgur.com/twfNOSU.jpg&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;token attr-name&quot;&gt;alt&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;The Material Web Components website : a landing page explaining what is Material UI.&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Voici une illustration pratique de ce code :&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/email-images-responsives.png&quot; alt=&quot;Images responsives dans les clients mails&quot; /&gt;&lt;figcaption&gt;Illustration d’utilisation d’images responsives grâce à la technique ci-dessus dans un client mail&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;flexbox&quot; tabindex=&quot;-1&quot;&gt;Flexbox&lt;/h3&gt;
@@ -1007,10 +967,9 @@ font-family: “Canela”, Adobe Caslon Pro, Palatino, serif;
 &lt;p&gt;&lt;code&gt;position: relative&lt;/code&gt; et &lt;code&gt;position: absolute&lt;/code&gt; ne sont pas supportés du tout&lt;/p&gt;
 &lt;h3 id=&quot;liens&quot; tabindex=&quot;-1&quot;&gt;Liens&lt;/h3&gt;
 &lt;p&gt;Les clients mails scannent les adresses emails et les numéros de téléphone dans le contenu de vos mails et les transforment automatiquement en liens soulignés bleus. Pour contrer ces styles par défaut il faut les wrapper dans des &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; et enlever le style par défaut.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;a style=&amp;quot;color: inherit; text-decoration: none;&amp;quot; href=&amp;quot;&amp;quot;&amp;gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token special-attr&quot;&gt;&lt;span class=&quot;token attr-name&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;token value css language-css&quot;&gt;&lt;span class=&quot;token property&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; inherit&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;text-decoration&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; none&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 	some@example.com
-&amp;lt;/a&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&quot;cas-d%E2%80%99usage&quot; tabindex=&quot;-1&quot;&gt;Cas d’usage&lt;/h2&gt;
 &lt;p&gt;J’ai construit un site d’inscription et d’envoi de newsletter qui repose entièrement sur ces principes, voici le &lt;a href=&quot;https://www.teotimepacreau.fr/projets/projetnewsletter/&quot;&gt;lien du projet&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
@@ -1125,13 +1084,12 @@ SQLite est traditionnellement associé au développement d’applications Androi
 &lt;p&gt;On établit une &lt;em&gt;unité de mesure commune&lt;/em&gt; qui régit tous nos espacements et tailles.
 Pour la déterminer, la règle typographique communément admise est &lt;strong&gt;d’ajouter la hauteur de la ligne à la taille de la police d’écriture utilisée&lt;/strong&gt;. Cela crée notre &lt;em&gt;“unité de rythme”&lt;/em&gt; que l’on va moduler pour tous nos espacements/tailles.
 Notre base est la &lt;code&gt;line-eight&lt;/code&gt; des paragraphes couplée à la &lt;code&gt;font-size&lt;/code&gt; :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;p {
-  font-size: 1rem; /* =16px par défaut */
-  line-eight: 1.4;
-}
+&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 1rem&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* =16px par défaut */&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;line-eight&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 1.4&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 _____________
-16*1.4=22.4
-&lt;/code&gt;&lt;/pre&gt;
+16*1.4=22.4&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Notre &lt;em&gt;“unité de rythme”&lt;/em&gt; est 22.4. L’objectif est d’essayer que chaque espacement en soit le multiple.&lt;/p&gt;
 &lt;h3 id=&quot;exemple-concret-d%E2%80%99utilisation&quot; tabindex=&quot;-1&quot;&gt;Exemple concret d’utilisation&lt;/h3&gt;
 &lt;ul&gt;
@@ -1140,11 +1098,12 @@ _____________
 &lt;/ul&gt;
 &lt;p&gt;Un premier réflexe pourrait-être d’utiliser &lt;code&gt;font-size: 4rem;&lt;/code&gt;.
 Pourtant on veut que notre &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; soit 4 fois plus grand que notre &lt;em&gt;“unité de rythme”&lt;/em&gt; et non pas de notre taille de police. On module donc la font-size :&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;?*1.1=67.2
-&amp;lt;=&amp;gt;61.09*1.1=67.2
-
-On convertit 61.09px en rem : 16/61.09=3.81rem
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;p class=&quot;post-update&quot;&gt;
+  &lt;span&gt;Mise à jour du &lt;time datetime=&quot;Invalid Date&quot;&gt;Invalid Date&lt;/time&gt;&lt;/span&gt;
+?*1.1=67.2
+&lt;=&gt;61.09*1.1=67.2
+&lt;/p&gt;&lt;p&gt;On convertit 61.09px en rem : 16/61.09=3.81rem&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 &lt;h2 id=&quot;le-%E2%80%9Chibou-lobotomis%C3%A9%E2%80%9D-%3A-le-s%C3%A9lecteur-css-qui-fait-gagner-du-temps&quot; tabindex=&quot;-1&quot;&gt;Le “hibou lobotomisé” : le sélecteur CSS qui fait gagner du temps&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;* + *&lt;/code&gt;, &lt;a href=&quot;https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/&quot;&gt;autrement appelé le “hibou lobotomisé”&lt;/a&gt; est un formidable moyen de mettre en place une règle CSS anonyme et automatique pour faciliter la mise en page.&lt;/p&gt;
 &lt;ul&gt;
@@ -1154,15 +1113,13 @@ On convertit 61.09px en rem : 16/61.09=3.81rem
 &lt;p&gt;&lt;code&gt;article &amp;gt; * + *&lt;/code&gt; nous permet donc de cibler tous les éléments de notre article suivant directement d’autres éléments.&lt;/p&gt;
 &lt;h2 id=&quot;%E2%80%A6-et-une-touche-de-custom-properties&quot; tabindex=&quot;-1&quot;&gt;… et une touche de Custom Properties&lt;/h2&gt;
 &lt;p&gt;Les &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/--*&quot;&gt;Custom Properties&lt;/a&gt; permettent de déclarer des variables réutilisables. On en profite pour utiliser également la fonction “clamp” qui permet de switcher entre une valeur minimale, une valeur de circonstance et une valeur maximale. Cela permet à notre &lt;em&gt;unité de rythme&lt;/em&gt; d’évoluer en accord avec l’espace disponible.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;:root {
-  --baseline : clamp(1.4rem, 1.1200rem + 1.4000vw, 2.8rem);
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;:root&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;--baseline&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;clamp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;1.4rem&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 1.1200rem + 1.4000vw&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 2.8rem&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&quot;notre-espacement-automatique-pour-l%E2%80%99ensemble-du-site-en-2-lignes-de-code&quot; tabindex=&quot;-1&quot;&gt;Notre espacement automatique pour l’ensemble du site en 2 lignes de code&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;body &amp;gt; * + * {
-  margin-top: var(--baseline);
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;body &gt; * + *&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;margin-top&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--baseline&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Pourquoi utiliser seulement &lt;code&gt;margin-top&lt;/code&gt; ? Les marges peuvent, dans certains cas, entrer en collision et se soustraire. &lt;a href=&quot;https://cssfordesigners.com/articles/managing-vertical-margins-in-css&quot;&gt;En ne déclarant que &lt;code&gt;margin-top&lt;/code&gt; on évite cet inconvénient&lt;/a&gt;.&lt;/p&gt;
 </description>
       <pubDate>Sat, 26 Nov 2022 01:00:00 +0000</pubDate>

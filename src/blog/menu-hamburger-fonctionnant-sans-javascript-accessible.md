@@ -64,7 +64,7 @@ Quand on crée un menu hamburger, plusieurs règles d'UX s'imposent :
 
 L'API Popover est composée d'un attribut HTML `popover` à placer sur l'élément à faire flotter. On place, sur un un bouton d'ouverture un attribut `popovertarget` qui prend en valeur l'ID de notre élément flottant. On spécifie l'action via `popovertargetaction` : celle-ci peut prendre 3 valeurs `show`, `hide` ou `auto`.
 
-```
+```html
 <button popovertarget="mobile-navigation" popovertargetaction="show"></button>
 
 <nav popover id="mobile-navigation">
@@ -83,7 +83,7 @@ L'API Popover est composée d'un attribut HTML `popover` à placer sur l'éléme
 
 Il est possible de donner un style d'avant ouverture au popover via le sélecteur CSS `:popover-open` et la règle `@starting-style`. `@starting-style` est une nouvelle règle CSS qui permet de définir le style d'un élément _avant_ son entrée dans le champ. On donne ensuite un style à l'état ouvert dans `:popover-open`. Enfin on donne un style à l'état fermé directement dans l'attribut `[popover]`. La propriété `display` est dite "discrète" par nature : [cela signifie qu'elle ne peut pas être animée de façon native](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Pour pouvoir animer `display`, la propriété `transition-behavior: allow-discrete` est désormais prise en charge par tous les navigateurs sauf Firefox.
 
-```
+```css
 [popover] {
     left: 0;
     top: 0;
@@ -131,7 +131,7 @@ Il est possible de donner un style d'avant ouverture au popover via le sélecteu
 4. `aria-current="page"`. Permet de signifier sur quel page de la navigation se trouve actuellement l’utilisateur.
 5. `type=”button”`. Permet de s'assurer que le bouton ne tente pas de soumettre un formulaire (comportement par défaut). **Se place sur le bouton.**
 
-```
+```html
 <button
   popovertarget="mobile-navigation"
   popovertargetaction="show"

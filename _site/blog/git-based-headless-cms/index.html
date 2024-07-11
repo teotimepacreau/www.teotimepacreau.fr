@@ -9,6 +9,7 @@
  
 <!-- STYLE FOR CODE BLOCKS -->
 <link rel="stylesheet" href="/css/prism-duotone-forest.css" />
+<link rel="stylesheet" href="/css/partage.css" />
  
 
 <!-- Auto detection of the RSS feed for RSS readers -->
@@ -23,18 +24,6 @@
 <link rel="icon" href="/favicon/favicon.svg" />
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.svg" />
 <link rel="mask-icon" href="/favicon/favicon.svg" />
-<link
-  rel="apple-touch-startup-image"
-  href="/favicon/favicon.svg"
-  media="orientation: portrait"
-/>
-<link
-  rel="apple-touch-startup-image"
-  href="/favicon/favicon.svg"
-  media="orientation: landscape"
-/>
-<link rel="icon" type="image/x-icon" href="/favicon/favicon.svg" />
-<link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.svg" />
 
 <!--Theme-->
 <meta
@@ -51,6 +40,7 @@
 <!--Social-->
 <link href="https://twitter.com/teotimepacreau" rel="me"/>
 <link href="https://mastodon.design/@teotimepacreau" rel="me"/>
+<meta name="fediverse:creator" content="@teotimepacreau" />
 <meta name="generator" content="Eleventy"/>
 
 <!-- open graph tags -->
@@ -71,15 +61,8 @@
 <meta name="author" content="Téotime Pacreau" />
 <meta name="owner" content="Téotime Pacreau">
 
-<link
-fetchpriority="low"
-  rel="stylesheet"
-  type="text/css"
-  href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
-/>
-
 <!-- auto generator of OpenGraph images -->
-<meta property="og:image" content="/og-images/blog-git-based-headless-cms.png" />
+<meta property="og:image" content="/og-images/c8e8312b.png" />
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -196,7 +179,7 @@ fetchpriority="low"
 
         </header>
         <aside><nav class="table-of-content" aria-label="Table de contenu">
-        <ol><li><a href="#qu%E2%80%99est-ce-qu%E2%80%99un-cms-%3F">Qu’est-ce qu’un CMS ?</a></li><li><a href="#les-2-types-de-cms-%3A-traditionnel-et-headless">Les 2 types de CMS : traditionnel et headless</a></li><li><a href="#pourquoi-adosser-un-cms-headless-%C3%A0-git-%3F">Pourquoi adosser un CMS Headless à Git ?</a></li><li><a href="#cms-headless-git-based-conseill%C3%A9s">CMS Headless Git Based conseillés</a></li><li><a href="#comparaison-de-deux-cms-headless-git-based">Comparaison de deux CMS Headless Git based</a><ol><li><a href="#decap-cms">Decap CMS</a><ol><li><a href="#philosophie-de-decap-cms">Philosophie de DECAP CMS</a></li><li><a href="#comment-impl%C3%A9menter-decap-cms-%3F">Comment implémenter Decap CMS ?</a></li></ol></li></ol></li><li><a href="#sources">Sources</a></li></ol>
+        <ol><li><a href="#qu%E2%80%99est-ce-qu%E2%80%99un-cms-%3F">Qu’est-ce qu’un CMS ?</a></li><li><a href="#les-2-types-de-cms-%3A-traditionnel-et-headless">Les 2 types de CMS : traditionnel et headless</a></li><li><a href="#pourquoi-adosser-un-cms-headless-%C3%A0-git-%3F">Pourquoi adosser un CMS Headless à Git ?</a></li><li><a href="#cms-headless-git-based-conseill%C3%A9s">CMS Headless Git Based conseillés</a></li><li><a href="#comparaison-de-deux-cms-headless-git-based">Comparaison de deux CMS Headless Git based</a><ol><li><a href="#decap-cms">Decap CMS</a><ol><li><a href="#philosophie-de-decap-cms">Philosophie de DECAP CMS</a></li><li><a href="#comment-impl%C3%A9menter-decap-cms-%3F">Comment implémenter Decap CMS ?</a></li></ol></li><li><a href="#tina-cms">Tina CMS</a><ol><li><a href="#philosophie-de-tina-cms">Philosophie de Tina CMS</a></li><li><a href="#comment-impl%C3%A9menter-tina-cms-%3F">Comment implémenter Tina CMS ?</a></li></ol></li></ol></li><li><a href="#sources">Sources</a></li></ol>
       </nav></aside>
         <main class="post-main">
           <article id="post">
@@ -297,89 +280,111 @@ L’implémentation d’un CMS est donc particulièrement utile dans le dévelop
   <span class="token comment">&lt;!-- Include the script that builds the page and powers Decap CMS --></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-```yaml
-5. `config.yml` est le coeur de la configuration du CMS : il permet de créer les différents champs de saisie et de paramétrer le fonctionnement global du CMS, coller dedans : </code></pre>
-<p>local_backend: true # Si besoin d’utiliser le CMS en localhost, si site déjà déployé supprimer cette ligne</p>
-<p>backend:
-name: git-gateway</p>
-<h1 id="these-lines-should-not-be-indented" tabindex="-1">These lines should <em>not</em> be indented</h1>
-<p>media_folder: “static/uploads”  # Media files will be stored in the repo under static/uploads
-public_folder: “/uploads”  # The src attribute for uploaded media will begin with /uploads</p>
-<p>collections:</p>
-<ul>
-<li>name: “articles”  # Used in routes, e.g., /admin/collections/articles
-label: “Articles”  # Displayed in the UI
-folder: “src/articles”  # The path to the folder where the documents are stored
-create: true  # Allow users to create new documents in this collection
-slug: “”  # Filename template, e.g., <a href="http://title.md">title.md</a>
-fields:
-<ul>
-<li>{ label: “Layout”, name: “layout”, widget: “hidden”, default: “blog” }</li>
-<li>{ label: “Title”, name: “title”, widget: “string” }</li>
-<li>{ label: “Description”, name: “description”, widget: “string” }</li>
-<li>{ label: “Publish Date”, name: “date”, widget: “datetime” }</li>
-<li>{ label: “Featured Photo”, name: “featured”, widget: “image”, required: false }</li>
-<li>{ label: “Body”, name: “body”, widget: “markdown” }</li>
-</ul>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<ol start="5">
+<li><code>config.yml</code> est le coeur de la configuration du CMS : il permet de créer les différents champs de saisie et de paramétrer le fonctionnement global du CMS, coller dedans :</li>
+</ol>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">local_backend</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># Si besoin d'utiliser le CMS en localhost, si site déjà déployé supprimer cette ligne</span>
+
+<span class="token key atrule">backend</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> git<span class="token punctuation">-</span>gateway
+
+
+<span class="token comment"># These lines should *not* be indented</span>
+<span class="token key atrule">media_folder</span><span class="token punctuation">:</span> <span class="token string">"static/uploads"</span>  <span class="token comment"># Media files will be stored in the repo under static/uploads</span>
+<span class="token key atrule">public_folder</span><span class="token punctuation">:</span> <span class="token string">"/uploads"</span>  <span class="token comment"># The src attribute for uploaded media will begin with /uploads</span>
+
+<span class="token key atrule">collections</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">"articles"</span>  <span class="token comment"># Used in routes, e.g., /admin/collections/articles</span>
+    <span class="token key atrule">label</span><span class="token punctuation">:</span> <span class="token string">"Articles"</span>  <span class="token comment"># Displayed in the UI</span>
+    <span class="token key atrule">folder</span><span class="token punctuation">:</span> <span class="token string">"src/articles"</span>  <span class="token comment"># The path to the folder where the documents are stored</span>
+    <span class="token key atrule">create</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>  <span class="token comment"># Allow users to create new documents in this collection</span>
+    <span class="token key atrule">slug</span><span class="token punctuation">:</span> <span class="token string">""</span>  <span class="token comment"># Filename template, e.g., title.md</span>
+    <span class="token key atrule">fields</span><span class="token punctuation">:</span> 
+      <span class="token punctuation">-</span> <span class="token punctuation">{</span> <span class="token key atrule">label</span><span class="token punctuation">:</span> <span class="token string">"Layout"</span><span class="token punctuation">,</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">"layout"</span><span class="token punctuation">,</span> <span class="token key atrule">widget</span><span class="token punctuation">:</span> <span class="token string">"hidden"</span><span class="token punctuation">,</span> <span class="token key atrule">default</span><span class="token punctuation">:</span> <span class="token string">"blog"</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">-</span> <span class="token punctuation">{</span> <span class="token key atrule">label</span><span class="token punctuation">:</span> <span class="token string">"Title"</span><span class="token punctuation">,</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">"title"</span><span class="token punctuation">,</span> <span class="token key atrule">widget</span><span class="token punctuation">:</span> <span class="token string">"string"</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">-</span> <span class="token punctuation">{</span> <span class="token key atrule">label</span><span class="token punctuation">:</span> <span class="token string">"Description"</span><span class="token punctuation">,</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">"description"</span><span class="token punctuation">,</span> <span class="token key atrule">widget</span><span class="token punctuation">:</span> <span class="token string">"string"</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">-</span> <span class="token punctuation">{</span> <span class="token key atrule">label</span><span class="token punctuation">:</span> <span class="token string">"Publish Date"</span><span class="token punctuation">,</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">"date"</span><span class="token punctuation">,</span> <span class="token key atrule">widget</span><span class="token punctuation">:</span> <span class="token string">"datetime"</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">-</span> <span class="token punctuation">{</span> <span class="token key atrule">label</span><span class="token punctuation">:</span> <span class="token string">"Featured Photo"</span><span class="token punctuation">,</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">"featured"</span><span class="token punctuation">,</span> <span class="token key atrule">widget</span><span class="token punctuation">:</span> <span class="token string">"image"</span><span class="token punctuation">,</span> <span class="token key atrule">required</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">-</span> <span class="token punctuation">{</span> <span class="token key atrule">label</span><span class="token punctuation">:</span> <span class="token string">"Body"</span><span class="token punctuation">,</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">"body"</span><span class="token punctuation">,</span> <span class="token key atrule">widget</span><span class="token punctuation">:</span> <span class="token string">"markdown"</span> <span class="token punctuation">}</span></code></pre>
+<ol start="6">
+<li>
+<p>A partir d’ici il est nécessaire de déployer le site sur Netlify même pour faire simplement fonctionner le CMS en localhost</p>
 </li>
+<li>
+<p>Dans la configuration sur le site de Netlify il faut commencer par activer “l’identity” pour permettre aux futurs utilisateurs d’utiliser le CMS :</p>
+</li>
+</ol>
+<figure><img src="/img/netlify-identity.png" alt="Activation identity Netlify"><figcaption>Activation identity Netlify</figcaption></figure>
+<ol start="8">
+<li>Puis il faut enregistrer Github comme provider :</li>
+</ol>
+<figure><img src="/img/github-provider.png" alt="Activation de Github provider sous Netlify"><figcaption>Activation de Github provider sous Netlify</figcaption></figure>
+<ol start="9">
+<li>Dernière étape de la configuration Netlify : l’activation de Git-Gateway pour permettre à Github de communiquer avec notre CMS</li>
+</ol>
+<figure><img src="/img/git-gateway.png" alt="Activation de Git-gateway sous Netlify"><figcaption>Activation de Git-gateway sous Netlify</figcaption></figure>
+<ol start="10">
+<li>
+<p>Pour lancer DECAP CMS en localhost il faut le lancer <strong>en parallèle</strong> du serveur de développement. Donc un premier terminal avec <code>npm run dev</code> pour lancer le serveur de développement classique de votre site et un second terminal avec <code>npx decap-server</code>. Si les 2 ne sont pas run en parallel, il ne sera pas possible d’accéder à Decap CMS en localhost, celui-ci renverra constamment vers la version déployée.</p>
+</li>
+<li>
+<p>Se rendre sur la page d’adminstration du CMS à partir de votre serveur de developpement local “<a href="http://localhost:5173/admin/index.html">http://localhost:5173/admin/index.html</a>”</p>
+</li>
+<li>
+<p>Permettre la connexion via Github</p>
+</li>
+</ol>
+<figure><img src="/img/demande-connexion-decap.png" alt="Demande de première connexion DECAP CMS"><figcaption>Demande de première connexion DECAP CMS</figcaption></figure>
+<figure><img src="/img/netlify-login-cms.png" alt="Autoriser la connexion via Github"><figcaption>Autoriser la connexion via Github</figcaption></figure>
+<ol start="13">
+<li>L’accès à l’interface d’administration est enfin possible</li>
+</ol>
+<figure><img src="/img/admin-decap.png" alt="Interface d'administration de DECAP CMS"><figcaption>Interface d’administration de DECAP CMS</figcaption></figure>
+<figure><img src="/img/creation-article-decap.png" alt="Création d'un article sous DECAP CMS"><figcaption>Création d’un article sous DECAP CMS</figcaption></figure>
+<h3 id="tina-cms" tabindex="-1">Tina CMS</h3>
+<table>
+<thead>
+<tr>
+<th>Interface d’édition en français</th>
+<th>Pré-visualition de l’édition</th>
+<th>Support d’authentification</th>
+<th>Edition possible en localhost</th>
+<th>Dépendance à une plateforme pour le déploiement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Non</td>
+<td>Non (à moins d’utiliser React)</td>
+<td>Uniquement via des serverless functions de Vercel ou Netlify</td>
+<td>Activé par défaut (0 config)</td>
+<td>Tina Cloud gratuit pour déployer CMS jusqu’à 2 utilisateurs, possible de sinon de déployer sur toutes plateformes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="philosophie-de-tina-cms" tabindex="-1">Philosophie de Tina CMS</h4>
+<ul>
+<li>API GraphQL fournie par défaut (requêtes sont pré-faites nativement en fonction du schéma de données)</li>
+<li>très facile à installer mais nécessite dépendance NPM</li>
+<li>customisation du CMS en fichier JS très simple via les objets</li>
+<li>Tina cloud gratuit jusqu’à 2 utilisateurs pour ne pas avoir besoin de déployer le CMS</li>
+<li>interface moderne et soignée</li>
 </ul>
-<pre><code>
-6. A partir d'ici il est nécessaire de déployer le site sur Netlify même pour faire simplement fonctionner le CMS en localhost
-
-7. Dans la configuration sur le site de Netlify il faut commencer par activer &quot;l'identity&quot; pour permettre aux futurs utilisateurs d'utiliser le CMS :
-
-![Activation identity Netlify](/img/netlify-identity.png &quot;Activation identity Netlify&quot;)
-
-8. Puis il faut enregistrer Github comme provider :
-
-![Activation de Github provider sous Netlify](/img/github-provider.png &quot;Activation de Github provider sous Netlify&quot;)
-
-9. Dernière étape de la configuration Netlify : l'activation de Git-Gateway pour permettre à Github de communiquer avec notre CMS
-
-![Activation de Git-gateway sous Netlify](/img/git-gateway.png &quot;Activation de Git-gateway sous Netlify&quot;)
-
-10. Pour lancer DECAP CMS en localhost il faut le lancer **en parallèle** du serveur de développement. Donc un premier terminal avec `npm run dev` pour lancer le serveur de développement classique de votre site et un second terminal avec `npx decap-server`. Si les 2 ne sont pas run en parallel, il ne sera pas possible d'accéder à Decap CMS en localhost, celui-ci renverra constamment vers la version déployée.
-
-11. Se rendre sur la page d'adminstration du CMS à partir de votre serveur de developpement local &quot;http://localhost:5173/admin/index.html&quot;
-
-12. Permettre la connexion via Github
-
-![Demande de première connexion DECAP CMS](/img/demande-connexion-decap.png &quot;Demande de première connexion DECAP CMS&quot;)
-
-![Autoriser la connexion via Github](/img/netlify-login-cms.png &quot;Autoriser la connexion via Github&quot;)
-
-13. L'accès à l'interface d'administration est enfin possible
-
-![Interface d'administration de DECAP CMS](/img/admin-decap.png &quot;Interface d'administration de DECAP CMS&quot;)
-
-![Création d'un article sous DECAP CMS](/img/creation-article-decap.png &quot;Création d'un article sous DECAP CMS&quot;)
-
-### Tina CMS
-
-| Interface d'édition en français   | Pré-visualition de l'édition | Support d'authentification | Edition possible en localhost | Dépendance à une plateforme pour le déploiement |
-| -------- | ------- | ------- | ------- | ------- |
-| Non  | Non (à moins d'utiliser React)    | Uniquement via des serverless functions de Vercel ou Netlify | Activé par défaut (0 config)  | Tina Cloud gratuit pour déployer CMS jusqu'à 2 utilisateurs, possible de sinon de déployer sur toutes plateformes |
-
-#### Philosophie de Tina CMS
-- API GraphQL fournie par défaut (requêtes sont pré-faites nativement en fonction du schéma de données)
-- très facile à installer mais nécessite dépendance NPM
-- customisation du CMS en fichier JS très simple via les objets
-- Tina cloud gratuit jusqu'à 2 utilisateurs pour ne pas avoir besoin de déployer le CMS
-- interface moderne et soignée
-
-#### Comment implémenter Tina CMS ?
-
-1. Installer la dernière version de Tina CMS via ` npx @tinacms/cli@latest init`
-
-2. Mettre à jour les scripts de lancement du serveur de développement local pour run en parallele le CMS
-```json
- &quot;scripts&quot;: {
-    &quot;dev&quot;: &quot;tinacms dev -c \&quot;vite dev\&quot;&quot;,
-		&quot;build&quot;: &quot;tinacms build &amp;&amp; vite build&quot;,
-		&quot;preview&quot;: &quot;vite preview&quot;
-  }
-</code></pre>
+<h4 id="comment-impl%C3%A9menter-tina-cms-%3F" tabindex="-1">Comment implémenter Tina CMS ?</h4>
+<ol>
+<li>
+<p>Installer la dernière version de Tina CMS via <code> npx @tinacms/cli@latest init</code></p>
+</li>
+<li>
+<p>Mettre à jour les scripts de lancement du serveur de développement local pour run en parallele le CMS</p>
+</li>
+</ol>
+<pre class="language-json"><code class="language-json"> <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"tinacms dev -c \"vite dev\""</span><span class="token punctuation">,</span>
+		<span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"tinacms build &amp;&amp; vite build"</span><span class="token punctuation">,</span>
+		<span class="token property">"preview"</span><span class="token operator">:</span> <span class="token string">"vite preview"</span>
+  <span class="token punctuation">}</span></code></pre>
 <ol start="3">
 <li>Pour lancer Tina CMS et visiter la page d’administration il suffit de lancer la commande <code>npm run dev</code> et de visiter “<a href="http://localhost:5173/admin/index.html">http://localhost:5173/admin/index.html</a>”</li>
 </ol>
@@ -495,6 +500,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <a href="https://tina.io/docs/">https://tina.io/docs/</a></p>
 
           </article>
+          <div id="partage">
+          <h2>Partager avec votre réseau</h2>
+          <button id="partage-btn" type="button" aria-label="partager ce contenu">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M237.66,106.35l-80-80A8,8,0,0,0,144,32V72.35c-25.94,2.22-54.59,14.92-78.16,34.91-28.38,24.08-46.05,55.11-49.76,87.37a12,12,0,0,0,20.68,9.58h0c11-11.71,50.14-48.74,107.24-52V192a8,8,0,0,0,13.66,5.65l80-80A8,8,0,0,0,237.66,106.35ZM160,172.69V144a8,8,0,0,0-8-8c-28.08,0-55.43,7.33-81.29,21.8a196.17,196.17,0,0,0-36.57,26.52c5.8-23.84,20.42-46.51,42.05-64.86C99.41,99.77,127.75,88,152,88a8,8,0,0,0,8-8V51.32L220.69,112Z"></path></svg>
+            Partager
+          </button>
+          </div>
         </main>
         <footer id="footer">
           <address>
@@ -505,7 +517,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     >outlook.fr</a
   >
   <a id="rss" href="/feed/feed.xml">
-    <span aria-hidden="true" class="ph ph-rss"></span>
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--txt)" viewBox="0 0 256 256"><path d="M106.91,149.09A71.53,71.53,0,0,1,128,200a8,8,0,0,1-16,0,56,56,0,0,0-56-56,8,8,0,0,1,0-16A71.53,71.53,0,0,1,106.91,149.09ZM56,80a8,8,0,0,0,0,16A104,104,0,0,1,160,200a8,8,0,0,0,16,0A120,120,0,0,0,56,80Zm118.79,1.21A166.9,166.9,0,0,0,56,32a8,8,0,0,0,0,16A151,151,0,0,1,163.48,92.52,151,151,0,0,1,208,200a8,8,0,0,0,16,0A166.9,166.9,0,0,0,174.79,81.21ZM60,184a12,12,0,1,0,12,12A12,12,0,0,0,60,184Z"></path></svg>
     <span>RSS</span>
   </a>
 </address>
@@ -516,7 +528,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
       href="https://github.com/teotimepacreau"
       target="_blank" rel="me"
     >
-      <span aria-hidden="true" class="ph ph-github-logo"></span>
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--txt)" viewBox="0 0 256 256"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path></svg>
       <span>Github</span>
     </a>
   </li>
@@ -526,7 +538,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
       href="https://mastodon.design/@teotimepacreau"
       target="_blank" rel="me"
     >
-      <span aria-hidden="true" class="ph ph-mastodon-logo"></span>
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--txt)" viewBox="0 0 256 256"><path d="M184,32H72A40,40,0,0,0,32,72V192a40,40,0,0,0,40,40h88a8,8,0,0,0,0-16H72a24,24,0,0,1-24-24v-8H184a40,40,0,0,0,40-40V72A40,40,0,0,0,184,32Zm24,112a24,24,0,0,1-24,24H48V72A24,24,0,0,1,72,48H184a24,24,0,0,1,24,24Zm-24-40v32a8,8,0,0,1-16,0V104a16,16,0,0,0-32,0v32a8,8,0,0,1-16,0V104a16,16,0,0,0-32,0v32a8,8,0,0,1-16,0V104a32,32,0,0,1,56-21.13A32,32,0,0,1,184,104Z"></path></svg>
       <span>Mastodon</span>
     </a>
   </li>
@@ -536,7 +548,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
       href="https://www.linkedin.com/in/teotime-p-a1194b20a/"
       target="_blank" rel="me"
     >
-      <span aria-hidden="true" class="ph ph-linkedin-logo"></span>
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--txt)" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
       <span>LinkedIn</span>
     </a>
   </li>
@@ -577,5 +589,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <script fetchpriority="high" src="/scripts/colorTheme.js"></script>
 <script defer src="/scripts/aria-current.js"></script>
     <script defer src="/scripts/table.js"></script>
+    <script defer src="/scripts/share.js"></script>
   </body>
 </html>

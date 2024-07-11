@@ -88,9 +88,9 @@ Notre contenu prend forme au moyen de fichiers Markdown. Ceux-ci vont contenir t
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
-```yaml
-5. `config.yml` est le coeur de la configuration du CMS : il permet de créer les différents champs de saisie et de paramétrer le fonctionnement global du CMS, coller dedans : 
 ```
+5. `config.yml` est le coeur de la configuration du CMS : il permet de créer les différents champs de saisie et de paramétrer le fonctionnement global du CMS, coller dedans : 
+```yaml
 local_backend: true # Si besoin d'utiliser le CMS en localhost, si site déjà déployé supprimer cette ligne
 
 backend:

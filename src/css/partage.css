@@ -1,0 +1,35 @@
+#partage {
+    margin-top: calc(2*var(--baseline));
+    padding-top: calc(.5*var(--baseline))
+}
+
+#partage h2::after {
+    content: "";
+}
+
+#partage h2{
+   color: var(--txt);
+}
+#partage svg {
+    width: 1rem;
+    fill: var(--txt);
+}
+#partage button {
+    color: var(--txt);
+    border: 1px solid transparent;
+    border-radius: .1rem;
+    font-family: "Inter-Variable", sans-serif;
+    background-color: var(--bglighten20);
+    box-shadow: 1px 1px 1px 0px oklch(from var(--shadow) l c h / 7%);
+    margin-top: calc(.5*var(--baseline));
+    padding-inline: 2ex;
+    padding-block: .5ex;
+    display: flex;
+    gap: 1ex;
+    align-items: center;
+    transition: border-color .2s ease-out;
+    &:hover {
+        border-color: var(--txtlighten20);
+
+    }
+}

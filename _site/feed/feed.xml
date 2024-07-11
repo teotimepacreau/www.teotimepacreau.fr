@@ -601,89 +601,111 @@ L’implémentation d’un CMS est donc particulièrement utile dans le dévelop
   &lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- Include the script that builds the page and powers Decap CMS --&gt;&lt;/span&gt;
   &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-```yaml
-5. `config.yml` est le coeur de la configuration du CMS : il permet de créer les différents champs de saisie et de paramétrer le fonctionnement global du CMS, coller dedans : &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;local_backend: true # Si besoin d’utiliser le CMS en localhost, si site déjà déployé supprimer cette ligne&lt;/p&gt;
-&lt;p&gt;backend:
-name: git-gateway&lt;/p&gt;
-&lt;h1 id=&quot;these-lines-should-not-be-indented&quot; tabindex=&quot;-1&quot;&gt;These lines should &lt;em&gt;not&lt;/em&gt; be indented&lt;/h1&gt;
-&lt;p&gt;media_folder: “static/uploads”  # Media files will be stored in the repo under static/uploads
-public_folder: “/uploads”  # The src attribute for uploaded media will begin with /uploads&lt;/p&gt;
-&lt;p&gt;collections:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;name: “articles”  # Used in routes, e.g., /admin/collections/articles
-label: “Articles”  # Displayed in the UI
-folder: “src/articles”  # The path to the folder where the documents are stored
-create: true  # Allow users to create new documents in this collection
-slug: “”  # Filename template, e.g., &lt;a href=&quot;http://title.md/&quot;&gt;title.md&lt;/a&gt;
-fields:
-&lt;ul&gt;
-&lt;li&gt;{ label: “Layout”, name: “layout”, widget: “hidden”, default: “blog” }&lt;/li&gt;
-&lt;li&gt;{ label: “Title”, name: “title”, widget: “string” }&lt;/li&gt;
-&lt;li&gt;{ label: “Description”, name: “description”, widget: “string” }&lt;/li&gt;
-&lt;li&gt;{ label: “Publish Date”, name: “date”, widget: “datetime” }&lt;/li&gt;
-&lt;li&gt;{ label: “Featured Photo”, name: “featured”, widget: “image”, required: false }&lt;/li&gt;
-&lt;li&gt;{ label: “Body”, name: “body”, widget: “markdown” }&lt;/li&gt;
-&lt;/ul&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;&lt;code&gt;config.yml&lt;/code&gt; est le coeur de la configuration du CMS : il permet de créer les différents champs de saisie et de paramétrer le fonctionnement global du CMS, coller dedans :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;local_backend&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# Si besoin d&#39;utiliser le CMS en localhost, si site déjà déployé supprimer cette ligne&lt;/span&gt;
+
+&lt;span class=&quot;token key atrule&quot;&gt;backend&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; git&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;gateway
+
+
+&lt;span class=&quot;token comment&quot;&gt;# These lines should *not* be indented&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;media_folder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;static/uploads&quot;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# Media files will be stored in the repo under static/uploads&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;public_folder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/uploads&quot;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# The src attribute for uploaded media will begin with /uploads&lt;/span&gt;
+
+&lt;span class=&quot;token key atrule&quot;&gt;collections&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;articles&quot;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# Used in routes, e.g., /admin/collections/articles&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Articles&quot;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# Displayed in the UI&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;folder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;src/articles&quot;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# The path to the folder where the documents are stored&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# Allow users to create new documents in this collection&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;slug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# Filename template, e.g., title.md&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;fields&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Layout&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;layout&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;hidden&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;blog&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Title&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;string&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Description&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;string&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Publish Date&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;date&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;datetime&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Featured Photo&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;featured&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;image&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Body&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;markdown&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;A partir d’ici il est nécessaire de déployer le site sur Netlify même pour faire simplement fonctionner le CMS en localhost&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dans la configuration sur le site de Netlify il faut commencer par activer “l’identity” pour permettre aux futurs utilisateurs d’utiliser le CMS :&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/netlify-identity.png&quot; alt=&quot;Activation identity Netlify&quot; /&gt;&lt;figcaption&gt;Activation identity Netlify&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;ol start=&quot;8&quot;&gt;
+&lt;li&gt;Puis il faut enregistrer Github comme provider :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/github-provider.png&quot; alt=&quot;Activation de Github provider sous Netlify&quot; /&gt;&lt;figcaption&gt;Activation de Github provider sous Netlify&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;ol start=&quot;9&quot;&gt;
+&lt;li&gt;Dernière étape de la configuration Netlify : l’activation de Git-Gateway pour permettre à Github de communiquer avec notre CMS&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/git-gateway.png&quot; alt=&quot;Activation de Git-gateway sous Netlify&quot; /&gt;&lt;figcaption&gt;Activation de Git-gateway sous Netlify&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;ol start=&quot;10&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;Pour lancer DECAP CMS en localhost il faut le lancer &lt;strong&gt;en parallèle&lt;/strong&gt; du serveur de développement. Donc un premier terminal avec &lt;code&gt;npm run dev&lt;/code&gt; pour lancer le serveur de développement classique de votre site et un second terminal avec &lt;code&gt;npx decap-server&lt;/code&gt;. Si les 2 ne sont pas run en parallel, il ne sera pas possible d’accéder à Decap CMS en localhost, celui-ci renverra constamment vers la version déployée.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Se rendre sur la page d’adminstration du CMS à partir de votre serveur de developpement local “&lt;a href=&quot;http://localhost:5173/admin/index.html&quot;&gt;http://localhost:5173/admin/index.html&lt;/a&gt;”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Permettre la connexion via Github&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/demande-connexion-decap.png&quot; alt=&quot;Demande de première connexion DECAP CMS&quot; /&gt;&lt;figcaption&gt;Demande de première connexion DECAP CMS&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/netlify-login-cms.png&quot; alt=&quot;Autoriser la connexion via Github&quot; /&gt;&lt;figcaption&gt;Autoriser la connexion via Github&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;ol start=&quot;13&quot;&gt;
+&lt;li&gt;L’accès à l’interface d’administration est enfin possible&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/admin-decap.png&quot; alt=&quot;Interface d&#39;administration de DECAP CMS&quot; /&gt;&lt;figcaption&gt;Interface d’administration de DECAP CMS&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/creation-article-decap.png&quot; alt=&quot;Création d&#39;un article sous DECAP CMS&quot; /&gt;&lt;figcaption&gt;Création d’un article sous DECAP CMS&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;tina-cms&quot; tabindex=&quot;-1&quot;&gt;Tina CMS&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Interface d’édition en français&lt;/th&gt;
+&lt;th&gt;Pré-visualition de l’édition&lt;/th&gt;
+&lt;th&gt;Support d’authentification&lt;/th&gt;
+&lt;th&gt;Edition possible en localhost&lt;/th&gt;
+&lt;th&gt;Dépendance à une plateforme pour le déploiement&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Non&lt;/td&gt;
+&lt;td&gt;Non (à moins d’utiliser React)&lt;/td&gt;
+&lt;td&gt;Uniquement via des serverless functions de Vercel ou Netlify&lt;/td&gt;
+&lt;td&gt;Activé par défaut (0 config)&lt;/td&gt;
+&lt;td&gt;Tina Cloud gratuit pour déployer CMS jusqu’à 2 utilisateurs, possible de sinon de déployer sur toutes plateformes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;philosophie-de-tina-cms&quot; tabindex=&quot;-1&quot;&gt;Philosophie de Tina CMS&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;API GraphQL fournie par défaut (requêtes sont pré-faites nativement en fonction du schéma de données)&lt;/li&gt;
+&lt;li&gt;très facile à installer mais nécessite dépendance NPM&lt;/li&gt;
+&lt;li&gt;customisation du CMS en fichier JS très simple via les objets&lt;/li&gt;
+&lt;li&gt;Tina cloud gratuit jusqu’à 2 utilisateurs pour ne pas avoir besoin de déployer le CMS&lt;/li&gt;
+&lt;li&gt;interface moderne et soignée&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;
-6. A partir d&#39;ici il est nécessaire de déployer le site sur Netlify même pour faire simplement fonctionner le CMS en localhost
-
-7. Dans la configuration sur le site de Netlify il faut commencer par activer &amp;quot;l&#39;identity&amp;quot; pour permettre aux futurs utilisateurs d&#39;utiliser le CMS :
-
-![Activation identity Netlify](/img/netlify-identity.png &amp;quot;Activation identity Netlify&amp;quot;)
-
-8. Puis il faut enregistrer Github comme provider :
-
-![Activation de Github provider sous Netlify](/img/github-provider.png &amp;quot;Activation de Github provider sous Netlify&amp;quot;)
-
-9. Dernière étape de la configuration Netlify : l&#39;activation de Git-Gateway pour permettre à Github de communiquer avec notre CMS
-
-![Activation de Git-gateway sous Netlify](/img/git-gateway.png &amp;quot;Activation de Git-gateway sous Netlify&amp;quot;)
-
-10. Pour lancer DECAP CMS en localhost il faut le lancer **en parallèle** du serveur de développement. Donc un premier terminal avec `npm run dev` pour lancer le serveur de développement classique de votre site et un second terminal avec `npx decap-server`. Si les 2 ne sont pas run en parallel, il ne sera pas possible d&#39;accéder à Decap CMS en localhost, celui-ci renverra constamment vers la version déployée.
-
-11. Se rendre sur la page d&#39;adminstration du CMS à partir de votre serveur de developpement local &amp;quot;http://localhost:5173/admin/index.html&amp;quot;
-
-12. Permettre la connexion via Github
-
-![Demande de première connexion DECAP CMS](/img/demande-connexion-decap.png &amp;quot;Demande de première connexion DECAP CMS&amp;quot;)
-
-![Autoriser la connexion via Github](/img/netlify-login-cms.png &amp;quot;Autoriser la connexion via Github&amp;quot;)
-
-13. L&#39;accès à l&#39;interface d&#39;administration est enfin possible
-
-![Interface d&#39;administration de DECAP CMS](/img/admin-decap.png &amp;quot;Interface d&#39;administration de DECAP CMS&amp;quot;)
-
-![Création d&#39;un article sous DECAP CMS](/img/creation-article-decap.png &amp;quot;Création d&#39;un article sous DECAP CMS&amp;quot;)
-
-### Tina CMS
-
-| Interface d&#39;édition en français   | Pré-visualition de l&#39;édition | Support d&#39;authentification | Edition possible en localhost | Dépendance à une plateforme pour le déploiement |
-| -------- | ------- | ------- | ------- | ------- |
-| Non  | Non (à moins d&#39;utiliser React)    | Uniquement via des serverless functions de Vercel ou Netlify | Activé par défaut (0 config)  | Tina Cloud gratuit pour déployer CMS jusqu&#39;à 2 utilisateurs, possible de sinon de déployer sur toutes plateformes |
-
-#### Philosophie de Tina CMS
-- API GraphQL fournie par défaut (requêtes sont pré-faites nativement en fonction du schéma de données)
-- très facile à installer mais nécessite dépendance NPM
-- customisation du CMS en fichier JS très simple via les objets
-- Tina cloud gratuit jusqu&#39;à 2 utilisateurs pour ne pas avoir besoin de déployer le CMS
-- interface moderne et soignée
-
-#### Comment implémenter Tina CMS ?
-
-1. Installer la dernière version de Tina CMS via ` npx @tinacms/cli@latest init`
-
-2. Mettre à jour les scripts de lancement du serveur de développement local pour run en parallele le CMS
-```json
- &amp;quot;scripts&amp;quot;: {
-    &amp;quot;dev&amp;quot;: &amp;quot;tinacms dev -c &#92;&amp;quot;vite dev&#92;&amp;quot;&amp;quot;,
-		&amp;quot;build&amp;quot;: &amp;quot;tinacms build &amp;amp;&amp;amp; vite build&amp;quot;,
-		&amp;quot;preview&amp;quot;: &amp;quot;vite preview&amp;quot;
-  }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;comment-impl%C3%A9menter-tina-cms-%3F&quot; tabindex=&quot;-1&quot;&gt;Comment implémenter Tina CMS ?&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Installer la dernière version de Tina CMS via &lt;code&gt; npx @tinacms/cli@latest init&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mettre à jour les scripts de lancement du serveur de développement local pour run en parallele le CMS&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt; &lt;span class=&quot;token property&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;dev&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;tinacms dev -c &#92;&quot;vite dev&#92;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		&lt;span class=&quot;token property&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;tinacms build &amp;amp;&amp;amp; vite build&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		&lt;span class=&quot;token property&quot;&gt;&quot;preview&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;vite preview&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&quot;3&quot;&gt;
 &lt;li&gt;Pour lancer Tina CMS et visiter la page d’administration il suffit de lancer la commande &lt;code&gt;npm run dev&lt;/code&gt; et de visiter “&lt;a href=&quot;http://localhost:5173/admin/index.html&quot;&gt;http://localhost:5173/admin/index.html&lt;/a&gt;”&lt;/li&gt;
 &lt;/ol&gt;

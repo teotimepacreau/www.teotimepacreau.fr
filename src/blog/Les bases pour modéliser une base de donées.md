@@ -19,9 +19,8 @@ eleventyComputed:
       name: "Teotime Pacreau"
     published: "{{ date }}"
 ---
-{% update %}
+** DISCLAIMER **
 Cet article aborde une approche de modélisation dite MLD (Modèle Logique de Données) par souci de simplicité. Il existe de nombreuses autres méthodes et approches qui font varier la complexité.
-{% endupdate %}
 
 ## Préfigurer un modèle de données
 Prenons l'exemple d'une sollicitation d'un service marketing qui procède à des enquêtes de satisfaction client. Celui-ci souhaite sortir de son modèle traditionnel de récolte de questionnaire de satisfaction papier puis traitement sous tableur. Le service exprime le besoin de centraliser les réponses obtenues et d'automatiser l'envoi d'enquêtes par mail.

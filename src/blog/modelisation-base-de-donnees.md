@@ -80,8 +80,8 @@ Un attribut qui possède plusieurs sous-attributs devient automatiquement une en
 Cardinalité de 1,1 dans les deux sens d’une relation signifie que la relation est fantôme donc il faut fusionner les 2 entités en une seule et supprimer la relation.
 Cardinalité avec `n` en maximum dans les deux sens signifie qu’il faut ajouter une table de liaison composée uniquement de 2 clés étrangères faisant référence aux clés primaires des 2 entités.
 ## Sources
-https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3DOxJo051TMr8&ved=2ahUKEwjC8sjjwtaHAxVaVaQEHQYbN9oQwqsBegQIEhAF&usg=AOvVaw0s33csR82DcvsRZM8oKPjw
+<https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3DOxJo051TMr8&ved=2ahUKEwjC8sjjwtaHAxVaVaQEHQYbN9oQwqsBegQIEhAF&usg=AOvVaw0s33csR82DcvsRZM8oKPjw/>
 
-https://fr.wikiversity.org/wiki/Introduction_aux_syst%C3%A8mes_de_bases_de_donn%C3%A9es/Introduction
+<https://fr.wikiversity.org/wiki/Introduction_aux_syst%C3%A8mes_de_bases_de_donn%C3%A9es/Introduction/>
 
-https://www.base-de-donnees.com/mld/
+<https://www.base-de-donnees.com/mld/>

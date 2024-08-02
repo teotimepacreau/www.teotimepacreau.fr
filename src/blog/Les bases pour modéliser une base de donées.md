@@ -53,6 +53,7 @@ La méthode pour les schématiser est de toujours exprimer un minimum : "Une Enq
 Ces cardinalités sont précieuses car elles nous permettront de vérifier la qualité de notre modèle grâce à des règles de normalisation.
 ## Comment schématiser facilement notre Modèle Logique de Données  
 J'utilise l'outil gratuit en ligne [Draw.io](https://app.diagrams.net/) qui a un sous-menu dédié "Relation entre les éléments".
+
 ![Interface de Draw.io](/img/interface_drawio.png "Interface de Draw.io, volet latéral composé du sous-menu relation entre les éléments")
 
 Reprenons notre exemple mentionné en introduction : **"des chefs de projets marketing sont en charge de l'élaboration d'enquêtes clients." -> on comprend qu'il nous faut une entité "enquête" ainsi qu'une entité "chefs de projet marketing".**

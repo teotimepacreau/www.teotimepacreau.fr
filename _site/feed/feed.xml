@@ -9,10 +9,9 @@
 	<category>Blog</category>
 	<generator>Eleventy</generator>
     <item>
-      <title></title>
+      <title>Les bases pour modéliser une base de données</title>
       <link>https://www.teotimepacreau.fr/blog/Les%20bases%20pour%20mod%C3%A9liser%20une%20base%20de%20don%C3%A9es/</link>
-      <description>&lt;p&gt;Quelle méthode pour conceptualiser une base de données à partir d’une simple expression de besoins ?&lt;/p&gt;
-  &lt;p class=&quot;post-update&quot;&gt;
+      <description>  &lt;p class=&quot;post-update&quot;&gt;
   &lt;span&gt;Mise à jour du &lt;time datetime=&quot;Invalid Date&quot;&gt;Invalid Date&lt;/time&gt;&lt;/span&gt;
 Cet article aborde une approche de modélisation dite MLD (Modèle Logique de Données) par souci de simplicité. Il existe de nombreuses autres méthodes et approches qui font varier la complexité.
 &lt;/p&gt;
@@ -65,7 +64,7 @@ Cardinalité avec &lt;code&gt;n&lt;/code&gt; en maximum dans les deux sens signi
 &lt;p&gt;&lt;a href=&quot;https://fr.wikiversity.org/wiki/Introduction_aux_syst%C3%A8mes_de_bases_de_donn%C3%A9es/Introduction&quot;&gt;https://fr.wikiversity.org/wiki/Introduction_aux_systèmes_de_bases_de_données/Introduction&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.base-de-donnees.com/mld/&quot;&gt;https://www.base-de-donnees.com/mld/&lt;/a&gt;&lt;/p&gt;
 </description>
-      <pubDate>Fri, 02 Aug 2024 19:55:51 +0000</pubDate>
+      <pubDate>Fri, 02 Aug 2024 02:00:00 +0000</pubDate>
       <dc:creator>Téotime Pacreau</dc:creator>
       <guid>https://www.teotimepacreau.fr/blog/Les%20bases%20pour%20mod%C3%A9liser%20une%20base%20de%20don%C3%A9es/</guid>
     </item>

@@ -1,5 +1,24 @@
-Quelle méthode pour conceptualiser une base de données à partir d'une simple expression de besoins ?
-
+---
+title: "Les bases pour modéliser une base de données"
+date: "2024-08-02"
+description: "Quelle méthode pour conceptualiser une base de données à partir d'une simple expression de besoins ?"
+tags: 
+  - 'Base de donnéess'
+layout: blogpost_layout.njk
+eleventyComputed:
+  meta:
+    site:
+      name: "{{ metadata.title }}"
+      description: "{{ metadata.description }}"
+      url: "{{ metadata.url }}"
+    title: "{{ title }}"
+    description: "{{ description }}"
+    image:
+      src: "{% if image %}{{ metadata.url }}{{ image }}{% endif %}"
+    author:
+      name: "Teotime Pacreau"
+    published: "{{ date }}"
+---
 {% update %}
 Cet article aborde une approche de modélisation dite MLD (Modèle Logique de Données) par souci de simplicité. Il existe de nombreuses autres méthodes et approches qui font varier la complexité.
 {% endupdate %}

@@ -1,5 +1,6 @@
 ---
 title: "Héberger soi-même des applications en ayant peu de connaissances DevOps"
+type: "Article"
 date: '2024-04-04'
 description: "Pour sortir des solutions propriétaires, héberger soi-même est la clé. Mais comment faire quand on a peu de connaissances en réseau, Linux et Docker ?"
 tags: 

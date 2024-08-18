@@ -7,15 +7,15 @@
     }
 
     .card {
-        padding: 24px 96px;
+        padding: 48px 96px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
     .card svg {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 
     .title {
@@ -24,14 +24,20 @@
         letter-spacing: -.12rem;
         line-height: 1.3;
     }
+    time {
+        color: #752a04;
+        opacity: .9;
+        font-weight: 300;
+    }
 </style>
 
 <div class="background">
     <div class="card">
+        <time>{{ date }}</time>
         <h1 class="title">{{ title }}</h1>
         <svg width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="3" width="444" height="444" rx="222" fill="#C3E2FF"/>
-            <rect x="3" y="3" width="444" height="444" rx="222" stroke="#752A04" stroke-width="6"/>
+            {# <rect x="3" y="3" width="444" height="444" rx="222" fill="#C3E2FF"/> #}
+            {# <rect x="3" y="3" width="444" height="444" rx="222" stroke="#752A04" stroke-width="4"/> #}
             <circle cx="150" cy="300" r="75" fill="#752A04" stroke="#752A04" stroke-width="2"/>
             <circle cx="300" cy="150" r="75" fill="#752A04" stroke="#752A04" stroke-width="2"/>
             <path d="M306.818 245.455C344.474 245.455 375 272.928 375 306.818" stroke="#752A04" stroke-width="2"/>

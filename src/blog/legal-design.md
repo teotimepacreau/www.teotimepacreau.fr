@@ -1,5 +1,6 @@
 ---
 title: "Le legal design : qu'est-ce que c'est ?"
+type: "Article"
 date: "2024-01-20"
 description: "Découverte des enjeux de simplification et d'accessibilité des normes juridiques."
 tags: 

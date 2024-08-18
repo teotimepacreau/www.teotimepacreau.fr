@@ -1,5 +1,6 @@
 ---
 title: 'Emails HTML modernes : en finir avec les <table>'
+type: "Article"
 date: '2023-12-13'
 description: "Comment mettre à jour ses pratiques de développement d'emails HTML dans l'environnement complexe et changeant des clients mails ?"
 tags: 

@@ -1,5 +1,6 @@
 ---
 title: "Les bases pour modéliser une base de données"
+type: "Article"
 date: "2024-08-02"
 description: "Quelle méthode pour conceptualiser une base de données à partir d'une simple expression de besoins ?"
 tags: 

@@ -1,5 +1,6 @@
 ---
 title: "Le mémo à 6 pages d'Amazon"
+type: "Article"
 date: '2024-04-29'
 description: "Comment la culture de l'écrit d'Amazon garantie-t-elle son efficacité ?"
 tags: 

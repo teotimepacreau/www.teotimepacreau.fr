@@ -1,5 +1,6 @@
 ---
 title: "Synchroniser un repo Github avec Gitlab"
+type: "Article"
 date: '2024-06-04'
 updatedate: '2024-06-16'
 tags: 

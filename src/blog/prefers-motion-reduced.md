@@ -1,5 +1,6 @@
 ---
 title: "Accessibilité & animations : laisser la main à l'utilisateur avec prefers-reduced-motion"
+type: "Article"
 date: '2024-03-17'
 description: "Certains utilisateurs peuvent ressentir une gêne face aux animations des pages web. Prefers-reduced-motion détecte si l'utilisateur a demandé au système de minimiser la quantité d'animation ou de mouvement."
 tags: 

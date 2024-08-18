@@ -1,5 +1,6 @@
 ---
 title: "Créer un menu hamburger fonctionnant sans Javascript grâce à Popover API"
+type: "Article"
 date: "2024-05-23"
 description: "Comment construire un menu hamburger de navigation accessible à tous en respectant l'amélioration progressive ?"
 tags:

@@ -4,7 +4,7 @@ type: "Article"
 date: "2024-08-02"
 description: "Quelle méthode pour conceptualiser une base de données à partir d'une simple expression de besoins ?"
 tags: 
-  - 'Base de donnéess'
+  - 'Base de données'
 layout: blogpost_layout.njk
 eleventyComputed:
   meta:

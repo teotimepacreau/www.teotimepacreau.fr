@@ -73,6 +73,8 @@ module.exports = function (eleventyConfig) {
           style: "normal",
         },
       ],
+      width: 448,
+    height: 256,
     },
   });
 

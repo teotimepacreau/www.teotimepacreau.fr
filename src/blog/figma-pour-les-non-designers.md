@@ -45,9 +45,15 @@ Typiquement, la solution courante est de présenter un diapo PowerPoint. Cependa
 Figma est idéal pour présenter du contenu en vue "big picture" (en affichant tous les éléments sur la page de façon dézoomée) et permet d'aller profondément dans le détail via le zoom infini. L'outil permet de faire facilement des allers et retours entre les morceaux de contenu que l'on souhaite présenter.
 
 ### Très pratique pour collecter les feedback
-Une grande partie du travail de consultant nécessite des allers et retours avec le commanditaire pour affiner le travail fourni via des observations. Les blocs de commentaires des éditeurs de texte type Word sont souvent utilisés pour y répondre : on selectionne une portion de texte et l'on y adjoint un commentaire. Est-ce réellement efficace ? Il y a besoin d'allers-retours du document qui fotn perdre du temps quand il ne s'agit pas d'éditeur de texte collaboratif en ligne type Google Docs. Et comment faire quand j'ai non pas une observation textuelle à ajouter mais un autre document vers lequel pointer ?
+Une grande partie du travail de consultant nécessite des allers et retours avec le commanditaire pour affiner le travail fourni via des observations. Les blocs de commentaires des éditeurs de texte type Word sont souvent utilisés pour y répondre : on selectionne une portion de texte et l'on y adjoint un commentaire. Est-ce réellement efficace ? Il y a besoin d'allers-retours du document qui font perdre du temps quand il ne s'agit pas d'éditeur de texte collaboratif en ligne type Google Docs. Et comment faire quand j'ai non pas une observation textuelle à ajouter mais un autre document vers lequel pointer ?
 
-![L'interface de commentaires Word](/img/commentaires_word.png "Capture d'écran d'un atelier collaboratif sur Figjam")
+![L'interface de commentaires Word](/img/commentaires_word.png "Capture d'écran de l'interface de commentaires Word")
+
+Figma change totalement l'approche traditionnelle d'échange de feedback en permettant d'adjoindre des documents PDF, des images, des posts-it en plus des commentaires et de tracer physiquement des liens entres les annotations et les documents étudiés. De plus, pas de fichier à s'envoyer en boucle : le canva collaboratif se met à jour avec les ajouts. Le format canva ouvre de nouveaux horizons pour la collaboration et permet une finesse d'analyse que l'on peut difficilement atteindre avec une succession de commentaire d'éditeur de texte.
+
+Voici un exemple
+
+![Une analyse collaborative de document sur Figma](/img/analyse_collaborative_figma.png "Capture d'écran d'une analyse collaborative de document sur Figma : 8 pages de PDF sont annotées et liées à des posts-it, images et documents")
 
 ## Sources
 <https://www.youtube.com/watch?v=OxJo051TMr8/>

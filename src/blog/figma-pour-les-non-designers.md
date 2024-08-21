@@ -35,11 +35,19 @@ Ces outils fournissent des canvas collaboratifs - des espaces infinis et zoomabl
 <!-- Les "Travailleurs de la connaissance" (en anglais *Knowledge Workers*) -->
 
 ## Un Canva pour le travail stratégique
-Les travaux liés à la stratégie ou aux approches systémiques requièrent de présenter, de façon macro, la situation synthétique aux commanditaires :
+Les travaux liés à la stratégie ou aux approches type "consultant" requièrent de présenter, de façon macro, la situation synthétique aux commanditaires :
 {% blockquote "Tom Critchlow", "[Extrait d'article](https://newsletter.seomba.com/i/33888235/a-canvas-for-strategy-work)" %}
 The language of strategy is about “10,000ft view” or “birds eye view” or “bigger picture”. But which of our digital tools provide this big picture view? Typically, presentations…. except this linear flow of 16x9 rectangles is not the right tool for the job.
 {% endblockquote %}
 
+Typiquement, la solution courante est de présenter un diapo PowerPoint. Cependant, le flow linéaire des slides que l’on connaît tous a un [écueil majeur : la difficulté pour les auditeurs à comprendre où l’orateur veut en venir. Il est facile de se laisser happer par la façon dont sont présentées les informations plutôt que sur le fond. Le format invite naturellement à couper l’orateur pour poser des questions durant la présentation alors que la réponse peut-être inclus dans la slide d’après.](https://www.teotimepacreau.fr/blog/amazon-memo-6-pages/#:~:text=meetings%20non-n%C3%A9cessaires-,pourquoi%20powerpoint%20n%E2%80%99est%20pas%20efficace%20en%20reunion%20et%20banni%20par%20amazon,-From%3A%20Bezos%2C%20Jeff). Les slides ne sont donc pas l'outil adapté pour ce type de présentation.
+
+Figma est idéal pour présenter du contenu en vue "big picture" (en affichant tous les éléments sur la page de façon dézoomée) et permet d'aller profondément dans le détail via le zoom infini. L'outil permet de faire facilement des allers et retours entre les morceaux de contenu que l'on souhaite présenter.
+
+### Très pratique pour collecter les feedback
+Une grande partie du travail de consultant nécessite des allers et retours avec le commanditaire pour affiner le travail fourni via des observations. Les blocs de commentaires des éditeurs de texte type Word sont souvent utilisés pour y répondre : on selectionne une portion de texte et l'on y adjoint un commentaire. Est-ce réellement efficace ? Il y a besoin d'allers-retours du document qui fotn perdre du temps quand il ne s'agit pas d'éditeur de texte collaboratif en ligne type Google Docs. Et comment faire quand j'ai non pas une observation textuelle à ajouter mais un autre document vers lequel pointer ?
+
+![L'interface de commentaires Word](/img/commentaires_word.png "Capture d'écran d'un atelier collaboratif sur Figjam")
 
 ## Sources
 <https://www.youtube.com/watch?v=OxJo051TMr8/>

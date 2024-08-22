@@ -1126,7 +1126,7 @@ article > p > a:hover {
 }
 
 .tags-article-card a {
-  text-decoration: none;
+  color: var(--bg)!important;
 }
 
 .tags-article-card time {

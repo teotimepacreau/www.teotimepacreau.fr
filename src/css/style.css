@@ -980,7 +980,9 @@ h4 {
     content: "# / "";
   }
 }
-
+#post a {
+  word-break: break-all;
+}
 article > p > a:hover {
   text-decoration-thickness: 3px;
   text-decoration-skip-ink: none;

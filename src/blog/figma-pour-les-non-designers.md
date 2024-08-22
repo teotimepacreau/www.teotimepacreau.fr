@@ -61,7 +61,11 @@ Après avoir questionné et qualifié la commande avec le commanditaire, nous av
 - caractériser les évolutions introduites par la réorganisation avec les managers et d'esquisser des premières pistes d'actions correctrices.
 - récolter l'expression et le ressenti de l'ensemble des agents du service au sujet de la réorganisation et d'envisager des pistes d'amélioration puis prioriser les actions à engager.
 
-Il me fallait donc concevoir deux séminaires en construisant des outils sur-mesure et en ré-adaptant des outils de facilitation connus.
+Il me fallait donc concevoir deux séminaires en construisant des outils sur-mesure et en ré-adaptant des outils de facilitation connus. Après avoir segmenté les différents objectifs à atteindre dans les temps impartis, j'ai consulté la boîte à outils de facilitation [Utilo](https://www.utilo.org/outils/) en matchant les thématiques du guide aux buts identifiés des temps collectifs.
+
+![Thématiques du guide Utilo](/img/utilo.png "Capture d'écran de thématiques du guide Utilo")
+
+Pour adapter les outils et créer les supports qui manquent, j'utilise Figma. Lors du temps de validation avec le commanditaire préalable aux ateliers avec les équipes, il est très simple de présenter l'idée globale et le détail des outils graĉe au format en canva.
 
 ![Le canva de facilitation organisationnelle](/img/facilitation_organisationnelle.png "Canva de facilitation organisationnelle")
 

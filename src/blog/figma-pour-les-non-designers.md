@@ -22,16 +22,16 @@ eleventyComputed:
       name: "Teotime Pacreau"
     published: "{{ date }}"
 ---
-A mon arrivée chez [Etat'LIN, le laboratoire d'innovation publique de l'Etat en Pays de la Loire](https://www.modernisation.gouv.fr/laboratoires/etatlin), j'ai été intégré à une équipe de designers de service. L'une des premières choses qui m'a frappé est la capacité des designers à donner vie aux idées. Les réflexions s'accompagnent toujours d'une matérialisation sous forme de schéma ou de dessin qui sont ensuite accrochés aux murs pour obtenir une image claire de la situation en un coup d'oeil. Cela a pour effet de rendre tangible les intention et facilite l'alignement de l'équipe sur une idée.
+A mon arrivée chez [Etat'LIN, le laboratoire d'innovation publique de l'Etat en Pays de la Loire](https://www.modernisation.gouv.fr/laboratoires/etatlin), j'ai été intégré à une équipe de designers de service. L'une des premières choses qui m'a frappé est la capacité des designers à donner vie aux idées. Les réflexions s'accompagnent toujours d'une matérialisation sous forme de schéma ou de dessin qui sont ensuite accrochés aux murs pour obtenir une image claire de la situation en un coup d'oeil. Cela a pour effet de rendre tangible les intentions et facilite l'alignement de l'équipe sur une idée.
 Cette manière de procéder peut paraître habituelle pour ceux qui travaillent dans les milieux design. Mais pour moi, venant de métiers de gestion opérationnelle, cela semblait complètement étranger :
 - *Comment rendre visible, en un coup d'oeil, des idées et systèmes complexes ?*
 - *Quel outil numérique utiliser pour schématiser sans savoir dessiner ?*
 
-![Exemple de prototype conçu par mes collègues designer, photo par Maxime Huriez](/img/prototypage-design.png "Photo de prototypes d'une interface numérique sur des wireframe papier")
+![Photo de prototypes d'une interface numérique sur des wireframe papier](/img/prototypage-design.png "Exemple de prototype conçu par mes collègues designer, photo par Maxime Huriez")
 
 Depuis la pandémie, nous sommes tous devenus habitués aux "tableaux blancs collaboratif visuel" comme Figma & Miro.
 
-![Un atelier collaboratif sur le tableau collaboratif de Figma](/img/figjam_collaboratif.png "Capture d'écran d'un atelier collaboratif sur Figjam")
+![Capture d'écran d'un atelier collaboratif sur Figjam](/img/figjam_collaboratif.png "Un atelier collaboratif sur le tableau collaboratif de Figma")
 
 Ces outils fournissent des canvas collaboratifs - des espaces infinis et zoomables pour le travail. Ils sont bien plus que de simples "tableaux blancs virtuels" car ils apportent une nouvelle manière de rendre accessible et tangible le travail lié à la connaissance.
 
@@ -49,11 +49,11 @@ Figma est idéal pour présenter du contenu en vue "big picture" (en affichant t
 ### Le changement fondamental apporté dans l'échange de feedback
 Une grande partie du travail de consultant nécessite des allers et retours avec le commanditaire pour affiner le travail fourni via des observations. Les blocs de commentaires des éditeurs de texte type Word sont souvent utilisés pour y répondre : on sélectionne une portion de texte et l'on adjoint un commentaire. Est-ce réellement efficace ? Il y a besoin d'allers-retours du document qui font perdre du temps quand on n'utilise pas d'éditeur de texte collaboratif type Google Docs. Et comment faire quand j'ai non pas une observation textuelle à ajouter mais un autre document vers lequel pointer ? Lier des concepts entre eux ?
 
-![L'interface de commentaires Word](/img/commentaires_word.png "Capture d'écran de l'interface de commentaires Word")
+![Capture d'écran de l'interface de commentaires Word](/img/commentaires_word.png "L'interface de commentaires Word")
 
 Figma change totalement l'approche traditionnelle d'échange de feedback en permettant d'adjoindre des documents PDF, des images, des posts-it en plus des commentaires et de tracer physiquement des liens entres les annotations et les documents étudiés. De plus, pas de fichier à s'envoyer en boucle : le canva collaboratif se met à jour avec les ajouts. Le format canva ouvre de nouveaux horizons pour la collaboration et permet une finesse d'analyse que l'on peut difficilement atteindre avec une succession de commentaire d'éditeur de texte.
 
-![Une analyse collaborative de document sur Figma](/img/analyse_collaborative_figma.png "Capture d'écran d'une analyse collaborative de document sur Figma : 8 pages de PDF sont annotées et liées à des posts-it, images et documents")
+![Capture d'écran d'une analyse collaborative de document sur Figma : 8 pages de PDF sont annotées et liées à des posts-it, images et documents](/img/analyse_collaborative_figma.png "Une analyse collaborative de document sur Figma")
 
 ### Exemple pratique
 Il m'a été demandé de faire le bilan de la réorganisation à l'oeuvre depuis une année d'une direction de la DREAL (Direction Régionale de l’Environnement, de l’Aménagement et du Logement) composé d'une vingtaine de collaborateurs.
@@ -63,10 +63,10 @@ Après avoir questionné et qualifié la commande avec le commanditaire, nous av
 
 Il me fallait donc concevoir deux séminaires en construisant des outils sur-mesure et en ré-adaptant des outils de facilitation connus. Après avoir segmenté les différents objectifs à atteindre dans les temps impartis, j'ai consulté la boîte à outils de facilitation [Utilo](https://www.utilo.org/outils/) en matchant les thématiques du guide aux buts identifiés des temps collectifs.
 
-![Thématiques du guide Utilo](/img/utilo.png "Capture d'écran de thématiques du guide Utilo")
+![Capture d'écran de thématiques du guide Utilo](/img/utilo.png "Thématiques du guide Utilo")
 
-Pour adapter les outils et créer les supports manquants, j'utilise Figma. Lors du temps de validation préalable avec le commanditaire, il est très simple de présenter l'idée globale et le détail des outils graĉe au format en canva.
+Pour adapter les outils et créer les supports manquants, j'utilise Figma. Lors du temps de validation préalable avec le commanditaire, il est très simple de présenter l'idée globale et le détail des outils graĉe au format en canva. Le principal avantage est de réduire les allers-retours avec le commanditaire et de pouvoir expliquer en détail les points qui suscitent des interrogations.
 
-![Le canva de facilitation organisationnelle](/img/facilitation_organisationnelle.png "Canva de facilitation organisationnelle")
+![Canva de facilitation organisationnelle](/img/facilitation_organisationnelle.png "Le canva de facilitation organisationnelle proposé")
 
 La restitution des ateliers est facilement intégrable et permet d'avoir un livrable prêt à être remis.

@@ -1043,6 +1043,12 @@ article > p > a:hover {
   }
 }
 
+/* POST DESCRIPTION */
+#post > header > p {
+  padding: calc(0.25 * var(--baseline));
+  border-left: 2px solid var(--txt);
+  background-color: var(--bglighten20);
+}
 
 /*MEDIA QUERY POST*/
 @media (width < 1000px) {

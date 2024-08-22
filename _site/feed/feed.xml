@@ -11,8 +11,8 @@
     <item>
       <title>La révolution visuelle qu&#39;apporte Figma aux non-designers</title>
       <link>https://www.teotimepacreau.fr/blog/figma-pour-les-non-designers/</link>
-      <description>&lt;p&gt;A mon arrivée chez &lt;a href=&quot;https://www.modernisation.gouv.fr/laboratoires/etatlin&quot;&gt;Etat’LIN, le laboratoire d’innovation publique de l’Etat en Pays de la Loire&lt;/a&gt;, j’ai été intégré à une équipe de designers de service. L’une des premières choses qui m’a frappé est la capacité des designers à donner vie aux idées. Les réflexions s’accompagnent rapidement d’une matérialisation sous forme de schéma ou de dessin qui sont ensuite accrochés aux murs pour obtenir une image claire de la situation en un coup d’oeil.
-Cette manière de procéder peut paraître habituelle pour ceux qui travaillent dans le design. Mais pour moi, venant de métiers de gestion opérationnelle, cela semblait complètement étranger :&lt;/p&gt;
+      <description>&lt;p&gt;A mon arrivée chez &lt;a href=&quot;https://www.modernisation.gouv.fr/laboratoires/etatlin&quot;&gt;Etat’LIN, le laboratoire d’innovation publique de l’Etat en Pays de la Loire&lt;/a&gt;, j’ai été intégré à une équipe de designers de service. L’une des premières choses qui m’a frappé est la capacité des designers à donner vie aux idées. Les réflexions s’accompagnent toujours d’une matérialisation sous forme de schéma ou de dessin qui sont ensuite accrochés aux murs pour obtenir une image claire de la situation en un coup d’oeil.
+Cette manière de procéder peut paraître habituelle pour ceux qui travaillent dans les milieux design. Mais pour moi, venant de métiers de gestion opérationnelle, cela semblait complètement étranger :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Comment rendre visible, en un coup d’oeil, des idées et systèmes complexes ?&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Quel outil numérique utiliser pour schématiser sans savoir dessiner ?&lt;/em&gt;&lt;/li&gt;
@@ -51,10 +51,8 @@ Après avoir questionné et qualifié la commande avec le commanditaire, nous av
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/utilo.png&quot; alt=&quot;Thématiques du guide Utilo&quot; /&gt;&lt;figcaption&gt;Capture d’écran de thématiques du guide Utilo&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;Pour adapter les outils et créer les supports qui manquent, j’utilise Figma. Lors du temps de validation avec le commanditaire préalable aux ateliers avec les équipes, il est très simple de présenter l’idée globale et le détail des outils graĉe au format en canva.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/facilitation_organisationnelle.png&quot; alt=&quot;Le canva de facilitation organisationnelle&quot; /&gt;&lt;figcaption&gt;Canva de facilitation organisationnelle&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=OxJo051TMr8/&quot;&gt;https://www.youtube.com/watch?v=OxJo051TMr8/&lt;/a&gt;&lt;/p&gt;
 </description>
-      <pubDate>Tue, 20 Aug 2024 02:00:00 +0000</pubDate>
+      <pubDate>Thu, 22 Aug 2024 02:00:00 +0000</pubDate>
       <dc:creator>Téotime Pacreau</dc:creator>
       <guid>https://www.teotimepacreau.fr/blog/figma-pour-les-non-designers/</guid>
     </item>

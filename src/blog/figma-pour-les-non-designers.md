@@ -1,10 +1,12 @@
 ---
 title: "La révolution visuelle qu'apporte Figma aux non-designers"
 type: "Article"
-date: "2024-08-20"
-description: "Pourquoi Figma est un "
+date: "2024-08-22"
+description: "Pourquoi Figma facilite la collaboration et l'échange de feedback pour les Knowledge Worker"
 tags: 
-  - 'Base de données'
+  - 'Management'
+  - 'Stratégie'
+  - 'Figma'
 layout: blogpost_layout.njk
 eleventyComputed:
   meta:
@@ -20,8 +22,8 @@ eleventyComputed:
       name: "Teotime Pacreau"
     published: "{{ date }}"
 ---
-A mon arrivée chez [Etat'LIN, le laboratoire d'innovation publique de l'Etat en Pays de la Loire](https://www.modernisation.gouv.fr/laboratoires/etatlin), j'ai été intégré à une équipe de designers de service. L'une des premières choses qui m'a frappé est la capacité des designers à donner vie aux idées. Les réflexions s'accompagnent rapidement d'une matérialisation sous forme de schéma ou de dessin qui sont ensuite accrochés aux murs pour obtenir une image claire de la situation en un coup d'oeil.
-Cette manière de procéder peut paraître habituelle pour ceux qui travaillent dans le design. Mais pour moi, venant de métiers de gestion opérationnelle, cela semblait complètement étranger :
+A mon arrivée chez [Etat'LIN, le laboratoire d'innovation publique de l'Etat en Pays de la Loire](https://www.modernisation.gouv.fr/laboratoires/etatlin), j'ai été intégré à une équipe de designers de service. L'une des premières choses qui m'a frappé est la capacité des designers à donner vie aux idées. Les réflexions s'accompagnent toujours d'une matérialisation sous forme de schéma ou de dessin qui sont ensuite accrochés aux murs pour obtenir une image claire de la situation en un coup d'oeil.
+Cette manière de procéder peut paraître habituelle pour ceux qui travaillent dans les milieux design. Mais pour moi, venant de métiers de gestion opérationnelle, cela semblait complètement étranger :
 - *Comment rendre visible, en un coup d'oeil, des idées et systèmes complexes ?*
 - *Quel outil numérique utiliser pour schématiser sans savoir dessiner ?*
 
@@ -69,6 +71,4 @@ Pour adapter les outils et créer les supports qui manquent, j'utilise Figma. Lo
 
 ![Le canva de facilitation organisationnelle](/img/facilitation_organisationnelle.png "Canva de facilitation organisationnelle")
 
-## Sources
-<https://www.youtube.com/watch?v=OxJo051TMr8/>
 

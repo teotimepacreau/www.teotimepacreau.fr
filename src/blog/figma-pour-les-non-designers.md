@@ -1,8 +1,8 @@
 ---
 title: "La révolution visuelle qu'apporte Figma aux non-designers"
 type: "Article"
-date: "2024-08-22"
-description: "Pourquoi Figma facilite la collaboration et l'échange de feedback pour les Knowledge Worker"
+date: "2024-08-23"
+description: "Pourquoi Figma, en tant qu'outil de travail, facilite la collaboration et l'échange de feedback pour les Knowledge Worker"
 tags: 
   - 'Management'
   - 'Stratégie'
@@ -70,3 +70,6 @@ Pour adapter les outils et créer les supports manquants, j'utilise Figma. Lors 
 ![Canva de facilitation organisationnelle](/img/facilitation_organisationnelle.png "Le canva de facilitation organisationnelle proposé")
 
 La restitution des ateliers est facilement intégrable et permet d'avoir un livrable prêt à être remis.
+
+## Sources
+<https://buttondown.com/figmathinkers/archive/figma-thingers-week-7-the-war-of-artboards/>

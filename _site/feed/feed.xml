@@ -50,20 +50,122 @@ Après avoir questionné et qualifié la commande avec le commanditaire, nous av
 &lt;p&gt;Pour adapter les outils et créer les supports manquants, j’utilise Figma. Lors du temps de validation préalable avec le commanditaire, il est très simple de présenter l’idée globale et le détail des outils graĉe au format en canva. Le principal avantage est de réduire les allers-retours avec le commanditaire et de pouvoir expliquer en détail les points qui suscitent des interrogations.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/facilitation_organisationnelle.png&quot; alt=&quot;Canva de facilitation organisationnelle&quot; /&gt;&lt;figcaption&gt;Le canva de facilitation organisationnelle proposé&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;La restitution des ateliers est facilement intégrable et permet d’avoir un livrable prêt à être remis.&lt;/p&gt;
+&lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://buttondown.com/figmathinkers/archive/figma-thingers-week-7-the-war-of-artboards/&quot;&gt;https://buttondown.com/figmathinkers/archive/figma-thingers-week-7-the-war-of-artboards/&lt;/a&gt;&lt;/p&gt;
 </description>
-      <pubDate>Thu, 22 Aug 2024 02:00:00 +0000</pubDate>
+      <pubDate>Fri, 23 Aug 2024 02:00:00 +0000</pubDate>
       <dc:creator>Téotime Pacreau</dc:creator>
       <guid>https://www.teotimepacreau.fr/blog/figma-pour-les-non-designers/</guid>
     </item>
     <item>
       <title>Les bases pour modéliser une base de données</title>
       <link>https://www.teotimepacreau.fr/blog/modelisation-base-de-donnees/</link>
-      <description>&lt;p&gt;&lt;strong&gt;DISCLAIMER&lt;/strong&gt; : Cet article aborde une approche de modélisation dite MLD (Modèle Logique de Données) par souci de simplicité. Il existe de nombreuses autres méthodes et approches qui font varier la complexité.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;DISCLAIMER&lt;/strong&gt; : Cet article aborde une approche de modélisation issue de la méthode de &lt;a href=&quot;https://fr.wikipedia.org/wiki/Merise_(informatique)&quot;&gt;Merise&lt;/a&gt;. Il existe de nombreuses autres méthodes et approches qui font varier la complexité.&lt;/p&gt;
 &lt;h2 id=&quot;pr%C3%A9figurer-un-mod%C3%A8le-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Préfigurer un modèle de données&lt;/h2&gt;
 &lt;p&gt;Prenons l’exemple d’une sollicitation d’un service marketing qui procède à des enquêtes de satisfaction client. Celui-ci souhaite sortir de son modèle traditionnel de récolte de questionnaire de satisfaction papier puis traitement sous tableur. Le service exprime le besoin de centraliser les réponses obtenues et d’automatiser l’envoi d’enquêtes par mail.&lt;/p&gt;
-&lt;p&gt;Suite à une réunion de cadrage et qualification du besoin, vous repartez avec cette problématique affinée : “des chefs de projets marketing sont en charge de l’élaboration d’enquêtes clients. On souhaite à terme spécialiser chaque chef de projet marketing sur plusieurs typologie d’enquêtes pour lesquelles les questions varieront. Il faut que l’on puisse tracer quelle enquête a été crée par quel chef de projet marketing. Tous les types d’enquête recueillent l’âge, le nom, le genre, l’adresse du client. Nous souhaitons que les enquêtes soient adressées par mail aux clients.”&lt;/p&gt;
+&lt;p&gt;Suite à une réunion de cadrage et qualification du besoin, vous repartez avec cette problématique affinée : “des chefs de projets marketing sont en charge de l’élaboration d’enquêtes clients. On souhaite à terme spécialiser chaque chef de projet marketing sur une typologie d’enquête, chaque type d’enquête à des questions specifiques mais toutes les enquêtes commencent par un bloc de questions communes. Il faut que l’on puisse tracer quelle enquête a été crée par quel chef de projet marketing. Tous les types d’enquête recueillent l’âge, le nom, l’adresse du client. Nous souhaitons que les enquêtes soient adressées par mail aux clients.”&lt;/p&gt;
 &lt;p&gt;Avant d’entrer dans la conception de la solution numérique, il est nécessaire de conceptualiser notre modèle de données. En effet, celui-ci conditionnera l’architecture de la solution. Il prendra la forme d’un schéma qui matérialisera les différentes relations en nos données. Pour cela, voyons plus en détail une méthode simple à utiliser.&lt;/p&gt;
-&lt;h2 id=&quot;le-mod%C3%A8le-logique-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Le Modèle Logique de Données&lt;/h2&gt;
+&lt;h2 id=&quot;dictionnaire-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Dictionnaire de données&lt;/h2&gt;
+&lt;p&gt;La méthode Merise invite à mener des interviews et à analyser les documents utilisés par le service dans le but d’établir le dictionnaire de données.&lt;/p&gt;
+&lt;p&gt;Il s’agit d’un tableau qui recense toutes les données que comporte le problème. Une donnée est une occurence non-décomposable qui est amenée à varier. Le tableau précise les caractéristiques de la donnée retenue.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Nom de la donnée&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Taille&lt;/th&gt;
+&lt;th&gt;Type élémentaire ou calculé&lt;/th&gt;
+&lt;th&gt;Document associé&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Âge&lt;/td&gt;
+&lt;td&gt;Entier&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Elémentaire&lt;/td&gt;
+&lt;td&gt;Fiche client&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nom_client&lt;/td&gt;
+&lt;td&gt;Alphabétique&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;Elémentaire&lt;/td&gt;
+&lt;td&gt;Fiche client&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Prénom_client&lt;/td&gt;
+&lt;td&gt;Alphabétique&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;Elémentaire&lt;/td&gt;
+&lt;td&gt;Fiche client&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;N° de rue&lt;/td&gt;
+&lt;td&gt;Alphanumérique&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;Elémentaire&lt;/td&gt;
+&lt;td&gt;Fiche client&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nom de rue&lt;/td&gt;
+&lt;td&gt;Alphabétique&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;Elémentaire&lt;/td&gt;
+&lt;td&gt;Fiche client&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CP&lt;/td&gt;
+&lt;td&gt;Entier&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;Entier&lt;/td&gt;
+&lt;td&gt;Fiche client&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ville&lt;/td&gt;
+&lt;td&gt;Alphabétique&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;Elémentaire&lt;/td&gt;
+&lt;td&gt;Fiche client&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Categorie&lt;/td&gt;
+&lt;td&gt;Alphabétique&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;Elémentaire&lt;/td&gt;
+&lt;td&gt;Enquete&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Questions_communes&lt;/td&gt;
+&lt;td&gt;Alphanumérique&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;Elémentaire&lt;/td&gt;
+&lt;td&gt;Enquete&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Questions_specifiques_categorie&lt;/td&gt;
+&lt;td&gt;Alphanumérique&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;Elémentaire&lt;/td&gt;
+&lt;td&gt;Enquete&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nom_chef_projet_marketing&lt;/td&gt;
+&lt;td&gt;Alphabétique&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;Elémentaire&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Prenom_chef_projet_marketing&lt;/td&gt;
+&lt;td&gt;Alphabétique&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;Elémentaire&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;le-mod%C3%A8le-conceptuel-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Le Modèle Conceptuel de Données&lt;/h2&gt;
 &lt;p&gt;Plusieurs types de schémas conceptuels existent, correspondants aux différents types de base de données que l’on peut rencontrer :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;le modèle hiérarchique&lt;/li&gt;
@@ -73,36 +175,28 @@ Après avoir questionné et qualifié la commande avec le commanditaire, nous av
 &lt;/ul&gt;
 &lt;p&gt;Par souci de simplicité nous nous appuierons sur le modèle entité / attribut / relation qui est fréquemment utilisé pour les bases de données relationnelles.&lt;br /&gt;
 Si vous ne savez pas ce qu’est une base de données relationnelle ou dans quels cas l’utiliser, je vous invite à consulter &lt;a href=&quot;https://www.teotimepacreau.fr/blog/sqlite/&quot;&gt;mon article sur le sujet&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Le fondement de notre BDD est les entités : elles représentent les sujets qui composent le processus informationnel pour lequel nos données seront enregistrées.&lt;/p&gt;
-&lt;p&gt;Une entité possède des attributs : il s’agit de propriétés qui caractérisent l’entité. Par exemple pour une entité “citoyen” les attributs pourront être “âge, genre, situation familiale”.&lt;/p&gt;
-&lt;p&gt;Les relations décrivent comment les entités interagissent entre elles. Les relations sont généralement marquées par des verbes “achète à”, “est traité par”…&lt;/p&gt;
-&lt;h2 id=&quot;cl%C3%A9-primaire-et-%C3%A9trang%C3%A8re&quot; tabindex=&quot;-1&quot;&gt;Clé primaire et étrangère&lt;/h2&gt;
+&lt;p&gt;Le fondement de notre BDD repose sur les entités : elles représentent les sujets qui composent le processus informationnel pour lequel nos données seront enregistrées.
+Une entité possède des attributs : il s’agit de propriétés qui caractérisent l’entité. Par exemple pour une entité “citoyen” les attributs pourront être “âge, genre, situation familiale”.&lt;/p&gt;
+&lt;p&gt;Pour passer du dictionnaire de données à la modélisation des Entités-Attributs, on regroupe les données qui ont un lien entre elles en se demandant de quelle donnée unique elles dépendent.
+Voici la modélisation de notre problème posé en introduction :
+&lt;img src=&quot;https://www.teotimepacreau.fr/img/entite-attribut-merise.png&quot; alt=&quot;Capture d&#39;écran de la modélisation en entité-attribut&quot; title=&quot;Modélisation en entité-attribut&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;les-relations-et-leurs-cardinalit%C3%A9s&quot; tabindex=&quot;-1&quot;&gt;Les relations et leurs cardinalités&lt;/h2&gt;
+&lt;p&gt;Les relations décrivent comment les entités interagissent entre elles. Les relations sont généralement marquées par des verbes “achète à”, “est traité par”…
+La relation peut comporter des attributs, on l’appelle alors “relation porteuse”.&lt;/p&gt;
+&lt;p&gt;Les cardinalités sont des indicateurs qui matérialisent la qualité de la relation entre deux entités. Par exemple pour deux entités “Enquêtes” et “Clients”, les cardinalités sont le nombre de clients pour lesquelles il peut exister a minima et a maxima une ebquête et inversement.&lt;br /&gt;
+La méthode pour les schématiser est de toujours exprimer un minimum : “Un client peut remplir au minimum combien d’enquêtes ? 0, 1 ou n ? (n représentant l’infini)”. Et un maximum “Un client peut remplir au maximum combien d’enquêtes ? 0, 1 ou n ?”.&lt;/p&gt;
+&lt;p&gt;Ces cardinalités sont précieuses car elles nous permettront de vérifier la qualité de notre modèle grâce à des règles de normalisation.&lt;/p&gt;
+&lt;p&gt;Voici les relations et leurs cardinalités de notre exemple :
+&lt;img src=&quot;https://www.teotimepacreau.fr/img/entite-attribut-merise.png&quot; alt=&quot;Capture d&#39;écran de la modélisation des relations Merise&quot; title=&quot;Modélisation des relations&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;cl%C3%A9-primaire-et-%C3%A9trang%C3%A8re&quot; tabindex=&quot;-1&quot;&gt;Clé primaire et étrangère&lt;/h3&gt;
 &lt;p&gt;Le principe de clés est indispensable pour faire référence à un enregistrement précis d’une table.
 La clé primaire est l’identifiant unique d’une entité.&lt;br /&gt;
 La clé étrangère est une référence à la clé primaire d’une autre entité. Utile pour mettre en relation deux enregistrements qui ont un rapport entre eux.&lt;/p&gt;
-&lt;h2 id=&quot;cardinalit%C3%A9s&quot; tabindex=&quot;-1&quot;&gt;Cardinalités&lt;/h2&gt;
-&lt;p&gt;Les cardinalités sont des indicateurs qui matérialisent la qualité de la relation entre deux entités. Par exemple pour deux entités “Enquête” et “Observation”, les cardinalités sont le nombre d’“Enquête” pour lesquelles il existe une “Observation” et inversement.&lt;br /&gt;
-La méthode pour les schématiser est de toujours exprimer un minimum : “Une Enquête peut exister avec au minimum combien d’Observation ? 0, 1 ou n ? (n représentant l’infini)”. Et un maximum “Une Enquête peut exister avec au maximum combien d’Observation ? 0, 1 ou n ?”.&lt;/p&gt;
-&lt;p&gt;Ces cardinalités sont précieuses car elles nous permettront de vérifier la qualité de notre modèle grâce à des règles de normalisation.&lt;/p&gt;
-&lt;h2 id=&quot;comment-sch%C3%A9matiser-facilement-notre-mod%C3%A8le-logique-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Comment schématiser facilement notre Modèle Logique de Données&lt;/h2&gt;
+&lt;h3 id=&quot;comment-sch%C3%A9matiser-facilement-notre-mod%C3%A8le-logique-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Comment schématiser facilement notre Modèle Logique de Données&lt;/h3&gt;
 &lt;p&gt;J’utilise l’outil gratuit en ligne &lt;a href=&quot;https://app.diagrams.net/&quot;&gt;Draw.io&lt;/a&gt; qui a un sous-menu dédié “Relation entre les éléments”.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/interface_drawio.png&quot; alt=&quot;Interface de Draw.io&quot; /&gt;&lt;figcaption&gt;Interface de &lt;a href=&quot;http://draw.io/&quot;&gt;Draw.io&lt;/a&gt;, volet latéral composé du sous-menu relation entre les éléments&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;Reprenons notre exemple mentionné en introduction : &lt;strong&gt;“des chefs de projets marketing sont en charge de l’élaboration d’enquêtes clients.” -&amp;gt; on comprend qu’il nous faut une entité “enquête” ainsi qu’une entité “chefs de projet marketing”.&lt;/strong&gt;
-L’entité “enquête” est constituée des attributs âge, nom, genre, adresse du client et questions à poser.
-On a besoin d’identifier de façon unique pour pouvoir tracer chaque enquête alors on lui associe un identifiant unique (clé primaire PK). Chaque enquête est créée par un chef de projet marketing ce qui crée notre relation entre les 2 entités.
-L’entité “chefs de projet marketing” est constituée d’un ID et du nom.
-Nous avons besoin de relier l’enquête à son créateur, aussi nous créons une clé étrangère “chef de projet_id” dans l’entité “Enquête” reliée à l’ID du chef de projet.
-Pour les cardinalités : une enquête existe au minimum si un chef de projet la crée; une enquête existe au maximum pour un chef de projet (plusieurs chefs de projet ne peuvent créer la même enquête). Donc 1,1. Dans l’autre sens de la relation un chef de projet peut exister au minimum sans qu’aucune enquête ne soit créée; un chef de projet peut créer une infinité d’enquête au maximum. Donc 0,n.&lt;/p&gt;
+&lt;p&gt;Pour les cardinalités : une enquête existe au minimum si un chef de projet la crée; une enquête existe au maximum pour un chef de projet (plusieurs chefs de projet ne peuvent créer la même enquête). Donc 1,1. Dans l’autre sens de la relation un chef de projet peut exister au minimum sans qu’aucune enquête ne soit créée; un chef de projet peut créer une infinité d’enquête au maximum. Donc 0,n.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/modelisation_bdd.png&quot; alt=&quot;Modélisation de la base de données selon le modèle Entité Attribut Relation&quot; /&gt;&lt;figcaption&gt;Modélisation de la base de données selon le modèle Entité Attribut Relation&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;r%C3%A8gles-de-normalisation&quot; tabindex=&quot;-1&quot;&gt;Règles de normalisation&lt;/h2&gt;
-&lt;p&gt;Une entité se représente graphiquement par un rectangle.&lt;/p&gt;
-&lt;p&gt;Un attribut se place dans le rectangle de l’entité.&lt;/p&gt;
-&lt;p&gt;Une relation se représente graphiquement par un losange.&lt;/p&gt;
-&lt;p&gt;La clé primaire s’identifie avec PK (Primary Key) en colonne dans l’entité face à l’attribut correspondant.&lt;br /&gt;
-La clé etrangère s’identifie de la même manière avec FK (Foreign Key). On en profite pour la relier graphiquement à la clé primaire à laquelle elle fait référence.&lt;/p&gt;
-&lt;p&gt;Un attribut qui possède plusieurs sous-attributs devient automatiquement une entité.&lt;/p&gt;
-&lt;p&gt;Cardinalité de 1,1 dans les deux sens d’une relation signifie que la relation est fantôme donc il faut fusionner les 2 entités en une seule et supprimer la relation.
-Cardinalité avec &lt;code&gt;n&lt;/code&gt; en maximum dans les deux sens signifie qu’il faut ajouter une table de liaison composée uniquement de 2 clés étrangères faisant référence aux clés primaires des 2 entités.&lt;/p&gt;
 &lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=OxJo051TMr8/&quot;&gt;https://www.youtube.com/watch?v=OxJo051TMr8/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://fr.wikiversity.org/wiki/Introduction_aux_syst%C3%A8mes_de_bases_de_donn%C3%A9es/Introduction/&quot;&gt;https://fr.wikiversity.org/wiki/Introduction_aux_systèmes_de_bases_de_données/Introduction/&lt;/a&gt;&lt;/p&gt;

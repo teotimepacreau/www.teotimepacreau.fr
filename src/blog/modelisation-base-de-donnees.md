@@ -46,8 +46,8 @@ Il s'agit d'un tableau qui recense toutes les données que comporte le problème
 | Categorie| Alphabétique   | 20 | Elémentaire  | Enquete|
 | Questions_communes | Alphanumérique   | 100 | Elémentaire  | Enquete|
 | Questions_specifiques_categorie | Alphanumérique   | 100 | Elémentaire  | Enquete|
-| Nom_chef_projet_marketing | Alphabétique   | 40 | Elémentaire  | |
-| Prenom_chef_projet_marketing | Alphabétique   | 40 | Elémentaire  | |
+| Nom_chef_projet_marketing | Alphabétique   | 40 | Elémentaire  | /|
+| Prenom_chef_projet_marketing | Alphabétique   | 40 | Elémentaire  | /|
 
 ## Le Modèle Conceptuel de Données
 Plusieurs types de schémas conceptuels existent, correspondants aux différents types de base de données que l’on peut rencontrer :
@@ -70,7 +70,7 @@ Les relations décrivent comment les entités interagissent entre elles. Les rel
 La relation peut comporter des attributs, on l’appelle alors “relation porteuse”. 
 
 Les cardinalités sont des indicateurs qui matérialisent la qualité de la relation entre deux entités. Par exemple pour deux entités "Enquêtes" et "Clients", les cardinalités sont le nombre de clients pour lesquelles il peut exister a minima et a maxima une ebquête et inversement.  
-La méthode pour les schématiser est de toujours exprimer un minimum : "Un client peut remplir au minimum combien d'enquêtes ? 0, 1 ou n ? (n représentant l'infini)". Et un maximum "Un client peut remplir au maximum combien d'enquêtes ? 0, 1 ou n ?".
+La méthode pour les définir est de toujours exprimer un minimum : "Un client peut remplir au minimum combien d'enquêtes ? 0, 1 ou n ? (n représentant l'infini)". Et un maximum "Un client peut remplir au maximum combien d'enquêtes ? 0, 1 ou n ?".
 
 Ces cardinalités sont précieuses car elles nous permettront de vérifier la qualité de notre modèle grâce à des règles de normalisation.
 

@@ -1546,7 +1546,7 @@ tr {
 }
 
 /*---RESPONSIVE TABLES ON MOBILE : pour que ça fonctionne nécessaire que chaque td ait un attribute 'data-cell' qui soit égal au th de sa colonne, par exemple : th "job-title", td doit être <td data-cell="job-title">---*/
-@media (width < 700px) {
+@media (width < 800px) {
   th {
     display: none;
   }

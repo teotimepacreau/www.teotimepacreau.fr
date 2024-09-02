@@ -154,14 +154,14 @@ Après avoir questionné et qualifié la commande avec le commanditaire, nous av
 &lt;td&gt;Alphabétique&lt;/td&gt;
 &lt;td&gt;40&lt;/td&gt;
 &lt;td&gt;Elémentaire&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Prenom_chef_projet_marketing&lt;/td&gt;
 &lt;td&gt;Alphabétique&lt;/td&gt;
 &lt;td&gt;40&lt;/td&gt;
 &lt;td&gt;Elémentaire&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -184,7 +184,7 @@ Voici la modélisation de notre problème posé en introduction :
 &lt;p&gt;Les relations décrivent comment les entités interagissent entre elles. Les relations sont généralement marquées par des verbes “achète à”, “est traité par”…
 La relation peut comporter des attributs, on l’appelle alors “relation porteuse”.&lt;/p&gt;
 &lt;p&gt;Les cardinalités sont des indicateurs qui matérialisent la qualité de la relation entre deux entités. Par exemple pour deux entités “Enquêtes” et “Clients”, les cardinalités sont le nombre de clients pour lesquelles il peut exister a minima et a maxima une ebquête et inversement.&lt;br /&gt;
-La méthode pour les schématiser est de toujours exprimer un minimum : “Un client peut remplir au minimum combien d’enquêtes ? 0, 1 ou n ? (n représentant l’infini)”. Et un maximum “Un client peut remplir au maximum combien d’enquêtes ? 0, 1 ou n ?”.&lt;/p&gt;
+La méthode pour les définir est de toujours exprimer un minimum : “Un client peut remplir au minimum combien d’enquêtes ? 0, 1 ou n ? (n représentant l’infini)”. Et un maximum “Un client peut remplir au maximum combien d’enquêtes ? 0, 1 ou n ?”.&lt;/p&gt;
 &lt;p&gt;Ces cardinalités sont précieuses car elles nous permettront de vérifier la qualité de notre modèle grâce à des règles de normalisation.&lt;/p&gt;
 &lt;p&gt;Voici les relations et leurs cardinalités de notre exemple :
 &lt;img src=&quot;https://www.teotimepacreau.fr/img/entite-attribut-merise.png&quot; alt=&quot;Capture d&#39;écran de la modélisation des relations Merise&quot; title=&quot;Modélisation des relations&quot; /&gt;&lt;/p&gt;

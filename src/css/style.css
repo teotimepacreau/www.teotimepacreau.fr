@@ -981,7 +981,7 @@ h4 {
   }
 }
 #post a {
-  word-break: break-all;
+  word-wrap: anywhere;
 }
 article > p > a:hover {
   text-decoration-thickness: 3px;
@@ -1525,7 +1525,6 @@ li {
 /*---TABLES---*/
 table {
   border-collapse: collapse;
-  margin-block: var(--baseline);
 }
 
 th {
@@ -1553,6 +1552,7 @@ tr {
   td {
     display: grid;
     grid-template-columns: 15ch auto;
+    word-wrap: anywhere;
     gap: calc(0.75 * var(--baseline));
     padding: calc(0.25 * var(--baseline));
   }

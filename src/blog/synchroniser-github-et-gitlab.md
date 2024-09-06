@@ -20,16 +20,12 @@ eleventyComputed:
       name: "Teotime Pacreau"
     published: "{{ date }}"
 ---
-
 Pour des raisons techniques, j'ai eu besoin de cloner un repo existant sur Github dans l'alternative open-source [Gitlab](https://about.gitlab.com/). Je souhaitais synchroniser tout les changements effectués dans le repo Gitlab en les poussant vers le repo Github.
-
-{% update %}
-Après multiples tests, côté Gitlab la synchronisation en GET est réservée aux comptes Gitlab PREMIUM (payant) tandis que le PUSH est disponible pour tous les comptes (même gratuits)
-{% endupdate %}
+Gitlab offre la synchronisation en PUSH vers Github à tous les utilisateurs tandis que la synchronisation en GET est réservée aux comptes Gitlab PREMIUM (payant).
 
 
 ## Clonage d'un repo Github dans Gitlab
-Gitlab propose de créer un repo en créant un clône d'un repo pré-existant sur un autre service via "Importer un projet". Il suffit de fournir l'URL du repo Github.
+Gitlab propose de créer un repo en clônant un repo pré-existant d'un autre service via "Importer un projet". Il suffit de fournir l'URL du repo Github.
 
 ![Capture de la page de proposition des modalités de création de repo Gitlab](/img/gitlab-clonage1.png "Clonage d'un repo pré-existant")
 
@@ -40,13 +36,11 @@ L'interface demande ensuite de remplir des champs :
 
 ![Capture des Champs demandés par Gitlab pour autoriser le clonage du projet](/img/gitlab-clonage2.png "Champs demandés par Gitlab pour autoriser le clonage du projet")
 
+## Pousser le repo Gitlab vers Github automatiquement
+La poussée des modifications vers le dépôt Github comprend Les branches, les étiquettes et les commits.
 
-## Synchroniser les 2 repos
-Il est possible de pousser et/ou récupérer automatiquement les modifications vers ou depuis l'autre dépôt. Les branches, les étiquettes et les commits seront automatiquement synchronisés.
-
-Pour cela il faut se rendre dans le repo Gitlab -> Paramètres -> Dépôt -> Dépôts miroirs.
-Il faut de nouveau coller l'url du dépôt distant Github et placer le nom d'utilisateur Github. Le champ "mot de passe" correspond au token généré précédemment sur Github.
+Pour cela il faut se rendre dans le repo Gitlab -> Paramètres -> Dépôt -> Dépôts miroirs. Il faut de nouveau coller l'url du dépôt distant Github et placer le nom d'utilisateur Github. Le champ "mot de passe" correspond au token généré précédemment sur Github.
 
 ![Capture des champs requis pour synchroniser](/img/gitlab-synchronisation.png "Champs requis pour synchroniser")
 
-N'importe quel commit effectué sera poussé depuis Gitlab vers Github. Le repo Gitlab tirera tout changement effectué sur Github.
+N'importe quel commit effectué sera poussé depuis Gitlab vers Github.

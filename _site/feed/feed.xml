@@ -64,10 +64,10 @@ Après avoir questionné et qualifié la commande avec le commanditaire, nous av
 &lt;h2 id=&quot;pr%C3%A9figurer-un-mod%C3%A8le-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Préfigurer un modèle de données&lt;/h2&gt;
 &lt;p&gt;Prenons l’exemple d’une sollicitation d’un service marketing qui procède à des enquêtes de satisfaction client. Celui-ci souhaite sortir de son modèle traditionnel de récolte de questionnaire de satisfaction papier puis traitement sous tableur. Le service exprime le besoin de centraliser les réponses obtenues et d’automatiser l’envoi d’enquêtes par mail.&lt;/p&gt;
 &lt;p&gt;Suite à une réunion de cadrage et qualification du besoin, vous repartez avec cette problématique affinée : “des chefs de projets marketing sont en charge de l’élaboration d’enquêtes clients. On souhaite à terme spécialiser chaque chef de projet marketing sur une typologie d’enquête, chaque type d’enquête à des questions specifiques mais toutes les enquêtes commencent par un bloc de questions communes. Il faut que l’on puisse tracer quelle enquête a été crée par quel chef de projet marketing. Tous les types d’enquête recueillent l’âge, le nom, l’adresse du client. Nous souhaitons que les enquêtes soient adressées par mail aux clients.”&lt;/p&gt;
-&lt;p&gt;Avant d’entrer dans la conception de la solution numérique, il est nécessaire de conceptualiser notre modèle de données. En effet, celui-ci conditionnera l’architecture de la solution. Il prendra la forme d’un schéma qui matérialisera les différentes relations en nos données. Pour cela, voyons plus en détail une méthode simple à utiliser.&lt;/p&gt;
+&lt;p&gt;Avant d’entrer dans la conception de la solution numérique, il est nécessaire de conceptualiser notre modèle de données. En effet, celui-ci conditionnera l’architecture de la solution. Il prendra la forme d’un schéma qui matérialisera les différentes relations entre nos données. Pour cela, voyons plus en détail une méthode simple à utiliser.&lt;/p&gt;
 &lt;h2 id=&quot;dictionnaire-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Dictionnaire de données&lt;/h2&gt;
-&lt;p&gt;La méthode Merise invite à mener des interviews et à analyser les documents utilisés par le service dans le but d’établir le dictionnaire de données.&lt;/p&gt;
-&lt;p&gt;Il s’agit d’un tableau qui recense toutes les données que comporte le problème. Une donnée est une occurence non-décomposable qui est amenée à varier. Le tableau précise les caractéristiques de la donnée retenue.&lt;/p&gt;
+&lt;p&gt;La méthode Merise invite à mener des interviews et à analyser les documents utilisés par le service dans le but d’établir le dictionnaire de données.
+Il s’agit d’un tableau qui recense toutes les données que comporte le problème. Une donnée est une occurence non-décomposable qui est amenée à varier. Le tableau précise les caractéristiques de la donnée retenue.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -165,6 +165,7 @@ Après avoir questionné et qualifié la commande avec le commanditaire, nous av
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;Le bloc “Adresse” a été divisé en 4 données séparées : “n° de rue”, “nom de rue”, “CP” et “Ville”. En effet “Adresse” était décomposable, or si l’on souhaite à terme requêter le nombre de clients qui ont participés à l’enquête dans une ville précise il est nécessaire d’avoir un champ séparé pour la ville.&lt;/p&gt;
 &lt;h2 id=&quot;le-mod%C3%A8le-conceptuel-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Le Modèle Conceptuel de Données&lt;/h2&gt;
 &lt;p&gt;Plusieurs types de schémas conceptuels existent, correspondants aux différents types de base de données que l’on peut rencontrer :&lt;/p&gt;
 &lt;ul&gt;
@@ -177,30 +178,28 @@ Après avoir questionné et qualifié la commande avec le commanditaire, nous av
 Si vous ne savez pas ce qu’est une base de données relationnelle ou dans quels cas l’utiliser, je vous invite à consulter &lt;a href=&quot;https://www.teotimepacreau.fr/blog/sqlite/&quot;&gt;mon article sur le sujet&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Le fondement de notre BDD repose sur les entités : elles représentent les sujets qui composent le processus informationnel pour lequel nos données seront enregistrées.
 Une entité possède des attributs : il s’agit de propriétés qui caractérisent l’entité. Par exemple pour une entité “citoyen” les attributs pourront être “âge, genre, situation familiale”.&lt;/p&gt;
-&lt;p&gt;Pour passer du dictionnaire de données à la modélisation des Entités-Attributs, on regroupe les données qui ont un lien entre elles en se demandant de quelle donnée unique elles dépendent.
+&lt;p&gt;Pour passer du dictionnaire de données à la modélisation des Entités-Attributs, on regroupe les données qui ont un lien entre elles en se demandant de quelles données uniques elles dépendent.
 Voici la modélisation de notre problème posé en introduction :
 &lt;img src=&quot;https://www.teotimepacreau.fr/img/entite-attribut-merise.png&quot; alt=&quot;Capture d&#39;écran de la modélisation en entité-attribut&quot; title=&quot;Modélisation en entité-attribut&quot; /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;les-relations-et-leurs-cardinalit%C3%A9s&quot; tabindex=&quot;-1&quot;&gt;Les relations et leurs cardinalités&lt;/h2&gt;
+&lt;h3 id=&quot;les-relations-et-leurs-cardinalit%C3%A9s&quot; tabindex=&quot;-1&quot;&gt;Les relations et leurs cardinalités&lt;/h3&gt;
 &lt;p&gt;Les relations décrivent comment les entités interagissent entre elles. Les relations sont généralement marquées par des verbes “achète à”, “est traité par”…
 La relation peut comporter des attributs, on l’appelle alors “relation porteuse”.&lt;/p&gt;
 &lt;p&gt;Les cardinalités sont des indicateurs qui matérialisent la qualité de la relation entre deux entités. Par exemple pour deux entités “Enquêtes” et “Clients”, les cardinalités sont le nombre de clients pour lesquelles il peut exister a minima et a maxima une ebquête et inversement.&lt;br /&gt;
-La méthode pour les définir est de toujours exprimer un minimum : “Un client peut remplir au minimum combien d’enquêtes ? 0, 1 ou n ? (n représentant l’infini)”. Et un maximum “Un client peut remplir au maximum combien d’enquêtes ? 0, 1 ou n ?”.&lt;/p&gt;
-&lt;p&gt;Ces cardinalités sont précieuses car elles nous permettront de vérifier la qualité de notre modèle grâce à des règles de normalisation.&lt;/p&gt;
-&lt;p&gt;Voici les relations et leurs cardinalités de notre exemple :
-&lt;img src=&quot;https://www.teotimepacreau.fr/img/entite-attribut-merise.png&quot; alt=&quot;Capture d&#39;écran de la modélisation des relations Merise&quot; title=&quot;Modélisation des relations&quot; /&gt;&lt;/p&gt;
+La méthode pour les définir est de toujours exprimer un minimum : “Un client peut remplir au minimum combien d’enquêtes ? 0, 1 ou n ? (n représentant l’infini)”. Et un maximum  :“Un client peut remplir au maximum combien d’enquêtes ? 0, 1 ou n ?”.&lt;/p&gt;
+&lt;p&gt;Ces cardinalités sont précieuses car elles nous permettront de vérifier la qualité de notre modèle puis de transformer le modèle en tables grâce à des règles de normalisation.&lt;/p&gt;
+&lt;p&gt;Voici, pour notre exemple, les relations et leurs cardinalités :&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/relations-cardinalites-merise.png&quot; alt=&quot;Capture d&#39;écran de la modélisation des relations Merise&quot; /&gt;&lt;figcaption&gt;Modélisation des relations et de leurs cardinalites&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;cl%C3%A9-primaire-et-%C3%A9trang%C3%A8re&quot; tabindex=&quot;-1&quot;&gt;Clé primaire et étrangère&lt;/h3&gt;
 &lt;p&gt;Le principe de clés est indispensable pour faire référence à un enregistrement précis d’une table.
-La clé primaire est l’identifiant unique d’une entité.&lt;br /&gt;
+La clé primaire est l’identifiant unique d’une entité.
 La clé étrangère est une référence à la clé primaire d’une autre entité. Utile pour mettre en relation deux enregistrements qui ont un rapport entre eux.&lt;/p&gt;
-&lt;h3 id=&quot;comment-sch%C3%A9matiser-facilement-notre-mod%C3%A8le-logique-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Comment schématiser facilement notre Modèle Logique de Données&lt;/h3&gt;
+&lt;h2 id=&quot;comment-sch%C3%A9matiser-facilement-notre-mod%C3%A8le-logique-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Comment schématiser facilement notre Modèle Logique de Données&lt;/h2&gt;
 &lt;p&gt;J’utilise l’outil gratuit en ligne &lt;a href=&quot;https://app.diagrams.net/&quot;&gt;Draw.io&lt;/a&gt; qui a un sous-menu dédié “Relation entre les éléments”.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/interface_drawio.png&quot; alt=&quot;Interface de Draw.io&quot; /&gt;&lt;figcaption&gt;Interface de &lt;a href=&quot;http://draw.io/&quot;&gt;Draw.io&lt;/a&gt;, volet latéral composé du sous-menu relation entre les éléments&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;Pour les cardinalités : une enquête existe au minimum si un chef de projet la crée; une enquête existe au maximum pour un chef de projet (plusieurs chefs de projet ne peuvent créer la même enquête). Donc 1,1. Dans l’autre sens de la relation un chef de projet peut exister au minimum sans qu’aucune enquête ne soit créée; un chef de projet peut créer une infinité d’enquête au maximum. Donc 0,n.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/modelisation_bdd.png&quot; alt=&quot;Modélisation de la base de données selon le modèle Entité Attribut Relation&quot; /&gt;&lt;figcaption&gt;Modélisation de la base de données selon le modèle Entité Attribut Relation&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=OxJo051TMr8/&quot;&gt;https://www.youtube.com/watch?v=OxJo051TMr8/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://fr.wikiversity.org/wiki/Introduction_aux_syst%C3%A8mes_de_bases_de_donn%C3%A9es/Introduction/&quot;&gt;https://fr.wikiversity.org/wiki/Introduction_aux_systèmes_de_bases_de_données/Introduction/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.base-de-donnees.com/mld/&quot;&gt;https://www.base-de-donnees.com/mld/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.base-de-donnees.com/mcd/&quot;&gt;https://www.base-de-donnees.com/mcd/&lt;/a&gt;&lt;/p&gt;
 </description>
       <pubDate>Fri, 02 Aug 2024 02:00:00 +0000</pubDate>
       <dc:creator>Téotime Pacreau</dc:creator>
@@ -235,13 +234,10 @@ Alors comment garder une équipe aux compétences variées synchronisée sans ê
     <item>
       <title>Synchroniser un repo Github avec Gitlab</title>
       <link>https://www.teotimepacreau.fr/blog/synchroniser-github-et-gitlab/</link>
-      <description>&lt;p&gt;Pour des raisons techniques, j’ai eu besoin de cloner un repo existant sur Github dans l’alternative open-source &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;Gitlab&lt;/a&gt;. Je souhaitais synchroniser tout les changements effectués dans le repo Gitlab en les poussant vers le repo Github.&lt;/p&gt;
-  &lt;p class=&quot;post-update&quot;&gt;
-  &lt;span&gt;Mise à jour du &lt;time datetime=&quot;16 juin 2024&quot;&gt;16 juin 2024&lt;/time&gt;&lt;/span&gt;
-Après multiples tests, côté Gitlab la synchronisation en GET est réservée aux comptes Gitlab PREMIUM (payant) tandis que le PUSH est disponible pour tous les comptes (même gratuits)
-&lt;/p&gt;
+      <description>&lt;p&gt;Pour des raisons techniques, j’ai eu besoin de cloner un repo existant sur Github dans l’alternative open-source &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;Gitlab&lt;/a&gt;. Je souhaitais synchroniser tout les changements effectués dans le repo Gitlab en les poussant vers le repo Github.
+Gitlab offre la synchronisation en PUSH vers Github à tous les utilisateurs tandis que la synchronisation en GET est réservée aux comptes Gitlab PREMIUM (payant).&lt;/p&gt;
 &lt;h2 id=&quot;clonage-d%E2%80%99un-repo-github-dans-gitlab&quot; tabindex=&quot;-1&quot;&gt;Clonage d’un repo Github dans Gitlab&lt;/h2&gt;
-&lt;p&gt;Gitlab propose de créer un repo en créant un clône d’un repo pré-existant sur un autre service via “Importer un projet”. Il suffit de fournir l’URL du repo Github.&lt;/p&gt;
+&lt;p&gt;Gitlab propose de créer un repo en clônant un repo pré-existant d’un autre service via “Importer un projet”. Il suffit de fournir l’URL du repo Github.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/gitlab-clonage1.png&quot; alt=&quot;Capture de la page de proposition des modalités de création de repo Gitlab&quot; /&gt;&lt;figcaption&gt;Clonage d’un repo pré-existant&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;L’interface demande ensuite de remplir des champs :&lt;/p&gt;
 &lt;ul&gt;
@@ -250,12 +246,11 @@ Après multiples tests, côté Gitlab la synchronisation en GET est réservée a
 &lt;li&gt;cocher la case “Dépôt miroir”&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/gitlab-clonage2.png&quot; alt=&quot;Capture des Champs demandés par Gitlab pour autoriser le clonage du projet&quot; /&gt;&lt;figcaption&gt;Champs demandés par Gitlab pour autoriser le clonage du projet&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;synchroniser-les-2-repos&quot; tabindex=&quot;-1&quot;&gt;Synchroniser les 2 repos&lt;/h2&gt;
-&lt;p&gt;Il est possible de pousser et/ou récupérer automatiquement les modifications vers ou depuis l’autre dépôt. Les branches, les étiquettes et les commits seront automatiquement synchronisés.&lt;/p&gt;
-&lt;p&gt;Pour cela il faut se rendre dans le repo Gitlab -&amp;gt; Paramètres -&amp;gt; Dépôt -&amp;gt; Dépôts miroirs.
-Il faut de nouveau coller l’url du dépôt distant Github et placer le nom d’utilisateur Github. Le champ “mot de passe” correspond au token généré précédemment sur Github.&lt;/p&gt;
+&lt;h2 id=&quot;pousser-le-repo-gitlab-vers-github-automatiquement&quot; tabindex=&quot;-1&quot;&gt;Pousser le repo Gitlab vers Github automatiquement&lt;/h2&gt;
+&lt;p&gt;La poussée des modifications vers le dépôt Github comprend Les branches, les étiquettes et les commits.&lt;/p&gt;
+&lt;p&gt;Pour cela il faut se rendre dans le repo Gitlab -&amp;gt; Paramètres -&amp;gt; Dépôt -&amp;gt; Dépôts miroirs. Il faut de nouveau coller l’url du dépôt distant Github et placer le nom d’utilisateur Github. Le champ “mot de passe” correspond au token généré précédemment sur Github.&lt;/p&gt;
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/gitlab-synchronisation.png&quot; alt=&quot;Capture des champs requis pour synchroniser&quot; /&gt;&lt;figcaption&gt;Champs requis pour synchroniser&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;N’importe quel commit effectué sera poussé depuis Gitlab vers Github. Le repo Gitlab tirera tout changement effectué sur Github.&lt;/p&gt;
+&lt;p&gt;N’importe quel commit effectué sera poussé depuis Gitlab vers Github.&lt;/p&gt;
 </description>
       <pubDate>Tue, 04 Jun 2024 02:00:00 +0000</pubDate>
       <dc:creator>Téotime Pacreau</dc:creator>

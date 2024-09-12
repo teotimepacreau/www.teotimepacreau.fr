@@ -48,9 +48,7 @@ Les formes normales sont des règles certifiant que la base de données respecte
 En effet, on souhaite que notre base de données puisse répondre à 3 
 principes pour de bonne élaboration : 
 - pouvoir supprimer une entrée sans supprimer les données connexes. Par exemple : une table Livre ne doit pas avoir en colonnes l’auteur car si on supprime l'entrée cela supprimera l’auteur.
-
 - éviter la répétition d’infos similaires car peu efficient pour le stockage. Par exemple : répéter sur 5000 entrée le même auteur, la même catégorie…
-
 - assurer la consistance des données (avoir à entrer manuellement plusieurs fois le même nom d’auteur entraîne des erreurs)
 
 Il y a 5 niveaux de formes normales, certifiant de façon graduelle la qualité de notre base de données. Pour des raisons de simplicité, nous détaillerons seulement les 3 premiers niveaux, qui suffisent dans 99% des cas.

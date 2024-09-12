@@ -67,7 +67,7 @@ Il y a 5 niveaux de formes normales, certifiant de façon graduelle la qualité 
 3NF :
 - Tous les attributs non-clés d’une table doivent dépendre uniquement de la clé primaire, dans son entièreté, et rien d’autre que cette clé. La méthode est de représenter les dépendances fonctionnelles pour les colonnes non-clés de notre table.
 
-![Capture d'écran d'une table avec en colonnes : Player_ID, Player_Rating, Player_Skill_Level avec 4 entrées pour illuster inconsistances qu'entraîne une table qui ne répond pas à la 3ème forme normale](/img/relation-many-to-many-et-relation-porteuse-attributs.png "Illustration des inconsistances qu'entraîne une table qui ne répond pas à la 3ème forme normale. Crédit vidéo Learn Database Normalization, chaîne Youtube Decomplexify")
+![Capture d'écran d'une table avec en colonnes : Player_ID, Player_Rating, Player_Skill_Level avec 4 entrées pour illuster inconsistances qu'entraîne une table qui ne répond pas à la 3ème forme normale](/img/3eme_forme_normale.png "Illustration des inconsistances qu'entraîne une table qui ne répond pas à la 3ème forme normale. Crédit vidéo Learn Database Normalization, chaîne Youtube Decomplexify")
 
 Avec notre illustration on peut se demander : le *Player_Rating* est-il dépendant uniquement du *Player_ID* en clé primaire ou de la combinaison du *Player_ID* et du *Player_Skill_Level* ? En effet, le niveau de skill du joueur ne peut pas être "Beginner" s'il est contenu entre 4 et 6.
 

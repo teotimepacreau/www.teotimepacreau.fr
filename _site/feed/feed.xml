@@ -191,7 +191,7 @@ La méthode pour les définir est de toujours exprimer un minimum : “Un client
 &lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/relations-cardinalites-merise.png&quot; alt=&quot;Capture d&#39;écran de la modélisation des relations Merise&quot; /&gt;&lt;figcaption&gt;Modélisation des relations et de leurs cardinalites&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;cl%C3%A9-primaire-et-%C3%A9trang%C3%A8re&quot; tabindex=&quot;-1&quot;&gt;Clé primaire et étrangère&lt;/h3&gt;
 &lt;p&gt;Le principe de clés est indispensable pour faire référence à un enregistrement précis d’une table.
-La clé primaire est l’identifiant unique d’une entité.
+La clé primaire est l’identifiant unique d’une entité. Celle-ci peut-être &lt;em&gt;artificielle&lt;/em&gt;, c’est à dire créée de toute pièce, ou être une/plusieurs colonne(s) existante(s).
 La clé étrangère est une référence à la clé primaire d’une autre entité. Utile pour mettre en relation deux enregistrements qui ont un rapport entre eux.&lt;/p&gt;
 &lt;h2 id=&quot;comment-sch%C3%A9matiser-facilement-notre-mod%C3%A8le-logique-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Comment schématiser facilement notre Modèle Logique de Données&lt;/h2&gt;
 &lt;p&gt;J’utilise l’outil gratuit en ligne &lt;a href=&quot;https://app.diagrams.net/&quot;&gt;Draw.io&lt;/a&gt; qui a un sous-menu dédié “Relation entre les éléments”.&lt;/p&gt;
@@ -505,8 +505,7 @@ Portainer est facilement utilisable grâce à son interface cliquable qui permet
 &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; docker.io&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;apt&lt;/code&gt; est une commande native dans Linux qui permet d’installer des applications.&lt;/p&gt;
 &lt;p&gt;Puis installer Portainer&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=LOp_Cb2s7m8&quot;&gt;Tutoriel d’installation de Docker et Portainer sur son VPS&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Pour ouvrir Portainer il suffit d’entrer dans la barre de recherche de notre navigateur web l’adresse IP suivi du port du service que l’on souhaite utiliser.
 On reprend notre exemple initial avec l’adresse IP “192.0.2.0”. Reprenons notre commande entré pour installer Portainer : &lt;code&gt;-p 9000:9000&lt;/code&gt;. Cela signifie que Portainer est accessible sur le port 9000 de notre “hôte” : le VPS.

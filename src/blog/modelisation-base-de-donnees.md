@@ -80,7 +80,7 @@ Voici, pour notre exemple, les relations et leurs cardinalités :
 
 ### Clé primaire et étrangère  
 Le principe de clés est indispensable pour faire référence à un enregistrement précis d'une table.
-La clé primaire est l'identifiant unique d'une entité.
+La clé primaire est l'identifiant unique d'une entité. Celle-ci peut-être *artificielle*, c'est à dire créée de toute pièce, ou être une/plusieurs colonne(s) existante(s).
 La clé étrangère est une référence à la clé primaire d'une autre entité. Utile pour mettre en relation deux enregistrements qui ont un rapport entre eux.
 
 ## Comment schématiser facilement notre Modèle Logique de Données  

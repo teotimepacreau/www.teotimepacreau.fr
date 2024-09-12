@@ -9,6 +9,67 @@
 	<category>Blog</category>
 	<generator>Eleventy</generator>
     <item>
+      <title>La normalisation d&#39;une base de données</title>
+      <link>https://www.teotimepacreau.fr/blog/normalisation-base-de-donnees/</link>
+      <description>&lt;p&gt;&lt;strong&gt;DISCLAIMER&lt;/strong&gt; : Cet article est la suite de mon précédent article : &lt;a href=&quot;https://www.teotimepacreau.fr/blog/modelisation-base-de-donnees/&quot;&gt;Les bases pour modéliser une base de données&lt;/a&gt;. Pour une introduction à la modélisation conceptuelle et au principe de relations et cardinalités, s’y référer.&lt;/p&gt;
+&lt;h2 id=&quot;passer-du-mod%C3%A8le-conceptuel-de-donn%C3%A9es-%C3%A0-la-base-de-donn%C3%A9es&quot; tabindex=&quot;-1&quot;&gt;Passer du Modèle Conceptuel de Données à la base de données&lt;/h2&gt;
+&lt;p&gt;Chaque entité devient une table. Les attributs de notre entité deviennent les colonnes de la tables. Les relations sont soient tranformées en table soient elles disparaissent.&lt;/p&gt;
+&lt;h3 id=&quot;comment-transformer-les-relations-en-tables-%3F&quot; tabindex=&quot;-1&quot;&gt;Comment transformer les relations en tables ?&lt;/h3&gt;
+&lt;p&gt;Les cardinalités maximales nous renseignent sur le type de relation :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;une cardinalité maximale de 1 dans les deux sens de la relation est appelée One To One. Elle nous indique que la relation est fantôme, il faut donc fusionner les 2 entités en une seule et supprimer la relation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/relation-one-to-one.png&quot; alt=&quot;Capture d&#39;écran du passage de 2 entités reliés par une relation One To One en fusion d&#39;une seule entité&quot; /&gt;&lt;figcaption&gt;Passage de 2 entités reliés par une relation One To One en fusion d’une seule entité, crédit schéma : Université Le Mans&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;une cardinalité maximale de 1 d’un côté et de n de l’autre côté est appelée One To Many, Many To One dans l’autre sens. L’entité faible (celle ayant la cardinalité maximale de 1) absorbe la clé primaire de l’entité forte (celle ayant la cardinalité maximale n) en clé étrangère. La relation disparaît.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/relation-many-to-one.png&quot; alt=&quot;Capture d&#39;écran du passage de 2 entités reliés par une relation Many To One en fusion d&#39;une seule entité&quot; /&gt;&lt;figcaption&gt;Passage de 2 entités reliés par une relation May To One en table (FK = clé étrangère. PK = clé primaire)&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Une cardinalité maximale de n dans les deux sens est appelée Many To Many. La relation doit-être transformée en entité (appelée table de liaison) et copier les clés primaires des 2 entités à laquelle elle est liée pour les tranformer en clé étrangère dans la nouvelle entité.&lt;/p&gt;
+&lt;p&gt;Enfin, toute relation porteuse d’attributs se transforme en entité. Comme pour Many To Many, on copie les clés primaires des entités liés et on les transforment en clés étrangères.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/relation-many-to-many-et-relation-porteuse-attributs.png&quot; alt=&quot;Capture d&#39;écran du passage de 2 entités reliés par une relation Many To Many porteuse d&#39;attributs en table&quot; /&gt;&lt;figcaption&gt;Passage d’une relation Many To Many porteuse d’attributs à une table, crédit schéma : Université Le Mans&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;formes-normales&quot; tabindex=&quot;-1&quot;&gt;Formes normales&lt;/h2&gt;
+&lt;p&gt;Les formes normales sont des règles certifiant que la base de données respecte certaines contraintes de modélisation.&lt;/p&gt;
+&lt;p&gt;En effet, on souhaite que notre base de données puisse répondre à 3
+principes pour de bonne élaboration :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;pouvoir supprimer une entrée sans supprimer les données connexes. Par exemple : une table Livre ne doit pas avoir en colonnes l’auteur car si on supprime l’entrée cela supprimera l’auteur.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;éviter la répétition d’infos similaires car peu efficient pour le stockage. Par exemple : répéter sur 5000 entrée le même auteur, la même catégorie…&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;assurer la consistance des données (avoir à entrer manuellement plusieurs fois le même nom d’auteur entraîne des erreurs)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Il y a 5 niveaux de formes normales, certifiant de façon graduelle la qualité de notre base de données. Pour des raisons de simplicité, nous détaillerons seulement les 3 premiers niveaux, qui suffisent dans 99% des cas.&lt;/p&gt;
+&lt;p&gt;1NF :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;avoir une table sans clé primaire n’est pas permis&lt;/li&gt;
+&lt;li&gt;Utiliser les lignes pour véhiculer de l’information n’est pas permis&lt;/li&gt;
+&lt;li&gt;2 data-types différents ne peuvent exister dans une même colonne&lt;/li&gt;
+&lt;li&gt;Enregistrer un groupe de données qui se répète de colonnes en colonnes n’est pas permis (ex: qté_1, item_1, qté_2, item_2)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2NF :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tous les attributs non-clés d’une table doivent dépendre uniquement de la clé primaire dans son entièreté (une clé primaire peut être là combinaison de plusieurs colonnes)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3NF :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tous les attributs non-clés d’une table doivent dépendre uniquement de la clé primaire, dans son entièreté, et rien d’autre que cette clé. La méthode est de représenter les dépendances fonctionnelles pour les colonnes non-clés de notre table.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;&lt;img src=&quot;https://www.teotimepacreau.fr/img/relation-many-to-many-et-relation-porteuse-attributs.png&quot; alt=&quot;Capture d&#39;écran d&#39;une table avec en colonnes : Player_ID, Player_Rating, Player_Skill_Level avec 4 entrées pour illuster inconsistances qu&#39;entraîne une table qui ne répond pas à la 3ème forme normale&quot; /&gt;&lt;figcaption&gt;Illustration des inconsistances qu’entraîne une table qui ne répond pas à la 3ème forme normale. Crédit vidéo Learn Database Normalization, chaîne Youtube Decomplexify&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Avec notre illustration on peut se demander : le &lt;em&gt;Player_Rating&lt;/em&gt; est-il dépendant uniquement du &lt;em&gt;Player_ID&lt;/em&gt; en clé primaire ou de la combinaison du &lt;em&gt;Player_ID&lt;/em&gt; et du &lt;em&gt;Player_Skill_Level&lt;/em&gt; ? En effet, le niveau de skill du joueur ne peut pas être “Beginner” s’il est contenu entre 4 et 6.&lt;/p&gt;
+&lt;h2 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/GFQaEYEc8_8?si=g4PYVKrZCa8Jo2wi&quot;&gt;https://youtu.be/GFQaEYEc8_8?si=g4PYVKrZCa8Jo2wi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://perso.univ-lemans.fr/~cpiau/BD/SQL_PAGES/SQL0.html#L2-2&quot;&gt;https://perso.univ-lemans.fr/~cpiau/BD/SQL_PAGES/SQL0.html#L2-2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Livre : BAPTISTE, Jean-Luc. &lt;em&gt;&lt;a href=&quot;https://www.editions-eni.fr/livre/merise-guide-pratique-3e-edition-modelisation-des-donnees-et-des-traitements-manipulations-avec-le-langage-sql-9782409015342&quot;&gt;Merise - guide pratique - modélisation des données et des traitements&lt;/a&gt;, manipulations avec le langage SQL&lt;/em&gt;. Editions ENI. 2021.&lt;/p&gt;
+</description>
+      <pubDate>Thu, 12 Sep 2024 02:00:00 +0000</pubDate>
+      <dc:creator>Téotime Pacreau</dc:creator>
+      <guid>https://www.teotimepacreau.fr/blog/normalisation-base-de-donnees/</guid>
+    </item>
+    <item>
       <title>La révolution visuelle qu&#39;apporte Figma aux non-designers</title>
       <link>https://www.teotimepacreau.fr/blog/figma-pour-les-non-designers/</link>
       <description>&lt;p&gt;A mon arrivée chez &lt;a href=&quot;https://www.modernisation.gouv.fr/laboratoires/etatlin&quot;&gt;Etat’LIN, le laboratoire d’innovation publique de l’Etat en Pays de la Loire&lt;/a&gt;, j’ai été intégré à une équipe de designers de service. L’une des premières choses qui m’a frappé est la capacité des designers à donner vie aux idées. Les réflexions s’accompagnent toujours d’une matérialisation sous forme de schéma ou de dessin qui sont ensuite accrochés aux murs pour obtenir une image claire de la situation en un coup d’oeil. Cela a pour effet de rendre tangible les intentions et facilite l’alignement de l’équipe sur une idée.

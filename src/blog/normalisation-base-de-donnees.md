@@ -30,7 +30,7 @@ Chaque entité devient une table. Les attributs de notre entité deviennent les 
 Les cardinalités maximales nous renseignent sur le type de relation :
 - une cardinalité maximale de 1 dans les deux sens de la relation est appelée One To One. Elle nous indique que la relation est fantôme, il faut donc fusionner les 2 entités en une seule et supprimer la relation.
 
-![Capture d'écran du passage de 2 entités reliés par une relation One To One en fusion d'une seule entité](/img/entite-attribut-merise.png "Passage de 2 entités reliés par une relation One To One en fusion d'une seule entité, crédit schéma : Université Le Mans")
+![Capture d'écran du passage de 2 entités reliés par une relation One To One en fusion d'une seule entité](/img/relation-one-to-one.png "Passage de 2 entités reliés par une relation One To One en fusion d'une seule entité, crédit schéma : Université Le Mans")
 
 - une cardinalité maximale de 1 d'un côté et de n de l'autre côté est appelée One To Many, la réciproque est Many To One. L'entité faible (celle ayant la cardinalité maximale de 1) absorbe la clé primaire de l'entité forte (celle ayant la cardinalité maximale n) en clé étrangère. La relation disparaît.
 

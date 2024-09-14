@@ -35,20 +35,31 @@ Il s'agit d'un tableau qui recense toutes les données que comporte le problème
 
 | Nom de la donnée   | Format | Taille | Type élémentaire ou calculé | Document associé|
 | -------- | ------- | ------- | ------- | ------- |
-| Âge | Entier    | 3 | Elémentaire  | Fiche client |
-| Nom_client | Alphabétique   | 40 | Elémentaire  | Fiche client |
-| Prénom_client | Alphabétique   | 40 | Elémentaire  | Fiche client |
-| N° de rue | Alphanumérique  | 5 | Elémentaire  | Fiche client |
-| Nom de rue | Alphabétique   | 40 | Elémentaire  | Fiche client |
-| CP | Entier  | 5 | Entier  | Fiche client |
-| Ville | Alphabétique   | 40 | Elémentaire  | Fiche client |
-| Categorie| Alphabétique   | 20 | Elémentaire  | Enquete|
-| Questions_communes | Alphanumérique   | 100 | Elémentaire  | Enquete|
-| Questions_specifiques_categorie | Alphanumérique   | 100 | Elémentaire  | Enquete|
-| Nom_chef_projet_marketing | Alphabétique   | 40 | Elémentaire  | /|
-| Prenom_chef_projet_marketing | Alphabétique   | 40 | Elémentaire  | /|
+| age_client | Entier    | 3 | Elémentaire  | Fiche client |
+| nom_client | Alphabétique   | 40 | Elémentaire  | Fiche client |
+| prenom_client | Alphabétique   | 40 | Elémentaire  | Fiche client |
+| numero_de_rue_client | Alphanumérique  | 5 | Elémentaire  | Fiche client |
+| nom_de_rue_client | Alphabétique   | 40 | Elémentaire  | Fiche client |
+| cp_client | Entier  | 5 | Entier  | Fiche client |
+| ville_client | Alphabétique   | 40 | Elémentaire  | Fiche client |
+| nom_categorie| Alphabétique   | 20 | Elémentaire  | Enquete|
+| questions_specifiques_categorie | Alphanumérique   | 100 | Elémentaire  | Enquete|
+| questions_communes_enquete | Alphanumérique   | 100 | Elémentaire  | Enquete|
+| nom_chef_projet_marketing | Alphabétique   | 40 | Elémentaire  | /|
+| prenom_chef_projet_marketing | Alphabétique   | 40 | Elémentaire  | /|
 
 Le bloc "Adresse" a été divisé en 4 données séparées : "n° de rue", "nom de rue", "CP" et "Ville". En effet "Adresse" était décomposable, or si l'on souhaite à terme requêter le nombre de clients qui ont participés à l'enquête dans une ville précise il est nécessaire d'avoir un champ séparé pour la ville.
+
+## Les dépendances fonctionnelles
+A la suite du dictionnaire de données, il peut être utile d'identifier quelles données dépendent de quel identifiant unique.
+
+| Identifiant unique   | Données dépendantes fonctionnellement |
+| -------- | ------- |
+| id_client | age_client, nom_client, prenom_client, numero_rue_client, nom_rue_client, cp_client, ville_client    |
+| nom_categorie | questions_specifiques_categorie   |
+| chef_marketing_id | nom_chef_projet_marketing, prenom_chef_projet_marketing    |
+| id_enquete | questions_communes_enquete |
+
 ## Le Modèle Conceptuel de Données
 Plusieurs types de schémas conceptuels existent, correspondants aux différents types de base de données que l’on peut rencontrer :
 - le modèle hiérarchique
@@ -64,7 +75,9 @@ Une entité possède des attributs : il s'agit de propriétés qui caractérisen
 
 Pour passer du dictionnaire de données à la modélisation des Entités-Attributs, on regroupe les données qui ont un lien entre elles en se demandant de quelles données uniques elles dépendent.
 Voici la modélisation de notre problème posé en introduction :
+
 ![Capture d'écran de la modélisation en entité-attribut](/img/entite-attribut-merise.png "Modélisation en entité-attribut")
+
 ### Les relations et leurs cardinalités
 Les relations décrivent comment les entités interagissent entre elles. Les relations sont généralement marquées par des verbes "achète à", "est traité par"...
 La relation peut comporter des attributs, on l’appelle alors “relation porteuse”.
@@ -78,12 +91,25 @@ Voici, pour notre exemple, les relations et leurs cardinalités :
 
 ![Capture d'écran de la modélisation des relations Merise](/img/relations-cardinalites-merise.png "Modélisation des relations et de leurs cardinalites")
 
+### Cas particulier de la nécessité de concaténer plusieurs identifiants pour identifier de manière unique
+Prenons un tout autre exemple avec un modèle conceptuel de données qui stockerait des informations au sujet d'appartements, l'étage, l'immeuble et la rue auxquels ils se rattachent.
+Un appartement ne peut pas être identifié de manière unique par sa lettre_appartement car il peut y avoir un appart A au 1er étage et un appart A au 2ème étage, on exprime alors avec les parenthèses autour des cardinalités que les entités du côté de ces cardinalités seront identifiées par la concaténation des identifiants de toute la chaîne de la relation.
+
+![Capture d'écran de la modélisation conceptuel de données de l'exemple](/img/merise-concaténation_identifiants.png "Modélisation conceptuel des données de l'exemple, crédit schéma et exemple : Idriss Neumann")
+
+
+```markdown
+Rue (code_rue, nom_rue)
+Immeuble (num_immeuble, code_rue#, nb_etages_total)
+Etage (num_etage, num_immeuble#, code_rue#, nb_appartements_tot)
+Appartement (lettre_appartement, num_etage#, num_immeuble#, code_rue#, nb_pieces_total)
+```
 ### Clé primaire et étrangère  
 Le principe de clés est indispensable pour faire référence à un enregistrement précis d'une table.
-La clé primaire est l'identifiant unique d'une entité. Celle-ci peut-être *artificielle*, c'est à dire créée de toute pièce, ou être une/plusieurs colonne(s) existante(s).
-La clé étrangère est une référence à la clé primaire d'une autre entité. Utile pour mettre en relation deux enregistrements qui ont un rapport entre eux.
+La clé primaire est l'identifiant unique d'une entité. Celle-ci peut-être *artificielle*, c'est à dire créée de toute pièce, ou être naturellement *candidate* c'est à dire être une colonne déjà existante ou la concaténation de plusieurs colonnes.
+La clé étrangère est une référence à l'identifiant unique d'une autre entité. Utile pour mettre en relation deux enregistrements qui ont un rapport entre eux.
 
-## Comment schématiser facilement notre Modèle Logique de Données  
+## Comment schématiser facilement notre Modèle Conceptuel de Données  
 J'utilise l'outil gratuit en ligne [Draw.io](https://app.diagrams.net/) qui a un sous-menu dédié "Relation entre les éléments".
 
 ![Interface de Draw.io](/img/interface_drawio.png "Interface de Draw.io, volet latéral composé du sous-menu relation entre les éléments")
@@ -94,3 +120,5 @@ J'utilise l'outil gratuit en ligne [Draw.io](https://app.diagrams.net/) qui a un
 <https://fr.wikiversity.org/wiki/Introduction_aux_syst%C3%A8mes_de_bases_de_donn%C3%A9es/Introduction/>
 
 <https://www.base-de-donnees.com/mcd/>
+
+<https://www.ineumann.fr/docs/bdd/initiation-merise>

@@ -76,7 +76,7 @@ Une entité possède des attributs : il s'agit de propriétés qui caractérisen
 Pour passer du dictionnaire de données à la modélisation des Entités-Attributs, on regroupe les données qui ont un lien entre elles en se demandant de quelles données uniques elles dépendent.
 Voici la modélisation de notre problème posé en introduction :
 
-![Capture d'écran de la modélisation en entité-attribut](/img/%CD_entite_attribut.png "Modélisation en entité-attribut")
+![Capture d'écran de la modélisation en entité-attribut](/img/MCD_entite_attribut.png "Modélisation en entité-attribut")
 
 ### Les relations et leurs cardinalités
 Les relations décrivent comment les entités interagissent entre elles. Les relations sont généralement marquées par des verbes "achète à", "est traité par"...

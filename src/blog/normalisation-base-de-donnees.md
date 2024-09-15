@@ -1,5 +1,4 @@
 ---
-# eleventyExcludeFromCollections: true
 title: "La normalisation d'une base de données"
 type: "Article"
 date: "2024-09-12"

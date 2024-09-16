@@ -6,6 +6,7 @@ description: "Pour sortir des solutions propriétaires, héberger soi-même est 
 tags: 
   - 'DevOps'
   - 'Hébergement'
+  - 'VPS'
 layout: blogpost_layout.njk
 eleventyComputed:
   meta:

@@ -30,9 +30,11 @@ Mais comment y parvenir ?
 
 En effet notre VPS possède son propre OS (dans la majorité des cas Linux). Quand notre app évolue, on a pas envie de tirer les derniers changement de code, installer les nouvelles dépendances, faire redémarrer le processus d'éxecution.
 
-Dockerizer l'application va nous permettre de créer un environnement propre pour l'application et ainsi éviter les conflits de version de Node. Cela assure que l'application va se comporter de la même façon peu importe si elle tourner sur notre machine locale ou sur le VPS.
+Dockeriser l'application va nous permettre de créer un environnement propre pour l'application et ainsi éviter les conflits de version de Node. Cela assure que l'application va se comporter de la même façon peu importe si elle tourner sur notre machine locale ou sur le VPS.
 
-## Comment Dockerizer une application Node ?
+## Comment Dockeriser une application Node ?
+
+![Schema Dockerisation d'une application NodeJS : première étape élaborer un Dockerfile, seconde étape builder l'image, troisième étape on obtient l'image Docker, quatrième étape choisir un cloud pour distribuer l'image Docker, cinquième étape execution de l'image DOcker dans un container sur notre VPS](/img/schema_dockerisation_nodejs.png.png "Schéma 'Dockeriser et éxecuter une application Node'")
 
 ## Sources
 <https://youtu.be/GFQaEYEc8_8?si=g4PYVKrZCa8Jo2wi>

@@ -29,7 +29,6 @@ Jeff Bezos estime que la lecture et l'écriture ont joués un rôle majeur dans 
 If you want to clarify your thinking, remember something important, or communicate something clearly, write it down.
 {% endblockquote %}
 
-
 Amazon s'est construit sur une culture de l'écrit dans le but de :
 - clarifier les raisonnements
 - faciliter les transferts de connaissance

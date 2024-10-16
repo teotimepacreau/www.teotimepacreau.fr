@@ -1023,12 +1023,22 @@ article > p > a:hover {
   content: open-quote;
   font-family: "Helvetica";
   font-weight: bold;
+  float: left;
+  padding-inline-end: .5ex;
+  vertical-align: baseline;
+  line-height: 1.5;
 }
-
+.figure-blockquote > blockquote p{
+  display: inline;
+}
 .figure-blockquote blockquote:after {
+  display: inline;
   content: close-quote;
   font-family: "Helvetica";
   font-weight: bold;
+  padding-inline-start: .5ex;
+  vertical-align: baseline;
+  line-height: 1.5;
 }
 
 /*UPDATE POST ENTRY*/

@@ -25,9 +25,9 @@ eleventyComputed:
 
 Microsoft Word, LibreOffice, Google Docs, ces logiciels de création et modification de documents sont les premiers qui viennent à l’esprit quand on doit produire du texte.
 
-Pourtant ceux-ci apportent leur lot de difficulté en prientant la production du texte vers les choix implicites de l’éditeur du logiciel. Ceux-ci ne sont pas neutres.
+Pourtant ceux-ci apportent leur lot de difficulté en conditionnant la production du texte à travers les choix implicites de l’éditeur du logiciel. Ceux-ci ne sont pas neutres.
 
-{% blockquote "Arthur Perret maître de conférences en sciences de l’information et de la communication à l’IUT de l’Université Jean Moulin Lyon 3", "[Cours d'écriture scientifique](https://www.arthurperret.fr/cours/ecriture-scientifique-format-texte.html)" %}
+{% blockquote "Arthur Perret, maître de conférences en sciences de l’information et de la communication à l’IUT de l’Université Jean Moulin Lyon 3", "[Cours d'écriture scientifique](https://www.arthurperret.fr/cours/ecriture-scientifique-format-texte.html)" %}
 En sciences humaines et sociales, les logiciels de traitement de texte, comme LibreOffice Writer, Microsoft Word et Google Docs, sont utilisés par la majorité des auteurs et des éditeurs. Ce sont des outils polyvalents, puissants, capables de gérer toutes les étapes de la chaîne éditoriale. Mais leurs avantages sont contrebalancés par une série d’inconvénients plus ou moins problématiques.
 
 D’abord, et du fait de leur polyvalence, ces logiciels tendent souvent vers l’usine à gaz. Leur interface est notoirement encombrée, pleine de distractions. Et ils sont gourmands en ressources (énergie, mémoire) ; or malgré cela, ils gèrent mal les documents longs et complexes.
@@ -60,7 +60,7 @@ On peut reprendre les étapes de fabrication d’un document recommandé par Ant
 
 1. Pour l’étape “Ecrire”, on s’appuie sur le format `Markdown` . Il s’agit d’un langage de balisage léger permettant de se concentrer d’abord sur le fond du texte plutôt que sur la forme. Contrairement au `HTML` le processus d’écriture est plus fluide. La syntaxe est simple à apprendre et s’appuie sur des symboles.
 
-{% blockquote "Louis-Olivier Brassard doctorant en humanités numériques à l'Université de Montreal", "[extrait du cours de Debugue tes humanités sur les langages de balisage](https://debugue.ecrituresnumeriques.ca/saison-04/seance-03-les-langages-de-balisage/)" %}
+{% blockquote "Louis-Olivier Brassard, doctorant en humanités numériques à l'Université de Montreal", "[extrait du cours de Debugue tes humanités sur les langages de balisage](https://debugue.ecrituresnumeriques.ca/saison-04/seance-03-les-langages-de-balisage/)" %}
 «  Markdown  » c’est deux choses : une syntaxe de balisage de texte brut et un outil logiciel qui convertit le balisage de texte brut en HTML pour la publication sur le web.
 {% endblockquote %}
 
@@ -68,7 +68,7 @@ On peut reprendre les étapes de fabrication d’un document recommandé par Ant
 Plutôt que de rédiger du texte non structuré, ou à l’inverse de devoir connaître une trop importante somme de balises HTML, Markdown traduit simplement une intention sémantique via une syntaxe simple compréhensible par des humains.
 {% endblockquote %}
 
-1. L’étape “Partager, valider” doit être considérée avant même la première ligne de texte écrite et supporter tous le processus d’édition : on souhaite suivre les modifications proposées par les différents contributeurs et versionner le document facilement. Git est un protocole libre de versionnage et suivi des modifications. Celui-ci simplifie grandement la collaboration en permettant à tous les contributeurs de proposer des modifications qui peuvent être soumises pour approbation. Il permet également de retracer toutes les modifications et de restaurer des versions très antérieures. Git présente de formidables opportunités pour faciliter la collaboration dans le monde professionnel : il éviterait de nombreux allers-retours de document et permettrait de sortir de l’approche “modification des documents dans la colonne de commentaire Word”. De même il permettra de modifier la mise en forme de façon collaborative. Git ne peut cependant pas traiter de fichiers binaires, exit donc les formats “doc, docx, odt…” mais gère tous les fichiers en lignes numérotées donc Markdown, HTML, CSS…
+2. L’étape “Partager, valider” doit être considérée avant même la première ligne de texte écrite et supporter tous le processus d’édition : on souhaite suivre les modifications proposées par les différents contributeurs et versionner le document facilement. Git est un protocole libre de versionnage et suivi des modifications. Celui-ci simplifie grandement la collaboration en permettant à tous les contributeurs de proposer des modifications qui peuvent être soumises pour approbation. Il permet également de retracer toutes les modifications et de restaurer des versions très antérieures. Git présente de formidables opportunités pour faciliter la collaboration dans le monde professionnel : il éviterait de nombreux allers-retours de document et permettrait de sortir de l’approche “modification des documents dans la colonne de commentaire Word”. De même il permettra de modifier la mise en forme de façon collaborative. Git ne peut cependant pas traiter de fichiers binaires, exit donc les formats “doc, docx, odt…” mais gère tous les fichiers en lignes numérotées donc Markdown, HTML, CSS…
 
 {% blockquote "Antoine Fauchié", "[extrait d'une interview à propos du protocole Git comme outil d'édition et d'écriture](https://hal.science/hal-03622394/document)" %}
 Git, ce n’est pas un outil, c’est plutôt un protocole de travail. Git, c’est une façon de travailler,
@@ -101,8 +101,8 @@ travailler que tout le monde a. Si l’on arrive sur un projet, on va découvrir
 de faire
 {% endblockquote %}
 
-1. L’étape “Composer” consiste en la conversion du fichier Markdown vers du HTML. On met en forme via des feuilles de style CSS qui permettent d’aller bien plus loin dans la personnalisation que ce qu’offre la plupart des logiciels de mise en forme graphique.
-2. L’étape “Générer, publier” consiste en l’adaptation du HTML et du CSS aux formats souhaités : print, mobile, desktop… [PagedJS](https://pagedjs.org/documentation/) est une librairie Javascript open source gratuite qui pagine le contenu comme ce qui peut-être attendu dans un format livre. PagedJS a été initié par Adam Hyde et est développé par Julie Blanc, Fred Chasen et Julien Taquet.
+3. L’étape “Composer” consiste en la conversion du fichier Markdown vers du HTML. On met en forme via des feuilles de style CSS qui permettent d’aller bien plus loin dans la personnalisation que ce qu’offre la plupart des logiciels de mise en forme graphique.
+4. L’étape “Générer, publier” consiste en l’adaptation du HTML et du CSS aux formats souhaités : print, mobile, desktop… [PagedJS](https://pagedjs.org/documentation/) est une librairie Javascript open source gratuite qui pagine le contenu comme ce qui peut-être attendu dans un format livre. PagedJS a été initié par Adam Hyde et est développé par Julie Blanc, Fred Chasen et Julien Taquet.
 
 ## Une introduction pratique à la conception de documents sans logiciel de traitement de texte
 

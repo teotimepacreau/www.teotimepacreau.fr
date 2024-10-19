@@ -1611,7 +1611,7 @@ tr {
     fill: var(--txt);
   }
 
-  [popover] {
+  #mobile-navigation[popover] {
     left: 0;
     top: 0;
     height: 100dvh;
@@ -1630,7 +1630,7 @@ tr {
     opacity: 0;
     transform: translateX(-50px);
   }
-  [popover]:popover-open {
+  #mobile-navigation[popover]:popover-open {
     /*POPOVER BEFORE THE OPENING*/
     @starting-style {
       opacity: 0;

@@ -1,0 +1,17 @@
+img {
+  cursor: zoom-in;
+}
+
+dialog {
+  margin-inline: auto;
+  margin-block: auto;
+  border: none;
+  width: 60vw;
+  box-shadow: 2px 2px 5px 1px var(--shadow);
+  &::backdrop{
+    backdrop-filter: blur(2px);
+  }
+  &:focus {
+    outline: none;
+  }
+}

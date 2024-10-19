@@ -2,16 +2,68 @@ img {
   cursor: zoom-in;
 }
 
-dialog {
+/*   Open state of the dialog  */
+dialog[open] {
+  opacity: 1;
+  transform: scaleY(1);
   margin-inline: auto;
   margin-block: auto;
   border: none;
   width: 60vw;
   box-shadow: 2px 2px 5px 1px var(--shadow);
-  &::backdrop{
-    backdrop-filter: blur(2px);
-  }
   &:focus {
     outline: none;
   }
 }
+
+/*   Closed state of the dialog   */
+dialog {
+  opacity: .3;
+  transform: scaleY(.3);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out,
+    overlay 0.7s ease-out allow-discrete,
+    display 0.7s ease-out allow-discrete;
+  /* Equivalent to
+  transition: all 0.7s allow-discrete; */
+}
+
+/*   Before-open state  */
+/* Needs to be after the previous dialog[open] rule to take effect,
+    as the specificity is the same */
+@starting-style {
+  dialog[open] {
+    opacity: .3;
+    transform: scaleY(.3);
+  }
+}
+
+/* Transition the :backdrop when the dialog modal is promoted to the top layer */
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0%);
+  backdrop-filter: blur(0px);
+  transition:
+    display 0.7s allow-discrete,
+    overlay 0.7s allow-discrete,
+    backdrop-filter .3s,
+    background-color 0.3s;
+  /* Equivalent to
+  transition: all 0.7s allow-discrete; */
+}
+
+dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 25%);
+  backdrop-filter: blur(2px);
+}
+
+/* This starting-style rule cannot be nested inside the above selector
+because the nesting selector cannot represent pseudo-elements. */
+
+@starting-style {
+  dialog[open]::backdrop {
+    background-color: rgb(0 0 0 / 0%);
+    backdrop-filter: blur(0px);
+  }
+}
+

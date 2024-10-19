@@ -5,7 +5,6 @@ img {
 /*   Open state of the dialog  */
 dialog[open] {
   opacity: 1;
-  transform: scaleY(1);
   margin-inline: auto;
   margin-block: auto;
   border: none;
@@ -14,19 +13,22 @@ dialog[open] {
   &:focus {
     outline: none;
   }
+  & img {
+    margin-top: 0 !important;
+    border-radius: 0!important;
+  }
+}
+@media (width < 1000px) {
+  dialog[open] {
+    width: 90vw;
+  }
 }
 
 /*   Closed state of the dialog   */
 dialog {
-  opacity: .3;
-  transform: scaleY(.3);
-  transition:
-    opacity 0.7s ease-out,
-    transform 0.7s ease-out,
-    overlay 0.7s ease-out allow-discrete,
-    display 0.7s ease-out allow-discrete;
-  /* Equivalent to
-  transition: all 0.7s allow-discrete; */
+  opacity: 0;
+  transition: opacity 0.5s ease-out, width 0.5s ease-out, display 0.5s ease-out;
+  transition-behavior: allow-discrete;
 }
 
 /*   Before-open state  */
@@ -34,8 +36,7 @@ dialog {
     as the specificity is the same */
 @starting-style {
   dialog[open] {
-    opacity: .3;
-    transform: scaleY(.3);
+    opacity: 0;
   }
 }
 
@@ -43,17 +44,13 @@ dialog {
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0%);
   backdrop-filter: blur(0px);
-  transition:
-    display 0.7s allow-discrete,
-    overlay 0.7s allow-discrete,
-    backdrop-filter .3s,
-    background-color 0.3s;
+  transition: backdrop-filter 0.2s, background-color 0.2s;
   /* Equivalent to
   transition: all 0.7s allow-discrete; */
 }
 
 dialog[open]::backdrop {
-  background-color: rgb(0 0 0 / 25%);
+  background-color: rgb(0 0 0 / 30%);
   backdrop-filter: blur(2px);
 }
 
@@ -66,4 +63,3 @@ because the nesting selector cannot represent pseudo-elements. */
     backdrop-filter: blur(0px);
   }
 }
-

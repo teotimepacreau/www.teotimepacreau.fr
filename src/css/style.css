@@ -297,8 +297,8 @@ li,
 code,
 pre {
   line-height: 1.5;
-  font-size: var(--step-0);
 }
+
 main a::after {
   content: "↗" / "";
 }
@@ -692,16 +692,38 @@ a:hover {
 }
 
 /*---FOOTER---*/
+#footer {
+  font-size: var(--step--2);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 0.5fr));
+  grid-template-rows: min-content;
+  column-gap: var(--rythme);
+  justify-items: start;
+  margin-top: calc(2 * var(--rythme));
+  padding-top: calc(0.5 * var(--rythme));
+  border-top: 2px solid var(--shadow);
+  & li{
+    list-style-type: none;
+  }
+}
 
 address {
   font-style: unset;
 }
 
 .social-footer {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 1ex;
   text-decoration: none;
+}
+
+.social-footer:first-of-type{
+  width: min-content;
+}
+
+.social-footer > * {
+  flex: 0 1;
 }
 
 .social-footer::after {
@@ -714,21 +736,6 @@ address {
 }
 
 
-footer li {
-  list-style-type: none;
-}
-
-#footer {
-  grid-column: 1 / 2;
-  grid-row-start: 2;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 0.5fr));
-  grid-template-rows: min-content;
-  justify-items: start;
-  margin-top: calc(2 * var(--rythme));
-  padding-top: calc(0.5 * var(--rythme));
-  border-top: 2px solid var(--shadow);
-}
 #footer li + li, #footer address a + a {
   margin-top: calc(0.5 * var(--rythme));
 }
@@ -754,7 +761,6 @@ footer li {
   aspect-ratio: 1;
   font-weight: 600;
   line-height: 1.4;
-  display: inline-block;
 }
 
 /*---BLOG LIST PAGE---*/
@@ -915,19 +921,25 @@ footer li {
 
 .post-grid {
   display: grid;
-  grid-template-columns: minmax(min-content, 15dvw) minmax(min-content, 70ch);
-  grid-template-rows: min-content min-content auto auto;
-  column-gap: calc(4 * var(--rythme));
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.post-grid #footer {
+.post-grid > #footer {
   grid-column: 2 / 3;
   grid-row: 4 / 5;
 }
 
-.post-grid main {
+.post-grid > main {
   grid-column: 2 / 3;
   grid-row: 1 / 4;
+}
+
+.post-grid > aside {
+  grid-column: 1 / 2;
+}
+
+.post-grid > header, .post-grid > aside {
+  max-width: 15dvw;
 }
 
 #post {
@@ -938,7 +950,7 @@ footer li {
   margin-top: calc(0.5 * var(--rythme));
 }
 
-#post h1, #post h2, #post h3, #post h4, #post h5 {
+#post h2, #post h3, #post h4, #post h5 {
   margin-top: calc(2*var(--step-0));
 }
 
@@ -957,10 +969,6 @@ footer li {
 
 #post header > * + *, #post > * + * {
   margin-top: calc(0.5 * var(--rythme));
-}
-
-#post header {
-  margin-bottom: var(--rythme);
 }
 
 .post-date {

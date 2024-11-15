@@ -115,6 +115,11 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/blog/*.md");
   });
 
+    // CREER LA COLLECTION DES ESSAIS
+    eleventyConfig.addCollection("essais", function (collectionApi) {
+      return collectionApi.getFilteredByGlob("src/essais/*.md");
+    });
+
   // CREER L'ARRAY DE TAGS
   eleventyConfig.addCollection("tagList", function (collection) {
     let tagSet = new Set();
@@ -134,6 +139,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/");
   eleventyConfig.addPassthroughCopy("src/fonts/");
   eleventyConfig.addPassthroughCopy("src/img/");
+  eleventyConfig.addPassthroughCopy("src/media/");
   eleventyConfig.addPassthroughCopy("src/favicon/");
   eleventyConfig.addPassthroughCopy("src/filters/");
   eleventyConfig.addPassthroughCopy("src/scripts/");

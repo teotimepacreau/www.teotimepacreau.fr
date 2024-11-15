@@ -1,6 +1,6 @@
 #partage {
-    margin-top: calc(2*var(--baseline));
-    padding-top: calc(.5*var(--baseline))
+    margin-top: calc(2*var(--step-0));
+    padding-top: calc(.5*var(--step-0))
 }
 
 #partage h2::after {
@@ -21,7 +21,7 @@
     font-family: "Inter-Variable", sans-serif;
     background-color: var(--bglighten20);
     box-shadow: 1px 1px 1px 0px oklch(from var(--shadow) l c h / 7%);
-    margin-top: calc(.5*var(--baseline));
+    margin-top: calc(.5*var(--step-0));
     padding-inline: 2ex;
     padding-block: .5ex;
     display: flex;

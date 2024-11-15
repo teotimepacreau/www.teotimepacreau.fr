@@ -7,6 +7,7 @@
   --step-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
   --step--1: clamp(0.8333rem, 0.7754rem + 0.2899vw, 1rem);
   --step--2: clamp(0.6944rem, 0.6577rem + 0.1836vw, 0.8rem);
+  --border-radius: .3rem;
   --bg: oklch(35.5% 13.5% 174.846);
   --txt: #dfd6d6;
   --accent: oklch(91.64% 0.073 77.44);
@@ -117,7 +118,7 @@ video {
   display: block;
   width: auto;
   height: auto;
-  border-radius: 0.3rem;
+  border-radius: var(--border-radius);
 }
 
 /* More consistent, styleable hr*/
@@ -521,7 +522,7 @@ a:hover {
 }
 
 .homepage-projets-grid-item h3 {
-  font-size: 1rem;
+  font-size: var(--step-2);
   font-weight: 600;
   margin-top: unset;
 }
@@ -538,10 +539,10 @@ a:hover {
   list-style-type: none;
   padding-block: 0.1ex;
   padding-inline: 0.6ex;
-  border-radius: 0.2rem;
+  border-radius: var(--border-radius);
   border: 1px solid var(--txtlighten20);
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: var(--step--2);
   opacity: .9;
   transition: all 0.2s ease-out;
   cursor: default;
@@ -584,7 +585,7 @@ a:hover {
     color: var(--bg);
     top: 8dvh;
     left: 0;
-    border-radius: 0.3rem;
+    border-radius: var(--border-radius);
     box-shadow: 1px 1px 5px 0px var(--shadow);
     backdrop-filter: blur(30px);
     color: var(--txt);
@@ -593,7 +594,7 @@ a:hover {
     border-color: var(--bg) !important;
     background-color: var(--bg);
     color: var(--txt);
-    font-size: 0.85rem !important;
+    font-size: var(--step--2) !important;
     font-weight: 400 !important;
     padding-block: calc(0.05 * var(--rythme));
     opacity: 1 !important;
@@ -630,7 +631,7 @@ a:hover {
 }
 
 #homepage-services-grid > article {
-  border-radius: 0.3rem;
+  border-radius: var(--border-radius);
   border: 1px solid var(--accent);
 }
 
@@ -686,7 +687,7 @@ a:hover {
 }
 
 .homepage-services-item-category-details {
-  font-size: 0.75rem;
+  font-size: var(--step--2);
   opacity: 0.83;
 }
 
@@ -848,7 +849,7 @@ footer li {
   padding-inline: calc(0.1 * var(--rythme));
   padding-block: calc(0.05 * var(--rythme));
   border: 1px solid var(--bg);
-  border-radius: .2rem;
+  border-radius: var(--border-radius);
   font-size: .75rem;
 }
 
@@ -900,7 +901,7 @@ footer li {
   /*COMPOSANT DE NAVIGATION DESKTOP DANS LES POST*/
   flex-direction: column;
   align-items: unset;
-  border-radius: 0.3rem;
+  border-radius: var(--border-radius);
   gap: 0;
 }
 
@@ -966,12 +967,12 @@ footer li {
   margin-top: calc(0.125 * var(--rythme)) !important;
   display: block;
   opacity: 0.9;
-  font-size: 0.75rem;
+  font-size: var(--step--2);
 }
 
 .post-tags {
   opacity: 0.9;
-  font-size: 0.75rem;
+  font-size: var(--step--2);
   display: flex;
   flex-wrap: wrap;
   gap: calc(0.25 * var(--rythme));
@@ -982,7 +983,7 @@ footer li {
   display: inline-block;
   padding-inline: calc(0.15 * var(--rythme));
   padding-block: calc(0.04 * var(--rythme));
-  border-radius: 0.2rem;
+  border-radius: var(--border-radius);
   color: var(--bg);
   background-color: var(--txt);
   text-decoration: none;
@@ -1099,7 +1100,11 @@ article > p > a:hover {
 }
 
 /*TOC*/
+.table-of-content li{
+  font-size: var(--step--2);
+}
 .table-of-content::before {
+  font-size: var(--step--2);
   content: "Table de contenu ↓" / "Table de contenu";
   margin-top: calc(2 * var(--rythme));
   margin-bottom: calc(0.25 * var(--rythme));
@@ -1108,7 +1113,7 @@ article > p > a:hover {
   color: var(--bg);
   padding-inline: calc(0.5 * var(--rythme));
   padding-block: calc(0.25 * var(--rythme));
-  border-radius: 0.3rem;
+  border-radius: var(--border-radius);
   font-weight: 600;
 }
 
@@ -1147,7 +1152,7 @@ article > p > a:hover {
   padding: calc(.5*var(--rythme));
   background-color: var(--accent);
   color: var(--bg);
-  border-radius: .5rem;
+  border-radius: var(--border-radius);
 }
 
 .tags-article-card:first-child {
@@ -1481,7 +1486,7 @@ li {
   margin-top: calc(0.5 * var(--rythme));
   max-width: 100%;
   height: auto;
-  border-radius: 0.3rem;
+  border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 1px 1px 3px 0px var(--shadow);
   transition: opacity .2s ease-out;

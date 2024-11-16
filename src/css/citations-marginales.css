@@ -1,0 +1,25 @@
+/* Compteur automatique */
+article {
+	counter-reset: sidenote-counter;
+}
+
+blockquote span.sidenote-counter::after {
+    counter-increment: sidenote-counter;
+    content: counter(sidenote-counter);
+}
+
+blockquote span.sidenote::before {
+    content: counter(sidenote-counter);
+}
+
+/* style de la sidenote */
+blockquote span.sidenote {
+    float: inline-end;
+    margin-right: -70%;
+    width: 50%;
+    text-indent: -1rem;
+}
+
+blockquote em {
+    font-style: oblique;
+}

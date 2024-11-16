@@ -20,7 +20,6 @@ let figoptions = {
 };
 
 module.exports = function (eleventyConfig) {
-  
   //  SHORTCODE MISE EN FORME BLOC DE CODES
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -49,10 +48,32 @@ module.exports = function (eleventyConfig) {
     }
   );
 
+  //SHORTCODE POUR COMPOSANT "CITATIONS MARGINALES"
+  eleventyConfig.addPairedShortcode(
+    "citationsmarginales",
+    function (content, source) {
+      let markup = `
+    <blockquote>
+      <p>
+      ${content}
+        <span class="sidenote-counter">
+        </span>
+      </p>
+      <span class="sidenote">${source}</span>
+    </blockquote>
+    `;
+      return markup;
+    }
+  );
+
   //SHORTCODE POUR COMPOSANT "UPDATE"
   eleventyConfig.addPairedShortcode("update", function (content) {
-    let updateDate = this.ctx.updatedate
-    let formattedDate = new Date(updateDate).toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' });
+    let updateDate = this.ctx.updatedate;
+    let formattedDate = new Date(updateDate).toLocaleDateString("fr-FR", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    });
     let markup = `
   <p class="post-update">
   <span>Mise à jour du <time datetime="${formattedDate}">${formattedDate}</time></span>${content}</p>`;
@@ -115,10 +136,10 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/blog/*.md");
   });
 
-    // CREER LA COLLECTION DES ESSAIS
-    eleventyConfig.addCollection("essais", function (collectionApi) {
-      return collectionApi.getFilteredByGlob("src/essais/*.md");
-    });
+  // CREER LA COLLECTION DES ESSAIS
+  eleventyConfig.addCollection("essais", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/essais/*.md");
+  });
 
   // CREER L'ARRAY DE TAGS
   eleventyConfig.addCollection("tagList", function (collection) {

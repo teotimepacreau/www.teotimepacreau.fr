@@ -73,7 +73,7 @@ body {
   background-color: var(--bg);
   color: var(--txt);
   overflow-x: hidden;
-  text-rendering: geometricPrecision;
+  text-rendering: optimizeLegibility;
   font-family: "Inter-Variable", Helvetica, system, sans-serif;
 }
 

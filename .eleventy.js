@@ -52,6 +52,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPairedShortcode(
     "citationsmarginales",
     function (content, source) {
+     if (content) { 
       let markup = `
     <blockquote class="citation-calling-sidenote">
       <p>
@@ -63,6 +64,16 @@ module.exports = function (eleventyConfig) {
     </blockquote>
     `;
       return markup;
+     } else {
+      let markup = `
+      <span class='lettrage-superieur'>
+        <sup>
+        </sup>
+        <span class="sidenote"><p>${source}</p></span>
+      </span>
+      `;
+        return markup;
+     }
     }
   );
 

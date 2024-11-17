@@ -16,13 +16,12 @@ blockquote span.sidenote-caller-counter {
   }
 }
 
-blockquote span.sidenote {
-  margin-left: var(--rythme);
+span.sidenote {
   float: inline-end;
-  margin-right: -70%;
+  margin-right: -80%;
   width: 60%;
   position: relative;
-  text-indent: -.1ex;
+  text-indent: -0.1ex;
   &::before {
     /* Compteur automatique */
     content: counter(sidenote-counter);
@@ -31,9 +30,6 @@ blockquote span.sidenote {
     top: -0.2rem;
     left: -0.4rem;
     font-size: calc(0.75 * var(--step--2));
-  }
-  & p em {
-    font-family: "Inter-Variable-Italic";
   }
 }
 
@@ -63,6 +59,24 @@ blockquote span.sidenote {
       font-weight: bold;
       vertical-align: baseline;
       line-height: 1.5;
+    }
+  }
+}
+
+/* lettrage supérieur */
+.lettrage-superieur {
+  display: inline;
+  & sup {
+    position: relative;
+    &::after {
+      /* Compteur automatique */
+      position: absolute;
+      display: inline;
+      counter-increment: sidenote-counter;
+      content: counter(sidenote-counter);
+      top: -0.2rem;
+      right: 0.4rem;
+      font-size: calc(0.75 * var(--step--2));
     }
   }
 }

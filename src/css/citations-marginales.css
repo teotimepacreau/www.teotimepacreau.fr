@@ -1,25 +1,68 @@
-/* Compteur automatique */
 article {
-	counter-reset: sidenote-counter;
+  counter-reset: sidenote-counter;
 }
 
-blockquote span.sidenote-counter::after {
+blockquote span.sidenote-caller-counter {
+  position: relative;
+  &::after {
+    /* Compteur automatique */
+    position: absolute;
+    display: inline;
     counter-increment: sidenote-counter;
     content: counter(sidenote-counter);
+    top: -0.2rem;
+    left: -0.4rem;
+    font-size: calc(0.75 * var(--step--2));
+  }
 }
 
-blockquote span.sidenote::before {
-    content: counter(sidenote-counter);
-}
-
-/* style de la sidenote */
 blockquote span.sidenote {
-    float: inline-end;
-    margin-right: -70%;
-    width: 50%;
-    text-indent: -1rem;
+  margin-left: var(--rythme);
+  float: inline-end;
+  margin-right: -70%;
+  width: 60%;
+  position: relative;
+  text-indent: -.1ex;
+  &::before {
+    /* Compteur automatique */
+    content: counter(sidenote-counter);
+    position: absolute;
+    display: inline;
+    top: -0.2rem;
+    left: -0.4rem;
+    font-size: calc(0.75 * var(--step--2));
+  }
+  & p em {
+    font-family: "Inter-Variable-Italic";
+  }
 }
 
-blockquote em {
-    font-style: oblique;
+/* style de la citation */
+.citation-calling-sidenote {
+  display: block !important;
+  margin-block: unset;
+  margin-top: calc(0.5 * var(--rythme));
+  padding: calc(0.25 * var(--rythme));
+  background-color: var(--bglighten20);
+  border-left: 2px solid var(--txt);
+  text-indent: 1ex;
+  & > p {
+    display: inline;
+    &::before {
+      display: inline;
+      content: open-quote;
+      font-family: "Helvetica";
+      font-weight: bold;
+      vertical-align: baseline;
+      line-height: 1.5;
+    }
+    &::after {
+      display: inline;
+      content: close-quote;
+      font-family: "Helvetica";
+      font-weight: bold;
+      vertical-align: baseline;
+      line-height: 1.5;
+    }
+  }
 }

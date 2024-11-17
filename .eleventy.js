@@ -53,13 +53,13 @@ module.exports = function (eleventyConfig) {
     "citationsmarginales",
     function (content, source) {
       let markup = `
-    <blockquote>
+    <blockquote class="citation-calling-sidenote">
       <p>
-      ${content}
-        <span class="sidenote-counter">
-        </span>
+        ${content}
       </p>
-      <span class="sidenote">${source}</span>
+      <span class="sidenote-caller-counter">
+      </span>
+      <span class="sidenote"><p>${source}</p></span>
     </blockquote>
     `;
       return markup;

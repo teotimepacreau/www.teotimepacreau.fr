@@ -69,7 +69,7 @@ module.exports = function (eleventyConfig) {
       <span class='lettrage-superieur'>
         <sup>
         </sup>
-        <span class="sidenote"><p>${source}</p></span>
+        <span class="sidenote">${source}</span>
       </span>
       `;
         return markup;

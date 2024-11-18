@@ -9,8 +9,11 @@ pagination:
   alias: paginatedposts #on pointe vers cette variable dans la boucle pour toucher les pages paginées
   reverse: true #trie par date du plus récent au plus ancien
 ---
-
-<h1 aria-hidden="true">Blog</h1>
+  <h1 style="display: inline-block;" aria-hidden="true">Blog</h1>
+  <a id="essais-linker" href="/essais" style="display: inline-block; margin-inline-start: var(--rythme); font-family: BricolageGrotesque, sans-serif;
+  font-variation-settings: 'opsz' 24, 'wght' 800, 'wdth' 100;
+  font-size: var(--step-3); color: var(--txtlighten20);
+  letter-spacing: -0.05rem;">Essais</a>
 <section aria-label="Liste des articles du blog" id="blog-article-list">
   {% for post in paginatedposts %}
   <article>

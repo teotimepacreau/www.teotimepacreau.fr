@@ -1750,3 +1750,11 @@ tr {
 @view-transition {
   navigation: auto;
 }
+
+/*---ESSAIS LINK ON BLOG PAGE---*/
+#essais-linker {
+  transition: color .2s ease-out;
+  &:hover{
+    color: var(--txt)!important;
+  }
+}

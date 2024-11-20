@@ -58,8 +58,8 @@ module.exports = function (eleventyConfig) {
       <p>
         ${content}
       </p>
-      <span class="sidenote-caller-counter">
-      </span>
+      <sup class="sidenote-caller-counter">
+      </sup>
       <span class="sidenote"><p>${source}</p></span>
     </blockquote>
     `;

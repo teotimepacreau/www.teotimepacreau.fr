@@ -73,8 +73,8 @@ span.sidenote {
       display: inline;
       counter-increment: sidenote-counter;
       content: counter(sidenote-counter);
+      left: -.05rem;
       top: -0.2rem;
-      right: 0.05rem;
       font-size: calc(0.75 * var(--step--2));
     }
   }
@@ -90,4 +90,16 @@ span.sidenote {
     width: unset;
     margin-top: var(--rythme);
   }
+  .lettrage-superieur{
+  & .sidenote {
+    display: none;
+    margin: 1rem 2.5%;
+    font-size: var(--step--1);
+    text-decoration: underline dotted;
+  }
+  & sup::after {
+    cursor: pointer;
+    text-decoration: underline solid var(--txt);
+  }
+}
 }

@@ -734,10 +734,6 @@ address {
   width: min-content;
 }
 
-.social-footer > * {
-  flex: 0 1;
-}
-
 .social-footer::after {
   content: "↗ " / "";
   color: var(--accent);

@@ -71,6 +71,7 @@ module.exports = function (eleventyConfig) {
         </sup>
         <span class="sidenote">${source}</span>
       </span>
+
       `;
         return markup;
      }

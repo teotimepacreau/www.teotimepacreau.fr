@@ -724,9 +724,6 @@ address {
 }
 
 .social-footer {
-  display: inline-flex;
-  align-items: center;
-  gap: 1ex;
   text-decoration: none;
 }
 
@@ -1710,19 +1707,6 @@ tr {
     grid-column: 1 / 4;
     grid-row: 2;
     padding-block: unset;
-  }
-  #footer {
-    grid-row: 3 / 4;
-    grid-column: 1 / 4;
-    row-gap: var(--rythme);
-    padding-top: var(--rythme);
-    margin-top: var(--rythme);
-  }
-  #links {
-    grid-column: 1 / 4;
-  }
-  #stats {
-    grid-column: 1 / 4;
   }
   /* INDISPENSABLE POUR PAS QUE LE MENU ROTATE EN DIMINUANT LARGEUR DE LA PAGE */
   .menu-anim {

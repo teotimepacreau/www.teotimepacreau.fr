@@ -714,47 +714,51 @@ a:hover {
   margin-top: calc(2 * var(--rythme));
   padding-top: calc(0.5 * var(--rythme));
   border-top: 2px solid var(--shadow);
+  & address {
+    font-style: unset;
+    & a:first-child {
+      text-decoration: underline !important;
+      &::after{
+        content: none;
+      }
+    }
+  }
   & li{
     list-style-type: none;
   }
+  & a {
+    text-decoration: none;
+    &::after {
+      content: "↗ " / "";
+      color: var(--accent);
+    }
+  }
 }
 
-address {
-  font-style: unset;
+#eco-index {
+  display: inline-flex !important;
+  word-break: unset !important;
+  flex-wrap: wrap;
+  & > * {
+    flex: 0 1;
+  }
 }
-
-.social-footer {
-  text-decoration: none;
-}
-
-.social-footer:first-of-type{
-  width: min-content;
-}
-
-.social-footer::after {
-  content: "↗ " / "";
-  color: var(--accent);
-}
-
-.hidden {
-  display: none;
-}
-
 
 #footer li + li, #footer address a + a {
   margin-top: calc(0.5 * var(--rythme));
 }
 
-#footer address a {
+#footer a {
   display: flex;
   align-items: center;
   gap: 1ex;
-  &#rss{
+  word-break: break-all;
+&#rss{
     text-decoration: none;
   }
 }
 
-.ecoindex {
+#ecoindex-score {
   color: #00101d;
   display: grid;
   place-items: center;
@@ -1576,7 +1580,6 @@ tr {
 @media (width < 1000px) {
   /* HAMBURGER MENU */
   #homepage-menu {
-    grid-row: 1;
     position: unset;
     font-size: unset;
   }
@@ -1665,9 +1668,6 @@ tr {
   .homepage-services-item-header {
     flex-wrap: nowrap;
   }
-  #homepage-container {
-    display: grid;
-  }
   #homepage-hero,
   .homepage-footer {
     max-width: 100dvw;
@@ -1704,8 +1704,6 @@ tr {
   }
 
   #homepage-hero {
-    grid-column: 1 / 4;
-    grid-row: 2;
     padding-block: unset;
   }
   /* INDISPENSABLE POUR PAS QUE LE MENU ROTATE EN DIMINUANT LARGEUR DE LA PAGE */

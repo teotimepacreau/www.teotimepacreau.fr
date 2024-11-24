@@ -2,10 +2,10 @@
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import pluginTOC from "eleventy-plugin-toc";
-import pluginRss from "@11ty/eleventy-plugin-rss";
 import embeds from "eleventy-plugin-embed-everything";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateFr from "./src/filters/date.js"
+import { feedPlugin } from "@11ty/eleventy-plugin-rss"
 
 // OPENGRAPH IMAGES REQUIREMENTS
 import fs from "node:fs";
@@ -16,6 +16,7 @@ import EleventyPluginOgImage from "eleventy-plugin-og-image";
 import schema from "@quasibit/eleventy-plugin-schema";
 
 import mdfigcaption from "markdown-it-image-figures";
+import { type } from "node:os";
 let figoptions = {
   figcaption: true,
 };
@@ -114,7 +115,23 @@ export default function(eleventyConfig) {
   eleventyConfig.addPlugin(embeds);
 
   // RSS
-  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom",
+    outputPath: "/feed/feed.xml",
+    collection: {
+      name: "all"
+    },
+    metadata: {
+      language: "fr",
+      title: "Le site web personnel de Teotime Pacreau : Développement web et conduite de projets numériques à Nantes",
+      subtitle: "Le flux web du blog et des essais de Teotime Pacreau",
+      base: "https://www.teotimepacreau.fr/",
+      author: {
+        name: "Téotime Pacreau",
+        email: "teotime.pac@outlook.fr"
+      }
+    }
+  });
 
   // ADD STRUCTURED DATA FOR GOOGLE RICH RESULTS
   eleventyConfig.addPlugin(schema);
@@ -151,7 +168,7 @@ export default function(eleventyConfig) {
 
   // CREER LA COLLECTION DES ESSAIS
   eleventyConfig.addCollection("essais", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/essais/*.md");
+    return collectionApi.getFilteredByGlob("src/essais/*");
   });
 
   // CREER L'ARRAY DE TAGS

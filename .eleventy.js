@@ -1,25 +1,26 @@
 // plugins
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
-const pluginTOC = require("eleventy-plugin-toc");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const embeds = require("eleventy-plugin-embed-everything");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
+import pluginTOC from "eleventy-plugin-toc";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import embeds from "eleventy-plugin-embed-everything";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import dateFr from "./src/filters/date.js"
 
 // OPENGRAPH IMAGES REQUIREMENTS
-const fs = require("node:fs");
-const path = require("node:path");
-const EleventyPluginOgImage = require("eleventy-plugin-og-image");
+import fs from "node:fs";
+import path from "node:path";
+import EleventyPluginOgImage from "eleventy-plugin-og-image";
 
 // ADD STRUCTURED DATA FOR GOOGLE RICH RESULTS
-const schema = require("@quasibit/eleventy-plugin-schema");
+import schema from "@quasibit/eleventy-plugin-schema";
 
-let mdfigcaption = require("markdown-it-image-figures");
+import mdfigcaption from "markdown-it-image-figures";
 let figoptions = {
   figcaption: true,
 };
 
-module.exports = function (eleventyConfig) {
+export default function(eleventyConfig) {
   //  SHORTCODE MISE EN FORME BLOC DE CODES
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -141,7 +142,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Convertir les dates en format FR
-  eleventyConfig.addFilter("date", require("./src/filters/date.js"));
+  eleventyConfig.addFilter("date", dateFr);
 
   // CREER LA COLLECTION DE POSTS
   eleventyConfig.addCollection("posts", function (collectionApi) {
@@ -176,7 +177,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/favicon/");
   eleventyConfig.addPassthroughCopy("src/filters/");
   eleventyConfig.addPassthroughCopy("src/scripts/");
-  eleventyConfig.addPassthroughCopy("src/og-images/");
+  eleventyConfig.addPassthroughCopy("src/og-image/");
   eleventyConfig.addPassthroughCopy("_site/og-images/");
 
   return {
@@ -185,11 +186,8 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       output: "_site",
     },
-    // Control which files Eleventy will process
     templateFormats: ["md", "njk", "html"],
-    // Pre-process *.md files with:
     markdownTemplateEngine: "njk",
-    // Pre-process *.html files with:
     htmlTemplateEngine: "njk",
   };
 };

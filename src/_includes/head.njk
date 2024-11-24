@@ -62,7 +62,7 @@
 <meta name="owner" content="Téotime Pacreau">
 
 <!-- auto generator of OpenGraph images -->
-{% ogImage "og-image.og.njk", { title: title | safe, date: date | safe } %}
+{% ogImage "/og-image/og-image.og.njk", { title: title | safe, date: date | safe } %}{#il ne faut pas spécifier le dossier /src car c'est implicitement inclus dans le plugin. fait bugger le build si specifié#}
 
 {% jsonLdScript meta, type, tags %}
 

@@ -54,7 +54,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPairedShortcode(
     "citationsmarginales",
     function (content, source) {
-     if (content) { 
+     if (content && source) { 
       let markup = `
     <blockquote class="citation-calling-sidenote">
       <p>
@@ -168,7 +168,7 @@ export default function(eleventyConfig) {
 
   // CREER LA COLLECTION DES ESSAIS
   eleventyConfig.addCollection("essais", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/essais/*");
+    return collectionApi.getFilteredByGlob("src/essais/*.njk");
   });
 
   // CREER L'ARRAY DE TAGS

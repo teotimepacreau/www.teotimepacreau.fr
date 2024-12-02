@@ -9,21 +9,26 @@ layout: base.html
   <h1 aria-hidden="true">Essais</h1>
   <section id="blog-article-list" aria-label="Liste des essais">
     <article class="essai-img-container">
-      <header><a
+      <header>
+        <a
+          class="blog-card-title"
+          href="./challenger-pratiques-transformation-organisationelle-par-le-design-de-services.html"
+          >Comment challenger les pratiques de transformation organisationelle
+          par le design de service ?</a
+        ><time
+          class="tags-date"
+          datetime="{{ post.data.date | date('dd LLLL yyyy') }}"
+          >14 novembre 2024</time
+        >
+      </header>
+      <a aria-hidden="true"
         class="blog-card-title"
         href="./challenger-pratiques-transformation-organisationelle-par-le-design-de-services.html"
-        >Comment challenger les pratiques de transformation organisationelle par
-        le design de service ?<time
-        class="tags-date"
-        datetime="{{ post.data.date | date('dd LLLL yyyy') }}"
-        >14/11/2024</time
-      ></a
-      ></header>
-      <a
-        class="blog-card-title"
-        href="./challenger-pratiques-transformation-organisationelle-par-le-design-de-services.html"
-        ><img src="/media/organisation-mine-sel.png" alt=""></a
-      >
+        ><img
+          style="width: 100%; mix-blend-mode: multiply"
+          src="/img/pattern.webp"
+          aria-hidden="true"
+      /></a>
     </article>
   </section>
 </main>

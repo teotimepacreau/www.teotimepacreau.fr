@@ -97,7 +97,7 @@ export default function(eleventyConfig) {
 
   // AUTO GENERATED OPENGRAPH IMAGES
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
-    outputDir: "_site/og-images",
+    outputDir: "/og-images",
     urlPath: "/og-images/",
     satoriOptions: {
       fonts: [

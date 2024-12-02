@@ -9,14 +9,12 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss"
 
 // OPENGRAPH IMAGES REQUIREMENTS
 import fs from "node:fs";
-import path from "node:path";
 import EleventyPluginOgImage from "eleventy-plugin-og-image";
 
 // ADD STRUCTURED DATA FOR GOOGLE RICH RESULTS
 import schema from "@quasibit/eleventy-plugin-schema";
 
 import mdfigcaption from "markdown-it-image-figures";
-import { type } from "node:os";
 let figoptions = {
   figcaption: true,
 };
@@ -119,7 +117,7 @@ export default function(eleventyConfig) {
     type: "atom",
     outputPath: "/feed/feed.xml",
     collection: {
-      name: "all"
+      name: "essaisAndPosts"
     },
     metadata: {
       language: "fr",
@@ -167,8 +165,8 @@ export default function(eleventyConfig) {
   });
 
   // CREER LA COLLECTION DES ESSAIS
-  eleventyConfig.addCollection("essais", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/essais/*.njk");
+  eleventyConfig.addCollection("essaisAndPosts", function (collectionApi) {
+    return collectionApi.getFilteredByGlob(["src/essais/*.njk", "src/blog/*.md"]);
   });
 
   // CREER L'ARRAY DE TAGS

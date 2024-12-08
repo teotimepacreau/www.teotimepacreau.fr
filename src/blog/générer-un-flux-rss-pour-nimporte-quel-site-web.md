@@ -37,7 +37,9 @@ En utilisant les flux web on se rend compte assez rapidement d'un écueil majeur
 
 ![Capture d'écran de l'interface de Miniflux](/img/interface-miniflux.png "Interface de Miniflux")
 
-RSS-Proxy nécessite d'être hébergé par l'utilisateur pour être utilisé. Si vous ne savez pas comment héberger un service, je vous renvoie vers mon article *beginner-friendly* ["Héberger soi même des applications"](https://www.teotimepacreau.fr/blog/heberger-soi-meme-des-applications/)
+RSS-Proxy nécessite d'être hébergé par l'utilisateur pour être utilisé. Si vous ne savez pas comment héberger un service, je vous renvoie vers mon article *beginner-friendly* ["Héberger soi même des applications"](https://www.teotimepacreau.fr/blog/heberger-soi-meme-des-applications/).
+
+L'outil permet de sélectionner un flux en particulier parmis ceux trouvés dans la page et de filtrer sur une expression particulière.
 
 ## Comment l'installer ?
 

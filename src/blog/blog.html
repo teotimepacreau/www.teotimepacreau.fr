@@ -38,12 +38,12 @@ pagination:
   </article>
   {% endfor %}
 </section>
-<nav id="nav-secondary" aria-label="secondary through blog posts">
+<nav id="nav-secondary" aria-label="discover more blog posts">
   <ol>
     {% for pageEntry in pagination.pages %}
     <li>
       <a href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url ==
-      pagination.hrefs[loop.index0] %} aria-current="page"{% endif %}>{{
+      pagination.hrefs[loop.index0] %} aria-current="page"{% endif %} aria-label="page {{loop.index}}">{{
       loop.index }}
       </a>
     </li>

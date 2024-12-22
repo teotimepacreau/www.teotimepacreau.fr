@@ -471,8 +471,11 @@ a:hover {
 
 #homepage-brief .services li {
   display: flex;
-  gap: 1ex;
+  gap: var(--step-0);
   align-items: center;
+  & > * {
+    flex: 0 0 max-content; 
+  }
 }
 
 #homepage-brief .services li:not(:first-child) {

@@ -31,6 +31,7 @@ Le modèle en cascade conditionne le début de chaque phase à la finalisation c
 4. Mise en œuvre : réalisation du produit (livrable = le produit)
 5. Validation : tests du produit avec l'usager pour vérifier la conformité aux exigences (livrable = tests)
 6. Mise en service
+
 Le modèle a rapidement montré ses limites car la nature immatérielle des projets informatiques permet des approches impossibles à d'autres secteurs : possibilité de livrer un projet *viable au minimum* pour construire les fonctionnalités en avançant, réversibilité, coûts logistiques et matériels inexistants...
 Le défaut principal de ce modèle est de penser que le client est pleinement conscient de l'ensemble des fonctionnalités qu'il attend avant même d'avoir eu le produit entre les mains. Le second défaut est l'allergie du modèle aux changements en cours de projet contraire à ce qui a été déterminé dans les phases précédentes.
 

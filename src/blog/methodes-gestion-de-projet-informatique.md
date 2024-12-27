@@ -21,6 +21,7 @@ eleventyComputed:
 ---
 
 ## A l'origine : le modèle en cascade (waterfall)
+
 Les premiers projets informatiques ont utilisés des méthodes issues des sciences de l'ingénieur en s'inspirant des manières de mener un projet de construction. Cela a introduit une culture de la contrainte due à des coûts importants en phase de réalisation et à l'impossibilité de modifier l'ouvrage en cours de route typique aux projets immobiliers.
 Le modèle en cascade conditionne le début de chaque phase à la finalisation complète de la phase précédente :
 
@@ -39,7 +40,11 @@ L'approche agile s'est construite en réaction au modèle en cascade et à l'imp
 Les auteurs du [manifeste agile](https://agilemanifesto.org/) estimaient que le taux important d'échecs des projets de développements logiciels était dû à la lourdeur des méthodes traditionnelles inspirées du génie civil notamment au travers du cycle de développement en cascade.
 L'idée était également de lutter contre l'*effet tunnel* (il s'agit d'un décrochage du lien entre le client et le développement du projet).
 
-Il s'agit donc d'un style de conduite de projet basé sur la collaboration entre des équipes autonomes et les clients. **Le but :** impliquer au maximum le client et être très réactif à ses demandes. **Méthode :** planification adaptative pilotée par l'utilisateur, reporting visuel en temps réel de l'avancement ainsi que des problèmes rencontrés, tests et ajouts de fonctionnalités en continu selon les demandes du clients, livraisons partielle pour chaque lots, amélioration continue.
+Il s'agit donc d'un style de conduite de projet basé sur la collaboration entre des équipes autonomes et les clients.
+
+**Le but :** impliquer au maximum le client et être très réactif à ses demandes.
+
+**Méthode :** planification adaptative pilotée par l'utilisateur, reporting visuel en temps réel de l'avancement ainsi que des problèmes rencontrés, tests et ajouts de fonctionnalités en continu selon les demandes du clients, livraisons partielle pour chaque lots, amélioration continue.
 
 Agile est le terme chapeau qui regroupe les framework SCRUM, LEAN, KANBAN. Ce sont des cadres de travail pour mettre en place de l'agilité dans la gestion de projets.
 
@@ -55,21 +60,24 @@ Elle s'appuie sur des rôles précis :
 - 1 Product Owner garant de la vision client du produit, en charge du maintien et de la priorisation de la liste des fonctionnalités à développer.
 - les équipes techniques
 
-**Sprints** : un sprint est une période de temps pendant laquelle on travaille sur un lot de fonctionnalités.
+**Sprints** : un sprint est une période de temps dédié au développement d'un lot de fonctionnalités.
 Chaque sprint commence par une estimation du temps à passer et la planification des tâches, chaque sprint se termine par une rétrospective de ce qui a été achevé. Le sprint n'exprime pas un besoin de rapidité mais plutôt de période définie consacrée à 100% à une ou plusieurs briques fonctionnelles.
 La livraison du lot de fonctionnalités au client se fait uniquement à la fin de chaque sprint.
 Le sprint planning global englobe toutes les étapes et est issu du backlog.
 
 **Artefacts** :
 
-- le backlog : liste priorisée des fonctionnalités à réaliser
-- User Stories : format d'expression des fonctionnalités (en tant que... je veux... afin de...). Les User Stories peuvent être regroupées en Epics (amat de User Stories doublé d'un objectif)
+- le backlog : liste priorisée des fonctionnalités à réaliser, cette liste est évolutive tout au long du projet.
+- User Stories : format d'expression des fonctionnalités (en tant que... je veux... afin de...). Les User Stories peuvent être regroupées en Epics (amat de User Stories doublées d'un objectif).
 - planning poker : technique d'estimation de la charge de travail exprimée en points. La gamme des points est croissante et s'inspire de la suite de Fibonacci (0,5;1;2;3;5;8;13;20;30;50;100;200) car plus une charge est élevée plus sa valeur est incertaine.
-- burndown chart : graphique partagé permettant de visualiser l'avancement du sprint en mettant en valeur la sommes des tâches restantes à faire
-**Rituels** : 
+- burndown chart : graphique partagé permettant de visualiser l'avancement du sprint en mettant en valeur la sommes des tâches restantes à faire.
+
+**Rituels** :
+
 - le daily : meeting de 15 minutes tous les jours où chacun explique les tâches réalisées de la journée précédente, les problèmes bloquants et les tâches qui seront faites le jour présent
-- le sprint planning : le PO présente les fonctionnalités découpées en tâches, l'effort de développement est estimé par l'équipe technique qui s'engage sur le contenu du sprint
+- le sprint planning : le PO présente les fonctionnalités découpées en tâches, un échange se tient avec l'équipe de développement pour définir le périmètre du prochain sprint.
 - le sprint review qui a lieu à la fin de chaque sprint : chacun exprime ce qui a été accompli pendant le sprint, ce qui a changé, détermine que faire ensuite
+- le raffinage du backlog : à partir des données consolidées, issues des échanges avec les utilisateurs, on présente et échange avec les équipes techniques sur les prochains items à inclure dans le backlog.
 
 **Métriques de suivi de la performance :** temps pour accomplir un sprint et ampleur de la fonctionnalité réalisée
 
@@ -90,7 +98,7 @@ Contrairement à la méthode SCRUM où l'on livre les fonctionnalités seulement
 
 **Adaptation au changement :** les priorités peuvent changer à tout moment
 
-### LEAN 
+### LEAN
 
 **Doctrine :** L'approche est basée sur celle du *Minimum Viable Product (MVP)*, le but étant d'éliminer tout le superflus : que ce soit des fonctionnalités, des réunions, ou des boucles de feedback non-essentielles.
 On livre donc un prototype avec le minimum de fonctionnalités et on adapte le produit en fonction des retours des utilisateurs, quitte à changer complètement l'idée de départ.
@@ -120,7 +128,11 @@ Particulièrement appuyé sur le LEAN, le mode produit ajoute l'encapacitement e
 ## Sources
 
 Livre "Vade-mecum de l'informatique contemporaine"; Eva et Henri LAUDE, Christian GOGLIN, éditions ENI, 2024.
+
 <https://agilemanifesto.org/>
+
 <https://fr.wikipedia.org/wiki/M%C3%A9thode_agile>
+
 <https://fr.wikipedia.org/wiki/Scrum_(d%C3%A9veloppement)>
+
 <https://steady.space/blog/comparing-scrum-kanban-lean/>

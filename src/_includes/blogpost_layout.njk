@@ -29,7 +29,7 @@ pageId: "blogpost"
               <span class="post-date">
                 Publié le
                 <time datetime="{{ date }}">
-                  {{ date | date('dd LLLL yyyy') }}
+                  {{date | date('dd LLLL yyyy')}}
                 </time>
               </span>
               {% if updatedate %}
@@ -40,7 +40,9 @@ pageId: "blogpost"
                 </time>
               </span>
               {%  endif %}
+              {% if description %}
               <p>{{ description }}</p>
+              {% endif %}
             </header>
             {{ content | safe }}
           </article>
@@ -55,7 +57,7 @@ pageId: "blogpost"
         <footer id="footer">
           {% include "footer.html"%}
         </footer>
-        <!--Script pour ouvrir tous les liens markdown dans une nouvelle fenêtre-->
+        <!--Script pour ouvrir tous les liens dans une nouvelle fenêtre-->
         <script>
           (function () {
             const links = document.querySelectorAll(

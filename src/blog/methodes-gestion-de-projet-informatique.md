@@ -76,7 +76,7 @@ Le sprint planning global englobe toutes les étapes et est issu du backlog.
 **Rituels** :
 
 - le daily : meeting de 15 minutes tous les jours où chacun explique les tâches réalisées de la journée précédente, les problèmes bloquants et les tâches qui seront faites le jour présent
-- le sprint planning : le PO présente les fonctionnalités découpées en tâches, un échange se tient avec l'équipe de développement pour définir le périmètre du prochain sprint.
+- le sprint planning : le PO présente les récits utilisateurs clés dernièrement récoltés et leur consolidation en blocs fonctionnels, un échange se tient avec l'équipe de développement pour définir le périmètre du prochain sprint.
 - le sprint review qui a lieu à la fin de chaque sprint : chacun exprime ce qui a été accompli pendant le sprint, ce qui a changé, détermine que faire ensuite
 - le raffinage du backlog : à partir des données consolidées, issues des échanges avec les utilisateurs, on présente et échange avec les équipes techniques sur les prochains items à inclure dans le backlog.
 
@@ -120,11 +120,22 @@ On livre donc un prototype avec le minimum de fonctionnalités et on adapte le p
 
 Particulièrement appuyé sur le LEAN, le mode produit ajoute l'encapacitement et l'autonomisation des parties prenantes du projet.
 
-1. Formation et accompagnement des porteurs du besoin à vérifier l'existence de leur besoin/problématique sur le terrain (grille d'entretien, persona, parcours utilisateur...)
+1. Formation et accompagnement des porteurs du besoin à investiguer et vérifier l'existence de leur besoin/problématique sur le terrain (grille d'entretien, persona, parcours utilisateur...)
 2. Analyse en chambre de la matière récoltée et consolidation en feuille de route produit (vision, objectifs, grandes fonctionnalités clés, étapes, budget)
 3. Création d'un découpage du produit à partir du besoin des utilisateurs (Personas -> User Stories -> User Story Mapping -> Spécification fonctionnelles). Consolidation en backlog.
 4. Conception et livraison du MVP pour le placer le plus rapidement possible entre les mains de l'utilisateur
 5. Séances de tests, observations et recueil des feedbacks des usagers. Ajout des fonctionnalités en conséquence dans le backlog. Cycle de développement. A recommencer autant de fois que nécessaire.
+6. Dès les premiers tests, on met en places métriques produit pour vérifier l'atteinte de l'impact souhaité.
+
+Méthode pour définir des métriques produit :
+
+Thématique | Description |
+---------- | ------ |
+Awareness | Comment notre produit est-il connu ? |
+Acquisition | D'où viennent les utilisateurs avant d'être sur le produit ? |
+Activation | A quelle vitesse les utilisateurs trouvent-ils de la valeur dans notre produit ? |
+Rétention | Pourquoi les utilisateurs quittent-ils l'application ? |
+Recommandation | Pourquoi les utilisateurs recommanderaient notre application ? |
 
 ## Sources
 

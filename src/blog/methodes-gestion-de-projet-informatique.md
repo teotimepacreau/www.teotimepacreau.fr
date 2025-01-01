@@ -35,6 +35,14 @@ Le modèle en cascade conditionne le début de chaque phase à la finalisation c
 Le modèle a rapidement montré ses limites car la nature immatérielle des projets informatiques permet des approches impossibles à d'autres secteurs : possibilité de livrer un projet *viable au minimum* pour construire les fonctionnalités en avançant, réversibilité, coûts logistiques et matériels inexistants...
 Le défaut principal de ce modèle est de penser que le client est pleinement conscient de l'ensemble des fonctionnalités qu'il attend avant même d'avoir eu le produit entre les mains. Le second défaut est l'allergie du modèle aux changements en cours de projet contraire à ce qui a été déterminé dans les phases précédentes.
 
+## Le cycle en V
+
+Le cycle en V apparaît peu après le modèle en cascade et introduit une dimension supplémentaire : celle du *système*. On pense le projet informatique comme un système global dans lequel les composants s'assemblent. Ceci requiert dans le flux descendant de distinguer une conception générale du système dans son ensemble, et une conception détaillée de chaque composant. Le développement se fait alors composant par composant. Le cycle en V apporte également une plus grande attention sur la vérification et la validation. Les tests unitaires et les tests d'intégration vérifient que les composants et le système fonctionnent conformément à la conception.
+
+Toutetois le modèle introduit un défaut principal : le risque de « surspécification ». Beaucoup de temps est dédié aux étapes de conception au détriment, parfois, des étapes de développement.
+
+![Schéma détaillant les étapes dy cycle en V : investigation du besoin, specifications fonctionnelles, specifications techniques, développement, tests unitaires, tests d'intégrations, recette](/img/cycle-en-v.png "Schéma du cycle en V")
+
 ## L'approche agile
 
 L'approche agile s'est construite en réaction au modèle en cascade et à l'imprévisibilité des projets informatiques particulière au contexte des années 90. La période voyait en effet l'apparition et l'appropriation rapide de nouveaux langages de programmation (comme Visual Basic, Python, Ruby, Java, Javascript...), rendant [obsolètes certains langages au bout de quelques mois seulement](https://en.wikipedia.org/wiki/Timeline_of_programming_languages#1990s).
@@ -58,7 +66,7 @@ La méthode se veut incrémentale et itérative, les sprints peuvent donc être 
 Elle s'appuie sur des rôles précis :
 
 - 1 SCRUM Master qui guide l'équipe à travers la méthode et est l'interlocuteur coordinateur au quotidien
-- 1 Product Owner garant de la vision client du produit, en charge du maintien et de la priorisation de la liste des fonctionnalités à développer.
+- 1 Product Owner garant de la vision client du produit, en charge de la définition des besoins du produit,  de la rédaction des spécifications, de la priorisation de la liste des fonctionnalités à développer.
 - les équipes techniques
 
 **Sprints** : un sprint est une période de temps dédié au développement d'un lot de fonctionnalités.
@@ -70,7 +78,7 @@ Le sprint planning global englobe toutes les étapes et est issu du backlog.
 
 - le backlog : liste priorisée des fonctionnalités à réaliser, cette liste est évolutive tout au long du projet.
 - User Stories : format d'expression des fonctionnalités (en tant que... je veux... afin de...). Les User Stories peuvent être regroupées en Epics (amat de User Stories doublées d'un objectif).
-- planning poker : technique d'estimation de la charge de travail exprimée en points. La gamme des points est croissante et s'inspire de la suite de Fibonacci (0,5;1;2;3;5;8;13;20;30;50;100;200) car plus une charge est élevée plus sa valeur est incertaine.
+- planning poker : il s'agit du chiffrage des user stories via une technique d'estimation de la charge de travail exprimée en points d'effort. La gamme des points est croissante et s'inspire de la suite de Fibonacci (0,5;1;2;3;5;8;13;20;30;50;100;200) car plus une charge est élevée plus sa valeur est incertaine.
 - burndown chart : graphique partagé permettant de visualiser l'avancement du sprint en mettant en valeur la sommes des tâches restantes à faire.
 
 **Rituels** :
@@ -142,6 +150,8 @@ Recommandation | Pourquoi les utilisateurs recommanderaient notre application ? 
 Livre "Vade-mecum de l'informatique contemporaine"; Eva et Henri LAUDE, Christian GOGLIN, éditions ENI, 2024.
 
 <https://agilemanifesto.org/>
+
+<https://www.ineumann.fr/docs/divers/agile_scrum>
 
 <https://fr.wikipedia.org/wiki/M%C3%A9thode_agile>
 

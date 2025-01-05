@@ -6,6 +6,7 @@ import embeds from "eleventy-plugin-embed-everything";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateFr from "./src/filters/date.js"
 import { feedPlugin } from "@11ty/eleventy-plugin-rss"
+import imgMagnifier from "eleventy-plugin-img-magnifier"
 
 // OPENGRAPH IMAGES REQUIREMENTS
 import fs from "node:fs";
@@ -111,6 +112,9 @@ export default function(eleventyConfig) {
 
   // EMBED VIDEO IN MARKDOWN
   eleventyConfig.addPlugin(embeds);
+
+  // IMG ENLARGER
+  eleventyConfig.addPlugin(imgMagnifier)
 
   // RSS
   eleventyConfig.addPlugin(feedPlugin, {

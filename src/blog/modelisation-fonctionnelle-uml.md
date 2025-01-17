@@ -50,7 +50,7 @@ titre, résumé, date de création, version, responsable, acteurs | décrit le *
 
 ### Comment représenter le **scénario nominal** et à quoi sert-il ?
 
-Le scénario nominal est un tableau nominal décrit textuellement les enchaînements du scénario dans un tableau à double colonne en liste ordonnée.
+Le scénario nominal est une description textuelle des enchaînements du scénario. On le représente dans un tableau à double colonne en liste ordonnée.
 
 Acteur | Système étudié |
 -- | -- |

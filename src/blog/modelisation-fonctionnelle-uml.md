@@ -2,7 +2,7 @@
 title: "La modélisation fonctionnelle avec UML"
 description: "Pourquoi UML permet une base de communication idéale entre étude fonctionnelle et développement lors d'un projet informatique"
 type: "Article"
-date: '2025-01-12'
+date: '2025-01-19'
 tags: 
   - 'UML'
   - 'Informatique fonctionnelle'

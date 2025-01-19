@@ -1,6 +1,6 @@
 ---
 title: "La modélisation fonctionnelle avec UML"
-description: "Pourquoi UML permet une base de communication idéale entre fonctionnel et développement lors d'un projet informatique"
+description: "Pourquoi UML permet une base de communication idéale entre étude fonctionnelle et développement lors d'un projet informatique"
 type: "Article"
 date: '2025-01-12'
 tags: 
@@ -32,7 +32,7 @@ UML est particulièrement associé au [développement en cascade](../methodes-ge
 
 UML s'intègre dans une démarche globale *d'investigation du besoin* : il s'agit de s'imprégner des besoins métiers via des ateliers de travail, des [entretiens semi-directifs](../../essais/challenger-pratiques-transformation-organisationelle-par-le-design-de-services/), des observations in-situ, des user-journey.
 
-Une fois la matière récoltée et analysée, on peut utiliser UML pour décrire les cas d'usage des acteurs du système étudié.
+Une fois la matière récoltée et analysée, on peut utiliser UML pour décrire le comportement et les fonctions d'un système attendues par l'utilisateur, on utilise pour cela le diagramme des cas d'utilisation.
 
 ![Schéma détaillant un diagramme de cas d'utilisation UML : on représente un acteur avec un bonhomme baton, un système avec un rectangle, un cas d'utilisation avec un ovale](/img/uml_diagramme_cas_dutilisation.webp "Exemple minimal de diagramme de cas d'utilisation UML")
 
@@ -46,7 +46,7 @@ Un cas d'utilisation est précisé à la fois par :
 
 Sommaire d'identification | Description des scénarios | Exigences non fonctionnelles |
 -- | -- | -- |
-titre, résumé, date de création, version, responsable, acteurs | décrit le **scénario nominal**, les enchaînements alternatifs, les enchaînements d'erreurs, les préconditions et les postconditions | fréquence, volumétrie, disponibilité, fiabilité, confidentialité, performance attendue, les contraintes d'UX/UI |
+titre, résumé, date de création, version, responsable, acteurs | préconditions, enchaînements, enchaînements alternatifs, les enchaînements d'erreurs, postconditions | fréquence, volumétrie, disponibilité, fiabilité, confidentialité, performance attendue, les contraintes d'UX/UI |
 
 ### Comment représenter le **scénario nominal** et à quoi sert-il ?
 
@@ -60,7 +60,25 @@ Acteur | Système étudié |
 | 4. Après avoir scanné tous les articles, le caissier indique que la vente est terminée |  |
 | | 5. Le terminal calcule et affiche le montant total de la vente |
 
+## Le diagramme de séquences
+
+Le diagramme de séquences permet de décrire COMMENT se déroulent les intéractions entre les différents acteurs ou objets impliqués dans une procédure.
+Concrètement, ils servent à identifier les *classes* requises par le système et le comportement des *objets* au cours des intéractions.
+
+Ces *classes* et *objets* sont indispensable dans un contexte de Programmation Orientée Objet : il s'agit d'un style de programmation basant le code sur des objets. L'objet appartient à une classe, classe qui est définie par des propriétés et associée à des méthodes (des fonctions propres à la classe).
+
+![Capture d'écran détaillant le code d'une classe avec ses propriétés et méthodes propres](/img/poo_classe.png "Une classe en code, extrait de la vidéo de Julien Code (source en bas de page)")
+
+Le diagramme de séquence place à sa tête les classes suivies de haut en bas par une *ligne de vie*. On spécifie chaque action via l'appel d'une méthode associée à la classe en question. Les méthodes prennent des paramètres comportant les variables à passer aux fonctions. On peut représenter de façon graphique une condition, une boucle, un appel d'une fonction à une autre.
+
+![Représentation graphique d'un diagramme de séquence introduisant une interface programmatique entre un utilisateur et une cafetière pour faire un café](/img/uml_diagramme_sequence.webp "Exemple de diagramme de séquence UML")
+
+L'idée n'est pas de spécifier le code à venir, car c'est le rôle des développeurs, mais de planifier les classes et leurs différentes intéractions qui régiront le code.
 
 ## Sources
 
 Livre "UML 2.5 par la pratique"; Pascal ROQUES, éditions Eyrolles, 2018.
+
+<https://fr.wikibooks.org/wiki/Programmation_UML/Diagramme_de_s%C3%A9quences/>
+
+<https://www.youtube.com/watch?v=AZ4gwy-ZGC4/>

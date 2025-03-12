@@ -58,8 +58,16 @@ Pourquoi l’OAT 10 ans est-elle importante ?
 - c'est l’indicateur principal des taux d’intérêt à long terme en France.
 - sa rémunération dépend de la confiance des investisseurs dans l'Etat Français (dette, stabilité) et de l’environnement économique (inflation, croissance, politique monétaire de la BCE).
 
-![Graphique du cours de L'OAT 10 ans de 2020 à 2025, on constate un taux de 3.6% le 12 Février 2025 et une augmentation massive de ce taux entre 2022 et 2025](/img/poo_classe.png "Graphique du cours de L'OAT 10 ans de 2020 à 2025")
+![Graphique du cours de L'OAT 10 ans de 2020 à 2025, on constate un taux de 3.6% le 12 Février 2025 et une augmentation massive de ce taux entre 2022 et 2025](/img/OAT_10ans.png "Graphique du cours de L'OAT 10 ans de 2020 à 2025")
 
 On comprend donc que le financement des prêts immobiliers repose principalement sur les marchés d'obligations (s'obtient de façon dynamique en fonction des volontés de la banque) et les dépôts des clients (indépendant des volontés de la banque).
+
+L'Inspection Générale de l’environnement et du développement durable (IGEDD) a une équipe dédiée à l'étude de l'évolution à long terme des prix immobilier. Cette équipe est représentée par [Jacques Friggit](https://friggit.eu/), ingénieur général et expert de référence sur le sujet, que l'on peut considérer neutre au vu de sa carrière dans la fonction publique.
+
+Il démontre la corrélation entre le taux de la dette de l'Etat à long terme et le taux des prêts immobiliers depuis 1999.
+
+![Graphique de corrélation entre les taux d’intérêt des prêts immobiliers et de la dette de l’Etat. On observe que les taux d'intérêt des prêts immobiliers suivent les taux de la dette de l'Etat à long terme](/img/correlation_oat_taux_prets_immobiliers.png "Corrélation entre les taux d’intérêt des prêts immobiliers et les taux de la dette de l’Etat à long terme")
+
+Ainsi, l'indice OAT 10 ans est l'indice de référence pour anticiper les évolutions de taux des prêts immobiliers.
 
 ## Sources

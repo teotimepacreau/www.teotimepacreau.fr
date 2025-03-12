@@ -26,7 +26,7 @@ On entend tout et son contraire concernant les prix de l'immobilier : "les prix 
 ## Comprendre comment sont fixés les taux des prêts immobiliers
 
 Une idée très répandue est que la BCE donne le mot d'ordre auprès des banques françaises avec l'évolution de son taux directeur. Quand la BCE diminue son taux directeur, les taux des prêts immobiliers devraient donc diminuer en conséquence ? [En réalité les banques se financent assez peu auprès de la BCE, mais plutôt sur les marchés financiers](https://www.capital.fr/immobilier/credit-immobilier-apres-la-decision-de-la-bce-les-taux-vont-ils-vraiment-continuer-a-baisser-1508673).
-[Selon l’Autorité de Contrôle Prudentiel et de Résolution de la Banque fr France, la répartition des sources de financement des banques françaises se répartissait en 2023 comme suit](https://acpr.banque-france.fr/system/files/import/acpr/medias/documents/20240716_as161_grands_groupes_bancaires_fr_2023.pdf) :
+[Selon l’Autorité de Contrôle Prudentiel et de Résolution de la Banque de France, la répartition des sources de financement des banques françaises se répartissait en 2023 comme suit](https://acpr.banque-france.fr/system/files/import/acpr/medias/documents/20240716_as161_grands_groupes_bancaires_fr_2023.pdf) :
 
 | Poste au passif | Montant en milliards d'euros | Part du total |
 | -- | -- | -- |
@@ -51,7 +51,7 @@ On comprend donc que le taux de la BCE a un impact réduit sur le financement de
 
 Pourquoi les taux obligataires servent de référence pour le financement des prêts immobiliers ?
 On l'a vu, les "titres de dette émis" représentent 17% du passif. C'est une des seules façons pour les banques d'obtenir de l'argent de façon dynamique, à leur guise. Les "titres de dette" sont à grande majorité des obligations.
-L'indice de référence pour suivre le marché des obligations en France est l'Obligation Assimilable du Trésir à 10 ans.
+L'indice de référence pour suivre le marché des obligations en France est l'Obligation Assimilable du Trésor à 10 ans.
 
 Pourquoi l’OAT 10 ans est-elle importante ?
 
@@ -62,7 +62,7 @@ Pourquoi l’OAT 10 ans est-elle importante ?
 
 On comprend donc que le financement des prêts immobiliers repose principalement sur les marchés d'obligations (s'obtient de façon dynamique en fonction des volontés de la banque) et les dépôts des clients (indépendant des volontés de la banque).
 
-L'Inspection Générale de l’environnement et du développement durable (IGEDD) a une équipe dédiée à l'étude de l'évolution à long terme des prix immobilier. Cette équipe est représentée par [Jacques Friggit](https://friggit.eu/), ingénieur général et expert de référence sur le sujet, que l'on peut considérer neutre au vu de sa carrière dans la fonction publique.
+L'Inspection Générale de l’Environnement et du Développement Durable (IGEDD) a une équipe dédiée à l'étude de l'évolution à long terme des prix immobilier. Cette équipe est représentée par [Jacques Friggit](https://friggit.eu/), ingénieur général et expert de référence sur le sujet, que l'on peut considérer neutre au vu de sa carrière dans la fonction publique.
 
 Il démontre la corrélation entre le taux de la dette de l'Etat à long terme et le taux des prêts immobiliers depuis 1999.
 
@@ -73,19 +73,19 @@ Selon la Fondation pour la recherche sur les administrations et les politiques p
 
 ## Suivre l'évolution des taux des prêts immobiliers en France
 
-La Banque Centrale Européenne produit des données en Open Source parmi lesquelles [un graphique établissant une moyenne des taux d'intérêt proposés par les banques dans le cadre d'un achat immobilier en France](https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.FR.B.A2C.A.R.A.2250.EUR.N).
+La Banque Centrale Européenne produit des données en open source parmi lesquelles [un graphique établissant une moyenne des taux d'intérêt proposés par les banques dans le cadre d'un achat immobilier en France](https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.FR.B.A2C.A.R.A.2250.EUR.N).
 
 ![Graphique établissant une moyenne des taux d'intérêt proposés par les banques dans le cadre d'un achat immobilier en France. 3.12% en moyenne en Janvier 2025](/img/graphique_taux_moyen_prets_immobiliers.png "Graphique de la BCE établissant une moyenne des taux d'intérêt proposés par les banques dans le cadre d'un achat immobilier en France")
 
-## En quoi le volume de production de prêts immobiliers est un des indicateurs de l'évolution des prix de vente
+## En quoi le volume de production de prêts immobiliers est un des indicateurs de l'évolution à venir des prix de vente
 
 [Raphaël Vignes](https://substack.com/@raphaelvignes), un investisseur amateur qui propose chaque mois son analyse du marché immobilier, pointe le fait que la production annuelle de crédits à l'habitat est en décroissance depuis Avril 2024.
 
 ![Graphique du taux de croissance annuelle de l'encours des crédits à l'habitat aux ménages en France selon la Banque de France. -0.6% sur l'année en Janvier 2025](/img/taux_de_croissance_annuelle_encours_credit_a_lhabitat.png "Graphique du taux de croissance annuelle de l'encours des crédits à l'habitat aux ménages en France")
 
-![Graphique du taux de croissance annuelle de l'encours des crédits à l'habitat aux ménages en France selon la Banque de France selon la BCE](/img/graphique_taux_moyen_prets_immobiliers.png "Graphique équivalent côté BCE")
+![Graphique du taux de croissance annuelle de l'encours des crédits à l'habitat aux ménages en France selon la Banque de France selon la BCE](/img/graphique_taux_moyen_prets_immobiliers.png "Graphique équivalent côté BCE (le dernier mois étant une prévision)")
 
-En décembre 2024, le taux de croissance annuelle de crédits à l'habitat sur un an est de -2.7%. Les taux restent prohibitifs (entre 3.5 et 4% de taux d'intérêt pour les dossiers classiques sur 25 ans et 2025) et les prix restent hauts. Or il est démontré que moins de volume de crédits disponibles entraîne toujours une baisse des prix à moyen terme car les biens entrent en concurrence.
+En décembre 2024, le taux de croissance annuelle de crédits à l'habitat sur un an est de -2.7%. Les taux restent prohibitifs (entre 3.5 et 4% de taux d'intérêt pour les dossiers classiques sur 25 ans en Mars 2025) et les prix restent hauts. Or il est démontré que moins de volume de crédits disponibles entraîne toujours une baisse des prix à moyen terme car les biens entrent en concurrence.
 
 ## Voir au-delà des taux
 
@@ -101,7 +101,7 @@ Si l'on compare avec le pic de 2022, les volumes ont chutés de 1200000 à 75000
 
 ## La fausse solution de "construire des logements en masse pour faire baisser les prix"
 
-Déréguler les normes de construction n'abaissera pas le prix des logements neufs. L'IGEDD via Jacques Friggit estime que construire 1 million de logements n'abaisserait que de 2.5% le prix des logements anciens ([en 2024 294500 logements ont été mis en chantier](https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-janvier-2025-france-entiere?rubrique=&dossier=1047)). En Février 2024, face à plusieurs sénateurs missionés sur le logement, [il explique les deux raisons qui expliquent l'envolée des prix du neuf](https://www.youtube.com/watch?v=C2OeycnbO4g) :
+Déréguler les normes de construction n'abaissera pas le prix des logements neufs. L'IGEDD via Jacques Friggit estime que construire 1 million de logements n'abaisserait que de 2.5% le prix des logements anciens ([en 2024 seuls 294500 logements ont été mis en chantier](https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-janvier-2025-france-entiere?rubrique=&dossier=1047)). En Février 2024, face à plusieurs sénateurs missionés sur le logement, [il explique les deux raisons qui expliquent l'envolée des prix du neuf](https://www.youtube.com/watch?v=C2OeycnbO4g) :
 
 - l'effet inflationniste provoqué par l'alongement de la durée moyenne des prêts immobiliers de 15 à 25 ans
 - la hausse continue du prix du foncier provoquée par l'effet du *compte à rebours*, il s'agit de la démarche du promoteur qui, quand il repère un terrain propice à la construction neuve, compare le prix des dernières ventes immobilières autour du terrain, déduit ses charges (matériaux, main d'oeuvre, normes) et établit ainsi son prix de vente.

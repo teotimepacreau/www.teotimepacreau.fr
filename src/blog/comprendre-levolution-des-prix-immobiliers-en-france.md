@@ -1,6 +1,6 @@
 ---
 title: "Comprendre l'évolution des prix de l'immobilier en France"
-description: "Pourquoi UML permet une base de communication idéale entre étude fonctionnelle et développement lors d'un projet informatique"
+description: "Quelles données et ressources retenir pour anticiper les évolutions de l'immobilier ancien en France"
 type: "Article"
 date: '2025-03-12'
 tags: 
@@ -69,5 +69,55 @@ Il démontre la corrélation entre le taux de la dette de l'Etat à long terme e
 ![Graphique de corrélation entre les taux d’intérêt des prêts immobiliers et de la dette de l’Etat. On observe que les taux d'intérêt des prêts immobiliers suivent les taux de la dette de l'Etat à long terme](/img/correlation_oat_taux_prets_immobiliers.png "Corrélation entre les taux d’intérêt des prêts immobiliers et les taux de la dette de l’Etat à long terme")
 
 Ainsi, l'indice OAT 10 ans est l'indice de référence pour anticiper les évolutions de taux des prêts immobiliers.
+Selon la Fondation pour la recherche sur les administrations et les politiques publiques, [pour chaque augmentation de 1 point du taux de l’OAT 10 ans, les ménages subissent une augmentation de 1,4 point de taux des nouveaux crédits immobiliers](https://www.ifrap.org/budget-et-fiscalite/attention-une-hausse-des-taux-sur-la-dette-francaise-contaminerait-limmobilier-et-les-entreprises#:~:text=notation%20de%20l%E2%80%99entreprise.-,Pour%20les%20m%C3%A9nages%C2%A0,-Le%20taux%20de).
 
-## Sources
+## Suivre l'évolution des taux des prêts immobiliers en France
+
+La Banque Centrale Européenne produit des données en Open Source parmi lesquelles [un graphique établissant une moyenne des taux d'intérêt proposés par les banques dans le cadre d'un achat immobilier en France](https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.FR.B.A2C.A.R.A.2250.EUR.N).
+
+![Graphique établissant une moyenne des taux d'intérêt proposés par les banques dans le cadre d'un achat immobilier en France. 3.12% en moyenne en Janvier 2025](/img/graphique_taux_moyen_prets_immobiliers.png "Graphique de la BCE établissant une moyenne des taux d'intérêt proposés par les banques dans le cadre d'un achat immobilier en France")
+
+## En quoi le volume de production de prêts immobiliers est un des indicateurs de l'évolution des prix de vente
+
+[Raphaël Vignes](https://substack.com/@raphaelvignes), un investisseur amateur qui propose chaque mois son analyse du marché immobilier, pointe le fait que la production annuelle de crédits à l'habitat est en décroissance depuis Avril 2024.
+
+![Graphique du taux de croissance annuelle de l'encours des crédits à l'habitat aux ménages en France selon la Banque de France. -0.6% sur l'année en Janvier 2025](/img/taux_de_croissance_annuelle_encours_credit_a_lhabitat.png "Graphique du taux de croissance annuelle de l'encours des crédits à l'habitat aux ménages en France")
+
+![Graphique du taux de croissance annuelle de l'encours des crédits à l'habitat aux ménages en France selon la Banque de France selon la BCE](/img/graphique_taux_moyen_prets_immobiliers.png "Graphique équivalent côté BCE")
+
+En décembre 2024, le taux de croissance annuelle de crédits à l'habitat sur un an est de -2.7%. Les taux restent prohibitifs (entre 3.5 et 4% de taux d'intérêt pour les dossiers classiques sur 25 ans et 2025) et les prix restent hauts. Or il est démontré que moins de volume de crédits disponibles entraîne toujours une baisse des prix à moyen terme car les biens entrent en concurrence.
+
+## Voir au-delà des taux
+
+Des taux oscillant entre 3% et 5% n'ont jamais été prohibitifs à l'achat de 1960 à 2008. Mais dans un contexte de pouvoir d'achat en décroissance depuis bientôt 20 ans, le taux est désormais perçu comme étant le vecteur barrière. L'entrave réelle à l'achat est le prix déconnecté des salaires qu'est devenu l'immobilier français.
+
+Jacques Friggit, propose de suivre les prix des logements anciens acquis rapporté au revenu disponible de l'ensemble des ménages en prenant en compte l'inflation.
+
+![Graphique d'indice de prix, nombre et montant des ventes de logements anciens et indice des loyers rapportés à leur tendance longue respective et durée d’emprunt pour acheter le même logement](/img/friggit_prix_immobilier.png "Indice de prix, nombre et montant des ventes de logements anciens et indice des loyers rapportés à leur tendance longue respective et durée d’emprunt pour acheter le même logement")
+
+Son constat est sans appel : "au troisième trimestre 2024 le pouvoir d'achat immobilier était inférieur de 27% à ce qu'il était en 2000 et, pour acheter le même logement "toutes choses égales par ailleurs", un primo-accédant devait s'endetter sur 25 ans, contre 15 ans en 2000. Cette durée a diminué de 4 ans par rapport au dernier trimestre 2023 sous l'effet d'une légère rechute des taux d'intérêt et d'une faible baisse du prix des logements et, quoique toujours supérieure à la durée moyenne des prêts accordés, elle s'en est rapprochée. Il en est résulté une forte diminution puis une stagnation des volumes de transactions".
+
+Si l'on compare avec le pic de 2022, les volumes ont chutés de 1200000 à 750000 unités de logements anciens vendues par an. Les prix ont amorcés une diminution depuis ce pic.
+
+## La fausse solution de "construire des logements en masse pour faire baisser les prix"
+
+Déréguler les normes de construction n'abaissera pas le prix des logements neufs. L'IGEDD via Jacques Friggit estime que construire 1 million de logements n'abaisserait que de 2.5% le prix des logements anciens ([en 2024 294500 logements ont été mis en chantier](https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-janvier-2025-france-entiere?rubrique=&dossier=1047)). En Février 2024, face à plusieurs sénateurs missionés sur le logement, [il explique les deux raisons qui expliquent l'envolée des prix du neuf](https://www.youtube.com/watch?v=C2OeycnbO4g) :
+
+- l'effet inflationniste provoqué par l'alongement de la durée moyenne des prêts immobiliers de 15 à 25 ans
+- la hausse continue du prix du foncier provoquée par l'effet du *compte à rebours*, il s'agit de la démarche du promoteur qui, quand il repère un terrain propice à la construction neuve, compare le prix des dernières ventes immobilières autour du terrain, déduit ses charges (matériaux, main d'oeuvre, normes) et établit ainsi son prix de vente.
+
+![Slide d'explication de l'envolée du prix des logements neufs : on y retrouve les éléments cités dans le paragraphe plus haut](/img/prix_logements_neufs.jpeg "Slide d'explication de l'envolée du prix des logements neufs. Source : Jacques Friggit IGEDD, audition sénat Février 2024")
+
+## Qu'anticiper pour les mois à venir (Mars 2025)
+
+Les taux vont cesser de diminuer car la situation européenne et le niveau d'endettement de l'Etat Français entraînent une augmentation inédite de l'OAT 10 ans.
+Les prix de vente sont toujours déconnectés des salaires. Des taux stagnants, un pouvoir d'achat immobilier toujours faible entraînent l'immobilier ancien dans une tendance longue baissière.
+
+## Les ressources indispensables pour suivre l'immobilier
+
+- [la newsletter de l'évolution à long terme des prix et volumes de l'immobilier par l'IGEDD, représenté par Jacques Friggit](https://www.igedd.developpement-durable.gouv.fr/prix-immobilier-evolution-a-long-terme-a1048.html)
+- [les analyses immobilières de Raphaël Vignes](https://x.com/RaphaelVignes)
+- [la newsletter du site "Politique du logement", un think tank par un groupe des spécialistes de l’économie du logement](https://politiquedulogement.com/)
+- [le jeu de données mensuel "Crédits aux particuliers de la Banque de France](https://www.banque-france.fr/fr/statistiques/credit/credits-aux-particuliers-2025-01)
+- [le jeu de données "Bank interest rates - loans to households for house purchase (new business) - France, France, Monthly" de la BCE ](https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.FR.B.A2C.A.R.A.2250.EUR.N)
+- [le jeu de données "Lending for house purchase vis-a-vis euro area households reported by MFIs excl. ESCB in France (annual growth rate), France, Monthly" de la BCE](https://data.ecb.europa.eu/data/datasets/BSI/BSI.M.FR.N.A.A22.A.I.U2.2250.Z01.A)

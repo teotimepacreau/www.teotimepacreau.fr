@@ -85,7 +85,8 @@ La Banque Centrale Européenne produit des données en open source parmi lesquel
 
 ![Graphique du taux de croissance annuelle de l'encours des crédits à l'habitat aux ménages en France selon la BCE](/img/bce_taux_croissance_annuelle_encours_prets_immo.png "Graphique équivalent côté BCE (le dernier mois étant une prévision)")
 
-En décembre 2024, le taux de croissance annuelle de crédits à l'habitat sur un an est de -2.7%. Les taux restent prohibitifs (entre 3.5 et 4% de taux d'intérêt pour les dossiers classiques sur 25 ans en Mars 2025) et les prix restent hauts. Or il est démontré que moins de volume de crédits disponibles entraîne toujours une baisse des prix à moyen terme car les biens entrent en concurrence.
+On observe une décroissance du volume des prêts immobiliers depuis Juillet 2023.
+En décembre 2024, le taux de croissance annuelle de crédits à l'habitat sur un an est de -2.7%. Les taux restent prohibitifs (entre 3.25 et 3.75% de taux d'intérêt pour les dossiers classiques sur 25 ans en Mars 2025) et les prix restent hauts. Or il est démontré que moins de volume de crédits disponibles entraîne toujours une baisse des prix à moyen terme car il y a moins d'acheteurs solvables donc les biens entrent en concurrence.
 
 ## Voir au-delà des taux
 

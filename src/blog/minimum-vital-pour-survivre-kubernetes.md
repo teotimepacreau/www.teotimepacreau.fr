@@ -28,7 +28,7 @@ Un conteneur est une virtualisation de l'environnement d'exécution. Il a l'avan
 
 Kubernetes est une solution d'orchestration de conteneurs permettant d'automatiser l'allocation des ressources et la gestion des conteneurs. Grâce à Kubernetes le développeur n'a plus besoin de se soucier de la couche infrastructure et peut être davantage focus sur la prod. La solution s'appuie sur son architecture pour répondre aux pics de charges en transférant des paquets de conteneurs d'un hôte à l'autre, il équulibre la charge, centralise les log...
 
-# Architecture Kubernetes
+## Architecture Kubernetes
 
 Le Kubernetes Master est l'agent maître qui donne les ordres. Un Node est une machine qui héberge un hôte Docker. Un Pod est un environnement d'exécution qui contient un ou plusieurs conteneurs.
 
@@ -37,3 +37,8 @@ Le Kubernetes Master est l'agent maître qui donne les ordres. Un Node est une m
 Tous les conteneurs d'un Pod partagent la même adresse IP, les mêmes ports réseaux et peuvent partager un volume pour stocker et échanger des données entre eux.
 
 Le Kubernetes Master fait migrer les Pods selon le Node le plus approprié pour allouer les ressources en cas de pic de charge, il gère également l'utilisation des ressources sur chaque Node. Avec Kubernetes les ordres d'administration réseaux proviennent d'un système automatisé plutôt que d'une configuration manuelle non adapatée à des dizaines de conteneurs.
+
+## Sources
+
+<https://youtu.be/NChhdOZV4sY?si=Wh5TDLAyK_LwxyTc/>
+<https://youtu.be/PziYflu8cB8?si=x5gdo8IkENeu5Fwr/>

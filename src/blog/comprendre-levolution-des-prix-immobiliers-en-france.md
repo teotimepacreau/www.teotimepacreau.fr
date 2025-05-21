@@ -118,7 +118,10 @@ Les prix de vente sont toujours déconnectés des salaires. Des taux stagnants, 
 
 - [la newsletter de l'évolution à long terme des prix et volumes de l'immobilier par l'IGEDD, représenté par Jacques Friggit](https://www.igedd.developpement-durable.gouv.fr/prix-immobilier-evolution-a-long-terme-a1048.html)
 - [les analyses immobilières de Raphaël Vignes](https://x.com/RaphaelVignes)
-- [la newsletter du site "Politique du logement", un think tank par un groupe des spécialistes de l’économie du logement](https://politiquedulogement.com/)
-- [le jeu de données mensuel "Crédits aux particuliers de la Banque de France](https://www.banque-france.fr/fr/statistiques/credit/credits-aux-particuliers-2025-01)
-- [le jeu de données "Bank interest rates - loans to households for house purchase (new business) - France, France, Monthly" de la BCE ](https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.FR.B.A2C.A.R.A.2250.EUR.N)
+- [la newsletter du site "Politique du logement", un think tank de spécialistes de l’économie du logement](https://politiquedulogement.com/)
+- [l'analyse mensuelle de l'octroi des crédits aux particuliers de la Banque de France](https://www.banque-france.fr/fr/statistiques/credit/credits-aux-particuliers-2025-01)
+- [l'analyse trimestrielle de la conjoncture immobilière par le service Données et Etudes Statistiques du Ministère de la Transition Ecologique](https://www.statistiques.developpement-durable.gouv.fr/conjoncture-de-limmobilier-resultats-au-quatrieme-trimestre-2024)
 - [le jeu de données "Lending for house purchase vis-a-vis euro area households reported by MFIs excl. ESCB in France (annual growth rate), France, Monthly" de la BCE](https://data.ecb.europa.eu/data/datasets/BSI/BSI.M.FR.N.A.A22.A.I.U2.2250.Z01.A)
+- [le jeu de données "Bank interest rates - loans to households for house purchase (new business) - France, Monthly" de la BCE](https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.FR.B.A2C.A.R.A.2250.EUR.N)
+- [le jeu de données "Residential property prices, France, Quarterly" de la BCE](https://data.ecb.europa.eu/data/datasets/RESR/RESR.Q.FR._T.N._TR.TVAL.4D0.TB.N.IX)
+- [le jeu de données "Loan demand-Household, France, Quarterly" de la BCE](https://data.ecb.europa.eu/data/datasets/BLS/BLS.Q.FR.ALL.Z.H.H.F3.ZZ.D.FNET)

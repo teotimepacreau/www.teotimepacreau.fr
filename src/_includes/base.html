@@ -7,7 +7,7 @@
         {% include "color-picker.html"%}
         <div {% if pageId == "Homepage" %} id="homepage-container" {% else %} id="normal-page-container" {% endif %}
     
-        {% if pageId == "Projets_list" or pageId == "Projet" %}class="projets-container"{% endif %}
+        {% if pageId == "Projets_list" or pageId == "Projet" %} class="projets-container" {% endif %}
         >
             <header {% if pageId == "Homepage" %} id="homepage-menu" {% endif %}>
             {% include "mobilenav.html"%}

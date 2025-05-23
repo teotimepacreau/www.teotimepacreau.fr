@@ -7,5 +7,5 @@ import { DateTime } from "luxon";
 // List of supported tokens: https://moment.github.io/luxon/docs/manual/formatting.html#table-of-tokens
 
 export default function(dateObj, format = 'LLLL d, y') {
-  return DateTime.fromISO(dateObj, { zone: "Europe/Amsterdam", locale: "fr" }).toFormat(format);
+  return DateTime.fromISO(dateObj, { zone: "Europe/Paris", locale: "fr" }).toFormat(format);
 };

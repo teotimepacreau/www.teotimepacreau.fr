@@ -125,7 +125,7 @@ export default function(eleventyConfig) {
     },
     metadata: {
       language: "fr",
-      title: "Le site web personnel de Teotime Pacreau : Développement web et conduite de projets numériques à Nantes",
+      title: "Teotime Pacreau : développement web et conduite de projets numériques à Nantes",
       subtitle: "Le flux web du blog et des essais de Teotime Pacreau",
       base: "https://www.teotimepacreau.fr/",
       author: {

@@ -1,5 +1,5 @@
 ---
-excludeFromEleventyCollections : true
+eleventyExcludeFromCollections : true
 title: "L'aberration qu'est devenu le calcul de la taxe foncière"
 description: "Plongée dans l'obscur mode de calcul de l'impôt le plus captif"
 type: "Article"

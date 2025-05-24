@@ -1535,6 +1535,13 @@ table {
   border-collapse: collapse;
 }
 
+thead {
+  backdrop-filter: blur(15px) contrast(90%);
+  position: sticky;
+  top: 0.1rem;
+  margin-bottom: var(--rythme); /* or whatever row height */
+}
+
 th {
   font-weight: bold;
   background-color: var(--bglighten20);

@@ -23,6 +23,7 @@ eleventyComputed:
 **DISCLAIMER** : Cet article aborde une approche de modélisation issue de la méthode de [Merise](https://fr.wikipedia.org/wiki/Merise_(informatique)). Il existe de nombreuses autres méthodes et approches qui font varier la complexité.
 
 ## Préfigurer un modèle de données
+
 Prenons l'exemple d'une sollicitation d'un service marketing qui procède à des enquêtes de satisfaction client. Celui-ci souhaite sortir de son modèle traditionnel de récolte de questionnaire de satisfaction papier puis traitement sous tableur. Le service exprime le besoin de centraliser les réponses obtenues et d'automatiser l'envoi d'enquêtes par mail.
 
 Suite à une réunion de cadrage et qualification du besoin, vous repartez avec cette problématique affinée : "des chefs de projets marketing sont en charge de l'élaboration d'enquêtes clients. On souhaite à terme spécialiser chaque chef de projet marketing sur une typologie d'enquête, chaque type d'enquête à des questions specifiques mais toutes les enquêtes commencent par un bloc de questions communes. Il faut que l'on puisse tracer quelle enquête a été crée par quel chef de projet marketing. Tous les types d'enquête recueillent l'âge, le nom, l'adresse du client. Nous souhaitons que les enquêtes soient adressées par mail aux clients."
@@ -30,6 +31,7 @@ Suite à une réunion de cadrage et qualification du besoin, vous repartez avec 
 Avant d'entrer dans la conception de la solution numérique, il est nécessaire de conceptualiser notre modèle de données. En effet, celui-ci conditionnera l'architecture de la solution. Il prendra la forme d'un schéma qui matérialisera les différentes relations entre nos données. Pour cela, voyons plus en détail une méthode simple à utiliser.
 
 ## Dictionnaire de données
+
 La méthode Merise invite à mener des interviews et à analyser les documents utilisés par le service dans le but d’établir le dictionnaire de données.
 Il s'agit d'un tableau qui recense toutes les données que comporte le problème. Une donnée est une occurence non-décomposable qui est amenée à varier. Le tableau précise les caractéristiques de la donnée retenue.
 
@@ -51,6 +53,7 @@ Il s'agit d'un tableau qui recense toutes les données que comporte le problème
 Le bloc "Adresse" a été divisé en 4 données séparées : "n° de rue", "nom de rue", "CP" et "Ville". En effet "Adresse" était décomposable, or si l'on souhaite à terme requêter le nombre de clients qui ont participés à l'enquête dans une ville précise il est nécessaire d'avoir un champ séparé pour la ville.
 
 ## Les dépendances fonctionnelles
+
 A la suite du dictionnaire de données, il peut être utile d'identifier quelles données dépendent de quel identifiant unique.
 
 | Identifiant unique   | Données dépendantes fonctionnellement |
@@ -61,7 +64,9 @@ A la suite du dictionnaire de données, il peut être utile d'identifier quelles
 | id_enquete | questions_communes_enquete |
 
 ## Le Modèle Conceptuel de Données
+
 Plusieurs types de schémas conceptuels existent, correspondants aux différents types de base de données que l’on peut rencontrer :
+
 - le modèle hiérarchique
 - le modèle réseaux sémantiques
 - le modèle entité / attribut / relation (appelé ERD en anglais)
@@ -79,6 +84,7 @@ Voici la modélisation de notre problème posé en introduction :
 ![Capture d'écran de la modélisation en entité-attribut](/img/MCD_entite_attribut.png "Modélisation en entité-attribut")
 
 ### Les relations et leurs cardinalités
+
 Les relations décrivent comment les entités interagissent entre elles. Les relations sont généralement marquées par des verbes "achète à", "est traité par"...
 La relation peut comporter des attributs, on l’appelle alors “relation porteuse”.
 
@@ -92,11 +98,11 @@ Voici, pour notre exemple, les relations et leurs cardinalités :
 ![Capture d'écran de la modélisation des relations Merise](/img/relations-cardinalites-merise.png "Modélisation des relations et de leurs cardinalites")
 
 ### Cas particulier de la nécessité de concaténer plusieurs identifiants pour identifier de manière unique
+
 Prenons un tout autre exemple avec un modèle conceptuel de données qui stockerait des informations au sujet d'appartements, l'étage, l'immeuble et la rue auxquels ils se rattachent.
 Un appartement ne peut pas être identifié de manière unique par sa lettre_appartement car il peut y avoir un appart A au 1er étage et un appart A au 2ème étage, on exprime alors avec les parenthèses autour des cardinalités que les entités du côté de ces cardinalités seront identifiées par la concaténation des identifiants de toute la chaîne de la relation.
 
 ![Capture d'écran de la modélisation conceptuel de données de l'exemple](/img/merise-concaténation_identifiants.png "Modélisation conceptuel des données de l'exemple, crédit schéma et exemple : Idriss Neumann")
-
 
 ```markdown
 Rue (code_rue, nom_rue)
@@ -104,17 +110,21 @@ Immeuble (num_immeuble, code_rue#, nb_etages_total)
 Etage (num_etage, num_immeuble#, code_rue#, nb_appartements_tot)
 Appartement (lettre_appartement, num_etage#, num_immeuble#, code_rue#, nb_pieces_total)
 ```
-### Clé primaire et étrangère  
+
+### Clé primaire et étrangère
+
 Le principe de clés est indispensable pour faire référence à un enregistrement précis d'une table.
 La clé primaire est l'identifiant unique d'une entité. Celle-ci peut-être *artificielle*, c'est à dire créée de toute pièce, ou être naturellement *candidate* c'est à dire être une colonne déjà existante ou la concaténation de plusieurs colonnes.
 La clé étrangère est une référence à l'identifiant unique d'une autre entité. Utile pour mettre en relation deux enregistrements qui ont un rapport entre eux.
 
-## Comment schématiser facilement notre Modèle Conceptuel de Données  
+## Comment schématiser facilement notre Modèle Conceptuel de Données
+
 J'utilise l'outil gratuit en ligne [Draw.io](https://app.diagrams.net/) qui a un sous-menu dédié "Relation entre les éléments".
 
 ![Interface de Draw.io](/img/interface_drawio.png "Interface de Draw.io, volet latéral composé du sous-menu relation entre les éléments")
 
 ## Sources
+
 <https://www.youtube.com/watch?v=OxJo051TMr8/>
 
 <https://fr.wikiversity.org/wiki/Introduction_aux_syst%C3%A8mes_de_bases_de_donn%C3%A9es/Introduction/>

@@ -41,4 +41,5 @@ Le Kubernetes Master fait migrer les Pods selon le Node le plus approprié pour 
 ## Sources
 
 <https://youtu.be/NChhdOZV4sY?si=Wh5TDLAyK_LwxyTc>
+
 <https://youtu.be/PziYflu8cB8?si=x5gdo8IkENeu5Fwr>

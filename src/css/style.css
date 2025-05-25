@@ -1626,7 +1626,7 @@ tr {
     contain-intrinsic-size: 100vh 60dvw;
     background-color: hsla(0, 0%, 42%, 0.3);
     backdrop-filter: blur(45px);
-    transition: transform .1s ease-out, opacity .1s ease-out, display .1s ease-out;
+    transition: transform .1s ease-out, opacity .1s ease-out, display .1s ease-out, overlay .1s ease-out;
     transition-behavior: allow-discrete;
     /*POPOVER IN EXIT STATE */
     opacity: 0;

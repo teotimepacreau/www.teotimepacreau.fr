@@ -50,12 +50,20 @@ Les flux web se reposent donc sur le format XML sous-jacent. RSS 2.0 (dernière 
 ```
 
 ## Privilégier le format RSS, Atom ou JSON ?
-Pour choisir quel format privilégier deux questions se posent : le format est-il bien supporté par les lecteurs de flux ? Le format offre-t-il suffisament de balises pour personnaliser les données que je partage ?
+Pour choisir quel format privilégier deux questions se posent : le format est-il bien supporté par les lecteurs de flux ? La spécification du format est-elle ambigüe ?
 
 ### Comparaison des formats pris en charge par les lecteurs de flux les plus populaires
 
-| | Miniflux | Tiny Tiny RSS |
-| -- | -- | -- |
-| RSS 2.0 | Supporté | Supporté |
-| Atom 1.0 | Supporté | Supporté |
-| JSON 1.1 |  Supporté | Non supporté |
+| | [Miniflux](https://miniflux.app/) | [Tiny Tiny RSS](https://tt-rss.org/) | [Fresh RSS](https://freshrss.github.io/FreshRSS/en/) | [Fusion](https://github.com/0x2E/fusion) | [Moccasin](https://github.com/rektdeckard/moccasin) |
+| -- | -- | -- | -- | -- | -- |
+| RSS 2.0 | Supporté | Supporté | Supporté | Supporté | Supporté |
+| Atom 1.0 | Supporté | Supporté | Supporté | Supporté | Supporté |
+| JSON 1.1 |  Supporté | Non supporté | Non supporté | Supporté | Non supporté |
+
+Les flux JSON ne sont malheureusement toujours pas pris en charge par une partie des lecteurs de flux modernes. Afin d'assurer un maximum de compatibilité, les formats RSS 2.0 et Atom 1.0 sont à privilégier.
+
+### La spécification du format est-elle ambigüe ?
+
+## Sources
+
+<https://kevincox.ca/2022/05/06/rss-feed-best-practices/>

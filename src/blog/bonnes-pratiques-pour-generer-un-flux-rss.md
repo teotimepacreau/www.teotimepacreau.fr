@@ -67,9 +67,13 @@ Les flux JSON ne sont malheureusement toujours pas pris en charge par une partie
 La spécification de RSS 2.0 est pensée pour être extensible à l'infini via le principe des *namespaces* XML. En effet, dans un cas "classique" un fichier XML ne contiendra que des balises qui appartiennent à une seule grammaire de référence. Les *namespaces* permettent de d'avoir des balises issues de plusieurs grammaires différentes. Par exemple la balise HTML `<svg>` n'est pas reconnue par XML nativement, on défini alors un *namespace* via l'attribut `xmlns` : `<svg xmlns="http://www.w3.org/2000/svg">` pour que le document XML reste valide malgré une balise inconnue nativement.
 Pensé originellement comme une force pour RSS 2.0 cette extensibilité infinie et non encadrée par la spécification entraîne des problèmes évidents de prise en charge des balises non reconnues par les lecteurs de flux.
 
-Atom 1.0 autorise lui aussi les *namespaces* mais il encadre strictement leur utilisation uniquement dans des emplacements spécifiques. Cela rend Atom plus prédictible pour les lecteurs de flux. Très concrètement Atom autorise les *namespaces* mais la spécification explique qu'il n'est pas possible de remplacer une balise Atom requise (comme `<title>`, `<id>`, `<updated>`).
+Atom 1.0 autorise lui aussi les *namespaces* mais il encadre strictement leur utilisation uniquement dans des emplacements spécifiques. Cela rend Atom plus prédictible pour les lecteurs de flux. Très concrètement Atom autorise les *namespaces* mais la spécification explique qu'il n'est pas possible de remplacer une balise Atom requise (comme `<title>`, `<id>`, `<updated>`). Atom 1.0 est donc bien moins ambigüe que RSS 2.0
 
 ### Balises de personnalisation offertes par le format
+
+Atom 1.0 offre plusieurs balises de métadonnées :
+- `<author>`, `<name>` et `<email>` permettent de caractériser l'auteur
+
 
 ## Sources
 

@@ -126,7 +126,7 @@ export default function(eleventyConfig) {
     metadata: {
       language: "fr",
       title: "Teotime Pacreau Blog",
-      subtitle: "Blogs et essais",
+      subtitle: "Blog et essais",
       base: "https://www.teotimepacreau.fr/",
       author: {
         name: "Téotime Pacreau",

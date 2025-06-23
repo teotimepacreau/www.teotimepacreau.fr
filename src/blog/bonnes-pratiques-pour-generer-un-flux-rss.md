@@ -79,7 +79,6 @@ Atom 1.0 offre plusieurs balises de métadonnées parmi lesquelles :
 - `<content>` contient les éléments de chaque entrée et peut-être de type texte ou HTML
 - `xml:lang="fr"` est un attribut qui se place dans l'élément `<feed>` et qui est hérité par tous les descendants pour indiquer la langue du flux
 
-
 RSS 2.0 offre quand à lui :
 
 | Element | Description |

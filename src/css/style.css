@@ -1566,13 +1566,13 @@ tr {
   }
   td {
     display: grid;
-    grid-template-columns: 15ch auto;
+    grid-template-columns: 33dvw auto;
     word-wrap: anywhere;
     gap: calc(0.75 * var(--rythme));
     padding: calc(0.25 * var(--rythme));
   }
   td::before {
-    content: attr(data-cell) ": ";
+    content: attr(data-cell);
     font-weight: 700;
   }
   td:first-child {

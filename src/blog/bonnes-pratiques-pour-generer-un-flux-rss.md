@@ -26,6 +26,8 @@ XML est un format de [sérialisation de données](https://www.arthurperret.fr/co
 
 Les flux web se reposent donc sur le format XML sous-jacent. RSS 2.0 (dernière version en 2009) et Atom 1.0 (dernière version en 2005) sont les standards de flux web les plus connus.
 
+Voici un exemple de flux Atom :
+
 ```xml
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
 <title>Teotime Pacreau Blog</title>

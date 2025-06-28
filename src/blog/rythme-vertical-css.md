@@ -5,8 +5,8 @@ date: '2022-11-26'
 description: "En 2 lignes de code, il est possible de mettre en place un système d'espacement modulable et réutilisable qui s'adapte à toutes les mises en page."
 tags: 
   - 'CSS'
-  - 'Rythme vertical'
-  - 'Web design'
+  - 'Design'
+  - 'WebDev'
 layout: blogpost_layout.njk
 eleventyComputed:
   meta:

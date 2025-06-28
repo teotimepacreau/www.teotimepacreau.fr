@@ -102,12 +102,12 @@ Si l'on compare avec le pic de 2022, les volumes ont chutés de 1200000 à 75000
 
 ## La fausse solution de "construire des logements en masse pour faire baisser les prix"
 
-Déréguler les normes de construction n'abaissera pas le prix des logements neufs. L'IGEDD via Jacques Friggit estime que construire 1 million de logements n'abaisserait que de 2.5% le prix des logements anciens ([en 2024 seuls 294500 logements ont été mis en chantier](https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-janvier-2025-france-entiere?rubrique=&dossier=1047)). En Février 2024, face à plusieurs sénateurs missionés sur le logement, [il explique les deux raisons qui expliquent l'envolée des prix du neuf](https://www.youtube.com/watch?v=C2OeycnbO4g) :
+Déréguler les normes de construction n'abaissera pas le prix des logements neufs. L'IGEDD via Jacques Friggit estime que construire 1 million de logements n'abaisserait que de 2.5% le prix des logements anciens ([en 2024 seuls 294500 logements ont été mis en chantier](https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-janvier-2025-france-entiere?rubrique=&dossier=1047)). En Février 2024, face à plusieurs sénateurs missionés sur le logement, [il indique les deux raisons qui expliquent l'envolée des prix du neuf](https://www.youtube.com/watch?v=C2OeycnbO4g) :
 
 - l'effet inflationniste provoqué par l'alongement de la durée moyenne des prêts immobiliers de 15 à 25 ans
 - la hausse continue du prix du foncier provoquée par l'effet du *compte à rebours*, il s'agit de la démarche du promoteur qui, quand il repère un terrain propice à la construction neuve, compare le prix des dernières ventes immobilières autour du terrain, déduit ses charges (matériaux, main d'oeuvre, normes) et établit ainsi son prix de vente.
 
-![Slide d'explication de l'envolée du prix des logements neufs : on y retrouve les éléments cités dans le paragraphe plus haut](/img/prix_logements_neufs.jpeg "Slide d'explication de l'envolée du prix des logements neufs. Source : Jacques Friggit IGEDD, audition sénat Février 2024")
+![Slide d'explication de l'envolée du prix des logements neufs : on y retrouve les éléments cités dans le paragraphe plus haut](/img/prix_logements_neufs.jpeg "Slide d'explication de l'envolée du prix des logements neufs. Source : Jacques Friggit IGEDD, audition par la mission d'information relative à la crise du logement par le Sénat, Février 2024")
 
 ## Qu'anticiper pour les mois à venir (Mars 2025)
 
@@ -125,3 +125,4 @@ Les prix de vente sont toujours déconnectés des salaires. Des taux stagnants, 
 - [le jeu de données "Bank interest rates - loans to households for house purchase (new business) - France, Monthly" de la BCE](https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.FR.B.A2C.A.R.A.2250.EUR.N)
 - [le jeu de données "Residential property prices, France, Quarterly" de la BCE](https://data.ecb.europa.eu/data/datasets/RESR/RESR.Q.FR._T.N._TR.TVAL.4D0.TB.N.IX)
 - [le jeu de données "Loan demand-Household, France, Quarterly" de la BCE](https://data.ecb.europa.eu/data/datasets/BLS/BLS.Q.FR.ALL.Z.H.H.F3.ZZ.D.FNET)
+- [l'indice d'évolution du prix des logements anciens se situant en zone B1, base 100 2015](https://www.insee.fr/fr/statistiques/serie/010760747)

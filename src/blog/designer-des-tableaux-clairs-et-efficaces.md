@@ -55,3 +55,54 @@ Voici le traitement qu'ils ont appliqués au tableau pour le rendre plus lisible
 ![Le gif montre visuellement l'application des règles de mise en forme énumérées au dessus. Le tableau devient clair et lisible](/img/ClearOffTheTable.gif "Traitement design d'un tableau")
 
 ## Construire des <table> lisibles et clairs en HTML CSS
+
+L'élément `<table>` englobe le contenu. A l'intérieur on retrouve `<thead>` contient les étiquettes de colonne. `<tbody>` contient le corps du tableau.
+Une ligne est construite à partir de `<tr>` qui contient elle même l'élément de référence de la ligne `<th>` et la donnée associée `<td>`.
+Pour afficher un total ou un élément résumant le tableau en pied de tableau il est possible d'utiliser l'élément englobant `<tfoot>`.
+Pour titrer le tableau on utilise l'élément `<caption>` en premier descendant de l'élément `<table>`.
+
+```html
+<table>
+	<caption>Titre du tableau</caption>
+ 	<thead>
+		<tr>
+			<th scope="column">Pays</th>
+			<th scope="column">Temperature</th>
+		</tr>
+ 	</thead>
+	<tbody>
+    <tr>
+      <th>
+        France
+      </th>
+      <td>
+        30°C
+      </td>
+    </tr>
+	</tbody>
+	<tfoot>
+    <tr>
+      <th>
+        Total
+      </th>
+      <td>
+        30°C
+      </td>
+    </tr>
+	</tfoot>
+</table>
+```
+
+Le style par défaut appliqué par le navigateur est :
+
+```css
+table {
+	display: table;
+  border-spacing: 2px;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: 0;
+}
+```
+
+Il est important de ne pas modifier la propriété `diplay: table` sous peine de rendre le tableau inaccessible pour les utilisateurs de technologies d'assistance.

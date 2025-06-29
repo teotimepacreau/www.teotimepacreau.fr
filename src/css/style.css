@@ -1539,7 +1539,7 @@ thead {
   backdrop-filter: blur(15px) contrast(90%);
   position: sticky;
   top: 0.1rem;
-  margin-bottom: var(--rythme); /* or whatever row height */
+  margin-bottom: var(--rythme);
 }
 
 th {

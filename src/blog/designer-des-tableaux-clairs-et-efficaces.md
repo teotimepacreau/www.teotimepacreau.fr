@@ -25,7 +25,10 @@ eleventyComputed:
     published: "{{ date }}"
 ---
 
-Tout *[Knowledge Worker](https://www.teotimepacreau.fr/essais/challenger-pratiques-transformation-organisationelle-par-le-design-de-services#:~:text=Le%20terme%20travailleur,Drucker%20%E2%80%98knowledge%20work%E2%80%99)* se retrouve régulièrement face à des tableaux : tableurs très régulièrement, parfois un tableau simplement pour structurer une idée à double entrée.
+Tout *[Knowledge Worker](https://www.teotimepacreau.fr/essais/challenger-pratiques-transformation-organisationelle-par-le-design-de-services#:~:text=Le%20terme%20travailleur,Drucker%20%E2%80%98knowledge%20work%E2%80%99)* se retrouve régulièrement face à des tableaux :tableurs et tableaux font partis de notre quotidien pour structurer une idée à double entrée.
+
+Pourtant on rencontre très, *trop* fréquemment des tableaux qui rendent l'information encore plus complexe à appréhender.
+En terme d'usage les tableaux sont plus adaptés pour présenter des valeurs, les comparer ou présenter des unités de mesure multiples. A contrario, les graphiques, sont plus adaptés pour démontrer les tendances, anomalies et relations. [*Les graphiques montrent la forêt là où des tables montre les arbres*.](https://simplexct.com/data-ink-ratio-tables#:~:text=In%20other%20words%2C%20graphs%20show%20the%20forest%20while%20tables%20show%20the%20trees.)
 
 ![Exemple de tableau multicolore, surchargé, complexe à appréhender. Le tableau présente des données fictives relatives au cinéma.](/img/tableau_excel_typique.png "Un exemple de tableau que l'on a tous déjà rencontré, source et tous droits réservés Dark Horse Analytics")
 
@@ -44,8 +47,9 @@ Quels points d'amélioration peut-on identifier ?
 - plus il y a de couleurs différentes et plus le tableau est complexe à appréhender
 - le texte doit toujours être aligné à gauche
 - les nombres doivent toujours être alignés à droite
-- les étiquettes de colonnes doivent toujorus être alignées avec leur contenu
+- les étiquettes de colonnes doivent toujours être alignées avec le contenu des colonnes
 - on regroupe les cellules similaires pour éviter les répétitions
+- les bordures sont souvent superflues car l'alignement des cellules suffit souvent à discerner les relations
 - un saut de ligne dans un tableau peut être plus efficace qu'une bordure pour espacer des groupes de données
 
 L'agence de visualisation de données [Dark Horse Analytics](https://www.darkhorseanalytics.com/) avait partagé une série de billets de blog en 2014 intitulé "[Data Looks Better Naked](https://www.darkhorseanalytics.com/blog/data-looks-better-naked)".
@@ -54,7 +58,30 @@ Voici le traitement qu'ils ont appliqués au tableau pour le rendre plus lisible
 
 ![Le gif montre visuellement l'application des règles de mise en forme énumérées au dessus. Le tableau devient clair et lisible](/img/ClearOffTheTable.gif "Traitement design d'un tableau")
 
-## Construire des <table> lisibles et clairs en HTML CSS
+Un autre exemple frappant proposée par l'agence [SimplexCT] :
+
+[placer gif nettoyage_de_tableau.gif]
+
+On peut noter :
+
+- le choix de colorer en section le corps du tableau non pas via une clée de sélection particulière mais simplement en divisant en 4 sections
+- le fait de remplacer les 0 très répétitifs par des tirets pour supprimer de la charge visuelle
+- la mise en évidence des titres via une mise en majuscule complète souligné par une seule bordure plutôt qu'utiliser du gras ou des couleurs fortes
+- le placement du total en haut plutôt qu'en pied de tableau
+
+Pour tous les sujets de visualisation de l'information, [Edward Tufte](https://www.edwardtufte.com/notebook/table-and-timetable-design-and-typography/) est l'auteur de référence. Il a établi un véritable standard de [mise en page des documents](https://edwardtufte.github.io/tufte-css/) et a proposé des travaux fondamentaux de recherche avancée à propos des techniques de *datavisualization*.
+
+Au sujet des tableaux, Eward Tufte donne [quatre principes](https://www.nas.nasa.gov/assets/nas/pdf/techreports/1994/nas-94-002.pdf) :
+
+- Above all else show the data.
+- Maximize the data-ink ratio.
+- Erase non-data-ink.
+- Erase redundant data-ink.
+
+
+## Construire des `<table>` lisibles et clairs en HTML CSS
+
+### Le HTML
 
 L'élément `<table>` englobe le contenu. A l'intérieur on retrouve `<thead>` contient les étiquettes de colonne. `<tbody>` contient le corps du tableau.
 Une ligne est construite à partir de `<tr>` qui contient elle même l'élément de référence de la ligne `<th>` et la donnée associée `<td>`.
@@ -93,6 +120,8 @@ Pour titrer le tableau on utilise l'élément `<caption>` en premier descendant 
 </table>
 ```
 
+### Le CSS
+
 Le style par défaut appliqué par le navigateur est :
 
 ```css
@@ -106,3 +135,32 @@ table {
 ```
 
 Il est important de ne pas modifier la propriété `diplay: table` sous peine de rendre le tableau inaccessible pour les utilisateurs de technologies d'assistance.
+
+#### Les bordures
+
+Par défaut, chaque case du tableau a ses 4 bordures de matérialisées et les cases sont séparées les unes des autres car le navigateur attribut un style par défaut pour la table avec la propriété `border-collapse` qui prend pour valeur `separate`.
+
+[placer image border-collapse-separate.PNG]
+
+La valeur `collapse` permet de partager les bordures, ce qui est *beaucoup* plus courant dans les tableaux que l'on voit tous les jours.
+
+[placer image border-collapse-collapse.PNG]
+
+#### Gérer le dépassement de contenu
+
+Pour éviter que le tableau soit trop grand pour le dimensionnement qui lui est réservé, il peut être judicieux d'appliquer la propriété `overflow: scroll` à l'élément qui wrap le tableau
+
+```html
+<div style="overflow: scroll;">
+	<table>
+	</table>
+</div>
+```
+
+#### Rendre les étiquettes de colonne ou un volet du tableau "sticky"
+
+## Sources 
+
+https://simplexct.com/data-ink-ratio-tables
+
+https://piccalil.li/blog/styling-tables-the-modern-css-way/

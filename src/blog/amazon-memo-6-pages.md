@@ -28,11 +28,9 @@ Jeff Bezos estime que la lecture et l'écriture ont joués un rôle majeur dans 
 
 [En 2017, dans sa lettre annuelle aux actionnaires d'Amazon, Jeff Bezos expose les standards d'organisation de l'entreprise](https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders).
 
-{% citationsmarginales "BEZOS, Jeff. <a href='https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders'><em>2017 Letter to Shareholders</em></a>." %}
-We don’t do PowerPoint (or any other slide-oriented) presentations at Amazon. Instead, we write narratively structured six-page memos. We silently read one at the beginning of each meeting in a kind of “study hall.” Not surprisingly, the quality of these memos varies widely. Some have the clarity of angels singing. They are brilliant and thoughtful and set up the meeting for high-quality discussion. Sometimes they come in at the other end of the spectrum.
+{% citationsmarginales "BEZOS, Jeff. <a href='https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders'><em>2017 Letter to Shareholders</em></a>." %}We don’t do PowerPoint (or any other slide-oriented) presentations at Amazon. Instead, we write narratively structured six-page memos. We silently read one at the beginning of each meeting in a kind of “study hall.” Not surprisingly, the quality of these memos varies widely. Some have the clarity of angels singing. They are brilliant and thoughtful and set up the meeting for high-quality discussion. Sometimes they come in at the other end of the spectrum.
 [...]I find that much of the time, readers react to great memos very similarly. They know it when they see it. The standard is there, and it is real, even if it’s not easily describable.
-Here’s what we’ve figured out. Often, when a memo isn’t great, it’s not the writer’s inability to recognize the high standard, but instead a wrong expectation on scope: they mistakenly believe a high-standards, six-page memo can be written in one or two days or even a few hours, when really it might take a week or more! They’re trying to perfect a handstand in just two weeks, and we’re not coaching them right. The great memos are written and re-written, shared with colleagues who are asked to improve the work, set aside for a couple of days, and then edited again with a fresh mind. They simply can’t be done in a day or two. The key point here is that you can improve results through the simple act of teaching scope – that a great memo probably should take a week or more.
-{% endcitationsmarginales %}
+Here’s what we’ve figured out. Often, when a memo isn’t great, it’s not the writer’s inability to recognize the high standard, but instead a wrong expectation on scope: they mistakenly believe a high-standards, six-page memo can be written in one or two days or even a few hours, when really it might take a week or more! They’re trying to perfect a handstand in just two weeks, and we’re not coaching them right. The great memos are written and re-written, shared with colleagues who are asked to improve the work, set aside for a couple of days, and then edited again with a fresh mind. They simply can’t be done in a day or two. The key point here is that you can improve results through the simple act of teaching scope – that a great memo probably should take a week or more.{% endcitationsmarginales %}
 
 Amazon s'est construit sur une culture de l'écrit dans le but de :
 
@@ -55,15 +53,13 @@ Un des documents clé utilisé par Amazon est le mémo à 6 pages.
 
 Dans l'ouvrage *Working Backwards: Insights, Stories, and Secrets from Inside Amazon*, écrit par deux cadres du comité exécutif d'Amazon, ceux-ci révèlent l'influence des travaux d'[Edward Tufte](https://www.teotimepacreau.fr/blog/produire-un-document-print-sans-logiciel-de-traitement-de-texte/#:~:text=d%E2%80%99Edward%20Tufte.%20Ce%20dernier%20a%20th%C3%A9oris%C3%A9%20la%20pr%C3%A9sentation%20d%E2%80%99information%20au%20format%20texte%20pour%20qu%E2%80%99elle%20soit%20le%20plus%20compr%C3%A9hensible%20possible) sur le choix de bannir les diapositives.
 
-{% citationsmarginales "BRYAR Colin, CARR Bill. <a href='https://www.edwardtufte.com/notebook/edward-tufte-presentation-method-caused-jeff-bezos-amazon-aws-to-throw-out-powerpoint/'><em>Working Backwards: Insights, Stories, and Secrets from Inside Amazon</em></a>.  St. Martin's Press, 2021." %}
-Jeff and I often discussed ways to improve the S-Team meetings. After a difficult presentation in early 2004, on a business flight we read and discussed an essay “The Cognitive Style of PowerPoint: Pitching Out Corrupts Within” by Edward Tufte, a Yale professor who is an authority on information visualization. Tufte identified in one sentence our problem:
+{% citationsmarginales "BRYAR Colin, CARR Bill. <a href='https://www.edwardtufte.com/notebook/edward-tufte-presentation-method-caused-jeff-bezos-amazon-aws-to-throw-out-powerpoint/'><em>Working Backwards: Insights, Stories, and Secrets from Inside Amazon</em></a>.  St. Martin's Press, 2021." %}Jeff and I often discussed ways to improve the S-Team meetings. After a difficult presentation in early 2004, on a business flight we read and discussed an essay “The Cognitive Style of PowerPoint: Pitching Out Corrupts Within” by Edward Tufte, a Yale professor who is an authority on information visualization. Tufte identified in one sentence our problem:
 “As analysis becomes more causal, multivariate, comparative, evidence based, and resolution-intense, the more damaging the bullet list becomes.”
 Tufte’s description fit our discussions at the meetings: complex, interconnected, requiring plenty of information to explore. Such analysis is not well served by a progression of slides that makes it difficult to refer one idea to another. The Amazon audience of tightly scheduled, experienced executives was eager to get to the heart of the matter. They would pepper the presenter with questions and push to get to conclusions. Sometimes the questions did not serve to clarify a point or move the presentation along but would instead lead the entire group away from the main argument. Some questions might be premature and would be answered in a later slide. In his essay, Tufte proposed a solution:
 “For serious presentations, replace PowerPoint slides with paper handouts showing words, numbers, data graphics, images together. High-resolution handouts allow viewers to contextualize, compare, narrate, and recast evidence. In contrast, data-thin, forgetful displays tend to make audiences stupid and passive, and also to diminish the credibility of the presenter.”
 Tufte’s wise advice on how to banish PowerPoint:
 “Making this transition in large organizations requires a straightforward executive order: ‘From now on your presentation software is Microsoft Word, not PowerPoint. Get used to it.’
-That is essentially what we did. On June 9, 2004, the members of the S-Team received an email with this subject line: ‘No PowerPoint presentations from now on at S-Team.’ This message was simple, direct, earthshaking: from that day on team members were required to write short narratives [sentences, not bullet lists] describing their ideas, and PowerPoint was banned.
-{% endcitationsmarginales %}
+That is essentially what we did. On June 9, 2004, the members of the S-Team received an email with this subject line: ‘No PowerPoint presentations from now on at S-Team.’ This message was simple, direct, earthshaking: from that day on team members were required to write short narratives [sentences, not bullet lists] describing their ideas, and PowerPoint was banned.{% endcitationsmarginales %}
 
 ## Comment construire le mémo à 6 pages d'Amazon
 
@@ -88,17 +84,17 @@ Pendant la réunion, chaque participant a 20-30 minutes pour lire le document en
 
 Quand la réunion est terminée, il est de la responsabilité de l'auteur de mettre à jour le document et de l'adresser à tous autant de fois que nécessaire.
 
-## Pourquoi cela fonctionne
+## Les avantages de l'approche
 
-1. le format du document : les 6 catégories distinctes permettent aux managers de repérer et creuser les parties qu'ils souhaitent. Adapté aux emplois du temps du top management.
-2. l'intérêt du storytelling : le fait de présenter sous forme narrative plutôt que par bullet points est plus adapté au fonctionnement de notre cerveau. En effet, nous percevons le monde plus facilement via des histoires.
-3. le timing de la réunion : le format timé permet de s'assurer que chaque membre a bien toutes les informations avant de poser des questions contrairement à une présentation en slides où l'on est plus facilement amener à interrompre pour poser des questions.
-4. le processus autour de la rédaction du document : permet de partager une vision commune au sein de l'organisation via le process de ré-écriture et de mise à jour suite au meeting.
-5. le contenu du document : permet de jongler entre metrics et verbatim clients.
+Pourquoi cela fonctionne :
 
-{% citationsmarginales "BEZOS, Jeff. <a href='https://lexfridman.com/jeff-bezos/'><em>Jeff Bezos: Amazon and Blue Origin</em></a>. 2023" %}
-I've noticed when the anecdotes and the metrics disagree, the anecdotes are usually right. That's why it's so important to check that data with your intuition and instincts, and you need to teach that to executives and junior executives.
-{% endcitationsmarginales %}
+1. Le format du document : les 6 catégories distinctes permettent aux managers de repérer et creuser les parties qu'ils souhaitent. Adapté aux emplois du temps du top management.
+2. L'intérêt du storytelling : le fait de présenter sous forme narrative plutôt que par bullet points est plus adapté au fonctionnement de notre cerveau. En effet, nous percevons le monde plus facilement via des histoires.
+3. Le timing de la réunion : le format timé permet de s'assurer que chaque membre a bien toutes les informations avant de poser des questions contrairement à une présentation en slides où l'on est plus facilement amener à interrompre pour poser des questions.
+4. Le processus autour de la rédaction du document : permet de partager une vision commune au sein de l'organisation via le process de ré-écriture et de mise à jour suite au meeting.
+5. Le contenu du document : permet de jongler entre metrics et verbatim clients.
+
+{% citationsmarginales "BEZOS, Jeff. <a href='https://lexfridman.com/jeff-bezos/'><em>Jeff Bezos: Amazon and Blue Origin</em></a>. 2023" %}I've noticed when the anecdotes and the metrics disagree, the anecdotes are usually right. That's why it's so important to check that data with your intuition and instincts, and you need to teach that to executives and junior executives.{% endcitationsmarginales %}
 
 ## Sources
 

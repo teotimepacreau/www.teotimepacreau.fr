@@ -40,9 +40,7 @@ Ces outils fournissent des canvas collaboratifs - des espaces infinis et zoomabl
 
 Les travaux liés à la stratégie, l'organisation ou les approches type "consultant" requièrent de présenter, de façon macro, des concepts abstraits. Il est souvent indispensable de présenter une vue d'ensemble aux commanditaires :
 
-{% citationsmarginales "CRITCHLOW, Tom. <a href='https://newsletter.seomba.com/i/33888235/a-canvas-for-strategy-work'><em>A canva for strategy work</em></a>. Article, 2021" %}
-The language of strategy is about “10,000ft view” or “birds eye view” or “bigger picture”. But which of our digital tools provide this big picture view? Typically, presentations…. except this linear flow of 16x9 rectangles is not the right tool for the job.
-{% endcitationsmarginales %}
+{% citationsmarginales "CRITCHLOW, Tom. <a href='https://newsletter.seomba.com/i/33888235/a-canvas-for-strategy-work'><em>A canva for strategy work</em></a>. Article, 2021" %}The language of strategy is about “10,000ft view” or “birds eye view” or “bigger picture”. But which of our digital tools provide this big picture view? Typically, presentations…. except this linear flow of 16x9 rectangles is not the right tool for the job.{% endcitationsmarginales %}
 
 Typiquement, la solution courante est de présenter un diapo PowerPoint. Cependant, le flow linéaire des slides que l’on connaît tous a un [écueil majeur : il est facile de se laisser happer par la façon dont sont présentées les informations plutôt que sur le fond. Le format invite naturellement à couper l’orateur pour poser des questions durant la présentation alors que la réponse peut-être inclus dans la slide d’après.](https://www.teotimepacreau.fr/blog/amazon-memo-6-pages/#:~:text=meetings%20non-n%C3%A9cessaires-,pourquoi%20powerpoint%20n%E2%80%99est%20pas%20efficace%20en%20reunion%20et%20banni%20par%20amazon,-From%3A%20Bezos%2C%20Jeff). De plus, les slides sont peu adaptées pour présenter une vision macro d'ensemble et montrer les interconnexions. Les slides ne sont donc pas l'outil adapté pour ce type de présentation.
 

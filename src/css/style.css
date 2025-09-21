@@ -1335,9 +1335,7 @@ hr {
   padding: 1rem;
 }
 /*---CV SECTION : COMPETENCES---*/
-li {
-  list-style-position: inside;
-}
+
 .competences-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1585,6 +1583,9 @@ tr {
 
 /*---MEDIA QUERY AFFICHAGE MOBILE---*/
 @media (width < 1000px) {
+  li {
+  list-style-position: inside;
+  }
   /* HAMBURGER MENU */
   #homepage-menu {
     position: unset;

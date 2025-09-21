@@ -24,6 +24,7 @@ eleventyComputed:
 ---
 A mon arrivée chez [Etat'LIN, le laboratoire d'innovation publique de l'Etat en Pays de la Loire](https://www.modernisation.gouv.fr/laboratoires/etatlin), j'ai été intégré à une équipe de designers de service. L'une des premières choses qui m'a frappé est la capacité des designers à donner vie aux idées. Les réflexions s'accompagnent toujours d'une matérialisation sous forme de schéma ou de dessin qui sont ensuite accrochés aux murs pour obtenir une image claire de la situation en un coup d'oeil. Cela a pour effet de rendre tangible les intentions et facilite l'alignement de l'équipe sur une idée.
 Cette manière de procéder peut paraître habituelle pour ceux qui travaillent dans les milieux design. Mais pour moi, venant de métiers de gestion opérationnelle, cela semblait complètement étranger :
+
 - *Comment rendre visible, en un coup d'oeil, des idées et systèmes complexes ?*
 - *Quel outil numérique utiliser pour schématiser sans savoir dessiner ?*
 
@@ -36,17 +37,19 @@ Depuis la pandémie, nous sommes tous devenus habitués aux "tableaux blancs col
 Ces outils fournissent des canvas collaboratifs - des espaces infinis et zoomables pour le travail. Ils sont bien plus que de simples "tableaux blancs virtuels" car ils apportent une nouvelle manière de rendre accessible et tangible le travail lié à la connaissance.
 
 ## Un Canva pour le travail stratégique
+
 Les travaux liés à la stratégie, l'organisation ou les approches type "consultant" requièrent de présenter, de façon macro, des concepts abstraits. Il est souvent indispensable de présenter une vue d'ensemble aux commanditaires :
 
-{% blockquote "Tom Critchlow", "[Extrait d'article](https://newsletter.seomba.com/i/33888235/a-canvas-for-strategy-work)" %}
+{% citationsmarginales "CRITCHLOW, Tom. <a href='https://newsletter.seomba.com/i/33888235/a-canvas-for-strategy-work'><em>A canva for strategy work</em></a>. Article, 2021" %}
 The language of strategy is about “10,000ft view” or “birds eye view” or “bigger picture”. But which of our digital tools provide this big picture view? Typically, presentations…. except this linear flow of 16x9 rectangles is not the right tool for the job.
-{% endblockquote %}
+{% endcitationsmarginales %}
 
 Typiquement, la solution courante est de présenter un diapo PowerPoint. Cependant, le flow linéaire des slides que l’on connaît tous a un [écueil majeur : il est facile de se laisser happer par la façon dont sont présentées les informations plutôt que sur le fond. Le format invite naturellement à couper l’orateur pour poser des questions durant la présentation alors que la réponse peut-être inclus dans la slide d’après.](https://www.teotimepacreau.fr/blog/amazon-memo-6-pages/#:~:text=meetings%20non-n%C3%A9cessaires-,pourquoi%20powerpoint%20n%E2%80%99est%20pas%20efficace%20en%20reunion%20et%20banni%20par%20amazon,-From%3A%20Bezos%2C%20Jeff). De plus, les slides sont peu adaptées pour présenter une vision macro d'ensemble et montrer les interconnexions. Les slides ne sont donc pas l'outil adapté pour ce type de présentation.
 
 Figma est idéal pour présenter du contenu en vue "big picture" (en affichant tous les éléments sur la page de façon dézoomée) et permet d'aller profondément dans le détail via le zoom infini. L'outil permet de faire facilement des allers et retours entre les morceaux de contenu que l'on souhaite présenter. Cette expérience zoomable permet d'obtenir la "big picture" requise pour le travail stratégique, pour présenter les points clés, systèmes, modèles...
 
 ### Le changement fondamental apporté dans l'échange de feedback
+
 Une grande partie du travail de consultant nécessite des allers et retours avec le commanditaire pour affiner le travail fourni via des observations. Les blocs de commentaires des éditeurs de texte type Word sont souvent utilisés pour y répondre : on sélectionne une portion de texte et l'on adjoint un commentaire. Est-ce réellement efficace ? Il y a besoin d'allers-retours du document qui font perdre du temps quand on n'utilise pas d'éditeur de texte collaboratif type Google Docs. Et comment faire quand j'ai non pas une observation textuelle à ajouter mais un autre document vers lequel pointer ? Lier des concepts entre eux ?
 
 ![Capture d'écran de l'interface de commentaires Word](/img/commentaires_word.png "L'interface de commentaires Word")
@@ -58,6 +61,7 @@ Figma change totalement l'approche traditionnelle d'échange de feedback en perm
 ### Exemple pratique
 Il m'a été demandé de faire le bilan de la réorganisation à l'oeuvre depuis une année d'une direction de la DREAL (Direction Régionale de l’Environnement, de l’Aménagement et du Logement) composé d'une vingtaine de collaborateurs.
 Après avoir questionné et qualifié la commande avec le commanditaire, nous avons convenu que le besoin exprimé était de :
+
 - caractériser les évolutions introduites par la réorganisation avec les managers et d'esquisser des premières pistes d'actions correctrices.
 - récolter l'expression et le ressenti de l'ensemble des agents du service au sujet de la réorganisation, envisager des pistes d'amélioration puis prioriser les actions à engager.
 
@@ -72,4 +76,5 @@ Pour adapter les outils et créer les supports manquants, j'utilise Figma. Lors 
 La restitution des ateliers est facilement intégrable et permet d'avoir un livrable prêt à être remis.
 
 ## Sources
-<https://buttondown.com/figmathinkers/archive/figma-thingers-week-7-the-war-of-artboards/>
+
+<https://buttondown.com/figmathinkers/archive figma-thingers-week-7-the-war-of-artboards/>

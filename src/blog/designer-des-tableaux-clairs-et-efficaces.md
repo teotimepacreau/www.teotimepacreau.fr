@@ -35,9 +35,7 @@ Avant de choisir une forme praticulière, il est nécessaire de raisonner en ter
 
 [Charlie Munger](https://fr.wikipedia.org/wiki/Charlie_Munger?useskin=vector), le bras droit de Warren Buffet chez Berkshire Hathaway, a passé de nombreuses années à s'intéresser à l'encrage des idées mathématiques dans les système biologiques et psychologiques, il explique que *les graphiques assemblent les nombres dans une forme qui ressemble au *mouvement*. Cette représentation du mouvement nous accroche en faisant appel à nos sens primaires*.
 
-{% citationsmarginales "MUNGER, Charlie. <a href="https://www.stripe.press/poor-charlies-almanack/talk-three?progress=14.48%"><em>Poor Charlie’s Almanack
-The Essential Wit and Wisdom
-of Charles T. Munger. Talk 3 : A Lesson on Elementary, Worldly Wisdom as It Relates to Investment Management and Business, Revisited</em></a>.Stripe Press, 2023" %}
+{% citationsmarginales "MUNGER, Charlie. <a href='https://www.stripe.press/poor-charlies-almanack/talk-three?progress=14.48%'><em>Poor Charlie’s Almanack The Essential Wit and Wisdom of Charles T. Munger. Talk 3 : A Lesson on Elementary, Worldly Wisdom as It Relates to Investment Management and Business, Revisited</em></a>.Stripe Press, 2023" %}
 At any rate, mankind invented a system to cope with the fact that we are so intrinsically lousy at manipulating numbers. It’s called the graph. Oddly enough, it came out of the Middle Ages. It’s the only intellectual invention of the monks during the Middle Ages. I know of that’s worth a damn. The graph puts numbers in a form that looks like motion. So it’s using some of this primitive neural stuff in your system in a way that helps you understand it.
 {% endcitationsmarginales %}
 
@@ -112,7 +110,6 @@ Au sujet des tableaux, Eward Tufte donne [quatre principes](https://www.nas.nasa
 - Maximize the data-ink ratio.
 - Erase non-data-ink.
 - Erase redundant data-ink.
-
 
 ## Construire des `<table>` lisibles et clairs en HTML CSS
 

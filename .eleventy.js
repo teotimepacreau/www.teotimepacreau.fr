@@ -24,31 +24,6 @@ export default function(eleventyConfig) {
   //  SHORTCODE MISE EN FORME BLOC DE CODES
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  //SHORTCODE POUR COMPOSANT "CITATIONS"
-  eleventyConfig.addPairedShortcode(
-    "blockquote",
-    function (content, author, source) {
-      let markup = `
-  <figure class="figure-blockquote">
-    <blockquote>
-      ${content}
-    </blockquote>
-    <figcaption class="figcaption-blockquote-cite">
-      ${author}`;
-
-      // Check if source is provided (not undefined)
-      if (source) {
-        markup += ` - <cite>${source}</cite>`;
-      }
-
-      markup += `
-    </figcaption>
-  </figure>`;
-
-      return markup;
-    }
-  );
-
   //SHORTCODE POUR COMPOSANT "CITATIONS MARGINALES"
   eleventyConfig.addPairedShortcode(
     "citationsmarginales",
@@ -206,6 +181,7 @@ export default function(eleventyConfig) {
       output: "_site",
     },
     templateFormats: ["md", "njk", "html"],
+    //Markdown files run through this template engine before transforming to HTML
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
   };

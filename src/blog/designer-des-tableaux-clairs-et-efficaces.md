@@ -31,9 +31,9 @@ Pourtant on rencontre très, *trop* fréquemment des tableaux qui rendent l'info
 
 ## Tableau ou graphique, quelle forme pour quel usage ?
 
-En terme d'usage, les tableaux sont plus adaptés pour présenter des valeurs, les comparer ou présenter des unités de mesure multiples.
+Avant de choisir une forme praticulière, il est nécessaire de raisonner en terme d'usage. Les tableaux sont plus adaptés pour présenter des valeurs, les comparer ou présenter des unités de mesure multiples. A contrario, les graphiques, sont plus adaptés pour démontrer les tendances, anomalies et relations. 
 
-A contrario, les graphiques, sont plus adaptés pour démontrer les tendances, anomalies et relations. [Charlie Munger](https://fr.wikipedia.org/wiki/Charlie_Munger?useskin=vector), le bras droit de Warren Buffet chez Berkshire Hathaway, a passé de nombreuses années à s'intéresser à l'encrage des idées mathématiques dans les système biologiques et psychologiques, il explique que *les graphiques assemblent les nombres dans une forme qui ressemble au *mouvement*. Cette représentation du mouvement nous accroche en faisant appel à nos sens primaires*.
+[Charlie Munger](https://fr.wikipedia.org/wiki/Charlie_Munger?useskin=vector), le bras droit de Warren Buffet chez Berkshire Hathaway, a passé de nombreuses années à s'intéresser à l'encrage des idées mathématiques dans les système biologiques et psychologiques, il explique que *les graphiques assemblent les nombres dans une forme qui ressemble au *mouvement*. Cette représentation du mouvement nous accroche en faisant appel à nos sens primaires*.
 
 {% citationsmarginales "MUNGER, Charlie. <a href="https://www.stripe.press/poor-charlies-almanack/talk-three?progress=14.48%"><em>Poor Charlie’s Almanack
 The Essential Wit and Wisdom
@@ -41,42 +41,31 @@ of Charles T. Munger. Talk 3 : A Lesson on Elementary, Worldly Wisdom as It Rela
 At any rate, mankind invented a system to cope with the fact that we are so intrinsically lousy at manipulating numbers. It’s called the graph. Oddly enough, it came out of the Middle Ages. It’s the only intellectual invention of the monks during the Middle Ages. I know of that’s worth a damn. The graph puts numbers in a form that looks like motion. So it’s using some of this primitive neural stuff in your system in a way that helps you understand it.
 {% endcitationsmarginales %}
 
-[*Les graphiques montrent la forêt là où des tableaux montre les arbres*.](https://simplexct.com/data-ink-ratio-tables#:~:text=In%20other%20words%2C%20graphs%20show%20the%20forest%20while%20tables%20show%20the%20trees.)
+*[Les graphiques montrent la forêt là où des tableaux montre les arbres](https://simplexct.com/data-ink-ratio-tables#:~:text=In%20other%20words%2C%20graphs%20show%20the%20forest%20while%20tables%20show%20the%20trees.)*.
 
 Pour tous les sujets de visualisation de l'information, [Edward Tufte](https://www.edwardtufte.com/notebook/table-and-timetable-design-and-typography/) est l'auteur de référence. Il a établi un véritable standard de [mise en page des documents](https://edwardtufte.github.io/tufte-css/) et a proposé des travaux de recherche avancée à propos des techniques de *datavisualisation*.
 
-Dans sa thèse, Edward Tufte évoque le choix entre tableau et graphique :
+Dans sa thèse ["The visual display of quantitative information"](https://ia800408.us.archive.org/15/items/tufte_visual_display_of_quantitative_information_low-res/tufte_visual_display_of_quantitative_information_low-res_text.pdf), Edward Tufte évoque l'histoire et l'intérêt des graphiques :
 
-Tbe two great inventors of modern graphical designs were J. H.
-Layra Tilling, “Early Experimental
-Graphs,” British Journal for the History
-Lambert (1728-1777), a Swiss-German scientist and mathematician,
-of Science, 8 (1975), 193-213.
-and William Playfair (1759-1823), a Scottish political economist.!9
-The first known time-series using economic data was published in
+William Playfair (1759-1823), a Scottish political economist made the first known time-series using economic data. It was published in
 Playfair's remarkable book, The Commercial and Political Atlas (Lon-
-don, 1786). Note the graphical arithmetic, which shows the shift-
-ing balance of trade by the difference between the import and
-export time-series. Playfair contrasted his new graphical method
+don, 1786). Playfair contrasted his new graphical method
 with the tabular presentation of data:
-Information, that is imperfectly acquired, is generally as imper-
+"Information [...] is generally imper-
 fectly retained; and a man who has carefully investigated a
 printed table, finds, when done, that he has only a very faint
 and partial idea of what he has read; and that like a figure
-imprinted on sand, is soon totally erased and defaced. The
-amount of mercantile transactions in money, and of profit or
-loss, are capable of being as easily represented in drawing, as
-any part of space, or as the face of a country; though, till now,
-it has not been attempted. Upon that Sec these Charts
+imprinted on sand, is soon totally erased and defaced. Upon that these Charts
 were made; and, while they give a simple and distinct idea,
 they are as near perfect accuracy as is any way useful. On
 inspecting any one of these Charts attentively, a sufficiently
 distinct impression will be made, to remain unimpaired for a
 considerable time, and the idea which does remain will be
-simple and complete, at once including the duration and the
-amount. [pages 3-4]
+simple and complete."
 For Playfair, graphics were preferable to tables because graphics
 showed the shape of the data in a comparative perspective.
+
+![Graphique de tous les imports et exports d'Angleterre de 1700 à 1782, représentant en ordonnée les millions de marchandises et le temps en abscisse. Le graphique est fait à la main via un quadrillage.](/img/premier_graphique.png "Premier graphique à avoir été largement diffusé, détaillant tous les imports et exports d'Angleterre de 1700 à 1782")
 
 ## Règles générales de mise en forme d'un tableau
 
@@ -205,8 +194,10 @@ Pour éviter que le tableau soit trop grand pour le dimensionnement qui lui est 
 
 #### Rendre les étiquettes de colonne ou un volet du tableau "sticky"
 
-## Sources 
+## Sources
 
-https://simplexct.com/data-ink-ratio-tables
+<https://simplexct.com/data-ink-ratio-tables>
 
-https://piccalil.li/blog/styling-tables-the-modern-css-way/
+<https://www.darkhorseanalytics.com/blog/>
+
+<https://piccalil.li/blog/styling-tables-the-modern-css-way/>

@@ -1318,6 +1318,7 @@ hr {
   padding-top: calc(0.5 * var(--rythme));
   transition: all .2s ease-out;
 }
+
 .diplome-desc:hover {
   background-color: var(--accent);
   color: var(--bg);
@@ -1619,12 +1620,10 @@ tr {
     /*POPOVER IN EXIT STATE */
     opacity: 0;
     transform: translateX(-30vw);
-    
     &:popover-open {
     /*POPOVER IN OPEN STATE*/
     opacity: 1;
     transform: none;
-
       /*POPOVER BEFORE THE OPENING*/
       @starting-style {
         opacity: 0;

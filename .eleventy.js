@@ -27,22 +27,18 @@ export default function(eleventyConfig) {
   //SHORTCODE POUR COMPOSANT "CITATIONS MARGINALES"
   eleventyConfig.addPairedShortcode(
     "citationsmarginales",
-    function (content, source) {
+    function (content, source, lang) {
      if (content && source) { 
       let markup = `
     <blockquote class="citation-calling-sidenote">
-      <p>
-        ${content}
-      </p>
-      <sup class="sidenote-caller-counter">
-      </sup>
+      <p lang="${lang}">${content}</p><sup class="sidenote-caller-counter"></sup>
       <span class="sidenote"><p>${source}</p></span>
     </blockquote>
     `;
       return markup;
      } else {
       let markup = `
-      <span class='lettrage-superieur'>
+      <span class='conteneur-citation-dans-texte'>
         <sup>
         </sup>
         <span class="sidenote">${source}</span>

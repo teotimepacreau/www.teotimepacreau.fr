@@ -2,16 +2,19 @@ article {
   counter-reset: sidenote-counter;
 }
 
+/*----citations en bloc-----*/
 blockquote sup.sidenote-caller-counter {
   position: relative;
+  display: inline-block;
+  width: 1ch;
+  height: 1ch;
   &::after {
     /* Compteur automatique */
     position: absolute;
-    display: inline;
     counter-increment: sidenote-counter;
     content: counter(sidenote-counter);
-    top: -0.2rem;
-    left: -0.4rem;
+    left: .5ch;
+    top: -.65ch;
     font-size: calc(0.75 * var(--step--2));
   }
 }
@@ -41,6 +44,9 @@ span.sidenote {
   background-color: var(--bglighten20);
   border-left: 2px solid var(--txt);
   text-indent: 1ex;
+  & sup, sup::after{
+    text-indent: 0;
+  }
   & > p {
     display: inline;
     &::before {
@@ -62,19 +68,21 @@ span.sidenote {
   }
 }
 
-/* lettrage supérieur */
-.lettrage-superieur {
-  display: inline;
+
+/*----citations dans le texte-----*/
+span.conteneur-citation-dans-texte {
   & sup {
+    display: inline-block;
+    width: 1ch;
+    height: 1ch;
     position: relative;
     &::after {
       /* Compteur automatique */
       position: absolute;
-      display: inline;
       counter-increment: sidenote-counter;
       content: counter(sidenote-counter);
-      left: -.05rem;
-      top: -0.2rem;
+      left: -.3ch;
+      top: -.65ch;
       font-size: calc(0.75 * var(--step--2));
     }
   }
@@ -90,7 +98,7 @@ span.sidenote {
     width: unset;
     margin-top: var(--rythme);
   }
-  .lettrage-superieur{
+  span.conteneur-citation-dans-texte {
   & .sidenote {
     display: none;
     margin: 1rem 2.5%;

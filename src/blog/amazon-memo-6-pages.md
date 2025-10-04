@@ -94,7 +94,7 @@ Pourquoi cela fonctionne :
 4. Le processus autour de la rédaction du document : permet de partager une vision commune au sein de l'organisation via le process de ré-écriture et de mise à jour suite au meeting.
 5. Le contenu du document : permet de jongler entre metrics et verbatim clients.
 
-{% citationsmarginales "BEZOS, Jeff. <a href='https://lexfridman.com/jeff-bezos/'><em>Jeff Bezos: Amazon and Blue Origin</em></a>. 2023" %}I've noticed when the anecdotes and the metrics disagree, the anecdotes are usually right. That's why it's so important to check that data with your intuition and instincts, and you need to teach that to executives and junior executives.{% endcitationsmarginales %}
+{% citationsmarginales "BEZOS, Jeff. <a href='https://lexfridman.com/jeff-bezos/'><em>Jeff Bezos: Amazon and Blue Origin</em></a>. 2023", "en" %}I've noticed when the anecdotes and the metrics disagree, the anecdotes are usually right. That's why it's so important to check that data with your intuition and instincts, and you need to teach that to executives and junior executives.{% endcitationsmarginales %}
 
 ## Sources
 

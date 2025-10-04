@@ -92,7 +92,7 @@ h3,
 dt,
 figcaption {
   text-wrap: balance;
-  max-inline-size: 25ch;
+  max-inline-size: 25ex;
 }
 
 p,
@@ -133,7 +133,7 @@ hr {
 *:focus-visible {
   transition: outline 0.2s ease;
   outline: 4px solid;
-  outline-offset: 0.3ch;
+  outline-offset: 0.3ex;
 }
 
 /* button:focus-visible {
@@ -196,7 +196,7 @@ input {
   width: clamp(80px, 50%, 180px);
   border: 0;
   display: flex;
-  gap: 2ch;
+  gap: 2ex;
   align-items: center;
   justify-content: space-around;
   padding: 0.7rem;
@@ -208,7 +208,7 @@ input {
 .color-select-group {
   display: flex;
   align-items: center;
-  gap: 1ch;
+  gap: 1ex;
 }
 .color-picker input[type="radio"]:checked {
   background-color: var(--radio-color);
@@ -253,51 +253,40 @@ input {
 }
 
 /*----TYPO------*/
-h1 {
+h1, h2, h3 {
   font-family: BricolageGrotesque, sans-serif;
+}
+
+h1 {
   font-variation-settings: "opsz" 24, "wght" 800, "wdth" 100;
   font-size: var(--step-3);
   letter-spacing: -0.05rem;
 }
+
 h2 {
-  font-family: BricolageGrotesque, sans-serif;
   font-size: var(--step-2);
-  color: var(--accent);
-}
-
-h2::after {
-  content: " #" / "";
-  font-style: italic;
-  transition: all 0.2s ease-out;
-  opacity: 0; /* Start with opacity 0 to hide it */
-}
-
-h2:hover::after {
-  opacity: 1; /* Change opacity to 1 on hover */
+  &::after{
+    content: " #" / "";
+  }
 }
 
 h3 {
-  font-family: BricolageGrotesque, system, sans-serif;
   font-size: var(--step-1);
-}
-
-h3::after {
+  &::after {
   content: " ##" / "";
-  font-style: italic;
-  transition: all 0.2s ease-out;
-  opacity: 0; /* Start with opacity 0 to hide it */
+  }
 }
 
-h3:hover::after {
-  opacity: 1; /* Change opacity to 1 on hover */
-}
-
-h4 {
-  font-size: var(--step--1);
-}
-
-h5{
-  font-size: var(--step--2);
+h2, h3 {
+  color: var(--accent);
+  &::after {
+    font-style: italic;
+    transition: all 0.2s ease-out;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 em {
@@ -1623,8 +1612,6 @@ tr {
     width: 60dvw;
     padding: calc(3 * var(--rythme)) var(--rythme);
     border: none;
-    content-visibility: auto;
-    contain-intrinsic-size: 100vh 60dvw;
     background-color: hsla(0, 0%, 42%, 0.3);
     backdrop-filter: blur(45px);
     transition: transform .1s ease-out, opacity .1s ease-out, display .1s ease-out, overlay .1s ease-out;

@@ -1,9 +1,32 @@
+/* --- Documentation de la conception des sidenotes
+
+On distingue deux types de notes marginales :
+1. Celles associées à un <blockquote>
+2. Celles associées à une expression inline (dans un paragraphe)
+
+Pour aligner la note marginale avec l’appel de note (le chiffre en exposant dans le texte),
+on utilise un <span> qui sert de conteneur inline de contexte appelant.
+
+Les éléments internes de la note marginale doivent rester de type inline (<span>)
+et non block (<p>, <div>, etc.), car un élément de type bloc casserait le flux du texte
+dans lequel se trouve l’appel de note. C’est pourquoi la note est entièrement construite
+avec des <span>.
+
+Le positionnement des notes marginales repose sur la propriété float :
+la note est flottée à la fin de la ligne (float: inline-end) par rapport plus proche parent de type "bloc". Or, selon le type de note marginale, ce bloc parent diffère :
+- pour une note dans un paragraphe, le float s’ancre sur le paragraphe ;
+- pour une note associée à un blockquote, le float s’ancre sur le blockquote lui-même.
+
+Ce comportement entraîne un léger décalage horizontal entre les notes marginales
+des blockquotes et celles insérées dans le corps du texte.
+
+--- */
+
 article {
   counter-reset: sidenote-counter;
 }
 
-/*----citations en bloc-----*/
-blockquote sup.sidenote-caller-counter {
+sup.sidenote-caller {
   position: relative;
   display: inline-block;
   width: 1ch;
@@ -13,8 +36,8 @@ blockquote sup.sidenote-caller-counter {
     position: absolute;
     counter-increment: sidenote-counter;
     content: counter(sidenote-counter);
-    left: .5ch;
-    top: -.65ch;
+    left: .1ch;
+    top: -.9ch;
     font-size: calc(0.75 * var(--step--2));
   }
 }
@@ -24,22 +47,20 @@ span.sidenote {
   margin-right: -80%;
   width: 60%;
   position: relative;
+  text-indent: 1ex;
   &::before {
     /* Compteur automatique */
     content: counter(sidenote-counter);
     position: absolute;
     display: inline;
-    top: -0.2rem;
-    left: -2ex;
+    left: -2ch;
+    top: -.65ch;
     font-size: calc(0.75 * var(--step--2));
   }
 }
 
-/* style de la citation */
-.citation-calling-sidenote {
-  display: block !important;
-  margin-block: unset;
-  margin-top: calc(0.5 * var(--rythme));
+blockquote {
+  box-sizing: content-box;
   padding: calc(0.25 * var(--rythme));
   background-color: var(--bglighten20);
   border-left: 2px solid var(--txt);
@@ -69,45 +90,22 @@ span.sidenote {
 }
 
 
-/*----citations dans le texte-----*/
-span.conteneur-citation-dans-texte {
-  & sup {
-    display: inline-block;
-    width: 1ch;
-    height: 1ch;
-    position: relative;
-    &::after {
-      /* Compteur automatique */
-      position: absolute;
-      counter-increment: sidenote-counter;
-      content: counter(sidenote-counter);
-      left: -.3ch;
-      top: -.65ch;
-      font-size: calc(0.75 * var(--step--2));
-    }
-  }
-}
 
 
 /* format mobile */
 @media (width < 1000px) {
   span.sidenote {
+    display: none;
     float: unset;
-    display: block;
     margin-right: unset;
     width: unset;
     margin-top: var(--rythme);
-  }
-  span.conteneur-citation-dans-texte {
-  & .sidenote {
-    display: none;
     margin: 1rem 2.5%;
     font-size: var(--step--1);
     text-decoration: underline dotted;
   }
-  & sup::after {
+  sup.sidenote-caller::after {
     cursor: pointer;
     text-decoration: underline solid var(--txt);
   }
-}
 }

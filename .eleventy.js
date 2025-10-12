@@ -30,20 +30,23 @@ export default function(eleventyConfig) {
     function (content, source, lang) {
      if (content && source) { 
       let markup = `
-    <blockquote class="citation-calling-sidenote">
-      <p lang="${lang}">${content}</p><sup class="sidenote-caller-counter"></sup>
-      <span class="sidenote"><p>${source}</p></span>
+    <blockquote>
+      <p lang="${lang}">${content}</p>
+      <span class='conteneur-citation-dans-texte'>
+        <sup class="sidenote-caller">
+        </sup>
+        <span class="sidenote">${source}</span>
+      </span>
     </blockquote>
     `;
       return markup;
      } else {
       let markup = `
       <span class='conteneur-citation-dans-texte'>
-        <sup>
+        <sup class="sidenote-caller">
         </sup>
         <span class="sidenote">${source}</span>
       </span>
-
       `;
         return markup;
      }

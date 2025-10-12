@@ -92,7 +92,7 @@ h3,
 dt,
 figcaption {
   text-wrap: balance;
-  max-inline-size: 25ex;
+  max-inline-size: 25ch;
 }
 
 p,
@@ -279,13 +279,13 @@ h3 {
 
 h2, h3 {
   color: var(--accent);
+  &:hover::after {
+      opacity: 1;
+    }
   &::after {
     font-style: italic;
     transition: all 0.2s ease-out;
     opacity: 0;
-    &:hover {
-      opacity: 1;
-    }
   }
 }
 
@@ -300,6 +300,11 @@ li {
 
 main a::after {
   content: "↗" / "";
+}
+
+abbr {
+  text-decoration: underline dotted;
+  text-underline-offset: .3ex;
 }
 
 /*---LINKS---*/

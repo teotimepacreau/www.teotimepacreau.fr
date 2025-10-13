@@ -15,7 +15,7 @@ pageId: "blogpost"
           {% include "mobilenav.html"%}
           {% include "navigation.njk" %}
         </header>
-        <aside>{{ content | toc | safe }}</aside>
+        {{ content | toc | safe }}
         <main class="post-main">
           <article id="post">
             <header>

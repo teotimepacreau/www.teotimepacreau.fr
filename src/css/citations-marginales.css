@@ -42,7 +42,8 @@ sup.sidenote-caller {
   }
 }
 
-span.sidenote {
+small.sidenote {
+  font-size: unset;
   float: inline-end;
   margin-right: -80%;
   width: 60%;
@@ -94,7 +95,7 @@ blockquote {
 
 /* format mobile */
 @media (width < 1000px) {
-  span.sidenote {
+  small.sidenote {
     display: none;
     float: unset;
     margin-right: unset;

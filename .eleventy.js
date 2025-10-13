@@ -35,7 +35,7 @@ export default function(eleventyConfig) {
       <span class='conteneur-citation-dans-texte'>
         <sup class="sidenote-caller">
         </sup>
-        <span class="sidenote">${source}</span>
+        <small role="note" class="sidenote">${source}</small>
       </span>
     </blockquote>
     `;
@@ -45,7 +45,7 @@ export default function(eleventyConfig) {
       <span class='conteneur-citation-dans-texte'>
         <sup class="sidenote-caller">
         </sup>
-        <span class="sidenote">${source}</span>
+        <small role="note" class="sidenote">${source}</small>
       </span>
       `;
         return markup;

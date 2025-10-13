@@ -937,11 +937,11 @@ a:hover {
   grid-row: 1 / 4;
 }
 
-.post-grid > aside {
+.post-grid > nav {
   grid-column: 1 / 2;
 }
 
-.post-grid > header, .post-grid > aside {
+.post-grid > header, .post-grid > nav {
   max-width: 15dvw;
 }
 
@@ -1070,10 +1070,15 @@ article > p > a:hover {
 }
 
 /*TOC*/
-.table-of-content li{
+.table-of-content {
   font-size: var(--step--2);
-}
-.table-of-content::before {
+  & ol {
+    list-style-type: none;
+  }
+  & a {
+    text-decoration: none;
+  }
+  &::before {
   font-size: var(--step--2);
   content: "Table de contenu ↓" / "Table de contenu";
   margin-top: calc(2 * var(--rythme));
@@ -1085,29 +1090,26 @@ article > p > a:hover {
   padding-block: calc(0.25 * var(--rythme));
   border-radius: var(--border-radius);
   font-weight: 600;
-}
-
-.table-of-content > ol > li > ol {
+  }
+  & > ol > li + li {
+  margin-top: calc(0.5 * var(--rythme));
+  }
+  & > ol > li > ol {
   text-indent: 1rem;
   padding-top: calc(0.25 * (var(--rythme)));
   font-weight: 300;
+    & > li > ol {
+      font-size: smaller;
+    }
+  }
 }
+  
 
-.table-of-content > ol > li > ol > li > a {
-  text-decoration: none;
-}
+.table-of-content 
 
-.table-of-content > ol > li > ol > li::marker {
-  content: "→ ";
-}
 
-.table-of-content > ol > li + li {
-  margin-top: calc(0.5 * var(--rythme));
-}
+.table-of-content 
 
-.table-of-content a {
-  color: var(--txt);
-}
 
 /*---TAG PAGE---*/
 #tags-page {

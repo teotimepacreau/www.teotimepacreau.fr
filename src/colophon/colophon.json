@@ -101,6 +101,13 @@
                 "_type": "rss"
             },
             {
+                "_title": "Chris",
+                "_text": "Chris",
+                "_xmlUrl": "https://thoughts.uncountable.uk/rss-feed/",
+                "_htmlUrl": "https://thoughts.uncountable.uk/",
+                "_type": "rss"
+            },
+            {
                 "_title": "Chris Coyier",
                 "_text": "Chris Coyier",
                 "_xmlUrl": "https://chriscoyier.net/feed/",
@@ -319,10 +326,10 @@
             },
             
             {
-                "_title": "Koos Looijesteijn - Everything",
+                "_title": "Koos Looijesteijn",
                 "_text": "Koos Looijesteijn - Everything",
                 "_xmlUrl": "https://www.kooslooijesteijn.net/feed.xml",
-                "_htmlUrl": "https://www.kooslooijesteijn.net?pk_campaign=rss",
+                "_htmlUrl": "https://www.kooslooijesteijn.net",
                 "_type": "rss"
             },
             {
@@ -336,7 +343,7 @@
                 "_title": "Lea Verou",
                 "_text": "Lea Verou",
                 "_xmlUrl": "http://feeds2.feedburner.com/leaverou",
-                "_htmlUrl": "https://lea.verou.me/feed.xml",
+                "_htmlUrl": "https://lea.verou.me/",
                 "_type": "rss"
             },
             
@@ -348,21 +355,6 @@
                 "_type": "rss"
             },
             {
-                "_title": "Louis Derrac",
-                "_text": "Louis Derrac",
-                "_xmlUrl": "https://louisderrac.com/",
-                "_htmlUrl": "https://louisderrac.com/",
-                "_type": "rss"
-            },
-            
-            {
-                "_title": "Mark Thomas Miller",
-                "_text": "Mark Thomas Miller",
-                "_xmlUrl": "https://api.feedless.org/stream/bucket/93e8f3be-8b04-4d71-a176-bf4ff826e32b/atom",
-                "_htmlUrl": "https://api.feedless.org/bucket:93e8f3be-8b04-4d71-a176-bf4ff826e32b",
-                "_type": "rss"
-            },
-            {
                 "_title": "Matt Fantinel",
                 "_text": "Matt Fantinel",
                 "_xmlUrl": "https://fantinel.dev/rss.xml",
@@ -370,17 +362,17 @@
                 "_type": "rss"
             },
             {
-                "_title": "Matthias Ott – User Experience Designer",
+                "_title": "Matthias Ott",
                 "_text": "Matthias Ott – User Experience Designer",
                 "_xmlUrl": "https://matthiasott.com/rss",
-                "_htmlUrl": "https://matthiasott.com/rss",
+                "_htmlUrl": "https://matthiasott.com/",
                 "_type": "rss"
             },
             {
                 "_title": "Max Böck",
                 "_text": "Max Böck",
                 "_xmlUrl": "https://mxb.dev/feed.xml",
-                "_htmlUrl": "https://mxb.dev/feed.xml",
+                "_htmlUrl": "https://mxb.dev/",
                 "_type": "rss"
             },
             {
@@ -436,7 +428,7 @@
                 "_title": "OddBird",
                 "_text": "OddBird",
                 "_xmlUrl": "https://www.oddbird.net/feed.atom",
-                "_htmlUrl": "https://www.oddbird.net/feed.atom",
+                "_htmlUrl": "https://www.oddbird.net/",
                 "_type": "rss"
             },
             {
@@ -450,7 +442,7 @@
                 "_title": "Piccalilli",
                 "_text": "Piccalilli",
                 "_xmlUrl": "https://piccalil.li/feed.xml",
-                "_htmlUrl": "https://piccalil.li/feed.xml",
+                "_htmlUrl": "https://piccalil.li/",
                 "_type": "rss"
             },
             {
@@ -468,17 +460,10 @@
                 "_type": "rss"
             },
             {
-                "_title": "Robb Knight • Posts • RSS Feed",
+                "_title": "Robb Knight",
                 "_text": "Robb Knight • Posts • RSS Feed",
                 "_xmlUrl": "https://rknight.me/subscribe/posts/rss.xml",
                 "_htmlUrl": "https://rknight.me",
-                "_type": "rss"
-            },
-            {
-                "_title": "Robb Owen Digital",
-                "_text": "Robb Owen Digital",
-                "_xmlUrl": "https://robbowen.digital/feed.xml",
-                "_htmlUrl": "http://robbowen.digital/",
                 "_type": "rss"
             },
             {
@@ -512,7 +497,7 @@
             },
             
             {
-                "_title": "Sara Soueidan – Blog",
+                "_title": "Sara Soueidan",
                 "_text": "Sara Soueidan – Blog",
                 "_xmlUrl": "https://www.sarasoueidan.com/blog/index.xml",
                 "_htmlUrl": "https://sarasoueidan.com/",
@@ -526,24 +511,31 @@
                 "_type": "rss"
             },
             {
-                "_title": "Sia Karamalegos, Web Performance",
+                "_title": "Sia Karamalegos",
                 "_text": "Sia Karamalegos, Web Performance",
                 "_xmlUrl": "https://sia.codes/feed/feed.xml",
-                "_htmlUrl": "https://sia.codes/feed/feed.xml",
+                "_htmlUrl": "https://sia.codes/",
                 "_type": "rss"
             },
             {
                 "_title": "Stephanie Eckles",
                 "_text": "Stephanie Eckles",
                 "_xmlUrl": "https://thinkdobecreate.com/feed/",
-                "_htmlUrl": "https://thinkdobecreate.com/feed/",
+                "_htmlUrl": "https://thinkdobecreate.com",
+                "_type": "rss"
+            },
+            {
+                "_title": "Tam Kien Duong",
+                "_text": "Tam Kien Duong",
+                "_xmlUrl": "https://11d.im/feed.xml",
+                "_htmlUrl": "https://11d.im/",
                 "_type": "rss"
             },
             {
                 "_title": "Tatiana Mac",
                 "_text": "Tatiana Mac",
                 "_xmlUrl": "https://tatianamac.com/feed/feed.xml",
-                "_htmlUrl": "https://tatianamac.com/feed/feed.xml",
+                "_htmlUrl": "https://tatianamac.com/",
                 "_type": "rss"
             },
             {
@@ -554,7 +546,7 @@
                 "_type": "rss"
             },
             {
-                "_title": "Thomas Michael Semmler - helloyes.dev",
+                "_title": "Thomas Michael Semmler",
                 "_text": "Thomas Michael Semmler - helloyes.dev",
                 "_xmlUrl": "https://helloyes.dev/feeds/blog/feed.json",
                 "_htmlUrl": "https://helloyes.dev",
@@ -592,7 +584,7 @@
                 "_title": "ulfschneider.io",
                 "_text": "ulfschneider.io",
                 "_xmlUrl": "https://ulfschneider.io/feed.xml",
-                "_htmlUrl": "https://ulfschneider.io/feed.xml",
+                "_htmlUrl": "https://ulfschneider.io/",
                 "_type": "rss"
             },
             {
@@ -606,35 +598,21 @@
                 "_title": "Vadim Makeev",
                 "_text": "Vadim Makeev",
                 "_xmlUrl": "https://pepelsbey.dev/feed/",
-                "_htmlUrl": "https://pepelsbey.dev/feed/",
+                "_htmlUrl": "https://pepelsbey.dev/",
                 "_type": "rss"
             },
             {
-                "_title": "Web development blog - Manuel Matuzović",
+                "_title": "Manuel Matuzović",
                 "_text": "Web development blog - Manuel Matuzović",
-                "_xmlUrl": "https://www.matuzo.at/feed.xml?rev=1645730434507",
-                "_htmlUrl": "https://matuzo.at/feed.xml",
-                "_type": "rss"
-            },
-            {
-                "_title": "Writing | Tom Quinonero",
-                "_text": "Writing | Tom Quinonero",
-                "_xmlUrl": "https://api.feedless.org/stream/bucket/3483c795-62ba-4542-8c1c-006d7132bf53/atom",
-                "_htmlUrl": "https://api.feedless.org/bucket:3483c795-62ba-4542-8c1c-006d7132bf53",
-                "_type": "rss"
-            },
-            {
-                "_title": "Yannick Nana",
-                "_text": "Yannick Nana",
-                "_xmlUrl": "https://blog.yannicknana.fr/rss.xml",
-                "_htmlUrl": "https://blog.yannicknana.fr",
+                "_xmlUrl": "https://www.matuzo.at/feed.xml",
+                "_htmlUrl": "https://matuzo.at",
                 "_type": "rss"
             },
             {
                 "_title": "Zach Leatherman",
                 "_text": "Zach Leatherman",
                 "_xmlUrl": "https://www.zachleat.com/web/feed/",
-                "_htmlUrl": "https://www.zachleat.com/web/feed/",
+                "_htmlUrl": "https://www.zachleat.com",
                 "_type": "rss"
             }
         ],

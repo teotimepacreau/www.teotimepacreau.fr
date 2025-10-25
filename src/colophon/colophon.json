@@ -2,24 +2,24 @@
     "outline": {
         "outline": [
             {
-                "_title": "AAADAAAM",
+                "_title": "Adam Stoddard",
                 "_text": "AAADAAAM",
                 "_xmlUrl": "https://aaadaaam.com/feed.xml",
                 "_htmlUrl": "https://aaadaaam.com/",
                 "_type": "rss"
             },
             {
-                "_title": "A Beautiful Site",
+                "_title": "Cory LaViska",
                 "_text": "A Beautiful Site",
                 "_xmlUrl": "https://www.abeautifulsite.net/feed/feed.xml",
                 "_htmlUrl": "https://www.abeautifulsite.net/",
                 "_type": "rss"
             },
             {
-                "_title": "Accentgrave ~ log",
+                "_title": "Accent grave",
                 "_text": "Accentgrave ~ log",
                 "_xmlUrl": "https://accentgrave.net/log/flux.xml",
-                "_htmlUrl": "https://accentgrave.net/log/flux.xml",
+                "_htmlUrl": "https://accentgrave.net/log",
                 "_type": "rss"
             },
             {
@@ -37,7 +37,7 @@
                 "_type": "rss"
             },
             {
-                "_title": "Ahmad Shadeed Blog",
+                "_title": "Ahmad Shadeed",
                 "_text": "Ahmad Shadeed Blog",
                 "_xmlUrl": "https://ishadeed.com/feed.xml",
                 "_htmlUrl": "https://ishadeed.com/",
@@ -47,7 +47,7 @@
                 "_title": "Andy Bell",
                 "_text": "Andy Bell",
                 "_xmlUrl": "https://andy-bell.co.uk/feed/",
-                "_htmlUrl": "https://andy-bell.co.uk/feed.xml",
+                "_htmlUrl": "https://andy-bell.co.uk/",
                 "_type": "rss"
             },
             {
@@ -73,21 +73,21 @@
             },
             
             {
-                "_title": "Blog on Jérémy Buget",
+                "_title": "Jérémy Buget",
                 "_text": "Blog on Jérémy Buget",
                 "_xmlUrl": "https://jbuget.fr/posts/index.xml",
                 "_htmlUrl": "https://jbuget.fr/posts/",
                 "_type": "rss"
             },
             {
-                "_title": "Bram.us",
+                "_title": "Bramus",
                 "_text": "Bram.us",
                 "_xmlUrl": "https://www.bram.us/feed/",
                 "_htmlUrl": "https://www.bram.us",
                 "_type": "rss"
             },
             {
-                "_title": "Cahier Jaune | Blog",
+                "_title": "Romain Chaffal",
                 "_text": "Cahier Jaune | Blog",
                 "_xmlUrl": "https://cahierjaune.com/rss.xml",
                 "_htmlUrl": "https://cahierjaune.com/",
@@ -115,14 +115,7 @@
                 "_type": "rss"
             },
             {
-                "_title": "Code.larlet.fr",
-                "_text": "Code.larlet.fr",
-                "_xmlUrl": "https://code.larlet.fr/feed_rss_created.xml",
-                "_htmlUrl": "https://code.larlet.fr/",
-                "_type": "rss"
-            },
-            {
-                "_title": "daverupert.com",
+                "_title": "Dave Rupert",
                 "_text": "daverupert.com",
                 "_xmlUrl": "https://daverupert.com/atom.xml",
                 "_htmlUrl": "https://daverupert.com",
@@ -132,14 +125,7 @@
                 "_title": "Dave Smyth",
                 "_text": "Dave Smyth",
                 "_xmlUrl": "https://davesmyth.com/feed/",
-                "_htmlUrl": "https://davesmyth.com/feed/",
-                "_type": "rss"
-            },
-            {
-                "_title": "David Jonathan Ross",
-                "_text": "David Jonathan Ross",
-                "_xmlUrl": "https://djr.com/feed.rss",
-                "_htmlUrl": "https://djr.com/",
+                "_htmlUrl": "https://davesmyth.com/writing/",
                 "_type": "rss"
             },
             {
@@ -150,31 +136,24 @@
                 "_type": "rss"
             },
             {
-                "_title": "ddbeck.com",
+                "_title": "Daniel Beck",
                 "_text": "ddbeck.com",
                 "_xmlUrl": "https://ddbeck.com/feed.xml",
                 "_htmlUrl": "https://ddbeck.com/",
                 "_type": "rss"
             },
             {
-                "_title": "DEV Community ‍‍: Bastien Calou",
-                "_text": "DEV Community ‍‍: Bastien Calou",
+                "_title": "Bastien Calou",
+                "_text": "Bastien Calou",
                 "_xmlUrl": "https://dev.to/feed/bcalou",
-                "_htmlUrl": "https://dev.to/bcalou",
+                "_htmlUrl": "https://bastiencalou.fr",
                 "_type": "rss"
             },
             {
-                "_title": "Dmitri Pavlutin Blog",
-                "_text": "Dmitri Pavlutin Blog",
-                "_xmlUrl": "https://dmitripavlutin.com/rss.xml",
-                "_htmlUrl": "https://dmitripavlutin.com",
-                "_type": "rss"
-            },
-            {
-                "_title": "Ethan Marcotte’s website",
+                "_title": "Ethan Marcotte",
                 "_text": "Ethan Marcotte’s website",
                 "_xmlUrl": "https://ethanmarcotte.com/wrote/feed.xml",
-                "_htmlUrl": "https://ethanmarcotte.com/wrote/feed.xml",
+                "_htmlUrl": "https://ethanmarcotte.com/",
                 "_type": "rss"
             },
             {
@@ -185,17 +164,10 @@
                 "_type": "rss"
             },
             {
-                "_title": "Eystein codes",
+                "_title": "Eystein Mack Almaes",
                 "_text": "Eystein codes",
                 "_xmlUrl": "https://eystein.no/feed/feed.xml",
                 "_htmlUrl": "https://eystein.no/",
-                "_type": "rss"
-            },
-            {
-                "_title": "Failing Forward",
-                "_text": "Failing Forward",
-                "_xmlUrl": "https://lesley.pizza/feed/",
-                "_htmlUrl": "https://lesley.pizza/",
                 "_type": "rss"
             },
             {
@@ -206,14 +178,7 @@
                 "_type": "rss"
             },
             {
-                "_title": "Fully Stacked",
-                "_text": "Fully Stacked",
-                "_xmlUrl": "https://fullystacked.net/rss.xml",
-                "_htmlUrl": "https://fullystacked.net/",
-                "_type": "rss"
-            },
-            {
-                "_title": "garrit.xyz",
+                "_title": "Garrit Franke",
                 "_text": "garrit.xyz",
                 "_xmlUrl": "https://garrit.xyz/rss.xml",
                 "_htmlUrl": "https://garrit.xyz",
@@ -227,24 +192,24 @@
                 "_type": "rss"
             },
             {
-                "_title": "Henry From Online | Writing",
+                "_title": "Henry Desroches",
                 "_text": "Henry From Online | Writing",
                 "_xmlUrl": "https://henry.codes/feed.xml",
-                "_htmlUrl": "https://henry.codes/feed.xml",
+                "_htmlUrl": "https://henry.codes",
                 "_type": "rss"
             },
             {
-                "_title": "HeydonWorks",
+                "_title": "Heydon Pickering",
                 "_text": "HeydonWorks",
                 "_xmlUrl": "https://heydonworks.com/feed.xml",
                 "_htmlUrl": "https://heydonworks.com",
                 "_type": "rss"
             },
             {
-                "_title": "Hidde's blog",
+                "_title": "Hidde de Vries",
                 "_text": "Hidde's blog",
                 "_xmlUrl": "https://hidde.blog/feed",
-                "_htmlUrl": "https://hidde.blog/feed",
+                "_htmlUrl": "https://hidde.blog",
                 "_type": "rss"
             },
             {
@@ -255,31 +220,17 @@
                 "_type": "rss"
             },
             {
-                "_title": "Iain Bean",
-                "_text": "Iain Bean",
-                "_xmlUrl": "https://iainbean.com/feed.xml",
-                "_htmlUrl": "https://iainbean.com/feed.xml",
-                "_type": "rss"
-            },
-            {
-                "_title": "jakelazaroff.com",
+                "_title": "Jake Lazaroff",
                 "_text": "jakelazaroff.com",
                 "_xmlUrl": "https://jakelazaroff.com/rss.xml",
                 "_htmlUrl": "https://jakelazaroff.com/",
                 "_type": "rss"
             },
             {
-                "_title": "Jim Nielsen’s Blog",
-                "_text": "Jim Nielsen’s Blog",
+                "_title": "Jim Nielsen",
+                "_text": "Jim Nielsen",
                 "_xmlUrl": "https://blog.jim-nielsen.com/feed.xml",
                 "_htmlUrl": "https://blog.jim-nielsen.com",
-                "_type": "rss"
-            },
-            {
-                "_title": "johndjameson.com",
-                "_text": "johndjameson.com",
-                "_xmlUrl": "https://feeds.feedburner.com/johndjameson",
-                "_htmlUrl": "http://johndjameson.com/feed.xml",
                 "_type": "rss"
             },
             {

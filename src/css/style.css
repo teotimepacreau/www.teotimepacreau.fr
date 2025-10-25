@@ -982,7 +982,6 @@ a:hover {
 }
 
 .post-tags {
-  opacity: 0.9;
   font-size: var(--step--2);
   display: flex;
   flex-wrap: wrap;
@@ -992,11 +991,11 @@ a:hover {
 
 .post-tags a {
   display: inline-block;
-  padding-inline: calc(0.15 * var(--rythme));
-  padding-block: calc(0.04 * var(--rythme));
-  border-radius: var(--border-radius);
-  color: var(--bg);
-  background-color: var(--txt);
+  padding-inline: calc(.1 * var(--rythme));
+  padding-block: calc(.04 * var(--rythme));
+  border-radius: calc(.5* var(--border-radius));
+  color: var(--bg-);
+  background-color: oklch(from var(--txt) l c h / 25%);
   text-decoration: none;
 
   &:hover {
@@ -1103,15 +1102,9 @@ article > p > a:hover {
     }
   }
 }
-  
-
-.table-of-content 
-
-
-.table-of-content 
-
 
 /*---TAG PAGE---*/
+
 #tags-page {
   margin-block: var(--rythme);
   max-width: 60ch;
@@ -1528,6 +1521,7 @@ hr {
 /*---TABLES---*/
 table {
   border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
 }
 
 thead {
@@ -1546,7 +1540,7 @@ th,
 td,
 caption {
   padding: calc(0.25 * var(--rythme));
-  text-align: left;
+  text-align: start;
 }
 
 tr {

@@ -51,7 +51,7 @@ On comprend donc que le taux de la BCE a un impact réduit sur le financement de
 
 Pourquoi les taux obligataires servent de référence pour le financement des prêts immobiliers ?
 On l'a vu, les "titres de dette émis" représentent 17% du passif. C'est une des seules façons pour les banques d'obtenir de l'argent de façon dynamique, à leur guise. Les "titres de dette" sont à grande majorité des obligations.
-L'indice de référence pour suivre le marché des obligations en France est l'Obligation Assimilable du Trésor à 10 ans.
+L'indice de référence pour suivre le marché des obligations en France est l'[Obligation Assimilable du Trésor à 10 ans](https://webstat.banque-france.fr/fr/catalogue/fm/FM.D.FR.EUR.FR2.BB.FRMOYTEC10.HSTA).
 
 Pourquoi l’OAT 10 ans est-elle importante ?
 
@@ -126,3 +126,4 @@ Les prix de vente sont toujours déconnectés des salaires. Des taux stagnants, 
 - [le jeu de données "Residential property prices, France, Quarterly" de la BCE](https://data.ecb.europa.eu/data/datasets/RESR/RESR.Q.FR._T.N._TR.TVAL.4D0.TB.N.IX)
 - [le jeu de données "Loan demand-Household, France, Quarterly" de la BCE](https://data.ecb.europa.eu/data/datasets/BLS/BLS.Q.FR.ALL.Z.H.H.F3.ZZ.D.FNET)
 - [l'indice d'évolution du prix des logements anciens se situant en zone B1, base 100 2015](https://www.insee.fr/fr/statistiques/serie/010760747)
+- [l'OAT 10 ans FR](https://webstat.banque-france.fr/fr/catalogue/fm/FM.D.FR.EUR.FR2.BB.FRMOYTEC10.HSTA)

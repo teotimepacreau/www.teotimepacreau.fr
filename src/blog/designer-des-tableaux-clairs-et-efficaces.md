@@ -1,7 +1,6 @@
 ---
-eleventyExcludeFromCollections: true
 title: "Designer des tableaux clairs et efficaces"
-description: "Règles d'UX et d'UI pour présenter des tableaux."
+description: "Quelle forme choisir en fonction de l'usage souhaité pour présenter des données et comment concevoir des tableaux user friendly"
 type: "Article"
 date: '2025-09-20'
 tags: 
@@ -25,13 +24,26 @@ eleventyComputed:
     published: "{{ date }}"
 ---
 
-Tout *[Knowledge Worker](https://www.teotimepacreau.fr/essais/challenger-pratiques-transformation-organisationelle-par-le-design-de-services#:~:text=Le%20terme%20travailleur,Drucker%20%E2%80%98knowledge%20work%E2%80%99)* se retrouve régulièrement face à des tableaux : tableurs et tableaux font partis de notre quotidien pour structurer une idée à double entrée.
-
-Pourtant on rencontre très, *trop* fréquemment des tableaux qui rendent l'information encore plus complexe à appréhender que dans sa forme initiale.
+Tout *[Knowledge Worker](https://www.teotimepacreau.fr/essais/challenger-pratiques-transformation-organisationelle-par-le-design-de-services#:~:text=Le%20terme%20travailleur,Drucker%20%E2%80%98knowledge%20work%E2%80%99)* se retrouve régulièrement face à des tableurs et des tableaux. Pourtant on rencontre très, *trop* fréquemment des tableaux qui rendent l'information encore plus complexe à appréhender que dans sa forme initiale.
 
 ## Tableau ou graphique, quelle forme pour quel usage ?
 
-Avant de choisir une forme praticulière, il est nécessaire de raisonner en terme d'usage. Les tableaux sont plus adaptés pour présenter des valeurs, les comparer ou présenter des unités de mesure multiples. A contrario, les graphiques, sont plus adaptés pour démontrer les tendances, anomalies et relations.
+Avant de choisir une forme praticulière, il est nécessaire de raisonner en terme d'usage.
+
+Pour tous les sujets de visualisation de l'information, [Edward Tufte](https://www.edwardtufte.com/notebook/table-and-timetable-design-and-typography/) est l'auteur de référence. Ses travaux de recherche avancés dans sa thèse "The Visual Display of Quantitative Information" ont posés un standard.
+
+{% citationsmarginales "TUFTE, Edward. <a href='https://www.cs.rug.nl/svcg/uploads/VisualAnalytics/Tufte01-2.pdf'><em>The Visual Display of Quantitative Information, SECOND EDITION</em></a>". 2001., "en" %}The conventional sentence is a poor way to show more than two numbers because it prevents comparisons within the data. Eg : "Nearly 53 percent of the type A group did something or other compared to 46 percent of B and slightly more than 57 percent of C."
+Arrange the type to facilitate comparisons, as in this text-table:</br>
+Group A 53%</br>
+Group B 46%</br>
+Group C 57%</br>
+There are nearly always better sequences than alphabetical-for example, ordering by content or by data values:</br>
+Group B 46%</br>
+Group A 53%</br>
+Group C 57%</br>
+Tables are preferable to graphics for many small data sets. A table is nearly always better than a dumb pie chart{% endcitationsmarginales %}
+
+[Les tableaux sont plus adaptés pour présenter des valeurs, les comparer ou présenter des unités de mesure multiples. A contrario, les graphiques, sont plus adaptés pour démontrer les tendances, anomalies et relations](https://simplexct.com/data-ink-ratio-tables).
 
 [Charlie Munger](https://fr.wikipedia.org/wiki/Charlie_Munger?useskin=vector), le bras droit de Warren Buffet chez Berkshire Hathaway, a passé de nombreuses années à s'intéresser à l'encrage des concepts mathématiques dans les systèmes biologiques et psychologiques, il explique que *les graphiques assemblent les nombres dans une forme qui ressemble au *mouvement*. Cette représentation du mouvement nous accroche en faisant appel à nos sens primaires*.
 
@@ -39,11 +51,9 @@ Avant de choisir une forme praticulière, il est nécessaire de raisonner en ter
 
 *[Les graphiques montrent la forêt là où des tableaux montre les arbres](https://simplexct.com/data-ink-ratio-tables#:~:text=In%20other%20words%2C%20graphs%20show%20the%20forest%20while%20tables%20show%20the%20trees.)*.
 
-Pour tous les sujets de visualisation de l'information, [Edward Tufte](https://www.edwardtufte.com/notebook/table-and-timetable-design-and-typography/) est l'auteur de référence. Il a établi un véritable standard de [mise en page des documents écrits via ses travaux pour le format LateX](https://edwardtufte.github.io/tufte-css/) et a proposé des travaux de recherche avancés à propos des techniques de *datavisualisation*.
+Dans sa thèse, Edward Tufte évoque l'histoire et l'intérêt des graphiques :
 
-Dans sa thèse ["The visual display of quantitative information"](https://ia800408.us.archive.org/15/items/tufte_visual_display_of_quantitative_information_low-res/tufte_visual_display_of_quantitative_information_low-res_text.pdf), Edward Tufte évoque l'histoire et l'intérêt des graphiques :
-
-{% citationsmarginales "TUFTE, Edward. <a href='https://ia800408.us.archive.org/15/items/tufte_visual_display_of_quantitative_information_low-res/tufte_visual_display_of_quantitative_information_low-res_text.pdf'><em>The visual display of quantitative informatio</em></a>.Stripe Press, 2023", "en" %}William Playfair (1759-1823), a Scottish political economist made the first known time-series using economic data. [...] Playfair contrasted his new graphical method with the tabular presentation of data: "Information [...] is generally imperfectly retained; and a man who has carefully investigated a printed table, finds, when done, that he has only a very faint and partial idea of what he has read; and that like a figure imprinted on sand, is soon totally erased and defaced. Upon that these Charts were made; and, while they give a simple and distinct idea, they are as near perfect accuracy as is any way useful. On inspecting any one of these Charts attentively, a sufficiently distinct impression will be made, to remain unimpaired for a considerable time, and the idea which does remain will be simple and complete." For Playfair, graphics were preferable to tables because graphics showed the shape of the data in a comparative perspective.{% endcitationsmarginales %}
+{% citationsmarginales "TUFTE, Edward. <a href='https://ia800408.us.archive.org/15/items/tufte_visual_display_of_quantitative_information_low-res/tufte_visual_display_of_quantitative_information_low-res_text.pdf'><em>The visual display of quantitative information</em></a>. 1983", "en" %}William Playfair (1759-1823), a Scottish political economist made the first known time-series using economic data. [...] Playfair contrasted his new graphical method with the tabular presentation of data: "Information [...] is generally imperfectly retained; and a man who has carefully investigated a printed table, finds, when done, that he has only a very faint and partial idea of what he has read; and that like a figure imprinted on sand, is soon totally erased and defaced. Upon that these Charts were made; and, while they give a simple and distinct idea, they are as near perfect accuracy as is any way useful. On inspecting any one of these Charts attentively, a sufficiently distinct impression will be made, to remain unimpaired for a considerable time, and the idea which does remain will be simple and complete." For Playfair, graphics were preferable to tables because graphics showed the shape of the data in a comparative perspective.{% endcitationsmarginales %}
 
 ![Graphique de tous les imports et exports d'Angleterre de 1700 à 1782, représentant en ordonnée les millions de marchandises et le temps en abscisse. Le graphique est fait à la main via un quadrillage.](/img/premier_graphique.png "Premier graphique à avoir été largement diffusé, détaillant tous les imports et exports d'Angleterre de 1700 à 1782")
 

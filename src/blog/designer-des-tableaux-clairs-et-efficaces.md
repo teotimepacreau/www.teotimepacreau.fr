@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 title: "Designer des tableaux clairs et efficaces"
 description: "Présenter des données : quelle forme choisir en fonction de l'usage souhaité et comment concevoir des tableaux user friendly"
 type: "Article"

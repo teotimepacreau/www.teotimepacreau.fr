@@ -226,7 +226,7 @@ input {
   font-family: "Inter-Variable";
   font-weight: 100 900;
   font-display: swap;
-  font-style: oblique 0deg 10deg;
+  font-feature-settings: "calt" 1, "case" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
   src: url("../fonts/InterVariable.woff2") format("woff2");
 }
 
@@ -234,7 +234,7 @@ input {
   font-family: "Inter-Variable-Italic";
   font-weight: 100 900;
   font-display: swap;
-  font-style: oblique 0deg 10deg;
+  font-feature-settings: "calt" 1, "case" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
   src: url("../fonts/InterVariable-Italic.woff2") format("woff2");
 }
 
@@ -243,12 +243,6 @@ input {
   font-weight: 200 800;
   font-stretch: 75% 100%;
   src: url("../fonts/BricolageGrotesque.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SpaceMono-Regular";
-  src: url("../fonts/SpaceMono-Regular.woff2") format("woff2");
   font-display: swap;
 }
 

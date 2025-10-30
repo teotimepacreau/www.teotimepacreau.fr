@@ -320,6 +320,11 @@
                 "_type": "rss"
             },
             {
+                "_title": "Matthew Butterick",
+                "_text": "Matthew Butterick",
+                "_htmlUrl": "https://matthewbutterick.com/chron/"
+            },
+            {
                 "_title": "Max Böck",
                 "_text": "Max Böck",
                 "_xmlUrl": "https://mxb.dev/feed.xml",

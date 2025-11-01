@@ -75,6 +75,7 @@ body {
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   font-family: "Inter-Variable", Helvetica, system, sans-serif;
+  font-variant-numeric: oldstyle-nums; /*activates lowercase numbers if exists in the OpenType*/
 }
 
 /* Set shorter line heights on headings and text-wrap */
@@ -226,7 +227,7 @@ input {
   font-family: "Inter-Variable";
   font-weight: 100 900;
   font-display: swap;
-  font-feature-settings: "calt" 1, "case" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
+  font-feature-settings: "calt" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
   src: url("../fonts/InterVariable.woff2") format("woff2");
 }
 
@@ -849,10 +850,10 @@ a:hover {
 
 .blog-card-tags-link {
   text-decoration: none;
-  padding-inline: calc(0.1 * var(--rythme));
-  padding-block: calc(0.05 * var(--rythme));
+  padding-inline: calc(.1 * var(--rythme));
+  padding-block: calc(.04 * var(--rythme));
+  border-radius: calc(.5* var(--border-radius));
   border: 1px solid var(--bg);
-  border-radius: var(--border-radius);
   font-size: .75rem;
 }
 

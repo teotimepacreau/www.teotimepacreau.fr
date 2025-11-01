@@ -1,5 +1,5 @@
 ---
-eleventyExcludeFromCollections: false
+eleventyExcludeFromCollections: true
 title: "Designer des tableaux clairs et efficaces"
 description: "Présenter des données : quelle forme choisir en fonction de l'usage souhaité et comment concevoir des tableaux user-friendly"
 type: "Article"
@@ -73,16 +73,17 @@ Quels défauts peut-on identifier ?
 
 De manière générale, les règles suivantes s'appliquent pour les tableaux :
 
-- plus il y a de bordures et plus le tableau est complexe à appréhender
-- plus il y a de couleurs différentes et plus le tableau est complexe à appréhender
-- le texte doit toujours être aligné au sens d'écriture de la langue
+- plus il y a de *bordures* et plus le tableau est complexe à appréhender
+- plus il y a de *couleurs* différentes et plus le tableau est complexe à appréhender
+- le texte doit toujours être ferré selon le sens d'écriture de la langue
 - [les nombres doivent toujours être alignés à droite pour faciliter leur lecture (compréhension facilitée des structures de nombres)](https://practicaltypography.com/grids-of-numbers.html)
 - les étiquettes de colonnes doivent toujours être alignées avec le contenu de leur colonne
 - on regroupe les cellules similaires pour éviter les répétitions
 - les bordures sont souvent superflues car l'alignement suffit à discerner les relations entre les items
 - un saut de ligne dans un tableau peut être plus efficace qu'une bordure pour espacer des groupes de données
+- [étirer un tableau sur toute la largeur de la page ne sert à rien, il en va de même pour le fait de donner la même largeur à toutes les colonnes](https://book.webtypography.net/Web-Typography_Numerals-and-tables.pdf), c'est le contenu qui détermine la taille
 
-L'agence de visualisation de données [Dark Horse Analytics](https://www.darkhorseanalytics.com/) avait partagé une série de billets de blog en 2014 intitulé "[Data Looks Better Naked](https://www.darkhorseanalytics.com/blog/data-looks-better-naked)".
+L'agence de visualisation de données [Dark Horse Analytics](https://www.darkhorseanalytics.com/) avait partagé une série de billets de blog en 2014 intitulée "[Data Looks Better Naked](https://www.darkhorseanalytics.com/blog/data-looks-better-naked)".
 
 Voici le traitement qu'ils ont appliqués au tableau pour le rendre plus lisible :
 
@@ -94,7 +95,6 @@ Un autre exemple de traitement *dataviz* de tableau :
 
 On peut noter :
 
-- le choix de colorer en section le corps du tableau non pas via une clée de sélection particulière mais simplement en divisant en 4 sections
 - le fait de remplacer les 0 répétés par des tirets pour supprimer de la charge visuelle
 - la mise en évidence des titres via une mise en majuscule plutôt que d'utiliser du gras ou des couleurs fortes
 - le placement de total en haut plutôt qu'en pied de tableau pour prioriser l'information
@@ -106,6 +106,8 @@ Au sujet des tableaux, Eward Tufte donne [quatre principes](https://www.nas.nasa
 - Erase non-data-ink.
 - Erase redundant data-ink.
 
+Le concept de *data-ink* est introduit par Tufte comme étant le ‘non-erasable core of the graphic’ : le ratio de pixels utilisés pour présenter les données à rebours de ceux utilisés pour la mise en forme.
+
 [Tufte a également documenté un travail de re-design de tableau pour les tables d'horaires d'une ligne de chemin de fer américaine](https://www.edwardtufte.com/notebook/table-and-timetable-design-and-typography/).
 
 ## Construire des `<table>` lisibles et clairs en HTML CSS
@@ -113,7 +115,7 @@ Au sujet des tableaux, Eward Tufte donne [quatre principes](https://www.nas.nasa
 ### Le HTML
 
 L'élément `<table>` englobe le contenu. A l'intérieur on retrouve `<thead>` qui contient les étiquettes de colonne. `<tbody>` contient le corps du tableau.
-Une ligne est construite à partir de `<tr>` qui contient elle même l'élément de référence de la ligne `<th>` et la donnée associée `<td>`.
+Une ligne est construite à partir de `<tr>` qui contient elle même l'étiquette de la ligne `<th>` et la donnée associée `<td>`.
 Pour afficher un total ou un élément résumant le tableau en pied de tableau il est possible d'utiliser l'élément englobant `<tfoot>`.
 Pour titrer le tableau on utilise l'élément `<caption>` en premier descendant de l'élément `<table>`.
 
@@ -232,6 +234,9 @@ Pour éviter que le tableau soit trop grand pour le dimensionnement qui lui est 
 	</table>
 </div>
 ```
+
+<video controls muted src="/img/défilement_tableau_sticky.mp4" title="Vidéo de défilement d'un tableau : les étiquettes de colonne défilent en"></video>
+
 
 ### Rendre les en-têtes de colonne ou un volet du tableau "sticky"
 

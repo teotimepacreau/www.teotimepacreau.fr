@@ -28,19 +28,72 @@ On entend tout et son contraire concernant les prix de l'immobilier : "les prix 
 Une idée très répandue est que la BCE donne le mot d'ordre auprès des banques françaises avec l'évolution de son taux directeur. Quand la BCE diminue son taux directeur, les taux des prêts immobiliers devraient donc diminuer en conséquence ? [En réalité les banques se financent assez peu auprès de la BCE, mais plutôt sur les marchés financiers](https://www.capital.fr/immobilier/credit-immobilier-apres-la-decision-de-la-bce-les-taux-vont-ils-vraiment-continuer-a-baisser-1508673).
 [Selon l’Autorité de Contrôle Prudentiel et de Résolution de la Banque de France, la répartition des sources de financement des banques françaises se répartissait en 2023 comme suit](https://acpr.banque-france.fr/system/files/import/acpr/medias/documents/20240716_as161_grands_groupes_bancaires_fr_2023.pdf) :
 
-| Poste au passif | Montant en milliards d'euros | Part du total |
-| -- | -- | -- |
-| Dérivés détenus à des fins de transaction (passif) | 510 | 6% |
-| Titres de dette émis | 1 444 | 17% |
-| Dépôts des banques centrales | 199 | 2.3% |
-| Dépôts des administrations centrales | 154 | 1.8% |
-| Dépôts des établissements de crédit | 436 | 5.1% |
-| Dépôts des autres entreprises financières | 833 | 10.4% |
-| Dépôts des SNF | 1468 | 17.3% |
-| Dépôts des ménages | 2179 | 25.6% |
-| Dérivés - comptabilité de couverture passif | 113,4  | 1.3% |
-| Capitaux propres | 527 | 6.2% |
-| Autres passifs | 585 | 6.9% |
+<table>
+<thead>
+<tr>
+<th>Poste au passif</th>
+<th style="text-align: end">Montant en milliards d’euros</th>
+<th style="text-align: end">Part du total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dérivés détenus à des fins de transaction (passif)</td>
+<td style="text-align: end">510</td>
+<td style="text-align: end">6%</td>
+</tr>
+<tr>
+<td>Titres de dette émis</td>
+<td style="text-align: end">1 444</td>
+<td style="text-align: end">17%</td>
+</tr>
+<tr>
+<td>Dépôts des banques centrales</td>
+<td style="text-align: end">199</td>
+<td style="text-align: end">2.3%</td>
+</tr>
+<tr>
+<td>Dépôts des administrations centrales</td>
+<td style="text-align: end">154</td>
+<td style="text-align: end">1.8%</td>
+</tr>
+<tr>
+<td>Dépôts des établissements de crédit</td>
+<td style="text-align: end">436</td>
+<td style="text-align: end">5.1%</td>
+</tr>
+<tr>
+<td>Dépôts des autres entreprises financières</td>
+<td style="text-align: end">833</td>
+<td style="text-align: end">10.4%</td>
+</tr>
+<tr>
+<td>Dépôts des SNF</td>
+<td style="text-align: end">1468</td>
+<td style="text-align: end">17.3%</td>
+</tr>
+<tr>
+<td>Dépôts des ménages</td>
+<td style="text-align: end">2179</td>
+<td style="text-align: end">25.6%</td>
+</tr>
+<tr>
+<td>Dérivés - comptabilité de couverture passif</td>
+<td style="text-align: end">113,4</td>
+<td style="text-align: end">1.3%</td>
+</tr>
+<tr>
+<td>Capitaux propres</td>
+<td style="text-align: end">527</td>
+<td style="text-align: end">6.2%</td>
+</tr>
+<tr>
+<td>Autres passifs</td>
+<td style="text-align: end">585</td>
+<td style="text-align: end">6.9%</td>
+</tr>
+</tbody>
+</table>
 
 Le tableau retranscrit est à retrouver à la page 11 du [document source](https://acpr.banque-france.fr/system/files/import/acpr/medias/documents/20240716_as161_grands_groupes_bancaires_fr_2023.pdf)
 

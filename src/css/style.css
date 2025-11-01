@@ -1534,6 +1534,7 @@ th {
 th,
 td,
 caption {
+  vertical-align: baseline;
   padding: calc(0.25 * var(--rythme));
   text-align: start;
 }

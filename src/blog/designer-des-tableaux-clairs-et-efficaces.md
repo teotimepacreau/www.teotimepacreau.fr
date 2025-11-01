@@ -82,6 +82,7 @@ De manière générale, les règles suivantes s'appliquent pour les tableaux :
 - les bordures sont souvent superflues car l'alignement suffit à discerner les relations entre les items
 - un saut de ligne dans un tableau peut être plus efficace qu'une bordure pour espacer des groupes de données
 - [étirer un tableau sur toute la largeur de la page ne sert à rien, il en va de même pour le fait de donner la même largeur à toutes les colonnes](https://book.webtypography.net/Web-Typography_Numerals-and-tables.pdf), c'est le contenu qui détermine la taille
+- alignement vertical : pour éviter que le contenu d'une cellule "flotte" par rapport à une cellule plus densément remplie, on aligne le contenu des cellules suivantes sur la baseline de la première la cellule la plus à gauche
 
 L'agence de visualisation de données [Dark Horse Analytics](https://www.darkhorseanalytics.com/) avait partagé une série de billets de blog en 2014 intitulée "[Data Looks Better Naked](https://www.darkhorseanalytics.com/blog/data-looks-better-naked)".
 
@@ -235,12 +236,9 @@ Pour éviter que le tableau soit trop grand pour le dimensionnement qui lui est 
 </div>
 ```
 
-<video controls muted src="/img/défilement_tableau_sticky.mp4" title="Vidéo de défilement d'un tableau : les étiquettes de colonne défilent en"></video>
-
-
 ### Rendre les en-têtes de colonne ou un volet du tableau "sticky"
 
-[prendre capture vidéo du fonctionnement de mes en-têtes de colonne de tableau sur mon site]
+<video controls muted src="/img/défilement_tableau_sticky.mp4" title="Vidéo de défilement d'un tableau : les étiquettes de colonne suivent le défilement en s'accrochant au haut visible du tableau. L'étiquette arrête de défiler une fois le bas du tableau atteint."></video>
 
 ```css
 thead {
@@ -261,9 +259,12 @@ th:first-child {
 
 #### Alignement vertical à l'intérieur des cellules
 
-[ placer image table-vertical-alignment.PNG]
 
-Quand les colonnes deviennent plus étroites cela a pour effet de wrapper le texte de la colonne qui en contient le plus. Et fait donc, flotter le contenu de la cellule la moins large au centre vertical de la cellule. On souhaite plutôt aligner le contenu de notre seconde cellule sur la première ligne de texte de la première cellule via la valeur `baseline`
+Quand les colonnes deviennent plus étroites cela a pour effet de wrapper le texte de la colonne contenant le plus de texte. Le contenu de la cellule la moins large flotte au centre vertical de la cellule. On souhaite plutôt aligner le contenu sur la première ligne de texte de la ligne via la valeur `baseline`.
+
+![Capture d'écran de cellules de tableau : les nombres ne sont pas alignés sur la première ligne de la cellule la plus à gauche du tableau](/img/table-vertical-alignment.PNG "Cellule sans alignement sur la baseline")
+
+![Capture d'écran de cellules de tableau : les nombres sont alignés sur la première ligne de la cellule la plus à gauche du tableau](/img/tableau_avec_alignement_baseline.png "Cellule avec alignement sur la baseline : les nombres ne flottent plus")
 
 ```css
 th,
@@ -274,7 +275,7 @@ td {
 
 #### Cohérence typographique
 
-Dans certaines typographies, les chiffres ont des largeurs différentes, on souhaite plutôt avoir la même largeur pour chaque chiffre en utilisant la propriété CSS : `font-variant-numeric: tabular-nums`.
+Dans certaines typographies, les chiffres ont des largeurs différentes, on souhaite plutôt avoir la même largeur pour chaque chiffre afin de préserver la structures des nombres. Pour cela, on utilise la propriété CSS : `font-variant-numeric: tabular-nums`.
 
 ![Capture d'écran de la différence entre une typographie en nombres tabulaires et non tabulaires : une série de 1 et de 0 tabulaires a la même largeur tandis que les deux mêmes lignes en tabulaires ont des chiffres de largeur différente](/img/tabular_vs_non-tabular_nums.png "Différence de largeur des chiffres en cas de typographie tabulaire et non tabulaire")
 
@@ -284,9 +285,7 @@ L'étroitesse du contenu affiché sur mobile oblige à repenser le tableau. En e
 
 On ne prend ici en considération que le cas de `<table>` générées à partir de Markdown, elles n'ont donc que des en-têtes de colonnes et ne peuvent avoir d'en-tête de ligne car [Markdown ne supporte pas les tableaux à double entrée](https://blog.markdowntools.com/posts/markdown-table-ultimate-guide). En Markdown il n'est également pas possible de regrouper plusieurs cellules entre elles alors qu'il est possible de le faire en HTML via l'attribut `rowspan` ou `colspan`.
 
-[placer image tableau_desktop]
-
-[placer image tableau_mobile]
+![Capture d'écran du tableau au format mobile : il n'y a que deux colonnes, le contenu des colonnes qui ne sont pas des étiquettes sont placées dans une cellule et ordonées verticalement. Le contenu des étiquettes est répété dans chaque cellule.](/img/tableau_mobile.PNG "Affichage au format mobile")
 
 Techniquement, on souhaite que les en-têtes de colonne `<th>` contenus dans `<thead>` soient réinjectés dans le corps du tableau. On crée un script en Javascript en ce sens :
 
@@ -307,7 +306,7 @@ const displayTableForMobile = function () {
 displayTableForMobile();
 ```
 
-Pour chaque table sélectionnée, on sélectionne tous les en-têtes de colonne ainsi que toute les lignes du corps de tableau. Pour chaque ligne sélectionnée, on sélectionne chaque cellule. Pour chaque cellule, on instancie une constante `text` qui raccroche l'en-tête de colonne et on le place dans un attribut HTML custom `data-cell`.
+Pour chaque table sélectionnée, on sélectionne tous les en-têtes de colonne ainsi que toutes les lignes du corps de tableau. Pour chaque ligne sélectionnée, on sélectionne chaque cellule. Pour chaque cellule, on instancie une constante `text` qui raccroche l'en-tête de colonne et on la place dans un attribut HTML custom `data-cell`.
 
 Puis on a nécessairement besoin de CSS pour afficher le contenu de l'attribut `data-cell` avant le contenu de la cellule :
 

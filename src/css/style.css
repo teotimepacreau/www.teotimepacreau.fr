@@ -986,21 +986,25 @@ a:hover {
 
 .post-tags a {
   display: inline-block;
-  padding-inline: calc(.1 * var(--rythme));
+  font-size: x-small;
+  padding-inline: calc(.15 * var(--rythme));
   padding-block: calc(.04 * var(--rythme));
   border-radius: calc(.5* var(--border-radius));
-  color: var(--bg-);
-  background-color: oklch(from var(--txt) l c h / 25%);
+  text-transform: uppercase;
+  color: var(--bg);
+  background-color: var(--txt);
   text-decoration: none;
-
+  line-height: unset;
+  letter-spacing: .02rem;
+  font-variation-settings: "wght" 570, "opsz" 34;
+  &::after {
+    content: none;
+  }
   &:hover {
     color: var(--accent);
     transition: all 0.2s ease;
     background-color: var(--bg);
     outline: 1px ridge var(--accent);
-  }
-  &::before {
-    content: "# / "";
   }
 }
 #post a {

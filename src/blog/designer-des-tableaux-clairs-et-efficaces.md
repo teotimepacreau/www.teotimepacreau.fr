@@ -80,7 +80,7 @@ De manière générale, les règles suivantes s'appliquent pour les tableaux :
 - on regroupe les cellules similaires pour éviter les répétitions
 - les bordures sont souvent superflues car l'alignement suffit à discerner les relations entre les items
 - un saut de ligne dans un tableau peut être plus efficace qu'une bordure pour espacer des groupes de données
-- [étirer un tableau sur toute la largeur de la page ne sert à rien, il en va de même pour le fait de donner la même largeur à toutes les colonnes](https://book.webtypography.net/Web-Typography_Numerals-and-tables.pdf), c'est le contenu qui détermine la taille
+- [étirer un tableau sur toute la largeur de la page est contreproductif, il en va de même pour le fait de donner la même largeur à toutes les colonnes](https://book.webtypography.net/Web-Typography_Numerals-and-tables.pdf), c'est le contenu qui détermine la taille
 - alignement vertical : pour éviter que le contenu d'une cellule "flotte" par rapport à une cellule plus densément remplie, on aligne le contenu des cellules suivantes sur la baseline de la première la cellule la plus à gauche
 
 L'agence de visualisation de données [Dark Horse Analytics](https://www.darkhorseanalytics.com/) avait partagé une série de billets de blog en 2014 intitulée "[Data Looks Better Naked](https://www.darkhorseanalytics.com/blog/data-looks-better-naked)".
@@ -274,7 +274,7 @@ td {
 
 #### Cohérence typographique
 
-Dans certaines typographies, les chiffres ont des largeurs différentes, on souhaite plutôt avoir la même largeur pour chaque chiffre afin de préserver la structures des nombres. Pour cela, on utilise la propriété CSS : `font-variant-numeric: tabular-nums`.
+Dans certaines typographies, les chiffres ont des largeurs différentes, on souhaite plutôt avoir la même largeur pour chaque chiffre afin de préserver la structure des nombres. Pour cela, on utilise la propriété CSS : `font-variant-numeric: tabular-nums`.
 
 ![Capture d'écran de la différence entre une typographie en nombres tabulaires et non tabulaires : une série de 1 et de 0 tabulaires a la même largeur tandis que les deux mêmes lignes en tabulaires ont des chiffres de largeur différente](/img/tabular_vs_non-tabular_nums.png "Différence de largeur des chiffres en cas de typographie tabulaire et non tabulaire")
 

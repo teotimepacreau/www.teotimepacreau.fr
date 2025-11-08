@@ -174,9 +174,13 @@ WHERE person.id = '24556' OR person.id = '99716';
 
 On obtient une seule entrée :
 
+<div class="table-wrapper" style="overflow-x:auto">
+
 |id|age|height|eye_color|hair_color|gender|plate_number|car_make|car_model|id|name|license_id|address_number|address_street_name|ssn|
 |--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
 |202298|68|66|green|red|female|500123|Tesla	Model S|99716|Miranda Priestly|202298|1883|Golden Ave|987756388|
+
+</div>
 
 L'interface nous le confirme : "Congrats, you found the brains behind the murder! Everyone in SQL City hails you as the greatest SQL detective of all time. Time to break out the champagne!".
 

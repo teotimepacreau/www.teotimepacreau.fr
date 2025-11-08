@@ -74,6 +74,11 @@ blockquote {
     margin: 1rem 2.5%;
     font-size: var(--step--1);
     text-decoration: underline dotted;
+    & a {
+    text-underline-offset: .05ex;
+    text-decoration-thickness: .35ex;
+    text-decoration-skip-ink: none;
+    }
   }
   sup.sidenote-caller::after {
     cursor: pointer;

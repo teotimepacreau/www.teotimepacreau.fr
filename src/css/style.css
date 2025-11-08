@@ -1548,10 +1548,8 @@ tr {
 
 /* --- Table-specific scrollbar --- */
 .table-wrapper::-webkit-scrollbar {
-  margin-block-start: 1rem;
   height: .3rem;
 }
-
 
 .table-wrapper::-webkit-scrollbar-track {
   background: var(--bglighten20);

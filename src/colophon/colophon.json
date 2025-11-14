@@ -530,6 +530,13 @@
                 "_type": "rss"
             },
             {
+                "_title": "Tom Critchlow",
+                "_text": "Tom Critchlow",
+                "_xmlUrl": "https://tomcritchlow.com/feed",
+                "_htmlUrl": "https://tomcritchlow.com/",
+                "_type": "rss"
+            },
+            {
                 "_title": "Tom Hazledine",
                 "_text": "Tom Hazledine",
                 "_xmlUrl": "https://tomhazledine.com/feed.xml",

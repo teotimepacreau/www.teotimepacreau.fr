@@ -21,6 +21,42 @@ let figoptions = {
 };
 
 export default function(eleventyConfig) {
+  // CREER LA COLLECTION DE POSTS
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/blog/*.md");
+  });
+
+  // CREER LA COLLECTION DES ESSAIS + POSTS
+  eleventyConfig.addCollection("essaisAndPosts", function (collectionApi) {
+    return collectionApi.getFilteredByGlob(["src/essais/*.njk", "src/blog/*.md"]);
+  });
+
+  eleventyConfig.addCollection("essais", function (collectionApi) {
+    return collectionApi.getFilteredByGlob(["src/essais/*.njk", "src/essais/*.md"]);
+  });
+
+  eleventyConfig.addCollection("articlesShortlist", async (collectionsApi) => {
+    let articles = collectionsApi.getFilteredByGlob("src/blog/*.md");
+
+    // 2. (Optionnel) Effectuer un tri
+    // Si vous voulez les 3 plus récents, vous devez les trier d'abord.
+    articles.sort((a, b) => b.date - a.date); // Tri du plus récent au plus ancien
+
+    // 3. Appliquer la méthode .slice(0, 3) pour limiter
+    // Ceci prend les éléments de l'index 0 jusqu'à l'index 3 (non inclus).
+    return articles.slice(0, 3);
+  });
+
+  // CREER L'ARRAY DE TAGS
+  eleventyConfig.addCollection("tagList", function (collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach((item) => {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
+    });
+
+    return [...tagSet];
+  });
+  
   //  SHORTCODE MISE EN FORME BLOC DE CODES
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -137,25 +173,7 @@ export default function(eleventyConfig) {
   // Convertir les dates en format FR
   eleventyConfig.addFilter("date", dateFr);
 
-  // CREER LA COLLECTION DE POSTS
-  eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/blog/*.md");
-  });
-
-  // CREER LA COLLECTION DES ESSAIS
-  eleventyConfig.addCollection("essaisAndPosts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob(["src/essais/*.njk", "src/blog/*.md"]);
-  });
-
-  // CREER L'ARRAY DE TAGS
-  eleventyConfig.addCollection("tagList", function (collection) {
-    let tagSet = new Set();
-    collection.getAll().forEach((item) => {
-      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
-    });
-
-    return [...tagSet];
-  });
+  
 
   // Monitor instant change for CSS
   eleventyConfig.addWatchTarget("src/css/");

@@ -1,5 +1,6 @@
 ---
-title: "Produire un document print sans logiciel de traitement de texte grâce aux technologies du web"
+permalink: "/blog/produire-un-document-print-sans-logiciel-de-traitement-de-texte/"
+title: "Produire un document print sans logiciels propriétaires grâce aux technologies du web"
 type: "Article"
 date: '2024-10-15'
 updatedate: '2025-11-08'

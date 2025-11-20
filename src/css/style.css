@@ -76,6 +76,8 @@ body {
   text-rendering: optimizeLegibility;
   font-family: "Inter-Variable", Helvetica, system, sans-serif;
   font-variant-numeric: oldstyle-nums; /*activates lowercase numbers if exists in the OpenType*/
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 /* Set shorter line heights on headings and text-wrap */
@@ -288,11 +290,6 @@ em {
   font-family: "Inter-Variable-Italic";
 }
 
-p,
-li {
-  line-height: 1.5;
-}
-
 main a::after {
   content: "↗" / "";
 }
@@ -393,6 +390,8 @@ a:hover {
 .homepage-nav a {
   color: var(--txt);
   text-decoration: none;
+  font-variation-settings: "opsz" 32;
+  letter-spacing: -0.06rem;
 }
 
 .homepage-nav a:hover {
@@ -447,33 +446,23 @@ a:hover {
   margin-top: calc(2 * var(--rythme));
 }
 
-#homepage-brief article {
-  margin-top: calc(0.5 * var(--rythme));
-}
-
-#homepage-brief .services span,
-#homepage-brief .services i {
-  font-size: var(--step-1);
-}
-
-#homepage-brief .services li {
-  display: flex;
-  gap: var(--step-0);
-  align-items: center;
-  & > * {
-    flex: 0 0 max-content; 
+#homepage-brief {
+  & ul {
+      margin-top: calc(0.5 * var(--rythme));
+      & li {
+        list-style-type: none;
+        &:not(:first-child){
+          padding-block-start: calc(.25*var(--rythme));
+        }
+      } 
   }
 }
 
-#homepage-brief .services li:not(:first-child) {
-  margin-top: calc(0.25 * var(--rythme));
+/*---PAGE D'ACCUEIL DU SITE : SECTION BLOG SHORTLIST---*/
+#homepage-blog-shortlist li:not(:first-child){
+  padding-block-start: calc(.25*var(--rythme));
 }
-
 /*---PAGE D'ACCUEIL DU SITE : SECTION PROJETS---*/
-#homepage-projets {
-  container-type: inline-size;
-}
-
 #homepage-hero h2::after {
   content: "";
 }
@@ -661,10 +650,11 @@ a:hover {
   margin-top: 0;
   font-family: "Inter-Variable";
   font-weight: 400;
-}
-
-.homepage-services-item-header h3 {
   flex: 1 1 min-content;
+  color: var(--bg);
+  &::after {
+    content: none;
+  }
 }
 
 .services-icon {
@@ -753,8 +743,8 @@ a:hover {
   display: grid;
   place-items: center;
   background-color: #34bc6e;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1rlh;
+  height: 1rlh;
   aspect-ratio: 1;
   font-variation-settings: "opsz" 14, "wght" 650;
 }

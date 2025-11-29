@@ -57,17 +57,7 @@ html {
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-figure,
-blockquote,
-dl,
-dd {
+body, h1, h2, h3, h4, h5, h6, address, p, hr, pre, blockquote, ol, ul, li, dl, dt, dd, figure, figcaption, div, table, caption, form, fieldset {
   margin: 0;
 }
 
@@ -103,6 +93,16 @@ p,
 li {
   text-wrap: pretty;
 }
+
+/*Inherit fonts for inputs and buttons*/
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 
 /* A elements that don't have a class get default styles */
 a {
@@ -176,15 +176,15 @@ hr {
 /*---FONTS---*/
 @font-face {
   font-family: Inter-Variable;
-  font-weight: 100 900;
-  font-display: swap;
+  font-weight: 100 900;/*Include full possible weight range to avoid unintended synthesis of variable fonts with a weight axis*/
+  font-display: fallback;
   font-feature-settings: "calt" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
   src: url("../fonts/InterVariable.woff2") format("woff2");
 }
 
 @font-face {
   font-family: Inter-Variable-Italic;
-  font-weight: 100 900;
+  font-weight: 100 900;/*Include full possible weight range to avoid unintended synthesis of variable fonts with a weight axis*/
   font-display: swap;
   font-variation-settings: "opsz" 14;
   font-feature-settings: "calt" 1, "case" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
@@ -193,16 +193,17 @@ hr {
 
 @font-face {
   font-family: BricolageGrotesque;
-  font-weight: 200 800;
-  font-stretch: 75% 100%;
+  font-weight: 200 800;/*Include full possible weight range to avoid unintended synthesis of variable fonts with a weight axis*/
+  font-stretch: 75% 100%;/*Include full possible stretch range to avoid unintended synthesis of variable fonts with a width axis*/
   font-feature-settings: "onum";
   src: url("../fonts/BricolageGrotesque.woff2") format("woff2");
-  font-display: swap;
+  font-display: fallback;
 }
 
 /*----TYPOGRAPHIE------*/
 h1, h2, h3 {
   font-family: BricolageGrotesque, sans-serif;
+  font-variant-numeric: lining-nums;
 }
 
 h1 {
@@ -241,6 +242,8 @@ h2, h3 {
 
 h4, h5 {
   text-transform: uppercase;
+  font-variant-caps: titling-caps;
+  font-variant-numeric: lining-nums;
   font-variation-settings: "opsz" 32;
   font-feature-settings: "case" 1;
   letter-spacing: .04rem;

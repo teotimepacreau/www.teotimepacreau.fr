@@ -1,6 +1,6 @@
 /*---VARIABLES---*/
 :root {
-  --rythme: clamp(1.5rem, 1.3695rem + 0.6522vw, 1.875rem);
+  --rythme: 1rlh;
   --step-3: clamp(1.728rem, 1.4799rem + 1.2407vw, 2.4414rem);
   --step-2: clamp(1.44rem, 1.2615rem + 0.8924vw, 1.9531rem);
   --step-1: clamp(1.2rem, 1.0739rem + 0.6304vw, 1.5625rem);
@@ -46,6 +46,8 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  font-size: 100%;
+  line-height: 1.5;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -60,6 +62,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 figure,
 blockquote,
@@ -70,21 +73,19 @@ dd {
 
 /* Set core body defaults */
 body {
+  font-size: 1rem;
   background-color: var(--bg);
   color: var(--txt);
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
-  font-family: "Inter-Variable", Helvetica, system, sans-serif;
+  font-family: Inter-Variable, Helvetica, system, sans-serif;
   font-variant-numeric: oldstyle-nums; /*activates lowercase numbers if exists in the OpenType*/
-  line-height: 1.5;
-  font-size: 1rem;
 }
 
 /* Set shorter line heights on headings and text-wrap */
 h1,
 h2,
-h3,
-h4 {
+h3 {
   line-height: 1.15;
   letter-spacing: -0.04rem;
 }
@@ -132,6 +133,15 @@ hr {
   overflow: visible;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /*---FOCUS---*/
 *:focus-visible {
   transition: outline 0.2s ease;
@@ -144,7 +154,7 @@ hr {
 } */
 
 /*---COLOR PICKER THEME SWITCH---*/
-:root:has(#light:checked) {
+:root[data-theme='light'] {
   --bg: #c3e2ff;
   --txt: #1d533e;
   --accent: #752a04;
@@ -153,7 +163,7 @@ hr {
   --btnHomepage: oklch(99% 0.02 30);
 }
 
-:root:has(#dark:checked) {
+:root[data-theme='dark'] {
   --bg: oklch(35.5% 13.5% 174.846);
   --txt: #dfd6d6;
   --accent: oklch(91.64% 0.073 77.44);
@@ -163,70 +173,9 @@ hr {
   --btnHomepage: oklch(30% 0.01 77);
 }
 
-.color-picker {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-}
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-label {
-  color: var(--bg);
-}
-.color-picker input[type="radio"] {
-  appearance: none;
-  width: 0.75rem;
-  height: 0.75rem;
-  outline: 2px solid var(--radio-color, currentColor);
-  outline-offset: 3px;
-  border-radius: 50%;
-}
-.color-picker input[type="radio"]:focus-visible {
-  outline-width: 5px;
-  outline-offset: 4px;
-}
-input {
-  accent-color: var(--accent);
-}
-.color-picker > fieldset {
-  width: clamp(80px, 50%, 180px);
-  border: 0;
-  display: flex;
-  gap: 2ex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0.7rem;
-  background: var(--accent);
-  margin-inline: auto;
-  border-radius: 0 0 0.8rem 0.8rem;
-  font-size: 0.8rem + 0.5vw;
-}
-.color-select-group {
-  display: flex;
-  align-items: center;
-  gap: 1ex;
-}
-.color-picker input[type="radio"]:checked {
-  background-color: var(--radio-color);
-}
-
-.color-picker input[type="radio"]#light {
-  --radio-color: var(--bg);
-}
-
-.color-picker input[type="radio"]#dark {
-  --radio-color: var(--bg);
-}
 /*---FONTS---*/
 @font-face {
-  font-family: "Inter-Variable";
+  font-family: Inter-Variable;
   font-weight: 100 900;
   font-display: swap;
   font-feature-settings: "calt" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
@@ -234,34 +183,37 @@ input {
 }
 
 @font-face {
-  font-family: "Inter-Variable-Italic";
+  font-family: Inter-Variable-Italic;
   font-weight: 100 900;
   font-display: swap;
-  font-feature-settings: "opsz" 14, "calt" 1, "case" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
+  font-variation-settings: "opsz" 14;
+  font-feature-settings: "calt" 1, "case" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
   src: url("../fonts/InterVariable-Italic.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "BricolageGrotesque";
+  font-family: BricolageGrotesque;
   font-weight: 200 800;
   font-stretch: 75% 100%;
+  font-feature-settings: "onum";
   src: url("../fonts/BricolageGrotesque.woff2") format("woff2");
   font-display: swap;
 }
 
-/*----TYPO------*/
+/*----TYPOGRAPHIE------*/
 h1, h2, h3 {
   font-family: BricolageGrotesque, sans-serif;
 }
 
 h1 {
-  font-variation-settings: "opsz" 24, "wght" 800, "wdth" 100;
+  font-variation-settings: "opsz" 32, "wght" 800, "wdth" 100;
   font-size: var(--step-3);
   letter-spacing: -0.05rem;
 }
 
 h2 {
   font-size: var(--step-2);
+  font-variation-settings: "opsz" 32, "wght" 700, "wdth" 100;
   &::after{
     content: " #" / "";
   }
@@ -269,6 +221,7 @@ h2 {
 
 h3 {
   font-size: var(--step-1);
+  font-variation-settings: "opsz" 32, "wght" 700, "wdth" 100;
   &::after {
   content: " ##" / "";
   }
@@ -286,8 +239,19 @@ h2, h3 {
   }
 }
 
+h4, h5 {
+  text-transform: uppercase;
+  font-variation-settings: "opsz" 32;
+  font-feature-settings: "case" 1;
+  letter-spacing: .04rem;
+}
+
+h5 {
+  font-size: small;
+}
+
 em {
-  font-family: "Inter-Variable-Italic";
+  font-family: Inter-Variable-Italic;
 }
 
 main a::after {
@@ -295,8 +259,9 @@ main a::after {
 }
 
 abbr {
+  font-variant-caps: all-small-caps;
   text-decoration: underline dotted;
-  text-underline-offset: .3ex;
+  text-underline-offset: .2ex;
 }
 
 /*---LINKS---*/
@@ -311,10 +276,8 @@ a {
 
 
 a:hover {
-  color: var(--accent);
   text-decoration-thickness: 3px;
   text-decoration-skip-ink: none;
-
 }
 
 /*---SCROLLBAR---*/
@@ -329,7 +292,7 @@ a:hover {
 
 /*---CONTAINER POUR TOUTES LES PAGES---*/
 #normal-page-container {
-  padding-inline: var(--rythme);
+  padding: var(--rythme);
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -648,7 +611,7 @@ a:hover {
 
 .homepage-services-item-header h3 {
   margin-top: 0;
-  font-family: "Inter-Variable";
+  font-family: Inter-Variable;
   font-weight: 400;
   flex: 1 1 min-content;
   color: var(--bg);
@@ -743,8 +706,8 @@ a:hover {
   display: grid;
   place-items: center;
   background-color: #34bc6e;
-  width: 1rlh;
-  height: 1rlh;
+  width: .75rlh;
+  height: .75rlh;
   aspect-ratio: 1;
   font-variation-settings: "opsz" 14, "wght" 650;
 }
@@ -765,7 +728,7 @@ a:hover {
 .blog-card-title {
   color: var(--bg);
   font-size: var(--step-2);
-  font-family: "BricolageGrotesque", sans-serif;
+  font-family: BricolageGrotesque, sans-serif;
   line-height: 1.2;
   text-wrap: balance;
   font-weight: 700;
@@ -773,17 +736,10 @@ a:hover {
   text-decoration-thickness: unset !important;
   text-decoration-skip-ink: unset !important;
   transition: text-decoration-color .2s ease-out;
+  &::after {
+    content: none;
+  }
 }
-
-.blog-card-title::after {
-  content: none;
-}
-
-.blog-card-title:hover {
-  text-decoration-color: var(--bg)!important;
-  color: var(--bg) !important;
-}
-
 #blog-index-tags {
   color: var(--bg);
   padding-block-start: 0.3rem;
@@ -880,9 +836,9 @@ a:hover {
 }
 
 /*---POST---*/
-.wrapper-post {
+#wrapper-post {
   padding: var(--rythme);
-  padding-block-start: calc(2 * var(--rythme));
+  padding-block-start: calc(3 * var(--rythme));
 }
 
 #post-header {
@@ -900,6 +856,7 @@ a:hover {
 #post-menu {
   /*COMPOSANT DE NAVIGATION DESKTOP DANS LES POST*/
   flex-direction: column;
+  font-size: small;
   gap: calc(0.25 * var(--rythme));
   padding-inline: calc(0.5 * var(--rythme));
   padding-block: calc(0.25 * var(--rythme));
@@ -929,7 +886,7 @@ a:hover {
 }
 
 #post {
-  max-width: 65ch;
+  max-width: 67ch;
 }
 
 #post img {
@@ -938,11 +895,6 @@ a:hover {
 
 #post h2, #post h3, #post h4, #post h5 {
   margin-top: calc(2*var(--step-0));
-}
-
-
-#post h4, #post h5 {
-  text-transform: uppercase;
 }
 
 #post > p + p {
@@ -1152,15 +1104,6 @@ article > p > a:hover {
   row-gap: calc(2 * var(--rythme));
   margin-top: var(--rythme);
   margin-bottom: var(--rythme);
-}
-
-#container-cv h2 {
-  font-family: BricolageGrotesque, system, sans-serif;
-  font-variation-settings: "opsz" 24, "wght" 800, "wdth" 100;
-  font-size: var(--rythme);
-  letter-spacing: -0.05rem;
-  max-width: 20ch;
-  color: unset;
 }
 
 #download-cv {
@@ -1448,17 +1391,17 @@ hr {
 }
 
 .project-img-wrapper img:hover {
-  opacity: 0.9;
+  opacity: .9;
 }
 
 .project-card-title {
   margin-top: calc(0.5 * var(--rythme));
   color: var(--bg);
+  & a {
+  text-decoration: none;
+  }
 }
 
-.project-card-title a {
-  text-decoration: none;
-}
 
 /*---PROJET LAYOUT---*/
 #projet-layout {

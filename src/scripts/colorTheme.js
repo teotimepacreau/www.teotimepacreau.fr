@@ -1,58 +1,29 @@
-// select
-const colorThemes = document.querySelectorAll('[name="theme"]');
-// store theme in local storage
-const storeTheme = function (theme) {
-  localStorage.setItem("theme", theme);
+let themeToggler = document.getElementById("theme-toggler");
+let rootCSS = document.documentElement;
+
+const sunIcon =
+  "M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z";
+
+const moonIcon =
+  "M235.54,150.21a104.84,104.84,0,0,1-37,52.91A104,104,0,0,1,32,120,103.09,103.09,0,0,1,52.88,57.48a104.84,104.84,0,0,1,52.91-37,8,8,0,0,1,10,10,88.08,88.08,0,0,0,109.8,109.8,8,8,0,0,1,10,10Z";
+
+const storeTheme = (theme) => localStorage.setItem("theme", theme);
+
+const applyTheme = (theme) => {
+  rootCSS.setAttribute("data-theme", theme);
+
+  const icon = themeToggler.firstElementChild.firstElementChild;
+  icon.setAttribute("d", theme === "light" ? moonIcon : sunIcon);
+
+  storeTheme(theme);
 };
 
-//change theme value in local storage on click
-colorThemes.forEach((themeOption) => {
-  themeOption.addEventListener("click", () => {
-    storeTheme(themeOption.id);
-    // fallback for no :has() support
-    document.documentElement.className = themeOption.id;
-    adaptCodeBlockColor();
-    adaptHamburgerButton()
-  });
+themeToggler.addEventListener("click", () => {
+  const current = rootCSS.getAttribute("data-theme");
+  applyTheme(current === "dark" ? "light" : "dark");
 });
 
-// set theme when visitor returns
-const setTheme = function () {
-  const activeTheme = localStorage.getItem("theme");
-  colorThemes.forEach((themeOption) => {
-    if (themeOption.id === activeTheme) {
-      themeOption.checked = true;
-    }
-  });
-  // fallback for no :has() support
-  document.documentElement.className = activeTheme;
+window.onload = () => {
+  const saved = localStorage.getItem("theme");
+  applyTheme(saved);
 };
-
-function adaptCodeBlockColor() {
-  const allCodes = document.querySelectorAll("code");
-  const activeTheme = localStorage.getItem("theme");
-  if (activeTheme === "light") {
-    for (let code of allCodes) {
-      code.style.color = "#1d533e";
-    }
-  }
-  if (activeTheme === "dark") {
-    for (let code of allCodes) {
-      code.style.color = "#f7f5f1e6";
-    }
-  }
-}
-
-
-function adaptHamburgerButton() {
-  const activeTheme = localStorage.getItem("theme");
-  const hamburger = document.querySelector("#hamburger-icon");
-  if (activeTheme === "dark") {
-    hamburger.setAttribute('fill', 'white')
-  }
-  if (activeTheme === "light") {
-    hamburger.setAttribute('fill', '#000000')
-  }
-}
-
-window.onload = setTheme();

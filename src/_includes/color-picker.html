@@ -1,17 +1,5 @@
-<form
-  class="color-picker"
-  aria-label="Sélecteur de thème coloré"
-  action=""
->
-  <fieldset>
-    <legend class="visually-hidden">Choisir un thème de couleur</legend>
-    <div id="light-group" class="color-select-group">
-      <label for="light">Light</label>
-      <input type="radio" name="theme" id="light" />
-    </div>
-    <div id="dark-group" class="color-select-group">
-      <label for="dark">Dark</label>
-      <input type="radio" id="dark" name="theme" />
-    </div>
-  </fieldset>
-</form>
+<button data-theme="dark" id="theme-toggler" name="Sélecteur de thème coloré" style="appearance: none; border: none; background-color: transparent; position: absolute; left: 0; right: 0; top: calc(.5*var(--rythme)); margin-inline:  auto; max-width: min-content; outline-color: var(--accent);">
+  <svg aria-hidden="true" id="color-picker" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="var(--accent)" viewBox="0 0 256 256">
+    <path></path>
+    </svg>
+</button>

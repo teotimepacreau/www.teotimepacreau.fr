@@ -2,6 +2,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="{{ description }}" />
 <link rel="stylesheet" href="/css/style.css" />
+<script>
+        // if there's a theme id in localstorage, use it on the <html>
+        localStorage.getItem('theme') && 
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
+    </script>
 
 {% if pageId == "blogpost" %} 
 <!-- STYLE FOR CODE BLOCKS -->

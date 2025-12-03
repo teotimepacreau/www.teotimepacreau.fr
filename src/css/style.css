@@ -1,3 +1,33 @@
+/*---FONTS---*/
+@font-face {
+  font-family: Inter-Variable;
+  font-style: normal;
+  font-weight: 100 900;/*Include full possible weight range to avoid unintended synthesis of variable fonts with a weight axis*/
+  font-display: fallback;
+  font-feature-settings: "calt" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
+  src: url("../fonts/InterVariable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Inter-Variable-Italic;
+  font-style: italic;
+  font-weight: 100 900;/*Include full possible weight range to avoid unintended synthesis of variable fonts with a weight axis*/
+  font-display: swap;
+  font-variation-settings: "opsz" 14;
+  font-feature-settings: "calt" 1, "case" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
+  src: url("../fonts/InterVariable-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: BricolageGrotesque;
+  font-style: normal;
+  font-weight: 200 800;/*Include full possible weight range to avoid unintended synthesis of variable fonts with a weight axis*/
+  font-stretch: 75% 100%;/*Include full possible stretch range to avoid unintended synthesis of variable fonts with a width axis*/
+  font-feature-settings: "onum";
+  src: url("../fonts/BricolageGrotesque.woff2") format("woff2");
+  font-display: fallback;
+}
+
 /*---VARIABLES---*/
 :root {
   --rythme: 1rlh;
@@ -70,6 +100,7 @@ body {
   text-rendering: optimizeLegibility;
   font-family: Inter-Variable, Helvetica, system, sans-serif;
   font-variant-numeric: oldstyle-nums; /*activates lowercase numbers if exists in the OpenType*/
+  font-kerning: normal;/*forces Kerning*/
 }
 
 /* Set shorter line heights on headings and text-wrap */
@@ -171,33 +202,6 @@ hr {
   --code: oklch(97% 0.005 77.44 / 0.9);
   --spanProjets: var(--btnHomepage);
   --btnHomepage: oklch(30% 0.01 77);
-}
-
-/*---FONTS---*/
-@font-face {
-  font-family: Inter-Variable;
-  font-weight: 100 900;/*Include full possible weight range to avoid unintended synthesis of variable fonts with a weight axis*/
-  font-display: fallback;
-  font-feature-settings: "calt" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
-  src: url("../fonts/InterVariable.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: Inter-Variable-Italic;
-  font-weight: 100 900;/*Include full possible weight range to avoid unintended synthesis of variable fonts with a weight axis*/
-  font-display: swap;
-  font-variation-settings: "opsz" 14;
-  font-feature-settings: "calt" 1, "case" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "cv10" 1;
-  src: url("../fonts/InterVariable-Italic.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: BricolageGrotesque;
-  font-weight: 200 800;/*Include full possible weight range to avoid unintended synthesis of variable fonts with a weight axis*/
-  font-stretch: 75% 100%;/*Include full possible stretch range to avoid unintended synthesis of variable fonts with a width axis*/
-  font-feature-settings: "onum";
-  src: url("../fonts/BricolageGrotesque.woff2") format("woff2");
-  font-display: fallback;
 }
 
 /*----TYPOGRAPHIE------*/

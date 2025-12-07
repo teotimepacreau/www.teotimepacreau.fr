@@ -1359,14 +1359,12 @@ thead {
   top: 0.1rem;
   margin-bottom: var(--rythme);
   & th {
-    vertical-align: bottom;
+    vertical-align: bottom !important;
+    font-weight: bold;
+    background-color: var(--bglighten20);
   }
 }
 
-th {
-  font-weight: bold;
-  background-color: var(--bglighten20);
-}
 
 th,
 td,

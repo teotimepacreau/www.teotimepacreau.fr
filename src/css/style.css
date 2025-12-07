@@ -207,7 +207,7 @@ hr {
 /*----TYPOGRAPHIE------*/
 h1, h2, h3 {
   font-family: BricolageGrotesque, sans-serif;
-  font-variant-numeric: lining-nums;
+  font-variant-numeric: oldstyle-nums;
 }
 
 h1 {

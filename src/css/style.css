@@ -1358,6 +1358,9 @@ thead {
   position: sticky;
   top: 0.1rem;
   margin-bottom: var(--rythme);
+  & th {
+    vertical-align: bottom;
+  }
 }
 
 th {

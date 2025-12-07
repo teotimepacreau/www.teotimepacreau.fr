@@ -1143,98 +1143,18 @@ article > p > a:hover {
   opacity: 1;
 }
 
-/*---CV : SECTION PRO---*/
-#experiences {
-  display: grid;
-  grid-template-columns: max-content minmax(4rem, auto) minmax(4rem, auto);
-  gap: var(--rythme);
-  align-items: center;
-}
-
-.travail-time {
-  grid-column: 1 / 2;
-  text-align: right;
-}
-.hr-parent {
-  grid-column: 2 / 3;
-}
-
-.travail-titre-poste {
-  grid-column: 3 / 4;
+/*---CV : SECTION EXPERIENCES PRO---*/
+#container-cv {
+  & summary {
   cursor: pointer;
-}
-
-.travail-prose {
-  grid-column: 3 / 4;
+  }
+  & section:first-of-type time:not(:first-of-type) {
+  display: block;
   margin-top: var(--rythme);
-}
-
-summary {
-  position: relative;
-}
-summary::marker {
-  content: none;
-}
-
-summary::before,
-summary::after {
-  content: "";
-}
-
-summary::before,
-summary::after {
-  width: 0.75em;
-  height: 0;
-  border-bottom: 3px solid;
-  position: absolute;
-  top: 50%;
-  left: -1.5rem;
-}
-summary::after {
-  transform: rotate(90deg);
-  transform-origin: 50% 50%;
-}
-[open] summary::after {
-  transform: rotate(0deg);
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-    transform: translateY(-20px);
-    filter: brightness(2);
   }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-    transform: scale(1);
+  & details ul {
+    margin-top: calc(.5*var(--rythme));
   }
-}
-
-.travail-prose a {
-  color: var(--accent);
-}
-.travail-prose {
-  list-style: none;
-}
-
-.travail-prose > li::before {
-  content: "• " / "";
-  color: var(--accent);
-}
-.travail-prose > li + li {
-  margin-top: calc(0.5 * var(--rythme));
-}
-
-.hr-parent {
-  display: flex;
-}
-
-hr {
-  border-top: 2px solid var(--accent);
-  flex: 1 1;
 }
 
 /*---CV : SECTION DIPLOMES---*/
@@ -1299,9 +1219,6 @@ hr {
 
 /*---CV : MEDIA QUERY CV---*/
 @media (width < 700px) {
-  #experiences {
-    gap: calc(0.5 * var(--rythme));
-  }
   #container-cv {
     display: block;
     margin-top: 0;
@@ -1311,31 +1228,6 @@ hr {
   }
   #container-cv > section {
     margin-block: var(--rythme);
-  }
-  summary::before,
-  summary::after {
-    width: 0.75em;
-    height: 0;
-    border-bottom: 3px solid;
-    left: 0;
-    top: unset !important;
-    bottom: -1.5rem !important;
-  }
-  .travail-titre-poste {
-    grid-column: 1 / 4;
-  }
-
-  .travail-prose {
-    display: block;
-    grid-column: 1 / 4;
-  }
-  .travail-time ~ .travail-time {
-    text-align: left;
-    margin-top: calc(2 * var(--rythme));
-  }
-  #experiences {
-    grid-template-columns: auto;
-    padding-bottom: calc(2 * var(--rythme));
   }
 }
 

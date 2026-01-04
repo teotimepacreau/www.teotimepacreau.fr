@@ -20,13 +20,13 @@ eleventyComputed:
     published: "{{ date }}"
 ---
 
-Wavestone est un cabinet de conseil Français, anciennement Solucom.
+Wavestone est un cabinet de conseil Français, anciennement Solucom. Retour sur mon expérience en tant qu'analyst en CDI.
 
 ## Le processus de recrutement
 
 Juillet 2024, S. de Wavestone me propose de me coopter pour un CDI en tant que consultant chez Wavestone suite à un ajout LinkedIn. S. m'explique qu'il y a 3 gradations pour les positions de consulting : analyst, consultant, senior consultant; elle considère que 2 années d'expérience dans le secteur en alternance permet d'entrer sur une position de consultant.
 
-30 minutes d'échange téléphonique RH avec A. de Wavestone qui me de demande de lui présenter mon parcours et ma compréhension des missions et valeurs de Wavestone. M'explique que la rémunération dépend de l'école dont le diplôme est issu. Les écoles sont classifiés par Wavestone de D à A. Mon école est considéré comme étant de rang D. A. m'annonce une rémunération de 36k€ brut par an. J'indique à A. que les conditions ne sont pas réunies pour que je candidate.
+30 minutes d'échange téléphonique RH avec A. de Wavestone qui me demande de lui présenter mon parcours et ma compréhension des missions et valeurs de Wavestone. M'explique que la rémunération dépend de l'école dont le diplôme est issu. Les écoles sont classifiés par Wavestone de D à A. Mon école est considéré comme étant de rang D. A. m'annonce une rémunération de 36k€ brut par an. J'indique à A. que les conditions ne sont pas réunies pour que je candidate.
 
 Janvier 2025, je décide de candidater. S. me coopte. S'en suit un nouvel échange téléphonique demandé par A. pour répéter les mêmes choses qu'en Juillet 2024. Trois entretiens "officiels" d'embauche successifs me sont demandés :
 - le premier entretien d'embauche avec un.e Consultant.e junior est une formalité : questions de base sur le parcours, la posture, la vision du conseil, réciter les valeurs Wavestone et ma compréhension de l'entreprise. La personne me valide suite à l'entretien.
@@ -77,9 +77,11 @@ Le livrable est remis au client au bout d'un mois, comme prévu. Retours positif
 Puis je suis staffé pour contribuer à une étude d'opportunité d'adoption du multi-cloud pour un grand groupe agro-alimentaire : élaboration d'une gouvernance structurant l'adoption du cloud, stratégie et enjeux multi-cloud & multi-tenant. Cette fois, je dois examiner une centaine du supports internes consolidants des missions cloud réalisées par Wavestone puis réaliser une trentaine de slides pour expliquer pas à pas les 3 items cités précedemment, le tout entièrement en anglais. 
 Je fournis des slides de qualité, avec de la profondeur et une vraie méthodologie. Le chef de projet m'exprime un *feedback* totalement différent de la précédente mission : cette fois la mise en forme et les tournures de phrases sont parfaites mais je crée "à partir de zéro" trop de slides et je ne copie colle pas assez de slides existantes, le chef de projet exprime des doutes sur ma *productivité* pour le long terme alors que tous les rendus sont en avance des deadlines.
 
-Le 18 Juillet 2025 vient mon point de validation de période d'essai : j'ai consigné l'ensemble des feedbacks récoltés pendant tous les appuis et missions, préparé un argumentaire pour prouver mes améliorations sur les points négatifs qui m'ont été retournés et pour mettre en avant mes points forts. Je n'ai pas le luxe de pouvoir présenter ces éléments : N., le *CDM* m'annonce d'emblée dès le début du point que le directeur de l'agence et lui ont décidés de mettre fin à ma période d'essai. Me sont soulevés les points de feedback négatif. Je creuse, au vu du contexte de sous-staffing observé depuis mon arrivée et des éléments partagés à l'oral par le directeur de l'agence lors de l'afterwork de Juin 2025 "l'OCDE prévoit un contexte économique très dégradé, Numeum (l'un des syndicat de la convetion collective des activités de conseil Syntec) prévoit -2.5% pour les activités de conseil en 2025. Il est décidé d'échelonner les arrivées à partir de Septembre et de *réviser* le plan de recrutement". J'exprime ces éléments au CDM qui les balaient.
+## Période d'essai
 
-Fin de période d'essai donc. Même vécu que J. 3 mois auparavant, il n'y avait pas d'autres personnes recrutées en CDI.
+Le 18 Juillet 2025 vient mon point de validation de période d'essai fixé de longue date : j'ai consigné l'ensemble des feedbacks récoltés pendant tous les appuis et missions, préparé un argumentaire pour prouver mes améliorations sur les points négatifs qui m'ont été retournés et pour mettre en avant mes points forts. Je n'ai pas le luxe de pouvoir présenter ces éléments : N., le *CDM* m'annonce d'emblée que le directeur de l'agence et lui ont décidés de mettre fin à ma période d'essai. Me sont soulevés les points de feedback négatif. Je creuse, au vu du contexte de sous-staffing observé depuis mon arrivée et des éléments partagés à l'oral par le directeur de l'agence lors de l'afterwork de Juin 2025, je cite "l'OCDE prévoit un contexte économique très dégradé, Numeum (l'un des syndicat de la convetion collective des activités de conseil Syntec) prévoit -2.5% pour les activités de conseil en 2025. Il est décidé d'échelonner les arrivées à partir de Septembre et de *réviser* le plan de recrutement". J'exprime ces éléments au CDM qui les balaient.
+
+Fin de période d'essai donc. Même vécu que J. 3 mois auparavant, il n'y avait pas d'autres personnes nouvellement recrutées en CDI.
 
 L'ensemble de mes *feedback* récoltés pendant les 3 mois, anonymisés :
 

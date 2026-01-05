@@ -85,6 +85,8 @@ Je pense sincèrement avoir tout donné pendant ces 3 mois. Le manque d'humanit�
 
 Fin de période d'essai donc et direction le chômage. Même vécu que J. 3 mois auparavant, il n'y avait pas d'autres personnes nouvellement recrutées en CDI. *Engager la personne me précédant puis m'engager successivement pour briser de nouveau la période d'essai ? Une manière d'entrer un chiffre dans la case "recrutement" qui sera analysée par les quelques détenteurs d'action Wavestone qui lisent encore le rapport d'activité ?*
 
+J'avais vu passer un tweet d'un actionnaire Wavestone qui exprimait qu'il s'agit d'une des seules entreprises où l'on peut ressentir à tous les étages le niveau d'exigence du PDG. Ou quand les couches d'exigences superposées forment un non-sens constant.
+
 L'ensemble de mes *feedback* récoltés pendant les 3 mois, anonymisés :
 
 <embed src="/img/feedback_Wavestone.pdf" width="100%" height="500px" type="application/pdf">

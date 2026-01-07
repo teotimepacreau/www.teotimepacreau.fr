@@ -33,7 +33,7 @@ Nicolas reçoit ce mail de ce qu’il pense être le client :
 
 Il transfère donc le mail à Martin :
 
-![Capture d'écran du même mail transféré par Nicolas à Martin : Nicolas ajoute "j'ai reçu un mail pour toi, peux-tu répondre au client c'est urgent"](/img/email_kobold_1.png "Capture d'écran du même mail transféré par Nicolas à Martin")
+![Capture d'écran du même mail transféré par Nicolas à Martin : Nicolas ajoute "j'ai reçu un mail pour toi, peux-tu répondre au client c'est urgent"](/img/email_kobold_2.png "Capture d'écran du même mail transféré par Nicolas à Martin")
 
 Martin reçoit pourtant ce mail transféré par Nicolas :
 

@@ -115,6 +115,12 @@
                 "_type": "rss"
             },
             {
+                "_title": "Clay Parker Jones",
+                "_xmlUrl": "https://www.cpj.fyi/rss/",
+                "_htmlUrl": "https://www.cpj.fyi/",
+                "_type": "rss"
+            },
+            {
                 "_title": "Dave Rupert",
                 "_text": "daverupert.com",
                 "_xmlUrl": "https://daverupert.com/atom.xml",
@@ -392,6 +398,12 @@
                 "_text": "Own Your Web",
                 "_xmlUrl": "https://buttondown.email/ownyourweb/rss",
                 "_htmlUrl": "https://buttondown.email/ownyourweb",
+                "_type": "rss"
+            },
+            {
+                "_title": "Pablo Pernot",
+                "_xmlUrl": "https://pablopernot.fr/index.xml",
+                "_htmlUrl": "https://pablopernot.fr/",
                 "_type": "rss"
             },
             {

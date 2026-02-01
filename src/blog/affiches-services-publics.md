@@ -44,7 +44,7 @@ Voici un florilège d'affiches produites par la Direction Générale du Tourisme
 
 ## La mise en valeur du patrimoine architectural
 
-![Une affiche en noir et blanc contenant la photo de la façade des hospices de Beaune occupe les deux tiers de l'affiche, le mot "France" apparaît en dessous en grandes lettres capitales puis en plus petit est inscrit "Bourgogne - les hospices de Beaune - cote d'or, comissariat général du tourisme"](/img/affiches_service_public/20050205-26.jpg "Archives nationales de France; cote 20050205/26; photo de SAUVAGEOT, 1948, affiche de promotion du tourisme pour les hospices de Beaune")
+![Une affiche en noir et blanc contenant la photo de la façade des hospices de Beaune occupe les deux tiers de l'affiche, le mot "France" apparaît en dessous en grandes lettres capitales puis en plus petit est inscrit "Bourgogne - les hospices de Beaune - cote d'or, commissariat général du tourisme"](/img/affiches_service_public/20050205-26.jpg "Archives nationales de France; cote 20050205/26; photo de SAUVAGEOT, 1948, affiche de promotion du tourisme pour les hospices de Beaune")
 
 ![Une affiche contenant la photo du château de Chenonceau occupe les deux tiers de l'affiche, le mot "France" apparaît en dessous en grandes lettres capitales puis en plus petit est inscrit "chateaux de la Loire - Chenonceau"](/img/affiches_service_public/20050205-83.jpg "Archives nationales de France; cote 20050205/83; photo de Patrice MOLINARD, 1951, affiche de promotion du tourisme pour le chateau de Chenonceau")
 

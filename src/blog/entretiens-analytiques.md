@@ -1,0 +1,141 @@
+---
+title: "Mener de bons entretiens analytiques"
+type: "Article"
+date: '2026-02-07'
+tags: 
+  - 'Consulting'
+layout: blogpost_layout.njk
+eleventyComputed:
+  meta:
+    site:
+      name: "{{ metadata.title }}"
+      description: "{{ metadata.description }}"
+      url: "{{ metadata.url }}"
+    title: "{{ title }}"
+    description: "{{ description }}"
+    image:
+      src: "{% if image %}{{ metadata.url }}{{ image }}{% endif %}"
+    author:
+      name: "Teotime Pacreau"
+    published: "{{ date }}"
+---
+
+Pour récolter la matière nécessaire à la résolution de problèmes, un outil pertinent issu des sciences sociales est l'entretien analytique. Il permet de construire un consensus autour du problème et de cadrer la recherche.
+
+## Conceptualisation préalable
+
+Avant d'engager des entretiens, il est nécessaire de poser les objectifs de la recherche par entretien : *à quelle problématique la recherche essaie de répondre ?* Cela aidera grandement pour circonscrire le périmètre des questions et faciliter la production d'*insights* à l’issu de l’analyse des entretiens.
+On a donc besoin de :
+
+- calibrer la.les questions à laquelle la recherche essaie de répondre pour qu’elle ne soit pas trop vaste
+- flécher des thématiques à investiguer pour répondre à cette.ces problématique.s
+
+On définit ensuite le panel des personnes à interviewer en fonction de la problématique recherchée.
+
+### Approche pour la planification des entretiens
+
+Ce que l’on souhaite c’est accumuler les *insights* et réduire la redondance d’informations. Si l’on interviewe par exemple 6 personnes du même rôle l’idée est de ne pas poser à chaque fois les mêmes questions, on peut très bien se concentrer sur une thématique de la problématique par interview.
+
+## Construire le guide d’entretien
+
+Pour s'assurer que les entretiens permettront de répondre aux thématiques recherchées, on peut construire un guide d'entretien : celui-ci permet de fixer les questions à l'avance afin de cadrer l'échange. Il existe différents types d'entretiens structurés, semi-structurés, libres pour lesquels on choisira ou non d'utiliser un guide d'entretien.
+
+Il est utile de procéder à un ordre de question en entonnoir : on questionne en partant du plus général vers le plus spécifique pour que l'interviewé apporte le contexte nécessaire en entrée d'entretien afin que l'intervieweur puisse être challengeant sur les questions plus spécifiques.
+Numéroter chaque question pour pouvoir référencer facilement les réponses en prise de notes est pratique.
+Titrer pour soi les catégories de questions permet à l'intervieweur de retrouver plus rapidement en entretien la thématique de la question à venir.
+On essaie d'être le plus neutre possible dans les questios posées avec un soin particulier pour ne pas influencer les réponses via des biais qui se ressentent dans les questions.
+On préférera toujours poser des questions ouvertes plutôt que des questions formés pour inciter l'interviewé à justifier ses réponses.
+
+Voici un exemple de guide d'entretien constitué par mes soins dont la forme visuelle répondait à un besoin de pouvoir potentiellement être distribué pour certains interlocuteurs sans avoir à mener d'entretien, aujourd'hui je recommenderai de numéroter les questions pour s'y référer plus facilement.
+
+![Une guide d'entretien avec cinq catégories de questions numérotées, on y retrouve des blocs tels que l'identité de la personne interviewée, un moderato pour donner des consignes à l'intervieweur, un corps de questions rangées par catégories et à enbranchements"](/img/guide_entretien1.png "Guide d'entretien orienté 'visuel' pour être approprié par un participant sans intervieweur")
+
+![Une guide d'entretien avec cinq catégories de questions numérotées, on y retrouve des blocs tels que l'identité de la personne interviewée, un moderato pour donner des consignes à l'intervieweur, un corps de questions rangées par catégories et à enbranchements"](/img/guide_entretien2.png "Guide d'entretien orienté 'visuel' pour être approprié par un participant sans intervieweur")
+
+### Exemple de questions par objectif
+
+**Comprendre le contexte** :
+
+- Processus d’activité dans lesquelles la personne joue un rôle
+- Informations et outils utilisés
+- Choses que la personne produit
+- Décisions dont la personne est responsable
+- Interlocuteurs quotidiens / hebdomadaire
+- Difficultés auxquelles la personne fait face
+- Séquences d’évènement pour aboutir à un résultat
+- Liens nécessaires pour que le système fonctionne
+- Demander un “tour”: organisation, outil, rituel, ou processus qui affecte la perspective du participant
+
+**Comprendre les tâches** :
+
+- “Quelles sont toutes les choses que tu dois faire pour accomplir …”
+- “Montre moi les étapes, pour accomplir…”
+
+**Identifier les problèmes et pain points** :
+
+- “Comment ce problème t’impact toi ?”
+- ”Comment as-tu réussi à résoudre / contourner ce problème ?”
+- “Quelle est la chose la plus difficle / frustrante à propos de …”
+
+**Se rappeler du passé / anticiper le futur** :
+
+- “Si tu essaies de te rappeler cette situation où tu…, qu’as-tu fait ?”
+- “Décrit moi la situation idéale…”
+
+**Représenter** :
+
+- Demander à la personne de dessiner le processus pour l’expliquer
+
+**Se projeter/réagir** :
+
+- “Qu’en dirais tes collègues ?”
+- “La semaine dernière j’ai interviewé des personnes qui ont dit … Que penses-tu de cette idée / que ressens-tu à propos de cette approche ?
+
+### Amélioration continue du guide d’entretien
+
+A partir du constat issu des interviews précédentes, on affine le guide d’entretien.
+
+### A proscrire
+
+- Multiples questions imbriquées dans une question : le participant aura tendance à ne répondre qu'à la dernière question
+- Recommandations / exposition de point de vue dans une question
+- Enchaîner les “pourquoi ?” peut être mal reçu par la personne, pour atteindre le même but on peut plutôt dire “Qu’essaies-tu d’atteindre quand tu…?” or “Peux-tu expliquer la raison/valeur de …?”
+
+## Pendant l’entretien
+
+- Il est préférable de prendre les notes sur papier pour la vélocité de prise de note et pour éviter l’effet “barrière” d'un l’ordinateur ouvert entre l'intervieweur et l'interviewé
+- Pour un entretien en physique : se placer de biais et non face à la personne permet d'éviter des souvenirs implicites d'entretiens liés à un niveau hiérarchique, on veut plutôt créer implicitement une atmosphère propice à la discussion
+- Orienter l’échange sur des exemples réels, éviter de se demander comment les choses “devraient” être
+- Ne pas donner de recommandations lorsque l'on essaie de rebondir sur la réponse donnée par le participant
+- Lors d’un entretien, il est facile d’avoir l’impression que l’on comprend tout ce que l’on entend. Essayer de challenger dans son esprit les éléments partagés par l’interviewé permet de creuser en profondeur : “Sais-je pourquoi la personne dit cela ?” “Que veut dire exactement la personne quand elle me dit ça ?”
+
+### En introduction
+
+Dire :
+
+- Le contexte de la mission
+- Rappeler l’objectif de l’entretien et sa durée
+- Que la personne est en contrôle de l’entretien, donc si elle préfère ne pas répondre à une question, prendre une pause à n’importe quel moment ou ne souhaite plus participer, elle le peut
+- Comment l’information captée sera utilisée
+- Informer le participant de mon niveau de connaissance de son activité : périmètre de connaissance de ce qu’il produit…
+
+### En fin d’entretien
+
+- Remercier pour le temps passé et rappeler la valeur de la contribution de la personne
+- Demander s’il y a quelque chose que la personne aimerait ajouter et si la personne souhaite poser des questions sur le projet en cours
+- Demander si la personne est d’accord pour être contactée a posteriori pour des demandes de précision
+- Demander un retour à chaud sur l’entretien
+
+## Post-entretien
+
+- Envoyer le CR à la personne à l’issu de l’entretien en mentionnant le fait de rester disponible pour des demandes de modification
+
+## Sources
+
+<https://stephaniewalter.design/blog/a-cheatsheet-for-user-interview-and-follow-ups-questions/>
+<https://www.smashingmagazine.com/2020/06/user-interview-questions/>
+<https://guides.18f.org/methods/discover/stakeholder-and-user-interviews/>
+<https://digital.gov/guides/hcd/discovery-concepts/plan-research#content-start>
+<https://www.gov.uk/service-manual/user-research/using-in-depth-interviews>
+<https://vaughtan.org/betterinterviews>
+<https://mazedesign.notion.site/dd213d94bcf046738434f93ce8152ab6?v=d05d4225bd8142dbb990e047e6d2ab24>

@@ -5,7 +5,7 @@ date: '2023-11-10'
 description: "Pourquoi SQLite mérite d'être considéré à sa juste valeur pour les projets de développement web."
 tags: 
   - 'SQL'
-  - 'Backend'
+  - 'WebDev'
   - 'SQLite'
 layout: blogpost_layout.njk
 eleventyComputed:

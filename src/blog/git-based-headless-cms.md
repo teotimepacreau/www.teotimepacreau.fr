@@ -4,7 +4,7 @@ type: "Article"
 date: "2024-01-31"
 description: "Pourquoi utiliser un CMS ? Quel est l'intérêt d'un CMS Headless qui se base sur Git ? Quelles solutions sont à disposition ?"
 tags: 
-  - 'CMS'
+  - 'WebDev'
   - 'Git'
 layout: blogpost_layout.njk
 eleventyComputed:

@@ -1,5 +1,5 @@
 ---
-title: "Mener de bons entretiens analytiques"
+title: "Préparer et mener de bons entretiens analytiques"
 type: "Article"
 date: '2026-02-07'
 tags: 
@@ -133,9 +133,15 @@ Dire :
 ## Sources
 
 <https://stephaniewalter.design/blog/a-cheatsheet-for-user-interview-and-follow-ups-questions/>
+
 <https://www.smashingmagazine.com/2020/06/user-interview-questions/>
+
 <https://guides.18f.org/methods/discover/stakeholder-and-user-interviews/>
+
 <https://digital.gov/guides/hcd/discovery-concepts/plan-research#content-start>
+
 <https://www.gov.uk/service-manual/user-research/using-in-depth-interviews>
+
 <https://vaughtan.org/betterinterviews>
+
 <https://mazedesign.notion.site/dd213d94bcf046738434f93ce8152ab6?v=d05d4225bd8142dbb990e047e6d2ab24>

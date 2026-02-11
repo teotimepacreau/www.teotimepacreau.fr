@@ -3,6 +3,7 @@ title: "Comprendre l'évolution des prix de l'immobilier en France"
 description: "Quelles données et ressources retenir pour anticiper les évolutions de l'immobilier ancien en France"
 type: "Article"
 date: '2025-03-12'
+updatedate: '2026-02-11'
 tags: 
   - 'Immobilier'
 layout: blogpost_layout.njk
@@ -153,7 +154,20 @@ Son constat est sans appel : "au troisième trimestre 2024 le pouvoir d'achat im
 
 Si l'on compare avec le pic de 2022, les volumes ont chutés de 1200000 à 750000 unités de logements anciens vendues par an. Les prix ont amorcés une diminution depuis ce pic.
 
-## La fausse solution de "construire des logements en masse pour faire baisser les prix"
+## Mais pourquoi le pouvoir d'achat immobilier s'est effondré en 25 ans ?
+
+L'effet le plus dévastateur pour le pouvoir d'achat immobilier a été l'effet inflationniste de l'allongement de la durée des prêts immobiliers.
+
+![Deux graphiques des années 1965 à 2025 : le premier représente la durée moyenne des emprunts immobilier, on y observe un accroîssement de + 6 ans entre 2000 et 2007. Le second représent l'évolution des taux d'intérêt des prêts immobiliers et l'inflation, on observe que les taux d'intérêt ont lentement diminués de 6% net d'inflation en 1986 à 3% en 2025](/img/augmentation_duree_moyenne_pret_immobilier.png "source [Igedd](https://www.cgedd.fr/prix-immobilier-presentation.pdf)")
+
+Entre 2000 et 2007 la durée moyenne des emprunts immobilier a connu un accroîssement de + 6 ans. D'une durée moyenne de 15 ans en 2000 à 21 ans en 2007. L'allongement de la durée de la durée des prêts a en très grande partie permis de solvabiliser toujours plus la demande, donnant aux vendeurs tout loisir d'augmenter leurs prix puisque l'acheteur qui proposait un prix permis par un prêt immobilier de 15 ans se voyait damer le pion par le vendeur qui proposait un prix permis par un prêt immobilier de 20 ans. C'est un jeu à *roue crantée* où il est très difficile de faire marche arrière : la durée de pret solvabilise la demande jusqu'au plafond de verre encadré par la loi des 25 ans.
+Nous avons mis 25 ans à atteindre quasiment le plafond de la durée maximale des emprunts immobiliers tel qu'encadré par la loi française : 25 ans.
+
+![Graphique de la durée moyenne des prêts à l’habitat pour l’acquisition d’une résidence principale par les primo-accédants, en année de 2017 à fin 2025 : nous sommes passés de 22.3 ans en 2017 à 23.9 ans en Décembre 2025](/img/duree_moyenne_prets_immobiliers.png "Graphique de la durée moyenne des prêts à l’habitat pour l’acquisition d’une résidence principale par les primo-accédants, en année de 2017 à fin 2025 : nous sommes passés de 22.3 ans en 2017 à 23.9 ans en Décembre 2025 [source](https://webstat.banque-france.fr/fr/catalogue/mir1/MIR1.M.FR.R.A22RP.A.D.A.2254P.EUR.N)")
+
+![Quatre graphiques de 1995 à 2025 : le premier est l'indice du prix des logements et loyers rapportés aux revenus par ménage; le second est le taux d'intérêt moyen des prêts immobiliers; le troisième est la durée d'emprunt permettant à un primo-accédant d'acheter le même logement; le quatrième est la vitesse de rotation du parc de logements](/img/effet_inflationniste_allongement_duree_prets_immobiliers.png "source [Igedd](https://www.cgedd.fr/prix-immobilier-presentation.pdf)")
+
+## Croire que "construire des logements en masse fera baisser les prix" est illusoire
 
 Déréguler les normes de construction n'abaissera pas le prix des logements neufs. L'IGEDD via Jacques Friggit estime que construire 1 million de logements n'abaisserait que de 2.5% le prix des logements anciens ([en 2024 seuls 294500 logements ont été mis en chantier](https://www.statistiques.developpement-durable.gouv.fr/construction-de-logements-resultats-fin-janvier-2025-france-entiere?rubrique=&dossier=1047)). En Février 2024, face à plusieurs sénateurs missionés sur le logement, [il indique les deux raisons qui expliquent l'envolée des prix du neuf](https://www.youtube.com/watch?v=C2OeycnbO4g) :
 
@@ -180,3 +194,4 @@ Les prix de vente sont toujours déconnectés des salaires. Des taux stagnants, 
 - [le jeu de données "Loan demand-Household, France, Quarterly" de la BCE](https://data.ecb.europa.eu/data/datasets/BLS/BLS.Q.FR.ALL.Z.H.H.F3.ZZ.D.FNET)
 - [l'indice d'évolution du prix des logements anciens se situant en zone B1, base 100 2015](https://www.insee.fr/fr/statistiques/serie/010760747)
 - [l'OAT 10 ans FR](https://webstat.banque-france.fr/fr/catalogue/fm/FM.D.FR.EUR.FR2.BB.FRMOYTEC10.HSTA)
+- [le graphique de la durée moyenne des prêts à l’habitat pour l’acquisition d’une résidence principale par les primo-accédants, en année; de la Banque de France](https://webstat.banque-france.fr/fr/catalogue/mir1/MIR1.M.FR.R.A22RP.A.D.A.2254P.EUR.N)

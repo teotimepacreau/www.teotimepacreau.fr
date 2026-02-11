@@ -14,24 +14,22 @@ pagination:
   font-variation-settings: 'opsz' 24, 'wght' 800, 'wdth' 100;
   font-size: var(--step-3); color: var(--txtlighten20);
   letter-spacing: -0.05rem;">Essais</a>
-<section aria-label="Liste des articles du blog" id="blog-article-list">
+<section aria-label="Liste des articles du blog" id="blog-articles-list">
   {% for post in paginatedposts %}
   <article>
-    <header class="blog-card-tags">
+    <header>
       {% for tag in post.data.tags %} {% set tagUrl %}/tags/{{ tag | slugify
       }}/{% endset %}
       <a
         tabindex="0"
-        class="blog-card-tags-link"
         rel="tag"
         href="{{ tagUrl | url }}"
         >{{ tag }}</a
       >
       {% endfor %}
     </header>
-    <a class="blog-card-title" href="{{post.url}}">{{ post.data.title }}</a>
+    <a href="{{post.url}}">{{ post.data.title }}</a>
     <time
-      class="tags-date"
       datetime="{{ post.data.date | date('dd LLLL yyyy') }}"
       >{{ post.data.date | date('dd LLLL yyyy') }}</time
     >

@@ -5,7 +5,7 @@ import pluginTOC from "eleventy-plugin-toc";
 import embeds from "eleventy-plugin-embed-everything";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateFr from "./src/filters/date.js";
-import rssPlugin from "@11ty/eleventy-plugin-rss";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import imgMagnifier from "eleventy-plugin-img-magnifier";
 
 // OPENGRAPH IMAGES REQUIREMENTS
@@ -127,7 +127,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPlugin(imgMagnifier)
 
   // RSS
-  eleventyConfig.addPlugin(rssPlugin, {
+  eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
     outputPath: "/feed/feed.xml",
     collection: {
@@ -142,7 +142,7 @@ export default function(eleventyConfig) {
         name: "Teotime Pacreau",
         email: "teotime.pac@outlook.fr"
       },
-      icon: "/favicon/favicon.svg"
+      icon: "https://www.teotimepacreau.fr/favicon/favicon.svg"
     }
   });
 

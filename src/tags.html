@@ -6,7 +6,8 @@ pagination:
   data: collections
   size: 1
   alias: tag
-  addAllPagesToCollections: true
+  filter:
+    - all #prevents /tag/all pages with waste
 permalink: /tags/{{tag | slugify }}/index.html
 eleventyComputed:
   title: Posts taggés avec {{ tag }}

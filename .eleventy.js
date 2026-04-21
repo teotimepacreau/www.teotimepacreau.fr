@@ -47,16 +47,6 @@ export default function(eleventyConfig) {
     return articles.slice(0, 3);
   });
 
-  // CREER L'ARRAY DE TAGS
-  eleventyConfig.addCollection("tagList", function (collection) {
-    let tagSet = new Set();
-    collection.getAll().forEach((item) => {
-      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
-    });
-
-    return [...tagSet];
-  });
-  
   //  SHORTCODE MISE EN FORME BLOC DE CODES
   eleventyConfig.addPlugin(syntaxHighlight);
 

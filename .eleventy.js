@@ -4,9 +4,9 @@ import markdownItAnchor from "markdown-it-anchor";
 import pluginTOC from "eleventy-plugin-toc";
 import embeds from "eleventy-plugin-embed-everything";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import dateFr from "./src/filters/date.js"
-import { feedPlugin } from "@11ty/eleventy-plugin-rss"
-import imgMagnifier from "eleventy-plugin-img-magnifier"
+import dateFr from "./src/filters/date.js";
+import rssPlugin from "@11ty/eleventy-plugin-rss";
+import imgMagnifier from "eleventy-plugin-img-magnifier";
 
 // OPENGRAPH IMAGES REQUIREMENTS
 import fs from "node:fs";
@@ -127,7 +127,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPlugin(imgMagnifier)
 
   // RSS
-  eleventyConfig.addPlugin(feedPlugin, {
+  eleventyConfig.addPlugin(rssPlugin, {
     type: "atom",
     outputPath: "/feed/feed.xml",
     collection: {
@@ -139,9 +139,10 @@ export default function(eleventyConfig) {
       subtitle: "Blog et essais",
       base: "https://www.teotimepacreau.fr/",
       author: {
-        name: "Téotime Pacreau",
+        name: "Teotime Pacreau",
         email: "teotime.pac@outlook.fr"
-      }
+      },
+      icon: "/favicon/favicon.svg"
     }
   });
 

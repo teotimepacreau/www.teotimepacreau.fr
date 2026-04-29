@@ -1407,8 +1407,8 @@ tr {
     width: 60dvw;
     padding: calc(3 * var(--rythme)) var(--rythme);
     border: none;
-    background-color: hsla(0, 0%, 42%, 0.3);
-    backdrop-filter: blur(45px);
+    background-color: oklch(from var(--bg) l c h / 50%);
+    backdrop-filter: blur(55px);
     transition: transform .1s ease-out, opacity .1s ease-out, display .1s ease-out, overlay .1s ease-out;
     transition-behavior: allow-discrete;
     /*POPOVER IN EXIT STATE */
@@ -1437,12 +1437,14 @@ tr {
 
   #mobile-navigation li {
     border-right: none;
-    border-bottom: 2px solid var(--txt);
     padding-block: calc(0.125 * var(--rythme));
     font-family: Inter-Variable, Helvetica, sans-serif;
     padding-left: 0;
-    font-weight: 600;
-    color: var(--txt);
+    & a {
+      font-variation-settings: "opsz" 14, "wght" 600;
+      font-size: var(--step-2);
+      color: var(--txt);
+    }
   }
   /* FIN HAMBURGER MENU */
 

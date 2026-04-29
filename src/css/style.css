@@ -846,8 +846,10 @@ a:hover {
   & > nav {
   grid-column: 1 / 2;
   }
-  & > header, nav {
-  max-width: 15dvw;
+  @media (min-width: 1000px){
+    & > header, nav {
+    max-width: 15dvw;
+    }
   }
 }
 

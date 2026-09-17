@@ -203,6 +203,10 @@ hr {
 }
 
 /*----TYPOGRAPHIE------*/
+
+body {
+  font-size-adjust: 0.544
+}
 h1, h2, h3 {
   font-family: BricolageGrotesque, sans-serif;
   font-variant-numeric: oldstyle-nums;

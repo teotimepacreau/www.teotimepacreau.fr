@@ -1,7 +1,6 @@
 ---
 title: "Mieux distinguer les instructions par rapport aux skills pour avoir des agents de code plus efficaces"
 description: "Les instructions et les skills permettent tout deux de donner du contexte aux agents de code. Connaître leurs rôles respectifs et bien les structurer."
-eleventyExcludeFromCollections: true
 type: "Article"
 date: '2026-09-22'
 tags: 

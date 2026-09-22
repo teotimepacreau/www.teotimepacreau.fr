@@ -22,9 +22,11 @@ eleventyComputed:
       name: "Teotime Pacreau"
     published: "{{ date }}"
 ---
+*[**DISCLAIMER**] Cet article est centré sur l'écosystème Copilot mais il s'agit de standards applicables à tous les fournisseurs d'agent.*
+
 ## Instructions
 
-Fournissent à Copilot le contexte de ce que l'on construit et décrivent les standards que l'on attend  pour influencer la façon dont l'IA générera le code.
+Les instructions fournissent à l'agent le contexte de ce que l'on construit et décrivent les standards que l'on attend  pour influencer la façon dont l'IA générera le code.
 L'intention est plutôt est plutôt d'être spécifique au produit.
 Les `instructions` n'ont pas besoin d'être spécifiées dans les intéractions avec l'agent, elles conditionnent le comportement de l'agent silencieusement.
 

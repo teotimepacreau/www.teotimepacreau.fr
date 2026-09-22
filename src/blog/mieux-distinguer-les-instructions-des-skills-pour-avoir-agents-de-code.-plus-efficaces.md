@@ -46,7 +46,7 @@ Exemple de contenu :
 #### Applicable à un chemin de dossier / à des extensions de fichiers spécifiques
 
 `./github/*.instructions.md`
-Permet de cibler des dossiers spécifiques du repo ou/et des types de fichiers spécifiques. A utiliser si nous avons des exigences particulière pour certains fichiers par exemple.
+Permet de cibler des dossiers spécifiques du repo ou/et des extensions de fichiers spécifiques (voir les règles de [syntax glob](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions#creating-path-specific-custom-instructions) applicables). A utiliser si nous avons des exigences particulières pour certains fichiers par exemple.
 
 Utile pour :
 
@@ -59,7 +59,7 @@ Le frontmatter permet de restreindre l'application à un certain type de fichier
 ---
 name: 'Python Standards'
 description: 'Coding conventions for Python files'
-applyTo: 'assignments/**/*.py' (voir les règles de [syntax glob](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions#creating-path-specific-custom-instructions) si l'on souhaite restreindre l'instruction à certains dossiers/extensions de fichiers)
+applyTo: 'assignments/**/*.py'
 ---
 abcd
 ```

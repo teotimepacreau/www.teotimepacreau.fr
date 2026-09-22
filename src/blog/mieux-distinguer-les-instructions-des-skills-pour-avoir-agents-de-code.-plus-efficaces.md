@@ -26,9 +26,11 @@ eleventyComputed:
 
 ## Instructions
 
-Les instructions fournissent à l'agent le contexte de ce que l'on construit et décrivent les standards que l'on attend  pour influencer la façon dont l'IA générera le code.
-L'intention est plutôt est plutôt d'être spécifique au produit.
-Les `instructions` n'ont pas besoin d'être spécifiées dans les intéractions avec l'agent, elles conditionnent le comportement de l'agent silencieusement.
+Les `instructions` fournissent à l'agent le contexte de ce que l'on construit et décrivent les standards que l'on attend pour influencer la façon dont l'IA générera le code.
+
+L'intention, quand on rédige l'`instruction`, est plutôt d'être spécifique au produit en détaillant les attendus du projet.
+
+Les `instructions` n'ont pas besoin d'être spécifiées dans les intéractions entre l'usager et l'agent, elles conditionnent silencieusement le comportement de l'agent.
 
 ### Niveau repository
 
@@ -47,8 +49,7 @@ Exemple de contenu :
 
 #### Applicable à un chemin de dossier / à des extensions de fichiers spécifiques
 
-`./github/*.instructions.md`
-Permet de cibler des dossiers spécifiques du repo ou/et des extensions de fichiers spécifiques (voir les règles de [syntax glob](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions#creating-path-specific-custom-instructions) applicables). A utiliser si nous avons des exigences particulières pour certains fichiers par exemple.
+`./github/*.instructions.md` permet de cibler des dossiers spécifiques du repo ou/et des extensions de fichiers spécifiques (voir les règles de [syntax glob](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions#creating-path-specific-custom-instructions) applicables). A utiliser si nous avons des exigences particulières pour certains fichiers par exemple.
 
 Utile pour :
 
@@ -89,7 +90,9 @@ applyTo:
 ## Skills
 
 Les skills équipent l'agent pour actionner, à la demande, des tâches individuelles.
-Quand une tâche demandée à l'agent match la description du skill fournit par l'usager alors le skill est appliqué automatiquement. Le skill, à la différence de l'instruction, requiert une invocation explicite par l'utilisateur.
+
+
+Quand une tâche demandée à l'agent match la description du skill fournit par l'usager alors le skill est appliqué automatiquement. Le skill, à la différence de l'instruction, requiert une invocation explicite par l'utilisateur pour être pris en compte.
 
 L'intention est de ne pas être spécifique au produit, mais plutôt d'avoir des skills ré-utilisables à d'autres produits.
 
@@ -120,14 +123,18 @@ description: (une description particulièrement complète pour que l'agent puiss
 
 ## Les références
 [references/testing-patterns.md](references/testing-patterns.md)
-````
+```
 
 La description du skill dans le frontmatter est particulièrement critique pour que l'agent détecte avec le succès le moment opportun pour déclencher le skill.
 
 ## Source
 
 <https://awesome-copilot.github.com/learning-hub/what-are-agents-skills-instructions/>
+
 <https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions>
+
 <https://code.visualstudio.com/docs/agent-customization/custom-instructions>
+
 <https://awesome-copilot.github.com/learning-hub/defining-custom-instructions/>
+
 <https://awesome-copilot.github.com/learning-hub/creating-effectiv>

@@ -25,6 +25,8 @@ eleventyComputed:
 
 ### Statistiques
 
+![Thumbnail youtube figuratif des projections macroeconomiques de la Banque de France](/img/projections_macroeconomique.png "Projections macroeconomiques de la Banque de France")
+
 [Projections macroéconomiques de la Banque de France - Publication trimestrielle](https://www.banque-france.fr/fr/publications-et-statistiques/publications/publications-economiques-et-financieres/projections-macroeconomiques)
 Cette projection partage une prévision à deux ans des indicateurs suivants :
 - croissance du PIB annuel
@@ -34,6 +36,7 @@ Cette projection partage une prévision à deux ans des indicateurs suivants :
 - croissance de l'investissement des entreprises
 - taux de marge des entreprises non financières
 
+</br>
 
 [Panorama des prêts à l'habitat des ménages de la Banque de France - Statistiques et observations mensuelles](https://www.banque-france.fr/fr/publications-et-statistiques/statistiques/panorama-des-prets-lhabitat-des-menages-juillet-2026)
 Je m'attarde uniquement sur :
@@ -43,6 +46,7 @@ Je m'attarde uniquement sur :
 
 [Je partage ici ma méthode complète et les jeux de données qui me permettent de suivre l'évolution du marché immobilier Français](https://www.teotimepacreau.fr/blog/comprendre-levolution-des-prix-immobiliers-en-france/)
 
+</br>
 
 [L'évolution annuelle de l'IPC - série indicielle mensuelle - INSEE](https://www.insee.fr/fr/statistiques/serie/011814133)
 
@@ -54,10 +58,14 @@ L'Indice des Prix à la Consommation Harmonisé est un mode de calcul poussé pa
 
 [Les articles de la Direction Générale du Trésor du Ministère de l'Economie.](https://www.tresor.economie.gouv.fr/Articles) Les flashs conjonctures trimestriels sur l'économie Française notamment sont très éclairant.
 
+</br>
+
 [Le Blog de l’Observatoire Français des Conjonctures Economiques, seulement pour les posts taggés "France"](https://www.ofce.fr/blog2024/#category=France) fournit des éclaircissements sur des sous thèmes macroéconomiques; à l'image de [cet article très intéressant qui explique que la France affiche pour la première fois en vingt ans un solde commercial positif avec le reste de l'UE](https://www.ofce.fr/blog2024/fr/2026/20261006_ea_eg/).
 A noter que l'OFCE et le CEPII fusionnent à partir de Septembre 2026 pour former l'[Institut Français d'Economie](https://ife.eco/).
 
 ### Scénarios de projection macroéconomique
+
+![Couverture du Rapport d'Avancement Annuel (RAA) sur le PSMT (Plan budgétaire Structurel à Moyen Terme): titre RAA 2026 sur fond vert](/img/RAA.png "RAA")
 
 Le [Rapport d'Avancement Annuel (RAA) sur le PSMT (Plan budgétaire Structurel à Moyen Terme)](https://www.tresor.economie.gouv.fr/Articles/2026/04/22/publication-du-rapport-d-avancement-annuel-2026) rend compte de la trajectoire budgétaire de l'Etat Français aux autorités de l'Union Européenne. - Rapport annuel publié au mois d'Avril - rédigé par la DG Trésor du Ministère de l'Economie.
 Je consulte uniquement les parties suivantes :
@@ -67,7 +75,11 @@ Je consulte uniquement les parties suivantes :
 - l'état des finances publiques
 - les grandes orientations des réformes de politique économique à venir
 
-Le [Rapport Economique Social et Financier](https://www.tresor.economie.gouv.fr/Articles/2025/10/15/le-rapport-economique-social-et-financier-plf-pour-2026-est-publie), est joint au projet de loi de finances lors de son dépôt chaque automne.
+</br>
+
+![Couverture du Rapport Economique Social et Financier : titre RESF annexe au projet de loi de finances ](/img/RESF.png "RESF")
+
+Le [Rapport Economique Social et Financier](https://www.tresor.economie.gouv.fr/Articles/2026/10/06/le-rapport-economique-social-et-financier-resf-2027-est-publie), est joint au projet de loi de finances lors de son dépôt chaque automne.
 Je lis uniquement entre les pages 40 et 60 via la partie "Perspectives Economiques" qui détaille :
 
 - la situation économique mondiale
@@ -78,9 +90,13 @@ Je lis uniquement entre les pages 40 et 60 via la partie "Perspectives Economiqu
 - l'inflation et les salaires
 - la croissance potentielle et un scénario à moyen terme
 
+</br>
+
 La département des Affaires Economiques et Financières de la Commission Européenne publie annuellement, au printemps, une projection macroéonomique à deux ans pour tous ses états membres, [la France bénéfice d'une page dédiée](https://economy-finance.ec.europa.eu/economic-surveillance-eu-member-states/country-pages-including-country-reports/france/economic-forecast-france_en?prefLang=fr).
 
 ## Europe
+
+![Couverture du bulletin économique de la BCE : titre Economic Bulletin avec le numérotage de l'issue et le logo de la BCE](/img/RESF.png "RESF")
 
 [Le bulletin économique de la BCE - publication mensuelle](https://www.ecb.europa.eu/press/economic-bulletin/html/index.en.html)
 Il présente l'information économique et monétaire publique sur laquelle se base le conseil des gouveneurs de la BCE pour décider de l'évolution du taux directeur de la BCE.
@@ -89,6 +105,8 @@ En terme de contenu, la partie introductive de résumé suffit car elle comporte
 ### Statistiques
 
 Le dashboard de <https://l0g.fr/> dédié à la macro Europe <https://euro.l0g.fr/> se source uniquement sur des données sur service public européen et consolide en surcouche un score de risque au regard des indicateurs relevés.
+
+</br>
 
 La [série de publications thématiques "Key Figures" d'Eurostat](https://ec.europa.eu/eurostat/publications/key-figures) est utile pour comparer les situations entre les pays de l'UE.
 

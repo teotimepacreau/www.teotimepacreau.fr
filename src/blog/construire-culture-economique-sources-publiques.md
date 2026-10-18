@@ -25,10 +25,11 @@ eleventyComputed:
 
 ### Statistiques
 
-![Thumbnail youtube figuratif des projections macroeconomiques de la Banque de France](/img/projections_macroeconomique.png "Projections macroeconomiques de la Banque de France")
+![Thumbnail youtube figuratif des projections macroeconomiques de la Banque de France](/img/projections_macroeconomique.jpg "Projections macroeconomiques de la Banque de France")
 
 [Projections macroéconomiques de la Banque de France - Publication trimestrielle](https://www.banque-france.fr/fr/publications-et-statistiques/publications/publications-economiques-et-financieres/projections-macroeconomiques)
 Cette projection partage une prévision à deux ans des indicateurs suivants :
+
 - croissance du PIB annuel
 - inflation
 - taux de chômage
@@ -96,7 +97,7 @@ La département des Affaires Economiques et Financières de la Commission Europ�
 
 ## Europe
 
-![Couverture du bulletin économique de la BCE : titre Economic Bulletin avec le numérotage de l'issue et le logo de la BCE](/img/RESF.png "RESF")
+![Couverture du bulletin économique de la BCE : titre Economic Bulletin avec le numérotage de l'issue et le logo de la BCE](/img/ecb.png "RESF")
 
 [Le bulletin économique de la BCE - publication mensuelle](https://www.ecb.europa.eu/press/economic-bulletin/html/index.en.html)
 Il présente l'information économique et monétaire publique sur laquelle se base le conseil des gouveneurs de la BCE pour décider de l'évolution du taux directeur de la BCE.

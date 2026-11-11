@@ -9,13 +9,6 @@
                 "_type": "rss"
             },
             {
-                "_title": "Cory LaViska",
-                "_text": "A Beautiful Site",
-                "_xmlUrl": "https://www.abeautifulsite.net/feed/feed.xml",
-                "_htmlUrl": "https://www.abeautifulsite.net/",
-                "_type": "rss"
-            },
-            {
                 "_title": "Accent grave",
                 "_text": "Accentgrave ~ log",
                 "_xmlUrl": "https://accentgrave.net/log/flux.xml",
@@ -71,26 +64,11 @@
                 "_htmlUrl": "https://bertrandkeller.info/",
                 "_type": "rss"
             },
-            
-            {
-                "_title": "Jérémy Buget",
-                "_text": "Blog on Jérémy Buget",
-                "_xmlUrl": "https://jbuget.fr/posts/index.xml",
-                "_htmlUrl": "https://jbuget.fr/posts/",
-                "_type": "rss"
-            },
             {
                 "_title": "Bramus",
                 "_text": "Bram.us",
                 "_xmlUrl": "https://www.bram.us/feed/",
                 "_htmlUrl": "https://www.bram.us",
-                "_type": "rss"
-            },
-            {
-                "_title": "Romain Chaffal",
-                "_text": "Cahier Jaune | Blog",
-                "_xmlUrl": "https://cahierjaune.com/rss.xml",
-                "_htmlUrl": "https://cahierjaune.com/",
                 "_type": "rss"
             },
             {
@@ -118,6 +96,13 @@
                 "_title": "Clay Parker Jones",
                 "_xmlUrl": "https://www.cpj.fyi/rss/",
                 "_htmlUrl": "https://www.cpj.fyi/",
+                "_type": "rss"
+            },
+                        {
+                "_title": "Cory LaViska",
+                "_text": "A Beautiful Site",
+                "_xmlUrl": "https://www.abeautifulsite.net/feed/feed.xml",
+                "_htmlUrl": "https://www.abeautifulsite.net/",
                 "_type": "rss"
             },
             {
@@ -265,6 +250,13 @@
                 "_text": "Julie Blanc",
                 "_xmlUrl": "https://julie-blanc.fr/",
                 "_htmlUrl": "https://julie-blanc.fr/",
+                "_type": "rss"
+            },
+                        {
+                "_title": "Jérémy Buget",
+                "_text": "Blog on Jérémy Buget",
+                "_xmlUrl": "https://jbuget.fr/posts/index.xml",
+                "_htmlUrl": "https://jbuget.fr/posts/",
                 "_type": "rss"
             },
             {
@@ -448,7 +440,13 @@
                 "_htmlUrl": "https://robinrendle.com",
                 "_type": "rss"
             },
-            
+                        {
+                "_title": "Romain Chaffal",
+                "_text": "Cahier Jaune | Blog",
+                "_xmlUrl": "https://cahierjaune.com/rss.xml",
+                "_htmlUrl": "https://cahierjaune.com/",
+                "_type": "rss"
+            },
             {
                 "_title": "Ross Wintle",
                 "_text": "Ross Wintle",
@@ -556,8 +554,8 @@
                 "_type": "rss"
             },
             {
-                "_title": "ulfschneider.io",
-                "_text": "ulfschneider.io",
+                "_title": "Ulf Schneider",
+                "_text": "Ulf Schneider",
                 "_xmlUrl": "https://ulfschneider.io/feed.xml",
                 "_htmlUrl": "https://ulfschneider.io/",
                 "_type": "rss"

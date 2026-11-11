@@ -4,8 +4,6 @@ type: "Article"
 date: "2023-01-13"
 description: "La mesure d'impact va devenir obligatoire, des plateformes gratuites permettent de s'y préparer. Produire et partager les données à impact est incontournable pour mieux communiquer en externe, susciter l'adhésion des collaborateurs en interne et mesurer le progrès."
 tags: 
-  - "Mesure d'impact"
-  - "Entrepreneuriat"
   - "RSE"
 layout: blogpost_layout.njk
 eleventyComputed:

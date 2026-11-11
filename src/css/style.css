@@ -44,21 +44,8 @@
   --shadow: oklch(10% 0 0 / 0.2);
   --code: oklch(97% 0.005 77.44 / 0.9);
   --btnHomepage: white;
-}
-@supports (color: rgb(from white r g b)) {
-  :root {
-    --bglighten20: oklch(from var(--bg) calc(l + 10) c h / 20%);
-    --bglighten10: oklch(from var(--bg) calc(l + 10) c h / 10%);
-    --txtlighten20: oklch(from var(--txt) l c h / 50%);
-  }
-}
-
-@supports not (color: rgb(from white r g b)) {
-  :root {
-    --bglighten20: oklch(from var(--bg) calc(l + 10) c h / 20%);
-    --bglighten10: oklch(from var(--bg) calc(l + 10) c h / 10%);
-    --txtlighten20: var(--txt);
-  }
+  --bglighten20: oklch(from var(--bg) calc(l + 10) c h / 20%);
+  --bglighten10: oklch(from var(--bg) calc(l + 10) c h / 10%);
 }
 
 /*---RESET---*/
@@ -274,6 +261,11 @@ abbr {
   text-underline-offset: .2ex;
 }
 
+math {
+  font-size: var(--step-0);
+  font-family: inherit;
+}
+
 /*---LINKS---*/
 .menu a {
   text-decoration: none; /* no underline */
@@ -425,6 +417,14 @@ a:hover {
   min-height: 100dvh;
   padding-block: var(--rythme);
   padding-inline: var(--rythme);
+  display: flex;
+  flex-direction: column;
+  & main, footer {
+    max-width: 70dvw;
+  }
+  & main {
+    flex: 1;
+  }
 }
 
 #homepage-profil {
@@ -436,11 +436,6 @@ a:hover {
 #homepage-profil img {
   max-width: calc(2 * var(--rythme));
   max-height: calc(2 * var(--rythme));
-}
-
-#homepage-hero,
-.homepage-footer {
-  max-width: 70dvw;
 }
 
 #homepage-hero > section {
@@ -463,226 +458,7 @@ a:hover {
 #homepage-blog-shortlist li:not(:first-child){
   padding-block-start: calc(.25*var(--rythme));
 }
-/*---PAGE D'ACCUEIL DU SITE : SECTION PROJETS---*/
-#homepage-hero h2::after {
-  content: "";
-}
 
-.homepage-projets-titre-flexer {
-  display: flex;
-  gap: calc(0.25 * var(--rythme));
-  align-items: center;
-  justify-content: space-between;
-}
-
-.homepage-projets-titre-flexer hr {
-  flex: 1;
-  height: 1px;
-  border: none;
-  background-color: var(--shadow);
-}
-
-#homepage-projets > :nth-child(2) {
-  margin-top: var(--rythme);
-}
-
-.homepage-projets-grid-item + .homepage-projets-grid-item {
-  margin-top: calc(2*var(--rythme));
-}
-
-.homepage-projets-grid-item__right__titleanddesc span {
-  color: var(--spanProjets) !important;
-  font-size: var(--step-1) !important;
-  font-weight: 700;
-  text-wrap: balance;
-}
-.homepage-projets-grid-item__left{
-  align-content: center;
-}
-
-.homepage-projets-grid-item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--rythme);
-}
-
-.homepage-projets-grid-item__right {
-  display: flex;
-  gap: calc(.5 * var(--rythme));
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-.homepage-projets-grid-item h3 {
-  font-size: var(--step-2);
-  font-weight: 600;
-  margin-top: unset;
-}
-
-.homepage-projets-grid-item ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1ch;
-  grid-column: 2 / 3;
-}
-
-.homepage-projets-tags {
-  line-height: 1rlh;
-  list-style-type: none;
-  padding-block: 0.1ex;
-  padding-inline: 0.6ex;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--txtlighten20);
-  font-weight: 400;
-  font-size: var(--step--2);
-  opacity: .9;
-  transition: all 0.2s ease-out;
-  cursor: default;
-}
-.homepage-projets-tags:hover {
-  color: var(--accent);
-  background-color: var(--bg);
-  border-color: var(--accent);
-}
-
-.homepage-projets-grid-item span {
-  grid-column: 2 / 3;
-}
-
-/*MEDIA QUERY HOMEPAGE PROJETS FOR DESKTOP*/
-@media (width >= 1200px) {
-  .homepage-projets-grid-item {
-    grid-template-columns: 15% 85% !important;
-    gap: 0!important;
-  }
-
-  .homepage-projets-grid-item + .homepage-projets-grid-item {
-    margin-top: calc(3 * var(--rythme));
-  }
-  .homepage-projets-grid-item {
-    position: relative;
-  }
-  .homepage-projets-grid-item__left {
-    grid-column: 2 / 3;
-  }
-  .homepage-projets-grid-item__right {
-    max-width: 18dvw;
-    background-clip: padding-box;
-    border: ridge 0.1px transparent;
-    z-index: infinite;
-    position: absolute;
-    background-color: oklch(80% 0.03 220 / 40%);
-    padding-inline: calc(0.5 * var(--rythme));
-    padding-block: calc(0.25 * var(--rythme));
-    color: var(--bg);
-    top: 8dvh;
-    left: 0;
-    border-radius: var(--border-radius);
-    box-shadow: 1px 1px 5px 0px var(--shadow);
-    backdrop-filter: blur(30px);
-    color: var(--txt);
-  }
-  .homepage-projets-tags {
-    border-color: var(--bg) !important;
-    background-color: var(--bg);
-    color: var(--txt);
-    font-size: var(--step--2) !important;
-    font-weight: 400 !important;
-    padding-block: calc(0.05 * var(--rythme));
-    opacity: 1 !important;
-  }
-}
-/*CONTAINER QUERY HOMEPAGE PROJETS FOR MOBILE: ;*/
-@container (width <= 600px) {
-  .homepage-projets-grid-item {
-    display: flex;
-    flex-direction: column;
-    gap: calc(.5*var(--rythme));
-    & img {
-      width: 100%;
-    }
-  }
-  .homepage-projets-grid-item__right {
-    gap: calc(.25*var(--rythme));
-  }
-}
-
-/*---PAGE D'ACCUEIL DU SITE, SECTION PROJET GSAP ANIM---*/
-.homepage-projets-hidden {
-  transform: translateX(-10dvw);
-  opacity: 0;
-  transition: all .2s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-/*---PAGE D'ACCUEIL DU SITE : SECTION SERVICES---*/
-#homepage-services-grid {
-  margin-block: var(--rythme);
-  display: grid;
-  gap: var(--rythme);
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
-
-#homepage-services-grid > article {
-  border-radius: var(--border-radius);
-  border: 1px solid var(--accent);
-}
-
-#homepage-services-grid > article > * {
-  padding: calc(0.25 * var(--rythme));
-}
-
-#homepage-services-grid li {
-  list-style-type: none;
-}
-
-.homepage-services-item-header {
-  background-color: var(--accent);
-  color: var(--bg);
-  font-size: var(--step-1);
-  text-wrap: balance;
-  display: flex;
-  flex-wrap: wrap;
-  gap: calc(0.25 * var(--rythme));
-  justify-content: space-between;
-  align-items: center;
-}
-
-.homepage-services-item-header h3 {
-  margin-top: 0;
-  font-family: Inter-Variable;
-  font-weight: 400;
-  flex: 1 1 min-content;
-  color: var(--bg);
-  &::after {
-    content: none;
-  }
-}
-
-.services-icon {
-  display: grid;
-  place-items: center;
-  padding: calc(0.125 * var(--rythme));
-  background-color: var(--bg);
-  border-radius: 50%;
-  min-width: 3rem;
-  width: 3rem;
-  height: 3rem;
-  aspect-ratio: 1;
-}
-
-.homepage-services-item-category-list li {
-  display: flex;
-  flex-direction: column;
-}
-
-.homepage-services-item-category-list li + li {
-  margin-top: calc(0.25 * var(--rythme));
-}
-
-.homepage-services-item-category-details {
-  font-size: var(--step--2);
-  opacity: 0.83;
-}
 
 /*---FOOTER---*/
 #footer {
@@ -694,7 +470,7 @@ a:hover {
   justify-items: start;
   margin-top: calc(2 * var(--rythme));
   padding-top: calc(0.5 * var(--rythme));
-  border-top: 2px solid var(--shadow);
+  border-top: 1px solid var(--txt);
   & address {
     font-style: unset;
     & a:first-child {
@@ -1017,26 +793,21 @@ article > p > a:hover {
 }
 
 .tags-article-card {
-  margin-top: calc(.5*var(--rythme));
+  margin-top: var(--rythme);
   padding: calc(.5*var(--rythme));
   background-color: var(--accent);
   color: var(--bg);
   border-radius: var(--border-radius);
-}
-
-.tags-article-card:first-child {
-  margin-top: var(--rythme);
-}
-
-.tags-article-card h2 {
-  color: var(--bg);
-  & a {
-    text-decoration: none;
+  & h2 {
+    color: var(--bg);
+    & a {
+      text-decoration: none;
+    }
   }
-}
-
-.tags-article-card time {
-  margin-top: calc(0.5 * var(--rythme));
+  & time {
+    display: block;
+    margin-top: calc(0.5 * var(--rythme));
+  }
 }
 
 /*--COLOPHON---*/
@@ -1068,6 +839,19 @@ article > p > a:hover {
   row-gap: calc(2 * var(--rythme));
   margin-top: var(--rythme);
   margin-bottom: var(--rythme);
+}
+
+#capacites {
+  & >:not(:first-child) {
+    margin-top: var(--rythme);
+  }
+  & header {
+    display: flex;
+    gap: calc(.5*var(--rythme));
+  }
+  & li {
+    list-style-position: inside;
+  }
 }
 
 #download-cv {
@@ -1462,8 +1246,7 @@ tr {
   .homepage-services-item-header {
     flex-wrap: nowrap;
   }
-  #homepage-hero,
-  .homepage-footer {
+  #homepage-container main, #homepage-container footer {
     max-width: 100dvw;
   }
 

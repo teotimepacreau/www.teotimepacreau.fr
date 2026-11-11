@@ -5,7 +5,7 @@ type: "Article"
 date: '2025-11-01'
 tags: 
   - 'Design'
-  - 'Management'
+  - 'WebDev'
   - 'CSS'
   - 'HTML'
 layout: blogpost_layout.njk

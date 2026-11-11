@@ -2,39 +2,47 @@
 title: Conception du site et blogroll
 pageId: "Colophon"
 type: "Page"
-layout: "base.html"
+layout: "base.njk"
 ---
 <h1>Colophon</h1>
 <p>
   Ce site est fait main et <a href="https://github.com/teotimepacreau/www.teotimepacreau.fr">open-source</a>.
 </p>
 <p>
-  Les 2 polices d'écriture utilisées sont gratuites et open-source : Inter de
-  <a href="https://rsms.me/inter/">Rasmus Andersson</a>, une sans-serif
-  particulièrement lisible aux nombreuses <a href="https://rsms.me/inter/#features">fonctionnalités de personnalisation</a>, et Bricolage Grotesque de
-  <a href="https://ateliertriay.github.io/bricolage/"
-    >Mathieu Triay du studio Atelier Triay</a
+  Les 2 polices d'écriture utilisées sont gratuites et open-source : <a href="https://rsms.me/inter/">Inter de Rasmus Andersson</a>, une sans-serif
+  particulièrement lisible aux nombreuses <a href="https://rsms.me/inter/#features">fonctionnalités de personnalisation</a>; et <a href="https://ateliertriay.github.io/bricolage/"
+    >Bricolage Grotesque de Mathieu Triay</a
   >, une police Grotesk de caractère qui puise son inspiration dans les
   couvertures d'anciens magazines.
 </p>
 <p>
   J'ai construit ce site propulsé par
-  <a class="colophon-link" href="11ty.dev">Eleventy</a>, un moteur de site
+  <a href="11ty.dev">Eleventy</a>, un moteur de site
   statique qui associe souplesse et éco-conception numérique grâce à sa prise en
   compte du
   <a
-    class="colophon-link"
     href="https://www.arthurperret.fr/cours/markdown.html"
     >Markdown</a
   >
-  et du peu de dépendances requises. Les sites web statiques sont composés de fichiers prêts à être diffusés aux utilisateurs sans aucun traitement côté serveur ni base de données. Cette simplicité offre une moindre consommation de bande passante et d'énergie.
+  et du peu de dépendances requises. Les sites web statiques sont composés de fichiers prêts à être diffusés aux utilisateurs sans aucun traitement côté serveur ni base de données. Cette simplicité offre une <a href="https://www.w3.org/TR/web-sustainability-guidelines/#set-goals-based-on-performance-and-energy-impact">moindre consommation de bande passante et d'énergie</a> et <a href="https://www.cyberly.org/en/how-is-static-site-hosting-secured-against-cyberattacks/index.html">réduit drastiquement les risques cyber</a>.
 </p>
 <p>
   Ce site suit les principes de l'IndieWeb, car j'aime être propriétaire de mon
   contenu, loin de certaines plateformes sociales vacillantes. Le flux RSS
   étant, à mon sens, l'approche la plus raisonnée pour suivre du contenu web,
-  voici celui de ce site
-  <a class="rss" href="/feed/feed.xml"><span class="ph ph-rss"></span></a>
+  voici mon
+    <a id="rss" href="/feed/feed.xml">
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--txt)" viewBox="0 0 256 256"><path d="M106.91,149.09A71.53,71.53,0,0,1,128,200a8,8,0,0,1-16,0,56,56,0,0,0-56-56,8,8,0,0,1,0-16A71.53,71.53,0,0,1,106.91,149.09ZM56,80a8,8,0,0,0,0,16A104,104,0,0,1,160,200a8,8,0,0,0,16,0A120,120,0,0,0,56,80Zm118.79,1.21A166.9,166.9,0,0,0,56,32a8,8,0,0,0,0,16A151,151,0,0,1,163.48,92.52,151,151,0,0,1,208,200a8,8,0,0,0,16,0A166.9,166.9,0,0,0,174.79,81.21ZM60,184a12,12,0,1,0,12,12A12,12,0,0,0,60,184Z"></path></svg>
+    <span>RSS</span>
+  </a> et mon 
+    <a
+      
+      href="https://mastodon.design/@teotimepacreau"
+      target="_blank" rel="me"
+    >
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--txt)" viewBox="0 0 256 256"><path d="M184,32H72A40,40,0,0,0,32,72V192a40,40,0,0,0,40,40h88a8,8,0,0,0,0-16H72a24,24,0,0,1-24-24v-8H184a40,40,0,0,0,40-40V72A40,40,0,0,0,184,32Zm24,112a24,24,0,0,1-24,24H48V72A24,24,0,0,1,72,48H184a24,24,0,0,1,24,24Zm-24-40v32a8,8,0,0,1-16,0V104a16,16,0,0,0-32,0v32a8,8,0,0,1-16,0V104a16,16,0,0,0-32,0v32a8,8,0,0,1-16,0V104a32,32,0,0,1,56-21.13A32,32,0,0,1,184,104Z"></path></svg>
+      <span>Mastodon</span>
+    </a>
 </p>
 
   <!-- j'appelle les données de colophon.json pour présenter les projets -->

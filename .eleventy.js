@@ -7,6 +7,9 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateFr from "./src/filters/date.js";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import imgMagnifier from "eleventy-plugin-img-magnifier";
+import { render, PeleError } from 'pele';
+
+process.loadEnvFile();
 
 // OPENGRAPH IMAGES REQUIREMENTS
 import fs from "node:fs";
@@ -21,6 +24,7 @@ let figoptions = {
 };
 
 export default function(eleventyConfig) {
+  const apiKeyStocksFromAlphaVantage = process.env.apiKeyStocksFromAlphaVantage
   // CREER LA COLLECTION DE POSTS
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/blog/*.md");
@@ -94,6 +98,17 @@ export default function(eleventyConfig) {
     return markup;
   });
 
+    //SHORTCODE POUR PELE
+  eleventyConfig.addPairedShortcode('pele', (mermaid) => {
+      try {
+          const { svg } = render(mermaid.trim());
+          return `<div class="pele-container">${svg}</div>`;
+      } catch (error) {
+          if (!(error instanceof PeleError)) throw error;
+          return `<div class="pele-error">Pele ${error.type} diagram error : ${error.message}</div>`;
+      }
+  });
+
   // AUTO GENERATED OPENGRAPH IMAGES
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
     outputDir: "/og-images",
@@ -163,8 +178,6 @@ export default function(eleventyConfig) {
 
   // Convertir les dates en format FR
   eleventyConfig.addFilter("date", dateFr);
-
-  
 
   // Monitor instant change for CSS
   eleventyConfig.addWatchTarget("src/css/");

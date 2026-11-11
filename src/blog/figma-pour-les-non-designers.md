@@ -5,8 +5,7 @@ date: "2024-08-23"
 updatedate: "2025-11-14"
 description: "Pourquoi Figma, en tant qu'outil de travail, permet de présenter idéalement des concepts, facilite la collaboration et l'échange de feedback"
 tags: 
-  - 'Management'
-  - 'Stratégie'
+  - 'Consulting'
   - 'Figma'
 layout: blogpost_layout.njk
 eleventyComputed:

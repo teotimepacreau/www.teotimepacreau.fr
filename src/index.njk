@@ -2,7 +2,7 @@
 title: "Téotime Pacreau"
 description: "Gestion de projet numérique et développement web à Nantes"
 pageId: "Homepage"
-layout: "base.html"
+layout: "base.njk"
 type: "Page"
 ---
 
@@ -37,7 +37,6 @@ type: "Page"
 <section id="homepage-blog-shortlist" class="intersect">
   <header class="homepage-projets-titre-flexer">
     <h2>Derniers articles du blog</h2>
-    <hr />
   </header>
   <ul style="margin-top: calc(.5*var(--rythme))">
     {%- for post in collections.articlesShortlist -%}
@@ -51,137 +50,9 @@ type: "Page"
 <section class="intersect">
   <header class="homepage-projets-titre-flexer">
     <h2>Essais</h2>
-    <hr />
   </header>
   <ul style="margin-top: calc(.5*var(--rythme))">{%- for post in collections.essais -%}
     <li style="list-style-type: none; font-variation-settings: 'opsz' 22"><a href="{{post.url}}">{{ post.data.title }}</a></li>
   {%- endfor -%}</ul>
 </section>
-<section id="homepage-projets" class="intersect">
-  <header class="homepage-projets-titre-flexer">
-    <h2>Projets</h2>
-    <hr />
-  </header>
 
-  <!-- j'appelle les données de index.json pour présenter les projets -->
-  {% for projet in projets %}
-  <article class="homepage-projets-grid-item">
-    <div class="homepage-projets-grid-item__left">
-      <img
-        loading="eager"
-        src="{{ projet.img_src }}"
-        alt="{{ projet.img_alt }}"
-        height="{{ projet.img_height }}"
-        width="{{ projet.img_width }}"
-        srcset="{{ projet.img_srcset }}"
-        sizes="{{ projet.img_sizes }}"
-      />
-    </div>
-    <div class="homepage-projets-grid-item__right">
-      <ul>
-        {% for tag in projet.projet_tags %}
-        <li class="homepage-projets-tags">{{ tag }}</li>
-        {% endfor %}
-      </ul>
-      <div class="homepage-projets-grid-item__right__titleanddesc">
-        <span>{{ projet.projet_title }}</span>
-      </div>
-
-      <a
-        aria-label="{{ projet.internal_anchor_arialabel }}"
-        class="homepage-projets-anchor"
-        href="{{ projet.internal_anchor }}"
-      >
-        Découvrir
-      </a>
-    </div>
-  </article>
-  {% endfor %}
-
-</section>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script>
-  // Grab the prefers reduced motion preference of the user.
-  let prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
-  // SI L'UTILISATEUR N'A PAS ACTIVE prefers-reduced-motion alors on déroule l'animation
-  if (!prefersReducedMotion) {
-    gsap.fromTo(
-      ".intersect",
-      {
-        y: "-20dvh",
-        opacity: 0,
-        duration: 0.5,
-        ease: "power2.out",
-      },
-      {
-        y: "0dvh",
-        opacity: 1,
-        stagger: 0.3,
-      }
-    );
-    gsap.fromTo(
-      ".menu-anim",
-      {
-        y: "-20dvh",
-        opacity: 0,
-        duration: 0.5,
-        ease: "power4.out",
-      },
-      {
-        y: "0dvh",
-        opacity: 1,
-        delay: 1,
-      }
-    );
-
-    let elementsToAnimate = document.querySelectorAll(
-      ".homepage-projets-grid-item"
-    );
-
-    function hide() {
-      return new Promise((resolve) => {
-        for (let element of elementsToAnimate) {
-          element.classList.toggle("homepage-projets-hidden");
-        }
-        resolve();
-      });
-    }
-
-    // EVITER QUE L'INTERSECTION OBSERVER SE DECLENCHE TROP TOT SUR MOBILE
-    function isMobile() {
-      return window.matchMedia("(max-width: 600px)").matches;
-    }
-    let rootMarginValue = isMobile() ? "-30%" : "-50%";
-
-    // INTERSECTION OBSERVER
-    const options = {
-      root: null,
-      threshold: 0,
-      rootMargin: rootMarginValue,
-    };
-
-    const observer = new IntersectionObserver(function (entries, observer) {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        } else {
-          gsap.to(entry.target, {
-            x: "0dvh",
-            opacity: 1,
-          });
-          observer.unobserve(entry.target); //indispensable pour pas que l'animation se rejoue en remontant
-        }
-      });
-    }, options);
-
-    hide().then(() => {
-      elementsToAnimate.forEach((section) => {
-        //pour appliquer l'action à la NodeList
-        observer.observe(section);
-      });
-    });
-  }
-</script>

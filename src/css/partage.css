@@ -30,6 +30,5 @@
     transition: border-color .2s ease-out;
     &:hover {
         border-color: var(--txtlighten20);
-
     }
 }

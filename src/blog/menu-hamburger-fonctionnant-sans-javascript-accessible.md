@@ -4,7 +4,6 @@ type: "Article"
 date: "2024-05-23"
 description: "Comment construire un menu hamburger de navigation accessible à tous en respectant l'amélioration progressive ?"
 tags:
-  - "Frontend"
   - "WebDev"
   - "CSS"
 layout: blogpost_layout.njk

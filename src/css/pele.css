@@ -1,0 +1,10 @@
+:root {
+    --secondary-txt-on-foreground: oklch(from var(--txt) l c h / 75%);
+    --pele-font: "Inter-Variable", sans-serif;
+    --pele-fg: var(--txt);
+    --pele-muted: var(--secondary-txt-on-foreground);
+}
+
+.pele-sankey-value {
+    font-variant-numeric: tabular-nums;
+}
